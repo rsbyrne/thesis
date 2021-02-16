@@ -1,6 +1,6 @@
 # Custom
-data/
-extendedcode/
+data/*
+resources/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
