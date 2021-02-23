@@ -1,0 +1,54 @@
+import os
+import h5py
+
+if os.path.exists('merged.frm'):
+    os.remove('merged.frm')
+frmPaths = [
+    n for n in os.listdir('.')
+        if (n.endswith('.frm') and n != 'merged.frm')
+    ]
+with h5py.File('merged.frm', mode = 'w') as merged:
+    clsgrp = merged.require_group('_globals_').require_group('classes')
+    for frmPath in frmPaths:
+        with h5py.File(frmPath, mode = 'r') as frm:
+            for key, content in frm.items():
+                print(key)
+                if key == '_globals_':
+                    clsgrp.attrs.update(content['classes'].attrs)
+                    continue
+                elif key in merged:
+                    if 'supertype' in content.attrs:
+                        if content.attrs['supertype'] in {'_string_System', '_string_Observer'}:
+                            if 'outputs' in merged[key] and 'outputs' in content:
+                                if len(merged[key]['outputs']['count']) < len(content['outputs']['count']):
+                                    del merged[key]
+                                    merged[key] = h5py.ExternalLink(frmPath, key)
+                    continue
+                else:
+                    if 'supertype' in content.attrs:
+                        if content.attrs['supertype'] in {'_string_System', '_string_Observer'}:
+                            if not 'outputs' in content:
+                                continue
+                merged[key] = h5py.ExternalLink(frmPath, key)
+
+
+
+observers = reader[Fetch('*/supertype') == 'Observer']
+thermos = reader[Fetch('*/type') == 'Thermo']
+velviscs = reader[Fetch('*/type') == 'VelVisc']
+systems = reader[Fetch('*/supertype') == 'System']
+isos = reader[Fetch('*/type') == 'Isovisc']
+arrs = reader[Fetch('*/type') == 'Arrhenius']
+vps = reader[Fetch('*/type') == 'Viscoplastic']
+
+vpObs = reader[Fetch('*/observee/type') == 'Viscoplastic']
+vpThermos = vpObs & thermos
+
+mydata = reader[vpThermos : 'outputs/Nu']
+
+
+var1=0
+for var2 in 0 1 2 3 4 5 6 7 8 9 10 11
+do
+  sh run.sh arrseries.py $var1 $var2
+done

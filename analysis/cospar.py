@@ -3,12 +3,12 @@ import math
 from matplotlib.pyplot import get_cmap
 
 workDir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+resourcesDir = os.path.join(workDir, 'resources')
+dataDir = os.path.join(workDir, 'data')
 
-everestDir = os.path.join(workDir, 'everest')
+everestDir = os.path.join(resourcesDir, 'everest')
 if not everestDir in sys.path:
     sys.path.insert(0, everestDir)
-
-dataDir = os.path.join(workDir, 'data')
 
 import math
 import numpy as np
@@ -17,7 +17,7 @@ from everest.h5anchor import Reader, Fetch
 F = lambda key: Fetch(f"*/{key}")
 I = lambda key: Fetch(f"*/inputs/{key}")
 O = lambda key: Fetch(f"*/outputs/{key}")
-reader = Reader('obsvisc', dataDir)
+reader = Reader('obsvisc_old', dataDir)
 
 from everest.window import Canvas
 from everest.window.data import Data
