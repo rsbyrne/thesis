@@ -27,11 +27,10 @@ from planetengine.initials import Sinusoidal
 initial = Sinusoidal()
 final = (planetengine.finals.Averages, {'tolerance': 1e-3, 'minlength': 50})
 
-print(System, inputs)
 for alpha in [10 ** (i / 4.) for i in range(16, 29)]:
     system = System(
         alpha = alpha,
-        res = 2 ** math.ceil(math.log10(alpha)),
+        res = min(96, 2 ** round(math.log10(alpha))),
         observers = True,
         temperatureField = initial,
         innerMethod = 'lu',
