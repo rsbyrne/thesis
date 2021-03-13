@@ -1,26 +1,41 @@
-# gather.sh
+#!/bin/bash
 
 DIR="$(dirname "$0")"
 
-# cp $DIR/../MS98kit/MS98.frm $DIR/miranda1.frm
-# mv $DIR/../phd/pluto1_working/MS98kit/MS98.frm $DIR/pluto1old.frm
-# mv $DIR/../phd/pluto2_working/MS98kit/MS98.frm $DIR/pluto2old.frm
-# mv $DIR/../phd/pluto3_working/MS98kit/MS98.frm $DIR/pluto3old.frm
-# mv $DIR/../phd/pluto4_working/MS98kit/MS98.frm $DIR/pluto4old.frm
-# mv $DIR/../phd/pluto5_working/MS98kit/MS98.frm $DIR/pluto5old.frm
-# mv $DIR/../phd/pluto6_working/MS98kit/MS98.frm $DIR/pluto6old.frm
+DESTS=(\
+  "pluto1" \
+  "pluto2" \
+  "pluto3" \
+  "pluto4" \
+  "pluto5" \
+  "pluto6" \
+  "miranda1" \
+  "miranda2" \
+  "umbriel1" \
+  "umbriel2" \
+  "umbriel3" \
+  "umbriel4" \
+  "umbriel5" \
+  "umbriel6"\
+  )
 
-scp -i ~/.ssh/general.pem ubuntu@45.113.235.136:~/pluto1_working/MS98kit/MS98.frm $DIR/pluto1.frm
-scp -i ~/.ssh/general.pem ubuntu@45.113.233.242:~/pluto2_working/MS98kit/MS98.frm $DIR/pluto2.frm
-scp -i ~/.ssh/general.pem ubuntu@45.113.233.237:~/pluto3_working/MS98kit/MS98.frm $DIR/pluto3.frm
-scp -i ~/.ssh/general.pem ubuntu@45.113.233.238:~/pluto4_working/MS98kit/MS98.frm $DIR/pluto4.frm
-scp -i ~/.ssh/general.pem ubuntu@45.113.235.186:~/pluto5_working/MS98kit/MS98.frm $DIR/pluto5.frm
-scp -i ~/.ssh/general.pem ubuntu@45.113.233.246:~/pluto6_working/MS98kit/MS98.frm $DIR/pluto6.frm
-scp -i ~/.ssh/general.pem ubuntu@45.113.235.111:/work/volume/MS98kit/MS98.frm $DIR/miranda1.frm
-scp -i ~/.ssh/general.pem ubuntu@45.113.235.111:/work/volume/cospar/pluto1old.frm $DIR/pluto1old.frm
-scp -i ~/.ssh/general.pem ubuntu@45.113.235.111:/work/volume/cospar/pluto2old.frm $DIR/pluto2old.frm
-scp -i ~/.ssh/general.pem ubuntu@45.113.235.111:/work/volume/cospar/pluto3old.frm $DIR/pluto3old.frm
-scp -i ~/.ssh/general.pem ubuntu@45.113.235.111:/work/volume/cospar/pluto4old.frm $DIR/pluto4old.frm
-scp -i ~/.ssh/general.pem ubuntu@45.113.235.111:/work/volume/cospar/pluto5old.frm $DIR/pluto5old.frm
-scp -i ~/.ssh/general.pem ubuntu@45.113.235.111:/work/volume/cospar/pluto6old.frm $DIR/pluto6old.frm
-scp -i ~/.ssh/general.pem ubuntu@45.113.235.59:~/miranda2_working/MS98kit/MS98.frm $DIR/miranda2.frm
+for DEST in ${DESTS[@]}; do
+  ADDRESS=""
+  case "$DEST" in
+    pluto1) ADDRESS="45.113.235.136" ;;
+    pluto2) ADDRESS="45.113.233.242" ;;
+    pluto3) ADDRESS="45.113.233.237" ;;
+    pluto4) ADDRESS="45.113.233.238" ;;
+    pluto5) ADDRESS="45.113.235.186" ;;
+    pluto6) ADDRESS="45.113.233.246" ;;
+    miranda1) ADDRESS="45.113.235.111" ;;
+    miranda2) ADDRESS="45.113.235.59" ;;
+    umbriel1) ADDRESS="45.113.232.139" ;;
+    umbriel2) ADDRESS="115.146.93.171" ;;
+    umbriel3) ADDRESS="115.146.95.143" ;;
+    umbriel4) ADDRESS="115.146.93.145" ;;
+    umbriel5) ADDRESS="45.113.235.87" ;;
+    umbriel6) ADDRESS="115.146.95.188" ;;
+  esac
+  scp -v -o IPQoS="throughput" -i ~/.ssh/general.pem ubuntu@$ADDRESS:~/*working/*.frm $DIR/$DEST
+done
