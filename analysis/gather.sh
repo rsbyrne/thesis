@@ -37,5 +37,6 @@ for DEST in ${DESTS[@]}; do
     umbriel5) ADDRESS="45.113.235.87" ;;
     umbriel6) ADDRESS="115.146.95.188" ;;
   esac
-  scp -v -o IPQoS="throughput" -i ~/.ssh/general.pem ubuntu@$ADDRESS:~/*working/*.frm $DIR/$DEST
+  mkdir $DIR/$DEST/
+  scp -v -o IPQoS="throughput" -i ~/.ssh/general.pem ubuntu@$ADDRESS:~/*working/*.frm $DIR/$DEST/
 done
