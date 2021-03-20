@@ -1,12 +1,6 @@
 import sys, os
 
-workDir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-everestDir = os.path.join(workDir, 'everest')
-if not everestDir in sys.path:
-    sys.path.insert(0, everestDir)
-
-dataDir = os.path.join(workDir, 'data')
+from thesis_initialise import *
 
 from everest.h5anchor.reader import Reader
 from everest.h5anchor.writer import Writer
@@ -23,20 +17,23 @@ writer = Writer('obsvisc', dataDir)
 destreader = Reader('obsvisc', dataDir)
 
 for key, indices in vpObs:
-    indices = Ellipsis if indices == '...' else indices
-    with reader.open():
-        if not len(reader[f"{key}/outputs/chron"]):
-            print("Empty: skipping")
-            continue
-    observeeKey = reader[f"{key}/inputs/observee"][len('_built_'):]
-    writer.add_dict(reader[f"{observeeKey}/inputs"], observeeKey, 'inputs')
-    for sk, sv in reader[f"{key}/outputs"].items():
-        try:
-            if sk in destreader[observeeKey]:
+    try:
+        indices = Ellipsis if indices == '...' else indices
+        with reader.open():
+            if not len(reader[f"{key}/outputs/chron"]):
+                print("Empty: skipping")
                 continue
-        except KeyError:
-            pass
-        writer.add(sv[indices], sk, observeeKey, 'outputs')
+        observeeKey = reader[f"{key}/inputs/observee"][len('_built_'):]
+        writer.add_dict(reader[f"{observeeKey}/inputs"], observeeKey, 'inputs')
+        for sk, sv in reader[f"{key}/outputs"].items():
+            try:
+                if sk in destreader[observeeKey]:
+                    continue
+            except KeyError:
+                pass
+            writer.add(sv[indices], sk, observeeKey, 'outputs')
+    except:
+        pass
 
 reader = Reader('obsvisc', dataDir)
 with reader.open():
