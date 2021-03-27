@@ -28,9 +28,9 @@ DESTS=(\
   )
 
 for DEST in ${DESTS[@]}; do
-  COMMAND="echo .out files: && ls -lht $DEST'_working'/*.out | wc -l && echo .error files: && find $DEST'_working' -type f -name '*.error' -size +0 -ls | wc -l && echo processes: && ps -C python3 | wc -l"
+  COMMAND="echo .out files: && ls -lht $DEST'_working'/*.out | wc -l && echo .error files: && find $DEST'_working' -type f -name '*.error' -size +0 -ls | wc -l && echo processes: && ps -C python3 | wc -l && df -h"
   if [ $v_flag = 'true' ]; then
-    COMMAND="top -n 1 -b | head -n 32 && $COMMAND && df -h"
+    COMMAND="top -n 1 -b | head -n 32 && $COMMAND"
   fi
   echo " "
   echo "-------------------------------"
