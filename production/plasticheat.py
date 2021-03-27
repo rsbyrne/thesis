@@ -8,7 +8,7 @@ import numpy as np
 
 ARG1 = int(sys.argv[1]) # geometry, 36 options
 ARG2 = int(sys.argv[2]) # tauRef, 23 options
-ARG3 = int(sys.argv[3]) # heating, 6 options
+ARG3 = int(sys.argv[3]) # heating, 10 options
 # ARG4 = int(sys.argv[3]) # freqs, infinite options
 
 import planetengine
@@ -25,7 +25,7 @@ inputs['f'], inputs['aspect'] = (float(v) for v in list(itertools.product(
     np.round(2 ** np.linspace(0, 0.5, 6), 3),
     ))[ARG1])
 inputs['tauRef'] = float((10. ** np.linspace(4.95, 6.05, 23))[ARG2])
-inputs['H'] = [0., *[10. ** (i / 2) for i in range(-2, 3)]][ARG3]
+inputs['H'] = [0., *[10. ** (i / 4) for i in range(-4, 5)]][ARG3]
 
 system = System(
     alpha = 1e7,
