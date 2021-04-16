@@ -1,0 +1,28 @@
+plasticfull.py 17 18 6 # miranda1/plasticfull.frm
+plasticfull.py 5 10 6 # umbriel2/plasticfull.frm
+plasticfull.py 12 1 6 # umbriel4/plasticfull.frm
+plasticfull.py 33 22 6 # umbriel5/plasticfull.frm
+plasticfull.py 35 8 4 # umbriel5/plasticfull.frm
+plasticfull.py 33 21 6 # umbriel5/plasticfull.frm
+plasticfull.py 33 7 5 # umbriel1/plasticfull.frm
+plasticfull.py 33 8 6 # umbriel1/plasticfull.frm
+plasticfull.py 33 6 6 # umbriel1/plasticfull.frm
+plasticfull.py 33 7 6 # umbriel1/plasticfull.frm
+plasticfull.py 33 9 6 # pluto6/plasticfull.frm
+plasticfull2.py 33 15 6 # umbriel3/plasticfull2.frm
+
+Potentially corrupt:
+plasticheat.py 5 16 6 # umbriel5/plasticfull.frm
+plasticfull.py 33 21 6 # umbriel5/plasticfull.frm
+plasticheat.py 5 22 5 # umbriel5/plasticfull.frm
+plasticheat.py 5 19 4 # umbriel5/plasticfull.frm
+plasticheat.py 5 17 3 # umbriel5/plasticfull.frm
+plasticheat.py 5 20 6 # umbriel5/plasticfull.frm
+plasticheat.py 5 13 8 # umbriel5/plasticfull.frm
+plasticheat.py 5 15 6 # umbriel5/plasticfull.frm
+plasticfull.py 33 22 6 # umbriel5/plasticfull.frm
+plasticfull.py 35 8 4 # umbriel5/plasticfull.frm
+plasticheat.py 5 21 5 # umbriel5/plasticfull.frm
+plasticheat.py 5 12 8 # umbriel5/plasticfull.frm
+plasticheat.py 5 18 4 # umbriel5/plasticfull.frm
+plasticheat.py 5 14 7 # umbriel5/plasticfull.frm
