@@ -10,6 +10,24 @@ plasticfull.py 33 6 6 # umbriel1/plasticfull.frm
 plasticfull.py 33 7 6 # umbriel1/plasticfull.frm
 plasticfull.py 33 9 6 # pluto6/plasticfull.frm
 plasticfull2.py 33 15 6 # umbriel3/plasticfull2.frm
+linear.py 1 1 5 # pluto2/linear.frm
+linear.py 1 9 4 # pluto2/linear.frm
+linear.py 1 9 5 # pluto2/linear.frm
+linear.py 3 0 3 # pluto4/linear.frm
+linear.py 3 0 4 # pluto4/linear.frm
+linear.py 3 1 0 # pluto4/linear.frm
+linear.py 3 1 1 # pluto4/linear.frm
+linear.py 3 3 1 # pluto4/linear.frm
+linear.py 3 3 2 # pluto4/linear.frm
+linear.py 3 5 2 # pluto4/linear.frm
+linear.py 3 5 3 # pluto4/linear.frm
+linear.py 3 7 4 # pluto4/linear.frm
+linear.py 3 7 5 # pluto4/linear.frm
+linear.py 2 5 1 # pluto3/linear.frm
+linear.py 6 7 1 # miranda2/linear.frm
+linear.py 6 1 3 # miranda2/linear.frm
+linear.py 6 5 0 # miranda2/linear.frm
+linear.py 6 3 1 # miranda2/linear.frm
 
 Potentially corrupt:
 plasticheat.py 5 16 6 # umbriel5/plasticfull.frm

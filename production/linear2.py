@@ -25,7 +25,7 @@ inputs = dict(
 etaDelta, f, H = list(itertools.product(
     [float(a) for a in np.round(10. ** np.linspace(0, 5, 11), 3)],
     [float(a) for a in np.round(np.linspace(1., 0.5, 11), 3)],
-    [float(a) for a in np.round(10 ** np.linspace(-2, 1, 13), 3)],
+    [0., *[float(a) for a in np.round(10 ** np.linspace(-2, 1, 13), 3)]],
     ))[slice(*ARGN)][ARG1]
 
 if etaDelta == 1:
@@ -45,35 +45,35 @@ final = (
 
 initial = sinuinitial
 
-for i, alphaexp in enumerate(np.linspace(2.5, 7.5, 21)):
+alphaexp = 2
+reinit = True
 
-    alphaexp = float(alphaexp)
+while alphaexp <= 7.5:
+
+    fine = max(8, round(2 ** alphaexp / 4) * 4)
+    coarse = max(4, round(fine // 2 / 4) * 4)
+    inputs['alpha'] = 10. ** alphaexp
 
     system = System(
-        alpha = 10. ** alphaexp,
-        res = min(96, max(16, 2 ** round(alphaexp))),
+        res = coarse,
         temperatureField = initial,
         **inputs
         )
-
-    fig = QuickFig(
-        system.locals.temperatureField,
-        system.locals.velocityField,
-        system.locals.viscosityFn,
-        )
-
-    args = [str(a).replace('.', ',') for a in [etaDelta, f, H, alphaexp]]
-    figname = name + '_' + ';'.join(args)
-    if not i:
-        fig.save(figname + '_' + 'initial')
-
     system[:final:1000]()
 
-    fig.save(figname + '_' + 'complete')
+    system = System(
+        res = fine,
+        temperatureField = system,
+        **inputs
+        )
+    system[:final:1000]()
 
-    if system.observers[0].analysers['Nu'].evaluate() < 1.001:
+    reinit = system.observers[0].analysers['Nu'].evaluate() < 1.001
+    if reinit:
         initial = sinuinitial
     else:
         initial = system
+
+    alphaexp = round(alphaexp + 0.1, 1)
 
 ################################################################################

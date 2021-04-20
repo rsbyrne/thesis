@@ -10,11 +10,12 @@ import random
 
 _, NAME, *ARGS = sys.argv # name of campaign, passed args
 
-JOBNAME = NAME + '_' + ';'.join(ARGS)
+JOBNAME = NAME + '_' + '-'.join(ARGS)
 
-workDir = os.path.dirname(os.path.abspath(__file__))
-outGlob = os.path.join(workDir, JOBNAME + '*' + '.campaign.out')
-lockfilepath = Path(os.path.join(workDir, JOBNAME + '.campaign.lock'))
+WORKDIR = os.path.dirname(os.path.abspath(__file__))
+JOBROOT = os.path.join(WORKDIR, JOBNAME)
+JOBSUFFIX = '.campaign.job'
+LOCKFILEPATH = Path(os.path.join(WORKDIR, JOBNAME + '.campaign.lock'))
 
 while True:
 
@@ -25,37 +26,34 @@ while True:
         time.sleep(random.random())
 
         try:
-            lockfilepath.touch(exist_ok = False)
+            LOCKFILEPATH.touch(exist_ok = False)
             locked = True
         except FileExistsError:
             continue
 
-        outfiles = glob.glob(outGlob)
+        jobno = len(glob.glob(JOBROOT + '*' + JOBSUFFIX))
+        arg = str(jobno)
 
-        arg = str(len(outfiles))
+        jobfilepath = JOBROOT + '_' + arg.zfill(8) + JOBSUFFIX
 
-        now = str(round(time.time()))
-        logfilepath = os.path.join(
-            workDir,
-            JOBNAME + '_' + arg.zfill(8) + '_' + now
-            )
-        outfilepath = logfilepath + '.campaign.out'
-        errorfilepath = logfilepath + '.campaign.error'
-
-        with open(outfilepath, mode = 'w') as outfile:
-            with open(errorfilepath, mode = 'w') as errorfile:
-                lockfilepath.unlink()
-                locked = False
-                ret = subprocess.run(
-                    ['python3', NAME, arg, *ARGS],
-                    stdout = outfile,
-                    stderr = errorfile,
-                    )
-                ret.check_returncode()
+        with open(jobfilepath, mode = 'x') as jobfile:
+            LOCKFILEPATH.unlink()
+            locked = False
+            cmd = ['python3', NAME, arg, *ARGS]
+            proc = subprocess.Popen(
+                cmd,
+                stdin = subprocess.DEVNULL,
+                stdout = subprocess.DEVNULL,
+                stderr = jobfile,
+                )
+            ret = proc.wait()
+            if ret:
+                jobfile.write('Error')
+                raise subprocess.CalledProcessError(ret, cmd)
 
     except Exception as exc:
         if locked:
-            lockfilepath.unlink()
+            LOCKFILEPATH.unlink()
         if isinstance(exc, subprocess.CalledProcessError):
             break
         else:

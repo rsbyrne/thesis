@@ -20,5 +20,6 @@ DESTS=(\
   )
 
 for DEST in ${DESTS[@]}; do
+  echo $DEST
   bash $DIR/goto.sh $DEST "$*"
 done
