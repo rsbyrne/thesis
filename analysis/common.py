@@ -2,7 +2,7 @@
 ''''''
 ###############################################################################
 
-from functools import cached_property
+import os
 
 import pandas as pd
 import numpy as np
@@ -10,12 +10,12 @@ import itertools
 
 from thesiscode.utilities import hard_cache
 import aliases
-from .merge import merge
 
 from everest.h5anchor import Reader, Fetch, Scope
+    
 
 def get_reader():
-    return merge(aliases.datadir)
+    return Reader('merged', aliases.datadir)
 
 def make_typeskeys():
     reader = get_reader()
@@ -48,7 +48,7 @@ def make_inputs():
 def get_inputs():
     return hard_cache('allinputs', make_inputs)
 
-def make_frame(inputs):
+def make_inputs_frame(inputs):
     inputs = pd.DataFrame(inputs).transpose()
     toDrop = [col for col in inputs.columns if len(set(inputs[col])) == 1]
     if 'innerMethod' in inputs:
@@ -62,46 +62,70 @@ def make_frame(inputs):
         except ValueError:
             pass
     inputs = inputs.sort_values(list(inputs.columns))
-#     inputs = inputs.dropna()
+    inputs = inputs.dropna()
     for logkey in ('alpha', 'tauRef'):
         if logkey in inputs:
             inputs[logkey] = inputs[logkey].apply(np.log10)
+    inputs.index.name = 'hashID'
     return inputs
 
-class Common:
-    @cached_property
-    def reader(self):
-        return get_reader()
-    @cached_property
-    def typescopes(self):
-        return get_typescopes()
-    def _make_frame(self, name):
-        return make_frame(get_inputs()[name])
-    @cached_property
-    def thermo(self):
-        return self._make_frame('Thermo')
-    @cached_property
-    def velvisc(self):
-        return self._make_frame('VelVisc')
-    def _make_convenience_frame(self, name):
-        frm = self._make_frame(name)
-        for obstype in ('thermo', 'velvisc'):
-            obs = getattr(self, obstype)
-            lookup = dict(zip(
-                (hashID[len('_built_'):] for hashID in obs['observee']),
-                obs.index
-                ))
-            frm[obstype] = [lookup[hashID] for hashID in frm.index]
-        return frm
-    @cached_property
-    def isovisc(self):
-        return self._make_convenience_frame('Isovisc')
-    @cached_property
-    def arrhenius(self):
-        return self._make_convenience_frame('Arrhenius')
-    @cached_property
-    def viscoplastic(self):
-        return self._make_convenience_frame('Viscoplastic')
+def make_averages_frame(reader, inputs, avcutoff = 0.5):
+
+    sampleID = inputs.index[0]
+    omitkeys = {'count', 'chron', 't', 'psi', 'epsilon', 'theta'}
+    datakeys = tuple(key for key in reader[os.path.join(sampleID, 'outputs')].keys() if not key in omitkeys)
+
+    summarydata = dict()
+    errorkeys = []
+    for hashID in inputs.index:
+        try:
+            summ = dict()
+            t, *data = reader[tuple(os.path.join(hashID, 'outputs', dkey) for dkey in ('t', *datakeys))]
+            summ.update(dict(zip(datakeys, time_average(t, *data, cutoff = avcutoff))))
+            summ['steady'] = final_condition(reader, hashID)
+        except ValueError:
+            errorkeys.append(hashID)
+        else:
+            summarydata[hashID] = summ
+    print("Errors:", errorkeys)
+
+    frm = pd.DataFrame(summarydata).T
+    frm = frm.reindex(sorted(frm.columns), axis = 1).sort_index()
+    frm.index.name = 'hashID'
+    for col in frm.columns:
+        if col == 'temperatureField' or 'steady':
+            continue
+        frm[col] = frm[col].astype(float)
+    frm = frm.dropna()
+
+    frm = frm.loc[frm['steady']]    
+
+    return frm
+
+def make_endpoints_frames(reader, inputs):
+    sampleID = inputs.index[0]
+    omitkeys = {'count', 'chron', 't', 'psi', 'epsilon', 'theta'}
+    datakeys = tuple(key for key in reader[os.path.join(sampleID, 'outputs')].keys() if not key in omitkeys)
+    initials, finals = dict(), dict()
+    errorkeys = []
+    for hashID in inputs.index[:10]:
+        subinitials, subfinals = dict(), dict()
+        for dkey in datakeys:
+            path = os.path.join(hashID, 'outputs', dkey)
+            data = reader[path]
+            subinitials[dkey], subfinals[dkey] = data[0], data[-1]
+        initials[hashID], finals[hashID] = subinitials, subfinals
+    print("Errors:", errorkeys)
+    for data in (initials, finals):
+        frm = pd.DataFrame(data).T
+        frm = frm.reindex(sorted(frm.columns), axis = 1).sort_index()
+        frm.index.name = 'hashID'
+        for col in frm.columns:
+            if col == 'temperatureField' or 'steady':
+                continue
+            frm[col] = frm[col].astype(float)
+        frm = frm.dropna()
+        yield frm
 
 ###############################################################################
 ###############################################################################

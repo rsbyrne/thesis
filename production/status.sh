@@ -12,11 +12,11 @@ done
 
 DESTS=(\
   "pluto1" \
-  "pluto2" \
-  "pluto3" \
-  "pluto4" \
-  "pluto5" \
-  "pluto6" \
+  "charon1" \
+  "charon2" \
+  "charon3" \
+  "charon4" \
+  "charon5" \
   "miranda1" \
   "miranda2" \
   "umbriel1" \

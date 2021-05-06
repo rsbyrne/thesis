@@ -3,11 +3,11 @@
 ADDRESS=""
 case "$1" in
   pluto1) ADDRESS="45.113.232.99" ;;
-  pluto2) ADDRESS="45.113.233.242" ;;
-  pluto3) ADDRESS="45.113.233.237" ;;
-  pluto4) ADDRESS="45.113.233.238" ;;
-  pluto5) ADDRESS="45.113.235.186" ;;
-  pluto6) ADDRESS="45.113.233.246" ;;
+  charon1) ADDRESS="45.113.235.31" ;;
+  charon2) ADDRESS="45.113.235.38" ;;
+  charon3) ADDRESS="45.113.235.141" ;;
+  charon4) ADDRESS="45.113.235.23" ;;
+  charon5) ADDRESS="45.113.233.148" ;;
   miranda1) ADDRESS="45.113.235.100" ;;
   miranda2) ADDRESS="45.113.233.217" ;;
   umbriel1) ADDRESS="45.113.232.139" ;;
