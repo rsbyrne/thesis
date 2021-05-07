@@ -10,6 +10,7 @@ import itertools
 
 from thesiscode.utilities import hard_cache
 import aliases
+from . import analysis
 
 from everest.h5anchor import Reader, Fetch, Scope
     
@@ -22,6 +23,7 @@ def make_typeskeys():
     types = dict()
     with reader.open():
         for i, k in enumerate(reader.h5file.keys()):
+            print(k)
             try:
                 types[k] = reader.h5file[k].attrs['type'][len('_string_'):]
             except:
@@ -78,11 +80,12 @@ def make_averages_frame(reader, inputs, avcutoff = 0.5):
     summarydata = dict()
     errorkeys = []
     for hashID in inputs.index:
+        print(hashID)
         try:
             summ = dict()
             t, *data = reader[tuple(os.path.join(hashID, 'outputs', dkey) for dkey in ('t', *datakeys))]
-            summ.update(dict(zip(datakeys, time_average(t, *data, cutoff = avcutoff))))
-            summ['steady'] = final_condition(reader, hashID)
+            summ.update(dict(zip(datakeys, analysis.time_average(t, *data, cutoff = avcutoff))))
+            summ['steady'] = analysis.final_condition(reader, hashID)
         except ValueError:
             errorkeys.append(hashID)
         else:
@@ -98,7 +101,8 @@ def make_averages_frame(reader, inputs, avcutoff = 0.5):
         frm[col] = frm[col].astype(float)
     frm = frm.dropna()
 
-    frm = frm.loc[frm['steady']]    
+    frm = frm.loc[frm['steady']]
+    frm = frm.drop('steady', axis = 1)
 
     return frm
 
@@ -109,6 +113,7 @@ def make_endpoints_frames(reader, inputs):
     initials, finals = dict(), dict()
     errorkeys = []
     for hashID in inputs.index[:10]:
+        print(hashID)
         subinitials, subfinals = dict(), dict()
         for dkey in datakeys:
             path = os.path.join(hashID, 'outputs', dkey)
@@ -121,7 +126,7 @@ def make_endpoints_frames(reader, inputs):
         frm = frm.reindex(sorted(frm.columns), axis = 1).sort_index()
         frm.index.name = 'hashID'
         for col in frm.columns:
-            if col == 'temperatureField' or 'steady':
+            if col == 'temperatureField':
                 continue
             frm[col] = frm[col].astype(float)
         frm = frm.dropna()

@@ -8,6 +8,8 @@ cachedir = os.path.join(thesisdir, 'cache')
 codedir = os.path.join(thesisdir, 'code')
 analysisdir = os.path.join(thesisdir, 'analysis')
 bookdir = os.path.join(thesisdir, 'book')
+productsdir = os.path.join(thesisdir, 'products')
+scratchdir = os.path.join(thesisdir, 'scratch')
 
 if not resourcesdir in sys.path:
     sys.path.insert(0, resourcesdir)

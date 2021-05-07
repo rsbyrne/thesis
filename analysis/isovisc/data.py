@@ -2,6 +2,8 @@
 ''''''
 ###############################################################################
 
+import pandas as pd
+
 import aliases
 import analysis
 from thesiscode.utilities import hard_cache, hard_cache_df, hard_cache_df_multi
@@ -33,7 +35,17 @@ def make_endpoints_frames():
     inputs = get_inputs_frame()
     yield from analysis.common.make_endpoints_frames(reader, inputs)
 def get_endpoints_frames():
-    yield from hard_cache_df_multi(('isovisc_initials', 'isovisc_finals'), make_endpoints_frames)
+    outs = hard_cache_df_multi(('isovisc_initials', 'isovisc_finals'), make_endpoints_frames)
+    for out in outs:
+        if 'hashID' in out.columns:
+            out = out.set_index('hashID')
+        yield out
+
+def get_summary_frames():
+    frames = (get_inputs_frame(), *get_endpoints_frames(), get_averages_frame())
+    commonkeys = set.intersection(*list(set(frame.index) for frame in frames))
+    frames = tuple(frame.loc[commonkeys] for frame in frames)
+    return frames
 
 # def make_hashids(self):
 #     return reader['*/hashID']

@@ -26,11 +26,12 @@ def hard_cache_df(name, create):
         return resource
 
 def hard_cache_df_multi(names, create):
-    paths = (os.path.join(aliases.cachedir, name + '.csv') for name in names)
+    paths = tuple(os.path.join(aliases.cachedir, name + '.csv') for name in names)
     try:
         return tuple(pd.read_csv(path) for path in paths)
     except FileNotFoundError:
         resources = tuple(create())
         for resource, path in zip(resources, paths):
+            
             resource.to_csv(path)
         return resources
