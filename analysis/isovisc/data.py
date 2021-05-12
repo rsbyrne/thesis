@@ -41,6 +41,10 @@ def get_endpoints_frames():
             out = out.set_index('hashID')
         yield out
 
+def get_rasters():
+    inputs = get_inputs_frame()
+    return analysis.common.get_rasters(reader, inputs, 'isovisc')
+
 def get_summary_frames():
     frames = (get_inputs_frame(), *get_endpoints_frames(), get_averages_frame())
     commonkeys = set.intersection(*list(set(frame.index) for frame in frames))

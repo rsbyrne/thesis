@@ -2,30 +2,31 @@
 
 - part: Front Matter
   chapters:
-  - file: declaration
-  - file: abstract
-  - file: preamble
-  - file: acknowledgements
+  - file: frontmatter/declaration
+  - file: frontmatter/abstract
+  - file: frontmatter/preamble
+  - file: frontmatter/acknowledgements
+  - file: toc
 
 - part: Matter
-  chapters:
   numbered: true
+  chapters:
   - file: content/chapter_introduction/main
   - file: content/chapter_background/main
   - file: content/chapter_methods/main
   - file: content/chapter_everest/main
   - file: content/chapter_suite/main
   - file: content/chapter_linear/main
-  - file: content/chapter_MS98/main
+  - file: content/chapter_viscoplastic/main
   - file: content/chapter_advanced/main
   - file: content/chapter_discussion/main
   - file: content/chapter_conclusion/main
 
 - part: End Matter
   chapters:
-  - file: postamble
+  - file: endmatter/postamble
   - file: references/main
 
 - part: Appendices
   chapters:
-  - file: appendices/tables
+  - file: appendices/tables/main

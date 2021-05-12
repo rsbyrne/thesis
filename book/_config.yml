@@ -11,7 +11,7 @@ parse:
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: force
+  execute_notebooks: cache
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -36,3 +36,7 @@ launch_buttons:
   notebook_interface: classic #jupyterlab
   binderhub_url: https://mybinder.org
   colab_url: https://colab.research.google.com
+
+# Add bibliography
+bibtex_bibfiles:
+    - references.bib

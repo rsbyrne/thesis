@@ -48,7 +48,7 @@ initial = sinuinitial
 alphaexp = 2
 reinit = True
 
-while alphaexp <= 7.5:
+while alphaexp <= 7.:
 
     fine = max(8, round(2 ** alphaexp / 4) * 4)
     coarse = max(4, round(fine // 2 / 4) * 4)

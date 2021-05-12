@@ -57,7 +57,7 @@ with open(LOGPATH, mode = 'w') as logfile:
 
     log("Here we go...")
 
-    while alphaexp <= 7.5:
+    while alphaexp <= 7.:
 
         log("Starting alphaexp=" + str(alphaexp) + '...')
 
