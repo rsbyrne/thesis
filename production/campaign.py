@@ -98,7 +98,9 @@ if __name__ == '__main__':
                 ret = proc.wait()
                 if ret:
                     jobfile.write('Error')
-                    raise subprocess.CalledProcessError(ret, cmd)
+                    exc = subprocess.CalledProcessError(ret, cmd)
+                    jobfile.write(str(exc))
+                    raise exc 
                 else:
                     jobfile.write('Done.')
 
@@ -106,7 +108,7 @@ if __name__ == '__main__':
             if locked:
                 LOCKFILEPATH.unlink()
             if isinstance(exc, subprocess.CalledProcessError):
-                break
+                continue
             else:
                 raise Exception from exc
 

@@ -1,31 +1,24 @@
-- file: intro
+- file: index
 
-- part: Front Matter
+- part: Front matter
   chapters:
   - file: frontmatter/declaration
-  - file: frontmatter/abstract
   - file: frontmatter/preamble
+  - file: frontmatter/abstract
+  - file: frontmatter/introduction
   - file: frontmatter/acknowledgements
-  - file: toc
 
-- part: Matter
+- part: Thesis
   numbered: true
   chapters:
-  - file: content/chapter_introduction/main
-  - file: content/chapter_background/main
-  - file: content/chapter_methods/main
-  - file: content/chapter_everest/main
-  - file: content/chapter_suite/main
-  - file: content/chapter_linear/main
-  - file: content/chapter_viscoplastic/main
-  - file: content/chapter_advanced/main
-  - file: content/chapter_discussion/main
-  - file: content/chapter_conclusion/main
-
-- part: End Matter
-  chapters:
-  - file: endmatter/postamble
-  - file: references/main
+  - file: content/chapter_01_background/main
+  - file: content/chapter_02_methods/main
+  - file: content/chapter_03_everest/main
+  - file: content/chapter_04_linear/main
+  - file: content/chapter_05_viscoplastic/main
+  - file: content/chapter_06_advanced/main
+  - file: content/chapter_07_discussion/main
+  - file: content/chapter_08_conclusion/main
 
 - part: Appendices
   chapters:

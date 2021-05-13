@@ -1,3 +1,3 @@
 # Linear
 
-Here is my nifty citation {cite}`perez2011python`.
+Here is my nifty citation {cite:t}`perez2011python`
