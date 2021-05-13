@@ -1,6 +1,6 @@
 # Linear
 
-Here is my nifty citation {cite}`holdgraf_rapid_2016`
+Here is my nifty citation {cite}`Wolszczan1992-cg`
 
 ```{bibliography}
 ```
