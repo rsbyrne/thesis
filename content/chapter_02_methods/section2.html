@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.2. Numerical methods and the Underworld code &#8212; What kind of thing is a planet?</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2.3. Suite-modelling, PlanetEngine and Everest" href="section3.html" />
+    <link rel="prev" title="2.1. The analytical toolkit" href="section1.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">What kind of thing is a planet?</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   What kind of thing is a planet?
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Front matter
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../frontmatter/declaration.html">
+   Declaration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../frontmatter/preamble.html">
+   Preamble
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../frontmatter/abstract.html">
+   Abstract
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../frontmatter/introduction.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../frontmatter/acknowledgements.html">
+   Acknowledgements
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Thesis
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_01_background/main.html">
+   1. Review and Theory
+  </a>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="intro.html">
+   2. Chapter 2 - Tools and Methods
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="section1.html">
+     2.1. The analytical toolkit
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.2. Numerical methods and the Underworld code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="section3.html">
+     2.3. Suite-modelling, PlanetEngine and Everest
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conclusion.html">
+     2.4. Conclusion
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_03_everest/main.html">
+   3. Everest
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_04_linear/main.html">
+   4. Linear
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_05_viscoplastic/main.html">
+   5. Viscoplastic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_06_advanced/main.html">
+   6. Advanced
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_07_discussion/main.html">
+   7. Discussion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter_08_conclusion/main.html">
+   8. Conclusion
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  End matter
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../references.html">
+   References
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../appendices/tables/main.html">
+   Tables
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/chapter_02_methods/section2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rsbyrne/thesis"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/rsbyrne/thesis/issues/new?title=Issue%20on%20page%20%2Fcontent/chapter_02_methods/section2.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/rsbyrne/thesis/edit/main/book/content/chapter_02_methods/section2.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rsbyrne/thesis/main?urlpath=lab/tree/book/content/chapter_02_methods/section2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/rsbyrne/thesis/blob/main/book/content/chapter_02_methods/section2.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numerical-methods">
+   2.2.1. Numerical methods
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-underworld-code">
+   2.2.2. The Underworld code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#underworld-in-the-annulus">
+   2.2.3. Underworld in the annulus
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="numerical-methods-and-the-underworld-code">
+<h1><span class="section-number">2.2. </span>Numerical methods and the Underworld code<a class="headerlink" href="#numerical-methods-and-the-underworld-code" title="Permalink to this headline">¶</a></h1>
+<p>When the font of analysis is exhausted, numerical solutions become indispensable. Though the construction of robust and accurate systems for the computation of mantle convection problems is far from trivial, many successful approaches have been developed over the years, each with its own advantages and limitations. For this thesis we adopt a finite-element approach, which has been extensively developed by many groups over more than a quarter of a century. In particular, we follow after Professor Moresi and colleagues, the developers of modelling codes including CITCOM, Ellipsis, and most lately Underworld <span id="id1">[<a class="reference internal" href="../../references.html#id71">Beucher <em>et al.</em>, 2019</a>, <a class="reference internal" href="../../references.html#id73">Farrington <em>et al.</em>, 2005</a>, <a class="reference internal" href="../../references.html#id72">May and Moresi, 2008</a>, <a class="reference internal" href="../../references.html#id552">Moresi <em>et al.</em>, 2003</a>, <a class="reference internal" href="../../references.html#id384">Moresi <em>et al.</em>, 2002</a>, <a class="reference internal" href="../../references.html#id383">Moresi <em>et al.</em>, 2007</a>, <a class="reference internal" href="../../references.html#id381">Moresi and Solomatov, 1995</a>, <a class="reference internal" href="../../references.html#id544">Moresi <em>et al.</em>, 1996</a>, <a class="reference internal" href="../../references.html#id385">Zhong <em>et al.</em>, 1998</a>]</span>.</p>
+<p>Here we will discuss in broad terms the principles and infrastructure of our numerical modelling practice; particulars of model design and construction will be discussed in further chapters as relevance dictates.</p>
+<div class="section" id="numerical-methods">
+<h2><span class="section-number">2.2.1. </span>Numerical methods<a class="headerlink" href="#numerical-methods" title="Permalink to this headline">¶</a></h2>
+<p>To take a numerical approach to mantle convection is to endeavour to iteratively solve the following system of equations, which are the Stokes, conservation, and advection-diffusion equations under the assumptions of incompressibility and infinite Prandtl number:</p>
+<p>p - (D) = g</p>
+<p>u = 0</p>
+<p>Tt + uT = 2T + H</p>
+<p>Where  is dynamic viscosity, D the strain rate tensor, p dynamic pressure,  the density anomaly, g the gravity vector, u the velocity vector, T temperature,  thermal diffusivity, t time, and H is a thermal source term, i.e. radiogenic heating. The first two equations together solve for velocity given buoyancy and viscosity without accounting for inertia (hence the lack of time-dependency), while the third equation governs determines the change in temperature at any given point after an infinitesimal time interval due to diffusion (the first term) and advection (the second). Temperature, being the only time-dependent quantity, is the only necessary variable of state for this system. It is further possible to construct the viscosity and diffusivity parameters as functions of space, time, temperature, velocity, et cetera, to achieve much more complex rheologies as desired; plastic, elastic, rigid, and insulating materials may all be implemented in this way, each with its own perils and caveats.</p>
+<p>We have already established that the equations are generally insoluble; numerical methods are the only recourse. There are unavoidable tradeoffs in terms of time, memory, accuracy, flexibility, extensibility, and robustness associated with every numerical convection scheme. Many methods have been developed, including smooth particle hydrodynamics <span id="id2">[<a class="reference internal" href="../../references.html#id58">Monaghan, 2005</a>]</span> and discrete elements <span id="id3">[<a class="reference internal" href="../../references.html#id57">Cundall and Strack, 1980</a>]</span>. We employ a finite elements approach <span id="id4">[<a class="reference internal" href="../../references.html#id69">Hughes, 2012</a>]</span> in which the domain is divided into a finite network of cells (the ‘mesh’); all field values are hosted on the nodes, with integrals across elements approximated using Gauss quadrature <span id="id5">[<a class="reference internal" href="../../references.html#id61">Swarztrauber, 2003</a>]</span>.  Such an approach can of course yield only an approximation of what the original equations imply, but that approximation can be arbitrarily accurate depending on the fineness of discretisation. The question, then, is how coarse can the approximation be made without losing fidelity to the governing equations?</p>
+<p>Computationally, the problem takes the form:</p>
+<p>Au + Bp = f</p>
+<p>BTu = 0</p>
+<p>Where A is the known ‘stiffness’ matrix equivalent here to viscosity, u is a vector of unknown velocities, B is the discrete gradient operator, p contains the pressure unknowns, T indicates the transpose, and f is the known vector of body and boundary forces acting on the material. The objective is to solve for u as cheaply and reliably as possible; once a velocity solution is obtained, the system can be integrated in time and the cycle begins again. First, however, we require a solution for p. Multiplying both sides by BTA-1 and substituting for BTu = 0 we find:</p>
+<p>BTA-1Bp = BTA-1f</p>
+<p>Such a form exposes the pressure to solution by a Schur Complement method, at the cost of introducing the non-trivial A-1 operation, which is both heavy and costly. To avoid having to generate A-1, we may instead reproduce its effect using a Krylov Subspace method (KSP), wherein matrix-matrix products are resolved by decomposing them into iterative series of matrix-vector products, with each vector comprising the residual of the previous iteration until the residual is less than some nominated threshold: one very popular implementation of this concept is the Generalised Minimal Residual method, or GMRES <span id="id6">[<a class="reference internal" href="../../references.html#id62">Saad and Schultz, 1986</a>]</span>. Once a solution for p is obtained, we are free to solve for u through similar methods. The velocity solution can then be used to advect the temperature field and any other state variables using a standard Petrov-Galerkin scheme; for convection problems an ‘upwind’ variant can be used to avoid ‘wiggles’ between nodes <span id="id7">[<a class="reference internal" href="../../references.html#id59">Brooks and Hughes, 1982</a>]</span>. The actual time integral is carried out using a Runge-Kutta method for accuracy <span id="id8">[<a class="reference internal" href="../../references.html#id60">Hairer <em>et al.</em>, 2006</a>]</span> and is taken over a time interval chosen to be shorter than either the diffusive or the advective timescales across each element, i.e. the Courant condition <span id="id9">[<a class="reference internal" href="../../references.html#id63">Courant <em>et al.</em>, 1967</a>]</span>. Upon advection, the system is fully iterated in time and the process may be repeated, with the advantage that the pressure solution for the previous timestep can be retained to quicken the convergence of the subsequent step. Performance can be improved by incorporating preconditioners for each solve, which exploit a priori analytical insights into certain model configurations to constrain the solution space <span id="id10">[<a class="reference internal" href="../../references.html#id72">May and Moresi, 2008</a>]</span></p>
+<p>This approach is accurate, robust and stable <span id="id11">[<a class="reference internal" href="../../references.html#id381">Moresi and Solomatov, 1995</a>]</span>. However, even in the best case scenario, the complexity of such a direct solution scales with the cube of the number of elements N3. To achieve a scaling behaviour closer to N, it is possible to drastically reduce the workload of the inner KSPs using an adaptive multi-grid approach. With this method, a solution is obtained first for a much coarser discretisation, and then corrected over successively finer meshes until the error is within a provided tolerance. In addition to speed and resilience, the multi-grid lends itself well to parallelisation, as the first-order global features of the model can be coordinated at the coarsest levels first, while finer local features captured in heavier arrays can be shared more judiciously, thus reducing communications overheads.</p>
+<p>The method we have outlined is the product of decades of meticulous development and is known to be as reliable as it is quick. It has been comprehensively benchmarked across a wide range of rheologies and parameters, including models with extreme viscosity contrasts <span id="id12">[<a class="reference internal" href="../../references.html#id544">Moresi <em>et al.</em>, 1996</a>]</span>, elastic behaviour <span id="id13">[<a class="reference internal" href="../../references.html#id384">Moresi <em>et al.</em>, 2002</a>]</span>, and strain-localising mechanisms <span id="id14">[<a class="reference internal" href="../../references.html#id383">Moresi <em>et al.</em>, 2007</a>]</span>. It has been tested against physical laboratory experiments <span id="id15">[<a class="reference internal" href="../../references.html#id67">Mériaux <em>et al.</em>, 2018</a>]</span> and has been demonstrated to be robust and scalable up to thousands of parallel processes <span id="id16">[<a class="reference internal" href="../../references.html#id73">Farrington <em>et al.</em>, 2005</a>]</span>.</p>
+<p>One shortcoming of the method we have described is the inappropriateness of the finite element mesh for preserving the geometries of integer-valued domains: for example deformation history, or the distribution of various material phases. Though there are ways of accommodating such features using mesh-based approaches, they tend to be cumbersome and inefficient. A superior approach is to incorporate Lagrangian particle swarms <span id="id17">[<a class="reference internal" href="../../references.html#id552">Moresi <em>et al.</em>, 2003</a>]</span>, which are able to carry much higher-resolution information than the mesh and can transport both real-valued data (e.g. temperature, viscosity) and integer-valued data (e.g. history, material identity), which mesh-based variables necessarily cannot. Swarms and their associated variables are advected according to the Stokes solution at the same time as the underlying mesh-based state variables. In turn, the Stokes solver calls for the swarms to be interpolated to the mesh if and when they become relevant to the solution. Interpolation can be costly and complicated for unstructured networks like particle swarms - prohibitively so if the node weightings must be recalculated with each timestep, as is the case for any advecting swarm - so it is important to carry out such an operation as infrequently and efficiently as possible. Gauss quadrature is the standard method, with simple nearest-neighbour evaluation to determine which elements own which particles. An alternative is to use a grid-based Voronoi algorithm <span id="id18">[<a class="reference internal" href="../../references.html#id65">Velić <em>et al.</em>, 2009</a>]</span> in which domains of control for each node are iteratively built out cell by cell; where two nodes lay claim to the same territory, the interpolation grid is refined, but only inside the conflicted cell; superfluous calculation is thereby minimised. Another strategy, particularly suited to the interpolation of very sparse swarms, uses a k-d tree to efficiently seek out the nearest particle from any given node. Regardless of interpolation style, the addition of particle swarms dramatically extends the utility of the finite element method.</p>
+</div>
+<div class="section" id="the-underworld-code">
+<h2><span class="section-number">2.2.2. </span>The Underworld code<a class="headerlink" href="#the-underworld-code" title="Permalink to this headline">¶</a></h2>
+<p>Particular software implementations of the methods outlined above have been developed over many computing generations, and several continue to co-exist today as part of a broad and branching family. The present state-of-the-art iteration is Underworld, which supports 2D, 3D, multigrid, and particle-in-cell features while also combining a powerful yet modular C-level infrastructure <span id="id19">[<a class="reference internal" href="../../references.html#id70">Quenette <em>et al.</em>, 2007</a>]</span> with a user-friendly, hyper-extensible Python-based API. Parallelisation is provided through MPI while the underlying solvers are implemented with PETSc. Though deeper layers of Underworld remain fully transparent and accessible, the Python layer is designed to encourage fluidity, creativity, and legibility in model building, providing encapsulated higher-level proxies for the multifarious underlying C assets while subtly encouraging a good modelling idiom in users. This has encouraged bespoke application development <span id="id20">[<a class="reference internal" href="../../references.html#id71">Beucher <em>et al.</em>, 2019</a>]</span> and the integration of geodynamics codes with other modelling packages <span id="id21">[<a class="reference internal" href="../../references.html#id66">Asten, 2018</a>]</span>.</p>
+<p>The higher-level Underworld syntax fully exploits Python’s object-oriented idiom, encapsulating standard model features like meshes, swarms, variables, and solvers as independent instances of generalised classes. Each object corresponds to C-level structures which are in turn organised under the StGermain interoperability framework for computational modelling <span id="id22">[<a class="reference internal" href="../../references.html#id70">Quenette <em>et al.</em>, 2007</a>]</span>. The algorithmic firepower at the heart of the operation draws on the ubiquitous standard PETSc code for partial differential equations. By default the PETSc infrastructure is configured for robustness first, speed second; however, a range of options is exposed at the Python level to reconfigure the solvers as desired. The principles of encapsulation and localisation are carefully honoured in Underworld’s design, with use of global attributes minimised and namespace pollution strictly avoided. Consequently, deletion of obsolete references or ‘garbage collection’ operates mostly as a Python user would intuitively expect, so that in typical use cases it is rarely necessary to do more than the elementary due diligence to limit memory leaks. However, at the scales we have operated, unavoidable pointer entropy at the C-level has been found to proliferate to problematic levels at times. This has been mitigated by prudent reuse of already instantiated objects and by spawning the heaviest or lengthiest jobs in subprocesses to harness system-level garbage collection.</p>
+<p>As accessible as the new tools are, care must still be taken to ensure an appropriately configured model, beginning with the choice of resolution. While temporal resolution, i.e. timestep size, is determined dynamically based on the prescribed tolerances, spatial resolution is the domain of the user. Overly fine elements are wasteful, while insufficiently fine elements will fail to faithfully discretise the underlying physics. As a rule of thumb, the spatial resolution in any given region should be half an order of magnitude finer at least than the smallest relevant model features in that vicinity. Of course, it is not always clear a priori what this scale will be. Boundary layer and plume theory can provide some information about featural dimensions at steady-state for simple rheologies; however, the sensitivity of mantle convection on potentially very small-scale instabilities means a resolution sufficient for steady-state may still bias the solution at other stages. The appropriate resolution can be sought empirically, by running a suite of progressively finer models until the point of diminishing returns is reached. In theory, a well-constructed model should converge with resolution in the limit that a discretised model becomes indistinguishable from a continuous one. If convergence does not occur within a computationally feasible envelope, the model may be presumed to be misconfigured in some deeper sense. Another means of determining the correct resolution is to run a single, very-high resolution test and conduct a power spectral analysis of the constituent fields; the shortest wavelength that contains information must dictate the spatial resolution. The nexus of Rayleigh number, featural thickness, and resolution places an upper bound on what parameters can realistically be tested in the context of a large suite-modelling experiment: although Ra approaching 109 are likely more appropriate for Earth whole-mantle convection <span id="id23">[<a class="reference internal" href="../../references.html#id339">Wolstencroft <em>et al.</em>, 2009</a>]</span>, most cases explored here are less than Ra = 107, which is amenable to resolutions in the order of 128 radial cells. If resources are particularly at a premium, static or even adaptive mesh refinement can be employed to concentrate resolution in areas where it is most needed. Unfortunately, it is a present shortcoming of Underworld that only quadrangular elements are supported, which limits grid refinement, though work toward supporting unstructured meshes is underway.</p>
+<p>Underworld provides an interface to the underlying PETSc options, most notably the choice of inner solve method and tolerance. The default configuration for the solver is mg or ‘multigrid’, which is the method we have outlined here: this arguably provides the best balance of speed, robustness, scalability, flexibility, and parallelisability. Alternatives include mumps, ‘multifrontal massively parallel sparse direct solver’, and the ‘lower-upper method’ LU. Careful benchmarking is called for to choose the correct configuration, and optimum results cannot be assumed for the default configuration. Tolerances in particular should always be calibrated manually using convergence and power spectrum tests as outlined above. Excessively fine tolerances will needlessly delay solver convergence, while overly generous tolerances will introduce numerical noise into the solution. The chosen tolerances ultimately determine the uncertainty inherent to the model and should always be chosen with care and cited prominently.</p>
+</div>
+<div class="section" id="underworld-in-the-annulus">
+<h2><span class="section-number">2.2.3. </span>Underworld in the annulus<a class="headerlink" href="#underworld-in-the-annulus" title="Permalink to this headline">¶</a></h2>
+<p>Even with the gift of Moore’s law, fully three-dimensional models remain prohibitively expensive, particularly at sufficient resolutions. A two-dimensional annulus is a compromise that allows exploration of the influence of curvature without exponentially expanding the degrees of freedom. Although such a geometry cannot claim to reproduce Earth-like conditions as such, it is nonetheless appropriate for probing a wide range of mantle convection phenomena and continues to be widely used.</p>
+<p>In Underworld, which at present uses Cartesian-type meshes, the annulus is constructed by deforming a rectilinear mesh around the origin such that the ratio of inner and outer radii f falls in the range 0  1, where f  1 approaches no curvature and f = 0 is a model with no core. When the aspect ratio and curvature are such that the two ends meet, those ends are made periodic and the result is a full annulus. For the whole Earth mantle, a ratio of f = 0.54 is appropriate, while for the upper mantle only f = 0.9 is more realistic. Naturally a full annulus of f = 1 is not possible, while severe solver complications manifest at f &lt; 0.2 due to the extreme deformation of the cells.</p>
+<p>Our approach to the annulus has the advantage of robustness and simplicity. It is more amenable for the solvers and allows highly curved geometries without requiring a revision of any of the critical computational systems. However, it does have many shortcomings. Outer cells are stretched as inner cells are shortened, forcing a choice of either under- or over-resolution of one or other of the boundary layers. Boundary layer conditions for velocity must be defined according to unit vectors rather than simply Cartesian components; it then becomes necessary to rotate and unrotate the boundary vectors during each solver loop. In periodic cases with zero-shear upper and lower boundaries, we must also be careful to suppress any solid-body rotation that might emerge by calculating and subtracting any uniform global angular components from the velocity vector field. All of this takes time and CPU cycles.</p>
+<p>For our annulus models, it has proven useful to write a bespoke mapping protocol to go from Cartesian to annular domains. The ‘box’ algorithm projects a standard unit square of x, y: (0, 1) onto each annulus or annular wedge such that Cartesian positions can be smoothly and swiftly evaluated in the box and vice versa. This provides a common frame of reference between rectilinear and curvilinear models of any scale and dimensions, with benefits for interoperability, usability, and visualisation. The procedure is both parallel-safe and parallel-efficient, and approaches C-level performance through careful, idiomatic usage of the NumPy interface. In theory it could be extended to any geometry which is a continuous mapping of a rectilinear mesh.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/chapter_02_methods"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="section1.html" title="previous page"><span class="section-number">2.1. </span>The analytical toolkit</a>
+    <a class='right-next' id="next-link" href="section3.html" title="next page"><span class="section-number">2.3. </span>Suite-modelling, PlanetEngine and Everest</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Rohan S. Byrne<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
