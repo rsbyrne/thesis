@@ -1,0 +1,3 @@
+# Conclusion
+
+In this chapter we have discussed the theory of mantle convection; explained and justified our preferred numerical approach; introduced the software tools requisite for the job; and presented a detailed conceptual framework for our research methodology. Further and more detailed methods will be explained in future chapters as they become relevant. Although the challenge at hand is formidable - ever more evidently so as we progress - we hope we have demonstrated that the methodologies thus far outlined are tried, true, and fit for purpose. With equal parts ambition and caution, let us proceed.

@@ -1,42 +1,75 @@
-# Book settings
+###############################################################################
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: What kind of thing is a planet?
-author: Rohan S. Byrne
-logo: logo.png
+###############################################################################
+# Book settings
+title: "What kind of thing is a planet?"
+logo: "logo.png"
+author: "Rohan S. Byrne"
+copyright: "2021"
+email: "rohan.byrne@gmail.com"
+description: "The definitive version of my PhD thesis."
+exclude_patterns: ["*.py", "*.pkl"]
 
-parse:
-  myst_extended_syntax: true
-
-# Force re-execution of notebooks on each build.
+###############################################################################
+# Execution settings
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: cache
+  execute_notebooks: "cache"
+  exclude_patterns: ["_*",]
+  timeout: 30
 
-# Define the name of the latex output file for PDF builds
-latex:
-  latex_documents:
-    targetname: book.tex
+###############################################################################
+# Parse and render settings
+# See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - dollarmath
+    - linkify
+    - substitution
+  myst_url_schemes: [mailto, http, https]
+  myst_extended_syntax: true
 
-# Information about where the book exists on the web
-repository:
-  url: https://github.com/rsbyrne/thesis  # Online location of your book
-  path_to_book: book  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
-
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+###############################################################################
+# HTML-specific settings
 html:
   home_page_in_navbar: true
   use_issues_button: true
   use_repository_button: true
+  use_edit_page_button: true
+
+###############################################################################
+# LaTeX-specific settings
+latex:
+  latex_engine: "pdflatex"
+  latex_documents:
+    targetname: "book.tex"
+  use_jupyterbook_latex: true
+  biblio-style: "authoryear"
+
+###############################################################################
+# Options to configure the Sphinx document engine
+sphinx:
+  config:
+    bibtex_reference_style: "author_year"
+    language: "en"
+
+###############################################################################
+# Other settings
+
+# Information about where the book exists on the web
+repository:
+  url: "https://github.com/rsbyrne/thesis"
+  path_to_book: "book"
+  branch: "main"
 
 # Launch button settings
 launch_buttons:
-  notebook_interface: classic #jupyterlab
-  binderhub_url: https://mybinder.org
-  colab_url: https://colab.research.google.com
+  notebook_interface: "jupyterlab"
+  binderhub_url: "https://mybinder.org"
+  colab_url: "https://colab.research.google.com"
 
 # Add bibliography
 bibtex_bibfiles:
-    - references.bib
+  - "references.bib"

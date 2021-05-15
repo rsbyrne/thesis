@@ -36,7 +36,7 @@ def process_bibtexkey(name, date, biblio):
     pattern = re.compile(name + date + r'-\D\D')
     matches = re.findall(pattern, biblio)
     if not matches:
-        return f"UNFOUND_CITATION({name + date})"
+        raise KeyError
     if len(matches) == 1:
         return matches[0]
     return f"AMBIGUOUS_CITATION({','.join(matches)})"
@@ -51,7 +51,11 @@ def process_parenthetical(passage, biblio):
         words = strn.split(' ')
         name = strip_accents(re.sub(r'\W+', '', words[0]))
         date = words[-1]
-        keys.append(process_bibtexkey(name, date, biblio))
+        try:
+            key = process_bibtexkey(name, date, biblio)
+        except KeyError:
+            key = f"UNFOUND_CITATION({candidate})"
+        keys.append(key)
     return '{cite}' + r"`" + ','.join(keys) + r"`"
 
 def process_citations(text, biblio):

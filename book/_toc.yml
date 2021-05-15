@@ -12,13 +12,22 @@
   numbered: true
   chapters:
   - file: content/chapter_01_background/main
-  - file: content/chapter_02_methods/main
+  - file: content/chapter_02_methods/intro
+    sections:
+    - file: content/chapter_02_methods/section1
+    - file: content/chapter_02_methods/section2
+    - file: content/chapter_02_methods/section3
+    - file: content/chapter_02_methods/conclusion
   - file: content/chapter_03_everest/main
   - file: content/chapter_04_linear/main
   - file: content/chapter_05_viscoplastic/main
   - file: content/chapter_06_advanced/main
   - file: content/chapter_07_discussion/main
   - file: content/chapter_08_conclusion/main
+
+- part: End matter
+  chapters:
+  - file: references
 
 - part: Appendices
   chapters:
