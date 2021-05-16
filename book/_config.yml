@@ -23,11 +23,17 @@ execute:
 # Parse and render settings
 # See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
 parse:
-  myst_enable_extensions:
-    - colon_fence
-    - dollarmath
-    - linkify
-    - substitution
+#   myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+#     - amsmath
+#     - colon_fence
+#     - deflist
+#     - dollarmath
+#     - html_admonition
+#     - html_image
+#     - linkify
+#     - replacements
+#     - smartquotes
+#     - substitution
   myst_url_schemes: [mailto, http, https]
   myst_extended_syntax: true
 
@@ -46,7 +52,7 @@ latex:
   latex_documents:
     targetname: "book.tex"
   use_jupyterbook_latex: true
-  biblio-style: "authoryear"
+#   biblio-style: "authoryear"
 
 ###############################################################################
 # Options to configure the Sphinx document engine
@@ -69,6 +75,7 @@ launch_buttons:
   notebook_interface: "jupyterlab"
   binderhub_url: "https://mybinder.org"
   colab_url: "https://colab.research.google.com"
+  thebe: true
 
 # Add bibliography
 bibtex_bibfiles:

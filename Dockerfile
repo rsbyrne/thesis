@@ -15,12 +15,16 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
 
 # set timezone for installs
+# RUN \
+#   echo "tzdata tzdata/Areas select Australia" > /tmp/preseed.txt; \
+#   echo "tzdata tzdata/Zones/Europe select Melbourne" >> /tmp/preseed.txt; \
+#   debconf-set-selections /tmp/preseed.txt && \
+#   apt-get update && \
+#   apt-get install -y tzdata
 RUN \
-  echo "tzdata tzdata/Areas select Australia" > /tmp/preseed.txt; \
-  echo "tzdata tzdata/Zones/Europe select Melbourne" >> /tmp/preseed.txt; \
-  debconf-set-selections /tmp/preseed.txt && \
-  apt-get update && \
-  apt-get install -y tzdata
+  ls /usr/share/zoneinfo && \
+  cp /usr/share/zoneinfo/Australia/Melbourne /etc/localtime && \
+  echo "Australia/Melbourne" > /etc/timezone && \
 
 # Python
 ENV PYTHONPATH "$THESISDIR:${PYTHONPATH}"
@@ -28,22 +32,31 @@ ENV PYTHONPATH "$THESISDIR/resources:${PYTHONPATH}"
 
 # User
 RUN apt-get install -y dialog
-RUN unminimize
+# RUN unminimize
+
+# Convenience
+# https://whoosh.readthedocs.io/en/latest/
+RUN pip3 install --no-cache-dir -U Whoosh
 
 # Publishing
 RUN apt-get install -y pandoc
 RUN pip3 install --no-cache-dir -U jupyter-book
+RUN pip3 install --no-cache-dir -U sphinxcontrib-bibtex
 RUN pip3 install --no-cache-dir -U bibtexparser
-RUN apt-get install -y chromium-chromedriver
-RUN pip3 install --no-cache-dir ghp-import
+RUN pip3 install --no-cache-dir -U ghp-import
+RUN pip3 install --no-cache-dir -U myst-parser
 
 # Needed for LaTeX building
 RUN apt-get install -y \
-  texlive-latex-recommended texlive-latex-extra \
-  texlive-fonts-recommended texlive-fonts-extra \
-  texlive-xetex latexmk
+  texlive-latex-recommended \
+  texlive-latex-extra \
+  texlive-fonts-recommended \
+  texlive-fonts-extra \
+  texlive-xetex \
+  latexmk
 
-# Needed by Pyppeteer
+Needed by Pyppeteer
+RUN apt-get install -y chromium-chromedriver
 RUN apt install -y \
   gconf-service \
   libasound2 \

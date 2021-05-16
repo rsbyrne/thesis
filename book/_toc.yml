@@ -19,9 +19,30 @@
     - file: content/chapter_02_methods/section3
     - file: content/chapter_02_methods/conclusion
   - file: content/chapter_03_everest/main
-  - file: content/chapter_04_linear/main
-  - file: content/chapter_05_viscoplastic/main
-  - file: content/chapter_06_advanced/main
+  - file: content/chapter_04_linear/abstract
+    sections:
+    - file: content/chapter_04_linear/section01_introduction
+    - file: content/chapter_04_linear/section02_background
+    - file: content/chapter_04_linear/section03_methods
+    - file: content/chapter_04_linear/section04_results
+    - file: content/chapter_04_linear/section05_discussion
+    - file: content/chapter_04_linear/conclusion
+  - file: content/chapter_05_viscoplastic/abstract
+    sections:
+    - file: content/chapter_05_viscoplastic/section01_introduction
+    - file: content/chapter_05_viscoplastic/section02_background
+    - file: content/chapter_05_viscoplastic/section03_methods
+    - file: content/chapter_05_viscoplastic/section04_results
+    - file: content/chapter_05_viscoplastic/section05_discussion
+    - file: content/chapter_05_viscoplastic/conclusion
+  - file: content/chapter_06_advanced/abstract
+    sections:
+    - file: content/chapter_06_advanced/section01_introduction
+    - file: content/chapter_06_advanced/section02_background
+    - file: content/chapter_06_advanced/section03_methods
+    - file: content/chapter_06_advanced/section04_results
+    - file: content/chapter_06_advanced/section05_discussion
+    - file: content/chapter_06_advanced/conclusion
   - file: content/chapter_07_discussion/main
   - file: content/chapter_08_conclusion/main
 

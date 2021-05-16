@@ -1,3 +1,4 @@
+sudo rm -rf book/_build
 python3 publishing/biblio.py
 jb build book/
 #jb build --builder pdfhtml book/

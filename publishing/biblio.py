@@ -1,7 +1,7 @@
 import os
 
 import aliases
-from thesiscode import references
+from referencing import references
 
 if __name__ == '__main__':
 

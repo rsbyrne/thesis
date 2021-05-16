@@ -89,6 +89,9 @@
 \phantomsection\label{\detokenize{index::doc}}
 
 
+\sphinxAtStartPar
+\sphinxhref{https://zenodo.org/badge/latestdoi/339255399}{\sphinxincludegraphics{{/home/morpheus/workspace/mount/book/_build/.doctrees/images/cb34c9d8b82744a5603697d3a9baf761a4066b76/339255399}.svg}}
+
 
 \part{Front matter}
 
@@ -629,10 +632,9 @@ Tectonics is known to us through its sensible processes of orogeny, seismicity, 
 \label{\detokenize{content/chapter_02_methods/section1:the-nusselt-number}}
 \sphinxAtStartPar
 A geodynamically rigid planet with Earth’s interior temperature would not be able to access even these modest energies: it would be trapped by its flat, linear conductive geotherm. That the planetary geotherm is evidently much greater than this is evidence that more kinetic processes are at work. The dimensionless temperature gradient is related to the Nusselt number or \(Nu\), the ratio of the measured temperature gradient to the reference gradient, which is the purely conductive geotherm. It can be given in terms of the rate of change of the dimensionless potential temperature \(\theta^*\) with respect to dimensionless depth \(y^*\) {[}\sphinxcite{references:id89}{]}:
-
-\sphinxAtStartPar
-\textbackslash{}{[} Nu = 1 + \textbackslash{}left| \textbackslash{}frac\{\textbackslash{}partial \textbackslash{}theta\textasciicircum{}\sphinxstyleemphasis{\}\{\textbackslash{}partial y\textasciicircum{}}\} \textbackslash{}right| \_S \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} Nu = 1 + \left| \frac{\partial \theta^*}{\partial y^*} \right| _S \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where \(|x|_S\) indicates the average value across a surface. The asterisks indicate a non\sphinxhyphen{}dimensionalised quantity: this is a convention throughout the literature.
 
@@ -644,10 +646,9 @@ When dimensionless parameters are used \sphinxhyphen{} unit mantle thickness and
 \label{\detokenize{content/chapter_02_methods/section1:the-prandtl-grashof-reynolds-and-rayleigh-numbers}}
 \sphinxAtStartPar
 If conduction is insufficient to explain Earth’s geotherm, another process is implicated, and that is free convection \sphinxhyphen{} buoyancy\sphinxhyphen{}driven advection of heat. The relative effectiveness of convection is a product of two further dimensionless quantities. The \sphinxstyleemphasis{Prandtl} number \(Pr\) takes the ratio of momentum diffusivity and thermal diffusivity:
-
-\sphinxAtStartPar
-\textbackslash{}{[} Pr \textbackslash{}equiv \textbackslash{}frac\{\textbackslash{}nu\_r\}\{\textbackslash{}kappa\_r\} = \textbackslash{}frac\{\textbackslash{}frac\{\textbackslash{}mu\_r\}\{\textbackslash{}rho\_r\}\}\{\textbackslash{}frac\{k\_r\}\{\textbackslash{}rho\_r c\_\{p\_r\}\}\} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} Pr \equiv \frac{\nu_r}{\kappa_r} = \frac{\frac{\mu_r}{\rho_r}}{\frac{k_r}{\rho_r c_{p_r}}} \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where \(\mu\) is viscosity, \(\rho\) is density, \(k\) is thermal conductivity, \(c_p\) is specific heat, and the \(r\) suffix indicates a choice of reference value for variable quantities. The \sphinxstyleemphasis{Grashof} number \(Gr\), meanwhile, concerns the forces involved: it is the ratio of buoyancy to viscous drag.
 
@@ -662,26 +663,24 @@ The \sphinxstyleemphasis{Rayleigh} number is a powerful tool for interrogating t
 
 \sphinxAtStartPar
 The ‘infinite \sphinxstyleemphasis{Prandtl}’ assumption asserts that momentum diffusivity is incomparably greater than thermal diffusivity; i.e.:
-
-\sphinxAtStartPar
-\textbackslash{}{[} \textbackslash{}nu\_r >> \textbackslash{}kappa\_r \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} \nu_r >> \kappa_r \end{split}
+\end{equation*}
 \sphinxAtStartPar
 This is a defensible assumption for the Earth, where the estimated value of the Prandtl number is in fact around \(10^{23}\) {[}\sphinxcite{references:id89}{]}. Implied by the above, but worth stating clearly, is that the \sphinxstyleemphasis{Reynolds} number of the system \sphinxhyphen{} the ratio of inertial to viscous forces \sphinxhyphen{} approaches zero: i.e. inertia is negligible, present velocity is independent of previous velocity, and turbulence is consequently impossible. (This follows because the thermal \sphinxstyleemphasis{Peclet} number, which is \(Ra\), must be a product of \sphinxstyleemphasis{Pr} and \sphinxstyleemphasis{Re}; hence, to be finite, its expression in terms of \sphinxstyleemphasis{Pr} and \sphinxstyleemphasis{Re} must cancel at the limit.)
 
 \sphinxAtStartPar
 The infinite \sphinxstyleemphasis{Prandtl} statement is often taken in tandem with the \sphinxstyleemphasis{Boussinesq} approximation, which neutralises all density\sphinxhyphen{}driven force terms which are not coefficients of gravity; in other words, the fluid is held to be incompressible:
-
-\sphinxAtStartPar
-\textbackslash{}{[} \textbackslash{}frac\{\textbackslash{}partial u\}\{\textbackslash{}partial x\} + \textbackslash{}frac\{\textbackslash{}partial v\}\{\textbackslash{}partial y\} = 0 \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0 \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where \(u\) and \(v\) connote horizontal and vertical velocity components respectively. The incompressibility assumption in two dimensions allows us to define a stream function \(\Psi(x, y)\):
-
-\sphinxAtStartPar
-\textbackslash{}{[} u = \textbackslash{}frac\{\textbackslash{}partial \textbackslash{}Psi\}\{\textbackslash{}partial y\}, \textbackslash{}quad v = \sphinxhyphen{}\textbackslash{}frac\{\textbackslash{}partial \textbackslash{}Psi\}\{\textbackslash{}partial x\} \textbackslash{}{]}
-\textbackslash{}{[} \textbackslash{}overline\{u\} = \textbackslash{}nabla \textbackslash{}Psi \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} u = \frac{\partial \Psi}{\partial y}, \quad v = -\frac{\partial \Psi}{\partial x} \end{split}
+\end{equation*}\begin{equation*}
+\begin{split} \overline{u} = \nabla \Psi \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where \(u\) is the velocity vector and \(\nabla\) is the familiar vector differential operator \(nabla\) or \(del\).
 
@@ -693,37 +692,32 @@ In addition to the \sphinxstyleemphasis{Boussinesq} and infinite \sphinxstyleemp
 
 \sphinxAtStartPar
 With the aid of this toolkit of assumptions, together with the constitutive equations for conservation of mass and energy, it is possible to obtain velocity and pressure solutions for the otherwise insoluble \sphinxstyleemphasis{Navier\sphinxhyphen{}Stokes} equations: the conservation of momentum equations for viscous fluids. The derivation for mantle problems is canonical but lengthy; details can be found in the universally cited textbook literature on the topic {[}\sphinxcite{references:id89}, \sphinxcite{references:id88}{]}. One extremely useful product, however, is a family of robust parameterisations of the \sphinxstyleemphasis{Rayleigh} number for mantle convection. For a basally\sphinxhyphen{}heated system, the following holds:
-
-\sphinxAtStartPar
-\textbackslash{}{[} Ra \textbackslash{}equiv \textbackslash{}frac\{\textbackslash{}alpha\_r \textbackslash{}Delta T\_r \textbackslash{}rho\_r\textasciicircum{}2 g\_r b\textasciicircum{}3 c\_\{p\_r\}\}\{\textbackslash{}mu\_r k\_r\} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} Ra \equiv \frac{\alpha_r \Delta T_r \rho_r^2 g_r b^3 c_{p_r}}{\mu_r k_r} \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where \(\alpha\) is the coefficient of thermal expansion and \(T\) is the temperature drop across the layer thickness \(b\). It may be convenient instead to take the dynamic viscosity \(\nu=\frac{\mu}{\rho}\) instead, in which case:
-
-\sphinxAtStartPar
-\textbackslash{}{[} Ra = \textbackslash{}frac\{\textbackslash{}alpha \textbackslash{}Delta T \textbackslash{}rho g b\textasciicircum{}3 c\_p\}\{\textbackslash{}nu k\} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} Ra = \frac{\alpha \Delta T \rho g b^3 c_p}{\nu k} \end{split}
+\end{equation*}
 \sphinxAtStartPar
 If the system is internally rather than basally heated \sphinxhyphen{} e.g. as a result of radiogenic heating from uniformly distributed isotopes across the mantle \sphinxhyphen{} the following instead obtains:
-
-\sphinxAtStartPar
-\textbackslash{}{[} Ra\_H \textbackslash{}equiv \textbackslash{}frac\{\textbackslash{}alpha\_r \textbackslash{}rho\_r\textasciicircum{}3 g\_r b\textasciicircum{}5 c\_\{p\_r\} H\_r\}\{\textbackslash{}mu\_r k\_r\textasciicircum{}2\} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} Ra_H \equiv \frac{\alpha_r \rho_r^3 g_r b^5 c_{p_r} H_r}{\mu_r k_r^2} \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Or, again, in terms of dynamic viscosity:
-
-\sphinxAtStartPar
-\textbackslash{}{[} Ra\_H = \textbackslash{}frac\{\textbackslash{}alpha g \textbackslash{}rho H b\textasciicircum{}5\}\{k \textbackslash{}kappa \textbackslash{}nu\} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} Ra_H = \frac{\alpha g \rho H b^5}{k \kappa \nu} \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where \(H\) is the heating in terms of power per mass. (The expression for \(Ra_H\) relates to that for \(Ra\) by a factor of \(\frac{b^2 H \rho}{k}\), for reasons that will later become clear.)
 
 \sphinxAtStartPar
 Of course, in reality, convection in the mantle is driven by both volumetric and basal heating. Unfortunately, there is not yet a universally accepted derivation for such a ‘mixed\sphinxhyphen{}heating \sphinxstyleemphasis{Rayleigh} number’, but one approach which has the virtue of simplicity takes the basally\sphinxhyphen{}heated \(Ra\) expression and adds a coefficient which may be interpreted as a non\sphinxhyphen{}dimensional \(H\) term:
-
-\sphinxAtStartPar
-\textbackslash{}{[} H = \textbackslash{}frac\{\textbackslash{}rho H\textasciicircum{}* b\textasciicircum{}2\}\{k \textbackslash{}Delta T\textasciicircum{}*\} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} H = \frac{\rho H^* b^2}{k \Delta T^*} \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where H* is the specific internal heating rate in W/kg and T* is the dimensionless temperature drop. Because the expression is derived as the quotient of RaH and \(Ra\), the new H term may simply be provided as a coefficient of the basally\sphinxhyphen{}heated \(Ra\) derivation {[}\sphinxcite{references:id81}, \sphinxcite{references:id89}{]}.
 
@@ -735,44 +729,40 @@ Because the \sphinxstyleemphasis{Rayleigh} number so expressed is equivalent to 
 \label{\detokenize{content/chapter_02_methods/section1:linear-stability-analysis-and-the-critical-rayleigh-number}}
 \sphinxAtStartPar
 It was hitherto given that the critical Rayleigh number, below which convection is not possible, is typically obtained empirically. In fact, for simple cases such as this of planar basally\sphinxhyphen{}heated isoviscous flow, an expression for Racr due to arbitrary perturbations can be derived from the assumptions already held using linear stability analysis. First consider the state of a purely conducting system at thermal equilibrium:
-
-\sphinxAtStartPar
-\textbackslash{}{[} T\_c\textasciicircum{}* = \textbackslash{}frac\{T\_0\}\{T\_1 \sphinxhyphen{} T\_0\} + y\textasciicircum{}* \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} T_c^* = \frac{T_0}{T_1 - T_0} + y^* \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where \(T_c^*\) is the dimensionless conductive temperature at dimensionless depth \(y^*\); i.e. there is a linear dependency of temperature and depth.
 
 \sphinxAtStartPar
 Let us now impose a thermal anomaly \(\theta^{'*}\), uncertain in wavelength and infinitesimal in amplitude:
-
-\sphinxAtStartPar
-\textbackslash{}{[} \textbackslash{}theta\textasciicircum{}\{‘\sphinxstyleemphasis{\} \textbackslash{}equiv T\textasciicircum{}\{‘}\} \sphinxhyphen{} T\_c\textasciicircum{}* \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} \theta^{'*} \equiv T^{'*} - T_c^* \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where the starred notation indicates a non\sphinxhyphen{}dimensionalised parameter and the prime notation, here and henceforth, identifies a perturbation. The choice of \(\theta\) here relates to potential temperature, the quantity conserved along adiabats, which is what this perturbation will ultimately induce.
 
 \sphinxAtStartPar
 Before perturbation, the pressure gradient forces were defined solely by the hydrostatic pressure \(p_c\) \sphinxhyphen{} the pressure field which is purely sufficient to counteract the force of gravity. After the introduction of the perturbation, but before the resultant perturbed state is realised, the pressure field is modified in two ways: by the buoyancy anomaly of the perturbation, but also by the contribution of the modified density of the parcel to pre\sphinxhyphen{}perturbative hydrostatic pressure. Taking this into account, we can define a true perturbation pressure \(\Pi^{'*}\) as:
-
-\sphinxAtStartPar
-\textbackslash{}{[} \textbackslash{}Pi\textasciicircum{}\{‘\sphinxstyleemphasis{\} \textbackslash{}equiv p\textasciicircum{}\{‘}\} \sphinxhyphen{} p\_c\textasciicircum{}* \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} \Pi^{'*} \equiv p^{'*} - p_c^* \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where \(p^{'*}\) is the pressure deviation relative to the hydrostatic pressure.
 
 \sphinxAtStartPar
 What determines if this seed of chaos shall grow? Equivalently, we may ask which is faster \sphinxhyphen{} the growth of the anomaly, or the ambient restoring forces. The answer depends in part on the wavelength of the perturbation and in part on the overall convective vigour of the system; a very lengthy expansion {[}\sphinxcite{references:id89}{]} reaches the sixth derivative before delivering the following relation:
-
-\sphinxAtStartPar
-\textbackslash{}{[} Ra\_\{cr\} = \textbackslash{}frac\{\textbackslash{}pi\textasciicircum{}4\}\{4\textbackslash{}lambda\textasciicircum{}\{*4\}\} \textbackslash{}cdot \textbackslash{}left( 4 + \textbackslash{}lambda\textasciicircum{}\{*2\} \textbackslash{}right) \textasciicircum{}3 \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} Ra_{cr} = \frac{\pi^4}{4\lambda^{*4}} \cdot \left( 4 + \lambda^{*2} \right) ^3 \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where \(\lambda^*=\frac{\lambda}{b}\), the wavelength of perturbation equivalent to the original anomaly \(\theta^{'*}\) in the horizontal coordinate, expressed as a ratio of the layer thickness \(b\), and \(Ra_{cr}\) is what we came for: the ‘critical’ \sphinxstyleemphasis{Rayleigh} number above which perturbations of a given wavelength will grow more rapidly than they are diffused. The expression defines a curve through the space of \(Ra_{cr}\) vs dimensionless wavenumber which has a single minimum: this is \(\lambda^*_{cr}\), the wavelength of perturbation at which \(Ra_{cr}\) is at its lowest. Perturbations near this critical wavelength will tend to grow the fastest, since, as it were, they experience the highest ‘local’ \sphinxstyleemphasis{Rayleigh} number. As it happens, this wavelength, and the minimum \(Ra\) it requires to grow, come to:
-
-\sphinxAtStartPar
-\textbackslash{}{[} Ra\_\{cr, \textbackslash{}min\} = \textbackslash{}frac\{27\textbackslash{}pi\textasciicircum{}4\}\{4\} \textbackslash{}approx 6.57.5 \textbackslash{}{]}
-\textbackslash{}{[} \textbackslash{}lambda\_\{cr\}\textasciicircum{}* = 2 \textbackslash{}sqrt\{2\} \textbackslash{}approx 2.828 \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} Ra_{cr, \min} = \frac{27\pi^4}{4} \approx 6.57.5 \end{split}
+\end{equation*}\begin{equation*}
+\begin{split} \lambda_{cr}^* = 2 \sqrt{2} \approx 2.828 \end{split}
+\end{equation*}
 \sphinxAtStartPar
 At first glance it might seem that we have not truly answered the question of what defines the critical Rayleigh number for a convecting system as a whole, but rather only a contingent answer depending on wavelengths of perturbation. Consider, though, the significance of driving the Rayleigh number below the minimum critical value. This is equivalent to stating that no perturbations at all \sphinxhyphen{} not even the least stable ones \sphinxhyphen{} are able to grow quicker than the diffusive timescale. At the minimum critical value itself, it follows that only perturbations of \(\sqrt{2}\) scale will grow; this value nonetheless serves adequately as the \(Ra_{cr}\) of the entire fluid, since a perturbation of such a wavelength can always be discovered in any real system \sphinxhyphen{} if geometry permits.
 
@@ -781,19 +771,17 @@ Having determined the conditions under which the conductive planform becomes uns
 
 \sphinxAtStartPar
 First let us find the infinitesimal thermal anomaly in terms of perturbation wavelength, which must be a sinusoidal function in both \(y\) and \(x\):
-
-\sphinxAtStartPar
-\textbackslash{}{[} \textbackslash{}theta\textasciicircum{}\{‘\sphinxstyleemphasis{\} = \textbackslash{}widehat\{\textbackslash{}theta\}\_0\textasciicircum{}\{‘}\} \textbackslash{}sin \textbackslash{}left( \textbackslash{}pi y\textasciicircum{}* \textbackslash{}right) \textbackslash{}sin \textbackslash{}left( \textbackslash{}frac\{2 \textbackslash{}pi x\textasciicircum{}\sphinxstyleemphasis{\}\{\textbackslash{}lambda\textasciicircum{}}\} \textbackslash{}right) \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} \theta^{'*} = \widehat{\theta}_0^{'*} \sin \left( \pi y^* \right) \sin \left( \frac{2 \pi x^*}{\lambda^*} \right) \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where \(\widehat{\theta}_0^{'*}\) is the first term of the Fourier expansion of \(\theta^{'*}\) and provides the wave amplitude, which is arbitrary.
 
 \sphinxAtStartPar
 We can now take the stream function \(\Psi\) in terms of \(\theta^{'}\) and substitute:
-
-\sphinxAtStartPar
-\textbackslash{}{[} \textbackslash{}Psi\textasciicircum{}* = \sphinxhyphen{} \textbackslash{}left( \textbackslash{}frac\{\textbackslash{}lambda\textasciicircum{}\sphinxstyleemphasis{\}\{2\} \textbackslash{}right) \textbackslash{}left( \textbackslash{}frac\{4\textbackslash{}pi\textasciicircum{}2\}\{\textbackslash{}lambda\textasciicircum{}\{\sphinxstyleemphasis{2\}\} + \textbackslash{}pi\textasciicircum{}2 \textbackslash{}right) \textbackslash{}widehat\{\textbackslash{}theta\}\_0\textasciicircum{}\{‘}\} \textbackslash{}sin \textbackslash{}left( \textbackslash{}pi y\textasciicircum{}} \textbackslash{}right) \textbackslash{}cos \textbackslash{}left( \textbackslash{}frac\{2 \textbackslash{}pi x\textasciicircum{}\sphinxstyleemphasis{\}\{\textbackslash{}lambda\textasciicircum{}}\} \textbackslash{}right) \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} \Psi^* = - \left( \frac{\lambda^*}{2} \right) \left( \frac{4\pi^2}{\lambda^{*2}} + \pi^2 \right) \widehat{\theta}_0^{'*} \sin \left( \pi y^* \right) \cos \left( \frac{2 \pi x^*}{\lambda^*} \right) \end{split}
+\end{equation*}
 \sphinxAtStartPar
 The contours of the stream function give the geometry of convection, which, for the critical \(\lambda\) in two dimensions, takes the form of pairs of counter\sphinxhyphen{}rotating half\sphinxhyphen{}cells of aspect \(\frac{\lambda_{cr}^*}{2}=\sqrt{2}\); in other words, the planform of convection at steady state for any basally\sphinxhyphen{}heated planar isoviscous system will tend to approach an aspect ratio with the approximate dimensions, in landscape, of the page this sentence is written on.
 
@@ -802,10 +790,9 @@ The contours of the stream function give the geometry of convection, which, for 
 \label{\detokenize{content/chapter_02_methods/section1:boundary-layer-theory-and-the-ra-nu-scaling}}
 \sphinxAtStartPar
 The \sphinxstyleemphasis{Rayleigh} number by itself is a powerful tool for controlling and dissecting mantle convection models \sphinxhyphen{} but it would be better still if \(Ra\), the chief input parameter of the convection, could be analytically related to the \sphinxstyleemphasis{Nusselt} number, the most important output parameter:
-
-\sphinxAtStartPar
-\textbackslash{}{[} Nu \textbackslash{}propto f \textbackslash{}circ Ra \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} Nu \propto f \circ Ra \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Because \(Nu\) uniquely measures what \(Ra\) uniquely shapes \sphinxhyphen{} the convective planform \sphinxhyphen{} we know that some function must connect these quantities. To characterise this mystery function, it will be necessary to take what we have learned and delve into the uncertain world of boundary layers.
 
@@ -814,58 +801,51 @@ We have already established that when the \sphinxstyleemphasis{Rayleigh} number 
 
 \sphinxAtStartPar
 It is possible to obtain an expression for the thickness of these boundary layers by considering the linear stability of just the layers themselves. First, we must determine the rate at which the conductive layer expands. This is complicated in the first instance by the fact that the actual layer thickness itself is hard to define in a continuum. Traditionally, however, it has sufficed to define it as the domain across which the first ten percent of temperature is gained or lost. Hence:
-
-\sphinxAtStartPar
-\textbackslash{}{[} y\_T = 2 \textbackslash{}eta\_T \textbackslash{}sqrt\{\textbackslash{}kappa t\} \textbackslash{}approx 2.32 \textbackslash{}sqrt\{\textbackslash{}kappa t\} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} y_T = 2 \eta_T \sqrt{\kappa t} \approx 2.32 \sqrt{\kappa t} \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where \(y_T\) is the boundary layer thickness, \(\sqrt{\kappa t}\) is interpreted as the characteristic length scale of thermal diffusion \(\kappa\), and \(\eta_T\) is the inverse error function of \(0.1\), a constant term approximately equal to \(1.16\).
 
 \sphinxAtStartPar
 As the boundary grows, so do the thermal buoyancy forces. The relevant \sphinxstyleemphasis{Rayleigh} number to parameterise the vigour of the incipient convection is taken over the boundary layer thickness itself, and hence grows as the layer grows:
-
-\sphinxAtStartPar
-\textbackslash{}{[} Ra\_\{y\_T\} = \textbackslash{}frac\{\textbackslash{}alpha \textbackslash{}Delta T g y\_T*3\}\{\textbackslash{}nu \textbackslash{}kappa\} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} Ra_{y_T} = \frac{\alpha \Delta T g y_T*3}{\nu \kappa} \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where \(\alpha\) is the thermal expansivity and \(\nu\) is the dynamic viscosity \(\frac{\nu}{\rho}\).
 
 \sphinxAtStartPar
 Now what we are interested in is what the thickness of the boundary layer will be when the \sphinxstyleemphasis{Rayleigh} number defined over it, \(Ra_{y_T}\), is at its critical value, \(Ra_{y_T,crit}\). Below this value, convective disruption of the layer will not be possible, as any perturbations within the layer will be thermally diffused before they can grow; while above this value, convection is inevitable and the conductive profile of the layer cannot be sustained. The expression for \(Ra_{y_T,crit}\) is the same as that for \(Ra_{y_T}\), except that the temperature contrast \(T\) is half that of the system as a whole; this is because the dimensionless temperature change across either boundary layer goes from zero or unit at the outer edge to exactly \(0.5\) at the inner edge, where the layers face the tepid conditions of the intracellular fluid; so we write:
-
-\sphinxAtStartPar
-\textbackslash{}{[} Ra\_\{y\_T,crit\} = \textbackslash{}frac\{Ra\_\{y\_T\}\}\{2\} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} Ra_{y_T,crit} = \frac{Ra_{y_T}}{2} \end{split}
+\end{equation*}
 \sphinxAtStartPar
 And accordingly:
-
-\sphinxAtStartPar
-\textbackslash{}{[} y\_T = \textbackslash{}left\{ \textbackslash{}frac\{2 Ra\_F \textbackslash{}nu \textbackslash{}kappa\}\{\textbackslash{}alpha g \textbackslash{}Delta T\} \textbackslash{}right\} \textasciicircum{}\{\textbackslash{}frac\{1\}\{3\}\} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} y_T = \left\{ \frac{2 Ra_F \nu \kappa}{\alpha g \Delta T} \right\} ^{\frac{1}{3}} \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where \(Ra_F\) is coined to refer to the minimum critical \sphinxstyleemphasis{Rayleigh} number across the layer as defined when that layer is at the brink of collapse.
 
 \sphinxAtStartPar
 At this point we might be tempted to define a general critical \sphinxstyleemphasis{Rayleigh} number for the layer by the same means we deduced one for the system as a whole previously. Unfortunately, the dynamic quality of the layer thickness \(y_T\) poses one unknown too many. For a boundary layer that is developing through time, it is not guaranteed that an appropriate perturbation of the appropriate scale will emerge at the appropriate moment, nor even that the geometry of the layer will ever be sufficient to permit such a perturbation in the first place. We have come as far as analytical methods can take us; to close the loop, it is necessary to obtain RaF empirically:
-
-\sphinxAtStartPar
-\textbackslash{}{[} y\_T = \textbackslash{}left\{ \textbackslash{}frac\{807 \textbackslash{}nu \textbackslash{}kappa\}\{\textbackslash{}alpha g \textbackslash{}Delta T\} \textbackslash{}right\} \textasciicircum{}\{\textbackslash{}frac\{1\}\{3\}\} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} y_T = \left\{ \frac{807 \nu \kappa}{\alpha g \Delta T} \right\} ^{\frac{1}{3}} \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where the value \(807\) is the experimentally determined \(Ra_F\) for a free\sphinxhyphen{}slip surface {[}\sphinxcite{references:id78}{]}.
 
 \sphinxAtStartPar
 Now, because the thickness of a conductive layer is directly related to the thermal gradient across it, and thence to the Nusselt number \(Nu\), while the right side contains the coefficients of the global Rayleigh number \(Ra\), it finally becomes apparent what form the relationship between \(Nu\) and \(Ra\) should take:
-
-\sphinxAtStartPar
-\textbackslash{}{[} Nu = 0.112 Ra\textasciicircum{}\{\textbackslash{}frac\{1\}\{3\}\}, \textbackslash{}quad Ra\_F = 807 \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} Nu = 0.112 Ra^{\frac{1}{3}}, \quad Ra_F = 807 \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Or more generally:
-
-\sphinxAtStartPar
-\textbackslash{}{[} Nu \textbackslash{}propto Ra\textasciicircum{}\textbackslash{}beta, \textbackslash{}quad \textbackslash{}beta \textbackslash{}approx \textbackslash{}frac\{1\}\{3\} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} Nu \propto Ra^\beta, \quad \beta \approx \frac{1}{3} \end{split}
+\end{equation*}
 \sphinxAtStartPar
 That a scaling law of this form would obtain for two dimensionless flow constants such as these is not surprising; empirically, just such a relationship is in fact very widely attested {[}\sphinxcite{references:id80}, \sphinxcite{references:id408}, \sphinxcite{references:id79}{]}. Authors have differed, however, on the proper value of \(beta\). Though the canonicity of the analytically\sphinxhyphen{}derived value of one third is beyond dispute, it is clear from the divergent results of numerous studies that, in any real scenario, many more variables than we have accounted for must enter the equation. Time\sphinxhyphen{}dependence, long\sphinxhyphen{}lived thermal heterogeneities, aspect ratio, internal heating, and countless other factors all have a part to play. Obtaining robust scaling laws that account for all these factors is the vexing business of this thesis.
 
@@ -877,34 +857,29 @@ What we have deduced so far is valid only for planar domains with basal heating.
 
 \sphinxAtStartPar
 Consider a convecting system with constant and uniform internal heating. Basal heat will be disregarded. For this analysis it will be necessary to prescribe that the basal boundary is insulating; in other words, while the upper boundary retains a \sphinxstyleemphasis{Dirichlet}\sphinxhyphen{}type fixed temperature condition, the lower boundary must be a \sphinxstyleemphasis{Neumann}\sphinxhyphen{}type condition of heat flux zero. In such a system, we cannot rely on the difference of basal and surface temperature for our linear stability analysis. Instead:
-
-\sphinxAtStartPar
-\textbackslash{}{[} \textbackslash{}Delta T\_r = \textbackslash{}frac\{b\textasciicircum{}2 H \textbackslash{}rho\}\{k\} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} \Delta T_r = \frac{b^2 H \rho}{k} \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where, again, \(b\) is the layer thickness, \(H\) is the heating per mass, \(\rho\) is density, and \(k\) is conductivity. The new temperature scale is thus the factor by which temperature must be non\sphinxhyphen{}dimensionalised in this treatment. The conducting geotherm must take this into account, and can no longer be expected to be linear:
-
-\sphinxAtStartPar
-\textbackslash{}{[} T\_c\textasciicircum{}* = \textbackslash{}frac\{T\_0\}\{\textbackslash{}Delta T\_r\} + y\textasciicircum{}* \sphinxhyphen{} \textbackslash{}frac\{y\textasciicircum{}\{*2\}\}\{2\} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} T_c^* = \frac{T_0}{\Delta T_r} + y^* - \frac{y^{*2}}{2} \end{split}
+\end{equation*}
 \sphinxAtStartPar
 We now recall the Rayleigh number for internally heated convection, as given previously:
-
-\sphinxAtStartPar
-\textbackslash{}{[} Ra\_H = \textbackslash{}frac\{\textbackslash{}alpha g \textbackslash{}rho H b\textasciicircum{}5\}\{k \textbackslash{}kappa \textbackslash{}nu\} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} Ra_H = \frac{\alpha g \rho H b^5}{k \kappa \nu} \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Which, together with the conductive geotherm \(T_c^*\) provides:
-
-\sphinxAtStartPar
-\textbackslash{}{[} \textbackslash{}frac\{d p\_c\textasciicircum{}\sphinxstyleemphasis{\}\{d y\textasciicircum{}}\} = \sphinxhyphen{}Ra\_H T\_c\textasciicircum{}* \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} \frac{d p_c^*}{d y^*} = -Ra_H T_c^* \end{split}
+\end{equation*}
 \sphinxAtStartPar
 I.e. the rate of change of the hydrostatic pressure with respect to depth. Unlike in the basally\sphinxhyphen{}heated case, the pressure here is given as dependent on the conductive temperature profile; previously, both temperature and hydrostatic pressure were necessarily linear with depth. From here the analysis proceeds much as in the basally\sphinxhyphen{}heated case, only to culminate in an insoluble ordinary differential equation {[}\sphinxcite{references:id89}{]} from which only empirical data can recover us:
-
-\sphinxAtStartPar
-\textbackslash{}{[} Ra\_\{H, cr, \textbackslash{}min\} = 867.8, \textbackslash{}quad \textbackslash{}lambda\_\{cr\}\textasciicircum{}* = 3.51 \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} Ra_{H, cr, \min} = 867.8, \quad \lambda_{cr}^* = 3.51 \end{split}
+\end{equation*}
 \sphinxAtStartPar
 {[}\sphinxcite{references:id77}{]}
 
@@ -919,51 +894,50 @@ The nature of convecting systems in practice ensures that even the simplest prob
 
 \sphinxAtStartPar
 One means of probing beyond the insolubility barrier is to take an eigenmode expansion of the equations of state and discard all but the fewest number of terms which still support nonlinear interactions:
-
-\sphinxAtStartPar
-\textbackslash{}{[} \textbackslash{}Psi\textasciicircum{}* = \textbackslash{}frac\{4 + \textbackslash{}lambda\textasciicircum{}\{\sphinxstyleemphasis{2\}\}\{\textbackslash{}sqrt\{2\}\} A(\textbackslash{}tau) \textbackslash{}sin \textbackslash{}left( \textbackslash{}frac\{2 \textbackslash{}pi x\textasciicircum{}}\}\{\textbackslash{}lambda\textasciicircum{}\sphinxstyleemphasis{\} \textbackslash{}right) \textbackslash{}sin \textbackslash{}left( \textbackslash{}lambda y\textasciicircum{}} \textbackslash{}right) \textbackslash{}{]}
-\textbackslash{}{[} \textbackslash{}theta\textasciicircum{}* = \textbackslash{}frac\{1\}\{\textbackslash{}pi r\} \textbackslash{}left{[} C(\textbackslash{}tau) \textbackslash{}sin \textbackslash{}left( 2 \textbackslash{}pi y\textasciicircum{}* \textbackslash{}right) \sphinxhyphen{} \textbackslash{}sqrt\{2\} B(\textbackslash{}tau) \textbackslash{}cos \textbackslash{}left( \textbackslash{}frac\{2 \textbackslash{}pi x\textasciicircum{}\sphinxstyleemphasis{\}\{\textbackslash{}lambda\textasciicircum{}}\} \textbackslash{}right) \textbackslash{}sin \textbackslash{}left( \textbackslash{}pi y\textasciicircum{}* \textbackslash{}right) \textbackslash{}right{]} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} \Psi^* = \frac{4 + \lambda^{*2}}{\sqrt{2}} A(\tau) \sin \left( \frac{2 \pi x^*}{\lambda^*} \right) \sin \left( \lambda y^* \right) \end{split}
+\end{equation*}\begin{equation*}
+\begin{split} \theta^* = \frac{1}{\pi r} \left[ C(\tau) \sin \left( 2 \pi y^* \right) - \sqrt{2} B(\tau) \cos \left( \frac{2 \pi x^*}{\lambda^*} \right) \sin \left( \pi y^* \right) \right] \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where \(\Psi\) is again the stream function, \(x\) and \(y\) are coordinates, \(\lambda\) is the featural wavelength, \(r\) is the \sphinxstyleemphasis{Rayleigh} number as a proportion of the critical value \(r = \frac{Ra}{Ra_{cr}}\), and \(A(\tau)\), \(B(\tau)\), and \(C(\tau)\) are time\sphinxhyphen{}dependent coefficients which are functions of \(\tau\), time non\sphinxhyphen{}dimensionalised by wavelength:
-
-\sphinxAtStartPar
-\textbackslash{}{[} \textbackslash{}tau = \textbackslash{}pi\textasciicircum{}2 \textbackslash{}left{[} 1 + \textbackslash{}frac\{2\}\{\textbackslash{}lambda\textasciicircum{}\sphinxstyleemphasis{\} \textbackslash{}sin \textbackslash{}left( \textbackslash{}pi y\textasciicircum{}} \textbackslash{}right) \textbackslash{}right{]} t\textasciicircum{}* \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} \tau = \pi^2 \left[ 1 + \frac{2}{\lambda^*} \sin \left( \pi y^* \right) \right] t^* \end{split}
+\end{equation*}
 \sphinxAtStartPar
 The \(A\), \(B\), and \(C\) coefficients permit a powerful simplification in form. Selecting the appropriate equation from the infinite set contained in the eigenmode expansion {[}\sphinxcite{references:id89}{]}, the following first\sphinxhyphen{}order differential equations can be obtained:
-
-\sphinxAtStartPar
-\textbackslash{}{[} \textbackslash{}frac\{d A\}\{d \textbackslash{}tau\} = Pr \textbackslash{}left( B \sphinxhyphen{} A \textbackslash{}right) \textbackslash{}{]}
-\textbackslash{}{[} \textbackslash{}frac\{d B\}\{d \textbackslash{}tau\} = rA \sphinxhyphen{} B \sphinxhyphen{} AC \textbackslash{}{]}
-\textbackslash{}{[} \textbackslash{}frac\{d C\}\{d \textbackslash{}tau\} = \sphinxhyphen{}bc + AB \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} \frac{d A}{d \tau} = Pr \left( B - A \right) \end{split}
+\end{equation*}\begin{equation*}
+\begin{split} \frac{d B}{d \tau} = rA - B - AC \end{split}
+\end{equation*}\begin{equation*}
+\begin{split} \frac{d C}{d \tau} = -bc + AB \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where \(Pr\) is the \sphinxstyleemphasis{Prandtl} number, which must be kept finite for this analysis, though it may still be arbitrarily large; \(b\) represents:
-
-\sphinxAtStartPar
-\textbackslash{}{[} b = \textbackslash{}frac\{4\}\{\textbackslash{}left{[} 1 + \textbackslash{}left( \textbackslash{}frac\{2\}\{\textbackslash{}lambda\textasciicircum{}*\}\textasciicircum{}2 \textbackslash{}right) \textbackslash{}right{]}\} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} b = \frac{4}{\left[ 1 + \left( \frac{2}{\lambda^*}^2 \right) \right]} \end{split}
+\end{equation*}
 \sphinxAtStartPar
 These three are the Lorenz Equations {[}\sphinxcite{references:id75}{]}, for which solutions represent states of cellular 2D convection. Because they are severely truncated in form, their scope of validity is limited to low values of \(r\). Nevertheless, they are conceptually extremely useful for characterising the macro\sphinxhyphen{}scale character of mantle convection, particularly approaching the point of criticality.
 
 \sphinxAtStartPar
 Of the three functions, \(A\) relates to the stream function, \(B\) the resultant temperature variations, and \(C\) a horizontally averaged temperature mode. Three obvious solutions to the system are:
-
-\sphinxAtStartPar
-\textbackslash{}{[} A = B = C = 0 \textbackslash{}{]}
-\textbackslash{}{[} A = B = \textbackslash{}pm \textbackslash{}sqrt\{b \textbackslash{}left( r \sphinxhyphen{} 1 \textbackslash{}right)\} \textbackslash{}{]}
-\textbackslash{}{[} C = r \sphinxhyphen{} 1 \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} A = B = C = 0 \end{split}
+\end{equation*}\begin{equation*}
+\begin{split} A = B = \pm \sqrt{b \left( r - 1 \right)} \end{split}
+\end{equation*}\begin{equation*}
+\begin{split} C = r - 1 \end{split}
+\end{equation*}
 \sphinxAtStartPar
 When \(r<1\), the trivial first solution above describes the only stable steady\sphinxhyphen{}state solution and represents pure conduction, just as we would expect when \(Ra<Ra_{cr}\). When \(r>1\), this solution becomes unstable, and the only stable solutions become the positive and negative valencies of the second expression above, which represent clockwise and counterclockwise unicellular convection. The ‘choice’ of the system to devolve from the unbiased conductive solution to one of either the left\sphinxhyphen{} or right\sphinxhyphen{}biased convective solutions is termed a ‘pitchfork bifurcation’, the first of many we will encounter; its existence proves that mantle convection is chaotic.
 
 \sphinxAtStartPar
 The two convective solutions above have been shown to be stable \sphinxhyphen{} but are they necessarily steady? If we take our two primitive convective solutions further, a characteristic equation can be obtained from which we can derive the following special value of \(r\):
-
-\sphinxAtStartPar
-\textbackslash{}{[} r = \textbackslash{}frac\{Pr \textbackslash{}left( Pr + b + 3 \textbackslash{}right)\}\{Pr \sphinxhyphen{} b \sphinxhyphen{} 1\} \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} r = \frac{Pr \left( Pr + b + 3 \right)}{Pr - b - 1} \end{split}
+\end{equation*}
 \sphinxAtStartPar
 When \(Pr>b+1\), the above expression gives the value of \(r\) above which the two fundamental convective solutions are in fact not stable; in other words, it is the criterion for the instability of steady convection. It is also another kind of bifurcation \sphinxhyphen{} a \sphinxstyleemphasis{Hopf} bifurcation. Around a \sphinxstyleemphasis{Hopf} point, stable solutions are periodic and cyclical; solutions which cross the bifurcation are hence ‘captured’ by it and cycle through a finite set of states ad infinitum, until or unless those oscillations become great enough to tip a system into the zone of attraction of another \sphinxstyleemphasis{Hopf} point. Complex paths through phase space can thus be drawn which represent very high\sphinxhyphen{}order periodic solutions for the system that resist analytical description. Dubbed ‘strange attractors’, they are the iconic property of chaos theory.
 
@@ -972,11 +946,11 @@ So far, for the sake of argument, we have assumed a finite \sphinxstyleemphasis{
 
 \sphinxAtStartPar
 This would imply, first of all, that \(A=B\). Hence:
-
-\sphinxAtStartPar
-\textbackslash{}{[} \textbackslash{}frac\{d A\}\{d \textbackslash{}tau\} = \textbackslash{}frac\{d B\}\{d \textbackslash{}tau\} = \textbackslash{}left( r \sphinxhyphen{} 1 \textbackslash{}right) B \sphinxhyphen{} BC \textbackslash{}{]}
-\textbackslash{}{[} \textbackslash{}frac\{d C\}\{d \textbackslash{}tau\} = \sphinxhyphen{}bC + B\textasciicircum{}2 \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} \frac{d A}{d \tau} = \frac{d B}{d \tau} = \left( r - 1 \right) B - BC \end{split}
+\end{equation*}\begin{equation*}
+\begin{split} \frac{d C}{d \tau} = -bC + B^2 \end{split}
+\end{equation*}
 \sphinxAtStartPar
 The fixed points of these new equations are the same as for the Lorenz equations, as is the conductive solution when \(A=B=C=0\), which as before is stable only for subcritical \(Ra\); however, the convective solutions can be shown to be stable for all \(r>1\). We might take this to imply that mantle convection cannot be chaotic after all. However, it must be recalled that the Lorenz analysis begins with severe truncation of non\sphinxhyphen{}linear terms. For higher\sphinxhyphen{}order truncations, it is evident that chaotic phases can exist {[}\sphinxcite{references:id89}{]}, particularly at high \sphinxstyleemphasis{Rayleigh} numbers; what is not certain is whether, for a given degree of truncation and a given range of parameters, chaotic behaviours will manifest for a particular system. When we attempt to engage with the problem numerically and empirically through modelling, which is the purpose of this thesis, it will be seen that certain parameter bands are chaotic and time\sphinxhyphen{}dependent while others are not; ultimately it will be argued that such zones of chaos represent boundaries in a very high\sphinxhyphen{}dimensional phase space, and relate fundamentally to the nature and proper characterisation of tectonic modes.
 
@@ -994,12 +968,13 @@ Here we will discuss in broad terms the principles and infrastructure of our num
 \label{\detokenize{content/chapter_02_methods/section2:numerical-methods}}
 \sphinxAtStartPar
 To take a numerical approach to mantle convection is to endeavour to iteratively solve the following system of equations, which are the Stokes, conservation, and advection\sphinxhyphen{}diffusion equations under the assumptions of incompressibility and infinite Prandtl number:
-
-\sphinxAtStartPar
-\textbackslash{}{[} \textbackslash{}nabla p \sphinxhyphen{} \textbackslash{}nabla \textbackslash{}left( \textbackslash{}eta D \textbackslash{}right) = \textbackslash{}Delta \textbackslash{}rho \textbackslash{}overline\{g\} \textbackslash{}{]}
-\textbackslash{}{[} \textbackslash{}nabla \textbackslash{}cdot \textbackslash{}overline\{u\} = 0 \textbackslash{}{]}
-\textbackslash{}{[} \textbackslash{}frac\{\textbackslash{}partial T\}\{\textbackslash{}partial t\} + \textbackslash{}overline\{u\} \textbackslash{}cdot \textbackslash{}nabla T = \textbackslash{}kappa \textbackslash{}nabla\textasciicircum{}2 T + H \textbackslash{}{]}
-
+\begin{equation*}
+\begin{split} \nabla p - \nabla \left( \eta D \right) = \Delta \rho \overline{g} \end{split}
+\end{equation*}\begin{equation*}
+\begin{split} \nabla \cdot \overline{u} = 0 \end{split}
+\end{equation*}\begin{equation*}
+\begin{split} \frac{\partial T}{\partial t} + \overline{u} \cdot \nabla T = \kappa \nabla^2 T + H \end{split}
+\end{equation*}
 \sphinxAtStartPar
 Where \(\eta\) is dynamic viscosity, \(D\) the strain rate tensor, \(p\) dynamic pressure, \(\Delta\rho\) the density anomaly, \(g\) the gravity vector, \(\overline{u}\) the velocity vector, \(T\) temperature, \(\kappa\) thermal diffusivity, \(t\) time, and \(H\) a thermal source term, i.e. radiogenic heating.
 
@@ -1011,43 +986,45 @@ We have already established that the equations are generally insoluble; numerica
 
 \sphinxAtStartPar
 Computationally, the problem takes the form:
+\begin{equation*}
+\begin{split} A \overline{u} + B \overline{p} = \overline{f} \end{split}
+\end{equation*}\begin{equation*}
+\begin{split} B^T \overline{u} = 0 \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Where \(A\) is the known ‘stiffness’ matrix equivalent here to viscosity, \(\overline{u}\) is a vector of unknown velocities, \(B\) is the discrete gradient operator, \(\overline{p}\) contains the pressure unknowns, \(T\) indicates the transpose, and \(\overline{f}\) is the known vector of body and boundary forces acting on the material. The objective is to solve for \(\overline{u}\) as cheaply and reliably as possible; once a velocity solution is obtained, the system can be integrated in time and the cycle begins again. First, however, we require a solution for \(p\). Multiplying both sides by \(B^TA^{-1}\) and substituting for \(B^T\overline{u}=0\) we find:
+\begin{equation*}
+\begin{split} B^T A^{-1} B \overline{p} = B^T A^{-1} \overline{f} \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Such a form exposes the pressure to solution by a Schur Complement method, at the cost of introducing the non\sphinxhyphen{}trivial \(A^{-1}\) operation, which is both heavy and costly.
 
 \sphinxAtStartPar
-\textbackslash{}{[} A \textbackslash{}overline\{u\} + B \textbackslash{}overline\{p\} = \textbackslash{}overline\{f\} \textbackslash{}{]}
-\textbackslash{}{[} B\textasciicircum{}T \textbackslash{}overline\{u\} = 0 \textbackslash{}{]}
+To avoid having to generate \(A^{-1}\), we may instead reproduce its effect using a \sphinxstyleemphasis{Krylov Subspace} method \sphinxstyleemphasis{(KSP)}, wherein matrix\sphinxhyphen{}matrix products are resolved by decomposing them into iterative series of matrix\sphinxhyphen{}vector products, with each vector comprising the residual of the previous iteration until the residual is less than some nominated threshold. One very popular implementation of this concept is the \sphinxstyleemphasis{Generalised Minimal Residual} method, or \sphinxstyleemphasis{GMRES} {[}\sphinxcite{references:id62}{]}. Once a solution for \(p\) is obtained, we are free to solve for \(u\) through similar methods; and this solution in turn may be used to advect the temperature field and any other state variables using a standard \sphinxstyleemphasis{Petrov\sphinxhyphen{}Galerkin} scheme; for convection problems an ‘upwind’ variant can be used to avoid ‘wiggles’ between nodes {[}\sphinxcite{references:id59}{]}. The actual time integral is carried out using a \sphinxstyleemphasis{Runge\sphinxhyphen{}Kutta} method for accuracy {[}\sphinxcite{references:id60}{]} and is taken over a time interval chosen to be shorter than either the diffusive or the advective timescales across each element, i.e. the \sphinxstyleemphasis{Courant} condition {[}\sphinxcite{references:id63}{]}. Once advection has been carried out, the system is fully iterated in time and the process may be repeated, with the advantage that the pressure solution for the previous timestep can be retained to quicken the convergence of the subsequent step. Performance can be improved even further by incorporating preconditioners for each solve, which exploit \sphinxstyleemphasis{a priori} analytical insights into certain model configurations that may constrain the solution space {[}\sphinxcite{references:id72}{]}
 
 \sphinxAtStartPar
-Where A is the known ‘stiffness’ matrix equivalent here to viscosity, u is a vector of unknown velocities, B is the discrete gradient operator, p contains the pressure unknowns, T indicates the transpose, and f is the known vector of body and boundary forces acting on the material. The objective is to solve for u as cheaply and reliably as possible; once a velocity solution is obtained, the system can be integrated in time and the cycle begins again. First, however, we require a solution for p. Multiplying both sides by BTA\sphinxhyphen{}1 and substituting for BTu = 0 we find:
-
-\sphinxAtStartPar
-BTA\sphinxhyphen{}1Bp = BTA\sphinxhyphen{}1f
-
-\sphinxAtStartPar
-Such a form exposes the pressure to solution by a Schur Complement method, at the cost of introducing the non\sphinxhyphen{}trivial A\sphinxhyphen{}1 operation, which is both heavy and costly. To avoid having to generate A\sphinxhyphen{}1, we may instead reproduce its effect using a Krylov Subspace method (KSP), wherein matrix\sphinxhyphen{}matrix products are resolved by decomposing them into iterative series of matrix\sphinxhyphen{}vector products, with each vector comprising the residual of the previous iteration until the residual is less than some nominated threshold: one very popular implementation of this concept is the Generalised Minimal Residual method, or GMRES {[}\sphinxcite{references:id62}{]}. Once a solution for p is obtained, we are free to solve for u through similar methods. The velocity solution can then be used to advect the temperature field and any other state variables using a standard Petrov\sphinxhyphen{}Galerkin scheme; for convection problems an ‘upwind’ variant can be used to avoid ‘wiggles’ between nodes {[}\sphinxcite{references:id59}{]}. The actual time integral is carried out using a Runge\sphinxhyphen{}Kutta method for accuracy {[}\sphinxcite{references:id60}{]} and is taken over a time interval chosen to be shorter than either the diffusive or the advective timescales across each element, i.e. the Courant condition {[}\sphinxcite{references:id63}{]}. Upon advection, the system is fully iterated in time and the process may be repeated, with the advantage that the pressure solution for the previous timestep can be retained to quicken the convergence of the subsequent step. Performance can be improved by incorporating preconditioners for each solve, which exploit a priori analytical insights into certain model configurations to constrain the solution space {[}\sphinxcite{references:id72}{]}
-
-\sphinxAtStartPar
-This approach is accurate, robust and stable {[}\sphinxcite{references:id381}{]}. However, even in the best case scenario, the complexity of such a direct solution scales with the cube of the number of elements N3. To achieve a scaling behaviour closer to N, it is possible to drastically reduce the workload of the inner KSPs using an adaptive multi\sphinxhyphen{}grid approach. With this method, a solution is obtained first for a much coarser discretisation, and then corrected over successively finer meshes until the error is within a provided tolerance. In addition to speed and resilience, the multi\sphinxhyphen{}grid lends itself well to parallelisation, as the first\sphinxhyphen{}order global features of the model can be coordinated at the coarsest levels first, while finer local features captured in heavier arrays can be shared more judiciously, thus reducing communications overheads.
+This approach is accurate, robust and stable {[}\sphinxcite{references:id381}{]}. However, even in the best case scenario, the complexity of such a direct solution scales with the cube of the number of elements \(N^3\). To achieve a scaling behaviour closer to \(N\), it is possible to drastically reduce the workload of the inner \sphinxstyleemphasis{KSP}s using an adaptive multi\sphinxhyphen{}grid approach. With this method, a solution is obtained first for a much coarser discretisation, and then corrected over successively finer meshes until the error is within a provided tolerance. In addition to speed and resilience, the multi\sphinxhyphen{}grid lends itself well to parallelisation, as the first\sphinxhyphen{}order global features of the model can be coordinated at the coarsest levels first, while finer local features captured in heavier arrays can be shared more judiciously, thus reducing communications overheads.
 
 \sphinxAtStartPar
 The method we have outlined is the product of decades of meticulous development and is known to be as reliable as it is quick. It has been comprehensively benchmarked across a wide range of rheologies and parameters, including models with extreme viscosity contrasts {[}\sphinxcite{references:id544}{]}, elastic behaviour {[}\sphinxcite{references:id384}{]}, and strain\sphinxhyphen{}localising mechanisms {[}\sphinxcite{references:id383}{]}. It has been tested against physical laboratory experiments {[}\sphinxcite{references:id67}{]} and has been demonstrated to be robust and scalable up to thousands of parallel processes {[}\sphinxcite{references:id73}{]}.
 
 \sphinxAtStartPar
-One shortcoming of the method we have described is the inappropriateness of the finite element mesh for preserving the geometries of integer\sphinxhyphen{}valued domains: for example deformation history, or the distribution of various material phases. Though there are ways of accommodating such features using mesh\sphinxhyphen{}based approaches, they tend to be cumbersome and inefficient. A superior approach is to incorporate Lagrangian particle swarms {[}\sphinxcite{references:id552}{]}, which are able to carry much higher\sphinxhyphen{}resolution information than the mesh and can transport both real\sphinxhyphen{}valued data (e.g. temperature, viscosity) and integer\sphinxhyphen{}valued data (e.g. history, material identity), which mesh\sphinxhyphen{}based variables necessarily cannot. Swarms and their associated variables are advected according to the Stokes solution at the same time as the underlying mesh\sphinxhyphen{}based state variables. In turn, the Stokes solver calls for the swarms to be interpolated to the mesh if and when they become relevant to the solution. Interpolation can be costly and complicated for unstructured networks like particle swarms \sphinxhyphen{} prohibitively so if the node weightings must be recalculated with each timestep, as is the case for any advecting swarm \sphinxhyphen{} so it is important to carry out such an operation as infrequently and efficiently as possible. Gauss quadrature is the standard method, with simple nearest\sphinxhyphen{}neighbour evaluation to determine which elements own which particles. An alternative is to use a grid\sphinxhyphen{}based Voronoi algorithm {[}\sphinxcite{references:id65}{]} in which domains of control for each node are iteratively built out cell by cell; where two nodes lay claim to the same territory, the interpolation grid is refined, but only inside the conflicted cell; superfluous calculation is thereby minimised. Another strategy, particularly suited to the interpolation of very sparse swarms, uses a k\sphinxhyphen{}d tree to efficiently seek out the nearest particle from any given node. Regardless of interpolation style, the addition of particle swarms dramatically extends the utility of the finite element method.
+One shortcoming of the method we have described is the inappropriateness of the finite element mesh for preserving the geometries of integer\sphinxhyphen{}valued domains \sphinxhyphen{} for example, deformation history, or the distribution of various material phases. Though there are ways of accommodating such features using mesh\sphinxhyphen{}based approaches, they tend to be cumbersome and inefficient. A superior approach is to incorporate Lagrangian particle swarms {[}\sphinxcite{references:id552}{]}, which are able to carry much higher\sphinxhyphen{}resolution information than the mesh and can transport both real\sphinxhyphen{}valued data (e.g. temperature, viscosity) and integer\sphinxhyphen{}valued data (e.g. history, material identity), which mesh\sphinxhyphen{}based variables necessarily cannot. Swarms and their associated variables are advected according to the Stokes solution at the same time as the underlying mesh\sphinxhyphen{}based state variables. In turn, the Stokes solver calls for the swarms to be interpolated to the mesh if and when they become relevant to the solution. Interpolation can be costly and complicated for unstructured networks like particle swarms \sphinxhyphen{} prohibitively so if the node weightings must be recalculated with each timestep, as is the case for any advecting swarm \sphinxhyphen{} so it is important to carry out such an operation as infrequently and efficiently as possible. Gauss quadrature is the standard method, with simple nearest\sphinxhyphen{}neighbour evaluation to determine which elements own which particles. An alternative is to use a grid\sphinxhyphen{}based Voronoi algorithm {[}\sphinxcite{references:id65}{]} in which domains of control for each node are iteratively built out cell by cell; where two nodes lay claim to the same territory, the interpolation grid is refined, but only inside the conflicted cell, thereby minimising superfluous calculations. Another strategy, particularly suited to the interpolation of very sparse swarms, uses a \sphinxstyleemphasis{k\sphinxhyphen{}d} tree to efficiently seek out the nearest particle from any given node. Regardless of interpolation style, the addition of particle swarms dramatically extends the utility of the finite element method.
 
 
 \subsection{The Underworld code}
 \label{\detokenize{content/chapter_02_methods/section2:the-underworld-code}}
 \sphinxAtStartPar
-Particular software implementations of the methods outlined above have been developed over many computing generations, and several continue to co\sphinxhyphen{}exist today as part of a broad and branching family. The present state\sphinxhyphen{}of\sphinxhyphen{}the\sphinxhyphen{}art iteration is Underworld, which supports 2D, 3D, multigrid, and particle\sphinxhyphen{}in\sphinxhyphen{}cell features while also combining a powerful yet modular C\sphinxhyphen{}level infrastructure {[}\sphinxcite{references:id70}{]} with a user\sphinxhyphen{}friendly, hyper\sphinxhyphen{}extensible Python\sphinxhyphen{}based API. Parallelisation is provided through MPI while the underlying solvers are implemented with PETSc. Though deeper layers of Underworld remain fully transparent and accessible, the Python layer is designed to encourage fluidity, creativity, and legibility in model building, providing encapsulated higher\sphinxhyphen{}level proxies for the multifarious underlying C assets while subtly encouraging a good modelling idiom in users. This has encouraged bespoke application development {[}\sphinxcite{references:id71}{]} and the integration of geodynamics codes with other modelling packages {[}\sphinxcite{references:id66}{]}.
+Particular software implementations of the methods outlined above have been developed over many computing generations, and several continue to co\sphinxhyphen{}exist today as part of a broad and branching family. The present state\sphinxhyphen{}of\sphinxhyphen{}the\sphinxhyphen{}art iteration is \sphinxstyleemphasis{Underworld}, which supports 2D, 3D, multigrid, and particle\sphinxhyphen{}in\sphinxhyphen{}cell features while also combining a powerful yet modular C\sphinxhyphen{}level infrastructure {[}\sphinxcite{references:id70}{]} with a user\sphinxhyphen{}friendly, hyper\sphinxhyphen{}extensible \sphinxstyleemphasis{Python}\sphinxhyphen{}based API. Parallelisation is provided through \sphinxstyleemphasis{MPI} while the underlying solvers are implemented with \sphinxstyleemphasis{PETSc}. Though deeper layers of Underworld remain fully transparent and accessible, the \sphinxstyleemphasis{Python} layer is designed to encourage fluidity, creativity, and legibility in model building, providing encapsulated higher\sphinxhyphen{}level proxies for the multifarious underlying \sphinxstyleemphasis{C} assets while subtly encouraging a good modelling idiom in users. This has encouraged bespoke application development {[}\sphinxcite{references:id71}{]} and the integration of geodynamics codes with other modelling packages {[}\sphinxcite{references:id66}{]}.
 
 \sphinxAtStartPar
-The higher\sphinxhyphen{}level Underworld syntax fully exploits Python’s object\sphinxhyphen{}oriented idiom, encapsulating standard model features like meshes, swarms, variables, and solvers as independent instances of generalised classes. Each object corresponds to C\sphinxhyphen{}level structures which are in turn organised under the StGermain interoperability framework for computational modelling {[}\sphinxcite{references:id70}{]}. The algorithmic firepower at the heart of the operation draws on the ubiquitous standard PETSc code for partial differential equations. By default the PETSc infrastructure is configured for robustness first, speed second; however, a range of options is exposed at the Python level to reconfigure the solvers as desired. The principles of encapsulation and localisation are carefully honoured in Underworld’s design, with use of global attributes minimised and namespace pollution strictly avoided. Consequently, deletion of obsolete references or ‘garbage collection’ operates mostly as a Python user would intuitively expect, so that in typical use cases it is rarely necessary to do more than the elementary due diligence to limit memory leaks. However, at the scales we have operated, unavoidable pointer entropy at the C\sphinxhyphen{}level has been found to proliferate to problematic levels at times. This has been mitigated by prudent reuse of already instantiated objects and by spawning the heaviest or lengthiest jobs in subprocesses to harness system\sphinxhyphen{}level garbage collection.
+The higher\sphinxhyphen{}level Underworld syntax fully exploits \sphinxstyleemphasis{Python}’s object\sphinxhyphen{}oriented character, encapsulating standard model features like meshes, swarms, variables, and solvers as independent instances of generalised classes. Each object corresponds to \sphinxstyleemphasis{C}\sphinxhyphen{}level structures which are in turn organised under the \sphinxstyleemphasis{StGermain} interoperability framework for computational modelling {[}\sphinxcite{references:id70}{]}. The algorithmic firepower at the heart of the operation draws on the ubiquitous standard \sphinxstyleemphasis{PETSc} code for partial differential equations. By default, the \sphinxstyleemphasis{PETSc} infrastructure is configured for robustness first, speed second; however, a range of options is exposed at the \sphinxstyleemphasis{Python} level to reconfigure the solvers as desired. The principles of encapsulation and localisation are carefully honoured in \sphinxstyleemphasis{Underworld}’s design, with use of global attributes minimised and namespace pollution strictly avoided. Consequently, deletion of obsolete references or ‘garbage collection’ operates mostly as a \sphinxstyleemphasis{Python} user would intuitively expect, so that in typical use cases it is rarely necessary to do more than the elementary due diligence to limit memory leaks. However, at the scales we have operated at, unavoidable pointer entropy at the \sphinxstyleemphasis{C}\sphinxhyphen{}level has been found to proliferate to problematic levels at times. This has been mitigated by prudent reuse of already instantiated objects and by spawning the heaviest or lengthiest jobs in subprocesses to harness system\sphinxhyphen{}level garbage collection.
 
 \sphinxAtStartPar
-As accessible as the new tools are, care must still be taken to ensure an appropriately configured model, beginning with the choice of resolution. While temporal resolution, i.e. timestep size, is determined dynamically based on the prescribed tolerances, spatial resolution is the domain of the user. Overly fine elements are wasteful, while insufficiently fine elements will fail to faithfully discretise the underlying physics. As a rule of thumb, the spatial resolution in any given region should be half an order of magnitude finer at least than the smallest relevant model features in that vicinity. Of course, it is not always clear a priori what this scale will be. Boundary layer and plume theory can provide some information about featural dimensions at steady\sphinxhyphen{}state for simple rheologies; however, the sensitivity of mantle convection on potentially very small\sphinxhyphen{}scale instabilities means a resolution sufficient for steady\sphinxhyphen{}state may still bias the solution at other stages. The appropriate resolution can be sought empirically, by running a suite of progressively finer models until the point of diminishing returns is reached. In theory, a well\sphinxhyphen{}constructed model should converge with resolution in the limit that a discretised model becomes indistinguishable from a continuous one. If convergence does not occur within a computationally feasible envelope, the model may be presumed to be misconfigured in some deeper sense. Another means of determining the correct resolution is to run a single, very\sphinxhyphen{}high resolution test and conduct a power spectral analysis of the constituent fields; the shortest wavelength that contains information must dictate the spatial resolution. The nexus of Rayleigh number, featural thickness, and resolution places an upper bound on what parameters can realistically be tested in the context of a large suite\sphinxhyphen{}modelling experiment: although Ra approaching 109 are likely more appropriate for Earth whole\sphinxhyphen{}mantle convection {[}\sphinxcite{references:id339}{]}, most cases explored here are less than Ra = 107, which is amenable to resolutions in the order of 128 radial cells. If resources are particularly at a premium, static or even adaptive mesh refinement can be employed to concentrate resolution in areas where it is most needed. Unfortunately, it is a present shortcoming of Underworld that only quadrangular elements are supported, which limits grid refinement, though work toward supporting unstructured meshes is underway.
+As accessible as the new tools are, care must still be taken to ensure an appropriately configured model, beginning with the choice of resolution. While temporal resolution, i.e. timestep size, is determined dynamically based on the prescribed tolerances, spatial resolution is the domain of the user. Overly fine elements are wasteful, while insufficiently fine elements will lossily discretise the underlying physics. As a rule of thumb, the spatial resolution in any given region should be half an order of magnitude finer at least than the smallest relevant model features in that vicinity. Of course, it is not always clear \sphinxstyleemphasis{a priori} what this scale will be. Boundary layer and plume theory can provide some information about featural dimensions at steady\sphinxhyphen{}state for simple rheologies; however, the sensitivity of mantle convection on potentially very small\sphinxhyphen{}scale instabilities means a resolution sufficient for a steady\sphinxhyphen{}state solution may still bias the solution at other stages. The appropriate resolution can be sought empirically, by running a suite of progressively finer models until the point of diminishing returns is reached. In theory, a well\sphinxhyphen{}constructed model should converge with resolution in the limit that a discretised model becomes indistinguishable from a continuous one. If convergence does not occur within a computationally feasible envelope, the model may be presumed to be misconfigured in some deeper sense. Another means of determining the correct resolution is to run a single, very\sphinxhyphen{}high resolution test and conduct a power spectral analysis of the constituent fields; the shortest wavelength that contains information must dictate the spatial resolution. The nexus of \sphinxstyleemphasis{Rayleigh} number, featural thickness, and resolution places an upper bound on what parameters can realistically be tested in the context of a large suite\sphinxhyphen{}modelling experiment: although \(Ra\) values approaching \(10^9\) are likely more appropriate for Earth whole\sphinxhyphen{}mantle convection {[}\sphinxcite{references:id339}{]}, most cases explored here are less than \(Ra=10^7\), which is amenable to resolutions in the order of 128 radial cells. If resources are particularly at a premium, static or even adaptive mesh refinement can be employed to concentrate resolution in areas where it is most needed. Unfortunately, it is a present shortcoming of \sphinxstyleemphasis{Underworld} that only quadrangular elements are supported, starkly limiting the options for grid refinement. Work toward supporting unstructured meshes is, however, underway.
 
 \sphinxAtStartPar
-Underworld provides an interface to the underlying PETSc options, most notably the choice of inner solve method and tolerance. The default configuration for the solver is mg or ‘multigrid’, which is the method we have outlined here: this arguably provides the best balance of speed, robustness, scalability, flexibility, and parallelisability. Alternatives include mumps, ‘multifrontal massively parallel sparse direct solver’, and the ‘lower\sphinxhyphen{}upper method’ LU. Careful benchmarking is called for to choose the correct configuration, and optimum results cannot be assumed for the default configuration. Tolerances in particular should always be calibrated manually using convergence and power spectrum tests as outlined above. Excessively fine tolerances will needlessly delay solver convergence, while overly generous tolerances will introduce numerical noise into the solution. The chosen tolerances ultimately determine the uncertainty inherent to the model and should always be chosen with care and cited prominently.
+\sphinxstyleemphasis{Underworld} provides an easy interface to the underlying \sphinxstyleemphasis{PETSc} options, most notably the choice of inner solve method and tolerance. The default configuration for the solver is \sphinxcode{\sphinxupquote{mg}} or ‘multigrid’, which is the method we have outlined here: this arguably provides the best balance of speed, robustness, scalability, flexibility, and parallelisability. Alternatives include \sphinxcode{\sphinxupquote{mumps}}, ‘multifrontal massively parallel sparse direct solver’, and the ‘lower\sphinxhyphen{}upper method’ \sphinxcode{\sphinxupquote{LU}}. Careful benchmarking is called for to choose the correct configuration, and optimum results cannot be assumed for the default configuration. Tolerances in particular should always be calibrated manually using convergence and power spectrum tests as outlined above. Excessively fine tolerances will needlessly delay solver convergence, while overly generous tolerances will introduce numerical noise into the solution. The chosen tolerances ultimately determine the uncertainty inherent to the model and should always be chosen with care.
 
 
 \subsection{Underworld in the annulus}
@@ -1056,22 +1033,22 @@ Underworld provides an interface to the underlying PETSc options, most notably t
 Even with the gift of Moore’s law, fully three\sphinxhyphen{}dimensional models remain prohibitively expensive, particularly at sufficient resolutions. A two\sphinxhyphen{}dimensional annulus is a compromise that allows exploration of the influence of curvature without exponentially expanding the degrees of freedom. Although such a geometry cannot claim to reproduce Earth\sphinxhyphen{}like conditions as such, it is nonetheless appropriate for probing a wide range of mantle convection phenomena and continues to be widely used.
 
 \sphinxAtStartPar
-In Underworld, which at present uses Cartesian\sphinxhyphen{}type meshes, the annulus is constructed by deforming a rectilinear mesh around the origin such that the ratio of inner and outer radii f falls in the range 0  1, where f  1 approaches no curvature and f = 0 is a model with no core. When the aspect ratio and curvature are such that the two ends meet, those ends are made periodic and the result is a full annulus. For the whole Earth mantle, a ratio of f = 0.54 is appropriate, while for the upper mantle only f = 0.9 is more realistic. Naturally a full annulus of f = 1 is not possible, while severe solver complications manifest at f < 0.2 due to the extreme deformation of the cells.
+In Underworld, which at present uses Cartesian\sphinxhyphen{}type meshes, the annulus is constructed by deforming a rectilinear mesh around the origin such that the ratio of inner and outer radii \(f\) falls in the range \(0\to1\), where \(f\to1\) approaches no curvature and \(f=0\) is a model with no core. When the aspect ratio and curvature are such that the two ends meet, those ends are made periodic and the result is a full annulus. For the whole Earth mantle, a ratio of \(f=0.54\) is appropriate; for the upper mantle only, a ratio of \(f = 0.9\) is more realistic. Naturally, a full annulus of \(f=1\) is not possible, while severe solver complications manifest at \(f<0.2\) due to extreme elongation of the basal cells.
 
 \sphinxAtStartPar
-Our approach to the annulus has the advantage of robustness and simplicity. It is more amenable for the solvers and allows highly curved geometries without requiring a revision of any of the critical computational systems. However, it does have many shortcomings. Outer cells are stretched as inner cells are shortened, forcing a choice of either under\sphinxhyphen{} or over\sphinxhyphen{}resolution of one or other of the boundary layers. Boundary layer conditions for velocity must be defined according to unit vectors rather than simply Cartesian components; it then becomes necessary to rotate and unrotate the boundary vectors during each solver loop. In periodic cases with zero\sphinxhyphen{}shear upper and lower boundaries, we must also be careful to suppress any solid\sphinxhyphen{}body rotation that might emerge by calculating and subtracting any uniform global angular components from the velocity vector field. All of this takes time and CPU cycles.
+Our approach to the annulus has the advantage of robustness and simplicity. It is more amenable for the solver and allows highly curved geometries without requiring a revision of any of the critical computational systems. However, it does have many shortcomings. Outer cells are stretched as inner cells are shortened, forcing a choice of either under\sphinxhyphen{} or over\sphinxhyphen{}resolution of one or other of the boundary layers. Boundary layer conditions for velocity must be defined according to unit vectors rather than simply Cartesian components; it then becomes necessary to rotate and unrotate the boundary vectors during each solver loop. In periodic cases with zero\sphinxhyphen{}shear upper and lower boundaries, we must also be careful to suppress any solid\sphinxhyphen{}body rotation that might emerge by calculating and subtracting any uniform global angular components from the velocity vector field. All of this takes time and CPU cycles, not to mention an increasingly sprawling code overhead.
 
 \sphinxAtStartPar
-For our annulus models, it has proven useful to write a bespoke mapping protocol to go from Cartesian to annular domains. The ‘box’ algorithm projects a standard unit square of x, y: (0, 1) onto each annulus or annular wedge such that Cartesian positions can be smoothly and swiftly evaluated in the box and vice versa. This provides a common frame of reference between rectilinear and curvilinear models of any scale and dimensions, with benefits for interoperability, usability, and visualisation. The procedure is both parallel\sphinxhyphen{}safe and parallel\sphinxhyphen{}efficient, and approaches C\sphinxhyphen{}level performance through careful, idiomatic usage of the NumPy interface. In theory it could be extended to any geometry which is a continuous mapping of a rectilinear mesh.
+For our annulus models, it has proven useful to write a bespoke mapping protocol to go from Cartesian to annular domains. The ‘box’ algorithm projects a standard unit square of \(x,y:(0,1)\) onto each annulus or annular wedge such that Cartesian positions can be smoothly and swiftly evaluated in the box and vice versa. This provides a common frame of reference between rectilinear and curvilinear models of any scale and dimensions, with benefits for interoperability, usability, and visualisation. The procedure is both parallel\sphinxhyphen{}safe and parallel\sphinxhyphen{}efficient, and approaches \(C\)\sphinxhyphen{}level performance through careful, idiomatic usage of the NumPy interface. In theory it could be extended to any geometry which is a continuous mapping of a rectilinear mesh.
 
 
 \section{Suite\sphinxhyphen{}modelling, PlanetEngine and Everest}
 \label{\detokenize{content/chapter_02_methods/section3:suite-modelling-planetengine-and-everest}}\label{\detokenize{content/chapter_02_methods/section3::doc}}
 \sphinxAtStartPar
-A marked advantage of Underworld over other codes is the exposure of the Python\sphinxhyphen{}level API, transforming a geodynamic numerical modelling code into a fully\sphinxhyphen{}featured platform for geodynamics\sphinxhyphen{}related application development. One product of this has been the UWGeodynamics application, which thoroughly streamlines the design and construction of fully\sphinxhyphen{}dimensionalised lithospheric\sphinxhyphen{}scale models for precise and accurate recreation of real\sphinxhyphen{}world scenarios {[}\sphinxcite{references:id71}{]}, taking the already impressive ease\sphinxhyphen{}of\sphinxhyphen{}use of the standard Underworld interface and refining it still further for a particular use case.
+A marked advantage of \sphinxstyleemphasis{Underworld} over other codes is the exposure of the \sphinxstyleemphasis{Python}\sphinxhyphen{}level API, transforming a geodynamic numerical modelling code into a fully\sphinxhyphen{}featured platform for geodynamics\sphinxhyphen{}related application development. One product of this has been the \sphinxstyleemphasis{UWGeodynamics} application, which thoroughly streamlines the design and construction of fully\sphinxhyphen{}dimensionalised lithospheric\sphinxhyphen{}scale models for precise and accurate recreation of real\sphinxhyphen{}world scenarios {[}\sphinxcite{references:id71}{]}, taking the already impressive ease\sphinxhyphen{}of\sphinxhyphen{}use of the standard \sphinxstyleemphasis{Underworld} interface and refining it still further for a particular use case.
 
 \sphinxAtStartPar
-Just as the particular challenges of lithospheric\sphinxhyphen{}scale modelling demanded and informed a bespoke tool, so have we found it necessary to invest in a unique software platform to support our idiosyncratic use case. The product has been two new pieces of research software, both open\sphinxhyphen{}source and freely available for the community to use, collaborate on, and iterate: PlanetEngine, an Underworld application for whole\sphinxhyphen{}mantle modelling in the annulus; and Everest, an HDF5 file protocol and associated tools for numerical exploration across potentially any field of science.
+Just as the particular challenges of lithospheric\sphinxhyphen{}scale modelling demanded and informed a bespoke tool, so have we found it necessary to invest in a unique software platform to support our idiosyncratic use case. The product has been two new pieces of research software, both open\sphinxhyphen{}source and freely available for the community to use, collaborate on, and iterate: \sphinxstyleemphasis{PlanetEngine}, an \sphinxstyleemphasis{Underworld} application for whole\sphinxhyphen{}mantle modelling in the annulus; and Everest, an \sphinxstyleemphasis{HDF5}\sphinxhyphen{}based data format and associated tools for numerical exploration across potentially any field of science.
 
 \sphinxAtStartPar
 Here we will discuss the particular dimensions of the research problem at hand and describe the peculiar methodological framework and vocabulary we have developed in response. We will then provide an overview of the architectural solutions we have ventured and discuss some of the higher\sphinxhyphen{}level ‘big data’ methods which the new format now supports.
@@ -1083,31 +1060,40 @@ Here we will discuss the particular dimensions of the research problem at hand a
 What kind of thing is a planet? This, broadly stated, is the parent question from which all other research questions presented in this thesis derive. Though our immediate contribution must necessarily be limited and contingent, the methodologies we advance here reflect a genuine attempt to formulate a tractable framework that could eventually embrace a solution to this thorniest of planetary problems.
 
 \sphinxAtStartPar
-For this thesis, the term ‘suite\sphinxhyphen{}modelling’ is defined so as to encompass any modelling enterprise in which the primary research output derives from an analysis of the divergent behaviours of a series of models, rather than the particular outcomes of each. A model series of forty or four\sphinxhyphen{}hundred or four\sphinxhyphen{}thousand particular strike\sphinxhyphen{}slip zones done with the sole intent of, say, building a catalogue or database of tectonic scenarios, would not necessarily qualify as a suite\sphinxhyphen{}modelling exercise according to this rubrik. Conversely, a survey of only four strike\sphinxhyphen{}slips might qualify if the purpose was to attain a new general inference about strike\sphinxhyphen{}slips which emerges from and transcends the behaviour of any individual case. Suite\sphinxhyphen{}modelling in this sense is an outgrowth of, and shares common methods and objectives with, the sorts of first\sphinxhyphen{}order analytical approaches discussed earlier in this chapter. It is the pursuit of analytical truth by empirical means.
+For this thesis, the term ‘suite\sphinxhyphen{}modelling’ is defined so as to encompass any modelling enterprise in which the primary research output derives from an analysis of the divergent behaviours of a series of models, rather than the particular outcomes of each. A model series of forty or four\sphinxhyphen{}hundred or four\sphinxhyphen{}thousand particular strike\sphinxhyphen{}slip zones done with the sole intent of, say, building a catalogue or database of tectonic scenarios, would not necessarily qualify as a suite\sphinxhyphen{}modelling exercise according to this rubrik. Conversely, a survey of only four strike\sphinxhyphen{}slips might qualify if the purpose was to attain a new general inference about strike\sphinxhyphen{}slips which emerges from and transcends the behaviour of any individual case. Suite\sphinxhyphen{}modelling in this sense is an outgrowth of, and shares common methods and objectives with, the sorts of first\sphinxhyphen{}order analytical approaches discussed earlier in this chapter: it is the pursuit of analytical truth by empirical means.
 
 \sphinxAtStartPar
-To understand the scope of this challenge it is instructive to consider perhaps the simplest possible example of a thermal convection model: a box with two insulated vertical walls and two horizontal walls of fixed temperature \sphinxhyphen{} one cooler, one warmer \sphinxhyphen{} containing some incompressible fluid whose nature we wish to scrutinise. Let us suppose the insulated walls are such that the temperature very rapidly equilibrates across each of the two walls, but only gradually equilibrates with the fluid, so that the wall temperature at any point is the spatiotemporal average (over certain wavelengths) of the fluid temperature adjacent to the wall. For this system, the only variables that we can control are the absolute temperatures of the two surfaces, or equivalently the gradient between them and a reference temperature, while the only variables we may observe are the temperatures of the two insulating walls.
+To understand the scope of this challenge, it is instructive to consider perhaps the simplest possible example of a thermal convection model: a box with two insulated vertical walls and two horizontal walls of fixed temperature \sphinxhyphen{} one cooler, one warmer \sphinxhyphen{} containing some incompressible fluid whose nature we wish to scrutinise.
+
+\sphinxAtStartPar
+Let us suppose that insulated walls of our box are such that the temperature very rapidly equilibrates across each of the two walls, but only gradually equilibrates with the fluid, so that the wall temperature at any point is the spatiotemporal average (over certain wavelengths) of the fluid temperature adjacent to the wall. For this system, the only variables that we can control are the absolute temperatures of the two surfaces, or equivalently the gradient between them and a reference temperature, while the only variables we may observe are the temperatures of the two insulating walls.
 
 \sphinxAtStartPar
 Such an apparatus is the conceptual equivalent of a parameterised two\sphinxhyphen{}dimensional thermal convection model. From first principles, it can be seen to comprise:
-
+\begin{itemize}
+\item {} 
 \sphinxAtStartPar
 A description or intention, which for this thought experiment is essentially just the previous paragraph. This we will term the ‘schema’ after Kant {[}\sphinxcite{references:id64}{]}. There are infinitely many conceivable schemas which relate to each other through uncountably many dimensions, collectively defining a kind of ‘schematic space’ of which any particular schema is a vector.
 
+\item {} 
 \sphinxAtStartPar
-The implementation, which involves a number of decisions which imperfectly reify the system into an usable form. These decisions have a first\sphinxhyphen{}order influence on the behaviour of the system; however, they are not properly a part of the system as such, and whatever influence they do have that does not directly serve the systemic intention is a limitation or shortcoming of the model which must be accounted for. The implementation is made up of some amount of irreducible experimental capital, like the box itself and the room it is held in, as well as some number of variable quantities, such as the thicknesses of the walls. The former we term the model ‘capital’, the latter the model ‘options’. Ideally, both the capital and the options of implementation disappear into the background, as when a sufficiently high\sphinxhyphen{}resolution model becomes indistinguishable from the equivalent analytical treatment. In practice, there is always a bleeding\sphinxhyphen{}over from implementation to conceptualisation; consequently, though the implementation details should ideally not enter into the final analytical formulations, they remain inseparable from those outcomes and \sphinxhyphen{} for the sake of completeness and reproducibility \sphinxhyphen{} must always travel with them as ‘metadata’.
+The implementation, which involves a number of decisions which imperfectly reify the system into a usable form. These decisions have a first\sphinxhyphen{}order influence on the behaviour of the system \sphinxhyphen{} however, they are not properly a part of the system as such, and whatever influence they do have that does not directly serve the systemic intention is a limitation or shortcoming of the model which must be accounted for. The implementation is made up of some amount of irreducible experimental capital, like the box itself and the room it is held in, as well as some number of variable quantities, such as the thicknesses of the walls. The former we term the model ‘capital’, the latter the model ‘options’. Ideally, both the capital and the options of implementation disappear into the background, as when a sufficiently high\sphinxhyphen{}resolution model becomes indistinguishable from the equivalent analytical treatment. In practice, there is always a bleeding\sphinxhyphen{}over from implementation to conceptualisation; consequently, though the implementation details should ideally not enter into the final analytical formulations, they remain inseparable from those outcomes and \sphinxhyphen{} for the sake of completeness and reproducibility \sphinxhyphen{} must always travel with them as metadata.
 
+\item {} 
 \sphinxAtStartPar
 It has two ‘system variables’: the temperatures of the opposing thermal walls. These variables can be assigned any of infinitely many values and must ultimately emerge in the final treatment as terms of any complete theorem for the model behaviour. Let us call these the ‘parameters’ of the model. The parameters are the degrees of freedom of the schema, so that the schema itself can be visualised as an infinite Cartesian plane with the parameters as axes: the ‘parameter space’. Upon this space, a specific ‘parameterisation’ can be represented as a vector, while a sequence of parameterisations is figurable as a curve. We will term any complete parameterisation a ‘case’ of the schema: a place in parameter space as indicated by a parameterisation vector. It is equivalent to the box from our thought experiment after the wall temperatures are set but before it is filled with fluid.
 
+\item {} 
 \sphinxAtStartPar
 It has two ‘state variables’: the temperatures of the insulating walls, which are the finest metrics we are permitted to access for defining the interior behaviour. We will term these two variables the ‘configurables’ of the system, and any given set of values as a ‘configuration’ of the system defining a particular ‘state’ that the system can achieve. Just as the parameterisation was conceptualised as a vector through parameter space, so may we regard the configuration as a vector through ‘state\sphinxhyphen{}space’. Before configuration, a given system is everywhere and nowhere in state\sphinxhyphen{}space. In the example of our box experiment, the apparatus is ‘configured’ by pouring fluid into it; we may do this carefully, and hence know what configuration we are selecting, or carelessly, in which case we have no idea where in state\sphinxhyphen{}space we are placing the system. (One important consequence of the way we have described this concept is that all cases share the same state\sphinxhyphen{}space; a configuration in one case is equally conceivable in any other, allowing models to ‘move’ in case\sphinxhyphen{}space as readily as they move between states.)
 
-\sphinxAtStartPar
-According to this vocabulary, our box experiment can be described as follows. First we take the concept of the experiment and assemble the appropriate capital, carefully noting several model options whose quantities we have implicitly or explicitly decided along the way, such as the conductivity of the wall plates. We then ‘place’ our apparatus at a particular point in parameter space by setting the temperatures of the two thermal walls, thus choosing a fixed model case to explore. We then fill the box with fluid, thus ‘configuring’ it \sphinxhyphen{} at this stage we are of course careful to note the time.  At last, we step back from the apparatus and allow it to ‘iterate’, taking occasional measurements of the two state variables along the way. Eventually some termination condition is reached, and the experiment is ceased. Being good scientists, we again note the time before breaking for lunch.
+\end{itemize}
 
 \sphinxAtStartPar
-What has unfolded here? The model has in effect travelled from one configuration in state\sphinxhyphen{}space to another. Along the way, the model has traced out a curve of intermediary configurations through state\sphinxhyphen{}space \sphinxhyphen{} a curve whose form we are made partially aware by way of our observations. Specifically, this curve is a parametric curve, i.e. a vector\sphinxhyphen{}valued function of time. We could imagine visualising it by plotting it against the two free wall temperatures, with the time since configuration represented by colour. Unlike any arbitrary curve which we could draw over state\sphinxhyphen{}space, this curve is very special: it is the unique, unbidden tendency of the model, arising solely from its own natural logic. Such a trajectory we will term a ‘traverse’.
+According to this vocabulary, our box experiment can be described as follows. First we take the concept of the experiment and assemble the appropriate capital, carefully noting several model options whose quantities we have implicitly or explicitly decided along the way, such as the conductivity of the wall plates. We then ‘place’ our apparatus at a particular point in parameter space by setting the temperatures of the two thermal walls, thus choosing a fixed model case to explore. We then fill the box with fluid, thus ‘configuring’ it \sphinxhyphen{} at this stage we are of course careful to note the time. At last, we step back from the apparatus and allow it to ‘iterate’, taking occasional measurements of the two state variables along the way. Eventually, some termination condition is reached, and the experiment is ceased. Being good scientists, we again note the time before breaking for lunch.
+
+\sphinxAtStartPar
+What has unfolded here? The model has in effect travelled from one configuration in state\sphinxhyphen{}space to another. Along the way, the model has traced out a curve of intermediary configurations through state\sphinxhyphen{}space \sphinxhyphen{} a curve whose form we are made partially aware of by way of our observations. Specifically, this curve is a parametric curve, i.e. a vector\sphinxhyphen{}valued function of time. We could imagine visualising it by plotting it against the two free wall temperatures, with the time since configuration represented by colour. Unlike any arbitrary curve which we could draw over state\sphinxhyphen{}space, this curve is very special: it is the unique, unbidden tendency of the model, arising solely from its own natural logic. Such a trajectory we will term a ‘traverse’.
 
 \sphinxAtStartPar
 What sort of knowledge do we hope to attain with such an exercise? If the model were taken to represent an interesting scenario in itself \sphinxhyphen{} for example, coolant flowing through an engine \sphinxhyphen{} then we have our answer: we wanted to know how such\sphinxhyphen{}and\sphinxhyphen{}such a thing would behave in such\sphinxhyphen{}and\sphinxhyphen{}such a situation, and now we know. But if our purpose is to understand the model itself, the outcome of any given experiment is not important. What we are really interested in is the traverse itself \sphinxhyphen{} and what the traverse tells us about the surface over which it extends.
@@ -1116,49 +1102,49 @@ What sort of knowledge do we hope to attain with such an exercise? If the model 
 We beg the indulgence of another thought experiment. This time, imagine we are on a causeway high above a dark and endless sea. We know that the surface of the sea is in motion, but we cannot perceive it directly. All we can say for sure is that the pattern of the currents is always the same. How can we ascertain what forces ultimately motivate the churning of the waters?
 
 \sphinxAtStartPar
-One option would be to follow the example of Winnie the Pooh {[}\sphinxcite{references:id56}{]} and pepper the surface with little twigs. As each twig travels with the current, tracing out a single streamline, we carefully plot its position \sphinxhyphen{} northings vs eastings, say. It may be that we find that some twigs eventually come to rest over a downwelling, too buoyant to sink. Others may fall into ever\sphinxhyphen{}revolving loops, or conversely, reveal pathways that seem to continue endlessly. Over time we gradually build a sense of the overall nature of the current that is ever improving \sphinxhyphen{} and ever insufficient. For what is certain is that eventually we must stop casting sticks: it will never be possible to completely sample the infinite sea, nor even any region of that sea, even with infinite time \sphinxhyphen{} not to mention infinite twigs.
+One option would be to follow the example of Winnie the Pooh {[}\sphinxcite{references:id56}{]} and pepper the surface with little twigs. As each twig travels with the current, tracing out a single streamline, we carefully plot its position \sphinxhyphen{} northings vs eastings, say. It may be that we find that some twigs eventually come to rest over a downwelling, too buoyant to sink. Others may fall into ever\sphinxhyphen{}revolving loops, or conversely, reveal pathways that seem to continue endlessly. Over time we gradually build a sense of the overall nature of the current that is ever improving \sphinxhyphen{} and ever insufficient. For what is certain is that eventually we must stop casting sticks: it will never be possible to completely sample the infinite sea, nor even any region of that sea, even with infinite time \sphinxhyphen{} nor even infinite sticks.
 
 \sphinxAtStartPar
-Let the sea represent state\sphinxhyphen{}space: the twigs are individual instances of our box model, with the eastings and northings representing the values of the two state variables; the paths traced by the twigs are individual traverses of a particular case of the model. We see now that a given case of a model is in fact a function that maps flow vectors to coordinates in state\sphinxhyphen{}space \sphinxhyphen{} what we shall hereafter call the ‘case function’ C:
+Let the sea represent state\sphinxhyphen{}space. The twigs are individual instances of our box model, with the eastings and northings representing the values of the two state variables; the paths traced by the twigs are individual traverses of a particular case of the model. We see now that a given case of a model is in fact a function that maps flow vectors to coordinates in state\sphinxhyphen{}space \sphinxhyphen{} what we shall hereafter call the ‘case function’ C:
+\begin{equation*}
+\begin{split} C \left( c_0, c_1, ... c_n \right) = \left[ u_0, u_1, ... u_n \right] = \overline{u} \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Where \(c\) stands for a ‘configurable’, or a variable of state, and \(u\) is the ‘velocity’ in state\sphinxhyphen{}space. For the dark sea, the configurables are the eastings and northings of every point on the surface of the waters, while \(u\) is the flow vector at that point; for the box convection model, these are instead the temperatures of the non\sphinxhyphen{}thermal walls and the future temperature of those walls after time \(t\).
 
 \sphinxAtStartPar
-C(c0, c1, … cn) =  u0, u1, … un = u
+A written statement of \(C\) would be equivalent to a complete analytical solution for the convection problem set out by this particular case. Obtaining such a statement would obviate any need to ever model that particular case of that particular schema again. Of course, such a scientific triumph is rarely achievable even in that small subset of cases where it is strictly possible. Even a partial solution over a limited interval would be conjectural at best: not only have we taken finite samples, but each sample was taken over a finite time interval \sphinxhyphen{} we would require a space\sphinxhyphen{}filling curve of observations, something only possible at infinity.
 
 \sphinxAtStartPar
-Where c stands for ‘configurable’, or variable of state, and u is the velocity in state\sphinxhyphen{}space. For the dark sea, the configurables are the eastings and northings of every point on the surface of the waters, while u is the flow vector at that point; for the box convection model, these are instead the temperatures of the non\sphinxhyphen{}thermal walls and the future temperature of those walls after time t.
-
-\sphinxAtStartPar
-A written statement of C would be equivalent to a complete analytical solution for the convection problem set out by this particular case. Obtaining such a statement would obviate any need to ever model that particular case of that particular schema again. Of course, such a scientific triumph is rarely achievable even in that small subset of cases where it is strictly possible. Even a partial solution over a limited interval would be conjectural at best: not only have we taken finite samples, but each sample was taken over a finite time interval \sphinxhyphen{} we would require a space\sphinxhyphen{}filling curve of observations, something only possible at infinity.
-
-\sphinxAtStartPar
-A more tractable approach would be to draw a ‘watershed’ diagram, ‘colouring’ \sphinxhyphen{} so to speak \sphinxhyphen{} each point in state\sphinxhyphen{}space according to the common limiting behaviours that models initialised at those points ultimately exhibit. For example, if it is observed that a particular minimum or loop of minima exists in state\sphinxhyphen{}space, one might characterise all instances culminating in that vicinity as belonging to a single ‘basin’ of the model. Somewhere in the unknown region between two basins must lie one or more ‘ridges’ and zero or more unobserved basins. By fitting curves through all such regions, one might produce a family of estimates of approximations of partial solutions to the case function: a contingent victory but still a valid one. Better still would be to design a sampling strategy around such an analysis, so that the ridges \sphinxhyphen{} chains of bifurcations in state\sphinxhyphen{}space \sphinxhyphen{} are aggressively sought rather than merely inferred.
+A more tractable approach would be to draw a ‘watershed’ diagram, ‘colouring’ \sphinxhyphen{} so to speak \sphinxhyphen{} each point in state\sphinxhyphen{}space according to the common limiting behaviours that models initialised at those points ultimately exhibit. For example, if it is observed that a particular minimum or loop of minima exists in state\sphinxhyphen{}space, one might characterise all instances culminating in that vicinity as belonging to a single ‘basin’ of the model. Somewhere in the unknown region between two basins must lie one or more ‘ridges’ and zero or more unobserved basins. By fitting curves through all such regions, one might produce a family of estimates of approximations of partial solutions to the case function \sphinxhyphen{} a contingent victory, but still a valid one. Better still would be to design a sampling strategy around such an analysis, so that the ridges \sphinxhyphen{} chains of bifurcations in state\sphinxhyphen{}space \sphinxhyphen{} are aggressively sought rather than merely inferred.
 
 \sphinxAtStartPar
 Let us return to the dark sea, where we now observe that there has been a change in the wind. We repeat our experiment and find that the motion of the water is quite different from before. We infer that the flow is in fact controlled by two forcings. The first is constant: the shape of the sea bed we cannot perceive. The second is variable: the direction and strength of the wind. We resolve to track the wind with two further variables (either the wind vector components or the wind’s trend and magnitude) and commit ourselves to what now emerges as the true scientific challenge: the charting of the obscured sea floor by proxy of the ocean currents.
 
 \sphinxAtStartPar
-The two new ‘wind’ variables are the system variables of the dark sea. In the example of our box convection model, they correspond to the temperatures of the upper and lower thermal walls; while the unseen ocean floor corresponds to the enigmatic nature of the fluid inside the box, which it is our ultimate purpose to discover. The ranges of the system variables, as we have discussed, define ‘case\sphinxhyphen{}space’, the set of all case functions C. In this sense, the schema itself could now be thought of as a higher\sphinxhyphen{}order function \sphinxhyphen{} the ‘schema function’ S, whose outputs are case functions:
+The two new ‘wind’ variables are the system variables of the dark sea. In the example of our box convection model, they correspond to the temperatures of the upper and lower thermal walls; while the unseen ocean floor corresponds to the enigmatic nature of the fluid inside the box, which it is our ultimate purpose to discover. The ranges of the system variables, as we have discussed, define ‘case\sphinxhyphen{}space’, the set of all case functions \(C\). In this sense, the schema itself could now be thought of as a higher\sphinxhyphen{}order function \sphinxhyphen{} the ‘schema function’ \(S\), whose outputs are case functions:
+\begin{equation*}
+\begin{split} S \left( p_0, p_1, ... p_n \right) \to C \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Where \(p\) stands for ‘parameter’, the name we have chosen for system variables.
 
 \sphinxAtStartPar
-S(p0, p1, … pn)  C
+Given the difficulties already discussed with respect to \(C\), we must expect that a complete written expression for \(S\) will be either infeasible or impossible to obtain for all but the most trivial schema. Nevertheless, we are committed to bettering our knowledge of \(S\) by some means, for to understand it is to understand the schema as a whole. What we require is some means of collapsing the dimensionality of the problem.
 
 \sphinxAtStartPar
-Where p stands for ‘parameter’, the name we have chosen for system variables. Given the difficulties already discussed with respect to C, we must expect that a complete written expression for S will be either infeasible or impossible to obtain for all but the most trivial schema. Nevertheless, we are committed to bettering our knowledge of S by some means, for to understand it is to understand the schema as a whole. What we require is some means of collapsing the dimensionality of the problem.
+One option would be to apply some sort of reduction to \(S\):
+\begin{equation*}
+\begin{split} S_{\mathbb{R}} = R \circ S \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Where \(R\) is an operator that accepts the case functions \(C\) returned by \(S\) and itself returns some statement or metric of \(C\) which summarises its first\sphinxhyphen{}order features. A familiar example of such a reduction would be the concept of ‘phase’ in the physical sciences. The phases of water \sphinxhyphen{} solid, liquid, gas, supercritical fluid, \sphinxstyleemphasis{et cetera} \sphinxhyphen{} are in effect statements regarding the form that water should be expected to take, at steady\sphinxhyphen{}state, given certain values of the two system variables, temperature and pressure: phase, in other words, is a reduction over the state\sphinxhyphen{}space of water. Extending this notion, a phase diagram can be thought of as a kind of reduced schema function, \(S_{\mathbb{R}}\), which maps the degrees of freedom of \(S\) to the outputs of \(R\).
 
 \sphinxAtStartPar
-One option would be to apply some sort of reduction to S:
+A completely different approach to the same problem is represented by \sphinxstyleemphasis{Hertzsprung\sphinxhyphen{}Russel} (HR) diagram, which organises stars according to their colour and brightness. This is equivalent to taking randomly selected states from randomly selected traverses of randomly selected cases of the schema and plotting them according to some consistent reduction over each state \sphinxhyphen{} in this example, the average surface temperature (colour) and the stellar disc area (brightness) of an arbitrary sample of observed stars. In effect, the HR plot is a kind of multi\sphinxhyphen{}case, discontinuously and stochastically sampled, shared state\sphinxhyphen{}space. The parameters of the HR schema are stellar mass, total internal energy, and relative elemental abundances, which \sphinxhyphen{} being \sphinxstyleemphasis{a priori} unknown \sphinxhyphen{} were not available as axes to organise the observations of stars. Instead, these parameters, along with the missing time dimension and many other symmetries, became apparent \sphinxstyleemphasis{a posteriori} as clusters in shared state\sphinxhyphen{}space. (\sphinxstyleemphasis{Principal Component Analysis} is an example of how such clustering can be detected algorithmically, and for arbitrarily many dimensions to boot.) The HR diagram has understandably become a bellwether of astrophysics, as canonical in its field as phase diagrams are in chemistry.
 
 \sphinxAtStartPar
-SR = R  S
-
-\sphinxAtStartPar
-Where R is an operator that accepts the case functions C as returned by S and returns instead some statement or metric of C which summarises its first\sphinxhyphen{}order features. A familiar example of such a reduction would be the concept of ‘phase’ in the physical sciences. The phases of water \sphinxhyphen{} solid, liquid, gas, supercritical fluid, et cetera \sphinxhyphen{} are in effect statements regarding the form that water should be expected to take, at steady\sphinxhyphen{}state, given certain values of the two system variables, temperature and pressure: phase, in other words, is a reduction over the state\sphinxhyphen{}space of water. Extending this notion, a phase diagram can be thought of as a kind of reduced schema function, SR, which maps the degrees of freedom of S to the outputs of R.
-
-\sphinxAtStartPar
-A completely different approach to the same problem is represented by Hertzsprung\sphinxhyphen{}Russel (HR) diagram, which organises stars according to their colour and brightness. This is equivalent to taking randomly selected states from randomly selected traverses of randomly selected cases of the schema and plotting them according to some consistent reduction over each state \sphinxhyphen{} to wit, the average surface temperature (colour) and the stellar disc area (brightness). In effect, the HR plot is a kind of multi\sphinxhyphen{}case, discontinuously and stochastically sampled, shared state\sphinxhyphen{}space. The parameters of the HR schema are stellar mass, total internal energy, and relative elemental abundances, which \sphinxhyphen{} being a priori unknown \sphinxhyphen{} were not available as axes to organise the observations of stars. Instead these parameters, along with the missing time dimension and many other symmetries, became apparent a posteriori as clusters in shared state\sphinxhyphen{}space. (Principal Component Analysis is an example of how such clustering can be detected algorithmically, and for arbitrarily many dimensions to boot.) The HR diagram has understandably become a bellwether of astrophysics, as canonical as phase diagrams are for chemistry.
-
-\sphinxAtStartPar
-A third method has recently become available with the advent of modern machine learning techniques. ‘Page\sphinxhyphen{}ranking’ algorithms commonly work by representing each web page as a \textasciitilde{}100,000\sphinxhyphen{}dimensional vector in lexical space, where the vector components are relative word frequencies. Network diagrams of semantic relatedness are constructed by determining distances through the resulting hypercube. These networks can then be tagged with metadata, equivalent to system variables or ‘parameters’ in our treatment, and used to study the evolution of online knowledge systems. Image recognition algorithms work on a similar principle but with the addition of intermediary layers. The ‘configurables’ in this instance are the RGB values of each pixel, while the ‘parameters’ are the categories associated with each image, usually by a human, i.e. ‘dog’, ‘cat’, ‘truck’, et cetera. Each case implies infinitely many configurations, yet there is evidently some symmetry in state\sphinxhyphen{}space for each case that uniquely implies its parameters. To detect these symmetries, the state\sphinxhyphen{} and case\sphinxhyphen{}spaces are interleaved with one or more ‘latent spaces’ of much lower dimension than either, revealing latent variables that map similar cases to potentially wildly unalike configurations. One shortcoming of this approach is that it is difficult to peer into these hidden layers to learn exactly how the algorithm knows what it appears to know. Lately, however, it has even become possible to ‘traverse’ these latent spaces \sphinxhyphen{} or, rather, to traverse shared state\sphinxhyphen{}space according to trajectories in latent space {[}\sphinxcite{references:id55}{]}. Such an approach can elucidate machine intuitions and potentially allow them to be captured in human\sphinxhyphen{}cognisable form.
+A third method has recently become available with the advent of modern machine learning techniques. ‘Page\sphinxhyphen{}ranking’ algorithms commonly work by representing each web page as a \textasciitilde{}100,000\sphinxhyphen{}dimensional vector in lexical space, where the vector components are relative word frequencies. Network diagrams of semantic relatedness are constructed by determining distances through the resulting hypercube. These networks can then be tagged with metadata, equivalent to system variables or ‘parameters’ in our treatment, and used to study the evolution of online knowledge systems. Image recognition algorithms work on a similar principle but with the addition of intermediary layers. The ‘configurables’ as such are the RGB values of each pixel, while the ‘parameters’ are the categories or ‘tags’ associated with each image (usually by a human); e.g. ‘dog’, ‘cat’, or ‘truck’. Each case implies infinitely many configurations, yet there is evidently some symmetry in state\sphinxhyphen{}space for each case that uniquely implies its parameters. To detect these symmetries, the state\sphinxhyphen{} and case\sphinxhyphen{}spaces are interleaved with one or more ‘latent spaces’ of much lower dimension than either, revealing latent variables that map similar cases to potentially wildly unalike configurations. One shortcoming of this approach is that it is difficult to peer into these hidden layers to learn exactly how the algorithm knows what it appears to know. Lately, however, it has even become possible to ‘traverse’ these latent spaces \sphinxhyphen{} or, rather, to traverse shared state\sphinxhyphen{}space according to trajectories in latent space {[}\sphinxcite{references:id55}{]}. Such an approach can elucidate machine intuitions and potentially allow them to be captured in human\sphinxhyphen{}cognisable form.
 
 \sphinxAtStartPar
 Regardless of how it is achieved, the fundamental modus operandi of all these methods is the same: to uncover hidden symmetries that relate a multitude of superficially dissimilar effects to a small number of inferred causes. Minting an original vocabulary for this family of problems may help provoke novel collaborations between apparently disparate fields which share similar problems. We cannot hope to make much progress in isolation.
@@ -1170,76 +1156,101 @@ Regardless of how it is achieved, the fundamental modus operandi of all these me
 Having developed an expressive vocabulary for discussing suite\sphinxhyphen{}modelling problems, we now apply it to geodynamics. Our purpose is to constrain the nature of our problem, and determine what tools we require to successfully engage with it.
 
 \sphinxAtStartPar
-We begin with our intention, which is to ascertain the consequences of some rheological formulation through numerical modelling of mantle convection. This gives us our schema, which will be implemented through Underworld code. We have several options to consider: resolution, timestep size, tolerance. These we must carefully select according to the considerations discussed earlier. The parameters of our schema are manifold, and might include the Rayleigh number Ra, the heating term H, the degree of curvature f, the model aspect ratio A, the maximum viscosity contrast 0, the yielding coefficient , the thermal diffusivity , the thermal expansivity , the reference density , and more. Let us estimate the number of parameters to be in the order of 10 \sphinxhyphen{} this compares to only two in the examples presented thus far. At the configuration level, we have some number of state variables, beginning with the temperature field and possibly including the distribution of material phases, the stress history, and others. In two dimensions, each field has in the order of N2 degrees of freedom, where N is the resolution; if our resolution is in the order of 100, the total number of configurables will be in the order 104. This compares to the mere two configurables in both the box convection and ‘dark sea’ thought experiments before. Overall, the dimensions of the problem are clearly very much greater than before. Instead of two\sphinxhyphen{}dimensional planes describing the case\sphinxhyphen{} and state\sphinxhyphen{}spaces, these must now be represented by 10\sphinxhyphen{}dimensional and 100,000\sphinxhyphen{}dimensional hypercubes.
+We begin with our intention, which is to ascertain the consequences of some rheological formulation through numerical modelling of mantle convection. This gives us our schema, which will be implemented through Underworld code. We have several options to consider: resolution, timestep size, tolerance. These we must carefully select according to the considerations discussed earlier. The parameters of our schema are manifold, and might include the Rayleigh number \(Ra\), the heating term \(H\), the degree of curvature \(f\), the model aspect ratio \(A\), the maximum viscosity contrast \(\eta_0\), the yielding coefficient \(\tau\), the thermal diffusivity \(\kappa\), the thermal expansivity \(\alpha\), the reference density \(\rho\), and more.
 
 \sphinxAtStartPar
-We are already aware of several methods with which to attack such a problem in post\sphinxhyphen{}analysis. What we have not discussed is the formidable theoretical, logistical, and organisational challenge of designing, commissioning, overseeing, and aggregating a suite\sphinxhyphen{}modelling campaign on this scale. Bespoke tools are called for; tools specific to geodynamics, as well as tools germane to suite\sphinxhyphen{}modelling in general. To answer these needs, we introduce PlanetEngine and Everest
+Let us estimate the total number of parameters to be in the order of \(10\) \sphinxhyphen{} this compares to only two in the examples presented thus far. At the configuration level, we have some number of state variables, beginning with the temperature field and possibly including the distribution of material phases, the stress history, and others. In two dimensions, each field has in the order of \(N^2\) degrees of freedom, where \(N\) is the resolution; if our resolution is in the order of \(100\), the total number of configurables will be in the order \(10^4\); compare this to the mere two configurables in both the box convection and ‘dark sea’ thought experiments before. Overall, the dimensions of the problem are clearly very much greater than before. Instead of two\sphinxhyphen{}dimensional planes describing the case\sphinxhyphen{} and state\sphinxhyphen{}spaces, these must now be represented by 10\sphinxhyphen{}dimensional and 100,000\sphinxhyphen{}dimensional hypercubes.
+
+\sphinxAtStartPar
+We are already aware of several methods with which to attack such a problem in post\sphinxhyphen{}analysis. What we have not discussed is the formidable theoretical, logistical, and organisational challenge of designing, commissioning, overseeing, and aggregating a suite\sphinxhyphen{}modelling campaign on this scale. Bespoke tools are called for; tools specific to geodynamics, as well as tools germane to suite\sphinxhyphen{}modelling in general. To answer these needs, we introduce \sphinxstyleemphasis{PlanetEngine} and \sphinxstyleemphasis{Everest}.
 
 
-\subsubsection{PlanetEngine}
+\subsubsection{\sphinxstyleemphasis{PlanetEngine}}
 \label{\detokenize{content/chapter_02_methods/section3:planetengine}}
 \sphinxAtStartPar
-PlanetEngine is a Python\sphinxhyphen{}based wrapper for the geodynamics code Underworld which specialises in dimensionless large\sphinxhyphen{}scale convection problems in Cartesian and cylindrical geometries. Its primary purpose is to provide successively higher\sphinxhyphen{}order objects that implement in code the suite\sphinxhyphen{}modelling idiom described above. Accordingly, PlanetEngine’s top\sphinxhyphen{}level classes include:
+\sphinxstyleemphasis{PlanetEngine} is a \sphinxstyleemphasis{Python}\sphinxhyphen{}based wrapper for the geodynamics code Underworld which specialises in dimensionless large\sphinxhyphen{}scale convection problems in Cartesian and cylindrical geometries. Its primary purpose is to provide successively higher\sphinxhyphen{}order objects that implement in code the suite\sphinxhyphen{}modelling idiom described above. Accordingly, \sphinxstyleemphasis{PlanetEngine}’s top\sphinxhyphen{}level classes include:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+The ‘System’ class, which non\sphinxhyphen{}invasively and transparently wraps native Underworld models to provide an easy\sphinxhyphen{}to\sphinxhyphen{}use higher\sphinxhyphen{}level framework for essential model\sphinxhyphen{}wrangling operations, including methods for visualisation, initialisation, iteration, observation, checkpointing, loading, and more. The user is invited to flag system inputs as options, parameters, or configurables, which are then separately ‘stamped’ as metadata on all model outputs; apart from this, users are only expected to define ‘update’ and ‘iterate’ functions to enable all higher\sphinxhyphen{}level behaviours of the System interface. \sphinxstyleemphasis{PlanetEngine} systems correspond semantically to the ‘system’ notion introduced in our earlier conceptual model \sphinxhyphen{} that is, a system is a particular instance of a particular case, initialised at a particular point in state\sphinxhyphen{}space, with the equipped with the ability to integrate through time in accordance with the ‘flow’ of the case. \sphinxstyleemphasis{PlanetEngine} systems inherit from \sphinxstyleemphasis{Everest} ‘Iterables’ (see next section), whence they derive most of their useful properties.
+
+\item {} 
+\sphinxAtStartPar
+A family of abstractly\sphinxhyphen{}defined ‘conditions’, which may be either unique \sphinxhyphen{} suitable for initialising a model (e.g. a sinusoidal initial condition) \sphinxhyphen{} or non\sphinxhyphen{}unique \sphinxhyphen{} suitable for terminating them (e.g. a steady\sphinxhyphen{}state criterion). Conditions can be merged in various ways to create more complex conditions, for example overlaying noise over a conductive geotherm, or applying a horizontal perturbation after applying a vertical one. A special class of conditions allows model state variables to be initialised from the outputs of other models, even across different geometries. \sphinxstyleemphasis{PlanetEngine} conditions should be thought of as representing localities or regions in state\sphinxhyphen{}space, which may either be defined absolutely (i.e. with respect to the origin) or relatively (i.e. with respect to internal metrics, typically timestep or time index, of other systems). \sphinxstyleemphasis{PlanetEngine} conditions inherit from \sphinxstyleemphasis{Everest} ‘Booleans’ and hence are valid inputs for \sphinxstyleemphasis{Python} ‘if’ statements and other typical true\sphinxhyphen{}false operations.
+
+\item {} 
+\sphinxAtStartPar
+An ‘Observer’ class that makes and stores observations about Systems as they iterate through time. Observers are initialised with an observee System and a Condition object that determines when observations should be taken, e.g. every tenth step, or whenever average temperature exceeds a certain threshold. While it is a functionality of Systems to store their own state variables in full at certain user\sphinxhyphen{}defined intervals (i.e. checkpointing), it is the role of Observers to gather various derived datas, often of lower dimension than state\sphinxhyphen{}space, and typically at a much greater frequency than the checkpointing interval. \sphinxstyleemphasis{PlanetEngine} is designed to support extremely thorough runtime analyses while minimising any resulting impacts to iteration speed and memory usage. This is invaluable for very large model suites, where disk efficiency and sampling rate are priorities. \sphinxstyleemphasis{PlanetEngine} observers are \sphinxstyleemphasis{Everest} ‘Producers’ but not Iterables in their own right; their internal iteration count is incremented only by their associated system.
+
+\item {} 
+\sphinxAtStartPar
+A ‘Traverse’ class which, when activated, builds a System from provided ingredients (schema, options, parameters, and configurables) and iterates it until a provided terminal condition is recognised. Observers may optionally be attached, which are ‘prompted’ to observe with every iteration (whether they do or not depends on their internal Condition). Traverses in \sphinxstyleemphasis{PlanetEngine} correspond directly to traverses in the conceptual model: they are journeys from a unique starting point to a non\sphinxhyphen{}unique end point according to the ineluctable logic of each case and schema. \sphinxstyleemphasis{PlanetEngine} traverses are instances of the Everest Task class, hence their basic functionality is to do some ‘indelible work’ (work which is written to disk), which here involves taking at least one initial and one terminal checkpoint. This allows other traverses (or tasks generally) to pick up where the previous traverse left off.
+
+\item {} 
+\sphinxAtStartPar
+The ‘Campaign’ class: the capstone functionality of \sphinxstyleemphasis{PlanetEngine}. Campaigns are a kind of \sphinxstyleemphasis{Everest} Container type which, when iterated, continually produce, execute, and destroy feasibly endless sequences of Traverses. Campaigns are configured to be operated by multiple unaffiliated processes, and even multiple separate devices, simultaneously. Hosted tasks are tracked using a ‘library card’ system which monitors which tasks are currently checked out by other processes, which have been returned complete, which incomplete, and which have been returned after having failed. Campaigns distinguish between failures due to systematic errors (e.g. unacceptable input parameters or misconfigured models) and failures due to extraneous circumstances (e.g. power outages); extensive use of context managers ensures resilience and minimises corruption, which can otherwise become critically problematic when suite populations grow beyond a user’s ability to individually curate them. Most importantly, Campaigns are designed to accept stopping and starting without complaint; resources may be attached and detached at will, or the campaign as a whole suspended for any length of time, without any logistical consequences: when the campaign is renewed, or new resources added, it is guaranteed to continue precisely from where it was before. Campaigns can be provided with static lists of jobs to loop through, but can also be given ‘smart’ assignments that react to model outcomes and change tack accordingly. For instance, a Campaign might be instructed to randomly sample case space until a bifurcation is encountered, then spawn new jobs parallel to that bifurcation to explore its extent. The potential of such a tool may be formidable.
+
+\end{itemize}
 
 \sphinxAtStartPar
-The ‘System’ class, which non\sphinxhyphen{}invasively and transparently wraps native Underworld models to provide an easy\sphinxhyphen{}to\sphinxhyphen{}use higher\sphinxhyphen{}level framework for essential model\sphinxhyphen{}wrangling operations, including methods for visualisation, initialisation, iteration, observation, checkpointing, loading, and more. The user is invited to flag system inputs as options, parameters, or configurables, which are then separately ‘stamped’ as metadata on all model outputs; apart from this, users are only expected to define ‘update’ and ‘iterate’ functions to enable all higher\sphinxhyphen{}level behaviours of the System interface. PlanetEngine systems correspond semantically to the ‘system’ notion introduced in our earlier conceptual model \sphinxhyphen{} that is, a system is a particular instance of a particular case, initialised at a particular point in state\sphinxhyphen{}space, with the equipped with the ability to integrate through time in accordance with the ‘flow’ of the case. PlanetEngine systems inherit from Everest Iterables (see next section), whence they derive most of their useful properties.
-
+In addition to its headline features, \sphinxstyleemphasis{PlanetEngine} provides a wide range of extended functionalities for basic \sphinxstyleemphasis{Underworld} objects. Some are being considered for incorporation into the main \sphinxstyleemphasis{Underworld} branch; others are more specialised for the particular use case of \sphinxstyleemphasis{PlanetEngine}. Highlights include:
+\begin{itemize}
+\item {} 
 \sphinxAtStartPar
-A family of abstractly\sphinxhyphen{}defined ‘conditions’, which may be either unique \sphinxhyphen{} suitable for initialising a model (e.g. a sinusoidal initial condition) \sphinxhyphen{} or non\sphinxhyphen{}unique \sphinxhyphen{} suitable for terminating them (e.g. a steady\sphinxhyphen{}state criterion). Conditions can be merged in various ways to create more complex conditions, for example overlaying noise over a conductive geotherm, or applying a horizontal perturbation after applying a vertical one. A special class of conditions allows model state variables to be initialised from the outputs of other models, even across different geometries. PlanetEngine conditions should be thought of as representing localities or regions in state\sphinxhyphen{}space, which may either be defined absolutely (i.e. with respect to the origin) or relatively (i.e. with respect to internal metrics, typically timestep or time index, of other systems). PlanetEngine conditions inherit from Everest Booleans and hence are valid inputs for Python ‘if’ statements and other boolean operations.
+Specialised visualisation options within and beyond \sphinxstyleemphasis{Underworld}’s built\sphinxhyphen{}in \sphinxstyleemphasis{gLucifer} interface. In particular, \sphinxstyleemphasis{PlanetEngine} provides a class that produces cheap, light, and consistent raster images and animations for any given \sphinxstyleemphasis{Underworld} data object at any given degree of detail \sphinxhyphen{} ideal for machine learning applications. PlanetEngine also offers a \sphinxcode{\sphinxupquote{quickShow}} feature that aggressively searches for an appropriate visualisation strategy for any given input or inputs, automatically constructing projections and dummy variables as required, allowing for very rapid generation of figures. All \sphinxstyleemphasis{PlanetEngine} visualisations are wrapped in the ‘Fig’ class, which handles disk operations, filenames, and other house\sphinxhyphen{}keeping matters.
 
+\item {} 
 \sphinxAtStartPar
-An ‘Observer’ class that makes and stores observations about Systems as they iterate through time. Observers are initialised with an observee System and a Condition object that determines when observations should be taken, e.g. every tenth step, or whenever average temperature exceeds a certain threshold. While it is a functionality of Systems to store their own state variables in full at certain user\sphinxhyphen{}defined intervals (i.e. checkpointing), it is the role of Observers to gather various derived datas, often of lower dimension than state\sphinxhyphen{}space, and typically at a much greater frequency than the checkpoint interval. PlanetEngine is designed to support extremely thorough runtime analyses while minimising any resulting impacts to iteration speed and memory usage. This is invaluable for very large model suites, where disk efficiency and sampling rate are priorities. PlanetEngine observers are Everest Producers but not Iterables in their own right; their internal reference count is incremented along with their associated system.
+A module that handles mappings between coordinate systems, especially between different annular domains, using a ‘box’ abstraction that normalises coordinates to a unit height/width/length volume, allowing \sphinxhyphen{} for instance \sphinxhyphen{} the evaluation of \sphinxstyleemphasis{Underworld} functions or data objects between multiple different meshes. This powers a workhorse \sphinxcode{\sphinxupquote{copyField}} function that warps data between meshes to within a given tolerance; \sphinxcode{\sphinxupquote{copyField}} can also be configured to tile, fade, or mirror spatially referenced data, allowing \sphinxhyphen{} for instance \sphinxhyphen{} a steady\sphinxhyphen{}state condition derived cheaply on a small\sphinxhyphen{}aspect coarse mesh to be tiled over a higher\sphinxhyphen{}aspect fine mesh.
 
+\item {} 
 \sphinxAtStartPar
-A ‘Traverse’ class which, when activated, builds a System from provided ingredients (schema, options, parameters, and configurables) and iterates it until a provided terminal condition is recognised. Observers may optionally be attached, which are ‘prompted’ to observe with every iteration (whether they do or not depends on their internal Condition). Traverses in PlanetEngine correspond directly to traverses in the conceptual model: they are journeys from a unique starting point to a non\sphinxhyphen{}unique end point according to the ineluctable logic of each case. PlanetEngine traverses are instances of the Everest Task class, hence their basic functionality is to do some ‘indelible work’ (work which is written to disk), which here involves taking at least one initial and one terminal checkpoint. This allows other traverses (or tasks generally) to pick up where the previous traverse left off.
+An extensive toolbox of new \sphinxstyleemphasis{Underworld} ‘function’\sphinxhyphen{}type classes with a number of useful features, including lazy evaluation, optional lazy initialisation, optional incremental computation, optional memoisation, automated projection, automatic labelling, hash identification, and extended operator overloading. The new functions include dynamic one\sphinxhyphen{}dimensional variables (e.g. minima/maxima, integrals, average), region\sphinxhyphen{}limited operations, arbitrarily nested derivatives, stream functions, quantiles, vector operations, masks, normalisation functions, conditionals, filters, clips, and much more. Most of the new functions are built from standard \sphinxstyleemphasis{Underworld} functions and data types and are consequently robust and \sphinxstyleemphasis{C}\sphinxhyphen{}level efficient; all in turn inherit from the built\sphinxhyphen{}in \sphinxstyleemphasis{Underworld} function class and so may be used anywhere the native inventory is used; however, their design is particularly oriented towards and optimised for run\sphinxhyphen{}time analysis. All are tested parallel\sphinxhyphen{}safe and memory leak\sphinxhyphen{}free.
 
+\item {} 
 \sphinxAtStartPar
-The ‘Campaign’ class: the capstone functionality of PlanetEngine. Campaigns are a kind of Everest Container type which, when iterated, continually produce, execute, and destroy feasibly endless sequences of Traverses. Campaigns are configured to be operated by multiple unaffiliated processes, and even multiple separate devices, simultaneously. Hosted tasks are tracked using a ‘library card’ system which monitors which tasks are currently checked out by other processes, which have been returned complete, which incomplete, and which have been returned after having failed. Campaigns distinguish between failures due to systematic errors (e.g. unacceptable input parameters or misconfigured models) and failures due to extraneous circumstances (e.g. power outages); extensive use of context managers ensures resilience and minimises corruption, which can otherwise become critically problematic when suite populations grow beyond a user’s ability to individually curate them. Most importantly, Campaigns are designed to accept stopping and starting without complaint; resources may be attached and detached at will, or the campaign as a whole suspended for any length of time, without any logistical consequences: when the campaign is renewed, or new resources added, it is guaranteed to continue precisely from where it was before. Campaigns can be provided with static lists of jobs to loop through, but can also be given ‘smart’ assignments that react to model outcomes and change tack accordingly. For instance, a Campaign might be instructed to randomly sample case space until a bifurcation is encountered, then spawn new jobs parallel to that bifurcation to explore its extent. The potential of such a tool may be formidable.
+A series of analysis classes providing single\sphinxhyphen{}line invocation for common analytical operations, including \sphinxstyleemphasis{Nusselt} number, velocity root\sphinxhyphen{}mean\sphinxhyphen{}square, and vertical stress profile. Like \sphinxstyleemphasis{PlanetEngine} function objects, analysis objects are hashed and logged at initialisation to avoid needless duplication; they also store their observations locally and are configured to avoid redundant invocation. They export the \sphinxstyleemphasis{Underworld} function interface and so are safe to use inside Underworld systems: for example, one could define the yield stress in terms of some time\sphinxhyphen{}averaged function of the stress history by simply incorporating the appropriate \sphinxstyleemphasis{PlanetEngine} analyser.
 
-\sphinxAtStartPar
-In addition to its headline features, PlanetEngine provides a wide range of extended functionalities for basic Underworld objects. Some are being considered for incorporation into the main Underworld branch; others are more specialised for the particular use case of PlanetEngine. Highlights include:
-
-\sphinxAtStartPar
-Specialised visualisation options within and beyond Underworld’s built\sphinxhyphen{}in gLucifer interface. In particular, PlanetEngine provides a class that produces cheap, light, and consistent raster images and animations for any given Underworld data object at any given degree of detail \sphinxhyphen{} ideal for machine learning applications. PlanetEngine also offers a quickShow feature that aggressively searches for an appropriate visualisation strategy for any given input or inputs, automatically constructing projections and dummy variables as required, allowing for very rapid generation of figures. All PlanetEngine visualisations are wrapped in the Fig class, which handles disk operations, filenames, and other house\sphinxhyphen{}keeping matters.
-
-\sphinxAtStartPar
-A module that handles mappings between coordinate systems, especially between different annular domains, using a ‘box’ abstraction that normalises coordinates to a unit height/width/length volume, allowing \sphinxhyphen{} for instance \sphinxhyphen{} the evaluation of Underworld functions or data objects between multiple different meshes. This powers a workhorse copyField function that warps data between meshes to within a given tolerance; copyField can also be configured to tile, fade, or mirror spatially referenced data, allowing \sphinxhyphen{} for instance \sphinxhyphen{} a steady\sphinxhyphen{}state condition derived cheaply on a small\sphinxhyphen{}aspect coarse mesh to be tiled over a higher\sphinxhyphen{}aspect fine mesh.
-
-\sphinxAtStartPar
-An extensive toolbox of new Underworld ‘function’\sphinxhyphen{}type classes with a number of useful features, including lazy evaluation, optional lazy initialisation, optional incremental computation, optional memoisation, automated projection, automatic labelling, hash identification, and extended operator overloading. The new functions include dynamic one\sphinxhyphen{}dimensional variables (e.g. minima/maxima, integrals, average), region\sphinxhyphen{}limited operations, arbitrarily nested derivatives, stream functions, quantiles, vector operations, masks, normalisation functions, conditionals, filters, clips, and much more. Most of the new functions are built from standard Underworld functions and data types and are consequently robust and C\sphinxhyphen{}level efficient; all in turn inherit from the built\sphinxhyphen{}in Underworld function class and so may be used anywhere the native inventory is used; however, their design is particularly oriented towards and optimised for run\sphinxhyphen{}time analysis. All are tested parallel\sphinxhyphen{}safe and memory leak\sphinxhyphen{}free.
-
-\sphinxAtStartPar
-A series of analysis classes providing single\sphinxhyphen{}line invocation for common analytical operations, including Nusselt number, velocity root\sphinxhyphen{}mean\sphinxhyphen{}square, and vertical stress profile. Like PlanetEngine function objects, analysis objects are hashed and logged at initialisation to avoid needless duplication; they also store their observations locally and are configured to avoid redundant invocation. They export the Underworld function interface and so are safe to use inside Underworld systems: for example, one could define the yield stress in terms of some time\sphinxhyphen{}averaged function of the stress history by simply incorporating the appropriate PlanetEngine analyser.
-
+\item {} 
 \sphinxAtStartPar
 A family of abstractly\sphinxhyphen{}defined ‘conditions’, both unique, suitable for initialising a model (e.g. a sinusoidal initial condition), and non\sphinxhyphen{}unique, suitable for terminating them (e.g. a steady\sphinxhyphen{}state criterion). Conditions can be merged in various ways to create more complex conditions, for example overlaying noise over a conductive geotherm, or applying a horizontal perturbation after applying a vertical one. A special class of conditions allows model state variables to be initialised from the outputs of other models, even across different geometries.
 
+\item {} 
 \sphinxAtStartPar
 A system for attaching boundary and range assumptions directly to Underworld data objects, enabling automatic clipping and normalisation of hosted data whenever changes are detected.
 
+\end{itemize}
 
-\subsubsection{Everest}
+\sphinxAtStartPar
+Together, these features constitute a meaningful advance in the state\sphinxhyphen{}of\sphinxhyphen{}the\sphinxhyphen{}art, not only for \sphinxstyleemphasis{Underworld}, but for computational geodynamics generally.
+
+
+\subsubsection{\sphinxstyleemphasis{Everest}}
 \label{\detokenize{content/chapter_02_methods/section3:everest}}
 \sphinxAtStartPar
-Everest is a free, open\sphinxhyphen{}source Python package developed as a part of this thesis for the express purpose of organising and analysing massive suite\sphinxhyphen{}modelling campaigns. Fundamentally, it comprises two systems:
-
+\sphinxstyleemphasis{Everest} is a free, open\sphinxhyphen{}source \sphinxstyleemphasis{Python} package developed as a part of this thesis for the express purpose of organising and analysing massive suite\sphinxhyphen{}modelling campaigns. Fundamentally, it comprises two systems:
+\begin{itemize}
+\item {} 
 \sphinxAtStartPar
 A library of Python classes which may be wrapped around user code to provide a high\sphinxhyphen{}level standardised interface for common suite\sphinxhyphen{}modelling operations.
 
+\item {} 
 \sphinxAtStartPar
-A file format for HDF5 which provides disk correlates for objects inheriting from Everest and supports simultaneous and parallel access for any number of processes at once.
+A file format under \sphinxstyleemphasis{HDF5} which provides disk correlates for objects inheriting from \sphinxstyleemphasis{Everest} and supports simultaneous and parallel access for any number of processes at once.
+
+\end{itemize}
 
 \sphinxAtStartPar
-The core Everest class is the so\sphinxhyphen{}called ‘Built’. The general principle of the Built is to provide a framework that allows a complete working copy of the environment in which some data was produced to be recreated live, just as it originally was, using only some attached metadata. Modules which define a class that inherits from Built can be ‘anchored’ to an HDF5 file on disk, referred to as a ‘frame’; the class can then be loaded directly from the frame even if the original module is no longer present. Each Built is assigned a unique hashed identity based on the complete code of the module defining it, which in turn provides the name of the HDF ‘group’ that the object is filed under in the archive: a simple ‘word hash’ facility is provided that generates memorable English\sphinxhyphen{}pronouncable names based on each hash, for human convenience. If an instantiated Built is anchored, the parameters that initialised the instance are also saved and hashed: supported parameters for saving include all the standard Python and NumPy data types and containers, all objects that provide a Pickling interface (user\sphinxhyphen{}defined or otherwise), as well as any class or class instance that inherits from Built. The use of hashes ensures that even the slightest difference between two classes or instances will be recorded for posterity, so that large projects can never be corrupted by the introduction of small errors and new objects never overwrite, but instead coordinate with, any previously anchored objects which are identical; while the storing of ample metadata with each Built ensures complete reproducibility within the scope of the environment that Everest is made aware of. The use of hash identities alls means that all builts can be stored equally as top\sphinxhyphen{}level objects in the host frame without any negative organisational consequences: this is virtuous because an appropriate hierarchical structure to explore one particular scientific query may be entirely counterproductive even for an only slightly different query. Flat structures allow the most efficient organisational structure for each use\sphinxhyphen{}case to be mapped to the database on a case\sphinxhyphen{}by\sphinxhyphen{}case basis, without needlessly and perhaps irreversibly inflecting the database for one purpose alone.
+The core \sphinxstyleemphasis{Everest} class is the so\sphinxhyphen{}called ‘Built’. The general principle of the Built is to provide a framework that allows a complete working copy of the environment in which some data was produced to be recreated, live, just as it originally was, using only some attached metadata. Modules which define a class that inherits from Built can be ‘anchored’ to an \sphinxstyleemphasis{HDF5} file on disk, referred to as a ‘frame’; the class can then be loaded directly from the frame even if the original module is no longer present. Each Built is assigned a unique hashed identity based on the complete code of the module defining it, which in turn provides the name of the HDF ‘group’ that the object is filed under in the archive: a simple ‘word hash’ facility is provided that generates memorable English\sphinxhyphen{}pronouncable names based on each hash, for human convenience. If an instantiated Built is anchored, the parameters that initialised the instance are also saved and hashed: supported parameters for saving include all the standard \sphinxstyleemphasis{Python} and \sphinxstyleemphasis{NumPy} data types and containers, all objects that provide a ‘Pickling’ interface (user\sphinxhyphen{}defined or otherwise), as well as any class or class instance that inherits from Built. The use of hashes ensures that even the slightest difference between two classes or instances will be recorded for posterity, so that large projects can never be corrupted by the introduction of small errors and new objects never overwrite, but instead coordinate with, any previously anchored objects which are identical; while the storing of ample metadata with each Built ensures complete reproducibility within the scope of the environment that \sphinxstyleemphasis{Everest} is made aware of. The use of hash identities means that all builts can be stored equally as top\sphinxhyphen{}level objects in the host frame without any negative organisational consequences: this is virtuous because an appropriate hierarchical structure to explore one particular scientific query may be entirely counterproductive even for an only slightly different query. Flat structures allow the most efficient organisational structure for each use\sphinxhyphen{}case to be mapped to the database on a case\sphinxhyphen{}by\sphinxhyphen{}case basis, without needlessly and perhaps irreversibly inflecting the database for one purpose alone.
 
 \sphinxAtStartPar
-Various subclasses to Built are provided which add further functionality. The Producer class adds support for producing and storing arbitrary data: outputs can be stored in memory, saved to the frame, or automatically configured to save at certain intervals depending on memory usage, clock time, or other factors; data can be sorted either in the order it is saved or in order of some provided index, in which case inadvertent duplication of entries is detected and prevented. The Iterator class, a kind of Cycler or callable Built, is designed to be inherited by intrinsically iterable models \sphinxhyphen{} for example, the mantle convection models discussed here which iterate through discrete time steps \sphinxhyphen{} and provides for saving and loading of states, ‘bouncing’ between states, iterating between step counts, and many other useful features. (An anchored Iterator is always aware of what states have previously been saved to the frame, even if they have been saved by completely disconnected processes, such that multiple devices can do work on the same model without clashing.) The State class provides for the definition of abstract conditions which can be evaluated with respect to other Builts; States can then be used to trigger Enactors, Conditions, Inquirers, and other objects, progressively supporting higher levels of coordination. The highest level of abstraction currently provided by Everest is the Task class, which permutes a given Cycler until a stipulated Condition is met; because the Task is itself both a Cycler and a Condition, it can be used as either input of another Task, allowing the construction of arbitrarily complex trees of tasks. Tasks also provide the very useful feature of being able to instantiate themselves as subprocesses, so that one process can serve as a master for many others: any errors are logged and returned to the master task where they are handled as per the user’s requirements. Carrying out a task in a subprocess also ensures that the slate is wiped clean for any future task: this is particularly important for memory management in large model suites, as the system\sphinxhyphen{}level garbage collectors are much more thorough than those provided at the Python or Cython levels.
+Various subclasses to Built are provided which add further functionality. The Producer class adds support for producing and storing arbitrary data: outputs can be stored in memory, saved to the frame, or automatically configured to save at certain intervals depending on memory usage, clock time, or other factors; data can be sorted either in the order it is saved or in order of some provided index, in which case inadvertent duplication of entries is detected and prevented. The Iterator class, a kind of Cycler or callable Built, is designed to be inherited by intrinsically iterable models \sphinxhyphen{} for example, the mantle convection models discussed here which iterate through discrete time steps \sphinxhyphen{} and provides for saving and loading of states, ‘bouncing’ between states, iterating between step counts, and many other useful features. (An anchored Iterator is always aware of what states have previously been saved to the frame, even if they have been saved by completely disconnected processes, such that multiple devices can do work on the same model without clashing.) The State class provides for the definition of abstract conditions which can be evaluated with respect to other Builts; States can then be used to trigger Enactors, Conditions, Inquirers, and other objects, progressively supporting higher levels of coordination. The highest level of abstraction currently provided by Everest is the Task class, which permutes a given Cycler until a stipulated Condition is met; because the Task is itself both a Cycler and a Condition, it can be used as either input of another Task, allowing the construction of arbitrarily complex trees of tasks. Tasks also provide the very useful feature of being able to instantiate themselves as subprocesses, so that one process can serve as a master for many others: any errors are logged and returned to the master task where they are handled as per the user’s requirements. Carrying out a task in a subprocess also ensures that the slate is wiped clean for any future task: this is particularly important for memory management in large model suites, as the system\sphinxhyphen{}level garbage collectors are much more thorough than those provided at the \sphinxstyleemphasis{Python} or \sphinxstyleemphasis{Cython} levels.
 
 \sphinxAtStartPar
-Everest also provides bespoke Writer and Reader classes for the HDF5\sphinxhyphen{}based ‘frame’ to which Builts may optionally be anchored. The Writer automatically decides what sort of HDF5 object to create, and where, based on intuitive Python\sphinxhyphen{}level syntax: dictionaries are mapped to groups, for instance, while NumPy arrays are mapped to datasets or attributes as appropriate. The Writer also manages access to the frame using a lock file and a prime\sphinxhyphen{}number based ‘window of access’ protocol, so that simultaneous write operations never occur regardless of how many processes across how many devices may attempt access. The Reader, conversely, supports multiple simultaneous access through the new HDF5 single\sphinxhyphen{}write\sphinxhyphen{}simultaneous\sphinxhyphen{}read protocol. The Reader exports the Python ‘index’ and ‘slice’ syntaxes and is designed to provide fluid access to archived data no matter how hefty the frame becomes. It comes with its own search algorithm with wildcard support, allowing quick and easy filtering according to data type, Built type, hash identity, value, or any other data: search is recursive to a prescribed depth and is careful to appropriately manage loops where HDF5 links are present. It operates in two modes: ‘soft’, which returns summaries of query results, and ‘hard’, which returns all results and loads any pickled objects, Built classes, and Built instances which are included. This latter feature makes it very quick and easy to load, for example, one particular model out of thousands by referencing merely one or two of its input parameters, some faintly recalled property of its output data, and the hash ID of the associated type. Algorithmic access is of course also supported \sphinxhyphen{} iterating through models to produce a figure, for instance, or to conduct some test whose outcome could then be tagged to each model as metadata.
+\sphinxstyleemphasis{Everest} also provides bespoke Writer and Reader classes for the \sphinxstyleemphasis{HDF5}\sphinxhyphen{}based ‘frame’ to which Builts may optionally be anchored. The Writer automatically decides what sort of \sphinxstyleemphasis{HDF5} object to create, and where, based on intuitive \sphinxstyleemphasis{Python}\sphinxhyphen{}level syntax: dictionaries are mapped to groups, for instance, while \sphinxstyleemphasis{NumPy} arrays are mapped to datasets or attributes as appropriate. The Writer also manages access to the frame using a lock file and a prime\sphinxhyphen{}number based ‘window of access’ protocol, so that simultaneous write operations never occur regardless of how many processes or devices attempt access. The Reader, conversely, supports multiple simultaneous access through the new \sphinxstyleemphasis{HDF5} single\sphinxhyphen{}write\sphinxhyphen{}simultaneous\sphinxhyphen{}read protocol. The Reader exports the \sphinxstyleemphasis{Python} ‘index’ and ‘slice’ syntaxes and is designed to provide fluid access to archived data no matter how hefty the frame becomes. It comes with its own search algorithm with wildcard support, allowing quick and easy filtering according to data type, Built type, hash identity, value, or any other data: search is recursive to a prescribed depth and is careful to appropriately manage loops where \sphinxstyleemphasis{HDF5} links are present. It operates in two modes: ‘soft’, which returns summaries of query results, and ‘hard’, which returns all results and loads any pickled objects, Built classes, and Built instances which are included. This latter feature makes it very quick and easy to load, for example, one particular model out of thousands by referencing merely one or two of its input parameters, some faintly recalled property of its output data, and the hash ID of the associated type. Algorithmic access is of course also supported \sphinxhyphen{} iterating through models to produce a figure, for instance, or to conduct some test whose outcome could then be tagged to each model as metadata.
 
 \sphinxAtStartPar
-Finally, Everest also describes a ‘Scope’ class which is in effect an abstract statement about the range of ‘builts’, and the range of indices within the outputs of each built, for which some boolean statement evaluates true. Scopes are produced by indexing Readers with ‘Fetch’ requests, somewhat similar to SQL queries; the resultant ‘scope’ is instantiated with the metadata of the request that produced it, ensuring that all data travels with its full and proper context. Once instantiated, however, a scope is free to travel independent of the reader or indeed the frame over which it was defined: this is possible thanks to the use of unique hash identities for all Everest builts of equivalent type and initialisation profile. Once the desired Scope has been acquired, it can be used to ‘slice’ into a frame (once again through the Reader interface) to pull the indicated data in full. The Scope protocol allows easy and rapid aggregation of very large datasets across arbitrarily broad model suites. In tandem with standard disk\sphinxhyphen{}based analysis packages like Dask, they are intended to provide a pain\sphinxhyphen{}free solution for wrangling model data all the way up to the terabyte scale
+Finally, \sphinxstyleemphasis{Everest} also describes a ‘Scope’ class which is in effect an abstract statement about the range of ‘builts’, and the range of indices within the outputs of each built, for which some boolean statement evaluates true. Scopes are produced by indexing Readers with ‘Fetch’ requests, somewhat similar to \sphinxstyleemphasis{SQL} queries; the resultant ‘scope’ is instantiated with the metadata of the request that produced it, ensuring that all data travels with its full and proper context. Once instantiated, however, a scope is free to travel independent of the reader or indeed the frame over which it was defined: this is possible thanks to the use of unique hash identities for all Everest builts of equivalent type and initialisation profile. Once the desired Scope has been acquired, it can be used to ‘slice’ into a frame (once again through the Reader interface) to pull the indicated data in full. The Scope protocol allows easy and rapid aggregation of very large datasets across arbitrarily broad model suites. In tandem with standard disk\sphinxhyphen{}based analysis packages like Dask, they are intended to provide a pain\sphinxhyphen{}free solution for wrangling model data all the way up to the terabyte scale.
 
 
 \section{Conclusion}
@@ -1252,13 +1263,71 @@ In this chapter we have discussed the theory of mantle convection; explained and
 \label{\detokenize{content/chapter_03_everest/main:everest}}\label{\detokenize{content/chapter_03_everest/main::doc}}
 
 \chapter{Linear}
-\label{\detokenize{content/chapter_04_linear/main:linear}}\label{\detokenize{content/chapter_04_linear/main::doc}}
+\label{\detokenize{content/chapter_04_linear/abstract:linear}}\label{\detokenize{content/chapter_04_linear/abstract::doc}}
+
+\section{Introduction}
+\label{\detokenize{content/chapter_04_linear/section01_introduction:introduction}}\label{\detokenize{content/chapter_04_linear/section01_introduction::doc}}
+
+\section{Background}
+\label{\detokenize{content/chapter_04_linear/section02_background:background}}\label{\detokenize{content/chapter_04_linear/section02_background::doc}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{referencing} \PYG{k+kn}{import} \PYG{n}{search}
+\end{sphinxVerbatim}
+
+
+\section{Methods}
+\label{\detokenize{content/chapter_04_linear/section03_methods:methods}}\label{\detokenize{content/chapter_04_linear/section03_methods::doc}}
+
+\section{Results}
+\label{\detokenize{content/chapter_04_linear/section04_results:results}}\label{\detokenize{content/chapter_04_linear/section04_results::doc}}
+
+\section{Discussion}
+\label{\detokenize{content/chapter_04_linear/section05_discussion:discussion}}\label{\detokenize{content/chapter_04_linear/section05_discussion::doc}}
+
+\section{Linear}
+\label{\detokenize{content/chapter_04_linear/conclusion:linear}}\label{\detokenize{content/chapter_04_linear/conclusion::doc}}
 
 \chapter{Viscoplastic}
-\label{\detokenize{content/chapter_05_viscoplastic/main:viscoplastic}}\label{\detokenize{content/chapter_05_viscoplastic/main::doc}}
+\label{\detokenize{content/chapter_05_viscoplastic/abstract:viscoplastic}}\label{\detokenize{content/chapter_05_viscoplastic/abstract::doc}}
+
+\section{Introduction}
+\label{\detokenize{content/chapter_05_viscoplastic/section01_introduction:introduction}}\label{\detokenize{content/chapter_05_viscoplastic/section01_introduction::doc}}
+
+\section{Background}
+\label{\detokenize{content/chapter_05_viscoplastic/section02_background:background}}\label{\detokenize{content/chapter_05_viscoplastic/section02_background::doc}}
+
+\section{Method}
+\label{\detokenize{content/chapter_05_viscoplastic/section03_methods:method}}\label{\detokenize{content/chapter_05_viscoplastic/section03_methods::doc}}
+
+\section{Results}
+\label{\detokenize{content/chapter_05_viscoplastic/section04_results:results}}\label{\detokenize{content/chapter_05_viscoplastic/section04_results::doc}}
+
+\section{Discussion}
+\label{\detokenize{content/chapter_05_viscoplastic/section05_discussion:discussion}}\label{\detokenize{content/chapter_05_viscoplastic/section05_discussion::doc}}
+
+\section{Linear}
+\label{\detokenize{content/chapter_05_viscoplastic/conclusion:linear}}\label{\detokenize{content/chapter_05_viscoplastic/conclusion::doc}}
 
 \chapter{Advanced}
-\label{\detokenize{content/chapter_06_advanced/main:advanced}}\label{\detokenize{content/chapter_06_advanced/main::doc}}
+\label{\detokenize{content/chapter_06_advanced/abstract:advanced}}\label{\detokenize{content/chapter_06_advanced/abstract::doc}}
+
+\section{Introduction}
+\label{\detokenize{content/chapter_06_advanced/section01_introduction:introduction}}\label{\detokenize{content/chapter_06_advanced/section01_introduction::doc}}
+
+\section{Background}
+\label{\detokenize{content/chapter_06_advanced/section02_background:background}}\label{\detokenize{content/chapter_06_advanced/section02_background::doc}}
+
+\section{Methods}
+\label{\detokenize{content/chapter_06_advanced/section03_methods:methods}}\label{\detokenize{content/chapter_06_advanced/section03_methods::doc}}
+
+\section{Results}
+\label{\detokenize{content/chapter_06_advanced/section04_results:results}}\label{\detokenize{content/chapter_06_advanced/section04_results::doc}}
+
+\section{Discussion}
+\label{\detokenize{content/chapter_06_advanced/section05_discussion:discussion}}\label{\detokenize{content/chapter_06_advanced/section05_discussion::doc}}
+
+\section{Linear}
+\label{\detokenize{content/chapter_06_advanced/conclusion:linear}}\label{\detokenize{content/chapter_06_advanced/conclusion::doc}}
 
 \chapter{Discussion}
 \label{\detokenize{content/chapter_07_discussion/main:discussion}}\label{\detokenize{content/chapter_07_discussion/main::doc}}
