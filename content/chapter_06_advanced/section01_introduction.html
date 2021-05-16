@@ -51,15 +51,15 @@
     <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="6.2. Background" href="section02_background.html" />
-    <link rel="prev" title="6. Linear" href="abstract.html" />
+    <link rel="prev" title="6. Advanced" href="abstract.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -214,7 +214,7 @@
  </li>
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../chapter_05_viscoplastic/abstract.html">
-   5. Linear
+   5. Viscoplastic
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
@@ -253,7 +253,7 @@
  </li>
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="abstract.html">
-   6. Linear
+   6. Advanced
   </a>
   <ul class="current collapse-ul">
    <li class="toctree-l2 current active">
@@ -420,6 +420,9 @@
                     src="../../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
         
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -444,8 +447,8 @@
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "rsbyrne/thesis",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -468,7 +471,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="abstract.html" title="previous page"><span class="section-number">6. </span>Linear</a>
+    <a class='left-prev' id="prev-link" href="abstract.html" title="previous page"><span class="section-number">6. </span>Advanced</a>
     <a class='right-next' id="next-link" href="section02_background.html" title="next page"><span class="section-number">6.2. </span>Background</a>
 
     </div>
