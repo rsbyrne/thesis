@@ -14,17 +14,12 @@ RUN apt-get update -y
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
 
-# set timezone for installs
-# RUN \
-#   echo "tzdata tzdata/Areas select Australia" > /tmp/preseed.txt; \
-#   echo "tzdata tzdata/Zones/Europe select Melbourne" >> /tmp/preseed.txt; \
-#   debconf-set-selections /tmp/preseed.txt && \
-#   apt-get update && \
-#   apt-get install -y tzdata
+# Set timezone
 RUN \
   ls /usr/share/zoneinfo && \
   cp /usr/share/zoneinfo/Australia/Melbourne /etc/localtime && \
   echo "Australia/Melbourne" > /etc/timezone && \
+RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
 
 # Python
 ENV PYTHONPATH "$THESISDIR:${PYTHONPATH}"
@@ -33,10 +28,6 @@ ENV PYTHONPATH "$THESISDIR/resources:${PYTHONPATH}"
 # User
 RUN apt-get install -y dialog
 # RUN unminimize
-
-# Convenience
-# https://whoosh.readthedocs.io/en/latest/
-RUN pip3 install --no-cache-dir -U Whoosh
 
 # Publishing
 RUN apt-get install -y pandoc
