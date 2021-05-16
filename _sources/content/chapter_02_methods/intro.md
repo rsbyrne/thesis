@@ -1,3 +1,3 @@
-# Chapter 2 - Tools and Methods
+# Tools and Methods
 
 Under the operating paradigm of our research program, the phenomena of tectonics as we know them are held to be the surface expressions of a global system of solid-state convection. Tectonics - literally the ‘construction’ of Earth and other planets’ surface geology on a global scale - will thus be studied by proxy of the mantle-scale circulations which are inferred to motivate it. Because the theory justifying this substitution mandates certain controls, assumptions, and simplifications which must be accommodated by our modelling methodology, we will discuss these matters a little here.
