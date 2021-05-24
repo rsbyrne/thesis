@@ -30,6 +30,10 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 osjoin = os.path.join
 
+import warnings
+
+warnings.filterwarnings("ignore",category=UserWarning)
+
 
 # For over half a century now, geodynamicists have accepted that the interior of the Earth and other planets can to some degree be formalised as a variant of Rayleigh-Benard convection amenable to numerical simulation {cite}`Mckenzie1974-wb`. While early modelling efforts were focussed on simple rheologies and geometries out of necessity, increasing hardware and software capabilities have since allowed modern investigators to target much more sophisticated behaviours in the search for a truly Earth-like rheology, including strain-rate dependence {cite}`Moresi1998-az,Zhong1998-qg`, magmatic history {cite}`ONeill2018-hy`, chemical phases {cite}`Tackley2012-hq`, and more.
 # 
