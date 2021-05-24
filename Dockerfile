@@ -4,7 +4,6 @@ MAINTAINER https://github.com/rsbyrne/
 USER root
 
 ENV THESISDIR $MASTERUSERHOME/thesis
-ADD . $THESISDIR
 RUN chown -R $MASTERUSER $THESISDIR
 
 # for apt to be noninteractive
@@ -42,7 +41,7 @@ RUN pip3 install -U --no-cache-dir \
   sphinx \
   myst-nb \
   pyyaml \
-  jupyterbook-latex \
+  jupyterbook-latex
 
 # Needed by Pyppeteer
 # RUN rm -rf /var/lib/apt/lists/* && apt clean && apt update && apt install -y \
@@ -86,5 +85,7 @@ RUN pip3 install -U --no-cache-dir \
 #   xdg-utils \
 #   wget
 # RUN pip3 install --no-cache-dir -U pyppeteer
+
+ADD . $THESISDIR
 
 USER $MASTERUSER
