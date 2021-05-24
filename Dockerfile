@@ -4,7 +4,6 @@ MAINTAINER https://github.com/rsbyrne/
 USER root
 
 ENV THESISDIR $MASTERUSERHOME/thesis
-RUN chown -R $MASTERUSER $THESISDIR
 
 # for apt to be noninteractive
 ENV DEBIAN_FRONTEND noninteractive
@@ -87,5 +86,6 @@ RUN pip3 install -U --no-cache-dir \
 # RUN pip3 install --no-cache-dir -U pyppeteer
 
 ADD . $THESISDIR
+RUN chown -R $MASTERUSER $THESISDIR
 
 USER $MASTERUSER
