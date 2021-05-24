@@ -38,7 +38,11 @@ RUN pip3 install -U --no-cache-dir \
   bibtexparser \
   ghp-import \
   myst-parser \
-  sphinxcontrib-bibtex
+  sphinxcontrib-bibtex \
+  sphinx \
+  myst-nb \
+  pyyaml \
+  jupyterbook-latex \
 
 # Needed by Pyppeteer
 # RUN rm -rf /var/lib/apt/lists/* && apt clean && apt update && apt install -y \
