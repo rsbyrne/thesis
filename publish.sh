@@ -1,6 +1,4 @@
 #!/bin/bash
-eval "$(ssh-agent)"
-ssh-add ~/.ssh/*.pem
 currentDir=$PWD
 if [[ $* == *-u* ]]
 then
@@ -9,5 +7,4 @@ then
 fi
 jb build -W -n --keep-going book/
 # jb build book/ --builder pdflatex
-ghp-import -n -p -f book/_build/html
 cd $currentDir
