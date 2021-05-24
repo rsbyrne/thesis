@@ -203,8 +203,10 @@
 # 
 # One means of probing beyond the insolubility barrier is to take an eigenmode expansion of the equations of state and discard all but the fewest number of terms which still support nonlinear interactions:
 # 
-# $$ \Psi^* = \frac{4 + \lambda^{*2}}{\sqrt{2}} A(\tau) \sin \left( \frac{2 \pi x^*}{\lambda^*} \right) \sin \left( \lambda y^* \right) $$
-# $$ \theta^* = \frac{1}{\pi r} \left[ C(\tau) \sin \left( 2 \pi y^* \right) - \sqrt{2} B(\tau) \cos \left( \frac{2 \pi x^*}{\lambda^*} \right) \sin \left( \pi y^* \right) \right] $$
+# $$ \begin{align*}
+# \Psi^* &= \frac{4 + \lambda^{*2}}{\sqrt{2}} A(\tau) \sin \left( \frac{2 \pi x^*}{\lambda^*} \right) \sin \left( \lambda y^* \right) \\
+# \theta^* &= \frac{1}{\pi r} \left[ C(\tau) \sin \left( 2 \pi y^* \right) - \sqrt{2} B(\tau) \cos \left( \frac{2 \pi x^*}{\lambda^*} \right) \sin \left( \pi y^* \right) \right]
+# \end{align*} $$
 # 
 # Where $\Psi$ is again the stream function, $x$ and $y$ are coordinates, $\lambda$ is the featural wavelength, $r$ is the *Rayleigh* number as a proportion of the critical value $r = \frac{Ra}{Ra_{cr}}$, and $A(\tau)$, $B(\tau)$, and $C(\tau)$ are time-dependent coefficients which are functions of $\tau$, time non-dimensionalised by wavelength:
 # 
@@ -212,9 +214,11 @@
 # 
 # The $A$, $B$, and $C$ coefficients permit a powerful simplification in form. Selecting the appropriate equation from the infinite set contained in the eigenmode expansion {cite}`Schubert2001-ea`, the following first-order differential equations can be obtained:
 # 
-# $$ \frac{d A}{d \tau} = Pr \left( B - A \right) $$
-# $$ \frac{d B}{d \tau} = rA - B - AC $$
-# $$ \frac{d C}{d \tau} = -bc + AB $$
+# $$ \begin{align*}
+# \frac{d A}{d \tau} &= Pr \left( B - A \right) //
+# \frac{d B}{d \tau} &= rA - B - AC //
+# \frac{d C}{d \tau} &= -bc + AB
+# \end{align*} $$
 # 
 # Where $Pr$ is the *Prandtl* number, which must be kept finite for this analysis, though it may still be arbitrarily large; $b$ represents:
 # 
@@ -224,9 +228,11 @@
 # 
 # Of the three functions, $A$ relates to the stream function, $B$ the resultant temperature variations, and $C$ a horizontally averaged temperature mode. Three obvious solutions to the system are:
 # 
-# $$ A = B = C = 0 $$
-# $$ A = B = \pm \sqrt{b \left( r - 1 \right)} $$
-# $$ C = r - 1 $$
+# $$ \begin{align*}
+# A = B = C &= 0 \\
+# A = B &= \pm \sqrt{b \left( r - 1 \right)} \\
+# C &= r - 1
+# \end{align*} $$
 # 
 # When $r<1$, the trivial first solution above describes the only stable steady-state solution and represents pure conduction, just as we would expect when $Ra<Ra_{cr}$. When $r>1$, this solution becomes unstable, and the only stable solutions become the positive and negative valencies of the second expression above, which represent clockwise and counterclockwise unicellular convection. The ‘choice’ of the system to devolve from the unbiased conductive solution to one of either the left- or right-biased convective solutions is termed a ‘pitchfork bifurcation’, the first of many we will encounter; its existence proves that mantle convection is chaotic.
 # 
@@ -240,7 +246,15 @@
 # 
 # This would imply, first of all, that $A=B$. Hence:
 # 
-# $$ \frac{d A}{d \tau} = \frac{d B}{d \tau} = \left( r - 1 \right) B - BC $$
-# $$ \frac{d C}{d \tau} = -bC + B^2 $$
+# $$ \begin{align*}
+# \frac{d A}{d \tau} = \frac{d B}{d \tau} &= \left( r - 1 \right) B - BC \\
+# \frac{d C}{d \tau} &= -bC + B^2
+# \end{align*} $$
 # 
 # The fixed points of these new equations are the same as for the Lorenz equations, as is the conductive solution when $A=B=C=0$, which as before is stable only for subcritical $Ra$; however, the convective solutions can be shown to be stable for all $r>1$. We might take this to imply that mantle convection cannot be chaotic after all. However, it must be recalled that the Lorenz analysis begins with severe truncation of non-linear terms. For higher-order truncations, it is evident that chaotic phases can exist {cite}`Schubert2001-ea`, particularly at high *Rayleigh* numbers; what is not certain is whether, for a given degree of truncation and a given range of parameters, chaotic behaviours will manifest for a particular system. When we attempt to engage with the problem numerically and empirically through modelling, which is the purpose of this thesis, it will be seen that certain parameter bands are chaotic and time-dependent while others are not; ultimately it will be argued that such zones of chaos represent boundaries in a very high-dimensional phase space, and relate fundamentally to the nature and proper characterisation of tectonic modes.
+
+# In[ ]:
+
+
+
+

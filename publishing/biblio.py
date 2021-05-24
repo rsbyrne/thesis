@@ -16,6 +16,8 @@ if __name__ == '__main__':
                 strn += f'{key}="{val}",\n'
             if not 'journal' in entry:
                 strn += 'journal="N/A"' + ',\n'
+            if not 'publisher' in entry:
+                strn += 'publisher="N/A"' + ',\n'
             strn += '}\n'
             file.write(strn)
             file.write('\n')

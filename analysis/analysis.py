@@ -1,6 +1,8 @@
 import os
+import math
 
 from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score
 import scipy as sp
 import numpy as np
 
@@ -116,3 +118,19 @@ class Simulator:
     def randsimulate(self, *args, **kwargs):
         x = self.X[np.random.randint(self.X.shape[0])]
         return self.simulate(x, *args, **kwargs)
+
+def linear_regression(x, y, log = False):
+    if log:
+        x, y = np.log(x), np.log(y)
+    linreg = LinearRegression().fit(
+        xlin := x.reshape(-1, 1),
+        ylin := y,
+        )
+    pred = linreg.predict(xlin)
+    r2 = r2_score(ylin, pred)
+    slope, intercept = linreg.coef_, linreg.intercept_
+    if log:
+        predictor = lambda x: math.e ** linreg.predict(np.log(x).reshape(-1, 1))
+        return predictor, math.e ** intercept, slope[0], r2
+    predictor = lambda x: linreg.predict(x.reshape(-1, 1))
+    return predictor, slope[0], intercept, r2

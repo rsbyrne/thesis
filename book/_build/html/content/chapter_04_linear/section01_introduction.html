@@ -47,6 +47,7 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -59,7 +60,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="4.2. Background" href="section02_background.html" />
-    <link rel="prev" title="4. Scaling Behaviours of Linear Rheologies" href="abstract.html" />
+    <link rel="prev" title="4. Scaling Behaviours in Linear Rheologies" href="abstract.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -175,7 +176,7 @@
  </li>
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="abstract.html">
-   4. Scaling Behaviours of Linear Rheologies
+   4. Scaling Behaviours in Linear Rheologies
   </a>
   <ul class="current collapse-ul">
    <li class="toctree-l2 current active">
@@ -441,6 +442,10 @@
                 
   <div class="section" id="introduction">
 <h1><span class="section-number">4.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Rheologies, or flow-laws, are the governing equations of any bulk fluid in motion. While it is clear that the Earth’s interior, and the interiors of the other planets, are in such a state of motion, it is not clear what rheology best describes these systems, vexing attempts to reconstruct planetary histories in the laboratory. In the thirty years since high-resolution numerical modelling became available to geodynamicists, arguably little progress has been made in designing a rheology that accurately describes geodynamic fluids on a global scale. A new approach may be called for.</p>
+<p>Our research program seeks to test the viability of an attritional approach to planetary geodynamics based on massive and virtually complete numerical surveys of successively more complex rheologies. Rather than prematurely identifying our results with real planets or real scenarios, our approach trades immediate applicability for theoretical comprehensiveness. Once acquired, the fundamental scalings such an initiative may provide will drastically compact the possibility space for enquiries over natural systems like the silicate Earth.</p>
+<p>For this investigation, we begin with two simple linear cases: isoviscous convection and exponentially temperature-dependent (Arrhenius-type) rheology. Across the free parameters of thermal expansivity, domain geometry, and internal heat, we sample well over 30,000 cases - a survey two orders of magnitude larger than any other known to the authors. This very large and continually growing dataset, rigorously tagged with metadata for perfect reproducibility, is put forward as a perpetual and common resource for the rheological sciences, including but not limited to our own focus of planetary geodynamics. Ultimately, the ambition of this project is to make it unnecessary for certain rheologies to ever be modelled again, and to spawn a new secondary literature dedicated to the analysis of previously published model data in the interests of efficiency and progress.</p>
+<p>In this chapter, we discuss our motives, our methods, and our data, with a special focus on the unforeseen challenges raised by, and novel solutions demanded by, a modelling effort on this scale. We also present the results of an extensive linear regression analysis which provides much higher confidence on certain previously obtained or suspected scaling behaviours, particularly relating to the Rayleigh and Nusselt numbers, the principle input and output variables respectively.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -471,7 +476,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="abstract.html" title="previous page"><span class="section-number">4. </span>Scaling Behaviours of Linear Rheologies</a>
+    <a class='left-prev' id="prev-link" href="abstract.html" title="previous page"><span class="section-number">4. </span>Scaling Behaviours in Linear Rheologies</a>
     <a class='right-next' id="next-link" href="section02_background.html" title="next page"><span class="section-number">4.2. </span>Background</a>
 
     </div>

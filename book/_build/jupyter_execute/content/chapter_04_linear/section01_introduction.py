@@ -3,8 +3,10 @@
 
 # # Introduction
 
-# In[ ]:
-
-
-
-
+# Rheologies, or flow-laws, are the governing equations of any bulk fluid in motion. While it is clear that the Earth's interior, and the interiors of the other planets, are in such a state of motion, it is not clear what rheology best describes these systems, vexing attempts to reconstruct planetary histories in the laboratory. In the thirty years since high-resolution numerical modelling became available to geodynamicists, arguably little progress has been made in designing a rheology that accurately describes geodynamic fluids on a global scale. A new approach may be called for.
+# 
+# Our research program seeks to test the viability of an attritional approach to planetary geodynamics based on massive and virtually complete numerical surveys of successively more complex rheologies. Rather than prematurely identifying our results with real planets or real scenarios, our approach trades immediate applicability for theoretical comprehensiveness. Once acquired, the fundamental scalings such an initiative may provide will drastically compact the possibility space for enquiries over natural systems like the silicate Earth.
+# 
+# For this investigation, we begin with two simple linear cases: isoviscous convection and exponentially temperature-dependent (Arrhenius-type) rheology. Across the free parameters of thermal expansivity, domain geometry, and internal heat, we sample well over 30,000 cases - a survey two orders of magnitude larger than any other known to the authors. This very large and continually growing dataset, rigorously tagged with metadata for perfect reproducibility, is put forward as a perpetual and common resource for the rheological sciences, including but not limited to our own focus of planetary geodynamics. Ultimately, the ambition of this project is to make it unnecessary for certain rheologies to ever be modelled again, and to spawn a new secondary literature dedicated to the analysis of previously published model data in the interests of efficiency and progress.
+# 
+# In this chapter, we discuss our motives, our methods, and our data, with a special focus on the unforeseen challenges raised by, and novel solutions demanded by, a modelling effort on this scale. We also present the results of an extensive linear regression analysis which provides much higher confidence on certain previously obtained or suspected scaling behaviours, particularly relating to the Rayleigh and Nusselt numbers, the principle input and output variables respectively.

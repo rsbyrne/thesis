@@ -11,9 +11,13 @@
 # 
 # To take a numerical approach to mantle convection is to endeavour to iteratively solve the following system of equations, which are the Stokes, conservation, and advection-diffusion equations under the assumptions of incompressibility and infinite Prandtl number:
 # 
-# $$ \nabla p - \nabla \left( \eta D \right) = \Delta \rho \overline{g} $$
-# $$ \nabla \cdot \overline{u} = 0 $$
-# $$ \frac{\partial T}{\partial t} + \overline{u} \cdot \nabla T = \kappa \nabla^2 T + H $$
+# $$ \begin{align*}
+# \nabla p - \nabla \left( \eta D \right) &= \Delta \rho \overline{g} \\
+# \nabla \cdot \overline{u} &= 0 \\
+# \frac{\partial T}{\partial t} + \overline{u} \cdot \nabla T &= \kappa \nabla^2 T + H
+# \end{align*} $$
+# 
+# 
 # 
 # Where $\eta$ is dynamic viscosity, $D$ the strain rate tensor, $p$ dynamic pressure, $\Delta\rho$ the density anomaly, $g$ the gravity vector, $\overline{u}$ the velocity vector, $T$ temperature, $\kappa$ thermal diffusivity, $t$ time, and $H$ a thermal source term, i.e. radiogenic heating.
 # 
@@ -23,8 +27,10 @@
 # 
 # Computationally, the problem takes the form:
 # 
-# $$ A \overline{u} + B \overline{p} = \overline{f} $$
-# $$ B^T \overline{u} = 0 $$
+# $$ \begin{align*}
+# A \overline{u} + B \overline{p} = \overline{f} \\
+# B^T \overline{u} = 0
+# \end{align*} $$
 # 
 # Where $A$ is the known ‘stiffness’ matrix equivalent here to viscosity, $\overline{u}$ is a vector of unknown velocities, $B$ is the discrete gradient operator, $\overline{p}$ contains the pressure unknowns, $T$ indicates the transpose, and $\overline{f}$ is the known vector of body and boundary forces acting on the material. The objective is to solve for $\overline{u}$ as cheaply and reliably as possible; once a velocity solution is obtained, the system can be integrated in time and the cycle begins again. First, however, we require a solution for $p$. Multiplying both sides by $B^TA^{-1}$ and substituting for $B^T\overline{u}=0$ we find:
 # 

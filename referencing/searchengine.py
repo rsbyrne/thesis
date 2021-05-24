@@ -29,14 +29,17 @@ class SearchEngine:
         self.ix = ix
     def __call__(self, strn, **kwargs):
         with self.ix.searcher() as searcher:
-            parser = MultifieldParser(["author", "title", "abstract"], self.ix.schema)
+            parser = MultifieldParser(["author", "title", "abstract", "year"], self.ix.schema)
             hits = searcher.search(parser.parse(strn), **kwargs)
             for hit in hits:
                 print_hit(hit)
 
 def get_searchengine():
+    indexdir = os.path.join(aliases.cachedir, 'indexdir')
+    if not os.path.isdir(indexdir):
+        os.mkdir(indexdir)
     try:
-        ix = open_dir(os.path.join(os.path.dirname(__file__), "indexdir"))
+        ix = open_dir(os.path.join(aliases.cachedir, "indexdir"))
     except:
         ix = make_index()
     return SearchEngine(ix)
@@ -50,7 +53,7 @@ def make_index():
         **{key: TEXT(stored = True) for key in allkeys}
         )
 
-    ix = create_in(os.path.join(os.path.dirname(__file__), "indexdir"), schema)
+    ix = create_in(os.path.join(aliases.cachedir, "indexdir"), schema)
     writer = ix.writer()
 
     for entry in biblio.entries:
