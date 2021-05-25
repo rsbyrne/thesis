@@ -81,49 +81,58 @@ warnings.filterwarnings("ignore",category=UserWarning)
 
 # ### Defining a coordinate system
 
-# If the domain is allowed to curve around the $z$ axis, a cylindrical or annular geometry is obtained which is more appropriate for planetary mantles. The curavture is defined by the ratio of radii $f$, where $f=1$ is equivalent to a Cartesian box, $f\to0$ becomes a complete wedge, and the values $\sim 0.5$ and $\sim 0.9$ would be appropriate for the whole mantle and upper mantle respectively:
+# In any convection model, gravity defines the natural down direction and gives us our first most important scale: the depth $z$ from the surface, or its complement, the height from the model base $h=1-z$.
 # 
-# $$ f \equiv \frac{r_{inner}}{r_{outer}} $$
+# If the domain is allowed to curve around a certain locus, a cylindrical or annular geometry is obtained which is more appropriate for planetary mantles. While we retain $h$ and $z$ as terms relevant to any action within the domain, we must also introduce a concept of radial height $r$, understood here to represent the distance from the planetary centre of gravity. The cylindrical domain, for us representing the mantle, is thus bounded by the inner radius $r_{i}$ and the outer radius $r_{o}$, defining an area of $\pi(r_o^2 - r_i^2)$.
 # 
-# (Equivalently, the ratio of circumferences may be used.)
+# Our choice of radii implies a degree of curvature $f$:
 # 
-# To navigate the curved geometry, a curved coordinate system is called for. Vertical distance becomes radial distance, which is typically restricted in the unit interval - i.e.:
+# $$ f \equiv \frac{r_o}{r_i} $$
 # 
-# $$ r_{outer} - r_{inner} = 1 $$
+# Where $f=1$ is equivalent to an infinitely wide Cartesian box, $f\to0$ represents a full disk, and the values $\sim 0.5$ and $\sim 0.9$ would be appropriate for the whole mantle and upper mantle respectively. The ratio of radii $f$ is identical to the ratio of circumferences, so that $f=0.5$ represents a system where the arc length of the base is half that of the surface. (Note that this would imply infinite planetary radii at $f=1$ - hence the planar-like endmember $f=1$ is not strictly reachable under an assumption of curvature, though arbitrarily high values can be set to reproduce that behaviour {cite}`Jarvis1993-cb`.)
+# 
+# If we further stipulate:
+# 
+# $$
+# r_{o} - r_{i} = 1 \\
+# r_{o} \to 1 \quad as \quad f \to 0
+# $$
+# 
+# We can non-dimensionalise the planetary radial height $r$ as $r^{'}$ (*r-prime*), a pure function of $f$:
+# 
 # $$ \begin{align*}
-# r_{inner} &= \frac{f}{1 - f} \\
-# r_{outer} &= \frac{1}{1 - f}
+# r^{'}_i &= \frac{f}{1 - f} \\
+# r^{'}_o &= \frac{1}{1 - f}
 # \end{align*} $$
 # 
-# (Note that this would imply infinite planetary radii at $f=1$ - hence the planar-like endmember is not strictly reachable under an assumption of curvature, though arbitrarily high values can be set to reproduce that behaviour.)
-# 
-# The inner and outer lengths $s$ would then be:
+# Such that $r^{'}$ relates to $h$ by:
 # 
 # $$ \begin{align*}
-# s_{inner} &= 2\pi\frac{f}{1 - f} \\
-# s_{outer} &= 2\pi\frac{1}{1 - f}
+# r^{'} &= \frac{h + r_1}{r_2} \\
+# r^{'} &= h(1-f) + f \\
+# &= (z-1)(1-f) + f
 # \end{align*} $$
 # 
-# Of course, often we will only want to reproduce a small wedge of the annulus, as time-dependence and numerical workload scale exponentially with aspect ratio. We can define our wedge selection $D$ in radians:
+# This formulation proves to be natural for many solutions, as will shortly be
+# 
+# To complete our coordinate system, we require an angular coordinate as well: the angle $\theta$ in radians anticlockwise from an arbitrary origin. Often we will only want to reproduce a small wedge of the annulus, as time-dependence and numerical workload scale exponentially with aspect ratio; we can define our wedge selection $D$ in radians:
 # 
 # $$ \theta: 0 \to D, \quad D \leq 2\pi $$
 # 
-# If the simulation is to represent periodic flow around the annulus, values of $D$ must satsify $\pi / l$, where $l$ is a positive integer representing the number of convection cell pairs it would take to populate the full annulus at equivalent curvature (i.e. the number of upwellings or downwellings). If we require a definition of aspect ratio $A$ in the annulus, it is convenient to set this as the arc length through the mid-depth, which then relates to $D$ and $f$ via a new term, $F$, equivalent to the radial distance $r$ from the planetary centre of gravity to the mantle mid-depth:
+# If the simulation is to represent periodic flow around the annulus, values of $D$ must satsify $\pi / l$, where $l$ is a positive integer representing the number of convection cell pairs it would take to populate the full annulus at equivalent curvature (i.e. the number of upwellings or downwellings).
+# 
+# The selection of $D$ also selects an aspect ratio for the domain, but only once we choose a depth at which to measure it. It is most convenient to use the arc length through the mid-depth, which then relates to $D$ and $f$ via a new term, $F$, equivalent to the radial distance $r$ from the planetary centre of gravity to the mantle mid-depth:
 # 
 # $$
-# F \equiv \frac{r_{inner} + r_{outer}}{2} = \frac{1 + f}{2 \left( 1 - f \right)} \\
+# F \equiv \frac{r_{i} + r_{o}}{2} = \frac{1 + f}{2 \left( 1 - f \right)} \\
 # A = FD
 # $$
 # 
-# A virtue of this definition is that the area of the domain remains constant when $A_f$ is constant, regardless of the curvature $f$. Unfortunately, it also leaves us with two competing claims for a 'natural' denominator of the angular coordinate, $D$ and $F$.  While authors have sometimes preferred to keep $D$ and $F$ constant and allow $A$ to vary {cite}`Jarvis1994-np`, we have for the most part chosen to fix $A$ and $F$ with $D$ as the free parameter, as in {cite}`Jarvis1993-cb`: this simplifies comparisons with plane-layer simulations at the cost of producing planforms which would be unstable if scaled to the full annulus.
+# If radius has been non-dimensionalised as above, this is equivalent to stating that the aspect ratio is equal to the area of the domain - regardless of $f$ - just as it is in the Cartesian case.
+# 
+# Such a scheme leaves us with two competing claims for a 'natural' denominator of the angular coordinate - $D$ and $F$. While authors have sometimes preferred to keep $D$ and $F$ constant and allow $A$ to vary {cite}`Jarvis1994-np`, we have for the most part chosen to fix $A$ and $F$ with $D$ as the free parameter, as in {cite}`Jarvis1993-cb`: this simplifies comparisons with plane-layer simulations at the cost of producing planforms which would be unstable if scaled to the full annulus.
 
 # ### Effects on conduction and instability
-
-# The curvature $f$ immediately affects the expected conductive geotherm: where in a Cartesian box, the flux goes constantly with depth $\phi_q \propto \Delta T$, with curvature it becomes variable with planetary radial height $r$ as the flux is progressively spread out over increasing area:
-# 
-# $$ \phi_q \propto \frac{-1}{r \ln f} $$
-# 
-# (Note that this would imply $\phi_q\to\infty$ a $f\to1$.)
 
 # In[2]:
 
@@ -251,6 +260,42 @@ fig
 # 
 # Summary of the scaling behaviours of isoviscous conduction for varying curvature parameter $f$. We obtain a natural scaling for $f$ versus $T_{av}$ with an $R^2$ of {glue:text}`isocondr2:.3f`.
 # ```
+
+# It is a requirement of a conductive steady state ($Nu=1$) that the thermal flux must be the same through every layer. In the planar case this results in a linear geotherm which, in a model with fixed and unitless boundary temperatures, results in a simple function of $T = z$ where $z$ is dimensionless depth from the top of the model. The average temperature is then trivially $T_{av}=0.5$. (For any system in pure conduction the *Nusselt* number is by definition $1$.)
+# 
+# In a cylindrical domain, however, the length of each successive layer goes with the radius as $2\pi r$. To sustain a given flux, then, the temperature drop across each layer must go as $\Delta T \propto r^{-1}$. Since know that, in the limit of $f$:
+# 
+# $$ \begin{align*}
+# \frac{dT}{dr} &\to -1 \quad as \quad f \to 1 \\
+# &\to 0 \quad as \quad f \to 0
+# \end{align*} $$
+# 
+# We can reconstruct the relation in terms of $r^{'}$ as:
+# 
+# $$
+# \frac{dT}{dr^{'}} = \frac{1 - f}{r^{'}\ln{f}}
+# $$
+# 
+# The antiderivative then yields the geotherm:
+# 
+# $$
+# T(r^{'}) = \frac{\ln{r^{'}}}{\ln{f}} \\
+# \therefore \quad T(h) = \frac{h(1-f)+f}{\ln{f}}
+# $$
+# 
+# In the planar case, the average temperature of the system is always half the temperature drop. In the cylindrical case, however, we can observe that the average temperature sustained by the nonlinear geotherm must be a function of $f$, which we can obtain by integrating with respect to $h$; this yields:
+# 
+# $$
+# T_{av} = \frac{\root \huge{e} \of f}{2} 
+# $$
+# 
+# We validate these scalings empirically {ref}`isocond`.
+
+# In[ ]:
+
+
+
+
 
 # Because the temperature gradient goes with $\phi_q$ inversely to area, and so $r$, and so $f$, this implies that the conductive geotherm at the upper boundary will be lesser than at the lower boundary by a factor of exactly $f^2$: the two boundaries are no longer symmetrical. To evaluate convective instability, then, we must treat with each boundary independently.
 # 

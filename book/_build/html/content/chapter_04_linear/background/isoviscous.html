@@ -488,48 +488,77 @@
 <h2><span class="section-number">4.2.2.1.1. </span>Isoviscous rheology in cylindrical geometry<a class="headerlink" href="#isoviscous-rheology-in-cylindrical-geometry" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="defining-a-coordinate-system">
 <h3><span class="section-number">4.2.2.1.1.1. </span>Defining a coordinate system<a class="headerlink" href="#defining-a-coordinate-system" title="Permalink to this headline">¶</a></h3>
-<p>If the domain is allowed to curve around the <span class="math notranslate nohighlight">\(z\)</span> axis, a cylindrical or annular geometry is obtained which is more appropriate for planetary mantles. The curavture is defined by the ratio of radii <span class="math notranslate nohighlight">\(f\)</span>, where <span class="math notranslate nohighlight">\(f=1\)</span> is equivalent to a Cartesian box, <span class="math notranslate nohighlight">\(f\to0\)</span> becomes a complete wedge, and the values <span class="math notranslate nohighlight">\(\sim 0.5\)</span> and <span class="math notranslate nohighlight">\(\sim 0.9\)</span> would be appropriate for the whole mantle and upper mantle respectively:</p>
+<p>In any convection model, gravity defines the natural down direction and gives us our first most important scale: the depth <span class="math notranslate nohighlight">\(z\)</span> from the surface, or its complement, the height from the model base <span class="math notranslate nohighlight">\(h=1-z\)</span>.</p>
+<p>If the domain is allowed to curve around a certain locus, a cylindrical or annular geometry is obtained which is more appropriate for planetary mantles. While we retain <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(z\)</span> as terms relevant to any action within the domain, we must also introduce a concept of radial height <span class="math notranslate nohighlight">\(r\)</span>, understood here to represent the distance from the planetary centre of gravity. The cylindrical domain, for us representing the mantle, is thus bounded by the inner radius <span class="math notranslate nohighlight">\(r_{i}\)</span> and the outer radius <span class="math notranslate nohighlight">\(r_{o}\)</span>, defining an area of <span class="math notranslate nohighlight">\(\pi(r_o^2 - r_i^2)\)</span>.</p>
+<p>Our choice of radii implies a degree of curvature <span class="math notranslate nohighlight">\(f\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[ f \equiv \frac{r_{inner}}{r_{outer}} \]</div>
-<p>(Equivalently, the ratio of circumferences may be used.)</p>
-<p>To navigate the curved geometry, a curved coordinate system is called for. Vertical distance becomes radial distance, which is typically restricted in the unit interval - i.e.:</p>
-<div class="math notranslate nohighlight">
-\[ r_{outer} - r_{inner} = 1 \]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-r_{inner} &amp;= \frac{f}{1 - f} \\
-r_{outer} &amp;= \frac{1}{1 - f}
-\end{align*} \end{split}\]</div>
-<p>(Note that this would imply infinite planetary radii at <span class="math notranslate nohighlight">\(f=1\)</span> - hence the planar-like endmember is not strictly reachable under an assumption of curvature, though arbitrarily high values can be set to reproduce that behaviour.)</p>
-<p>The inner and outer lengths <span class="math notranslate nohighlight">\(s\)</span> would then be:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-s_{inner} &amp;= 2\pi\frac{f}{1 - f} \\
-s_{outer} &amp;= 2\pi\frac{1}{1 - f}
-\end{align*} \end{split}\]</div>
-<p>Of course, often we will only want to reproduce a small wedge of the annulus, as time-dependence and numerical workload scale exponentially with aspect ratio. We can define our wedge selection <span class="math notranslate nohighlight">\(D\)</span> in radians:</p>
-<div class="math notranslate nohighlight">
-\[ \theta: 0 \to D, \quad D \leq 2\pi \]</div>
-<p>If the simulation is to represent periodic flow around the annulus, values of <span class="math notranslate nohighlight">\(D\)</span> must satsify <span class="math notranslate nohighlight">\(\pi / l\)</span>, where <span class="math notranslate nohighlight">\(l\)</span> is a positive integer representing the number of convection cell pairs it would take to populate the full annulus at equivalent curvature (i.e. the number of upwellings or downwellings). If we require a definition of aspect ratio <span class="math notranslate nohighlight">\(A\)</span> in the annulus, it is convenient to set this as the arc length through the mid-depth, which then relates to <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(f\)</span> via a new term, <span class="math notranslate nohighlight">\(F\)</span>, equivalent to the radial distance <span class="math notranslate nohighlight">\(r\)</span> from the planetary centre of gravity to the mantle mid-depth:</p>
+\[ f \equiv \frac{r_o}{r_i} \]</div>
+<p>Where <span class="math notranslate nohighlight">\(f=1\)</span> is equivalent to an infinitely wide Cartesian box, <span class="math notranslate nohighlight">\(f\to0\)</span> represents a full disk, and the values <span class="math notranslate nohighlight">\(\sim 0.5\)</span> and <span class="math notranslate nohighlight">\(\sim 0.9\)</span> would be appropriate for the whole mantle and upper mantle respectively. The ratio of radii <span class="math notranslate nohighlight">\(f\)</span> is identical to the ratio of circumferences, so that <span class="math notranslate nohighlight">\(f=0.5\)</span> represents a system where the arc length of the base is half that of the surface. (Note that this would imply infinite planetary radii at <span class="math notranslate nohighlight">\(f=1\)</span> - hence the planar-like endmember <span class="math notranslate nohighlight">\(f=1\)</span> is not strictly reachable under an assumption of curvature, though arbitrarily high values can be set to reproduce that behaviour <span id="id28">[<a class="reference internal" href="../../../references.html#id457">Jarvis, 1993</a>]</span>.)</p>
+<p>If we further stipulate:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-F \equiv \frac{r_{inner} + r_{outer}}{2} = \frac{1 + f}{2 \left( 1 - f \right)} \\
+r_{o} - r_{i} = 1 \\
+r_{o} \to 1 \quad as \quad f \to 0
+\end{split}\]</div>
+<p>We can non-dimensionalise the planetary radial height <span class="math notranslate nohighlight">\(r\)</span> as <span class="math notranslate nohighlight">\(r^{'}\)</span> (<em>r-prime</em>), a pure function of <span class="math notranslate nohighlight">\(f\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+r^{'}_i &amp;= \frac{f}{1 - f} \\
+r^{'}_o &amp;= \frac{1}{1 - f}
+\end{align*} \end{split}\]</div>
+<p>Such that <span class="math notranslate nohighlight">\(r^{'}\)</span> relates to <span class="math notranslate nohighlight">\(h\)</span> by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+r^{'} &amp;= \frac{h + r_1}{r_2} \\
+r^{'} &amp;= h(1-f) + f \\
+&amp;= (z-1)(1-f) + f
+\end{align*} \end{split}\]</div>
+<p>This formulation proves to be natural for many solutions, as will shortly be</p>
+<p>To complete our coordinate system, we require an angular coordinate as well: the angle <span class="math notranslate nohighlight">\(\theta\)</span> in radians anticlockwise from an arbitrary origin. Often we will only want to reproduce a small wedge of the annulus, as time-dependence and numerical workload scale exponentially with aspect ratio; we can define our wedge selection <span class="math notranslate nohighlight">\(D\)</span> in radians:</p>
+<div class="math notranslate nohighlight">
+\[ \theta: 0 \to D, \quad D \leq 2\pi \]</div>
+<p>If the simulation is to represent periodic flow around the annulus, values of <span class="math notranslate nohighlight">\(D\)</span> must satsify <span class="math notranslate nohighlight">\(\pi / l\)</span>, where <span class="math notranslate nohighlight">\(l\)</span> is a positive integer representing the number of convection cell pairs it would take to populate the full annulus at equivalent curvature (i.e. the number of upwellings or downwellings).</p>
+<p>The selection of <span class="math notranslate nohighlight">\(D\)</span> also selects an aspect ratio for the domain, but only once we choose a depth at which to measure it. It is most convenient to use the arc length through the mid-depth, which then relates to <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(f\)</span> via a new term, <span class="math notranslate nohighlight">\(F\)</span>, equivalent to the radial distance <span class="math notranslate nohighlight">\(r\)</span> from the planetary centre of gravity to the mantle mid-depth:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+F \equiv \frac{r_{i} + r_{o}}{2} = \frac{1 + f}{2 \left( 1 - f \right)} \\
 A = FD
 \end{split}\]</div>
-<p>A virtue of this definition is that the area of the domain remains constant when <span class="math notranslate nohighlight">\(A_f\)</span> is constant, regardless of the curvature <span class="math notranslate nohighlight">\(f\)</span>. Unfortunately, it also leaves us with two competing claims for a ‘natural’ denominator of the angular coordinate, <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(F\)</span>.  While authors have sometimes preferred to keep <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(F\)</span> constant and allow <span class="math notranslate nohighlight">\(A\)</span> to vary <span id="id28">[<a class="reference internal" href="../../../references.html#id462">Jarvis, 1994</a>]</span>, we have for the most part chosen to fix <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(F\)</span> with <span class="math notranslate nohighlight">\(D\)</span> as the free parameter, as in <span id="id29">[<a class="reference internal" href="../../../references.html#id457">Jarvis, 1993</a>]</span>: this simplifies comparisons with plane-layer simulations at the cost of producing planforms which would be unstable if scaled to the full annulus.</p>
+<p>If radius has been non-dimensionalised as above, this is equivalent to stating that the aspect ratio is equal to the area of the domain - regardless of <span class="math notranslate nohighlight">\(f\)</span> - just as it is in the Cartesian case.</p>
+<p>Such a scheme leaves us with two competing claims for a ‘natural’ denominator of the angular coordinate - <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(F\)</span>. While authors have sometimes preferred to keep <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(F\)</span> constant and allow <span class="math notranslate nohighlight">\(A\)</span> to vary <span id="id29">[<a class="reference internal" href="../../../references.html#id462">Jarvis, 1994</a>]</span>, we have for the most part chosen to fix <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(F\)</span> with <span class="math notranslate nohighlight">\(D\)</span> as the free parameter, as in <span id="id30">[<a class="reference internal" href="../../../references.html#id457">Jarvis, 1993</a>]</span>: this simplifies comparisons with plane-layer simulations at the cost of producing planforms which would be unstable if scaled to the full annulus.</p>
 </div>
 <div class="section" id="effects-on-conduction-and-instability">
 <h3><span class="section-number">4.2.2.1.1.2. </span>Effects on conduction and instability<a class="headerlink" href="#effects-on-conduction-and-instability" title="Permalink to this headline">¶</a></h3>
-<p>The curvature <span class="math notranslate nohighlight">\(f\)</span> immediately affects the expected conductive geotherm: where in a Cartesian box, the flux goes constantly with depth <span class="math notranslate nohighlight">\(\phi_q \propto \Delta T\)</span>, with curvature it becomes variable with planetary radial height <span class="math notranslate nohighlight">\(r\)</span> as the flux is progressively spread out over increasing area:</p>
-<div class="math notranslate nohighlight">
-\[ \phi_q \propto \frac{-1}{r \ln f} \]</div>
-<p>(Note that this would imply <span class="math notranslate nohighlight">\(\phi_q\to\infty\)</span> a <span class="math notranslate nohighlight">\(f\to1\)</span>.)</p>
 <div class="figure align-default" id="isocond" style="width: 800px">
 <div class="cell_output docutils container">
-<img alt="../../../_images/isoviscous_8_0.png" src="../../../_images/isoviscous_8_0.png" />
+<img alt="../../../_images/isoviscous_7_0.png" src="../../../_images/isoviscous_7_0.png" />
 </div>
 <p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Summary of the scaling behaviours of isoviscous conduction for varying curvature parameter <span class="math notranslate nohighlight">\(f\)</span>. We obtain a natural scaling for <span class="math notranslate nohighlight">\(f\)</span> versus <span class="math notranslate nohighlight">\(T_{av}\)</span> with an <span class="math notranslate nohighlight">\(R^2\)</span> of <span class="pasted-text">0.998</span>.</span><a class="headerlink" href="#isocond" title="Permalink to this image">¶</a></p>
 </div>
+<p>It is a requirement of a conductive steady state (<span class="math notranslate nohighlight">\(Nu=1\)</span>) that the thermal flux must be the same through every layer. In the planar case this results in a linear geotherm which, in a model with fixed and unitless boundary temperatures, results in a simple function of <span class="math notranslate nohighlight">\(T = z\)</span> where <span class="math notranslate nohighlight">\(z\)</span> is dimensionless depth from the top of the model. The average temperature is then trivially <span class="math notranslate nohighlight">\(T_{av}=0.5\)</span>. (For any system in pure conduction the <em>Nusselt</em> number is by definition <span class="math notranslate nohighlight">\(1\)</span>.)</p>
+<p>In a cylindrical domain, however, the length of each successive layer goes with the radius as <span class="math notranslate nohighlight">\(2\pi r\)</span>. To sustain a given flux, then, the temperature drop across each layer must go as <span class="math notranslate nohighlight">\(\Delta T \propto r^{-1}\)</span>. Since know that, in the limit of <span class="math notranslate nohighlight">\(f\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+\frac{dT}{dr} &amp;\to -1 \quad as \quad f \to 1 \\
+&amp;\to 0 \quad as \quad f \to 0
+\end{align*} \end{split}\]</div>
+<p>We can reconstruct the relation in terms of <span class="math notranslate nohighlight">\(r^{'}\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dT}{dr^{'}} = \frac{1 - f}{r^{'}\ln{f}}
+\]</div>
+<p>The antiderivative then yields the geotherm:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+T(r^{'}) = \frac{\ln{r^{'}}}{\ln{f}} \\
+\therefore \quad T(h) = \frac{h(1-f)+f}{\ln{f}}
+\end{split}\]</div>
+<p>In the planar case, the average temperature of the system is always half the temperature drop. In the cylindrical case, however, we can observe that the average temperature sustained by the nonlinear geotherm must be a function of <span class="math notranslate nohighlight">\(f\)</span>, which we can obtain by integrating with respect to <span class="math notranslate nohighlight">\(h\)</span>; this yields:</p>
+<div class="math notranslate nohighlight">
+\[
+T_{av} = \frac{\root \huge{e} \of f}{2} 
+\]</div>
+<p>We validate these scalings empirically <a class="reference internal" href="#isocond"><span class="std std-ref">Summary of the scaling behaviours of isoviscous conduction for varying curvature parameter f. We obtain a natural scaling for f versus T_{av} with an R^2 of .</span></a>.</p>
 <p>Because the temperature gradient goes with <span class="math notranslate nohighlight">\(\phi_q\)</span> inversely to area, and so <span class="math notranslate nohighlight">\(r\)</span>, and so <span class="math notranslate nohighlight">\(f\)</span>, this implies that the conductive geotherm at the upper boundary will be lesser than at the lower boundary by a factor of exactly <span class="math notranslate nohighlight">\(f^2\)</span>: the two boundaries are no longer symmetrical. To evaluate convective instability, then, we must treat with each boundary independently.</p>
 <p>If we make the assumption that, as in the planar case, the convective steady state will eventually result in a broad intracellular region of uniform temperature <span class="math notranslate nohighlight">\(T_{cell}\)</span>, we can define this temperature as a function only of <span class="math notranslate nohighlight">\(f\)</span>. If the total temperature drop is held to be unit, and given that ratio of upper and lower boundary gradients must be exactly <span class="math notranslate nohighlight">\(f^2\)</span>, it follows that:</p>
 <div class="math notranslate nohighlight">
@@ -542,16 +571,16 @@ T_{cell} = \frac{f^2}{f^2 + 1}
 <div class="math notranslate nohighlight">
 \[ Nu = \frac{\ln f}{1 - f} \cdot \left| \frac{\partial T}{\partial r} \right| _{S} \]</div>
 <p>Where <span class="math notranslate nohighlight">\(|x|_S\)</span> again represents the average value across a surface.</p>
-<p>The same factors of decreasing <span class="math notranslate nohighlight">\(f\)</span> drive a decrease in intracellular temperatures, and hence global average temperatures <span id="id30">[<a class="reference internal" href="../../../references.html#id462">Jarvis, 1994</a>]</span>:</p>
+<p>The same factors of decreasing <span class="math notranslate nohighlight">\(f\)</span> drive a decrease in intracellular temperatures, and hence global average temperatures <span id="id31">[<a class="reference internal" href="../../../references.html#id462">Jarvis, 1994</a>]</span>:</p>
 <div class="math notranslate nohighlight">
 \[ T_{av} = \frac{1}{\left( 1 + f^{-3/4} \right)} \]</div>
-<p>When considering convection in a cylindrical domain, the immediate qualitative difference resulting from curvature is the asymmetry of the two boundary layers. The additional space at the top of the model now allows more room for downwellings relative to basal upwellings, tending to promote instability <span id="id31">[<a class="reference internal" href="../../../references.html#id927">Jarvis, 1991</a>]</span>; on the other hand, the curved geotherm and the increased surface for radiating heat would tend to permit a comparatively thicker upper boundary layer. The effect of these countervailing forcings on the fundamental scaling scaling relation <span class="math notranslate nohighlight">\(Nu \propto R^{\beta}\)</span> is not obvious, but one analytical treatment by Jarvis <span id="id32">[<a class="reference internal" href="../../../references.html#id457">Jarvis, 1993</a>]</span> combines the results obtained above to produce a ‘geometric correction’ <span class="math notranslate nohighlight">\(g(f)\)</span>, which enters the power law as a scaling coefficient:</p>
+<p>When considering convection in a cylindrical domain, the immediate qualitative difference resulting from curvature is the asymmetry of the two boundary layers. The additional space at the top of the model now allows more room for downwellings relative to basal upwellings, tending to promote instability <span id="id32">[<a class="reference internal" href="../../../references.html#id927">Jarvis, 1991</a>]</span>; on the other hand, the curved geotherm and the increased surface for radiating heat would tend to permit a comparatively thicker upper boundary layer. The effect of these countervailing forcings on the fundamental scaling scaling relation <span class="math notranslate nohighlight">\(Nu \propto R^{\beta}\)</span> is not obvious, but one analytical treatment by Jarvis <span id="id33">[<a class="reference internal" href="../../../references.html#id457">Jarvis, 1993</a>]</span> combines the results obtained above to produce a ‘geometric correction’ <span class="math notranslate nohighlight">\(g(f)\)</span>, which enters the power law as a scaling coefficient:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 g(f) = \frac{\ln f}{1 - f} \cdot -\left( \frac{1}{1 + f^{-3/4}} \right) ^{4/3} \\
 Nu = g(f) \cdot R^{\frac{1}{3}}
 \end{split}\]</div>
-<p>Using this scaling, Jarvis was able to obtain a <em>beta</em> exponent of <span class="math notranslate nohighlight">\(0.321 \pm 0.001\)</span> across four values of <span class="math notranslate nohighlight">\(f\)</span> from <span class="math notranslate nohighlight">\((1.0 - 0.1)\)</span> <span id="id33">[<a class="reference internal" href="../../../references.html#id457">Jarvis, 1993</a>]</span>.</p>
+<p>Using this scaling, Jarvis was able to obtain a <em>beta</em> exponent of <span class="math notranslate nohighlight">\(0.321 \pm 0.001\)</span> across four values of <span class="math notranslate nohighlight">\(f\)</span> from <span class="math notranslate nohighlight">\((1.0 - 0.1)\)</span> <span id="id34">[<a class="reference internal" href="../../../references.html#id457">Jarvis, 1993</a>]</span>.</p>
 <p>To define <span class="math notranslate nohighlight">\(R=\frac{Ra}{Ra_{cr}}\)</span> — ?</p>
 </div>
 </div>
