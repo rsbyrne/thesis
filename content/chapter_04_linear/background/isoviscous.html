@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4.5. Isoviscous rheology &#8212; What kind of thing is a planet?</title>
+    <title>4.2.3. Isoviscous rheology &#8212; What kind of thing is a planet?</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -61,8 +61,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="4.6. Conclusion" href="conclusion.html" />
-    <link rel="prev" title="4.4. Linear rheologies" href="rheologies.html" />
+    <link rel="next" title="4.2.4. Conclusion" href="conclusion.html" />
+    <link rel="prev" title="4.2.2. Linear rheologies" href="rheologies.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -186,49 +186,53 @@
      4.1. Introduction
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 current active collapsible-parent">
     <a class="reference internal" href="intro.html">
      4.2. Background
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="basics.html">
-     4.3. Basics of convection
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="rheologies.html">
-     4.4. Linear rheologies
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     4.5. Isoviscous rheology
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="conclusion.html">
-     4.6. Conclusion
-    </a>
+    <ul class="current collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="basics.html">
+       4.2.1. Basics of convection
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="rheologies.html">
+       4.2.2. Linear rheologies
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       4.2.3. Isoviscous rheology
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="conclusion.html">
+       4.2.4. Conclusion
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../methods/intro.html">
-     4.7. Methods
+     4.3. Methods
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../results/intro.html">
-     4.8. Results
+     4.4. Results
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../discussion/intro.html">
-     4.9. Discussion
+     4.5. Discussion
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../conclusion.html">
-     4.10. Conclusion
+     4.6. Conclusion
     </a>
    </li>
   </ul>
@@ -422,17 +426,17 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#isoviscous-rheology-in-cylindrical-geometry">
-   4.5.1. Isoviscous rheology in cylindrical geometry
+   4.2.3.1. Isoviscous rheology in cylindrical geometry
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#defining-a-coordinate-system">
-     4.5.1.1. Defining a coordinate system
+     4.2.3.1.1. Defining a coordinate system
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#effects-on-conduction-and-instability">
-     4.5.1.2. Effects on conduction and instability
+     4.2.3.1.2. Effects on conduction and instability
     </a>
    </li>
   </ul>
@@ -449,7 +453,7 @@
               <div>
                 
   <div class="section" id="isoviscous-rheology">
-<h1><span class="section-number">4.5. </span>Isoviscous rheology<a class="headerlink" href="#isoviscous-rheology" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">4.2.3. </span>Isoviscous rheology<a class="headerlink" href="#isoviscous-rheology" title="Permalink to this headline">¶</a></h1>
 <p>Due to their simplicity and amenability to symbolic analysis, isoviscous models were among the earliest published mantle convection models <span id="id1">[<a class="reference internal" href="../../../references.html#id386">Blankenbach <em>et al.</em>, 1989</a>, <a class="reference internal" href="../../../references.html#id778">Jarvis and Peltier, 1986</a>, <a class="reference internal" href="../../../references.html#id504">McKenzie <em>et al.</em>, 1974</a>, <a class="reference internal" href="../../../references.html#id830">McKenzie <em>et al.</em>, 1973</a>]</span>, and they continue to be produced and discussed today <span id="id2">[<a class="reference internal" href="../../../references.html#id768">Vilella and Deschamps, 2018</a>, <a class="reference internal" href="../../../references.html#id782">Weller <em>et al.</em>, 2016</a>, <a class="reference internal" href="../../../references.html#id781">Weller <em>et al.</em>, 2016</a>, <a class="reference internal" href="../../../references.html#id838">Zhong, 2005</a>]</span>.</p>
 <p>In an isoviscous model, the viscosity function (usually set to <span class="math notranslate nohighlight">\(\eta=1\)</span>) is constant throughouts space and time. Though simple, it is nevertheless albe to reproduce appropriate surface velocities, gravitational profiles, and even topographic wavelengths <span id="id3">[<a class="reference internal" href="../../../references.html#id504">McKenzie <em>et al.</em>, 1974</a>, <a class="reference internal" href="../../../references.html#id830">McKenzie <em>et al.</em>, 1973</a>]</span>. Though its parameters are few, there remain limitless possible variations through <em>Rayleigh</em> number, internal heat <span class="math notranslate nohighlight">\(H\)</span>, domain geometry, and choice of boundary condition - many of which boast long-term stability solutions with enough implicit nonlinearity to make purely analytical studies infeasible <span id="id4">[<a class="reference internal" href="../../../references.html#id800">Daly, 1980</a>]</span>. And while the isoviscous model is certainly the most computationally tractable of all mantle-like rheologies, it is only in the last decade that simulations of appropriate scale for the Earth (<span class="math notranslate nohighlight">\(Ra&gt;10^7\)</span>) have become possible <span id="id5">[<a class="reference internal" href="../../../references.html#id770">Trubitsyn and Evseev, 2018</a>, <a class="reference internal" href="../../../references.html#id810">Vynnycky and Masuda, 2013</a>]</span>; these have confirmed earlier intuitions that stable convective planforms may either not exist, or may never manifest, on planetary spatiotemporal scales <span id="id6">[<a class="reference internal" href="../../../references.html#id464">Hüttig and Breuer, 2011</a>]</span>.</p>
 <p>Although the model does bely considerable complexity, it is simple enough to make some solutions analytically attainable. Like all convecting systems, a ‘critical’ <em>Rayleigh</em> number <span class="math notranslate nohighlight">\(Ra_{cr}\)</span> should exist below which convection ceases and conduction dominates (i.e. <span class="math notranslate nohighlight">\(Nu=1\)</span>), defining a ‘supercritical <span class="math notranslate nohighlight">\(Ra\)</span>’:</p>
@@ -477,9 +481,9 @@
 <p>The canonical <em>beta</em> scaling is seductive because it connects the relatively well-constrained fact of surface geothermal flux with the more mysterious thermal state of the mantle, and so allows parameterised thermal histories to be projected through deep time. The <span class="math notranslate nohighlight">\(\beta \to \frac{1}{3}\)</span> limit itself ultimately derives from the <em>Rayleigh</em> number’s dependence on length cubed, and while there is no <em>a priori</em> reason to believe that this analytical justification must be borne out in practice, it has been recognised as extremely suggestive for over half a century <span id="id20">[<a class="reference internal" href="../../../references.html#id923">Chan, 1971</a>]</span>. Testing this scaling behaviour empirically was an early priority of computational geodynamics, with several studies producing estimates that converged on, but did not achieve, the theoretical <span class="math notranslate nohighlight">\(\frac{1}{3}\)</span> scaling: the value has been reported as any of <span class="math notranslate nohighlight">\(0.313\)</span> <span id="id21">[<a class="reference internal" href="../../../references.html#id910">Jarvis and Peltier, 1982</a>]</span>, <span class="math notranslate nohighlight">\(0.318\)</span> <span id="id22">[<a class="reference internal" href="../../../references.html#id778">Jarvis and Peltier, 1986</a>]</span>, <span class="math notranslate nohighlight">\(0.319\)</span> <span id="id23">[<a class="reference internal" href="../../../references.html#id909">Schubert and Anderson, 1985</a>]</span>, <span class="math notranslate nohighlight">\(0.326\)</span> <span id="id24">[<a class="reference internal" href="../../../references.html#id941">Jarvis and Mitrovica, 1989</a>]</span>, and <span class="math notranslate nohighlight">\(0.36\)</span> <span id="id25">[<a class="reference internal" href="../../../references.html#id907">Quareni <em>et al.</em>, 1985</a>]</span>, using various methods. The reason for the deviation is uncertain. It was for a time suggested that, at very high <em>Rayleigh</em> numbers, an ‘asymptotic regime’ of <span class="math notranslate nohighlight">\(\beta \to \frac{1}{2}\)</span> might emerge, which might help explain the apparent ‘thermal catastophe’ of the Early Earth <span id="id26">[<a class="reference internal" href="../../../references.html#id381">Urey, 1955</a>]</span>; however, a definitive laboratory study using liquid helium <span id="id27">[<a class="reference internal" href="../../../references.html#id195">Niemela <em>et al.</em>, 2000</a>]</span> found that there is no such transition within <span class="math notranslate nohighlight">\(Ra&lt;=10^7\)</span>, and reported instead an empirical value of <span class="math notranslate nohighlight">\(0.31\)</span> for the interval <span class="math notranslate nohighlight">\(Ra: 10^6 - 10^7\)</span>, in close agreement with numerical results.</p>
 <p>While the <em>beta</em> scaling strictly holds only for those isoviscous systems with purely basal (no volumetric) heating, Cartesian geometry, and free-slip boundaries, it has been found to hold for a wide range of systems if certain corrections are made.</p>
 <div class="section" id="isoviscous-rheology-in-cylindrical-geometry">
-<h2><span class="section-number">4.5.1. </span>Isoviscous rheology in cylindrical geometry<a class="headerlink" href="#isoviscous-rheology-in-cylindrical-geometry" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2.3.1. </span>Isoviscous rheology in cylindrical geometry<a class="headerlink" href="#isoviscous-rheology-in-cylindrical-geometry" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="defining-a-coordinate-system">
-<h3><span class="section-number">4.5.1.1. </span>Defining a coordinate system<a class="headerlink" href="#defining-a-coordinate-system" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.2.3.1.1. </span>Defining a coordinate system<a class="headerlink" href="#defining-a-coordinate-system" title="Permalink to this headline">¶</a></h3>
 <p>If the domain is allowed to curve around the <span class="math notranslate nohighlight">\(z\)</span> axis, a cylindrical or annular geometry is obtained which is more appropriate for planetary mantles. The curavture is defined by the ratio of radii <span class="math notranslate nohighlight">\(f\)</span>, where <span class="math notranslate nohighlight">\(f=1\)</span> is equivalent to a Cartesian box, <span class="math notranslate nohighlight">\(f\to0\)</span> becomes a complete wedge, and the values <span class="math notranslate nohighlight">\(\sim 0.5\)</span> and <span class="math notranslate nohighlight">\(\sim 0.9\)</span> would be appropriate for the whole mantle and upper mantle respectively:</p>
 <div class="math notranslate nohighlight">
 \[ f \equiv \frac{r_{inner}}{r_{outer}} \]</div>
@@ -511,7 +515,7 @@ A = FD
 <p>A virtue of this definition is that the area of the domain remains constant when <span class="math notranslate nohighlight">\(A_f\)</span> is constant, regardless of the curvature <span class="math notranslate nohighlight">\(f\)</span>. Unfortunately, it also leaves us with two competing claims for a ‘natural’ denominator of the angular coordinate, <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(F\)</span>.  While authors have sometimes preferred to keep <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(F\)</span> constant and allow <span class="math notranslate nohighlight">\(A\)</span> to vary <span id="id28">[<a class="reference internal" href="../../../references.html#id462">Jarvis, 1994</a>]</span>, we have for the most part chosen to fix <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(F\)</span> with <span class="math notranslate nohighlight">\(D\)</span> as the free parameter, as in <span id="id29">[<a class="reference internal" href="../../../references.html#id457">Jarvis, 1993</a>]</span>: this simplifies comparisons with plane-layer simulations at the cost of producing planforms which would be unstable if scaled to the full annulus.</p>
 </div>
 <div class="section" id="effects-on-conduction-and-instability">
-<h3><span class="section-number">4.5.1.2. </span>Effects on conduction and instability<a class="headerlink" href="#effects-on-conduction-and-instability" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.2.3.1.2. </span>Effects on conduction and instability<a class="headerlink" href="#effects-on-conduction-and-instability" title="Permalink to this headline">¶</a></h3>
 <p>The curvature <span class="math notranslate nohighlight">\(f\)</span> immediately affects the expected conductive geotherm: where in a Cartesian box, the flux goes constantly with depth <span class="math notranslate nohighlight">\(\phi_q \propto \Delta T\)</span>, with curvature it becomes variable with planetary radial height <span class="math notranslate nohighlight">\(r\)</span> as the flux is progressively spread out over increasing area:</p>
 <div class="math notranslate nohighlight">
 \[ \phi_q \propto \frac{-1}{r \ln f} \]</div>
@@ -577,8 +581,8 @@ Nu = g(f) \cdot R^{\frac{1}{3}}
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="rheologies.html" title="previous page"><span class="section-number">4.4. </span>Linear rheologies</a>
-    <a class='right-next' id="next-link" href="conclusion.html" title="next page"><span class="section-number">4.6. </span>Conclusion</a>
+    <a class='left-prev' id="prev-link" href="rheologies.html" title="previous page"><span class="section-number">4.2.2. </span>Linear rheologies</a>
+    <a class='right-next' id="next-link" href="conclusion.html" title="next page"><span class="section-number">4.2.4. </span>Conclusion</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
