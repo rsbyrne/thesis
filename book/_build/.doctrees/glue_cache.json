@@ -1,21 +1,5 @@
 {
   "content/chapter_04_linear/section02_background": {
-    "isocond": {
-      "data": {
-        "image/png": null,
-        "text/plain": "<everest.window.imop.Paste at 0x7f05310951c0>"
-      },
-      "metadata": {
-        "scrapbook": {
-          "mime_prefix": "",
-          "name": "isocond"
-        },
-        "filenames": {
-          "image/png": "/home/morpheus/workspace/mount/book/_build/jupyter_execute/content/chapter_04_linear/section02_background_9_0.png"
-        }
-      },
-      "output_type": "display_data"
-    },
     "isocondr2": {
       "data": {
         "application/papermill.record/text/plain": "0.9981308590094721"
@@ -24,6 +8,22 @@
         "scrapbook": {
           "mime_prefix": "application/papermill.record/",
           "name": "isocondr2"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "isocond": {
+      "data": {
+        "application/papermill.record/image/png": null,
+        "application/papermill.record/text/plain": "<everest.window.imop.Paste at 0x7ff60a0621c0>"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "application/papermill.record/",
+          "name": "isocond"
+        },
+        "filenames": {
+          "image/png": "/home/morpheus/workspace/mount/book/_build/jupyter_execute/content/chapter_04_linear/section02_background_9_0.png"
         }
       },
       "output_type": "display_data"

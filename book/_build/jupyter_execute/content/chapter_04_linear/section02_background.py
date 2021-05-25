@@ -311,15 +311,21 @@ fig = imop.paste(
     corner = 'bl',
     )
 
-glue("isocond", fig)
+glue("isocond", fig, display = False)
 glue("isocondr2", linscore, display = False)
 
 
+# In[3]:
+
+
+fig
+
+
 # ```{glue:figure} isocond
-# :figwidth: 400px
+# :figwidth: 900px
 # :name: "isocond"
 # 
-# Summary of the scaling behaviours of isoviscous conduction for varying curvature parameter $f$. We obtain a natural scaling for $f$ versus $T_av$ of {glue:text}`isocondr2:.2f`.
+# Summary of the scaling behaviours of isoviscous conduction for varying curvature parameter $f$. We obtain a natural scaling for $f$ versus $T_av$ with an $R^2$ of {glue:text}`isocondr2:.3f`.
 # ```
 
 # Because the temperature gradient goes with $\phi_q$ inversely to area, and so $r$, and so $f$, this implies that the conductive geotherm at the upper boundary will be lesser than at the lower boundary by a factor of exactly $f^2$: the two boundaries are no longer symmetrical. To evaluate convective instability, then, we must treat with each boundary independently.
@@ -358,7 +364,7 @@ glue("isocondr2", linscore, display = False)
 # 
 # To define $R=\frac{Ra}{Ra_{cr}}$ --- ?
 
-# In[3]:
+# In[4]:
 
 
 search('jaupart')
