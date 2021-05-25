@@ -17,6 +17,8 @@ import numpy as np
 import pandas as pd
 from IPython import display as idisplay
 
+from sklearn.metrics import r2_score
+
 import aliases # important this goes first to configure PATH
 
 from everest.window import Canvas, plot, raster, DataChannel as Channel, get_cmap
@@ -35,7 +37,7 @@ import warnings
 warnings.filterwarnings("ignore",category=UserWarning)
 
 
-# For over half a century now, geodynamicists have accepted that the interior of the Earth and other planets can to some degree be formalised as a variant of Rayleigh-Benard convection amenable to numerical simulation {cite}`Mckenzie1974-wb`. While early modelling efforts were focussed on simple rheologies and geometries out of necessity, increasing hardware and software capabilities have since allowed modern investigators to target much more sophisticated behaviours in the search for a truly Earth-like rheology, including strain-rate dependence {cite}`Moresi1998-az,Zhong1998-qg`, magmatic history {cite}`ONeill2018-hy`, chemical phases {cite}`Tackley2012-hq`, and more.
+# For over half a century now, geodynamicists have accepted that the interior of the Earth and other planets can to some degree be formalised as a variant of Rayleigh-Benard convection amenable to numerical simulation {cite}`McKenzie1974-wb`. While early modelling efforts were focussed on simple rheologies and geometries out of necessity, increasing hardware and software capabilities have since allowed modern investigators to target much more sophisticated behaviours in the search for a truly Earth-like rheology, including strain-rate dependence {cite}`Moresi1998-az,Zhong1998-qg`, magmatic history {cite}`ONeill2018-hy`, chemical phases {cite}`Tackley2012-hq`, and more.
 # 
 # The constant drive for increased model complexity comes at the expense of fundamental knowledge of the simpler rheologies which these more advanced systems are ultimately built over: ironic, as modern resources are only now able to support the breadth and detail that early authors would have preferred. There are two major contributors to this 'complexity preference' in the modelling literature:
 # 1. It is easier to argue that a new rheology represents novel work worth publishing.
@@ -90,7 +92,7 @@ warnings.filterwarnings("ignore",category=UserWarning)
 # - Fixed in value (a 'Dirichlet' condition). For the temperature field, this would imply that the core and/or the space-facing surface of the planet are infinite thermal buffers. For the velocity field, this can be used - for example - to define surfaces that are impervious in the normal component and either no-stick, perfect-stick, or tractional in the parallel component.
 # - Fixed in gradient (a 'Neumann' condition): for the temperature field, this would imply that the surface radiates heat at a fixed power, which in the case of zero power would make that boundary effectively insulating; for the velocity field, this essentially configures the strain rate in the chosen component.
 # 
-# With respect to temperature, either of the above conditions can be set to inject or remove heat from the model, which - in tandem with the internal heat function $H$ - provides the fluid with the thermal situation its flow is expected to resolve, given sufficient time. On Earth, we imagine mantle convection and the interconnected phenomenon of surface tectonics to represent the Earth's own natural solution, or solution-in-progress, to the circumstance of volumetric radiogenic heating and basal heating from the core, although the debate over the relative significance of these is ancient and ongoing {cite}`Thomson1862-kb,Urey1955-zs,Korenaga2003-oy,Korenaga2008-js,Gando2011-sh,Mareschal2012-ie,Huang2013-eu,jaupart 2015,`. (For the models being discussed forthwith, we have restricted ourselves to free-slip velocity boundaries and Dirichlet thermal boundaries with a constant unit temperature gradient from top to bottom, such that the heating regime is always either purely basal or mixed.)
+# With respect to temperature, either of the above conditions can be set to inject or remove heat from the model, which - in tandem with the internal heat function $H$ - provides the fluid with the thermal situation its flow is expected to resolve, given sufficient time. On Earth, we imagine mantle convection and the interconnected phenomenon of surface tectonics to represent the Earth's own natural solution, or solution-in-progress, to the circumstance of volumetric radiogenic heating and basal heating from the core, although the debate over the relative significance of these is ancient and ongoing {cite}`Thomson1862-kb,Urey1955-zs,Korenaga2003-oy,Korenaga2008-js,Gando2011-sh,Mareschal2012-ie,Huang2013-eu,Jaupart2015-un`. (For the models being discussed forthwith, we have restricted ourselves to free-slip velocity boundaries and Dirichlet thermal boundaries with a constant unit temperature gradient from top to bottom, such that the heating regime is always either purely basal or mixed.)
 # 
 # Within these simplifying constraints, almost limitless variety is possible - which is why this essential formulation has become common to virtually all studies of mantle convection. However, while it is hoped that somewhere within problem-space a solution resembling Earth may be found, such a solution must elude us until our grasp of the fundamentals is absolute; and there is still much about even the simplest rheologies that we do not understand.
 
@@ -280,21 +282,45 @@ ax1.line(
 
 def func(f):
     return 0.5 * f ** (1. / math.e)
+predf = np.array(list(map(func, condfs)))
 ax2 = canvas2.make_ax(place = (1, 0))
 ax2.line(
-    Channel(list(map(func, condfs)), label = r'\frac{1}{2}f^{1/e}', lims = (0.2, 0.5), capped = (True, True)),
+    predfchan := Channel(predf, label = r'\frac{1}{2}f^{1/e}', lims = (0.2, 0.5), capped = (True, True)),
     Tchan,
+    )
+linscore = r2_score(predf, condavts)
+ax2.line(
+    predfchan,
+    Channel(predfchan.data, lims = Tchan.lims, capped = Tchan.capped),
+    linestyle = '--'
+    )
+trendlabel = r'y=x, \\ R^2 =' + str(round(linscore, 3))
+ax2.annotate(
+    predf[3],
+    predf[3],
+    label = trendlabel,
+    points = (30, -30),
+    arrowProps = dict(arrowstyle = "->", color = '#ff7f0e'),
     )
 
 # fig = imop.hstack(imop.vstack(canvas1, thumbs), canvas2)
 fig = imop.paste(
     imop.hstack(canvas1, canvas2, pad = (255, 255, 255)),
-    imop.resize(thumbs, size = 0.19),
+    imop.resize(thumbs, size = 0.185),
     coord = (0.01, 0.95),
     corner = 'bl',
     )
-display(fig)
 
+glue("isocond", fig)
+glue("isocondr2", linscore, display = False)
+
+
+# ```{glue:figure} isocond
+# :figwidth: 400px
+# :name: "isocond"
+# 
+# Summary of the scaling behaviours of isoviscous conduction for varying curvature parameter $f$. We obtain a natural scaling for $f$ versus $T_av$ of {glue:text}`isocondr2:.2f`.
+# ```
 
 # Because the temperature gradient goes with $\phi_q$ inversely to area, and so $r$, and so $f$, this implies that the conductive geotherm at the upper boundary will be lesser than at the lower boundary by a factor of exactly $f^2$: the two boundaries are no longer symmetrical. To evaluate convective instability, then, we must treat with each boundary independently.
 # 
@@ -335,5 +361,11 @@ display(fig)
 # In[3]:
 
 
-search('jarvis 1993')
+search('jaupart')
+
+
+# In[ ]:
+
+
+
 

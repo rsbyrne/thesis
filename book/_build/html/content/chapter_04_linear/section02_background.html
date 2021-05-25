@@ -489,7 +489,7 @@
                 
   <div class="section" id="background">
 <h1><span class="section-number">4.2. </span>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h1>
-<p>For over half a century now, geodynamicists have accepted that the interior of the Earth and other planets can to some degree be formalised as a variant of Rayleigh-Benard convection amenable to numerical simulation <span id="id1">[]</span>. While early modelling efforts were focussed on simple rheologies and geometries out of necessity, increasing hardware and software capabilities have since allowed modern investigators to target much more sophisticated behaviours in the search for a truly Earth-like rheology, including strain-rate dependence <span id="id2">[<a class="reference internal" href="../../references.html#id415">Moresi and Solomatov, 1998</a>, <a class="reference internal" href="../../references.html#id394">Zhong <em>et al.</em>, 1998</a>]</span>, magmatic history <span id="id3">[<a class="reference internal" href="../../references.html#id435">O'Neill <em>et al.</em>, 2018</a>]</span>, chemical phases <span id="id4">[<a class="reference internal" href="../../references.html#id282">Tackley, 2012</a>]</span>, and more.</p>
+<p>For over half a century now, geodynamicists have accepted that the interior of the Earth and other planets can to some degree be formalised as a variant of Rayleigh-Benard convection amenable to numerical simulation <span id="id1">[<a class="reference internal" href="../../references.html#id504">McKenzie <em>et al.</em>, 1974</a>]</span>. While early modelling efforts were focussed on simple rheologies and geometries out of necessity, increasing hardware and software capabilities have since allowed modern investigators to target much more sophisticated behaviours in the search for a truly Earth-like rheology, including strain-rate dependence <span id="id2">[<a class="reference internal" href="../../references.html#id415">Moresi and Solomatov, 1998</a>, <a class="reference internal" href="../../references.html#id394">Zhong <em>et al.</em>, 1998</a>]</span>, magmatic history <span id="id3">[<a class="reference internal" href="../../references.html#id435">O'Neill <em>et al.</em>, 2018</a>]</span>, chemical phases <span id="id4">[<a class="reference internal" href="../../references.html#id282">Tackley, 2012</a>]</span>, and more.</p>
 <p>The constant drive for increased model complexity comes at the expense of fundamental knowledge of the simpler rheologies which these more advanced systems are ultimately built over: ironic, as modern resources are only now able to support the breadth and detail that early authors would have preferred. There are two major contributors to this ‘complexity preference’ in the modelling literature:</p>
 <ol class="simple">
 <li><p>It is easier to argue that a new rheology represents novel work worth publishing.</p></li>
@@ -541,7 +541,7 @@
 <li><p>Fixed in value (a ‘Dirichlet’ condition). For the temperature field, this would imply that the core and/or the space-facing surface of the planet are infinite thermal buffers. For the velocity field, this can be used - for example - to define surfaces that are impervious in the normal component and either no-stick, perfect-stick, or tractional in the parallel component.</p></li>
 <li><p>Fixed in gradient (a ‘Neumann’ condition): for the temperature field, this would imply that the surface radiates heat at a fixed power, which in the case of zero power would make that boundary effectively insulating; for the velocity field, this essentially configures the strain rate in the chosen component.</p></li>
 </ul>
-<p>With respect to temperature, either of the above conditions can be set to inject or remove heat from the model, which - in tandem with the internal heat function <span class="math notranslate nohighlight">\(H\)</span> - provides the fluid with the thermal situation its flow is expected to resolve, given sufficient time. On Earth, we imagine mantle convection and the interconnected phenomenon of surface tectonics to represent the Earth’s own natural solution, or solution-in-progress, to the circumstance of volumetric radiogenic heating and basal heating from the core, although the debate over the relative significance of these is ancient and ongoing <span id="id9">[<a class="reference internal" href="../../references.html#id539">Gando <em>et al.</em>, 2011</a>, <a class="reference internal" href="../../references.html#id391">Huang <em>et al.</em>, 2013</a>, <a class="reference internal" href="../../references.html#id314">Korenaga, 2003</a>, <a class="reference internal" href="../../references.html#id489">Korenaga, 2008</a>, <a class="reference internal" href="../../references.html#id379">Mareschal <em>et al.</em>, 2012</a>, <a class="reference internal" href="../../references.html#id668">Thomson, 1862</a>, <a class="reference internal" href="../../references.html#id381">Urey, 1955</a>]</span>. (For the models being discussed forthwith, we have restricted ourselves to free-slip velocity boundaries and Dirichlet thermal boundaries with a constant unit temperature gradient from top to bottom, such that the heating regime is always either purely basal or mixed.)</p>
+<p>With respect to temperature, either of the above conditions can be set to inject or remove heat from the model, which - in tandem with the internal heat function <span class="math notranslate nohighlight">\(H\)</span> - provides the fluid with the thermal situation its flow is expected to resolve, given sufficient time. On Earth, we imagine mantle convection and the interconnected phenomenon of surface tectonics to represent the Earth’s own natural solution, or solution-in-progress, to the circumstance of volumetric radiogenic heating and basal heating from the core, although the debate over the relative significance of these is ancient and ongoing <span id="id9">[<a class="reference internal" href="../../references.html#id539">Gando <em>et al.</em>, 2011</a>, <a class="reference internal" href="../../references.html#id391">Huang <em>et al.</em>, 2013</a>, <a class="reference internal" href="../../references.html#id406">Jaupart <em>et al.</em>, 2015</a>, <a class="reference internal" href="../../references.html#id314">Korenaga, 2003</a>, <a class="reference internal" href="../../references.html#id489">Korenaga, 2008</a>, <a class="reference internal" href="../../references.html#id379">Mareschal <em>et al.</em>, 2012</a>, <a class="reference internal" href="../../references.html#id668">Thomson, 1862</a>, <a class="reference internal" href="../../references.html#id381">Urey, 1955</a>]</span>. (For the models being discussed forthwith, we have restricted ourselves to free-slip velocity boundaries and Dirichlet thermal boundaries with a constant unit temperature gradient from top to bottom, such that the heating regime is always either purely basal or mixed.)</p>
 <p>Within these simplifying constraints, almost limitless variety is possible - which is why this essential formulation has become common to virtually all studies of mantle convection. However, while it is hoped that somewhere within problem-space a solution resembling Earth may be found, such a solution must elude us until our grasp of the fundamentals is absolute; and there is still much about even the simplest rheologies that we do not understand.</p>
 </div>
 <div class="section" id="linear-rheologies">
@@ -627,6 +627,12 @@ A = FD
 <img alt="../../_images/section02_background_9_0.png" src="../../_images/section02_background_9_0.png" />
 </div>
 </div>
+<div class="figure align-default" id="isocond" style="width: 400px">
+<div class="cell_output docutils container">
+<img alt="../../_images/section02_background_9_0.png" src="../../_images/section02_background_9_0.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Summary of the scaling behaviours of isoviscous conduction for varying curvature parameter <span class="math notranslate nohighlight">\(f\)</span>. We obtain a natural scaling for <span class="math notranslate nohighlight">\(f\)</span> versus <span class="math notranslate nohighlight">\(T_av\)</span> of <span class="pasted-text">1.00</span>.</span><a class="headerlink" href="#isocond" title="Permalink to this image">¶</a></p>
+</div>
 <p>Because the temperature gradient goes with <span class="math notranslate nohighlight">\(\phi_q\)</span> inversely to area, and so <span class="math notranslate nohighlight">\(r\)</span>, and so <span class="math notranslate nohighlight">\(f\)</span>, this implies that the conductive geotherm at the upper boundary will be lesser than at the lower boundary by a factor of exactly <span class="math notranslate nohighlight">\(f^2\)</span>: the two boundaries are no longer symmetrical. To evaluate convective instability, then, we must treat with each boundary independently.</p>
 <p>If we make the assumption that, as in the planar case, the convective steady state will eventually result in a broad intracellular region of uniform temperature <span class="math notranslate nohighlight">\(T_{cell}\)</span>, we can define this temperature as a function only of <span class="math notranslate nohighlight">\(f\)</span>. If the total temperature drop is held to be unit, and given that ratio of upper and lower boundary gradients must be exactly <span class="math notranslate nohighlight">\(f^2\)</span>, it follows that:</p>
 <div class="math notranslate nohighlight">
@@ -650,40 +656,6 @@ Nu = g(f) \cdot R^{\frac{1}{3}}
 \end{split}\]</div>
 <p>Using this scaling, Jarvis was able to obtain a <em>beta</em> exponent of <span class="math notranslate nohighlight">\(0.321 \pm 0.001\)</span> across four values of <span class="math notranslate nohighlight">\(f\)</span> from <span class="math notranslate nohighlight">\((1.0 - 0.1)\)</span> <span id="id42">[<a class="reference internal" href="../../references.html#id457">Jarvis, 1993</a>]</span>.</p>
 <p>To define <span class="math notranslate nohighlight">\(R=\frac{Ra}{Ra_{cr}}\)</span> — ?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;jarvis 1993&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-------------------------------------------------------------------------------
-Jarvis1993-cb
-Effects of curvature on two-dimensional models of mantle
-convection: Cylindrical polar coordinates
-Jarvis, Gary T
--------------------------------------------------------------------------------
-Abstract:
-A two-dimensional time-dependent numerical model of convection in
-a cylindrical annulus is described. Model results are presented
-and compared with similar models in planar geometry. In
-curvilinear geometry the upper (outer) boundary has a larger
-surface area than does the lower (inner) boundary. This results
-in an asymmetry between the upper and lower thermal boundary
-layers which is not found in planar geometry. A boundary layer
-argument is developed for curvilinear geometry which accounts for
-differences in model predictions between the curvilinear and
-planar models. It is found that in cylindrical geometry the
-effects of curvature on Nusselt number, mean temperature,
-relative thickness of the inner and outer thermal boundary
-layers, and temperature drops across the thermal boundary layers
-can all be parameterized in terms of the fraction ƒ of the inner
-to outer radii of the cylindrical bounding surfaces.
--------------------------------------------------------------------------------
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>

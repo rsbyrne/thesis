@@ -167,7 +167,7 @@
 # 
 # $$ Nu \propto Ra^\beta, \quad \beta \approx \frac{1}{3} $$
 # 
-# That a scaling law of this form would obtain for two dimensionless flow constants such as these is not surprising; empirically, just such a relationship is in fact very widely attested {cite}`Turcotte1969-ol,Mckenzie1974-wb,Solomatov1995-is`. Authors have differed, however, on the proper value of $beta$. Though the canonicity of the analytically-derived value of one third is beyond dispute, it is clear from the divergent results of numerous studies that, in any real scenario, many more variables than we have accounted for must enter the equation. Time-dependence, long-lived thermal heterogeneities, aspect ratio, internal heating, and countless other factors all have a part to play. Obtaining robust scaling laws that account for all these factors is the vexing business of this thesis.
+# That a scaling law of this form would obtain for two dimensionless flow constants such as these is not surprising; empirically, just such a relationship is in fact very widely attested {cite}`Turcotte1969-ol,McKenzie1974-wb,Solomatov1995-is`. Authors have differed, however, on the proper value of $beta$. Though the canonicity of the analytically-derived value of one third is beyond dispute, it is clear from the divergent results of numerous studies that, in any real scenario, many more variables than we have accounted for must enter the equation. Time-dependence, long-lived thermal heterogeneities, aspect ratio, internal heating, and countless other factors all have a part to play. Obtaining robust scaling laws that account for all these factors is the vexing business of this thesis.
 
 # ## Critical values for the internally-heated case
 # 
