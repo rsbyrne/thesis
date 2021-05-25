@@ -314,10 +314,6 @@ fig = imop.paste(
 glue("isocond", fig, display = False)
 glue("isocondr2", linscore, display = False)
 
-
-# In[3]:
-
-
 fig
 
 
@@ -364,7 +360,7 @@ fig
 # 
 # To define $R=\frac{Ra}{Ra_{cr}}$ --- ?
 
-# In[4]:
+# In[3]:
 
 
 search('jaupart')
