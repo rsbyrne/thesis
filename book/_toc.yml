@@ -23,10 +23,11 @@
     sections:
     - file: content/chapter_04_linear/introduction
     - file: content/chapter_04_linear/background/intro
-    - file: content/chapter_04_linear/background/basics
-    - file: content/chapter_04_linear/background/rheologies
-    - file: content/chapter_04_linear/background/isoviscous
-    - file: content/chapter_04_linear/background/conclusion
+      sections:
+      - file: content/chapter_04_linear/background/basics
+      - file: content/chapter_04_linear/background/rheologies
+      - file: content/chapter_04_linear/background/isoviscous
+      - file: content/chapter_04_linear/background/conclusion
     - file: content/chapter_04_linear/methods/intro
     - file: content/chapter_04_linear/results/intro
     - file: content/chapter_04_linear/discussion/intro
