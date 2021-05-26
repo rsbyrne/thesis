@@ -6,6 +6,6 @@ The constant drive for increased model complexity comes at the expense of fundam
 1. It is easier to argue that a new rheology represents novel work worth publishing.
 2. It is logistically less tiresome to orchestrate a small suite of large models than a large suite of small models.
 
-While there is not much to be done about the first factor, which plagues every academic literature, the second factor calls only for effort and invention. It suggests a particular lack of a particular capability: the means to design, operate, and analyse a modelling survey at a much higher level of abstraction.
+While there is not much to be done about the first factor, the second factor calls only for effort and invention. It suggests a particular lack of a particular capability: the means to design, operate, and analyse a modelling survey at a much higher level of abstraction.
 
 In this section it will be shown how the state of the art has developed over time with respect to linear rheologies in mantle convection, both in terms of analytical comprehension and numerical simulation. All pre-existing data regarding our parameter space of interest will be reviewed and any shortcoming or contradictions highlighted and discussed. Finally, the question of modelling strategy will be considered, and the essential demands of the problem underlined.

@@ -18,10 +18,10 @@
 # 
 # In addition to these three input variables, one unifying output variable - also dimensionless - commonly enters into the analysis, and will prove an essential razor throughout this thesis: the *Nusselt* number, a measure of the efficiency of global thermal transport relative to that expected by conduction alone. It can be given in terms of the rate of change of the dimensionless potential temperature $\theta^*$ with respect to dimensionless depth $y^*$ {cite}`Schubert2001-ea`:
 # 
-# $$ Nu = 1 + \left| \frac{\partial \theta^*}{\partial y^*} \right| _S $$
+# $$ Nu = \left| \frac{\partial \theta^*}{\partial y^*} \right| _S $$
 # 
-# Where $|x|_S$ indicates the average value across a surface. The asterisks indicate a non-dimensionalised quantity: a common textbook convention. (In non-curved domains, $Nu$ is equivalent to the dimensionless surface temperature gradient, and it is confusingly defined as such in some contexts {cite}`Blankenbach1989-li`.)
-# 
+# Where $|x|_S$ indicates the average value across a surface. The asterisks indicate a non-dimensionalised quantity: a common textbook convention. This is the definition we adhere to throughout, but there is some variability in how $Nu$ is defined in the literature. In non-curved domains, $Nu$ is equivalent to the dimensionless surface temperature gradient, and so it is confusingly defined as such in some contexts {cite}`Blankenbach1989-li`. There is also a practice of adding a constant $1$ to the expression, reflecting a difference of opinion over whether $Nu$ is best constructed as an arithmetic quantity (i.e $Nu$ as the convective flux after conductive flux is substracted) or as a geometric quantity, as we have stated it here. We prefer the latter usage, reterming the former as $Nu_{+}$.
+
 # Because any convection of interest to us in the mantle is going to be occurring in the solid state, across great distances, and under tremendous heat gradients, we are able to make certain assumptions that simplify the analysis. Two are commonly made:
 # - The *Boussinesq* approximation, in which non-gravitational terms of density are ignored, with the consequence that the fluid is incompressible. This is a justifiable assumption for just about any non-gaseous fluid, particularly one subjected to such extreme lithostatic pressures.
 # - The infinite *Prandtl* assumption, in which momentum diffusivity is held to be much greater than thermal diffusivity. This is reasonable for the mantle given the measured value comes to at least $10^{23}$ {cite}`Schubert2001-ea`. Because $Pr \cdot Re = Ra$, this also implies that the *Reynolds* number must be infinitesimal, and hence that inertial forces and the turbulent effects thereof are negligible.
@@ -41,7 +41,7 @@
 # \end{align*} $$
 # 
 # Where $\eta$ is dynamic viscosity, $D$ the strain rate tensor, $p$ dynamic pressure, $\Delta\rho$ the density anomaly, $\mathbf{g}$ the gravity vector, $\mathbf{u}$ the velocity vector, $T$ temperature, $\kappa$ thermal diffusivity, $t$ time, and $H$ a thermal source term, i.e. radiogenic heating.
-# 
+
 # With these equations, we may implement an alternating cycle of instaneous pressure solutions followed by finite time-stepping of the temperature field (and any other state variables we choose to implement). Of course, such a system is meaningless and insoluble unless we further stipulate a geometry (width, length, depth, and curvature) and a set of boundary conditions for the temperature and velocity fields. The boundary conditions on each outer domain surface are typically set to be either:
 # - Fixed in value (a 'Dirichlet' condition). For the temperature field, this would imply that the core and/or the space-facing surface of the planet are infinite thermal buffers. For the velocity field, this can be used - for example - to define surfaces that are impervious in the normal component and either no-stick, perfect-stick, or tractional in the parallel component.
 # - Fixed in gradient (a 'Neumann' condition): for the temperature field, this would imply that the surface radiates heat at a fixed power, which in the case of zero power would make that boundary effectively insulating; for the velocity field, this essentially configures the strain rate in the chosen component.

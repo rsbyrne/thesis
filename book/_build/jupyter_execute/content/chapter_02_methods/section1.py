@@ -25,7 +25,7 @@
 # 
 # Without a sufficient *Prandtl* number, heat will escape from each parcel faster than the parcel itself can be transported by buoyancy, while a low *Grashof* number would imply that the drag of the medium on each parcel is too great for buoyancy to overcome.
 # 
-# These co-equal terms multiplied give us a third and final dimensionless quantity: the *Rayleigh* number $Ra$ or ‘convective vigour’, which is more strictly interpreted as the ratio of the diffusive and convective time scales in the medium; i.e. $Ra$ serves as the *Peclet* number for heat. For high values of $Ra$, convection is much more efficient than conduction for transporting heat, leading to high fluid velocities and flow regimes grading from sluggish to laminar to turbulent. For low $Ra$, conduction dominates, and the material is largely or totally quiescent. Separating these two domains is an often empirically-obtained value, the Critical Rayleigh Number or $Ra_{cr}$, which is innate to each fluid; $Ra$ is sometimes given in terms of $Ra_{cr}$ as $r = \frac{Ra}{Ra_{cr}}$. Values of $Ra$ in most applications can be quite high, and so are usually represented in decimal orders of magnitude; for mantle materials as modelled hereafter, for example, the critical $Ra$ can be shown to be somewhere between $10^3-10^4$, with 'Earthlike' behaviour scarcely manifest anywhere below $10^7$ (Chapter 3). Although $Ra_{cr}$ is often obtained empirically, it can be derived from first principles for certain simple cases, as will be shown.
+# These co-equal terms multiplied give us a third and final dimensionless quantity: the *Rayleigh* number $Ra$ or ‘convective vigour’, which is more strictly interpreted as the ratio of the diffusive and convective time scales in the medium; i.e. $Ra$ serves as the *Peclet* number for heat. For high values of $Ra$, convection is much more efficient than conduction for transporting heat, leading to high fluid velocities and flow regimes grading from sluggish to laminar to turbulent. For low $Ra$, conduction dominates, and the material is largely or totally quiescent. Separating these two domains is an often empirically-obtained value, the Critical Rayleigh Number or $Ra^{cr}$, which is innate to each fluid; $Ra$ is sometimes given in terms of $Ra^{cr}$ as $r = \frac{Ra}{Ra^{cr}}$. Values of $Ra$ in most applications can be quite high, and so are usually represented in decimal orders of magnitude; for mantle materials as modelled hereafter, for example, the critical $Ra$ can be shown to be somewhere between $10^3-10^4$, with 'Earthlike' behaviour scarcely manifest anywhere below $10^7$ (Chapter 3). Although $Ra^{cr}$ is often obtained empirically, it can be derived from first principles for certain simple cases, as will be shown.
 # 
 # The *Rayleigh* number is a powerful tool for interrogating the behaviours of convecting fluids; however, the correct parameterisation of such a heavily compound term is a nuanced affair. Several assumptions are commonly made in the context of mantle circulation which simplify matters at the cost of limiting the scope of validity.
 # 
@@ -78,7 +78,7 @@
 
 # ## Linear stability analysis and the critical *Rayleigh* number
 # 
-# It was hitherto given that the critical Rayleigh number, below which convection is not possible, is typically obtained empirically. In fact, for simple cases such as this of planar basally-heated isoviscous flow, an expression for Racr due to arbitrary perturbations can be derived from the assumptions already held using linear stability analysis. First consider the state of a purely conducting system at thermal equilibrium:
+# It was hitherto given that the critical Rayleigh number, below which convection is not possible, is typically obtained empirically. In fact, for simple cases such as this of planar basally-heated isoviscous flow, an expression for $Ra^{cr}$ due to arbitrary perturbations can be derived from the assumptions already held using linear stability analysis. First consider the state of a purely conducting system at thermal equilibrium:
 # 
 # $$ T_c^* = \frac{T_0}{T_1 - T_0} + y^* $$
 # 
@@ -98,16 +98,16 @@
 # 
 # What determines if this seed of chaos shall grow? Equivalently, we may ask which is faster - the growth of the anomaly, or the ambient restoring forces. The answer depends in part on the wavelength of the perturbation and in part on the overall convective vigour of the system; a very lengthy expansion {cite}`Schubert2001-ea` reaches the sixth derivative before delivering the following relation:
 # 
-# $$ Ra_{cr} = \frac{\pi^4}{4\lambda^{*4}} \cdot \left( 4 + \lambda^{*2} \right) ^3 $$
+# $$ Ra^{cr} = \frac{\pi^4}{4\lambda^{*4}} \cdot \left( 4 + \lambda^{*2} \right) ^3 $$
 # 
-# Where $\lambda^*=\frac{\lambda}{b}$, the wavelength of perturbation equivalent to the original anomaly $\theta^{'*}$ in the horizontal coordinate, expressed as a ratio of the layer thickness $b$, and $Ra_{cr}$ is what we came for: the ‘critical’ *Rayleigh* number above which perturbations of a given wavelength will grow more rapidly than they are diffused. The expression defines a curve through the space of $Ra_{cr}$ vs dimensionless wavenumber which has a single minimum: this is $\lambda^*_{cr}$, the wavelength of perturbation at which $Ra_{cr}$ is at its lowest. Perturbations near this critical wavelength will tend to grow the fastest, since, as it were, they experience the highest ‘local’ *Rayleigh* number. As it happens, this wavelength, and the minimum $Ra$ it requires to grow, come to:
+# Where $\lambda^*=\frac{\lambda}{b}$, the wavelength of perturbation equivalent to the original anomaly $\theta^{'*}$ in the horizontal coordinate, expressed as a ratio of the layer thickness $b$, and $Ra^{cr}$ is what we came for: the ‘critical’ *Rayleigh* number above which perturbations of a given wavelength will grow more rapidly than they are diffused. The expression defines a curve through the space of $Ra^{cr}$ vs dimensionless wavenumber which has a single minimum: this is $\lambda^{*, cr}$, the wavelength of perturbation at which $Ra^{cr}$ is at its lowest. Perturbations near this critical wavelength will tend to grow the fastest, since, as it were, they experience the highest ‘local’ *Rayleigh* number. As it happens, this wavelength, and the minimum $Ra$ it requires to grow, come to:
 # 
-# $$ Ra_{cr, \min} = \frac{27\pi^4}{4} \approx 6.57.5 $$
-# $$ \lambda_{cr}^* = 2 \sqrt{2} \approx 2.828 $$
+# $$ {Ra^{cr}}_{\min} = \frac{27\pi^4}{4} \approx 6.57.5 $$
+# $$ {\lambda^{*}}^{cr} = 2 \sqrt{2} \approx 2.828 $$
 # 
-# At first glance it might seem that we have not truly answered the question of what defines the critical Rayleigh number for a convecting system as a whole, but rather only a contingent answer depending on wavelengths of perturbation. Consider, though, the significance of driving the Rayleigh number below the minimum critical value. This is equivalent to stating that no perturbations at all - not even the least stable ones - are able to grow quicker than the diffusive timescale. At the minimum critical value itself, it follows that only perturbations of $\sqrt{2}$ scale will grow; this value nonetheless serves adequately as the $Ra_{cr}$ of the entire fluid, since a perturbation of such a wavelength can always be discovered in any real system - if geometry permits.
+# At first glance it might seem that we have not truly answered the question of what defines the critical Rayleigh number for a convecting system as a whole, but rather only a contingent answer depending on wavelengths of perturbation. Consider, though, the significance of driving the Rayleigh number below the minimum critical value. This is equivalent to stating that no perturbations at all - not even the least stable ones - are able to grow quicker than the diffusive timescale. At the minimum critical value itself, it follows that only perturbations of $\sqrt{2}$ scale will grow; this value nonetheless serves adequately as the $Ra^{cr}$ of the entire fluid, since a perturbation of such a wavelength can always be discovered in any real system - if geometry permits.
 # 
-# Having determined the conditions under which the conductive planform becomes unstable, it behooves us to establish what the new stability criterion must be which now the system seeks. Assuming that the fastest-growing perturbation will ultimately come to dominate all others, what we need is an expression for the velocity field in terms of $\lambda$ that we can solve for the critical wavelength $\lambda_{cr}$ {cite}`Rayleigh1916-il`.
+# Having determined the conditions under which the conductive planform becomes unstable, it behooves us to establish what the new stability criterion must be which now the system seeks. Assuming that the fastest-growing perturbation will ultimately come to dominate all others, what we need is an expression for the velocity field in terms of $\lambda$ that we can solve for the critical wavelength $\lambda^{cr}$ {cite}`Rayleigh1916-il`.
 # 
 # First let us find the infinitesimal thermal anomaly in terms of perturbation wavelength, which must be a sinusoidal function in both $y$ and $x$:
 # 
@@ -119,7 +119,7 @@
 # 
 # $$ \Psi^* = - \left( \frac{\lambda^*}{2} \right) \left( \frac{4\pi^2}{\lambda^{*2}} + \pi^2 \right) \widehat{\theta}_0^{'*} \sin \left( \pi y^* \right) \cos \left( \frac{2 \pi x^*}{\lambda^*} \right) $$
 # 
-# The contours of the stream function give the geometry of convection, which, for the critical $\lambda$ in two dimensions, takes the form of pairs of counter-rotating half-cells of aspect $\frac{\lambda_{cr}^*}{2}=\sqrt{2}$; in other words, the planform of convection at steady state for any basally-heated planar isoviscous system will tend to approach an aspect ratio with the approximate dimensions, in landscape, of the page this sentence is written on.
+# The contours of the stream function give the geometry of convection, which, for the critical $\lambda$ in two dimensions, takes the form of pairs of counter-rotating half-cells of aspect $\frac{\lambda^{cr, *}}{2}=\sqrt{2}$; in other words, the planform of convection at steady state for any basally-heated planar isoviscous system will tend to approach an aspect ratio with the approximate dimensions, in landscape, of the page this sentence is written on.
 
 # ## Boundary layer theory and the $Ra-Nu$ scaling
 # 
@@ -139,13 +139,13 @@
 # 
 # As the boundary grows, so do the thermal buoyancy forces. The relevant *Rayleigh* number to parameterise the vigour of the incipient convection is taken over the boundary layer thickness itself, and hence grows as the layer grows:
 # 
-# $$ Ra_{y_T} = \frac{\alpha \Delta T g y_T*3}{\nu \kappa} $$
+# $$ Ra_{y_T} = \frac{\alpha \Delta T g {{y_T}^*}^3}{\nu \kappa} $$
 # 
 # Where $\alpha$ is the thermal expansivity and $\nu$ is the dynamic viscosity $\frac{\nu}{\rho}$.
 # 
-# Now what we are interested in is what the thickness of the boundary layer will be when the *Rayleigh* number defined over it, $Ra_{y_T}$, is at its critical value, $Ra_{y_T,crit}$. Below this value, convective disruption of the layer will not be possible, as any perturbations within the layer will be thermally diffused before they can grow; while above this value, convection is inevitable and the conductive profile of the layer cannot be sustained. The expression for $Ra_{y_T,crit}$ is the same as that for $Ra_{y_T}$, except that the temperature contrast $T$ is half that of the system as a whole; this is because the dimensionless temperature change across either boundary layer goes from zero or unit at the outer edge to exactly $0.5$ at the inner edge, where the layers face the tepid conditions of the intracellular fluid; so we write:
+# Now what we are interested in is what the thickness of the boundary layer will be when the *Rayleigh* number defined over it, $Ra_{y_T}$, is at its critical value, ${Ra_{y_T}}^{cr}$. Below this value, convective disruption of the layer will not be possible, as any perturbations within the layer will be thermally diffused before they can grow; while above this value, convection is inevitable and the conductive profile of the layer cannot be sustained. The expression for ${Ra_{y_T}}^{cr}$ is the same as that for $Ra_{y_T}$, except that the temperature contrast $T$ is half that of the system as a whole; this is because the dimensionless temperature change across either boundary layer goes from zero or unit at the outer edge to exactly $0.5$ at the inner edge, where the layers face the tepid conditions of the intracellular fluid; so we write:
 # 
-# $$ Ra_{y_T,crit} = \frac{Ra_{y_T}}{2} $$
+# $$ {Ra_{y_T}}^{cr} = \frac{Ra_{y_T}}{2} $$
 # 
 # And accordingly:
 # 
@@ -191,7 +191,7 @@
 # 
 # I.e. the rate of change of the hydrostatic pressure with respect to depth. Unlike in the basally-heated case, the pressure here is given as dependent on the conductive temperature profile; previously, both temperature and hydrostatic pressure were necessarily linear with depth. From here the analysis proceeds much as in the basally-heated case, only to culminate in an insoluble ordinary differential equation {cite}`Schubert2001-ea` from which only empirical data can recover us:
 # 
-# $$ Ra_{H, cr, \min} = 867.8, \quad \lambda_{cr}^* = 3.51 $$
+# $$ {{Ra_{H}}^{cr}}_{\min} = 867.8, \quad {\lambda^{*}}^{cr} = 3.51 $$
 # 
 # {cite}`Roberts1967-aq`
 # 
@@ -208,7 +208,7 @@
 # \theta^* &= \frac{1}{\pi r} \left[ C(\tau) \sin \left( 2 \pi y^* \right) - \sqrt{2} B(\tau) \cos \left( \frac{2 \pi x^*}{\lambda^*} \right) \sin \left( \pi y^* \right) \right]
 # \end{align*} $$
 # 
-# Where $\Psi$ is again the stream function, $x$ and $y$ are coordinates, $\lambda$ is the featural wavelength, $r$ is the *Rayleigh* number as a proportion of the critical value $r = \frac{Ra}{Ra_{cr}}$, and $A(\tau)$, $B(\tau)$, and $C(\tau)$ are time-dependent coefficients which are functions of $\tau$, time non-dimensionalised by wavelength:
+# Where $\Psi$ is again the stream function, $x$ and $y$ are coordinates, $\lambda$ is the featural wavelength, $r$ is the *Rayleigh* number as a proportion of the critical value $r = \frac{Ra}{Ra^{cr}}$, and $A(\tau)$, $B(\tau)$, and $C(\tau)$ are time-dependent coefficients which are functions of $\tau$, time non-dimensionalised by wavelength:
 # 
 # $$ \tau = \pi^2 \left[ 1 + \frac{2}{\lambda^*} \sin \left( \pi y^* \right) \right] t^* $$
 # 
@@ -234,7 +234,7 @@
 # C &= r - 1
 # \end{align*} $$
 # 
-# When $r<1$, the trivial first solution above describes the only stable steady-state solution and represents pure conduction, just as we would expect when $Ra<Ra_{cr}$. When $r>1$, this solution becomes unstable, and the only stable solutions become the positive and negative valencies of the second expression above, which represent clockwise and counterclockwise unicellular convection. The ‘choice’ of the system to devolve from the unbiased conductive solution to one of either the left- or right-biased convective solutions is termed a ‘pitchfork bifurcation’, the first of many we will encounter; its existence proves that mantle convection is chaotic.
+# When $r<1$, the trivial first solution above describes the only stable steady-state solution and represents pure conduction, just as we would expect when $Ra<Ra^{cr}$. When $r>1$, this solution becomes unstable, and the only stable solutions become the positive and negative valencies of the second expression above, which represent clockwise and counterclockwise unicellular convection. The ‘choice’ of the system to devolve from the unbiased conductive solution to one of either the left- or right-biased convective solutions is termed a ‘pitchfork bifurcation’, the first of many we will encounter; its existence proves that mantle convection is chaotic.
 # 
 # The two convective solutions above have been shown to be stable - but are they necessarily steady? If we take our two primitive convective solutions further, a characteristic equation can be obtained from which we can derive the following special value of $r$:
 # 
@@ -252,9 +252,3 @@
 # \end{align*} $$
 # 
 # The fixed points of these new equations are the same as for the Lorenz equations, as is the conductive solution when $A=B=C=0$, which as before is stable only for subcritical $Ra$; however, the convective solutions can be shown to be stable for all $r>1$. We might take this to imply that mantle convection cannot be chaotic after all. However, it must be recalled that the Lorenz analysis begins with severe truncation of non-linear terms. For higher-order truncations, it is evident that chaotic phases can exist {cite}`Schubert2001-ea`, particularly at high *Rayleigh* numbers; what is not certain is whether, for a given degree of truncation and a given range of parameters, chaotic behaviours will manifest for a particular system. When we attempt to engage with the problem numerically and empirically through modelling, which is the purpose of this thesis, it will be seen that certain parameter bands are chaotic and time-dependent while others are not; ultimately it will be argued that such zones of chaos represent boundaries in a very high-dimensional phase space, and relate fundamentally to the nature and proper characterisation of tectonic modes.
-
-# In[ ]:
-
-
-
-

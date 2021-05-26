@@ -39,23 +39,23 @@ warnings.filterwarnings("ignore",category=UserWarning)
 
 # Due to their simplicity and amenability to symbolic analysis, isoviscous models were among the earliest published mantle convection models {cite}`McKenzie1973-gt,McKenzie1974-wb,Jarvis1986-me,Blankenbach1989-li`, and they continue to be produced and discussed today {cite}`Zhong2005-lh,Weller2016-ej,Weller2016-nm,Vilella2018-il`.
 # 
-# In an isoviscous model, the viscosity function (usually set to $\eta=1$) is constant throughouts space and time. Though simple, it is nevertheless albe to reproduce appropriate surface velocities, gravitational profiles, and even topographic wavelengths {cite}`McKenzie1973-gt,McKenzie1974-wb`. Though its parameters are few, there remain limitless possible variations through *Rayleigh* number, internal heat $H$, domain geometry, and choice of boundary condition - many of which boast long-term stability solutions with enough implicit nonlinearity to make purely analytical studies infeasible {cite}`Daly1980-xl`. And while the isoviscous model is certainly the most computationally tractable of all mantle-like rheologies, it is only in the last decade that simulations of appropriate scale for the Earth ($Ra>10^7$) have become possible {cite}`Vynnycky2013-wg,Trubitsyn2018-jo`; these have confirmed earlier intuitions that stable convective planforms may either not exist, or may never manifest, on planetary spatiotemporal scales {cite}`Huttig2011-jt`.
+# In an isoviscous model, the viscosity function (usually set to $\eta=1$) is constant throughout space and time. Though simple, it is nevertheless albe to reproduce appropriate surface velocities, gravitational profiles, and even topographic wavelengths {cite}`McKenzie1973-gt,McKenzie1974-wb`. Though its parameters are few, there remain limitless possible variations through *Rayleigh* number, internal heat $H$, domain geometry, and choice of boundary condition - many of which boast long-term stability solutions with enough implicit nonlinearity to make purely analytical studies infeasible {cite}`Daly1980-xl`. And while the isoviscous model is certainly the most computationally tractable of all mantle-like rheologies, it is only in the last decade that simulations of appropriate scale for the Earth ($Ra>10^7$) have become possible {cite}`Vynnycky2013-wg,Trubitsyn2018-jo`; these have confirmed earlier intuitions that stable convective planforms may either not exist, or may never manifest, on planetary spatiotemporal scales {cite}`Huttig2011-jt`.
 # 
-# Although the model does bely considerable complexity, it is simple enough to make some solutions analytically attainable. Like all convecting systems, a 'critical' *Rayleigh* number $Ra_{cr}$ should exist below which convection ceases and conduction dominates (i.e. $Nu=1$), defining a 'supercritical $Ra$':
+# Although the model does bely considerable complexity, it is simple enough to make some solutions analytically attainable. Like all convecting systems, a 'critical' *Rayleigh* number $Ra^{cr}$ should exist below which convection ceases and conduction dominates (i.e. $Nu=1$), defining a 'supercritical $Ra$':
 # 
-# $$ R \equiv \frac{Ra}{Ra_{cr}} $$
+# $$ R \equiv \frac{Ra}{Ra^{cr}} $$
 # 
-# At $R=1$, perturbations of a certain 'critical' wavelength are uniquely able to grow faster than the conductive geotherm and hence become unstable; increasing $R$ beyond $1$ makes more wavelengths available for convective growth,  until at extreme values ($Ra >> 10^7$) even artificial heterogeneities introduced by random noise can grow, such that large-scale models become overwhelmingly time-dependent {cite}`Jarvis1984-xo`. For a plane domain of infinite horizontal extent, the critical wavelength $\lambda_{cr}$ should be exactly $\sqrt{2}$ {cite}`Chandrasekhar1961-ez`, corresponding to a $Ra_{cr}$ of exactly {cite}`Malkus1954-ee`:
+# At $R=1$, perturbations of a certain 'critical' wavelength are uniquely able to grow faster than the conductive geotherm and hence become unstable; increasing $R$ beyond $1$ makes more wavelengths available for convective growth,  until at extreme values ($Ra >> 10^7$) even artificial heterogeneities introduced by random noise can grow, such that large-scale models become overwhelmingly time-dependent {cite}`Jarvis1984-xo`. For a plane domain of infinite horizontal extent, the critical wavelength $\lambda_{cr}$ should be exactly $\sqrt{2}$ {cite}`Chandrasekhar1961-ez`, corresponding to a $Ra^{cr}$ of exactly {cite}`Malkus1954-ee`:
 # 
-# $$ Ra_{cr} = \frac{27\pi^4}{4} \approx 657.5 $$
+# $$ Ra^{cr} = \frac{27\pi^4}{4} \approx 657.5 $$
 # 
-# In any real system, however, $A$ cannot be infinite, and may be literally or effectively compressed such that the critical wavelength is no longer available. The effect of this is to create a dependency of $Ra_{cr}$ on $A$ {cite}`Chandrasekhar1961-ez`:
+# In any real system, however, $A$ cannot be infinite, and may be literally or effectively compressed such that the critical wavelength is no longer available. The effect of this is to create a dependency of $Ra^{cr}$ on $A$ {cite}`Chandrasekhar1961-ez`:
 # 
-# $$ Ra_{cr} = \frac{\pi^4 \left( 1 + A^2 \right)^3}{A^4} $$
+# $$ Ra^{cr} = \frac{\pi^4 \left( 1 + A^2 \right)^3}{A^4} $$
 # 
-# At the unit aspect ratios typically modelled, for instance, $Ra_{cr}$ should instead approach ({cite}`Grover1968-wa`):
+# At the unit aspect ratios typically modelled, for instance, $Ra^{cr}$ should instead approach ({cite}`Grover1968-wa`):
 # 
-# $$ Ra_{cr} = 2^3\pi^4 \approx 779.3 $$
+# $$ Ra^{cr} = 2^3\pi^4 \approx 779.3 $$
 # 
 # A value which is borne out in laboratory testing {cite}`Whitehead2011-gs`.
 # 
@@ -69,9 +69,9 @@ warnings.filterwarnings("ignore",category=UserWarning)
 # 
 # $$ Nu \propto R^{\beta} $$
 # 
-# Where $R$, again, is the proportion by which $Ra$ exceeds $Ra_{cr}$. Defining $Ra$ in this way preserves the value of $\beta$ but allows the coefficient to relate more strictly to non-thermal factors like the domain geometry, particularly the aspect ratio, which has been observed to stretch or compress the planform horizontally without changing the underlying boundary stability criteria {cite}`Jarvis1982-ua`.
+# Where $R$, again, is the proportion by which $Ra$ exceeds $Ra^{cr}$. Defining $Ra$ in this way preserves the value of $\beta$ insofar as $Ra^{cr}$ is independent of it, but allows the coefficient of proportionality to relate more strictly to non-thermal factors like the domain geometry - for example the aspect ratio, which (above a certain threshold) has been observed to stretch or compress the planform horizontally without changing the underlying boundary stability criteria {cite}`Jarvis1982-ua`.
 # 
-# In any case, at the state where $Nu$ satisfies this scaling, the interior of each cell becomes a homogeneous region of uniform temperatures and low velocities, with strong gradients and shears at the margins, with the overall cell dimensions approaching an aspect ratio of $\sqrt{2}$. Because of the fixed temperature scale, the only way heat transport can be enhanced is by thinning the boundary layers, which in practice occurs by dripping/pluming until only the theoretical stable boundary thickness is left. For this reason, $Nu$ also functions as a useful proxy for boundary layer thickness when this is otherwise hard to define.
+# In any case, at the state where $Nu$ satisfies this scaling, the interior of each cell becomes a homogeneous region of uniform temperature $T^{cell}$ and variable but low velocities, with strong gradients and shears at the margins, and overall cell dimensions approaching an aspect ratio of $\sqrt{2}$. Because of the fixed temperature scale, the only way heat transport can be enhanced in such a system is by thinning the boundary layers, which in practice occurs by dripping/pluming until only the theoretical stable boundary thickness is left. For this reason, $Nu$ also functions as a useful proxy for boundary layer thickness when this is otherwise hard to define.
 # 
 # The canonical *beta* scaling is seductive because it connects the relatively well-constrained fact of surface geothermal flux with the more mysterious thermal state of the mantle, and so allows parameterised thermal histories to be projected through deep time. The $\beta \to \frac{1}{3}$ limit itself ultimately derives from the *Rayleigh* number's dependence on length cubed, and while there is no *a priori* reason to believe that this analytical justification must be borne out in practice, it has been recognised as extremely suggestive for over half a century {cite}`Chan1971-xv`. Testing this scaling behaviour empirically was an early priority of computational geodynamics, with several studies producing estimates that converged on, but did not achieve, the theoretical $\frac{1}{3}$ scaling: the value has been reported as any of $0.313$ {cite}`Jarvis1982-ua`, $0.318$ {cite}`Jarvis1986-me`, $0.319$ {cite}`Schubert1985-sy`, $0.326$ {cite}`Jarvis1989-qj`, and $0.36$ {cite}`Quareni1985-ff`, using various methods. The reason for the deviation is uncertain. It was for a time suggested that, at very high *Rayleigh* numbers, an 'asymptotic regime' of $\beta \to \frac{1}{2}$ might emerge, which might help explain the apparent 'thermal catastophe' of the Early Earth {cite}`Urey1955-zs`; however, a definitive laboratory study using liquid helium {cite}`Niemela2000-cu` found that there is no such transition within $Ra<=10^7$, and reported instead an empirical value of $0.31$ for the interval $Ra: 10^6 - 10^7$, in close agreement with numerical results.
 # 
@@ -98,22 +98,14 @@ warnings.filterwarnings("ignore",category=UserWarning)
 # r_{o} \to 1 \quad as \quad f \to 0
 # $$
 # 
-# We can non-dimensionalise the planetary radial height $r$ as $r^{'}$ (*r-prime*), a pure function of $f$:
+# We can non-dimensionalise the planetary radial height $r$ as $r^{*}$ (*r-star*), such that $r^{*}_o = 1$:
 # 
-# $$ \begin{align*}
-# r^{'}_i &= \frac{f}{1 - f} \\
-# r^{'}_o &= \frac{1}{1 - f}
-# \end{align*} $$
+# $$
+# r_i = \frac{f}{1 - f}, \quad r_o = \frac{1}{1 - f} \\
+# r^{*} = \frac{h + r_i}{r_0} = h(1-f) + f
+# $$
 # 
-# Such that $r^{'}$ relates to $h$ by:
-# 
-# $$ \begin{align*}
-# r^{'} &= \frac{h + r_1}{r_2} \\
-# r^{'} &= h(1-f) + f \\
-# &= (z-1)(1-f) + f
-# \end{align*} $$
-# 
-# This formulation proves to be natural for many solutions, as will shortly be
+# This leaves us with four different terms to describe radial position: $h$, the dimensionless height from the mantle base; $z$, its complement; $r$, the radial scale such that $r_o - r_i = 1$; and $r^{*}$, the radial scale such that $r_0 = 1$. Each of these scales will prove natural in some contexts and less so in others, and all find use in our analysis.
 # 
 # To complete our coordinate system, we require an angular coordinate as well: the angle $\theta$ in radians anticlockwise from an arbitrary origin. Often we will only want to reproduce a small wedge of the annulus, as time-dependence and numerical workload scale exponentially with aspect ratio; we can define our wedge selection $D$ in radians:
 # 
@@ -182,7 +174,7 @@ for f, T in zip(condfs, condgeotherms):
 
     h = np.linspace(0, 1, len(T))
     rinner, router = f / (1 - f), 1 / (1 - f)
-    rprime = (h + rinner) / router # equiv to (h * (1 - f) + f)
+    rstar = (h + rinner) / router # equiv to (h * (1 - f) + f)
 
     ax1.line(
         Tchan := Channel(T, label = 'T'),
@@ -192,7 +184,7 @@ for f, T in zip(condfs, condgeotherms):
 
     ax2.line(
         Tchan,
-        Channel(rprime, label = r"r^{'}", capped = (True, True), log = True),
+        Channel(rstar, label = r"r^{*}", capped = (True, True), log = True),
         c = cmap(f, condfs, style = 'turbo'),
         )
 
@@ -248,6 +240,15 @@ fig = imop.paste(
     corner = 'bl',
     )
 
+# canvas = Canvas(size = (3, 5))
+# ax = canvas.make_ax()
+# for condgeotherm in condgeotherms:
+#     ax.line(
+#         Channel(np.diff(condgeotherms[0]) / np.diff(h), label = r'\frac{dT}{dh}'),
+#         Channel(h[:-1], label = 'h', lims = (0, 1), capped = (True, True)),
+#         )
+# canvas
+
 glue("isocond", fig, display = False)
 glue("isocondr2", linscore, display = False)
 
@@ -270,71 +271,96 @@ fig
 # &\to 0 \quad as \quad f \to 0
 # \end{align*} $$
 # 
-# We can reconstruct the relation in terms of $r^{'}$ as:
+# We can reconstruct the relation in terms of dimensionless radial height $r^{*}=h(1-f)+f$ as:
 # 
 # $$
-# \frac{dT}{dr^{'}} = \frac{1 - f}{r^{'}\ln{f}}
+# \frac{dT}{dr^{*}} = \frac{1 - f}{r^{*}\ln{f}}
 # $$
 # 
 # The antiderivative then yields the geotherm:
 # 
 # $$
-# T(r^{'}) = \frac{\ln{r^{'}}}{\ln{f}} \\
-# \therefore \quad T(h) = \frac{h(1-f)+f}{\ln{f}}
+# T(r^{*}) = \frac{\ln{r^{*}}}{\ln{f}}
 # $$
 # 
-# In the planar case, the average temperature of the system is always half the temperature drop. In the cylindrical case, however, we can observe that the average temperature sustained by the nonlinear geotherm must be a function of $f$, which we can obtain by integrating with respect to $h$; this yields:
+# In the planar case, the average temperature of the system is always half the temperature drop. In the cylindrical case, however, we can observe that the average temperature sustained by the nonlinear geotherm must be a function of $f$, which will hereafter be referred to as $T^{cond}$:
+# 
+# $$ \begin{align*}
+# T_{av} &= \dfrac{1}{2} \large{\root \huge{e} \of f} \\
+# &\equiv T^{cond}
+# \end{align*} $$
+# 
+# We validate these scalings empirically {numref}`isocond`.
+
+# This dependency of the conductive geotherm on $f$ has an immediate impact on convection and instability analysis. For one thing, it is no longer possible to identify $Nu$ as simply the dimensionless surface temperature gradient: instead, the definition of $Nu$ must scale away from surface gradient by a factor of the conductive geotherm at $h_o = r^{*}_o = 1$, which we shall for convenience term '$Nu^{cond}$' - the conductive gradient of the cylindrical domain relative to that of a planar domain:
 # 
 # $$
-# T_{av} = \frac{\root \huge{e} \of f}{2} 
+# Nu^{cond} = \frac{1 - f}{\ln{f}}
 # $$
 # 
-# We validate these scalings empirically {ref}`isocond`.
-
-# In[ ]:
-
-
-
-
-
-# Because the temperature gradient goes with $\phi_q$ inversely to area, and so $r$, and so $f$, this implies that the conductive geotherm at the upper boundary will be lesser than at the lower boundary by a factor of exactly $f^2$: the two boundaries are no longer symmetrical. To evaluate convective instability, then, we must treat with each boundary independently.
-# 
-# 
-# 
-# 
-# 
-# If we make the assumption that, as in the planar case, the convective steady state will eventually result in a broad intracellular region of uniform temperature $T_{cell}$, we can define this temperature as a function only of $f$. If the total temperature drop is held to be unit, and given that ratio of upper and lower boundary gradients must be exactly $f^2$, it follows that:
+# Now we may write the convective $Nu$ as:
 # 
 # $$
-# \frac{\Delta T_{outer}}{\Delta T_{inner}} = \frac{T_{cell}}{1 - T_{cell}} = f^2 \\
-# T_{cell} = \frac{f^2}{f^2 + 1}
+# Nu = \frac{1}{Nu^{cond}} \cdot \left| \frac{\partial T}{\partial r} \right| _{S}
 # $$
 # 
-# For a mantle-like curvature of $f=0.5$, then, we would expect an average dimensionless temperature of $0.2$, regardless of the *Rayleigh* number.
+# Where $|x|_S$ again represents the average value across a surface. An implication of this dependency - obvious, but worth stating - is that the upper and lower boundaries are no longer symmetrical. This invalidates many of the assumptions that made the planar case amenable to analysis. The additional space at the top of the model now allows more room for downwellings relative to basal upwellings, tending to promote instability {cite}`Jarvis1991-ir`; on the other hand, the curved geotherm and the increased surface for radiating heat would tend to permit a comparatively thicker upper boundary layer. The effect of these countervailing forcings on the fundamental scalings of $Nu$, $Ra$, $Ra^{cr}$, and the all-important relation $Nu \propto R^{\beta}$ is not obvious.
 
-# Another important consequence of the altered geotherm follows that $Nu$ is no longer equivalent to the dimensionless temperature gradient, but rather scales from it by a function of $f$:
+# To begin to unpack the complexities of convection in the annulus, we can start with the assumption that - as in the planar case - the convective steady state will eventually result in a broad intracellular region of uniform temperature $T^{cell}$. Assuming a unit temperature drop $\Delta T = 1$, we can write:
 # 
-# $$ Nu = \frac{\ln f}{1 - f} \cdot \left| \frac{\partial T}{\partial r} \right| _{S} $$
+# $$ \begin{align*}
+# {\Delta T}_o &= T_{cell} \\
+# {\Delta T}_i &= 1 - T_{cell}
+# \end{align*} $$
 # 
-# Where $|x|_S$ again represents the average value across a surface.
+# Knowing that the inner and outer fluxes ${\phi_q}_i$ and ${\phi_q}_o$ must be equal at steady state, and that the outer boundary - due to its greater length - can sustain that flux with a gradient shallower by a factor of $f$, we can deduce a relation between the outer and inner thermal gradients, and thence between $T^{cell}$ and the inner and outer boundary layer thicknesses ${\Delta r}_i$ and ${\Delta r}_o$:
 # 
-# The same factors of decreasing $f$ drive a decrease in intracellular temperatures, and hence global average temperatures {cite}`Jarvis1994-np`:
+# $$ \begin{align*}
+# f \frac{{\Delta T}_i}{{\Delta r}_i} &= \frac{{\Delta T}_o}{{\Delta r}_o} \\
+# \frac{{\Delta r}_i}{{\Delta r}_o} &= f \frac{1 - T^{cell}}{T^{cell}}
+# \end{align*} $$
 # 
-# $$ T_{av} = \frac{1}{\left( 1 + f^{-3/4} \right)} $$
+# For each of the two layers, we can prescribe a layer-specific *Rayleigh* number accordingly:
 # 
-# When considering convection in a cylindrical domain, the immediate qualitative difference resulting from curvature is the asymmetry of the two boundary layers. The additional space at the top of the model now allows more room for downwellings relative to basal upwellings, tending to promote instability {cite}`Jarvis1991-ir`; on the other hand, the curved geotherm and the increased surface for radiating heat would tend to permit a comparatively thicker upper boundary layer. The effect of these countervailing forcings on the fundamental scaling scaling relation $Nu \propto R^{\beta}$ is not obvious, but one analytical treatment by Jarvis {cite}`Jarvis1993-cb` combines the results obtained above to produce a 'geometric correction' $g(f)$, which enters the power law as a scaling coefficient:
+# $$ \begin{align*}
+# Ra_o &\propto T^{cell} {{\Delta r}_o}^3 \\
+# Ra_i &\propto (1 - T^{cell}) {{\Delta r}_i}^3
+# \end{align*} $$
+# 
+# Having maintained non-dimensionality throughout, it is simple relate these two boundary *Rayleigh* numbers to the bulk $Ra$ value:
 # 
 # $$
-# g(f) = \frac{\ln f}{1 - f} \cdot -\left( \frac{1}{1 + f^{-3/4}} \right) ^{4/3} \\
+# Ra_{layer} = Ra \cdot {\Delta T}_{layer} \cdot {{\Delta r}_{layer}}^3
+# $$
+# 
+# At this point, however, we have exhausted the insight we can obtain without making further assumptions. If we provide that the inner and outer boundary thicknesses must be the same, as they are in the planar case, we can see that:
+# 
+# $$
+# T^{cell} = \frac{f}{f + 1} \quad \leftarrow {\Delta r}_i = {\Delta r}_o
+# $$
+# 
+# This, however, would imply that the inner and outer *Rayleigh* numbers are divergent. If we instead choose to conserve $Ra$, then: ({cite}`Jarvis1993-cb`)
+# 
+# $$
+# T^{cell} = \frac{1}{1 + f^{-3/4}} \quad \leftarrow Ra_i = Ra_o
+# $$
+# 
+# Both possibilities converge on $0.5$ when $f\to1$ and $0$ when $f\to0$, as we would expect.
+# 
+# However it is estimated, it is clear that, as $Ra$ increases and boundaries thin, more of the mantle will fall in the intracellular region and global temperatures as a whole will approach $T^{cell}$. Conversely, if $Ra$ slips below its critical value, the boundary layers will disapper and the entire domain will enter the conductive regime: $T^{av} = T^{cond}$. These two temperatures therefore make up respectively the lower and upper endmembers of global temperature:
+# 
+# $$ \begin{align*}
+# T_{av} &\approx T^{cond}, \quad Ra < Ra^{cr} \\
+# &\to T^{cell}, \quad Ra \to \infty
+# \end{align*} $$
+# 
+# It makes intuitive sense that the effect of increasing $Ra$ should be to decrease global temperatures, since that is exactly why convection is preferred wherever possible, though this intuition may not hold for all rheologies.
+
+# Of course, what we desire most of all is a cylindrical scaling for the mantle convection power law $Nu \propto R^{\beta}$. Following {cite}`Jarvis1993-cb` and mandating equality of inner and outer $Ra_{layer}$, it is possible to construct a 'geometric correction' $g(f)$ that functions as a coefficient of the *beta* scaling:
+# 
+# $$
+# g(f) = \frac{Nu^{cond}}{{T^{cell}}^{4/3}} \quad \leftarrow Ra_i = Ra_o \\
 # Nu = g(f) \cdot R^{\frac{1}{3}}
 # $$
 # 
 # Using this scaling, Jarvis was able to obtain a *beta* exponent of $0.321 \pm 0.001$ across four values of $f$ from $(1.0 - 0.1)$ {cite}`Jarvis1993-cb`.
-# 
-# To define $R=\frac{Ra}{Ra_{cr}}$ --- ?
-
-# In[3]:
-
-
-search('jaupart')
-
