@@ -94,7 +94,7 @@ glue("isocondh", canvas, display = False)
 canvas
 
 
-# ```{glue:figure} isocond
+# ```{glue:figure} isocondh
 # :figwidth: 600px
 # :name: "isocondh"
 # 
