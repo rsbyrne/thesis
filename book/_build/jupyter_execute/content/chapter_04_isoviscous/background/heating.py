@@ -43,7 +43,7 @@ warnings.filterwarnings("ignore",category=UserWarning)
 
 # Analytically, the addition of internal heating introduces many complications. Most significantly, the temperature scale is no longer an independent variable, but a natural one emerging from the dynamic balance of heat production and heat transport. This dependency invalidates the derivation of $Ra$ previously provided, and unfortunately, no obvious or unambiguous alternative scaling is known {cite}`Schubert2001-ea,Moore2008-je,Korenaga2017-an`.
 
-# In[235]:
+# In[2]:
 
 
 with open(osjoin(aliases.storagedir, 'condh.pkl'), mode = 'rb') as file:
@@ -51,7 +51,7 @@ with open(osjoin(aliases.storagedir, 'condh.pkl'), mode = 'rb') as file:
 condgeotherms, condavts, condhs = (conddata[key] for key in ('geotherms', 'avts', 'hs'))
 
 
-# In[237]:
+# In[3]:
 
 
 canvas = Canvas(shape = (1, 2), size = (6, 4))
@@ -151,7 +151,7 @@ canvas
 # 
 # In convection, the addition of internal heating imposes an asymmetry between upwellings and downwellings, which would otherwise be temperature-reversed mirrors of one another {cite}`Weinstein1990-dd`. Because the thermal gradient of the conductive state rapidly shallows with depth, the local *Rayleigh* numbers of deeper layers can quickly become subcritical, such that a large portion of the domain from the base up is locked in a near-conductive state. At high $H$, large-scale motions cease, and only a thin sub-surface 'mixing layer' witnesses any meaningful convection at all {cite}`Parmentier1994-on`.
 
-# In[96]:
+# In[4]:
 
 
 with open(osjoin(aliases.storagedir, 'condhfmixed.pkl'), mode = 'rb') as file:
@@ -172,7 +172,7 @@ condavts = [conddata['avts'][i] for i in selinds]
 #     )
 
 
-# In[217]:
+# In[5]:
 
 
 canvas1 = Canvas(shape = (1, 2), size = (6, 4))
