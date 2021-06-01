@@ -1,17 +1,5 @@
 {
   "content/chapter_04_isoviscous/background/cylindrical": {
-    "isocondfr2": {
-      "data": {
-        "application/papermill.record/text/plain": "0.9981308590094721"
-      },
-      "metadata": {
-        "scrapbook": {
-          "mime_prefix": "application/papermill.record/",
-          "name": "isocondfr2"
-        }
-      },
-      "output_type": "display_data"
-    },
     "isocondf": {
       "data": {
         "application/papermill.record/image/png": null,
@@ -24,6 +12,18 @@
         },
         "filenames": {
           "image/png": "/home/morpheus/workspace/mount/book/_build/jupyter_execute/content/chapter_04_isoviscous/background/cylindrical_5_0.png"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "isocondfr2": {
+      "data": {
+        "application/papermill.record/text/plain": "0.9981308590094721"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "application/papermill.record/",
+          "name": "isocondfr2"
         }
       },
       "output_type": "display_data"

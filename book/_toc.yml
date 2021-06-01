@@ -25,11 +25,9 @@
     - file: content/chapter_04_isoviscous/background/intro
       sections:
       - file: content/chapter_04_isoviscous/background/basics
-      - file: content/chapter_04_isoviscous/background/rheologies
-        sections:
-        - file: content/chapter_04_isoviscous/background/simple
-        - file: content/chapter_04_isoviscous/background/heating
-        - file: content/chapter_04_isoviscous/background/cylindrical
+      - file: content/chapter_04_isoviscous/background/simple
+      - file: content/chapter_04_isoviscous/background/heating
+      - file: content/chapter_04_isoviscous/background/cylindrical
       - file: content/chapter_04_isoviscous/background/conclusion
     - file: content/chapter_04_isoviscous/methods/intro
     - file: content/chapter_04_isoviscous/results/intro
