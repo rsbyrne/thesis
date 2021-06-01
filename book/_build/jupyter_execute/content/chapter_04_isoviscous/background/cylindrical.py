@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[1]:
 
 
 # This cell is tagged for removal
@@ -84,7 +84,7 @@ warnings.filterwarnings("ignore",category=UserWarning)
 
 # ## Effects on conduction and instability
 
-# In[3]:
+# In[2]:
 
 
 # fs = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
