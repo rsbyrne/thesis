@@ -19,30 +19,36 @@
     - file: content/chapter_02_methods/section3
     - file: content/chapter_02_methods/conclusion
   - file: content/chapter_03_everest/main
-  - file: content/chapter_04_linear/abstract
+  - file: content/chapter_04_isoviscous/abstract
     sections:
-    - file: content/chapter_04_linear/introduction
-    - file: content/chapter_04_linear/background/intro
+    - file: content/chapter_04_isoviscous/introduction
+    - file: content/chapter_04_isoviscous/background/intro
       sections:
-      - file: content/chapter_04_linear/background/basics
-      - file: content/chapter_04_linear/background/rheologies
+      - file: content/chapter_04_isoviscous/background/basics
+      - file: content/chapter_04_isoviscous/background/rheologies
         sections:
-        - file: content/chapter_04_linear/background/isoviscous
-      - file: content/chapter_04_linear/background/conclusion
-    - file: content/chapter_04_linear/methods/intro
-    - file: content/chapter_04_linear/results/intro
-    - file: content/chapter_04_linear/discussion/intro
-    - file: content/chapter_04_linear/conclusion
-  - file: content/chapter_05_viscoplastic/abstract
+        - file: content/chapter_04_isoviscous/background/simple
+        - file: content/chapter_04_isoviscous/background/heating
+        - file: content/chapter_04_isoviscous/background/cylindrical
+      - file: content/chapter_04_isoviscous/background/conclusion
+    - file: content/chapter_04_isoviscous/methods/intro
+    - file: content/chapter_04_isoviscous/results/intro
+    - file: content/chapter_04_isoviscous/discussion/intro
+    - file: content/chapter_04_isoviscous/conclusion
+  - file: content/chapter_05_arrhenius/abstract
     sections:
-    - file: content/chapter_05_viscoplastic/introduction
-    - file: content/chapter_05_viscoplastic/conclusion
-  - file: content/chapter_06_advanced/abstract
+    - file: content/chapter_05_arrhenius/introduction
+    - file: content/chapter_05_arrhenius/conclusion
+  - file: content/chapter_06_viscoplastic/abstract
     sections:
-    - file: content/chapter_06_advanced/introduction
-    - file: content/chapter_06_advanced/conclusion
-  - file: content/chapter_07_discussion/main
-  - file: content/chapter_08_conclusion/main
+    - file: content/chapter_06_viscoplastic/introduction
+    - file: content/chapter_06_viscoplastic/conclusion
+  - file: content/chapter_07_advanced/abstract
+    sections:
+    - file: content/chapter_07_advanced/introduction
+    - file: content/chapter_07_advanced/conclusion
+  - file: content/chapter_08_discussion/main
+  - file: content/chapter_09_conclusion/main
 
 - part: End matter
   chapters:

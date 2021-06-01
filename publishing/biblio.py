@@ -1,9 +1,12 @@
 import os
+import shutil
 
 import aliases
 from referencing import references
 
 if __name__ == '__main__':
+
+    shutil.rmtree(os.path.join(aliases.cachedir, 'indexdir'))
 
     biblio = references.parse_bibtex('references', aliases.bookdir)
 

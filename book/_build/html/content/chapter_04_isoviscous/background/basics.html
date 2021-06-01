@@ -1,0 +1,569 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4.2.1. Basics of convection &#8212; What kind of thing is a planet?</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/printwell.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/general.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/.ipynb_checkpoints/printwell-checkpoint.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/.ipynb_checkpoints/general-checkpoint.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="4.2.2. Linear rheologies: the isoviscous case" href="rheologies.html" />
+    <link rel="prev" title="4.2. Background" href="intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">What kind of thing is a planet?</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../index.html">
+   What kind of thing is a planet?
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Front matter
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../frontmatter/declaration.html">
+   Declaration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../frontmatter/preamble.html">
+   Preamble
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../frontmatter/abstract.html">
+   Abstract
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../frontmatter/introduction.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../frontmatter/acknowledgements.html">
+   Acknowledgements
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Thesis
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../chapter_01_background/main.html">
+   1. Review and Theory
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../chapter_02_methods/intro.html">
+   2. Tools and Methods
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_02_methods/section1.html">
+     2.1. The analytical toolkit
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_02_methods/section2.html">
+     2.2. Numerical methods and the Underworld code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_02_methods/section3.html">
+     2.3. Suite-modelling, PlanetEngine and Everest
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_02_methods/conclusion.html">
+     2.4. Conclusion
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../chapter_03_everest/main.html">
+   3. Everest
+  </a>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../abstract.html">
+   4. Scaling Behaviours of Linear Rheologies: Constant Viscosity
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction.html">
+     4.1. Introduction
+    </a>
+   </li>
+   <li class="toctree-l2 current active collapsible-parent">
+    <a class="reference internal" href="intro.html">
+     4.2. Background
+    </a>
+    <ul class="current collapse-ul">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       4.2.1. Basics of convection
+      </a>
+     </li>
+     <li class="toctree-l3 collapsible-parent">
+      <a class="reference internal" href="rheologies.html">
+       4.2.2. Linear rheologies: the isoviscous case
+      </a>
+      <ul class="collapse-ul">
+       <li class="toctree-l4">
+        <a class="reference internal" href="simple.html">
+         4.2.2.1. Simple isoviscous rheology
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="heating.html">
+         4.2.2.2. Isoviscous rheology with internal and mixed heating
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="heating.html#mixed-heating">
+         4.2.2.3. Mixed heating
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="cylindrical.html">
+         4.2.2.4. Isoviscous rheology in cylindrical geometry
+        </a>
+       </li>
+      </ul>
+      <i class="fas fa-chevron-down">
+      </i>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="conclusion.html">
+       4.2.3. Conclusion
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../methods/intro.html">
+     4.3. Methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../results/intro.html">
+     4.4. Results
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discussion/intro.html">
+     4.5. Discussion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conclusion.html">
+     4.6. Conclusion
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../chapter_05_arrhenius/abstract.html">
+   5. Scaling Behaviours of Linear Rheologies: Temperature-Dependent Viscosity
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_05_arrhenius/introduction.html">
+     5.1. Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_05_arrhenius/conclusion.html">
+     5.2. Conclusion
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../chapter_06_viscoplastic/abstract.html">
+   6. Mode Boundaries in Viscoplastic Rheology
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_06_viscoplastic/introduction.html">
+     6.1. Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_06_viscoplastic/conclusion.html">
+     6.2. Conclusion
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../chapter_07_advanced/abstract.html">
+   7. Big Data Methods for Computational Geodynamics
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_07_advanced/introduction.html">
+     7.1. Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_07_advanced/conclusion.html">
+     7.2. Conclusion
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../chapter_08_discussion/main.html">
+   8. Discussion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../chapter_09_conclusion/main.html">
+   9. Conclusion
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  End matter
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../references.html">
+   References
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../appendices/tables/main.html">
+   Tables
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/chapter_04_isoviscous/background/basics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rsbyrne/thesis"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/rsbyrne/thesis/issues/new?title=Issue%20on%20page%20%2Fcontent/chapter_04_isoviscous/background/basics.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/rsbyrne/thesis/edit/main/book/content/chapter_04_isoviscous/background/basics.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rsbyrne/thesis/main?urlpath=lab/tree/book/content/chapter_04_isoviscous/background/basics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/rsbyrne/thesis/blob/main/book/content/chapter_04_isoviscous/background/basics.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="basics-of-convection">
+<h1><span class="section-number">4.2.1. </span>Basics of convection<a class="headerlink" href="#basics-of-convection" title="Permalink to this headline">¶</a></h1>
+<p>The essential model of planetary solid-state circulation is Rayleigh-Benard convection, in which a fluid held between two plane layers of different temperatures is observed to spontaneously self-organise into counter-rotating cells to maximise the efficiency of transport <span id="id1">[<a class="reference internal" href="../../../references.html#id877">Getling, 1998</a>]</span>. Such a model is governed by three principal dimensionless quantities:</p>
+<ul class="simple">
+<li><p>The <em>Prandtl</em> number, the ratio of momentum diffusivity (or kinematic viscosity) <span class="math notranslate nohighlight">\(\nu\)</span> to the thermal diffusivity <span class="math notranslate nohighlight">\(\kappa\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ Pr = \frac{\nu}{\kappa} \]</div>
+<ul class="simple">
+<li><p>The <em>Reynolds</em> number, the ratio of inertial forces to viscous forces and hence a measure of flow turbulence (where <span class="math notranslate nohighlight">\(u\)</span> is flow velocity and <span class="math notranslate nohighlight">\(L\)</span> is a length scale):</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ Re =\frac{u L}{\nu} \]</div>
+<ul class="simple">
+<li><p>And the <em>Rayleigh</em> number, the product of <span class="math notranslate nohighlight">\(Pr\)</span> and <span class="math notranslate nohighlight">\(Re\)</span>, interperable as the ratio of buoyancy forces to viscous forces in the fluid (with thermal expansivity <span class="math notranslate nohighlight">\(\alpha\)</span>, gravity <span class="math notranslate nohighlight">\(g\)</span>, thermal gradient <span class="math notranslate nohighlight">\(\Delta T\)</span>, and length scale <span class="math notranslate nohighlight">\(b\)</span>):</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ Ra = \frac{\alpha g \Delta T b^3}{\kappa \nu} \]</div>
+<p>In addition to these three input variables, one unifying output variable - also dimensionless - commonly enters into the analysis, and will prove an essential razor throughout this thesis: the <em>Nusselt</em> number, a measure of the efficiency of global thermal transport relative to that expected by conduction alone. It can be given in terms of the rate of change of the dimensionless potential temperature <span class="math notranslate nohighlight">\(\theta^*\)</span> with respect to dimensionless depth <span class="math notranslate nohighlight">\(y^*\)</span> <span id="id2">[<a class="reference internal" href="../../../references.html#id463">Schubert <em>et al.</em>, 2001</a>]</span>:</p>
+<div class="math notranslate nohighlight">
+\[ Nu = \left| \frac{\partial \theta^*}{\partial y^*} \right| _S \]</div>
+<p>Where <span class="math notranslate nohighlight">\(|x|_S\)</span> indicates the average value across a surface. The asterisks indicate a non-dimensionalised quantity: a common textbook convention. This is the definition we adhere to throughout, but there is some variability in how <span class="math notranslate nohighlight">\(Nu\)</span> is defined in the literature. In non-curved domains, <span class="math notranslate nohighlight">\(Nu\)</span> is equivalent to the dimensionless surface temperature gradient, and so it is confusingly defined as such in some contexts <span id="id3">[<a class="reference internal" href="../../../references.html#id687">Blankenbach <em>et al.</em>, 1989</a>]</span>. There is also a practice of adding a constant <span class="math notranslate nohighlight">\(1\)</span> to the expression, reflecting a difference of opinion over whether <span class="math notranslate nohighlight">\(Nu\)</span> is best constructed as an arithmetic quantity (i.e <span class="math notranslate nohighlight">\(Nu\)</span> as the convective flux after conductive flux is substracted) or as a geometric quantity, as we have stated it here. We prefer the latter usage, reterming the former as <span class="math notranslate nohighlight">\(Nu_{+}\)</span>.</p>
+<p>Because any convection of interest to us in the mantle is going to be occurring in the solid state, across great distances, and under tremendous heat gradients, we are able to make certain assumptions that simplify the analysis. Two are commonly made:</p>
+<ul class="simple">
+<li><p>The <em>Boussinesq</em> approximation, in which non-gravitational terms of density are ignored, with the consequence that the fluid is incompressible. This is a justifiable assumption for just about any non-gaseous fluid, particularly one subjected to such extreme lithostatic pressures.</p></li>
+<li><p>The infinite <em>Prandtl</em> assumption, in which momentum diffusivity is held to be much greater than thermal diffusivity. This is reasonable for the mantle given the measured value comes to at least <span class="math notranslate nohighlight">\(10^{23}\)</span> <span id="id4">[<a class="reference internal" href="../../../references.html#id463">Schubert <em>et al.</em>, 2001</a>]</span>. Because <span class="math notranslate nohighlight">\(Pr \cdot Re = Ra\)</span>, this also implies that the <em>Reynolds</em> number must be infinitesimal, and hence that inertial forces and the turbulent effects thereof are negligible.</p></li>
+</ul>
+<p>These two simplifications have many consequences. For one, they allow the four dimensionless parameters above to be collapsed to only two: the <em>Rayleigh</em> number <span class="math notranslate nohighlight">\(Ra\)</span> and the <em>Nusselt</em> number <span class="math notranslate nohighlight">\(Nu\)</span> <span id="id5">[<a class="reference internal" href="../../../references.html#id470">Turcotte and Oxburgh, 1967</a>]</span>. It will shortly become clear that these two quantities actually bear a power-law relation through a third property, the ‘<em>beta</em> exponent’ <span class="math notranslate nohighlight">\(\beta\)</span>, that in a single stroke unifies the intrinsic and extrinsic characteristics of planetary thermal transport:</p>
+<div class="math notranslate nohighlight">
+\[ Nu \propto Ra^{\beta}\]</div>
+<p>This elegant law forms the analytical cornerstone of our work.</p>
+<p>Though we ground ourselves in theory, our method is empirical. Thankfully, the scheme we have laid out also provides a powerful framework for numericisation: by eliminating inertial, compressive, and turbulent forces, we are able to construct mantle convection as a kind of Stokes Flow under the body forcing of gravity <span class="math notranslate nohighlight">\(g\)</span>, limited by conservation of mass and iterated by advection-diffusion, and so captured by the equations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+\nabla p - \nabla \left( \eta D \right) &amp;= \Delta \rho \mathbf{g} \\
+\nabla \cdot \mathbf{u} &amp;= 0 \\
+\frac{\partial T}{\partial t} + \mathbf{u} \cdot \nabla T &amp;= \kappa \nabla^2 T + H \\
+\end{align*} \end{split}\]</div>
+<p>Where <span class="math notranslate nohighlight">\(\eta\)</span> is dynamic viscosity, <span class="math notranslate nohighlight">\(D\)</span> the strain rate tensor, <span class="math notranslate nohighlight">\(p\)</span> dynamic pressure, <span class="math notranslate nohighlight">\(\Delta\rho\)</span> the density anomaly, <span class="math notranslate nohighlight">\(\mathbf{g}\)</span> the gravity vector, <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> the velocity vector, <span class="math notranslate nohighlight">\(T\)</span> temperature, <span class="math notranslate nohighlight">\(\kappa\)</span> thermal diffusivity, <span class="math notranslate nohighlight">\(t\)</span> time, and <span class="math notranslate nohighlight">\(H\)</span> a thermal source term, i.e. radiogenic heating.</p>
+<p>With these equations, we may implement an alternating cycle of instaneous pressure solutions followed by finite time-stepping of the temperature field (and any other state variables we choose to implement). Of course, such a system is meaningless and insoluble unless we further stipulate a geometry (width, length, depth, and curvature) and a set of boundary conditions for the temperature and velocity fields. The boundary conditions on each outer domain surface are typically set to be either:</p>
+<ul class="simple">
+<li><p>Fixed in value (a ‘Dirichlet’ condition). For the temperature field, this would imply that the core and/or the space-facing surface of the planet are infinite thermal buffers. For the velocity field, this can be used - for example - to define surfaces that are impervious in the normal component and either no-stick, perfect-stick, or tractional in the parallel component.</p></li>
+<li><p>Fixed in gradient (a ‘Neumann’ condition): for the temperature field, this would imply that the surface radiates heat at a fixed power, which in the case of zero power would make that boundary effectively insulating; for the velocity field, this essentially configures the strain rate in the chosen component.</p></li>
+</ul>
+<p>With respect to temperature, either of the above conditions can be set to inject or remove heat from the model, which - in tandem with the internal heat function <span class="math notranslate nohighlight">\(H\)</span> - provides the fluid with the thermal situation its flow is expected to resolve, given sufficient time. On Earth, we imagine mantle convection and the interconnected phenomenon of surface tectonics to represent the Earth’s own natural solution, or solution-in-progress, to the circumstance of volumetric radiogenic heating and basal heating from the core, although the debate over the relative significance of these is ancient and ongoing <span id="id6">[<a class="reference internal" href="../../../references.html#id580">Gando <em>et al.</em>, 2011</a>, <a class="reference internal" href="../../../references.html#id42">Huang <em>et al.</em>, 2013</a>, <a class="reference internal" href="../../../references.html#id119">Jaupart <em>et al.</em>, 2015</a>, <a class="reference internal" href="../../../references.html#id496">Korenaga, 2003</a>, <a class="reference internal" href="../../../references.html#id504">Korenaga, 2008</a>, <a class="reference internal" href="../../../references.html#id336">Mareschal <em>et al.</em>, 2012</a>, <a class="reference internal" href="../../../references.html#id478">Thomson, 1862</a>, <a class="reference internal" href="../../../references.html#id921">Urey, 1955</a>]</span>. For the models being discussed forthwith, we have restricted ourselves to free-slip velocity boundaries and Dirichlet thermal boundaries with a constant unit temperature gradient from top to bottom, such that the heating regime is always either purely basal or mixed.</p>
+<p>Within these simplifying constraints, almost limitless variety is possible - which is why this essential formulation has become common to virtually all studies of mantle convection. However, while it is hoped that somewhere within problem-space a solution resembling Earth may be found, such a solution must elude us until our grasp of the fundamentals is absolute; and there is still much about even the simplest rheologies that we do not understand.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "rsbyrne/thesis",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/chapter_04_isoviscous/background"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page"><span class="section-number">4.2. </span>Background</a>
+    <a class='right-next' id="next-link" href="rheologies.html" title="next page"><span class="section-number">4.2.2. </span>Linear rheologies: the isoviscous case</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Rohan S. Byrne<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
