@@ -1,0 +1,669 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4.2.2.2. Isoviscous rheology with internal and mixed heating &#8212; What kind of thing is a planet?</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/printwell.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/general.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/.ipynb_checkpoints/printwell-checkpoint.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/.ipynb_checkpoints/general-checkpoint.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="4.2.2.4. Isoviscous rheology in cylindrical geometry" href="cylindrical.html" />
+    <link rel="prev" title="4.2.2.1. Simple isoviscous rheology" href="simple.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">What kind of thing is a planet?</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../index.html">
+   What kind of thing is a planet?
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Front matter
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../frontmatter/declaration.html">
+   Declaration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../frontmatter/preamble.html">
+   Preamble
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../frontmatter/abstract.html">
+   Abstract
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../frontmatter/introduction.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../frontmatter/acknowledgements.html">
+   Acknowledgements
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Thesis
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../chapter_01_background/main.html">
+   1. Review and Theory
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../chapter_02_methods/intro.html">
+   2. Tools and Methods
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_02_methods/section1.html">
+     2.1. The analytical toolkit
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_02_methods/section2.html">
+     2.2. Numerical methods and the Underworld code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_02_methods/section3.html">
+     2.3. Suite-modelling, PlanetEngine and Everest
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_02_methods/conclusion.html">
+     2.4. Conclusion
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../chapter_03_everest/main.html">
+   3. Everest
+  </a>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../abstract.html">
+   4. Scaling Behaviours of Linear Rheologies: Constant Viscosity
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction.html">
+     4.1. Introduction
+    </a>
+   </li>
+   <li class="toctree-l2 current active collapsible-parent">
+    <a class="reference internal" href="intro.html">
+     4.2. Background
+    </a>
+    <ul class="current collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="basics.html">
+       4.2.1. Basics of convection
+      </a>
+     </li>
+     <li class="toctree-l3 current active collapsible-parent">
+      <a class="reference internal" href="rheologies.html">
+       4.2.2. Linear rheologies: the isoviscous case
+      </a>
+      <ul class="current collapse-ul">
+       <li class="toctree-l4">
+        <a class="reference internal" href="simple.html">
+         4.2.2.1. Simple isoviscous rheology
+        </a>
+       </li>
+       <li class="toctree-l4 current active">
+        <a class="current reference internal" href="#">
+         4.2.2.2. Isoviscous rheology with internal and mixed heating
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="#mixed-heating">
+         4.2.2.3. Mixed heating
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="cylindrical.html">
+         4.2.2.4. Isoviscous rheology in cylindrical geometry
+        </a>
+       </li>
+      </ul>
+      <i class="fas fa-chevron-down">
+      </i>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="conclusion.html">
+       4.2.3. Conclusion
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../methods/intro.html">
+     4.3. Methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../results/intro.html">
+     4.4. Results
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discussion/intro.html">
+     4.5. Discussion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conclusion.html">
+     4.6. Conclusion
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../chapter_05_arrhenius/abstract.html">
+   5. Scaling Behaviours of Linear Rheologies: Temperature-Dependent Viscosity
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_05_arrhenius/introduction.html">
+     5.1. Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_05_arrhenius/conclusion.html">
+     5.2. Conclusion
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../chapter_06_viscoplastic/abstract.html">
+   6. Mode Boundaries in Viscoplastic Rheology
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_06_viscoplastic/introduction.html">
+     6.1. Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_06_viscoplastic/conclusion.html">
+     6.2. Conclusion
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../chapter_07_advanced/abstract.html">
+   7. Big Data Methods for Computational Geodynamics
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_07_advanced/introduction.html">
+     7.1. Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_07_advanced/conclusion.html">
+     7.2. Conclusion
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../chapter_08_discussion/main.html">
+   8. Discussion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../chapter_09_conclusion/main.html">
+   9. Conclusion
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  End matter
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../references.html">
+   References
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../appendices/tables/main.html">
+   Tables
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/chapter_04_isoviscous/background/heating.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/rsbyrne/thesis"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/rsbyrne/thesis/issues/new?title=Issue%20on%20page%20%2Fcontent/chapter_04_isoviscous/background/heating.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/rsbyrne/thesis/edit/main/book/content/chapter_04_isoviscous/background/heating.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/rsbyrne/thesis/main?urlpath=lab/tree/book/content/chapter_04_isoviscous/background/heating.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/rsbyrne/thesis/blob/main/book/content/chapter_04_isoviscous/background/heating.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   4.2.2.2. Isoviscous rheology with internal and mixed heating
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#internal-heating">
+     4.2.2.2.1. Internal heating
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mixed-heating">
+   4.2.2.3. Mixed heating
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="isoviscous-rheology-with-internal-and-mixed-heating">
+<h1><span class="section-number">4.2.2.2. </span>Isoviscous rheology with internal and mixed heating<a class="headerlink" href="#isoviscous-rheology-with-internal-and-mixed-heating" title="Permalink to this headline">¶</a></h1>
+<p>On Earth and other planets, the geothermal flux is not solely driven by basal heating from the core: there is a substantial, variable, and transient contribution from radioactive decay as well <span id="id1">[<a class="reference internal" href="../../../references.html#id683">Daly, 1980</a>]</span>. In mantle convection studies this is dubbed ‘internal heating’, and a system driven by both basal and internal heating is said to be ‘mixed-heating’.</p>
+<p>The ratio of internal heat production to surface heat flux inside a planet is called the <em>Urey</em> ratio <span class="math notranslate nohighlight">\(Ur\)</span>  <span id="id2">[<a class="reference internal" href="../../../references.html#id921">Urey, 1955</a>]</span>. Values less than one signify that a planet on the whole is cooling, while values greater than one represent global interior warming. To avoid projecting unreasonable global temperatures into Earth’s past, it was originally calculated that, for a <em>beta</em> exponent of <span class="math notranslate nohighlight">\(1/3\)</span>, the <em>Urey</em> number must be greater than <span class="math notranslate nohighlight">\(\sim0.7\)</span> <span id="id3">[<a class="reference internal" href="../../../references.html#id548">Christensen, 1985</a>]</span>. This assumption was forced into revision when it transpired that the radiogenic inventory of bulk mantle materials is far too low to support such a high radiogenic fraction <span id="id4">[<a class="reference internal" href="../../../references.html#id806">Jochum <em>et al.</em>, 1983</a>]</span>. Direct evidence from geoneutrinos now suggests that the <em>Urey</em> ratio must be around <span class="math notranslate nohighlight">\(0.5\)</span> <span id="id5">[<a class="reference internal" href="../../../references.html#id580">Gando <em>et al.</em>, 2011</a>]</span>, and further argues that heat production is non-uniform throughout the mantle <span id="id6">[<a class="reference internal" href="../../../references.html#id42">Huang <em>et al.</em>, 2013</a>]</span>. Thermal histories that honour these facts have proved very difficult to construct <span id="id7">[<a class="reference internal" href="../../../references.html#id515">Dye, 2012</a>, <a class="reference internal" href="../../../references.html#id119">Jaupart <em>et al.</em>, 2015</a>, <a class="reference internal" href="../../../references.html#id496">Korenaga, 2003</a>, <a class="reference internal" href="../../../references.html#id504">Korenaga, 2008</a>, <a class="reference internal" href="../../../references.html#id38">Korenaga, 2017</a>, <a class="reference internal" href="../../../references.html#id336">Mareschal <em>et al.</em>, 2012</a>]</span>.</p>
+<p>Analytically, the addition of internal heating introduces many complications. Most significantly, the temperature scale is no longer an independent variable, but a natural one emerging from the dynamic balance of heat production and heat transport. This dependency invalidates the derivation of <span class="math notranslate nohighlight">\(Ra\)</span> previously provided, and unfortunately, no obvious or unambiguous alternative scaling is known <span id="id8">[<a class="reference internal" href="../../../references.html#id38">Korenaga, 2017</a>, <a class="reference internal" href="../../../references.html#id501">Moore, 2008</a>, <a class="reference internal" href="../../../references.html#id463">Schubert <em>et al.</em>, 2001</a>]</span>.</p>
+<div class="figure align-default" id="isocondh" style="width: 600px">
+<div class="cell_output docutils container">
+<img alt="../../../_images/cylindrical_5_0.png" src="../../../_images/cylindrical_5_0.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Summary of the scaling behaviours of isoviscous conduction for varying internal heating parameter <span class="math notranslate nohighlight">\(H\)</span>. Temperature goes linearly as a function of dimensionless height from the base of the mantle, <span class="math notranslate nohighlight">\(h^2\)</span>.</span><a class="headerlink" href="#isocondh" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="internal-heating">
+<h2><span class="section-number">4.2.2.2.1. </span>Internal heating<a class="headerlink" href="#internal-heating" title="Permalink to this headline">¶</a></h2>
+<p>To provide some bounds on the expected behaviour of a mixed-heating model, it is helpful to review the effects of purely internal heating. Without the ability to arbitrarily specify a temperature scale, it is natural to use that which arises from pure conduction. Under a scenario of pure internal heating, the conductive geotherm is no longer linear, but scales with length squared <span id="id9">[<a class="reference internal" href="../../../references.html#id465">Turcotte and Schubert, 2014</a>]</span> <a class="reference internal" href="#isocondh"><span class="std std-numref">Fig. 4.1</span></a>:</p>
+<div class="math notranslate nohighlight">
+\[
+{T(h)}_{c} = \frac{H}{2} \left( 1 - h^2 \right)
+\]</div>
+<p>Where <span class="math notranslate nohighlight">\(H\)</span> is the per-mass heating rate and <span class="math notranslate nohighlight">\(h\)</span> is the dimensionless height from the base of the mantle. The maximum mantle temperature possible for a given value of <span class="math notranslate nohighlight">\(H\)</span> is thus <span class="math notranslate nohighlight">\(H/2\)</span>.</p>
+<p>We can easily differentiate the geotherm to acquire the geothermal gradient:</p>
+<div class="math notranslate nohighlight">
+\[
+{{T(h)}_{c}}^{'} = H\cdot h
+\]</div>
+<p>Which reveals that, at the outer boundary, the thermal flux is exactly <span class="math notranslate nohighlight">\(H\)</span> (or, technically, <span class="math notranslate nohighlight">\(H \cdot \rho\)</span> if dimensionalised). This suggests an alternate way of viewing <span class="math notranslate nohighlight">\(H\)</span> as, in effect, the ‘conductive <em>Nusselt</em> number’, <span class="math notranslate nohighlight">\({Nu}_{c}\)</span>.</p>
+<p>Having obtained the conductive geotherm, we can select a nominal temperature scale:</p>
+<div class="math notranslate nohighlight">
+\[
+{\Delta T}_H = \frac{\rho H b^2}{k}
+\]</div>
+<p>Where <span class="math notranslate nohighlight">\(k\)</span> is the conductivity, <span class="math notranslate nohighlight">\(\rho\)</span> is the density, <span class="math notranslate nohighlight">\(H\)</span> is the per-mass heating rate, and <span class="math notranslate nohighlight">\(b\)</span> is the characteristic spatial length. The temperature scale allows an ‘internally heated <em>Rayleigh</em> number’ <span class="math notranslate nohighlight">\({Ra}^H\)</span> to be defined:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+{Ra}^H &amp;= {Ra}^B \cdot {\Delta T}_H \\
+&amp;= \frac{\alpha g \rho H b^5}{k \kappa \nu}
+\end{align*} \end{split}\]</div>
+<p>Where <span class="math notranslate nohighlight">\({Ra}^B\)</span> is the <em>Rayleigh</em> number derived for basal heating, introducing the parameters of thermal expansivity <span class="math notranslate nohighlight">\(\alpha\)</span>, gravity <span class="math notranslate nohighlight">\(g\)</span>, thermal diffusivity <span class="math notranslate nohighlight">\(\kappa\)</span>, and momentum diffusivity <span class="math notranslate nohighlight">\(\nu\)</span> <span id="id10">[<a class="reference internal" href="../../../references.html#id465">Turcotte and Schubert, 2014</a>]</span>.</p>
+<p>Because the temperature scale is based of the conductive geotherm, which is a ‘hottest-case’ scenario, the values of <span class="math notranslate nohighlight">\(Ra\)</span> calculated in this manner will tend to be too high. An alternative is to choose a representative ‘internal temperature’ <span class="math notranslate nohighlight">\(T_{i}\)</span>, which is chosen to reflect a typical temperature in those regions where advection dominates <span id="id11">[<a class="reference internal" href="../../../references.html#id493">Solomatov and Moresi, 2000</a>]</span>. Normalising <span class="math notranslate nohighlight">\(T_{i}\)</span> by the true (measured) temperature scale <span class="math notranslate nohighlight">\(\Delta T\)</span> gives <span class="math notranslate nohighlight">\({T_{i}}^{*}\)</span>, the non-dimensional internal temperature, which then informs the definition of an ‘internal <em>Rayleigh</em> number’ <span class="math notranslate nohighlight">\({Ra}_i\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ {Ra}_i = \frac{\alpha g {T_i}^{*} \Delta T b^3}{\kappa \nu} \]</div>
+<p>This observes, in other words, that - in an internally-heated system - the thermal contrast available to drive convection will always be less by some factor than the thermal contrast across the system as a whole.</p>
+<p>At steady state, a purely internally-heated system will develop a single boundary layer - the outer - through which all heat from below must be conducted. The interior temperature and the layer thickness adjusts until a balance is reached, resulting in an outer temperature drop <span class="math notranslate nohighlight">\({\Delta T}_o\)</span> and outer boundary thickness <span class="math notranslate nohighlight">\({\delta}_o\)</span> that scale with the heating rate <span id="id12">[<a class="reference internal" href="../../../references.html#id463">Schubert <em>et al.</em>, 2001</a>]</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+{\Delta T}_o &amp;\propto \frac{H^{3/4}}{{Ra}^{1/4}} \\
+{\delta}_o &amp;\propto \frac{1}{{(RaH)}^{1/4}}
+\end{align*} \end{split}\]</div>
+<p>Dividing the temperature drop by the boundary thickness gives an outer thermal gradient proportional simply to <span class="math notranslate nohighlight">\(H\)</span>. Given that the conductive thermal gradient at the outer boundary is also proportional to <span class="math notranslate nohighlight">\(H\)</span>, these two scalings cancel out when calculating the <em>Nusselt</em> number; thus we would expect the typical <span class="math notranslate nohighlight">\(Nu-Ra\)</span> <em>beta</em> scaling to hold without augmentation.</p>
+<p>In convection, the addition of internal heating imposes an asymmetry between upwellings and downwellings, which would otherwise be temperature-reversed mirrors of one another <span id="id13">[<a class="reference internal" href="../../../references.html#id547">Weinstein and Olson, 1990</a>]</span>. Because the thermal gradient of the conductive state rapidly shallows with depth, the local <em>Rayleigh</em> numbers of deeper layers can quickly become subcritical, such that a large portion of the domain from the base up is locked in a near-conductive state. At high <span class="math notranslate nohighlight">\(H\)</span>, large-scale motions cease, and only a thin sub-surface ‘mixing layer’ witnesses any meaningful convection at all <span id="id14">[<a class="reference internal" href="../../../references.html#id690">Parmentier <em>et al.</em>, 1994</a>]</span>.</p>
+<div class="figure align-default" id="isocondhmixed" style="width: 800px">
+<div class="cell_output docutils container">
+<img alt="../../../_images/heating_10_0.png" src="../../../_images/heating_10_0.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 4.2 </span><span class="caption-text">Summary of the scaling behaviours of the conductive solution for mixed heating. The inner boundary is set to dimensionless temperature <span class="math notranslate nohighlight">\(T=1\)</span>, the outer to <span class="math notranslate nohighlight">\(T=0\)</span>. On the right, average temperature and the slope of <span class="math notranslate nohighlight">\(\delta T / \delta h\)</span> are given as functions of <span class="math notranslate nohighlight">\(H\)</span>. Gradient clearly varies as a function of dimensionless height <span class="math notranslate nohighlight">\(h\)</span> above the mantle base according to a slope given by <span class="math notranslate nohighlight">\(-H\)</span>. The conductive geotherm for mixed heating is therefore, in fact, a parabola.</span><a class="headerlink" href="#isocondhmixed" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="mixed-heating">
+<h1><span class="section-number">4.2.2.3. </span>Mixed heating<a class="headerlink" href="#mixed-heating" title="Permalink to this headline">¶</a></h1>
+<p>For systems driven by both internal and basal heating, the choice between basally-derived and internally-derived <em>Rayleigh</em> numbers leads to ambiguity and confusion. One path forward is to define a dimensionless heating rate <span class="math notranslate nohighlight">\(H\)</span> <span id="id15">[<a class="reference internal" href="../../../references.html#id463">Schubert <em>et al.</em>, 2001</a>]</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+H &amp;= {Ra}_H / Ra \\
+&amp;= \frac{\rho H^{*} D^2}{k {\Delta T}^{*}}
+\end{align*} \end{split}\]</div>
+<p>The conventional basally-heated <span class="math notranslate nohighlight">\(Ra\)</span> derivation can then be used, with <span class="math notranslate nohighlight">\(H\)</span> as a correcting coefficient.</p>
+<p>While the purely internally-heated case has only one boundary layer (the outer), and the purely basally-heated case has symmetrical outer and inner boundaries, the mixed-heating case has two asymmetrical boundaries which are at least pseudo-independent of each other. While, at steady-state, the outer boundary flux is constrained to be always greater than the inner, the inner boundary flux may freely adjust itself as a function of the temperature differential between the prescribed lower boundary condition and the interior temperature. This intrinsic feedback makes quantitative analysis much more complicated.</p>
+<p>As usual, a close consideration of the situation at the boundaries can set us on the right course. In the sorts of scenarios relevant to planetary settings, the lower boundary will remain hotter than the interior and the flux will be positive and substantial, in which case the outer boundary is required to transport the volumetric heating <span class="math notranslate nohighlight">\(H\)</span> in addition to the basal heating <span id="id16">[<a class="reference internal" href="../../../references.html#id501">Moore, 2008</a>]</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+{q}_{o} &amp;\propto {\left| \frac{dT}{dh} \right|}_{h=1} \\
+&amp;\propto H + {q}_{i} \propto H + {\left| \frac{dT}{dh} \right|}_{h=0}
+\end{align*} \end{split}\]</div>
+<p>Where <span class="math notranslate nohighlight">\({q}_{o}\)</span> and <span class="math notranslate nohighlight">\({q}_{i}\)</span> are the inner and outer heat fluxes.</p>
+<p>At the limit where internal heating becomes negligible compared to the inner-outer temperature drop, internal heating can be ignored altogether and the system approximates a purely basally-heated model. At the opposite extreme, if the interior temperature due to internal heating is high enough, the inner flux may become negative, and the mantle will cool into the core: a case hard to envision in nature. Between these regimes is a transition point when the interior temperature becomes equal to the lower boundary condition. In this borderline case, the inner (core-mantle) flux is exactly zero (i.e. insulating), so that the mixed-heating system reproduces a purely internally-heated system. Thus, the mixed-heating model includes both internally-heated and basally-heated endmembers.</p>
+<p>To sharpen this analysis, we can look at more closely at the conductive profile. While it is possible to derive this from first principles, it is more easily illustrated by a numerical approach <a class="reference internal" href="#isocondhmixed"><span class="std std-numref">Fig. 4.2</span></a>. It is clear that the conductive geotherm forms a parabola whose second derivative is exactly equal to <span class="math notranslate nohighlight">\(-H\)</span>; the rest follows by integration, with the constants provided by logic and observation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+{{T(h)}_{c}}^{''} &amp;= -H \\
+{{T(h)}_{c}}^{'} &amp;= -H \left( h - \frac{1}{2} \right) - 1 \\
+{T(h)}_{c} &amp;= \frac{Hh}{2} \left( 1 - h \right) - h - 1 \\
+{{T}_{c}}_{av} &amp;= \frac{H}{12} + \frac{1}{2}
+\end{align*} \end{split}\]</div>
+<p>If each geotherm traces a parabola, a maximum ‘natural’ temperature is implied where the first derivative is zero:</p>
+<div class="math notranslate nohighlight">
+\[
+h_{T_{max}} = \frac{1}{2} - \frac{1}{H}, \quad H &gt; 0
+\]</div>
+<p>If <span class="math notranslate nohighlight">\(h_{T_{max}}\)</span> is less than zero for a particular value of <span class="math notranslate nohighlight">\(H\)</span>, then that maximum will never be realised and the true maximum temperature will be that at the mantle base, which is unit in our dimensionless treatment. The condition <span class="math notranslate nohighlight">\(h_{T_{max}} &gt; 0\)</span> thus represents the regime boundary between those conductive solutions that cool into the core and those that only cool into space. This occurs at exactly <span class="math notranslate nohighlight">\(H = 2\)</span>, or more generally:</p>
+<div class="math notranslate nohighlight">
+\[
+H_{inv} = \frac{1}{{{T_{c}}_{av}}_{(H=0)}}
+\]</div>
+<p>Where <span class="math notranslate nohighlight">\(H_{inv}\)</span> is the ‘inversion heat’ below which the system cools inwardly and at which the lower boundary becomes effectively insulating, as previously discussed.</p>
+<p>If we define a ‘conductive <em>Nusselt</em> number’ - something of an oxymoron - we can see how the true <em>Nusselt</em> number should be expected to scale:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+{{Nu}_{c}}_{(mixed)} &amp;= -{{T(h)}_{c}}^{'}, \quad h = 0 \\
+&amp;= 1 + \frac{H}{2} \\
+&amp;= {{Nu}_{c}}_{(basal)} + {{Nu}_{c}}_{(internal)}
+\end{align*} \end{split}\]</div>
+<p>I.e. the surface flux in the mixed case is simply the sum of the two heat drivers considered separately, just as we would expect from first principles.</p>
+<p>We now have an understanding of how the system behaves below the critical <em>Rayleigh</em> number; now we must go above. Convection will have the effect of cooling the system below the conductive solution, such that the interior temperature <span class="math notranslate nohighlight">\({T_i}^{*}\)</span> drops below the conductive average temperature <span class="math notranslate nohighlight">\({{T}_{c}}_{av}\)</span>. An analytical statement of what <span class="math notranslate nohighlight">\({T_i}^{*}\)</span> should come to has not been found and might not be meaningful anyway. One often-cited workaround starts with the interior temperature analytically obtained for a purely internally-heated system and modifies it with empirical constants to accommodate the addition of basal heating <span id="id17">[<a class="reference internal" href="../../../references.html#id501">Moore, 2008</a>]</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+T_i = 0.49 + 1.24 H^{3/4} {Ra}^{-1/4}, \quad H &lt; H_{inv}
+\]</div>
+<p>This scaling, however, is back-formed from an observed and arbitrary measurement of <span class="math notranslate nohighlight">\(T_i\)</span> taken across the middle 60% of a finite-element numerical model, and no justification for this particular choice is ventured nor defended across the range of <span class="math notranslate nohighlight">\(Ra\)</span> and <span class="math notranslate nohighlight">\(H\)</span> values sampled.</p>
+<p>Given a known value of <span class="math notranslate nohighlight">\(T_i\)</span>, the associated <em>Nusselt</em> number should be proportional that temperature drop divided by the stable outer boundary thickness <span class="math notranslate nohighlight">\({\delta}_o\)</span>. Conventional boundary layer can be used to argue a scaling of the form <span id="id18">[<a class="reference internal" href="../../../references.html#id463">Schubert <em>et al.</em>, 2001</a>]</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+{\delta}_o = {\left( \frac{Ra}{{Ra}_{cr}} \frac{\Delta T_b}{\Delta T} \right)}^{-1/3}
+\]</div>
+<p>Empirically, the same authors <span id="id19">[<a class="reference internal" href="../../../references.html#id501">Moore, 2008</a>]</span> found that this scaling holds only for a much lower exponent of <span class="math notranslate nohighlight">\(\sim -0.303\)</span> for <span class="math notranslate nohighlight">\(Ra&lt;=10^8\)</span> and <span class="math notranslate nohighlight">\(H&lt;10\)</span>, while apparently approaching the theoretical value with increasing <span class="math notranslate nohighlight">\(H\)</span>; the discrepancy was attributed to disruption by plumes from the lower boundary.</p>
+<p>The next step is to attempt to derive the <em>Nusselt</em>-<em>Rayleigh</em> scaling, which we expect to approach the conventional power law behaviour under the <em>beta</em> exponent <span class="math notranslate nohighlight">\(\beta = 1/3\)</span>. The expected relationship, however, does not manifest even approximately for the mixed heating case unless  alternative definitions of <span class="math notranslate nohighlight">\(Nu\)</span> and <span class="math notranslate nohighlight">\(Ra\)</span> are used. Subtracting the basal component from <span class="math notranslate nohighlight">\(Nu\)</span> and using the arithmetic difference between <span class="math notranslate nohighlight">\(Ra\)</span> and <span class="math notranslate nohighlight">\({Ra}_{cr}\)</span> yields the following with some confidence <span id="id20">[<a class="reference internal" href="../../../references.html#id501">Moore, 2008</a>]</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+Nu - 1 = \frac{H}{2} + 0.206 \cdot {\left( Ra - {Ra}_{cr} \right)}^{0.318}
+\]</div>
+<p>While the above was calculated using a planar 2D model, an equivalent model suite in the spherical shell closely reproduced this relationship after geometry was accounted for <span id="id21">[<a class="reference internal" href="../../../references.html#id37">Weller <em>et al.</em>, 2016</a>]</span>.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "rsbyrne/thesis",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/chapter_04_isoviscous/background"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="simple.html" title="previous page"><span class="section-number">4.2.2.1. </span>Simple isoviscous rheology</a>
+    <a class='right-next' id="next-link" href="cylindrical.html" title="next page"><span class="section-number">4.2.2.4. </span>Isoviscous rheology in cylindrical geometry</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Rohan S. Byrne<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
