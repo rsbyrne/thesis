@@ -61,7 +61,7 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="4.2.2. Linear rheologies: the isoviscous case" href="rheologies.html" />
+    <link rel="next" title="4.2.2. Simple isoviscous rheology" href="simple.html" />
     <link rel="prev" title="4.2. Background" href="intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -196,38 +196,29 @@
        4.2.1. Basics of convection
       </a>
      </li>
-     <li class="toctree-l3 collapsible-parent">
-      <a class="reference internal" href="rheologies.html">
-       4.2.2. Linear rheologies: the isoviscous case
+     <li class="toctree-l3">
+      <a class="reference internal" href="simple.html">
+       4.2.2. Simple isoviscous rheology
       </a>
-      <ul class="collapse-ul">
-       <li class="toctree-l4">
-        <a class="reference internal" href="simple.html">
-         4.2.2.1. Simple isoviscous rheology
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="heating.html">
-         4.2.2.2. Isoviscous rheology with internal and mixed heating
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="heating.html#mixed-heating">
-         4.2.2.3. Mixed heating
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="cylindrical.html">
-         4.2.2.4. Isoviscous rheology in cylindrical geometry
-        </a>
-       </li>
-      </ul>
-      <i class="fas fa-chevron-down">
-      </i>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="heating.html">
+       4.2.3. Isoviscous rheology with internal and mixed heating
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="heating.html#mixed-heating">
+       4.2.4. Mixed heating
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="cylindrical.html">
+       4.2.5. Isoviscous rheology in cylindrical geometry
+      </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="conclusion.html">
-       4.2.3. Conclusion
+       4.2.6. Conclusion
       </a>
      </li>
     </ul>
@@ -457,6 +448,20 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linear-rheologies-the-isoviscous-case">
+   4.2.1.1. Linear rheologies: the isoviscous case
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -510,6 +515,17 @@
 </ul>
 <p>With respect to temperature, either of the above conditions can be set to inject or remove heat from the model, which - in tandem with the internal heat function <span class="math notranslate nohighlight">\(H\)</span> - provides the fluid with the thermal situation its flow is expected to resolve, given sufficient time. On Earth, we imagine mantle convection and the interconnected phenomenon of surface tectonics to represent the Earth’s own natural solution, or solution-in-progress, to the circumstance of volumetric radiogenic heating and basal heating from the core, although the debate over the relative significance of these is ancient and ongoing <span id="id6">[<a class="reference internal" href="../../../references.html#id580">Gando <em>et al.</em>, 2011</a>, <a class="reference internal" href="../../../references.html#id42">Huang <em>et al.</em>, 2013</a>, <a class="reference internal" href="../../../references.html#id119">Jaupart <em>et al.</em>, 2015</a>, <a class="reference internal" href="../../../references.html#id496">Korenaga, 2003</a>, <a class="reference internal" href="../../../references.html#id504">Korenaga, 2008</a>, <a class="reference internal" href="../../../references.html#id336">Mareschal <em>et al.</em>, 2012</a>, <a class="reference internal" href="../../../references.html#id478">Thomson, 1862</a>, <a class="reference internal" href="../../../references.html#id921">Urey, 1955</a>]</span>. For the models being discussed forthwith, we have restricted ourselves to free-slip velocity boundaries and Dirichlet thermal boundaries with a constant unit temperature gradient from top to bottom, such that the heating regime is always either purely basal or mixed.</p>
 <p>Within these simplifying constraints, almost limitless variety is possible - which is why this essential formulation has become common to virtually all studies of mantle convection. However, while it is hoped that somewhere within problem-space a solution resembling Earth may be found, such a solution must elude us until our grasp of the fundamentals is absolute; and there is still much about even the simplest rheologies that we do not understand.</p>
+<div class="section" id="linear-rheologies-the-isoviscous-case">
+<h2><span class="section-number">4.2.1.1. </span>Linear rheologies: the isoviscous case<a class="headerlink" href="#linear-rheologies-the-isoviscous-case" title="Permalink to this headline">¶</a></h2>
+<p>When we talk about rheology, or a materials’ style of flow, we are primarily talking about its viscosity function - the expression that maps the local viscosity at any point in the fluid to its context, history, or environment. While most fluids in the real world have complex ‘Non-Newtonian’ rheologies in which pressure and viscosity are co-dependent, mantle convection studies have often relied on simpler Newtonian rheologies that are more numerically and analytically tractable. These are what we here call ‘linear rheologies’.</p>
+<p>The bulk of all mantle convection studies focus on one of the following three linear rheologies:</p>
+<ul class="simple">
+<li><p><strong>Isoviscous</strong> or ‘constant viscosity’ flow.</p></li>
+<li><p><strong>Arrhenius</strong>-type exponentially temperature-dependent viscosity.</p></li>
+<li><p><strong>Spatialised</strong> viscosity - either arbitrarily zoned or simply depth-dependent.</p></li>
+</ul>
+<p>This two-part investigation will focus on the isoviscous and Arrhenius types. The former can be viewed as a special case of the latter, so it makes a fitting launching-off point for this study.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -541,7 +557,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="intro.html" title="previous page"><span class="section-number">4.2. </span>Background</a>
-    <a class='right-next' id="next-link" href="rheologies.html" title="next page"><span class="section-number">4.2.2. </span>Linear rheologies: the isoviscous case</a>
+    <a class='right-next' id="next-link" href="simple.html" title="next page"><span class="section-number">4.2.2. </span>Simple isoviscous rheology</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

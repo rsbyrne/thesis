@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4.2.2.4. Isoviscous rheology in cylindrical geometry &#8212; What kind of thing is a planet?</title>
+    <title>4.2.5. Isoviscous rheology in cylindrical geometry &#8212; What kind of thing is a planet?</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -61,8 +61,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="4.2.3. Conclusion" href="conclusion.html" />
-    <link rel="prev" title="4.2.2.2. Isoviscous rheology with internal and mixed heating" href="heating.html" />
+    <link rel="next" title="4.2.6. Conclusion" href="conclusion.html" />
+    <link rel="prev" title="4.2.3. Isoviscous rheology with internal and mixed heating" href="heating.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -196,38 +196,29 @@
        4.2.1. Basics of convection
       </a>
      </li>
-     <li class="toctree-l3 current active collapsible-parent">
-      <a class="reference internal" href="rheologies.html">
-       4.2.2. Linear rheologies: the isoviscous case
+     <li class="toctree-l3">
+      <a class="reference internal" href="simple.html">
+       4.2.2. Simple isoviscous rheology
       </a>
-      <ul class="current collapse-ul">
-       <li class="toctree-l4">
-        <a class="reference internal" href="simple.html">
-         4.2.2.1. Simple isoviscous rheology
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="heating.html">
-         4.2.2.2. Isoviscous rheology with internal and mixed heating
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="heating.html#mixed-heating">
-         4.2.2.3. Mixed heating
-        </a>
-       </li>
-       <li class="toctree-l4 current active">
-        <a class="current reference internal" href="#">
-         4.2.2.4. Isoviscous rheology in cylindrical geometry
-        </a>
-       </li>
-      </ul>
-      <i class="fas fa-chevron-down">
-      </i>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="heating.html">
+       4.2.3. Isoviscous rheology with internal and mixed heating
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="heating.html#mixed-heating">
+       4.2.4. Mixed heating
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       4.2.5. Isoviscous rheology in cylindrical geometry
+      </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="conclusion.html">
-       4.2.3. Conclusion
+       4.2.6. Conclusion
       </a>
      </li>
     </ul>
@@ -464,12 +455,12 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#defining-a-coordinate-system">
-   4.2.2.4.1. Defining a coordinate system
+   4.2.5.1. Defining a coordinate system
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#effects-on-conduction-and-instability">
-   4.2.2.4.2. Effects on conduction and instability
+   4.2.5.2. Effects on conduction and instability
   </a>
  </li>
 </ul>
@@ -484,9 +475,9 @@
               <div>
                 
   <div class="section" id="isoviscous-rheology-in-cylindrical-geometry">
-<h1><span class="section-number">4.2.2.4. </span>Isoviscous rheology in cylindrical geometry<a class="headerlink" href="#isoviscous-rheology-in-cylindrical-geometry" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">4.2.5. </span>Isoviscous rheology in cylindrical geometry<a class="headerlink" href="#isoviscous-rheology-in-cylindrical-geometry" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="defining-a-coordinate-system">
-<h2><span class="section-number">4.2.2.4.1. </span>Defining a coordinate system<a class="headerlink" href="#defining-a-coordinate-system" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2.5.1. </span>Defining a coordinate system<a class="headerlink" href="#defining-a-coordinate-system" title="Permalink to this headline">¶</a></h2>
 <p>In any convection model, gravity defines the natural down direction and gives us our first most important scale: the depth <span class="math notranslate nohighlight">\(z\)</span> from the surface, or its complement, the height from the model base <span class="math notranslate nohighlight">\(h=1-z\)</span>.</p>
 <p>If the domain is allowed to curve around a certain locus, a cylindrical or annular geometry is obtained which is more appropriate for planetary mantles. While we retain <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(z\)</span> as terms relevant to any action within the domain, we must also introduce a concept of radial height <span class="math notranslate nohighlight">\(r\)</span>, understood here to represent the distance from the planetary centre of gravity. The cylindrical domain, for us representing the mantle, is thus bounded by the inner radius <span class="math notranslate nohighlight">\(r_{i}\)</span> and the outer radius <span class="math notranslate nohighlight">\(r_{o}\)</span>, defining an area of <span class="math notranslate nohighlight">\(\pi(r_o^2 - r_i^2)\)</span>.</p>
 <p>Our choice of radii implies a degree of curvature <span class="math notranslate nohighlight">\(f\)</span>:</p>
@@ -520,7 +511,7 @@ A = FD
 <p>Such a scheme leaves us with two competing claims for a ‘natural’ denominator of the angular coordinate - <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(F\)</span>. While authors have sometimes preferred to keep <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(F\)</span> constant and allow <span class="math notranslate nohighlight">\(A\)</span> to vary <span id="id2">[<a class="reference internal" href="../../../references.html#id691">Jarvis, 1994</a>]</span>, we have for the most part chosen to fix <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(F\)</span> with <span class="math notranslate nohighlight">\(D\)</span> as the free parameter, as in <span id="id3">[<a class="reference internal" href="../../../references.html#id526">Jarvis, 1993</a>]</span>: this simplifies comparisons with plane-layer simulations at the cost of producing planforms which would be unstable if scaled to the full annulus.</p>
 </div>
 <div class="section" id="effects-on-conduction-and-instability">
-<h2><span class="section-number">4.2.2.4.2. </span>Effects on conduction and instability<a class="headerlink" href="#effects-on-conduction-and-instability" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2.5.2. </span>Effects on conduction and instability<a class="headerlink" href="#effects-on-conduction-and-instability" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="isocondf" style="width: 800px">
 <div class="cell_output docutils container">
 <img alt="../../../_images/cylindrical_5_0.png" src="../../../_images/cylindrical_5_0.png" />
@@ -641,8 +632,8 @@ Nu = g(f) \cdot R^{\frac{1}{3}}
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="heating.html" title="previous page"><span class="section-number">4.2.2.2. </span>Isoviscous rheology with internal and mixed heating</a>
-    <a class='right-next' id="next-link" href="conclusion.html" title="next page"><span class="section-number">4.2.3. </span>Conclusion</a>
+    <a class='left-prev' id="prev-link" href="heating.html" title="previous page"><span class="section-number">4.2.3. </span>Isoviscous rheology with internal and mixed heating</a>
+    <a class='right-next' id="next-link" href="conclusion.html" title="next page"><span class="section-number">4.2.6. </span>Conclusion</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
