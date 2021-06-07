@@ -134,3 +134,10 @@ def linear_regression(x, y, log = False):
         return predictor, math.e ** intercept, slope[0], r2
     predictor = lambda x: linreg.predict(x.reshape(-1, 1))
     return predictor, slope[0], intercept, r2
+
+def derivative(y, x, n = 1):
+    n -= 1
+    out = np.diff(y) / np.diff(x), x[:-1] + np.diff(x) / 2
+    if n:
+        return derivative(*out, n)
+    return out

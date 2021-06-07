@@ -1,21 +1,9 @@
 {
   "content/chapter_04_isoviscous/background/cylindrical": {
-    "isocondfr2": {
-      "data": {
-        "application/papermill.record/text/plain": "0.9981308590094721"
-      },
-      "metadata": {
-        "scrapbook": {
-          "mime_prefix": "application/papermill.record/",
-          "name": "isocondfr2"
-        }
-      },
-      "output_type": "display_data"
-    },
     "isocondf": {
       "data": {
         "application/papermill.record/image/png": null,
-        "application/papermill.record/text/plain": "<everest.window.imop.Paste at 0x7fc254ea07c0>"
+        "application/papermill.record/text/plain": "<everest.window.imop.Paste at 0x7f2508234540>"
       },
       "metadata": {
         "scrapbook": {
@@ -23,7 +11,56 @@
           "name": "isocondf"
         },
         "filenames": {
-          "image/png": "/home/morpheus/workspace/mount/book/_build/jupyter_execute/content/chapter_04_isoviscous/background/cylindrical_5_0.png"
+          "image/png": "/home/morpheus/workspace/mount/book/_build/jupyter_execute/content/chapter_04_isoviscous/background/cylindrical_8_0.png"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "isocondinternal": {
+      "data": {
+        "application/papermill.record/image/png": null,
+        "application/papermill.record/text/plain": "<everest.window.imop.Concat at 0x7f24fc668c10>"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "application/papermill.record/",
+          "name": "isocondinternal"
+        },
+        "filenames": {
+          "image/png": "/home/morpheus/workspace/mount/book/_build/jupyter_execute/content/chapter_04_isoviscous/background/cylindrical_18_0.png"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "isocondfr2": {
+      "data": {
+        "application/papermill.record/image/png": null,
+        "application/papermill.record/text/latex": "$\\displaystyle 0.998130859009472$",
+        "application/papermill.record/text/plain": "0.9981308590094721"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "application/papermill.record/",
+          "name": "isocondfr2"
+        },
+        "filenames": {
+          "image/png": "/home/morpheus/workspace/mount/book/_build/jupyter_execute/content/chapter_04_isoviscous/background/cylindrical_8_1.png"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "isocondffit": {
+      "data": {
+        "application/papermill.record/image/png": null,
+        "application/papermill.record/text/plain": "<everest.window.canvas.Canvas at 0x7f25085236d0>"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "application/papermill.record/",
+          "name": "isocondffit"
+        },
+        "filenames": {
+          "image/png": "/home/morpheus/workspace/mount/book/_build/jupyter_execute/content/chapter_04_isoviscous/background/cylindrical_9_0.png"
         }
       },
       "output_type": "display_data"
@@ -33,7 +70,7 @@
     "isocondhmixed": {
       "data": {
         "application/papermill.record/image/png": null,
-        "application/papermill.record/text/plain": "<everest.window.imop.Concat at 0x7fcbae65c430>"
+        "application/papermill.record/text/plain": "<everest.window.imop.Concat at 0x7f0a1ba4aeb0>"
       },
       "metadata": {
         "scrapbook": {
@@ -41,7 +78,7 @@
           "name": "isocondhmixed"
         },
         "filenames": {
-          "image/png": "/home/morpheus/workspace/mount/book/_build/jupyter_execute/content/chapter_04_isoviscous/background/heating_10_0.png"
+          "image/png": "/home/morpheus/workspace/mount/book/_build/jupyter_execute/content/chapter_04_isoviscous/background/heating_12_0.png"
         }
       },
       "output_type": "display_data"
@@ -49,7 +86,7 @@
     "isocondh": {
       "data": {
         "application/papermill.record/image/png": null,
-        "application/papermill.record/text/plain": "<everest.window.canvas.Canvas at 0x7fcb61067d60>"
+        "application/papermill.record/text/plain": "<everest.window.imop.Concat at 0x7f0a1b381040>"
       },
       "metadata": {
         "scrapbook": {
@@ -57,7 +94,7 @@
           "name": "isocondh"
         },
         "filenames": {
-          "image/png": "/home/morpheus/workspace/mount/book/_build/jupyter_execute/content/chapter_04_isoviscous/background/heating_6_0.png"
+          "image/png": "/home/morpheus/workspace/mount/book/_build/jupyter_execute/content/chapter_04_isoviscous/background/heating_7_0.png"
         }
       },
       "output_type": "display_data"
