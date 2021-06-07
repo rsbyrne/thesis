@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4.2.5. Isoviscous rheology in cylindrical geometry &#8212; What kind of thing is a planet?</title>
+    <title>4.2.4. Isoviscous rheology in cylindrical geometry &#8212; What kind of thing is a planet?</title>
     
   <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -61,7 +61,7 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="4.2.6. Conclusion" href="conclusion.html" />
+    <link rel="next" title="4.2.5. Conclusion" href="conclusion.html" />
     <link rel="prev" title="4.2.3. Isoviscous rheology with internal and mixed heating" href="heating.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -206,19 +206,14 @@
        4.2.3. Isoviscous rheology with internal and mixed heating
       </a>
      </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="heating.html#mixed-heating">
-       4.2.4. Mixed heating
-      </a>
-     </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       4.2.5. Isoviscous rheology in cylindrical geometry
+       4.2.4. Isoviscous rheology in cylindrical geometry
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="conclusion.html">
-       4.2.6. Conclusion
+       4.2.5. Conclusion
       </a>
      </li>
     </ul>
@@ -455,13 +450,49 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#defining-a-coordinate-system">
-   4.2.5.1. Defining a coordinate system
+   4.2.4.1. Defining a coordinate system
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#effects-on-conduction-and-instability">
-   4.2.5.2. Effects on conduction and instability
+  <a class="reference internal nav-link" href="#basal-heating">
+   4.2.4.2. Basal heating
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conductive-solution">
+     4.2.4.2.1. Conductive solution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instability-and-convection">
+     4.2.4.2.2. Instability and convection
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#internal-heating-in-the-annulus">
+   4.2.4.3. Internal heating in the annulus
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     4.2.4.3.1. Conductive solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mixed-heating-in-the-annulus">
+   4.2.4.4. Mixed heating in the annulus
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     4.2.4.4.1. Conductive solution
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -475,9 +506,9 @@
               <div>
                 
   <div class="section" id="isoviscous-rheology-in-cylindrical-geometry">
-<h1><span class="section-number">4.2.5. </span>Isoviscous rheology in cylindrical geometry<a class="headerlink" href="#isoviscous-rheology-in-cylindrical-geometry" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">4.2.4. </span>Isoviscous rheology in cylindrical geometry<a class="headerlink" href="#isoviscous-rheology-in-cylindrical-geometry" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="defining-a-coordinate-system">
-<h2><span class="section-number">4.2.5.1. </span>Defining a coordinate system<a class="headerlink" href="#defining-a-coordinate-system" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2.4.1. </span>Defining a coordinate system<a class="headerlink" href="#defining-a-coordinate-system" title="Permalink to this headline">¶</a></h2>
 <p>In any convection model, gravity defines the natural down direction and gives us our first most important scale: the depth <span class="math notranslate nohighlight">\(z\)</span> from the surface, or its complement, the height from the model base <span class="math notranslate nohighlight">\(h=1-z\)</span>.</p>
 <p>If the domain is allowed to curve around a certain locus, a cylindrical or annular geometry is obtained which is more appropriate for planetary mantles. While we retain <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(z\)</span> as terms relevant to any action within the domain, we must also introduce a concept of radial height <span class="math notranslate nohighlight">\(r\)</span>, understood here to represent the distance from the planetary centre of gravity. The cylindrical domain, for us representing the mantle, is thus bounded by the inner radius <span class="math notranslate nohighlight">\(r_{i}\)</span> and the outer radius <span class="math notranslate nohighlight">\(r_{o}\)</span>, defining an area of <span class="math notranslate nohighlight">\(\pi(r_o^2 - r_i^2)\)</span>.</p>
 <p>Our choice of radii implies a degree of curvature <span class="math notranslate nohighlight">\(f\)</span>:</p>
@@ -487,72 +518,115 @@
 <p>If we further stipulate:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-r_{o} - r_{i} = 1 \\
+\Delta r = r_{o} - r_{i} = 1 \\
 r_{o} \to 1 \quad as \quad f \to 0
 \end{split}\]</div>
-<p>We can non-dimensionalise the planetary radial height <span class="math notranslate nohighlight">\(r\)</span> as <span class="math notranslate nohighlight">\(r^{*}\)</span> (<em>r-star</em>), such that <span class="math notranslate nohighlight">\(r^{*}_o = 1\)</span>:</p>
+<p>Then:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 r_i = \frac{f}{1 - f}, \quad r_o = \frac{1}{1 - f} \\
-r^{*} = \frac{h + r_i}{r_0} = h(1-f) + f
+r(h) = r_i + h
 \end{split}\]</div>
-<p>This leaves us with four different terms to describe radial position: <span class="math notranslate nohighlight">\(h\)</span>, the dimensionless height from the mantle base; <span class="math notranslate nohighlight">\(z\)</span>, its complement; <span class="math notranslate nohighlight">\(r\)</span>, the radial scale such that <span class="math notranslate nohighlight">\(r_o - r_i = 1\)</span>; and <span class="math notranslate nohighlight">\(r^{*}\)</span>, the radial scale such that <span class="math notranslate nohighlight">\(r_0 = 1\)</span>. Each of these scales will prove natural in some contexts and less so in others, and all find use in our analysis.</p>
-<p>To complete our coordinate system, we require an angular coordinate as well: the angle <span class="math notranslate nohighlight">\(\theta\)</span> in radians anticlockwise from an arbitrary origin. Often we will only want to reproduce a small wedge of the annulus, as time-dependence and numerical workload scale exponentially with aspect ratio; we can define our wedge selection <span class="math notranslate nohighlight">\(D\)</span> in radians:</p>
-<div class="math notranslate nohighlight">
-\[ \theta: 0 \to D, \quad D \leq 2\pi \]</div>
-<p>If the simulation is to represent periodic flow around the annulus, values of <span class="math notranslate nohighlight">\(D\)</span> must satsify <span class="math notranslate nohighlight">\(\pi / l\)</span>, where <span class="math notranslate nohighlight">\(l\)</span> is a positive integer representing the number of convection cell pairs it would take to populate the full annulus at equivalent curvature (i.e. the number of upwellings or downwellings).</p>
-<p>The selection of <span class="math notranslate nohighlight">\(D\)</span> also selects an aspect ratio for the domain, but only once we choose a depth at which to measure it. It is most convenient to use the arc length through the mid-depth, which then relates to <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(f\)</span> via a new term, <span class="math notranslate nohighlight">\(F\)</span>, equivalent to the radial distance <span class="math notranslate nohighlight">\(r\)</span> from the planetary centre of gravity to the mantle mid-depth:</p>
+<p>Which suggests non-dimensionalising the planetary radial height <span class="math notranslate nohighlight">\(r\)</span> as <span class="math notranslate nohighlight">\(r^{*}\)</span> (<em>r-star</em>) such that <span class="math notranslate nohighlight">\({r^{*}}_o = 1\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-F \equiv \frac{r_{i} + r_{o}}{2} = \frac{1 + f}{2 \left( 1 - f \right)} \\
-A = FD
+{r^{*}}_i = f, \quad {r^{*}}_o = 1 \\
+\Delta r^{*} = 1 - f \\
+r^{*}(h) = \frac{h + r_i}{r_0} = \frac{\Delta r^{*}}{r} = h(1-f) + f
+\end{split}\]</div>
+<p>This leaves us with four different terms to describe radial position: <span class="math notranslate nohighlight">\(h\)</span>, the dimensionless height from the mantle base; <span class="math notranslate nohighlight">\(z\)</span>, its complement; <span class="math notranslate nohighlight">\(r\)</span>, the radial scale such that <span class="math notranslate nohighlight">\(r_o - r_i = 1\)</span>; and <span class="math notranslate nohighlight">\(r^{*}\)</span>, the radial scale such that <span class="math notranslate nohighlight">\(r_0 = 1\)</span>. Each of these scales will prove natural in some contexts and less so in others, and all find use in our analysis.</p>
+<p>To complete our coordinate system, we require an angular coordinate as well: the angle <span class="math notranslate nohighlight">\(\theta\)</span> in radians anticlockwise from an arbitrary origin. Often we will only want to reproduce a small wedge of the annulus, as time-dependence and numerical workload scale exponentially with aspect ratio; we can define our wedge selection <span class="math notranslate nohighlight">\(\Theta\)</span> in radians:</p>
+<div class="math notranslate nohighlight">
+\[ \theta: 0 \to \Theta, \quad \Theta \leq 2\pi \]</div>
+<p>If the simulation is to represent periodic flow around the annulus, values of <span class="math notranslate nohighlight">\(\Theta\)</span> must satsify <span class="math notranslate nohighlight">\(\pi / l\)</span>, where <span class="math notranslate nohighlight">\(l\)</span> is a positive integer representing the number of convection cell pairs it would take to populate the full annulus at equivalent curvature (i.e. the number of upwellings or downwellings).</p>
+<p>The selection of <span class="math notranslate nohighlight">\(\Theta\)</span> also selects an aspect ratio for the domain, but only once we choose a depth at which to measure it. It is most convenient to use the arc length through the mid-depth, which then relates to <span class="math notranslate nohighlight">\(\Theta\)</span> and <span class="math notranslate nohighlight">\(f\)</span> via a new term: the radial distance from the planetary centre of gravity to the mantle mid-depth, <span class="math notranslate nohighlight">\(r_m\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+r_m \equiv \frac{r_{i} + r_{o}}{2} = \frac{1 + f}{2 \left( 1 - f \right)} \\
+A = r_m \Theta
 \end{split}\]</div>
 <p>If radius has been non-dimensionalised as above, this is equivalent to stating that the aspect ratio is equal to the area of the domain - regardless of <span class="math notranslate nohighlight">\(f\)</span> - just as it is in the Cartesian case.</p>
-<p>Such a scheme leaves us with two competing claims for a ‘natural’ denominator of the angular coordinate - <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(F\)</span>. While authors have sometimes preferred to keep <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(F\)</span> constant and allow <span class="math notranslate nohighlight">\(A\)</span> to vary <span id="id2">[<a class="reference internal" href="../../../references.html#id691">Jarvis, 1994</a>]</span>, we have for the most part chosen to fix <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(F\)</span> with <span class="math notranslate nohighlight">\(D\)</span> as the free parameter, as in <span id="id3">[<a class="reference internal" href="../../../references.html#id526">Jarvis, 1993</a>]</span>: this simplifies comparisons with plane-layer simulations at the cost of producing planforms which would be unstable if scaled to the full annulus.</p>
+<p>Such a scheme leaves us with two competing claims for a ‘natural’ denominator of the angular coordinate - <span class="math notranslate nohighlight">\(\Theta\)</span> and <span class="math notranslate nohighlight">\(r_m\)</span>. While authors have sometimes preferred to keep <span class="math notranslate nohighlight">\(\Theta\)</span> and <span class="math notranslate nohighlight">\(r_m\)</span> constant and allow <span class="math notranslate nohighlight">\(A\)</span> to vary <span id="id2">[<a class="reference internal" href="../../../references.html#id691">Jarvis, 1994</a>]</span>, we have for the most part chosen to fix <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(r_m\)</span> with <span class="math notranslate nohighlight">\(\Theta\)</span> as the free parameter, as in <span id="id3">[<a class="reference internal" href="../../../references.html#id526">Jarvis, 1993</a>]</span>: this simplifies comparisons with plane-layer simulations at the cost of producing planforms which would be unstable if scaled to the full annulus.</p>
+<p>Some system forcings, like internal heat, scale with area. The proportion of the annulus lying below a particular height <span class="math notranslate nohighlight">\(h\)</span> - which we shall call <span class="math notranslate nohighlight">\(D\)</span> for ‘disk’ - is a function of the inner and mid-radii:</p>
+<div class="math notranslate nohighlight">
+\[
+D(h) = \frac{r^2 - {r_i}^2}{2 r_m}, \quad r = h + r_i
+\]</div>
+<p>Having declared that the total area shall always equal the aspect ratio <span class="math notranslate nohighlight">\(A\)</span>, the true area under any depth <span class="math notranslate nohighlight">\(h\)</span> is simply <span class="math notranslate nohighlight">\(D \cdot A\)</span>.</p>
+<p>From <span class="math notranslate nohighlight">\(r_m\)</span> we are also able to derive <span class="math notranslate nohighlight">\(s\)</span>, a statement of the angular length in ‘real’ terms (i.e. in the same metric as <span class="math notranslate nohighlight">\(r\)</span>). It is convenient to non-dimensionalise <span class="math notranslate nohighlight">\(s\)</span> as <span class="math notranslate nohighlight">\(s^{*} = s / A\)</span>, such that the dimensionless length through the mid-depth <span class="math notranslate nohighlight">\({s^{*}}_m = 1\)</span>. We can then write <span class="math notranslate nohighlight">\(s^{*}\)</span> very simply as a function of <span class="math notranslate nohighlight">\(r^{*}\)</span>, and the inner and outer lengths accordingly:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+s^{*} = 2 \frac{r^{*}}{1+f} \\
+{s^{*}}_i = 2 \frac{f}{1+f}, \quad {s^{*}}_o = 2 \frac{1}{1+f}
+\end{split}\]</div>
+<p>The length <span class="math notranslate nohighlight">\(s\)</span> is, among other things, the factor by which an average measurement of some variable taken across a layer can be converted into a total value for that layer. It is vital to account for varying <span class="math notranslate nohighlight">\(s\)</span> whenever comparing between different layers in a given system, or between equivalent layers in systems of differing <span class="math notranslate nohighlight">\(f\)</span>.</p>
 </div>
-<div class="section" id="effects-on-conduction-and-instability">
-<h2><span class="section-number">4.2.5.2. </span>Effects on conduction and instability<a class="headerlink" href="#effects-on-conduction-and-instability" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="basal-heating">
+<h2><span class="section-number">4.2.4.2. </span>Basal heating<a class="headerlink" href="#basal-heating" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="conductive-solution">
+<h3><span class="section-number">4.2.4.2.1. </span>Conductive solution<a class="headerlink" href="#conductive-solution" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-default" id="isocondf" style="width: 800px">
 <div class="cell_output docutils container">
-<img alt="../../../_images/cylindrical_5_0.png" src="../../../_images/cylindrical_5_0.png" />
+<img alt="../../../_images/cylindrical_8_0.png" src="../../../_images/cylindrical_8_0.png" />
 </div>
 <p class="caption"><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Summary of the scaling behaviours of isoviscous conduction for varying curvature parameter <span class="math notranslate nohighlight">\(f\)</span>. We obtain a natural scaling for <span class="math notranslate nohighlight">\(f\)</span> versus <span class="math notranslate nohighlight">\(T_{av}\)</span> with an <span class="math notranslate nohighlight">\(R^2\)</span> of <span class="pasted-text">0.998</span>.</span><a class="headerlink" href="#isocondf" title="Permalink to this image">¶</a></p>
 </div>
+<div class="figure align-default" id="isocondffit" style="width: 300px">
+<div class="cell_output docutils container">
+<img alt="../../../_images/cylindrical_9_0.png" src="../../../_images/cylindrical_9_0.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 4.4 </span><span class="caption-text">The analytical scaling of conductive temperature with <span class="math notranslate nohighlight">\(\ln{r^{*}}/\ln{f}\)</span> holds empirically with extreme precision.</span><a class="headerlink" href="#isocondffit" title="Permalink to this image">¶</a></p>
+</div>
 <p>It is a requirement of a conductive steady state (<span class="math notranslate nohighlight">\(Nu=1\)</span>) that the thermal flux must be the same through every layer. In the planar case this results in a linear geotherm which, in a model with fixed and unitless boundary temperatures, results in a simple function of <span class="math notranslate nohighlight">\(T = z\)</span> where <span class="math notranslate nohighlight">\(z\)</span> is dimensionless depth from the top of the model. The average temperature is then trivially <span class="math notranslate nohighlight">\(T_{av}=0.5\)</span>. (For any system in pure conduction the <em>Nusselt</em> number is by definition <span class="math notranslate nohighlight">\(1\)</span>.)</p>
-<p>In a cylindrical domain, however, the length of each successive layer goes with the radius as <span class="math notranslate nohighlight">\(2\pi r\)</span>. To sustain a given flux, then, the temperature drop across each layer must go as <span class="math notranslate nohighlight">\(\Delta T \propto r^{-1}\)</span>. Since know that, in the limit of <span class="math notranslate nohighlight">\(f\)</span>:</p>
+<p>In a cylindrical domain, however, the length of each layer <span class="math notranslate nohighlight">\(s\)</span> is a function of depth and curvature as we have shown; consequently, shallower layers may transmit the same flux with a smaller temperature drop:</p>
+<div class="math notranslate nohighlight">
+\[
+\phi_q \propto s \cdot \frac{dT}{dh}
+\]</div>
+<p>To define the flux, we need the geothermal gradient. The conductive geotherm can be elegantly stated in terms of <span class="math notranslate nohighlight">\(r^{*}\)</span> <code class="xref std std-numref docutils literal notranslate"><span class="pre">isocondf,isocondffit</span></code>:</p>
+<div class="math notranslate nohighlight">
+\[
+T(h) = \frac{\ln{r^{*}}}{\ln{f}}
+\]</div>
+<p>And so the geothermal gradient:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dT}{dh} = \frac{f-1}{r^{*}\ln{f}}
+\]</div>
+<p>And finally the flux itself can be written as:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-\frac{dT}{dr} &amp;\to -1 \quad &amp;as \quad f \to 1 \\
-&amp;\to 0 \quad &amp;as \quad f \to 0
+\phi_q &amp;\propto \frac{s^{*}(f-1)}{r^{*}\ln{f}} \\
+&amp;= \frac{2(1-f)}{(f+1)\ln{f}}
 \end{align*} \end{split}\]</div>
-<p>We can reconstruct the relation in terms of dimensionless radial height <span class="math notranslate nohighlight">\(r^{*}=h(1-f)+f\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+&amp;\to -1 &amp;as \quad f \to 1 \\
+&amp;\to 0 &amp;as \quad f \to 0
+\end{align*} \end{split}\]</div>
+<p>Or very succinctly in terms of the ‘true’ radius of the mid-depth:</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{dT}{dr^{*}} = \frac{1 - f}{r^{*}\ln{f}}
+\phi_q \propto \frac{1}{r_m \ln{f}}
 \]</div>
-<p>The antiderivative then yields the geotherm:</p>
+<p>To facilitate comparison between systems of different curvature, we can then use the above to define a dimensionless planetary flux <span class="math notranslate nohighlight">\({\phi_q}^{*}\)</span> - which is really just another name for the <em>Nusselt</em> number <span class="math notranslate nohighlight">\(Nu\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-T(r^{*}) = \frac{\ln{r^{*}}}{\ln{f}}
-\]</div>
-<p>In the planar case, the average temperature of the system is always half the temperature drop. In the cylindrical case, however, we can observe that the average temperature sustained by the nonlinear geotherm must be a function of <span class="math notranslate nohighlight">\(f\)</span>, which will hereafter be referred to as <span class="math notranslate nohighlight">\(T_{c}\)</span>:</p>
+\[\begin{split} \begin{align*}
+{\phi_q}^{*} &amp;= \frac{ {\phi_q} }{ {\phi_q}_c } \\
+&amp;\equiv Nu
+\end{align*} \end{split}\]</div>
+<p>Where the subscript <span class="math notranslate nohighlight">\(c\)</span>, here and elsewhere, denotes a purely conductive endmember. Because <span class="math notranslate nohighlight">\(Nu\)</span> now inherits a dependency on <span class="math notranslate nohighlight">\(f\)</span>, it is no longer equivalent to the dimensionless surface temperature gradient, and so it is important always to present and discuss it in its proper terms as a ratio of fluxes.</p>
+<p>Just as the flux now scales with <span class="math notranslate nohighlight">\(f\)</span>, so must the average mantle temperature. In the planar case, the average temperature of the system is always half the temperature drop. In the cylindrical case, however:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
 T_{av} &amp;= \dfrac{1}{2} \large{\root \huge{e} \of f} \\
 &amp;\equiv T_{c}
 \end{align*} \end{split}\]</div>
-<p>We validate these scalings empirically <a class="reference internal" href="#isocondf"><span class="std std-numref">Fig. 4.3</span></a>.</p>
-<p>This dependency of the conductive geotherm on <span class="math notranslate nohighlight">\(f\)</span> has an immediate impact on convection and instability analysis. For one thing, it is no longer possible to identify <span class="math notranslate nohighlight">\(Nu\)</span> as simply the dimensionless surface temperature gradient: instead, the definition of <span class="math notranslate nohighlight">\(Nu\)</span> must scale away from surface gradient by a factor of the conductive geotherm at <span class="math notranslate nohighlight">\(h_o = r^{*}_o = 1\)</span>, which we shall for convenience term ‘<span class="math notranslate nohighlight">\(Nu_{c}\)</span>’ - the conductive gradient of the cylindrical domain relative to that of a planar domain:</p>
-<div class="math notranslate nohighlight">
-\[
-Nu_{c} = \frac{1 - f}{\ln{f}}
-\]</div>
-<p>Now we may write the convective <span class="math notranslate nohighlight">\(Nu\)</span> as:</p>
-<div class="math notranslate nohighlight">
-\[
-Nu = \frac{1}{Nu_{c}} \cdot \left| \frac{\partial T}{\partial r} \right| _{S}
-\]</div>
-<p>Where <span class="math notranslate nohighlight">\(|x|_S\)</span> again represents the average value across a surface. An implication of this dependency - obvious, but worth stating - is that the upper and lower boundaries are no longer symmetrical. This invalidates many of the assumptions that made the planar case amenable to analysis. The additional space at the top of the model now allows more room for downwellings relative to basal upwellings, tending to promote instability <span id="id4">[<a class="reference internal" href="../../../references.html#id130">Jarvis, 1991</a>]</span>; on the other hand, the curved geotherm and the increased surface for radiating heat would tend to permit a comparatively thicker upper boundary layer. The effect of these countervailing forcings on the fundamental scalings of <span class="math notranslate nohighlight">\(Nu\)</span>, <span class="math notranslate nohighlight">\(Ra\)</span>, <span class="math notranslate nohighlight">\(Ra_{cr}\)</span>, and the all-important relation <span class="math notranslate nohighlight">\(Nu \propto R^{\beta}\)</span> is not obvious.</p>
+<p>The relationship is apparent in the numerical results <a class="reference internal" href="#isocondf"><span class="std std-numref">Fig. 4.3</span></a>.</p>
+</div>
+<div class="section" id="instability-and-convection">
+<h3><span class="section-number">4.2.4.2.2. </span>Instability and convection<a class="headerlink" href="#instability-and-convection" title="Permalink to this headline">¶</a></h3>
+<p>An implication of <span class="math notranslate nohighlight">\(Nu\)</span>’s dependency on curvature is that the upper and lower boundaries must no longer be symmetrical. This invalidates many of the assumptions that made the planar case amenable to analysis. The additional space at the top of the model now allows more room for downwellings relative to basal upwellings, tending to promote instability <span id="id4">[<a class="reference internal" href="../../../references.html#id130">Jarvis, 1991</a>]</span>; on the other hand, the curved geotherm and the increased surface for radiating heat would tend to permit a comparatively thicker upper boundary layer. The effect of these countervailing forcings on the fundamental scalings of <span class="math notranslate nohighlight">\(Nu\)</span>, <span class="math notranslate nohighlight">\(Ra\)</span>, <span class="math notranslate nohighlight">\(Ra_{cr}\)</span>, and the all-important relation <span class="math notranslate nohighlight">\(Nu \propto R^{\beta}\)</span> is not obvious.</p>
 <p>To begin to unpack the complexities of convection in the annulus, we can start with the assumption that - as in the planar case - the convective steady state will eventually result in a broad intracellular region of uniform temperature <span class="math notranslate nohighlight">\(T_{cell}\)</span>. Assuming a unit temperature drop <span class="math notranslate nohighlight">\(\Delta T = 1\)</span>, we can write:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -603,6 +677,44 @@ Nu = g(f) \cdot R^{\frac{1}{3}}
 <p>Using this scaling, Jarvis was able to obtain a <em>beta</em> exponent of <span class="math notranslate nohighlight">\(0.321 \pm 0.001\)</span> across four values of <span class="math notranslate nohighlight">\(f\)</span> from <span class="math notranslate nohighlight">\((1.0 - 0.1)\)</span> <span id="id7">[<a class="reference internal" href="../../../references.html#id526">Jarvis, 1993</a>]</span>.</p>
 </div>
 </div>
+<div class="section" id="internal-heating-in-the-annulus">
+<h2><span class="section-number">4.2.4.3. </span>Internal heating in the annulus<a class="headerlink" href="#internal-heating-in-the-annulus" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h3><span class="section-number">4.2.4.3.1. </span>Conductive solution<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="isocondinternal" style="width: 800px">
+<div class="cell_output docutils container">
+<img alt="../../../_images/cylindrical_18_0.png" src="../../../_images/cylindrical_18_0.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 4.5 </span><span class="caption-text">Summary of the scaling behaviours of isoviscous conduction under internal heating <span class="math notranslate nohighlight">\(H\)</span> for varying curvature parameter <span class="math notranslate nohighlight">\(f\)</span> (colours as in previous charts). While samples of varying heat have been plotted, they do not appear in these charts due to the intentional factoring out of <span class="math notranslate nohighlight">\(H\)</span>, demonstrating that this parameter is a simple coefficient.</span><a class="headerlink" href="#isocondinternal" title="Permalink to this image">¶</a></p>
+</div>
+<p>It was established previously that, for an internally heated system, the geotherm and geothermal gradient are represented by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+{T(h)}_{c(internal)} &amp;= \frac{H}{2} \left( 1 - h^2 \right) \\
+{{T(h)}_{c(internal)}}^{'} &amp;= H\cdot h
+\end{align*} \end{split}\]</div>
+<p>This is intuitive because the source flux visible to each layer is proportional to the area below that layer, which goes linearly with height <span class="math notranslate nohighlight">\(h\)</span> in a planar domain.</p>
+<p>In the annulus, though, the proportion of the domain beneath a given height <span class="math notranslate nohighlight">\(h\)</span> is instead represented by <span class="math notranslate nohighlight">\(D\)</span>, as we have shown. If we further assume that <span class="math notranslate nohighlight">\(H\)</span> is non-dimensionalised so as to represent the total flux of the model (i.e. it equals <span class="math notranslate nohighlight">\(1\)</span> for all geometries), then the flux through each layer height <span class="math notranslate nohighlight">\(h\)</span> of the annulus must simply be:</p>
+<div class="math notranslate nohighlight">
+\[
+{\phi_q}(h) = -H \cdot D(h)
+\]</div>
+<p>We show that this holds exactly <a class="reference internal" href="#isocondinternal"><span class="std std-numref">Fig. 4.5</span></a>.</p>
+<p>As before, the geothermal gradient required to transmit this flux must account for the varying layer length <span class="math notranslate nohighlight">\(s^{*}\)</span> - a function of <span class="math notranslate nohighlight">\(h\)</span> and the <span class="math notranslate nohighlight">\(f\)</span> parameter. Thus:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dT}{dh} \propto \frac{\phi_q}{s^{*}} = -\frac{HD}{s^{*}}
+\]</div>
+<p>The integral with respect to <span class="math notranslate nohighlight">\(h\)</span> yields the geotherm:</p>
+</div>
+</div>
+<div class="section" id="mixed-heating-in-the-annulus">
+<h2><span class="section-number">4.2.4.4. </span>Mixed heating in the annulus<a class="headerlink" href="#mixed-heating-in-the-annulus" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id9">
+<h3><span class="section-number">4.2.4.4.1. </span>Conductive solution<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -633,7 +745,7 @@ Nu = g(f) \cdot R^{\frac{1}{3}}
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="heating.html" title="previous page"><span class="section-number">4.2.3. </span>Isoviscous rheology with internal and mixed heating</a>
-    <a class='right-next' id="next-link" href="conclusion.html" title="next page"><span class="section-number">4.2.6. </span>Conclusion</a>
+    <a class='right-next' id="next-link" href="conclusion.html" title="next page"><span class="section-number">4.2.5. </span>Conclusion</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
