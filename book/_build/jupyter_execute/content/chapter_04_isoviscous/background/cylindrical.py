@@ -391,7 +391,7 @@ canvas
 # \phi_q \propto s \cdot \frac{dT}{dh}
 # $$
 # 
-# To define the flux, we need the geothermal gradient. The conductive geotherm can be elegantly stated in terms of $r^{*}$ {numref}`isocondf,isocondffit`:
+# To define the flux, we need the geothermal gradient. The conductive geotherm can be elegantly stated in terms of $r^{*}$ {numref}`isocondf` {numref}`isocondffit`:
 # 
 # $$
 # T(h) = \frac{\ln{r^{*}}}{\ln{f}}
