@@ -18,7 +18,16 @@
     - file: content/chapter_02_methods/section2
     - file: content/chapter_02_methods/section3
     - file: content/chapter_02_methods/conclusion
-  - file: content/chapter_03_everest/main
+  - file: content/chapter_03_everest/abstract
+    sections:
+    - file: content/chapter_03_everest/introduction
+    - file: content/chapter_03_everest/motivation
+    - file: content/chapter_03_everest/doctrine
+    - file: content/chapter_03_everest/framework
+    - file: content/chapter_03_everest/implementation
+    - file: content/chapter_03_everest/demonstration
+    - file: content/chapter_03_everest/discussion
+    - file: content/chapter_03_everest/conclusion
   - file: content/chapter_04_isoviscous/abstract
     sections:
     - file: content/chapter_04_isoviscous/introduction

@@ -1,30 +1,33 @@
 #!/bin/bash
 
-sudo apt update
-sudo apt-get update
+apt update
+apt-get update
 
-sudo pip3 install --no-cache-dir -U Whoosh # will be in Everest Dockerfile
-sudo apt-get install -y imagemagick # will be in Everest Dockerfile
+# Everest
+pip3 install --no-cache-dir -U Whoosh # will be in Everest Dockerfile
+apt-get install -y imagemagick # will be in Everest Dockerfile
+pip3 install --no-cache-dir -U graphviz # will be in Everest Dockerfile
 
 # Publishing
-sudo apt-get install -y pandoc
-sudo pip3 install --no-cache-dir -U jupyter-book
-sudo pip3 install --no-cache-dir -U sphinxcontrib-bibtex
-sudo pip3 install --no-cache-dir -U bibtexparser
-sudo pip3 install --no-cache-dir -U ghp-import
-sudo pip3 install --no-cache-dir -U myst-parser
-sudo pip3 install --no-cache-dir -U sphinx
-sudo pip3 install --no-cache-dir -U myst-nb
-sudo pip3 install --no-cache-dir -U pyyaml
-sudo pip3 install --no-cache-dir -U jupyterbook-latex
+apt-get install -y pandoc
+pip3 install --no-cache-dir -U jupyter-book
+pip3 install --no-cache-dir -U sphinxcontrib-bibtex
+pip3 install --no-cache-dir -U bibtexparser
+pip3 install --no-cache-dir -U ghp-import
+pip3 install --no-cache-dir -U myst-parser
+pip3 install --no-cache-dir -U sphinx
+pip3 install --no-cache-dir -U myst-nb
+pip3 install --no-cache-dir -U pyyaml
+pip3 install --no-cache-dir -U jupyterbook-latex
 
-# Needed for LaTeX in matplotlibe
-sudo apt install -y dvipng
-sudo apt install -y cm-super
-sudo apt install -y texlive-latex-extra
+# Needed for LaTeX in matplotlib
+apt install -y \
+  dvipng \
+  cm-super \
+  texlive-latex-extra
 
 # Needed for LaTeX building
-sudo apt install -y \
+apt install -y \
   texlive-latex-recommended \
   texlive-latex-extra \
   texlive-fonts-recommended \

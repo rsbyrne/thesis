@@ -171,10 +171,54 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../chapter_03_everest/main.html">
-   3. Everest
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../chapter_03_everest/abstract.html">
+   3. Everest: a Framework for Abstractified Science
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_03_everest/introduction.html">
+     3.1. Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_03_everest/motivation.html">
+     3.2. Motivation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_03_everest/doctrine.html">
+     3.3. Doctrine
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_03_everest/framework.html">
+     3.4. Framework
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_03_everest/implementation.html">
+     3.5. Implementation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_03_everest/demonstration.html">
+     3.6. Demonstration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_03_everest/discussion.html">
+     3.7. Discussion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../chapter_03_everest/conclusion.html">
+     3.8. Conclusion
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="../abstract.html">
@@ -514,7 +558,7 @@
 <p>Our choice of radii implies a degree of curvature <span class="math notranslate nohighlight">\(f\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ f \equiv \frac{r_o}{r_i} \]</div>
-<p>Where <span class="math notranslate nohighlight">\(f=1\)</span> is equivalent to an infinitely wide Cartesian box, <span class="math notranslate nohighlight">\(f\to0\)</span> represents a full disk, and the values <span class="math notranslate nohighlight">\(\sim 0.5\)</span> and <span class="math notranslate nohighlight">\(\sim 0.9\)</span> would be appropriate for the whole mantle and upper mantle respectively. The ratio of radii <span class="math notranslate nohighlight">\(f\)</span> is identical to the ratio of circumferences, so that <span class="math notranslate nohighlight">\(f=0.5\)</span> represents a system where the arc length of the base is half that of the surface. (Note that this would imply infinite planetary radii at <span class="math notranslate nohighlight">\(f=1\)</span> - hence the planar-like endmember <span class="math notranslate nohighlight">\(f=1\)</span> is not strictly reachable under an assumption of curvature, though arbitrarily high values can be set to reproduce that behaviour <span id="id1">[<a class="reference internal" href="../../../references.html#id526">Jarvis, 1993</a>]</span>.)</p>
+<p>Where <span class="math notranslate nohighlight">\(f=1\)</span> is equivalent to an infinitely wide Cartesian box, <span class="math notranslate nohighlight">\(f\to0\)</span> represents a full disk, and the values <span class="math notranslate nohighlight">\(\sim 0.5\)</span> and <span class="math notranslate nohighlight">\(\sim 0.9\)</span> would be appropriate for the whole mantle and upper mantle respectively. The ratio of radii <span class="math notranslate nohighlight">\(f\)</span> is identical to the ratio of circumferences, so that <span class="math notranslate nohighlight">\(f=0.5\)</span> represents a system where the arc length of the base is half that of the surface. (Note that this would imply infinite planetary radii at <span class="math notranslate nohighlight">\(f=1\)</span> - hence the planar-like endmember <span class="math notranslate nohighlight">\(f=1\)</span> is not strictly reachable under an assumption of curvature, though arbitrarily high values can be set to reproduce that behaviour <span id="id1">[<a class="reference internal" href="../../../references.html#id442">Jarvis, 1993</a>]</span>.)</p>
 <p>If we further stipulate:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -546,7 +590,7 @@ r_m \equiv \frac{r_{i} + r_{o}}{2} = \frac{1 + f}{2 \left( 1 - f \right)} \\
 A = r_m \Theta
 \end{split}\]</div>
 <p>If radius has been non-dimensionalised as above, this is equivalent to stating that the aspect ratio is equal to the area of the domain - regardless of <span class="math notranslate nohighlight">\(f\)</span> - just as it is in the Cartesian case.</p>
-<p>Such a scheme leaves us with two competing claims for a ‘natural’ denominator of the angular coordinate - <span class="math notranslate nohighlight">\(\Theta\)</span> and <span class="math notranslate nohighlight">\(r_m\)</span>. While authors have sometimes preferred to keep <span class="math notranslate nohighlight">\(\Theta\)</span> and <span class="math notranslate nohighlight">\(r_m\)</span> constant and allow <span class="math notranslate nohighlight">\(A\)</span> to vary <span id="id2">[<a class="reference internal" href="../../../references.html#id691">Jarvis, 1994</a>]</span>, we have for the most part chosen to fix <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(r_m\)</span> with <span class="math notranslate nohighlight">\(\Theta\)</span> as the free parameter, as in <span id="id3">[<a class="reference internal" href="../../../references.html#id526">Jarvis, 1993</a>]</span>: this simplifies comparisons with plane-layer simulations at the cost of producing planforms which would be unstable if scaled to the full annulus.</p>
+<p>Such a scheme leaves us with two competing claims for a ‘natural’ denominator of the angular coordinate - <span class="math notranslate nohighlight">\(\Theta\)</span> and <span class="math notranslate nohighlight">\(r_m\)</span>. While authors have sometimes preferred to keep <span class="math notranslate nohighlight">\(\Theta\)</span> and <span class="math notranslate nohighlight">\(r_m\)</span> constant and allow <span class="math notranslate nohighlight">\(A\)</span> to vary <span id="id2">[<a class="reference internal" href="../../../references.html#id447">Jarvis, 1994</a>]</span>, we have for the most part chosen to fix <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(r_m\)</span> with <span class="math notranslate nohighlight">\(\Theta\)</span> as the free parameter, as in <span id="id3">[<a class="reference internal" href="../../../references.html#id442">Jarvis, 1993</a>]</span>: this simplifies comparisons with plane-layer simulations at the cost of producing planforms which would be unstable if scaled to the full annulus.</p>
 <p>Some system forcings, like internal heat, scale with area. The proportion of the annulus lying below a particular height <span class="math notranslate nohighlight">\(h\)</span> - which we shall call <span class="math notranslate nohighlight">\(D\)</span> for ‘disk’ - is a function of the inner and mid-radii:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -626,7 +670,7 @@ T_{av} &amp;= \dfrac{1}{2} \large{\root \huge{e} \of f} \\
 </div>
 <div class="section" id="instability-and-convection">
 <h3><span class="section-number">4.2.4.2.2. </span>Instability and convection<a class="headerlink" href="#instability-and-convection" title="Permalink to this headline">¶</a></h3>
-<p>An implication of <span class="math notranslate nohighlight">\(Nu\)</span>’s dependency on curvature is that the upper and lower boundaries must no longer be symmetrical. This invalidates many of the assumptions that made the planar case amenable to analysis. The additional space at the top of the model now allows more room for downwellings relative to basal upwellings, tending to promote instability <span id="id4">[<a class="reference internal" href="../../../references.html#id130">Jarvis, 1991</a>]</span>; on the other hand, the curved geotherm and the increased surface for radiating heat would tend to permit a comparatively thicker upper boundary layer. The effect of these countervailing forcings on the fundamental scalings of <span class="math notranslate nohighlight">\(Nu\)</span>, <span class="math notranslate nohighlight">\(Ra\)</span>, <span class="math notranslate nohighlight">\(Ra_{cr}\)</span>, and the all-important relation <span class="math notranslate nohighlight">\(Nu \propto R^{\beta}\)</span> is not obvious.</p>
+<p>An implication of <span class="math notranslate nohighlight">\(Nu\)</span>’s dependency on curvature is that the upper and lower boundaries must no longer be symmetrical. This invalidates many of the assumptions that made the planar case amenable to analysis. The additional space at the top of the model now allows more room for downwellings relative to basal upwellings, tending to promote instability <span id="id4">[<a class="reference internal" href="../../../references.html#id899">Jarvis, 1991</a>]</span>; on the other hand, the curved geotherm and the increased surface for radiating heat would tend to permit a comparatively thicker upper boundary layer. The effect of these countervailing forcings on the fundamental scalings of <span class="math notranslate nohighlight">\(Nu\)</span>, <span class="math notranslate nohighlight">\(Ra\)</span>, <span class="math notranslate nohighlight">\(Ra_{cr}\)</span>, and the all-important relation <span class="math notranslate nohighlight">\(Nu \propto R^{\beta}\)</span> is not obvious.</p>
 <p>To begin to unpack the complexities of convection in the annulus, we can start with the assumption that - as in the planar case - the convective steady state will eventually result in a broad intracellular region of uniform temperature <span class="math notranslate nohighlight">\(T_{cell}\)</span>. Assuming a unit temperature drop <span class="math notranslate nohighlight">\(\Delta T = 1\)</span>, we can write:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -655,7 +699,7 @@ Ra_{layer} = Ra \cdot {\Delta T}_{layer} \cdot {{\Delta r}_{layer}}^3
 \[
 T_{cell} = \frac{f}{f + 1} \quad \leftarrow {\Delta r}_i = {\Delta r}_o
 \]</div>
-<p>This, however, would imply that the inner and outer <em>Rayleigh</em> numbers are divergent. If we instead choose to conserve <span class="math notranslate nohighlight">\(Ra\)</span>, then: (<span id="id5">[<a class="reference internal" href="../../../references.html#id526">Jarvis, 1993</a>]</span>)</p>
+<p>This, however, would imply that the inner and outer <em>Rayleigh</em> numbers are divergent. If we instead choose to conserve <span class="math notranslate nohighlight">\(Ra\)</span>, then: (<span id="id5">[<a class="reference internal" href="../../../references.html#id442">Jarvis, 1993</a>]</span>)</p>
 <div class="math notranslate nohighlight">
 \[
 T_{cell} = \frac{1}{1 + f^{-3/4}} \quad \leftarrow Ra_i = Ra_o
@@ -668,13 +712,13 @@ T_{av} &amp;\approx T_{c}, \quad Ra &lt; Ra_{cr} \\
 &amp;\to T_{cell}, \quad Ra \to \infty
 \end{align*} \end{split}\]</div>
 <p>It makes intuitive sense that the effect of increasing <span class="math notranslate nohighlight">\(Ra\)</span> should be to decrease global temperatures, since that is exactly why convection is preferred wherever possible - though this intuition may not hold for all rheologies.</p>
-<p>Of course, what we desire most of all is a cylindrical scaling for the mantle convection power law <span class="math notranslate nohighlight">\(Nu \propto R^{\beta}\)</span>. Following <span id="id6">[<a class="reference internal" href="../../../references.html#id526">Jarvis, 1993</a>]</span> and mandating equality of inner and outer <span class="math notranslate nohighlight">\(Ra_{layer}\)</span>, it is possible to construct a ‘geometric correction’ <span class="math notranslate nohighlight">\(g(f)\)</span> that functions as a coefficient of the <em>beta</em> scaling:</p>
+<p>Of course, what we desire most of all is a cylindrical scaling for the mantle convection power law <span class="math notranslate nohighlight">\(Nu \propto R^{\beta}\)</span>. Following <span id="id6">[<a class="reference internal" href="../../../references.html#id442">Jarvis, 1993</a>]</span> and mandating equality of inner and outer <span class="math notranslate nohighlight">\(Ra_{layer}\)</span>, it is possible to construct a ‘geometric correction’ <span class="math notranslate nohighlight">\(g(f)\)</span> that functions as a coefficient of the <em>beta</em> scaling:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 g(f) = \frac{Nu_{c}}{{T_{cell}}^{4/3}} \quad \leftarrow Ra_i = Ra_o \\
 Nu = g(f) \cdot R^{\frac{1}{3}}
 \end{split}\]</div>
-<p>Using this scaling, Jarvis was able to obtain a <em>beta</em> exponent of <span class="math notranslate nohighlight">\(0.321 \pm 0.001\)</span> across four values of <span class="math notranslate nohighlight">\(f\)</span> from <span class="math notranslate nohighlight">\((1.0 - 0.1)\)</span> <span id="id7">[<a class="reference internal" href="../../../references.html#id526">Jarvis, 1993</a>]</span>.</p>
+<p>Using this scaling, Jarvis was able to obtain a <em>beta</em> exponent of <span class="math notranslate nohighlight">\(0.321 \pm 0.001\)</span> across four values of <span class="math notranslate nohighlight">\(f\)</span> from <span class="math notranslate nohighlight">\((1.0 - 0.1)\)</span> <span id="id7">[<a class="reference internal" href="../../../references.html#id442">Jarvis, 1993</a>]</span>.</p>
 </div>
 </div>
 <div class="section" id="internal-heating-in-the-annulus">
