@@ -109,7 +109,7 @@ warnings.filterwarnings("ignore",category=UserWarning)
 # 
 # The length $s$ is, among other things, the factor by which an average measurement of some variable taken across a layer can be converted into a total value for that layer. It is vital to account for varying $s$ whenever comparing between different layers in a given system, or between equivalent layers in systems of differing $f$.
 
-# In[63]:
+# In[2]:
 
 
 _h, _A, _H = sympy.symbols(('h', 'A', 'H'), positive = True, real = True)
@@ -524,7 +524,7 @@ frm['h'] = frm['geotherm'].apply(lambda x: np.linspace(0, 1, len(x)))
 # frm['sstar'] = frm.apply(lambda fr: s_star(fr['h'], fr.name[1]), axis = 1)
 
 
-# In[32]:
+# In[7]:
 
 
 canvas1 = Canvas(size = (8, 8/3), shape = (1, 3))
@@ -688,7 +688,7 @@ fig
 # 
 # The integral with respect to $h$ yields the geotherm:
 
-# In[75]:
+# In[8]:
 
 
 canvas = Canvas(size = (8, 4), shape = (1, 2))
@@ -723,7 +723,7 @@ canvas
 
 # ### Conductive solution
 
-# In[ ]:
+# In[9]:
 
 
 with open(osjoin(aliases.storagedir, 'condhfmixed.pkl'), mode = 'rb') as file:
