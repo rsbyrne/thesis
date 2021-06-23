@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3.5. Implementation &#8212; What kind of thing is a planet?</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -38,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -49,7 +46,7 @@
     <script src="../../_static/copybutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -61,14 +58,14 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="3.6. Demonstration" href="demonstration.html" />
     <link rel="prev" title="3.4. Framework" href="framework.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -77,32 +74,32 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../../index.html">
-  
-  <img src="../../_static/logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">What kind of thing is a planet?</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">What kind of thing is a planet?</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../index.html">
    What kind of thing is a planet?
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Front matter
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../frontmatter/declaration.html">
    Declaration
@@ -129,22 +126,27 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Thesis
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter_01_background/main.html">
    1. Review and Theory
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_02_methods/intro.html">
    2. Tools and Methods
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_02_methods/section1.html">
      2.1. The analytical toolkit
@@ -166,14 +168,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="abstract.html">
    3. Everest: a Framework for Abstractified Science
   </a>
-  <ul class="current collapse-ul">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="introduction.html">
      3.1. Introduction
@@ -215,24 +220,32 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_04_isoviscous/abstract.html">
    4. Scaling Behaviours of Linear Rheologies: Constant Viscosity
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_04_isoviscous/introduction.html">
      4.1. Introduction
     </a>
    </li>
-   <li class="toctree-l2 collapsible-parent">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../chapter_04_isoviscous/background/intro.html">
      4.2. Background
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../chapter_04_isoviscous/background/basics.html">
        4.2.1. Basics of convection
@@ -259,8 +272,6 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_04_isoviscous/methods/intro.html">
@@ -283,14 +294,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_05_arrhenius/abstract.html">
    5. Scaling Behaviours of Linear Rheologies: Temperature-Dependent Viscosity
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_05_arrhenius/introduction.html">
      5.1. Introduction
@@ -302,14 +316,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_06_viscoplastic/abstract.html">
    6. Mode Boundaries in Viscoplastic Rheology
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_06_viscoplastic/introduction.html">
      6.1. Introduction
@@ -321,14 +338,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_07_advanced/abstract.html">
    7. Big Data Methods for Computational Geodynamics
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_07_advanced/introduction.html">
      7.1. Introduction
@@ -340,8 +360,6 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter_08_discussion/main.html">
@@ -354,24 +372,24 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   End matter
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../references.html">
    References
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Appendices
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../appendices/tables/main.html">
    Tables
@@ -379,6 +397,7 @@
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -394,21 +413,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -426,7 +445,7 @@
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -446,20 +465,57 @@
     </div>
 </div>
 
+            <!-- Full screen (wrap in <a> to have style consistency -->
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
-    </div>
+        </div>
 
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#object-oriented-programming">
+   3.5.1. Object-oriented programming
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#everest-classtools">
+     3.5.1.1.
+     <em>
+      Everest
+     </em>
+     classtools
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mro-classes">
+       3.5.1.1.1. MRO classes
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-incision-protocol">
+   3.5.2. The Incision Protocol
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -469,6 +525,61 @@
                 
   <div class="section" id="implementation">
 <h1><span class="section-number">3.5. </span>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h1>
+<p>We have discussed the motivations, underlying doctrine, and overarching framework of the <em>Everest</em> project. Now it must be shown how it actually works. In so doing, it will hopefully become clear just why the outermost user interface has the appearance it does, and why we have made the claims we have about the potential of this approach.</p>
+<div class="section" id="object-oriented-programming">
+<h2><span class="section-number">3.5.1. </span>Object-oriented programming<a class="headerlink" href="#object-oriented-programming" title="Permalink to this headline">¶</a></h2>
+<p><em>Everest</em> is written in a heavily object-oriented paradigm. As not all will be familiar with OOP, a couple of terms will be defined here.</p>
+<p>In <em>Python</em> and other languages, an ‘object’ is a persistent software asset with an address in memory that can hold data in the form of ‘attributes’ and run snippets of code called ‘methods’. A program under OOP typically involves the creation, interrelation, activation, and destruction of an ecosystem of such objects to achieve the program’s intention.</p>
+<p><em>Python</em> accesses objects by stating their name, which is assigned in an entirely context-dependent frame: one object can be known by many names in many places. Both attributes and methods are accessed using dot notation - for example, <code class="docutils literal notranslate"><span class="pre">myobject.foo</span></code> accesses the ‘foo’ property, which may be either an attribute or a method. Methods, once referenced, may be ‘called’ to execute their code with zero or more inputs using curved brackets - for example, <code class="docutils literal notranslate"><span class="pre">myobject.mymethod(myinput)</span> <span class="pre">-&gt;</span> <span class="pre">output</span></code>. Objects may themselves be callable: for instance, <code class="docutils literal notranslate"><span class="pre">myobject(myinput)</span> <span class="pre">-&gt;</span> <span class="pre">output</span></code>.</p>
+<p>Some objects are designed principally to ‘do’ things, others principally to ‘hold’ things. For container-like objects, <em>Python</em> provides a square brackets notation (also called ‘subscripting’) which has the modal sense of retrieving something from somewhere - for example, <code class="docutils literal notranslate"><span class="pre">myobject[myslice]</span></code> returns certain datas from ‘inside’ <code class="docutils literal notranslate"><span class="pre">myobject</span></code> according to the criterion <code class="docutils literal notranslate"><span class="pre">myslice</span></code>. The <em>Pythonic</em> operation of ‘slicing’ into an object in this manner is related to the <em>AKP</em> notion of ‘incision’; consequently, it will be seen that <em>Everest</em> syntax relies heavily on the square brackets notation.</p>
+<p>Objects in <em>Python</em> and other languages always have a ‘type’, a kind of object to which they belong. An object’s type can be viewed by asking <code class="docutils literal notranslate"><span class="pre">type(myobject)</span></code>. These types are called ‘classes’ and their names are usually capitalised - for example, <code class="docutils literal notranslate"><span class="pre">MyClass</span></code>. Every object has a type and is said to be an ‘instance’ of that type (what <em>AKP</em> calls a ‘concretion’). Just as a labrador is a type of dog, which is a type of mammal, which is a type of animal, at the same time as being a type of pet, which is a type of domestic animal, which is a type of animal, classes in <em>Python</em> can subclass and superclass one another, forming branching ‘inheritance trees’ which provide properties and behaviours to objects whose classes participate in them.</p>
+<p>Class inheritance may be tested by asking <code class="docutils literal notranslate"><span class="pre">issubclass(A,</span> <span class="pre">B)</span></code>, which returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">A</span></code> is identical to <code class="docutils literal notranslate"><span class="pre">B</span></code> or is a subclass of it. Objects may be tested for their membership by asking <code class="docutils literal notranslate"><span class="pre">isinstance(myobject,</span> <span class="pre">B)</span></code>, which returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the class that <code class="docutils literal notranslate"><span class="pre">myobject</span></code> is an instance of is either <code class="docutils literal notranslate"><span class="pre">B</span></code> or a subclass of it. Sometimes it is useful to define a class that behaves like an object’s class without that object needing to be aware of it: <em>Python</em> supports these as ‘abstract base classes’ and they are frequently employed to define interfaces. It is a convention of OOP that instances of subclasses are accepted anywhere that instances of their superclasses are accepted, but not vice versa. For example, integers are real numbers, but the converse is not true; thus, functions which are valid for real numbers are valid for integers, but not the other way around.</p>
+<p>Finally, in <em>Python</em>, classes are themselves objects, and so can own and do things without ever needing to be instantiated. Being objects, classes have their own type: the class that a class is an instance of is called its ‘metaclass’. <em>Everest</em> pushes the <em>Pythonic</em> class machinery much further than typical <em>Python</em> applications do in order to more naturally map code objects to <em>AKP</em> constructs.</p>
+<p>The highly object-oriented nature of <em>Everest</em> is one major sense in which it deviates from previous approaches to large-scale computing. Whereas scientific computing traditionally has taken a procedural approach to computation, focussed on ‘piping’ data flows through shells on supercomputer clusters, <em>Everest</em> recognises that - for a work of scientific computing to be persistent - it must ultimately produce an ‘object’ of some kind. That object must be able to be stored in non-volatile memory - be that a hard drive or a reel of magnetic tape - and it must naturally offer a range of means of access so its import may be recognised in human minds where social knowledge is processed. Actions in <em>Everest</em> begin, rather than end, with the designation of objects, leaving the control flow behind those actions sufficiently muted as to almost reproduce a declarative (database-like) programming idiom. This is the soul of <em>Everest</em>.</p>
+<div class="section" id="everest-classtools">
+<h3><span class="section-number">3.5.1.1. </span><em>Everest</em> classtools<a class="headerlink" href="#everest-classtools" title="Permalink to this headline">¶</a></h3>
+<p>To support <em>Everest</em>’s high-order object-oriented approach, it was necessary to develop new tools for class definition on top of those provided within <em>Python</em>. The <code class="docutils literal notranslate"><span class="pre">classtools</span></code> subpackage provides a number of ‘adderclasses’ that ‘decorate’ (wrap or add functionality to) native <em>Python</em> class definitions, allowing for many features including automatic addition of ‘dunder’ methods, reproducibility enforcement, and more.</p>
+<p>An <code class="docutils literal notranslate"><span class="pre">AdderClass</span></code> is an abstract base class that can be used to decorate other classes, directly adding its own attributes and methods in order to transform the subject into an implicit inheritor of itself. Adder classes are useful because they allow the separation of the functionality-adding and ‘quality’-altering natures of class inheritance, freeing up the true inheritance tree to more strictly reflect the latter over the former. They also lend themselves to metaprogramming (writing code that writes other code).</p>
+<div class="section" id="mro-classes">
+<h4><span class="section-number">3.5.1.1.1. </span>MRO classes<a class="headerlink" href="#mro-classes" title="Permalink to this headline">¶</a></h4>
+<p><em>Everest</em> provides and uses many adder classes, but the most important for this exegesis is the <code class="docutils literal notranslate"><span class="pre">MROClassable</span></code> class. This feature allows ‘inner classes’ (classes that are attributes, rather than instances or subclasses, of other classes) to be defined cooperatively across multiple layers of a class’s inheritance tree - and even include the owning class as one of their bases.</p>
+<p>In <em>Python</em> and other object-oriented languages, the various classes that form the bases of an object’s type may offer different definitions for the same attributes, including methods. Rather than simply overwriting the parent bindings, objects and classes are provided access to those bindings in a separate namespace, enabling the subclasses to define functionalities that extend or augment the parent functionality. For classes with deep inheritance trees, the control flow of the program is successively passed up in a stable, linear succession called the Method Resolution Order or ‘MRO’.</p>
+<p>When a class (the ‘added-to class’) is processed by the <code class="docutils literal notranslate"><span class="pre">MROClassable</span></code> adder, the adder looks for certain class-defined special names and, for each name, loops through the MRO chain for any inner classes assigned to that name. These classes are then used as the bases of a new class, which is finally assigned to the added-to class under the original name. As an optional extra, the added-to class can itself be factored into the new ‘MRO class’ as either a base or a metaclass.</p>
+<p>The ‘MRO class’ procedure has many uses throughout <em>Everest</em>. For just one example, the <code class="docutils literal notranslate"><span class="pre">Case</span></code> class is a ‘metaclassable MRO class’ of the schema it belongs to. This allows the schema to enforce a condition that all instances of itself are subclasses of its own special case class - and preserve this property even for its own subclasses. While there are other ways to achieve the same effect in <em>Python</em>, none are so compact.</p>
+</div>
+</div>
+</div>
+<div class="section" id="the-incision-protocol">
+<h2><span class="section-number">3.5.2. </span>The Incision Protocol<a class="headerlink" href="#the-incision-protocol" title="Permalink to this headline">¶</a></h2>
+<p><em>Everest</em> extends the traditional <em>Python</em> subscripting (square brackets) notation to make it both more flexible and more strict. The new notation is called the Incision Protocol, to differentiate it from conventional <em>Python</em> ‘getting’ and ‘slicing’ protocols. All public <em>Everest</em> objects which support subscripting do so according to this protocol. To those with some experience of <em>NumPy</em>, <em>Python</em>’s primary numerical computing package, the syntax will be familiar: it is effectively an extension of <em>NumPy</em> ‘fancy indexing’ with dimensions that may arbitrarily typed, irregular, infinite, or uncountable. Fundamentally, its intention is to generalise <em>Pythonic</em> ‘getting’ syntax to support the broader sense of an object containing having ‘space’.</p>
+<p>In mathematics, a space can be loosely defined as a set with some added structure. Beyond that, the concept of space is defined in many contrasting ways for many contrasting purposes. For clarity, let us instead appropriate the Greek equivalent, ‘chora’ (plural ‘choraes’), and defines it as a set equipped with a mechanism for retrieving one or more elements. The Incision Protocol realises this definition with the <code class="docutils literal notranslate"><span class="pre">Chora</span></code> class, a type of immutable <em>Python</em> <code class="docutils literal notranslate"><span class="pre">set</span></code> with sockets that anticipate the imposition of structures by its subclasses. The <code class="docutils literal notranslate"><span class="pre">Chora</span></code> class is both the simplest type and the base type of all choraes recognised by the Incision Protocol; any instance of such is a chora, lowercase.</p>
+<p>In its basic use case, the <code class="docutils literal notranslate"><span class="pre">Chora</span></code> class can be used just like a standard <em>Python</em> <code class="docutils literal notranslate"><span class="pre">set</span></code> by instantiating it with a collection of unique, arbitrary elements. <code class="docutils literal notranslate"><span class="pre">Chora</span></code>, however, has two crucial differences.</p>
+<p>Firstly, instances <code class="docutils literal notranslate"><span class="pre">Chora</span></code> are not limited to contain finite sets. They can just as easily digest sets of unknown or even infinite length. The set of every possible combination of alphanumeric characters is a perfectly acceptable chora, as is the set of all real numbers. Many such useful sets are defined ‘out of the box’, most built on fast <em>C</em> level protocols that are much more powerful than typical user implementations. A consequence of being both unordered and potentially unlimited is that a basic <code class="docutils literal notranslate"><span class="pre">Chora</span></code> instance is not iterable, thus procedural access can only be carried out by random sampling without replacement.</p>
+<p>Secondly, <code class="docutils literal notranslate"><span class="pre">Chora</span></code> instances support element retrieval by passing a request through the square brackets notation: <code class="docutils literal notranslate"><span class="pre">mychora[myquery]</span> <span class="pre">-&gt;</span> <span class="pre">mycontent</span></code>. Under the Incision Protocol, subscipripting operations on chora are called ‘incisions’, and any input to an incision is called an ‘incisor’. There are three kinds of incisor:</p>
+<ul class="simple">
+<li><p>‘Trivial’ incisors simply return the chora incised, or alternatively an identical copy of it; they are the equivalent of ‘retrieving’ every point in space, thus simply reconstituting that space under a new name.</p></li>
+<li><p>‘Broad’ incisors return a view of the chora with added conditions and retrieval methods: in other words, they return a subspace of the incised space with new metrics attached.</p></li>
+<li><p>‘Strict’ incisors return a single element from a chora, or - put another way - prescribe a vector singling out a particular point within the chora.</p></li>
+</ul>
+<p>The basic <code class="docutils literal notranslate"><span class="pre">Chora</span></code> class supports three retrieval methods - one for each of the basic incisor types:</p>
+<ul class="simple">
+<li><p>Retrieval of its complete self by trivial incisor, returning itself.</p></li>
+<li><p>Retrieval of a single element from itself by equality with a strict incisor.</p></li>
+<li><p>Iterative retrieval from itself by the same process across the elements of a broad incisor.
+The <code class="docutils literal notranslate"><span class="pre">Chora</span></code> class offers one more standard behaviour as part of the strict incision operation. If a retrieved element is itself a chora, the return value of the incision is instead the incision of that chora by the incisor. This special kind of strict incision is called ‘deep incision’, and the incisor carrying it out is a ‘deep incisor’. This additional behaviour was a significant part of the motivation for the Incision Protocol and it has many implications, as shall be seen.</p></li>
+</ul>
+<p>While users are free to subclass <code class="docutils literal notranslate"><span class="pre">Chora</span></code> according to their purposes, <em>Everest</em> offers many subclasses of its own.</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Ordered</span></code> class adds the sense of ordering of elements, and hence the notion of <em>Python</em> ‘slicing’, implemented here as a kind of broad incision across a given range; for example, <code class="docutils literal notranslate"><span class="pre">myordered[cond1:cond2:cond3]</span></code> would return the chora of all elements of <code class="docutils literal notranslate"><span class="pre">myordered</span></code> matching <code class="docutils literal notranslate"><span class="pre">cond3</span></code> after and including the first element satisfying <code class="docutils literal notranslate"><span class="pre">cond1</span></code> and up to but not including the first element satisfying <code class="docutils literal notranslate"><span class="pre">cond2</span></code>. A special subclass of <code class="docutils literal notranslate"><span class="pre">Ordered</span></code> is the <code class="docutils literal notranslate"><span class="pre">Reals</span></code> class, the set of all real numbers. While <code class="docutils literal notranslate"><span class="pre">Ordered</span></code> chora can be sliced, they still cannot be iterated nor indexed. These properties are added by subclasses:</p>
+<ul>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Countable</span></code> class, which imposes countability on its elements, and thus supports iteration over its bounded subspaces, though not over itself. An ordered chora ‘sliced’ with a ‘stride length’ returns a countable chora. A special subclass of <code class="docutils literal notranslate"><span class="pre">Countable</span></code> is the <code class="docutils literal notranslate"><span class="pre">Integers</span></code> class, the set of all natural numbers.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Limited</span></code> class, which allows the assertion of either a ‘highest’ element or a ‘lowest’ element or both. An ordered chora ‘sliced’ with either a start or stop index returns a limited chora. A doubly-limited chora supports explicit and reproducible random sampling by slicing with a random seed. For example, <code class="docutils literal notranslate"><span class="pre">myreal[0:1:'aardvark']</span></code> returns an infinite, countable sequence of randomly selected real numbers between zero and one; any two such operations with the same random seed (e.g. the ‘aardvark’ string here) will return the same sequence.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Tractable</span></code> class, which subclasses both <code class="docutils literal notranslate"><span class="pre">Countable</span></code> and <code class="docutils literal notranslate"><span class="pre">Limited</span></code> and therefore supports full <em>Python</em> still count-based indexing - for example, <code class="docutils literal notranslate"><span class="pre">mytractable[2:5]</span></code> would return a <code class="docutils literal notranslate"><span class="pre">Tractable</span></code> traversing the three elements from position two to position four inclusive. An ordered chora sliced with a stride length and one or both of a start index and a stop index returns a tractable chora. The addition of both limits and countability permits iteration, making <code class="docutils literal notranslate"><span class="pre">Tractable</span></code> an implicit subclass of the native <em>Python</em> <code class="docutils literal notranslate"><span class="pre">Iterable</span></code> base class; however, only tractables with lower limits can be successfully iterated across.</p></li>
+</ul>
+</li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Transform</span></code> class takes any other chora and applies a given unary function to every element.</p></li>
+</ul>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -493,15 +604,15 @@
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
     <a class='left-prev' id="prev-link" href="framework.html" title="previous page"><span class="section-number">3.4. </span>Framework</a>
     <a class='right-next' id="next-link" href="demonstration.html" title="next page"><span class="section-number">3.6. </span>Demonstration</a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
@@ -518,11 +629,9 @@
 
       </div>
     </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>

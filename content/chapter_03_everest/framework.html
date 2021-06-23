@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3.4. Framework &#8212; What kind of thing is a planet?</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -38,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -49,7 +46,7 @@
     <script src="../../_static/copybutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -61,14 +58,14 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="3.5. Implementation" href="implementation.html" />
     <link rel="prev" title="3.3. Doctrine" href="doctrine.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -77,32 +74,32 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../../index.html">
-  
-  <img src="../../_static/logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">What kind of thing is a planet?</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">What kind of thing is a planet?</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../index.html">
    What kind of thing is a planet?
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Front matter
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../frontmatter/declaration.html">
    Declaration
@@ -129,22 +126,27 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Thesis
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter_01_background/main.html">
    1. Review and Theory
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_02_methods/intro.html">
    2. Tools and Methods
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_02_methods/section1.html">
      2.1. The analytical toolkit
@@ -166,14 +168,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="abstract.html">
    3. Everest: a Framework for Abstractified Science
   </a>
-  <ul class="current collapse-ul">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="introduction.html">
      3.1. Introduction
@@ -215,24 +220,32 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_04_isoviscous/abstract.html">
    4. Scaling Behaviours of Linear Rheologies: Constant Viscosity
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_04_isoviscous/introduction.html">
      4.1. Introduction
     </a>
    </li>
-   <li class="toctree-l2 collapsible-parent">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../chapter_04_isoviscous/background/intro.html">
      4.2. Background
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../chapter_04_isoviscous/background/basics.html">
        4.2.1. Basics of convection
@@ -259,8 +272,6 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_04_isoviscous/methods/intro.html">
@@ -283,14 +294,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_05_arrhenius/abstract.html">
    5. Scaling Behaviours of Linear Rheologies: Temperature-Dependent Viscosity
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_05_arrhenius/introduction.html">
      5.1. Introduction
@@ -302,14 +316,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_06_viscoplastic/abstract.html">
    6. Mode Boundaries in Viscoplastic Rheology
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_06_viscoplastic/introduction.html">
      6.1. Introduction
@@ -321,14 +338,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_07_advanced/abstract.html">
    7. Big Data Methods for Computational Geodynamics
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_07_advanced/introduction.html">
      7.1. Introduction
@@ -340,8 +360,6 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter_08_discussion/main.html">
@@ -354,24 +372,24 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   End matter
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../references.html">
    References
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Appendices
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../appendices/tables/main.html">
    Tables
@@ -379,6 +397,7 @@
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -394,21 +413,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -426,7 +445,7 @@
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -446,20 +465,47 @@
     </div>
 </div>
 
+            <!-- Full screen (wrap in <a> to have style consistency -->
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
-    </div>
+        </div>
 
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-idea-of-everest">
+   3.4.1. The idea of
+   <em>
+    Everest
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-structure-and-use-pattern">
+   3.4.2. General structure and use pattern
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#top-level-syntax">
+   3.4.3. Top-level syntax
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -469,8 +515,55 @@
                 
   <div class="section" id="framework">
 <h1><span class="section-number">3.4. </span>Framework<a class="headerlink" href="#framework" title="Permalink to this headline">¶</a></h1>
-<p>While some degree of engineering skill has always been part of a scientist’s toolkit, the wide availability of powerful open-source toolkits has given rise to the hybrid role of the ‘research engineer’. A research engineer resides within the conventional academy, but their intellectual product is equal parts knowledge and technology. A worker with such an aptitude perceives every inefficiency in their daily workflow as an additional problem to be solved, seamlessly transitioning from the theorise-experiment-discuss paradigm of the scientist to the iterative-inventive paradigm of the engineer, the tinkerer, or the artist. Research engineers restlessly seek out new challenges and have a tendency to stray beyond the boundaries of any one specialisation. In their wake they leave a personal ‘state of the art’ which is exactly sufficient to their work.</p>
-<p>The rise of the research engineer is a natural and desirable restoration of a very old scientific tradition, recognisable from Archimedes through Galileo to Enrico Fermi, that was only temporarily displaced by the division of labour facilitated by rich 20th century universities. Yet, whereas earlier inventor-researchers dealt in the intuitive realm of materials and machinery, the modern research engineer must in effect learn to ‘think in code’. Worse, they are all too often self-taught - at great personal cost, and with decidely mixed results <span id="id1">[<a class="reference internal" href="../../references.html#id930">Wilson <em>et al.</em>, 2017</a>]</span>.</p>
+<p>We have discussed the problem and devised a philosophy to undergird a potential solution. We must now design that solution, starting with its outer surface, the public API. The framework we have devised is called <em>Everest</em>.</p>
+<p><em>Everest</em> is a kind of ‘middleware’ - that is, it sits between the objects that a user will interact with and the objects of the machine. It does not seek to export a user interface that is completely sufficient to every use case, nor does it purport to provide more efficient or capable algorithms for numerical computing itself. Instead, <em>Everest</em> should be thought of as a kit for building bespoke user applications that wrap around a field’s customary numerical codes to dramatically improve their ease-of-use. Such applications are dubbed ‘Engines’ in <em>Everest</em>’s parlance: for example, “<em>PlanetEngine</em> is an application of <em>Everest</em> for planet-scale geodynamic modelling.” The middleware assets provided by <em>Everest</em> are intended to be comprehensive enough that a user can build an effective, bespoke, and fully-featured toolchain for their scientific computing workflow without any specialist knowledge beyond a basic fluency in off-the-shelf <em>Python</em> code.</p>
+<p>Written mostly in <em>Python</em>, a popular ‘glue’ language with broad utility and unrivalled extensibility, <em>Everest</em> provides a hierarchy of software objects that map to, and behave in the manner anticipated by, the <em>AKP</em> doctrine. While not unconcerned with machine efficiency - <em>Everest</em> is fastidious in exploiting <em>C</em>-level best practices wherever possible - our software is most concerned with <em>human</em> efficiency. It represents our direct attempt to resolve the Complexity Crunch by achieving a fundamental and permanent decoupling of computational complexity from logistical complexity. If a user of an <em>Everest</em>-derived application finds that it is as easy to run a one million-model survey as it is to run a ten-model survey, then the software has achieved its most important goal.</p>
+<p>While an early version of <em>Everest</em>, <em>v0.1</em>, has been deployed at scale with great success since 2019, the current version, <em>v0.2</em>, continues to be developed alongside exciting new applications that exploit its powerful <em>AKP</em>-derived syntaxes. This thesis is itself an implementation and demonstration of the capabilities of the new <em>Everest</em>, with all text, numerical analysis, data management, and visualisation produced by or with the aid of <em>Everest</em> functions, objects, and interfaces.</p>
+<p>In this short section, a general overview of <em>Everest</em> will be presented, focussing on its top-level syntax - the level that most users will interact with.</p>
+<div class="section" id="the-idea-of-everest">
+<h2><span class="section-number">3.4.1. </span>The idea of <em>Everest</em><a class="headerlink" href="#the-idea-of-everest" title="Permalink to this headline">¶</a></h2>
+<p><em>Everest</em> is a software application for creating, storing, manipulating, analysing, and communicating data. Borrowing patterns from its underlying doctrine, <em>AKP</em>, it offers a set of high-level structures that provide a concrete handle on such abstract notions as a project, a model, or a workflow, and a syntax that relates these structures to allow the succinct assertion of a scientific intention in a single line of code. Its ultimate goal is to minimise or eradicate all non-creative labour and so enable “science at the speed of thought”.</p>
+<p>At the core of <em>Everest</em> is the idea that there should be no distinction between a complete instruction set for an action and the product of that action. With <em>Everest</em>, the command that creates a dataset is the same as the command that retrieves that dataset from memory. Users are thus encouraged to think in terms of what they wish to observe, rather than in terms of how to produce those observations. <em>Everest</em> thus captures the most important feature of ‘declarative’ programming languages like <em>SQL</em>. At the same time, the twinned nature of <em>Everest</em> objects makes it easy to switch into a ‘procedural’ frame of mind to manually or semi-manually ‘drive’ models through the data production pipeline as the user sees fit. The same expressions that carry out very small actions of data production or analysis can be used to carry out vast actions across arbitrarily large and complex systems, guaranteeing that a workflow remains manageable by a human being no matter how large the project may grow.</p>
+</div>
+<div class="section" id="general-structure-and-use-pattern">
+<h2><span class="section-number">3.4.2. </span>General structure and use pattern<a class="headerlink" href="#general-structure-and-use-pattern" title="Permalink to this headline">¶</a></h2>
+<p>Being a software tool, <em>Everest</em> reimagines the knowledge model expounded by <em>AKP</em> in terms of software and numerical data flows. At its highest level, it defines:</p>
+<ul class="simple">
+<li><p>The <em>Everest</em> ‘Schema’ - the basic unit of software reproducibility, containing all the code necessary to acquire and/or produce a certain kind of data.</p></li>
+<li><p>The <em>Everest</em> ‘Case’ - the provision of a ‘Schema’ under certain assumptions or with certain inputs, exposing an interface for retrieving data and providing a common repository for all model outputs.</p></li>
+<li><p>The <em>Everest</em> ‘Concretion’ - an active software application with controls for exploring, acquiring, and storing model ‘configurations’ (reproducible data packets).</p></li>
+</ul>
+<p>In addition to providing a number of ready-made implementations of these structures for a variety of common data operations, <em>Everest</em> is designed from the ground up to encourage and facilitate the creation of user applications. This is primarily achieved by designing new model ‘Schema’, either be written from scratch with a little <em>Python</em> knowledge, or assembled quickly and intuitively from <em>Everest</em>’s growing library of generic patterns.</p>
+<p>Models built from <em>Everest</em> kits are likely to be faster than typical user implementations, but may not be competitive with state-of-the-art implementations for a particular field. <em>Everest</em> supports the authoring of schemas whose primary function is to extend its own <em>API</em> over arbitrary code, allowing users to retain the production pipelines they understand and trust. On the output end, <em>Everest</em> stores its data in a transparent, sensitively annotated <em>HDF</em>-based format which is easy for unfamiliar users to interpret and manipulate. Exporting work to one’s preferred maths and stats environments is easy.</p>
+<p>With the choice or design of an appropriate schema, most of the traditional labour of a modeller is already done. An entire project team could work within a single schema for years, progressively exploring the potentially infinite ‘space’ of discoveries within it, sound in the knowledge that all the data produced along the way is being reproducibly and searchably stored without the need for any additional labour or logistical overhead. The advantages for productivity and collaboration are obvious.</p>
+</div>
+<div class="section" id="top-level-syntax">
+<h2><span class="section-number">3.4.3. </span>Top-level syntax<a class="headerlink" href="#top-level-syntax" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Everest</em> top-level syntax focusses on the idea of ‘space’ - searching it, slicing it, and naming it.</p>
+<p>Consider a financial schema, <code class="docutils literal notranslate"><span class="pre">FinSchema</span></code>, that predicts how a market of a given composition will evolve over time from a given initial condition. A single ‘world’ (a ‘Case’) of this schema could be retrieved as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MyCase</span> <span class="o">=</span> <span class="n">FinSchema</span><span class="p">(</span><span class="n">companies1920s</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The new case <code class="docutils literal notranslate"><span class="pre">MyCase</span></code> could, for example, be a reconstruction of the major players in the American market during the 1920s. Let us now initialise this case at a particular point in history - Black Tuesday:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mymodel</span> <span class="o">=</span> <span class="n">MyCase</span><span class="p">(</span><span class="n">blacktuesday1929</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This new object, <code class="docutils literal notranslate"><span class="pre">mymodel</span></code>, is a ‘concretion’ - a particular instance of its case - equipped with methods that allow the model to be ‘driven’ forward or backward in time, capturing data or producing visualisations along the way. Having initialised it with historical data for a particular day, let us now iterate the model by one day:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mymodel</span><span class="o">.</span><span class="n">go</span><span class="p">(</span><span class="n">Days</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>If our financial model is all we hope it to be, we would expect that the market at this point is not faring well.</p>
+<p>If this was all that <em>Everest</em> supported, it would not justify the time and ink expended on it in this chapter. The real power of <em>Everest</em> is demonstrated at the higher level, by abstractly defining expanses of data across broad ranges of queries and assumptions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mydataset</span> <span class="o">=</span> <span class="n">FinSchema</span><span class="p">[</span>
+<span class="go">    [companies1920s, companies2000s],</span>
+<span class="go">    [blacktuesday1929, subprime2007] : [:Days(100)],</span>
+<span class="go">    [&#39;dowjones&#39;, &#39;sap200&#39;],</span>
+<span class="go">    ]</span>
+</pre></div>
+</div>
+<p>The result is a dataset containing eight 100-day timeseries: the Dow Jones and S&amp;P200 indices for each of four scenarios, including the present market under 1920s conditions, and the 1920s market under 2000s conditions. Together, these datas could be used to test which of market composition or market valuation is more important in predicting a financial crash.</p>
+<p>The goal of such a syntax is to align complex data operations with the way humans think and speak. In <em>Everest</em>, it should feel as easy to explain your intention to the machine as it is to explain it to yourself.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -495,15 +588,15 @@
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
     <a class='left-prev' id="prev-link" href="doctrine.html" title="previous page"><span class="section-number">3.3. </span>Doctrine</a>
     <a class='right-next' id="next-link" href="implementation.html" title="next page"><span class="section-number">3.5. </span>Implementation</a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
@@ -520,11 +613,9 @@
 
       </div>
     </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>
