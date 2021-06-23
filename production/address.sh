@@ -18,4 +18,4 @@ case "$1" in
   umbriel6) ADDRESS="115.146.95.188" ;;
 esac
 
-ssh -o IPQoS="throughput" -i "~/.ssh/general.pem" "ubuntu@"$ADDRESS $2
+echo $ADDRESS

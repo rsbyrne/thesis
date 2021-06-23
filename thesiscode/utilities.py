@@ -43,10 +43,13 @@ from glob import glob
 def word_count(*paths):
     filepath = os.path.join(*paths)
     if os.path.isdir(filepath) or '*' in filepath:
-        paths = [
-            *glob(filepath + '/**/*.ipynb', recursive = True),
-            *glob(filepath + '/**/*.md', recursive = True),
-            ]
+        if filepath.endswith('.ipynb') or filepath.endswith('.md'):
+            paths = glob(filepath, recursive = True)
+        else:
+            paths = [
+                *glob(filepath + '/**/*.ipynb', recursive = True),
+                *glob(filepath + '/**/*.md', recursive = True),
+                ]
         return sum(word_count(path) for path in paths)
     elif not os.path.isfile(filepath):
         raise FileNotFoundError

@@ -1,13 +1,24 @@
 ################################################################################
 
-import numpy as np
+
+import sys
+import os
+import glob
+import subprocess
+import time
+from pathlib import Path
+import random
 import itertools
 import datetime
+from contextlib import contextmanager
+
+import numpy as np
 
 from everest import mpi
 
+
 def proc_arg(astr):
-    astr = astr.strip(' ')
+    astr = astr.strip()
     if astr[0] == '[' and astr[-1] == ']':
         return list(proc_arg(st) for st in astr[1:-1].split(','))
     if astr[0] == '(' and astr[-1] == ')':
@@ -25,12 +36,21 @@ def get_jobs(dims, *args):
         )
     return combos[args]
 
+class ExhaustedError(IndexError):
+    ...
+EXHAUSTEDCODE = '---EXHAUSTED---'
+COMPLETEDCODE = '---COMPLETED---'
+INCOMPLETECODE = '---INCOMPLETE---'
+
 def get_job(dims, argn, counter):
     argn = tuple(proc_arg(arg) for arg in argn)
     counter = int(counter)
     jobs = get_jobs(dims, *argn)
     jobs = jobs.reshape(np.product(jobs.shape[:-1]), jobs.shape[-1])
-    job = jobs[counter]
+    try:
+        job = jobs[counter]
+    except IndexError:
+        raise ExhaustedError
     return tuple(float(a) for a in job)
 
 def get_logger(logfile):
@@ -45,71 +65,134 @@ def get_logger(logfile):
         logfile.flush()
     return log
 
-if __name__ == '__main__':
 
-    import sys
-    import os
-    import glob
-    import subprocess
-    import time
-    from pathlib import Path
-    import random
+class Campaign:
 
-    _, NAME, *ARGS = sys.argv # name of campaign, passed args
-
-    JOBNAME = NAME + '_' + '-'.join(ARGS)
-
-    WORKDIR = os.path.dirname(os.path.abspath(__file__))
-    JOBROOT = os.path.join(WORKDIR, JOBNAME)
     JOBSUFFIX = '.campaign.job'
     LOGSUFFIX = '.campaign.log'
-    LOCKFILEPATH = Path(os.path.join(WORKDIR, JOBNAME + '.campaign.lock'))
+    INCSUFFIX = '.campaign.inc'
 
-    while True:
+    def __init__(self,
+            workdir,
+            name,
+            *args,
+            ):
+        self.workdir = workdir
+        self.name = name = str(name)
+        self.args = args
+        campaignname = self.campaignname = name + '_' + '-'.join(args)
+        lockfilepath = self.lockfilepath = Path(
+            workdir,
+            campaignname + '.campaign.lock'
+            )
+        self.jobroot = Path(workdir, campaignname)
 
-        locked = False
+    def get_jobfilepath(self, jobid):
+        return Path(
+            str(self.jobroot) + '_' + jobid.zfill(12) + self.JOBSUFFIX
+            )
+    def get_logfilepath(self, jobid):
+        return Path(
+            str(self.jobroot) + '_' + jobid.zfill(12) + self.LOGSUFFIX
+            )
+    def get_incfilepath(self, jobid):
+        return Path(
+            str(self.jobroot) + '_' + jobid.zfill(12) + self.INCSUFFIX
+            )
 
+    @contextmanager
+    def lock(self):
         try:
-
-            time.sleep(random.random())
-
-            try:
-                LOCKFILEPATH.touch(exist_ok = False)
-                locked = True
-            except FileExistsError:
-                continue
-
-            jobno = len(glob.glob(glob.escape(JOBROOT) + '*' + JOBSUFFIX))
-            arg = str(jobno)
-
-            jobfilepath = JOBROOT + '_' + arg.zfill(12) + JOBSUFFIX
-            logfilepath = JOBROOT + '_' + arg.zfill(12) + LOGSUFFIX
-
-            with open(jobfilepath, mode = 'x') as jobfile:
-                LOCKFILEPATH.unlink()
-                locked = False
-                cmd = ['python3', NAME, JOBNAME, logfilepath, arg, *ARGS]
-                proc = subprocess.Popen(
-                    cmd,
-                    stdin = subprocess.DEVNULL,
-                    stdout = subprocess.DEVNULL,
-                    stderr = jobfile,
-                    )
-                ret = proc.wait()
-                if ret:
-                    jobfile.write('Error')
-                    exc = subprocess.CalledProcessError(ret, cmd)
-                    jobfile.write(str(exc))
-                    raise exc 
-                else:
-                    jobfile.write('Done.')
-
-        except Exception as exc:
+            locked = False
+            while not locked:
+                time.sleep(random.random())
+                try:
+                    self.lockfilepath.touch(exist_ok = False)
+                    locked = True
+                except FileExistsError:
+                    continue
+            yield
+        finally:
             if locked:
-                LOCKFILEPATH.unlink()
-            if isinstance(exc, subprocess.CalledProcessError):
-                continue
+                self.lockfilepath.unlink()
+
+    def choose_job(self):
+        with self.lock():
+            incompletes = glob.glob(
+                glob.escape(self.jobroot) + '*' + self.INCSUFFIX
+                )
+            if incompletes:
+                incfilename = incompletes[0]
+                with open(incfilename, mode = 'r') as incfile:
+                    jobid = incfile.read()
+                os.remove(incfilename)
             else:
+                jobid = str(len(glob.glob(
+                    glob.escape(self.jobroot) + '*' + self.JOBSUFFIX
+                    )))
+                self.get_jobfilepath(jobid).touch(exist_ok = False)
+                self.get_logfilepath(jobid).touch(exist_ok = False)
+            return jobid
+
+    def run_job(self, jobid):
+        jobfilepath = self.get_jobfilepath(jobid)
+        logfilepath = self.get_logfilepath(jobid)
+        incfilepath = self.get_incfilepath(jobid)
+        with open(jobfilepath, mode = 'r+') as jobfile:
+            cmd = [
+                'python3', self.name,
+                self.campaignname, str(logfilepath), jobid, *self.args
+                ]
+            proc = subprocess.Popen(
+                cmd,
+                stdin = subprocess.DEVNULL,
+                stdout = subprocess.DEVNULL,
+                stderr = jobfile,
+                )
+            try:
+                ret = proc.wait()
+            except Exception as exc:
+                proc.terminate()
+                ret = -1
                 raise Exception from exc
+            finally:
+                if ret == 0:
+                    jobfile.write('\n' + COMPLETEDCODE)
+                elif ret < 0:
+                    jobfile.write('\n' + INCOMPLETECODE)
+                    incfilepath.touch(exist_ok = False)
+                    with open(jobfilepath, mode = 'r+') as incfile:
+                        incfile.write(jobid)
+                else:
+                    with open(logfilepath, mode = 'r') as logfile:
+                        logtext = logfile.read()
+                    if logtext.endswith(EXHAUSTEDCODE):
+                        raise ExhaustedError
+                    exc = subprocess.CalledProcessError(ret, cmd)
+                    jobfile.write('\n' + str(exc))
+
+    def run(self):
+        while True:
+            job = self.choose_job()
+            try:
+                self.run_job(job)
+            except ExhaustedError:
+                break
+
+
+if __name__ == '__main__':
+
+    _, name, *args = sys.argv # name of campaign, passed args
+    name = os.path.abspath(name)
+    workdir = os.path.dirname(name)
+
+    campaign = Campaign(
+        workdir,
+        name,
+        *args,
+        )
+
+    campaign.run()
+
 
 ################################################################################

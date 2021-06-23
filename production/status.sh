@@ -35,5 +35,5 @@ for DEST in ${DESTS[@]}; do
   echo " "
   echo "-------------------------------"
   echo $DEST
-  bash $DIR"/""goto.sh" $DEST "$COMMAND"
+  bash $DIR"/""go.sh" $DEST "$COMMAND"
 done

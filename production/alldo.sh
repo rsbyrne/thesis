@@ -21,5 +21,5 @@ DESTS=(\
 
 for DEST in ${DESTS[@]}; do
   echo $DEST
-  bash $DIR/goto.sh $DEST "$*"
+  bash $/DIR/do.sh $DEST "$*"
 done
