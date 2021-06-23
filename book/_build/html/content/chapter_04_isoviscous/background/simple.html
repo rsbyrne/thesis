@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>4.2.2. Simple isoviscous rheology &#8212; What kind of thing is a planet?</title>
     
-  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -38,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -49,7 +46,7 @@
     <script src="../../../_static/copybutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -63,14 +60,14 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="4.2.3. Isoviscous rheology with internal and mixed heating" href="heating.html" />
     <link rel="prev" title="4.2.1. Basics of convection" href="basics.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -79,32 +76,32 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../../../index.html">
-  
-  <img src="../../../_static/logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">What kind of thing is a planet?</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">What kind of thing is a planet?</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../../index.html">
    What kind of thing is a planet?
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Front matter
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../../frontmatter/declaration.html">
    Declaration
@@ -131,22 +128,27 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Thesis
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../chapter_01_background/main.html">
    1. Review and Theory
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../chapter_02_methods/intro.html">
    2. Tools and Methods
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../chapter_02_methods/section1.html">
      2.1. The analytical toolkit
@@ -168,14 +170,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../chapter_03_everest/abstract.html">
    3. Everest: a Framework for Abstractified Science
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../chapter_03_everest/introduction.html">
      3.1. Introduction
@@ -217,24 +222,32 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../abstract.html">
    4. Scaling Behaviours of Linear Rheologies: Constant Viscosity
   </a>
-  <ul class="current collapse-ul">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../introduction.html">
      4.1. Introduction
     </a>
    </li>
-   <li class="toctree-l2 current active collapsible-parent">
+   <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="intro.html">
      4.2. Background
     </a>
-    <ul class="current collapse-ul">
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="basics.html">
        4.2.1. Basics of convection
@@ -261,8 +274,6 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../methods/intro.html">
@@ -285,14 +296,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../chapter_05_arrhenius/abstract.html">
    5. Scaling Behaviours of Linear Rheologies: Temperature-Dependent Viscosity
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../chapter_05_arrhenius/introduction.html">
      5.1. Introduction
@@ -304,14 +318,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../chapter_06_viscoplastic/abstract.html">
    6. Mode Boundaries in Viscoplastic Rheology
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../chapter_06_viscoplastic/introduction.html">
      6.1. Introduction
@@ -323,14 +340,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../chapter_07_advanced/abstract.html">
    7. Big Data Methods for Computational Geodynamics
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../chapter_07_advanced/introduction.html">
      7.1. Introduction
@@ -342,8 +362,6 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../chapter_08_discussion/main.html">
@@ -356,24 +374,24 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   End matter
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../../references.html">
    References
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Appendices
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../../appendices/tables/main.html">
    Tables
@@ -381,6 +399,7 @@
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -396,21 +415,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -428,7 +447,7 @@
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -448,14 +467,14 @@
     </div>
 </div>
 
+            <!-- Full screen (wrap in <a> to have style consistency -->
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -482,11 +501,12 @@
     </div>
 </div>
 
-    </div>
+        </div>
 
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -496,31 +516,31 @@
                 
   <div class="section" id="simple-isoviscous-rheology">
 <h1><span class="section-number">4.2.2. </span>Simple isoviscous rheology<a class="headerlink" href="#simple-isoviscous-rheology" title="Permalink to this headline">¶</a></h1>
-<p>Due to their relative simplicity and amenability to symbolic analysis, isoviscous models were among the earliest published mantle convection models <span id="id1">[<a class="reference internal" href="../../../references.html#id372">Blankenbach <em>et al.</em>, 1989</a>, <a class="reference internal" href="../../../references.html#id755">Jarvis and Peltier, 1986</a>, <a class="reference internal" href="../../../references.html#id487">McKenzie <em>et al.</em>, 1974</a>, <a class="reference internal" href="../../../references.html#id803">McKenzie <em>et al.</em>, 1973</a>]</span>, and they continue to be produced and discussed today <span id="id2">[<a class="reference internal" href="../../../references.html#id745">Vilella and Deschamps, 2018</a>, <a class="reference internal" href="../../../references.html#id915">Weller and Lenardic, 2016</a>, <a class="reference internal" href="../../../references.html#id758">Weller <em>et al.</em>, 2016</a>, <a class="reference internal" href="../../../references.html#id811">Zhong, 2005</a>]</span>.</p>
-<p>In an isoviscous model, the viscosity function (usually set to <span class="math notranslate nohighlight">\(\eta=1\)</span>) is constant throughout space and time. Though simple, it is nevertheless able to reproduce appropriate surface velocities, gravitational profiles, and even topographic wavelengths <span id="id3">[<a class="reference internal" href="../../../references.html#id487">McKenzie <em>et al.</em>, 1974</a>, <a class="reference internal" href="../../../references.html#id803">McKenzie <em>et al.</em>, 1973</a>]</span>. Though its parameters are few, there remain limitless possible variations through <em>Rayleigh</em> number, internal heat <span class="math notranslate nohighlight">\(H\)</span>, domain geometry, and choice of boundary condition - many of which boast long-term stability solutions with enough implicit nonlinearity to make purely analytical studies infeasible <span id="id4">[<a class="reference internal" href="../../../references.html#id774">Daly, 1980</a>]</span>. Even within each parameter set, chaotic dynamics ensure that two nearly identical configurations may yet have wildly divergent outcomes <span id="id5">[<a class="reference internal" href="../../../references.html#id911">Palymskiy, 2003</a>, <a class="reference internal" href="../../../references.html#id894">Stewart and Turcotte, 1989</a>]</span>. And while the isoviscous model is certainly the most computationally tractable of all mantle-like rheologies, it is only in the last decade that long-run simulations of appropriate scale for the Earth (<span class="math notranslate nohighlight">\(Ra&gt;10^7\)</span>) have become possible <span id="id6">[<a class="reference internal" href="../../../references.html#id747">Trubitsyn and Evseev, 2018</a>, <a class="reference internal" href="../../../references.html#id784">Vynnycky and Masuda, 2013</a>]</span>; these have confirmed earlier intuitions that stable convective planforms may either not exist, or may never manifest, on planetary spatiotemporal scales <span id="id7">[<a class="reference internal" href="../../../references.html#id449">Hüttig and Breuer, 2011</a>]</span>.</p>
+<p>Due to their relative simplicity and amenability to symbolic analysis, isoviscous models were among the earliest published mantle convection models <span id="id1">[<a class="reference internal" href="../../../references.html#id372" title="B Blankenbach, F Busse, U Christensen, L Cserepes, D Gunkel, U Hansen, H Harder, G Jarvis, M Koch, G Marquart, D Moore, P Olson, H Schmeling, and T Schnaubelt. A benchmark comparison for mantle convection codes. Geophys. J. Int., 98(1):23–38, 6 1989.">Blankenbach <em>et al.</em>, 1989</a>, <a class="reference internal" href="../../../references.html#id755" title="G T Jarvis and W R Peltier. Lateral heterogeneity in the convecting mantle. J. Geophys. Res., 91(B1):435, 1986.">Jarvis and Peltier, 1986</a>, <a class="reference internal" href="../../../references.html#id487" title="D P McKenzie, J M Roberts, and N O Weiss. Convection in the earth's mantle: towards a numerical simulation. J. Fluid Mech., 62(3):465–538, 1 1974.">McKenzie <em>et al.</em>, 1974</a>, <a class="reference internal" href="../../../references.html#id803" title="Dan McKenzie, Jean Roberts, and Nigel Weiss. Numerical models of convection in the earth's mantle. Tectonophysics, 19(2):89–103, 8 1973.">McKenzie <em>et al.</em>, 1973</a>]</span>, and they continue to be produced and discussed today <span id="id2">[<a class="reference internal" href="../../../references.html#id745" title="Kenny Vilella and Frédéric Deschamps. Temperature and heat flux scaling laws for isoviscous, infinite prandtl number mixed heating convection. Geophys. J. Int., 214(1):265–281, 6 2018.">Vilella and Deschamps, 2018</a>, <a class="reference internal" href="../../../references.html#id915" title="Matthew B Weller and Adrian Lenardic. The energetics and convective vigor of mixed-mode heating: velocity scalings and implications for the tectonics of exoplanets. Geophys. Res. Lett., 43(18):9469–9474, 8 2016.">Weller and Lenardic, 2016</a>, <a class="reference internal" href="../../../references.html#id758" title="Matthew B Weller, Adrian Lenardic, and William B Moore. Scaling relationships and physics for mixed heating convection in planetary interiors: isoviscous spherical shells. J. Geophys. Res. [Solid Earth], 121(10):7598–7617, 9 2016.">Weller <em>et al.</em>, 2016</a>, <a class="reference internal" href="../../../references.html#id811" title="Shijie Zhong. Dynamics of thermal plumes in three-dimensional isoviscous thermal convection. Geophys. J. Int., 162(1):289–300, 6 2005.">Zhong, 2005</a>]</span>.</p>
+<p>In an isoviscous model, the viscosity function (usually set to <span class="math notranslate nohighlight">\(\eta=1\)</span>) is constant throughout space and time. Though simple, it is nevertheless able to reproduce appropriate surface velocities, gravitational profiles, and even topographic wavelengths <span id="id3">[<a class="reference internal" href="../../../references.html#id487" title="D P McKenzie, J M Roberts, and N O Weiss. Convection in the earth's mantle: towards a numerical simulation. J. Fluid Mech., 62(3):465–538, 1 1974.">McKenzie <em>et al.</em>, 1974</a>, <a class="reference internal" href="../../../references.html#id803" title="Dan McKenzie, Jean Roberts, and Nigel Weiss. Numerical models of convection in the earth's mantle. Tectonophysics, 19(2):89–103, 8 1973.">McKenzie <em>et al.</em>, 1973</a>]</span>. Though its parameters are few, there remain limitless possible variations through <em>Rayleigh</em> number, internal heat <span class="math notranslate nohighlight">\(H\)</span>, domain geometry, and choice of boundary condition - many of which boast long-term stability solutions with enough implicit nonlinearity to make purely analytical studies infeasible <span id="id4">[<a class="reference internal" href="../../../references.html#id774" title="Stephen F Daly. Convection with decaying heat sources: constant viscosity. Geophys. J. Int., 61(3):519–547, 5 1980.">Daly, 1980</a>]</span>. Even within each parameter set, chaotic dynamics ensure that two nearly identical configurations may yet have wildly divergent outcomes <span id="id5">[<a class="reference internal" href="../../../references.html#id911" title="I B Palymskiy. DETERMINISM AND CHAOS IN THE RAYLEIGH - BENARD CONVECTION. N/A, 0 2003.">Palymskiy, 2003</a>, <a class="reference internal" href="../../../references.html#id894" title="Cheryl A Stewart and Donald L Turcotte. The route to chaos in thermal convection at infinite prandtl number: 1. some trajectories and bifurcations. J. Geophys. Res., 94(B10):13707–13717, 9 1989.">Stewart and Turcotte, 1989</a>]</span>. And while the isoviscous model is certainly the most computationally tractable of all mantle-like rheologies, it is only in the last decade that long-run simulations of appropriate scale for the Earth (<span class="math notranslate nohighlight">\(Ra&gt;10^7\)</span>) have become possible <span id="id6">[<a class="reference internal" href="../../../references.html#id747" title="V P Trubitsyn and M N Evseev. Plume mode of thermal convection in the earth's mantle. Izv. Phys. Solid Earth, 54(6):838–848, 10 2018.">Trubitsyn and Evseev, 2018</a>, <a class="reference internal" href="../../../references.html#id784" title="M Vynnycky and Y Masuda. Rayleigh-Bénard convection at high rayleigh number and infinite prandtl number: asymptotics and numerics. Phys. Fluids, 25(11):113602, 10 2013.">Vynnycky and Masuda, 2013</a>]</span>; these have confirmed earlier intuitions that stable convective planforms may either not exist, or may never manifest, on planetary spatiotemporal scales <span id="id7">[<a class="reference internal" href="../../../references.html#id449" title="Christian Hüttig and Doris Breuer. Regime classification and planform scaling for internally heated mantle convection. Phys. Earth Planet. Inter., 186(3):111–124, 5 2011.">Hüttig and Breuer, 2011</a>]</span>.</p>
 <p>Although the isoviscous model does bely considerable complexity, it is simple enough to make some solutions analytically attainable. Like all convecting systems, a ‘critical’ <em>Rayleigh</em> number <span class="math notranslate nohighlight">\(Ra_{cr}\)</span> should exist below which convection ceases and conduction dominates (i.e. <span class="math notranslate nohighlight">\(Nu=1\)</span>), defining a ‘supercritical <span class="math notranslate nohighlight">\(Ra\)</span>’:</p>
 <div class="math notranslate nohighlight">
 \[ R \equiv \frac{Ra}{Ra_{cr}} \]</div>
-<p>At <span class="math notranslate nohighlight">\(R=1\)</span>, perturbations of a certain ‘critical’ wavelength are uniquely able to grow faster than the conductive geotherm and hence become unstable; increasing <span class="math notranslate nohighlight">\(R\)</span> beyond <span class="math notranslate nohighlight">\(1\)</span> makes more wavelengths available for convective growth, until at extreme values (<span class="math notranslate nohighlight">\(Ra &gt;&gt; 10^7\)</span>) even artificial heterogeneities introduced by random noise can grow, such that large-scale models become overwhelmingly time-dependent <span id="id8">[<a class="reference internal" href="../../../references.html#id876">Jarvis, 1984</a>]</span>. For a plane domain of infinite horizontal extent, the critical wavelength <span class="math notranslate nohighlight">\(\lambda_{cr}\)</span> should be exactly <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> <span id="id9">[<a class="reference internal" href="../../../references.html#id896">Chandrasekhar, 1961</a>]</span>, corresponding to a <span class="math notranslate nohighlight">\(Ra_{cr}\)</span> of exactly <span id="id10">[<a class="reference internal" href="../../../references.html#id805">Malkus and Chandrasekhar, 1954</a>]</span>:</p>
+<p>At <span class="math notranslate nohighlight">\(R=1\)</span>, perturbations of a certain ‘critical’ wavelength are uniquely able to grow faster than the conductive geotherm and hence become unstable; increasing <span class="math notranslate nohighlight">\(R\)</span> beyond <span class="math notranslate nohighlight">\(1\)</span> makes more wavelengths available for convective growth, until at extreme values (<span class="math notranslate nohighlight">\(Ra &gt;&gt; 10^7\)</span>) even artificial heterogeneities introduced by random noise can grow, such that large-scale models become overwhelmingly time-dependent <span id="id8">[<a class="reference internal" href="../../../references.html#id876" title="G T Jarvis. Time-dependent convection in the earth's mantle. Phys. Earth Planet. Inter., 36(3):305–327, 11 1984.">Jarvis, 1984</a>]</span>. For a plane domain of infinite horizontal extent, the critical wavelength <span class="math notranslate nohighlight">\(\lambda_{cr}\)</span> should be exactly <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> <span id="id9">[<a class="reference internal" href="../../../references.html#id896" title="Subrahmanyan Chandrasekhar. Hydrodynamic and hydromagnetic stability. N/A, 0 1961.">Chandrasekhar, 1961</a>]</span>, corresponding to a <span class="math notranslate nohighlight">\(Ra_{cr}\)</span> of exactly <span id="id10">[<a class="reference internal" href="../../../references.html#id805" title="W V R Malkus and Subrahmanyan Chandrasekhar. Discrete transitions in turbulent convection. Proc. R. Soc. Lond. A Math. Phys. Sci., 225(1161):185–195, 7 1954.">Malkus and Chandrasekhar, 1954</a>]</span>:</p>
 <div class="math notranslate nohighlight">
 \[ Ra_{cr} = \frac{27\pi^4}{4} \approx 657.5 \]</div>
-<p>In any real system, however, <span class="math notranslate nohighlight">\(A\)</span> cannot be infinite, and may be literally or effectively compressed such that the critical wavelength is no longer available. The effect of this is to create a dependency of <span class="math notranslate nohighlight">\(Ra_{cr}\)</span> on <span class="math notranslate nohighlight">\(A\)</span> <span id="id11">[<a class="reference internal" href="../../../references.html#id896">Chandrasekhar, 1961</a>]</span>:</p>
+<p>In any real system, however, <span class="math notranslate nohighlight">\(A\)</span> cannot be infinite, and may be literally or effectively compressed such that the critical wavelength is no longer available. The effect of this is to create a dependency of <span class="math notranslate nohighlight">\(Ra_{cr}\)</span> on <span class="math notranslate nohighlight">\(A\)</span> <span id="id11">[<a class="reference internal" href="../../../references.html#id896" title="Subrahmanyan Chandrasekhar. Hydrodynamic and hydromagnetic stability. N/A, 0 1961.">Chandrasekhar, 1961</a>]</span>:</p>
 <div class="math notranslate nohighlight">
 \[ Ra_{cr} = \frac{\pi^4 \left( 1 + A^2 \right)^3}{A^4} \]</div>
-<p>At the unit aspect ratios typically modelled, for instance, <span class="math notranslate nohighlight">\(Ra_{cr}\)</span> should instead approach (<span id="id12">[<a class="reference internal" href="../../../references.html#id906">Grover and Tandon, 1968</a>]</span>):</p>
+<p>At the unit aspect ratios typically modelled, for instance, <span class="math notranslate nohighlight">\(Ra_{cr}\)</span> should instead approach (<span id="id12">[<a class="reference internal" href="../../../references.html#id906" title="S D Grover and J N Tandon. Convective instabilities in a compressible atmosphere. i. the effect of magnetic field. Zeitschrift fur Astrophysik, 68:357, 0 1968.">Grover and Tandon, 1968</a>]</span>):</p>
 <div class="math notranslate nohighlight">
 \[ Ra_{cr} = 2^3\pi^4 \approx 779.3 \]</div>
-<p>A value which is borne out in laboratory testing <span id="id13">[<a class="reference internal" href="../../../references.html#id907">Whitehead <em>et al.</em>, 2011</a>]</span>.</p>
-<p>While heat may be transported by convection in the interior of the system, heat may only cross in or out of the system as a whole via conduction. This occurs across two thin layers at the outer and inner boundaries. Since we stipulate that these layers are purely conductive, a <em>Rayleigh</em> number defined only across each layer must be below the critical value for that layer: <span class="math notranslate nohighlight">\({Ra}_{layer} &lt; {{Ra}_{layer}}_{cr}\)</span> <code class="docutils literal notranslate"><span class="pre">Olson1987-do</span></code>. This is the first observation of boundary layer theory, whence can be deduced the following fundamental power law relationship between the <em>Rayleigh</em> and <em>Nusselt</em> numbers <span id="id14">[<a class="reference internal" href="../../../references.html#id663">Schubert <em>et al.</em>, 2001</a>]</span>:</p>
+<p>A value which is borne out in laboratory testing <span id="id13">[<a class="reference internal" href="../../../references.html#id907" title="J A Whitehead, Erin Shea, and Mark D Behn. Cellular convection in a chamber with a warm surface raft. Phys. Fluids, 23(10):104103, 9 2011.">Whitehead <em>et al.</em>, 2011</a>]</span>.</p>
+<p>While heat may be transported by convection in the interior of the system, heat may only cross in or out of the system as a whole via conduction. This occurs across two thin layers at the outer and inner boundaries. Since we stipulate that these layers are purely conductive, a <em>Rayleigh</em> number defined only across each layer must be below the critical value for that layer: <span class="math notranslate nohighlight">\({Ra}_{layer} &lt; {{Ra}_{layer}}_{cr}\)</span> <code class="docutils literal notranslate"><span class="pre">Olson1987-do</span></code>. This is the first observation of boundary layer theory, whence can be deduced the following fundamental power law relationship between the <em>Rayleigh</em> and <em>Nusselt</em> numbers <span id="id14">[<a class="reference internal" href="../../../references.html#id663" title="Gerald Schubert, Donald L Turcotte, and Peter Olson. Mantle Convection in the Earth and Planets. Cambridge University Press, 8 2001.">Schubert <em>et al.</em>, 2001</a>]</span>:</p>
 <div class="math notranslate nohighlight">
 \[ Nu \propto Ra^{\beta}, \quad \beta \to \frac{1}{3} \]</div>
-<p>Where <span class="math notranslate nohighlight">\(Nu\)</span> is the Nusselt number. The coefficient of proportionality is theoretically <span class="math notranslate nohighlight">\(\approx 0.1941\)</span> <span id="id15">[<a class="reference internal" href="../../../references.html#id761">Olson, 1987</a>]</span>, though it has been argued that its value will tend be dominated by uncertainty in practice <span id="id16">[<a class="reference internal" href="../../../references.html#id868">Lenardic and Moresi, 2003</a>]</span>; reported values have ranged between <span class="math notranslate nohighlight">\(0.25-0.27\)</span> <span id="id17">[<a class="reference internal" href="../../../references.html#id913">Jarvis and Mitrovica, 1989</a>, <a class="reference internal" href="../../../references.html#id761">Olson, 1987</a>]</span>.</p>
-<p>An equivalent scaling <span id="id18">[<a class="reference internal" href="../../../references.html#id882">Jarvis and Peltier, 1982</a>]</span> has instead:</p>
+<p>Where <span class="math notranslate nohighlight">\(Nu\)</span> is the Nusselt number. The coefficient of proportionality is theoretically <span class="math notranslate nohighlight">\(\approx 0.1941\)</span> <span id="id15">[<a class="reference internal" href="../../../references.html#id761" title="Peter Olson. A comparison of heat transfer laws for mantle convection at very high rayleigh numbers. Phys. Earth Planet. Inter., 48(1):153–160, 8 1987.">Olson, 1987</a>]</span>, though it has been argued that its value will tend be dominated by uncertainty in practice <span id="id16">[<a class="reference internal" href="../../../references.html#id868" title="A Lenardic and L Moresi. Thermal convection below a conducting lid of variable extent: heat flow scalings and two-dimensional, infinite prandtl number numerical simulations. Phys. Fluids, 15(2):455–466, 1 2003.">Lenardic and Moresi, 2003</a>]</span>; reported values have ranged between <span class="math notranslate nohighlight">\(0.25-0.27\)</span> <span id="id17">[<a class="reference internal" href="../../../references.html#id913" title="G T Jarvis and J X Mitrovica. On nusselt numbers and the relative resolution of plumes and boundary layers in mantle convection. Geophys. J. Int., 99(3):497–509, 11 1989.">Jarvis and Mitrovica, 1989</a>, <a class="reference internal" href="../../../references.html#id761" title="Peter Olson. A comparison of heat transfer laws for mantle convection at very high rayleigh numbers. Phys. Earth Planet. Inter., 48(1):153–160, 8 1987.">Olson, 1987</a>]</span>.</p>
+<p>An equivalent scaling <span id="id18">[<a class="reference internal" href="../../../references.html#id882" title="G T Jarvis and W R Peltier. Mantle convection as a boundary layer phenomenon. Geophys. J. Int., 68(2):389–427, 1 1982.">Jarvis and Peltier, 1982</a>]</span> has instead:</p>
 <div class="math notranslate nohighlight">
 \[ Nu \propto R^{\beta} \]</div>
-<p>Where <span class="math notranslate nohighlight">\(R\)</span>, again, is the proportion by which <span class="math notranslate nohighlight">\(Ra\)</span> exceeds <span class="math notranslate nohighlight">\(Ra_{cr}\)</span>. Defining <span class="math notranslate nohighlight">\(Ra\)</span> in this way preserves the value of <span class="math notranslate nohighlight">\(\beta\)</span> insofar as <span class="math notranslate nohighlight">\(Ra^{cr}\)</span> is independent of it, but allows the coefficient of proportionality to relate more strictly to non-thermal factors like the domain geometry - for example the aspect ratio, which (above a certain threshold) has been observed to stretch or compress the planform horizontally without changing the underlying boundary stability criteria <span id="id19">[<a class="reference internal" href="../../../references.html#id882">Jarvis and Peltier, 1982</a>]</span>.</p>
+<p>Where <span class="math notranslate nohighlight">\(R\)</span>, again, is the proportion by which <span class="math notranslate nohighlight">\(Ra\)</span> exceeds <span class="math notranslate nohighlight">\(Ra_{cr}\)</span>. Defining <span class="math notranslate nohighlight">\(Ra\)</span> in this way preserves the value of <span class="math notranslate nohighlight">\(\beta\)</span> insofar as <span class="math notranslate nohighlight">\(Ra^{cr}\)</span> is independent of it, but allows the coefficient of proportionality to relate more strictly to non-thermal factors like the domain geometry - for example the aspect ratio, which (above a certain threshold) has been observed to stretch or compress the planform horizontally without changing the underlying boundary stability criteria <span id="id19">[<a class="reference internal" href="../../../references.html#id882" title="G T Jarvis and W R Peltier. Mantle convection as a boundary layer phenomenon. Geophys. J. Int., 68(2):389–427, 1 1982.">Jarvis and Peltier, 1982</a>]</span>.</p>
 <p>In any case, at the state where <span class="math notranslate nohighlight">\(Nu\)</span> satisfies this scaling, the interior of each cell becomes a homogeneous region of uniform temperature <span class="math notranslate nohighlight">\(T^{cell}\)</span> and variable but low velocities, with strong gradients and shears at the margins, and overall cell dimensions approaching an aspect ratio of <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>. Because of the fixed temperature scale, the only way heat transport can be enhanced in such a system is by thinning the boundary layers, which in practice occurs by dripping/pluming until only the theoretical stable boundary thickness is left. For this reason, <span class="math notranslate nohighlight">\(Nu\)</span> also functions as a useful proxy for boundary layer thickness when this is otherwise hard to define.</p>
-<p>The canonical <em>beta</em> scaling is seductive because it connects the relatively well-constrained fact of surface geothermal flux with the more mysterious thermal state of the mantle, and so allows parameterised thermal histories to be projected through deep time. The <span class="math notranslate nohighlight">\(\beta \to \frac{1}{3}\)</span> limit itself ultimately derives from the <em>Rayleigh</em> number’s dependence on length cubed, and while there is no <em>a priori</em> reason to believe that this analytical justification must be borne out in practice, it has been recognised as extremely suggestive for over half a century <span id="id20">[<a class="reference internal" href="../../../references.html#id895">Chan, 1971</a>]</span>. Testing this scaling behaviour empirically was an early priority of computational geodynamics, with several studies producing estimates that converged on, but did not achieve, the theoretical <span class="math notranslate nohighlight">\(\frac{1}{3}\)</span> scaling: the value has been reported as any of <span class="math notranslate nohighlight">\(0.313\)</span> <span id="id21">[<a class="reference internal" href="../../../references.html#id882">Jarvis and Peltier, 1982</a>]</span>, <span class="math notranslate nohighlight">\(0.318\)</span> <span id="id22">[<a class="reference internal" href="../../../references.html#id755">Jarvis and Peltier, 1986</a>]</span>, <span class="math notranslate nohighlight">\(0.319\)</span> <span id="id23">[<a class="reference internal" href="../../../references.html#id881">Schubert and Anderson, 1985</a>]</span>, <span class="math notranslate nohighlight">\(0.326\)</span> <span id="id24">[<a class="reference internal" href="../../../references.html#id913">Jarvis and Mitrovica, 1989</a>]</span>, <span class="math notranslate nohighlight">\(0.36\)</span> <span id="id25">[<a class="reference internal" href="../../../references.html#id879">Quareni <em>et al.</em>, 1985</a>]</span>, and <span class="math notranslate nohighlight">\(0.31\)</span> <span id="id26">[<a class="reference internal" href="../../../references.html#id190">Niemela <em>et al.</em>, 2000</a>]</span>, using various methods both numerical and laboratory-based. The reason for the deviation is uncertain. One possibility is that the boundary layer instability theory is only valid in the limit <span class="math notranslate nohighlight">\(Ra\to\infty\)</span> <span id="id27">[<a class="reference internal" href="../../../references.html#id761">Olson, 1987</a>]</span>. Alternatively, high <span class="math notranslate nohighlight">\(Ra\)</span> values may witness transitions to alternate scaling logics altogether - perhaps lowering <span class="math notranslate nohighlight">\(beta\)</span>  It was for a time suggested that, at very high <em>Rayleigh</em> numbers, an ‘asymptotic regime’ of <span class="math notranslate nohighlight">\(\beta \to \frac{1}{2}\)</span> might emerge, but this has not yet been observed <span id="id28">[<a class="reference internal" href="../../../references.html#id190">Niemela <em>et al.</em>, 2000</a>]</span>.</p>
+<p>The canonical <em>beta</em> scaling is seductive because it connects the relatively well-constrained fact of surface geothermal flux with the more mysterious thermal state of the mantle, and so allows parameterised thermal histories to be projected through deep time. The <span class="math notranslate nohighlight">\(\beta \to \frac{1}{3}\)</span> limit itself ultimately derives from the <em>Rayleigh</em> number’s dependence on length cubed, and while there is no <em>a priori</em> reason to believe that this analytical justification must be borne out in practice, it has been recognised as extremely suggestive for over half a century <span id="id20">[<a class="reference internal" href="../../../references.html#id895" title="Shu-Kwan Chan. Infinite prandtl number turbulent convection. Stud. Appl. Math., 50(1):13–49, 2 1971.">Chan, 1971</a>]</span>. Testing this scaling behaviour empirically was an early priority of computational geodynamics, with several studies producing estimates that converged on, but did not achieve, the theoretical <span class="math notranslate nohighlight">\(\frac{1}{3}\)</span> scaling: the value has been reported as any of <span class="math notranslate nohighlight">\(0.313\)</span> <span id="id21">[<a class="reference internal" href="../../../references.html#id882" title="G T Jarvis and W R Peltier. Mantle convection as a boundary layer phenomenon. Geophys. J. Int., 68(2):389–427, 1 1982.">Jarvis and Peltier, 1982</a>]</span>, <span class="math notranslate nohighlight">\(0.318\)</span> <span id="id22">[<a class="reference internal" href="../../../references.html#id755" title="G T Jarvis and W R Peltier. Lateral heterogeneity in the convecting mantle. J. Geophys. Res., 91(B1):435, 1986.">Jarvis and Peltier, 1986</a>]</span>, <span class="math notranslate nohighlight">\(0.319\)</span> <span id="id23">[<a class="reference internal" href="../../../references.html#id881" title="Gerald Schubert and Charles A Anderson. Finite element calculations of very high rayleigh number thermal convection. Geophys. J. Int., 80(3):575–601, 2 1985.">Schubert and Anderson, 1985</a>]</span>, <span class="math notranslate nohighlight">\(0.326\)</span> <span id="id24">[<a class="reference internal" href="../../../references.html#id913" title="G T Jarvis and J X Mitrovica. On nusselt numbers and the relative resolution of plumes and boundary layers in mantle convection. Geophys. J. Int., 99(3):497–509, 11 1989.">Jarvis and Mitrovica, 1989</a>]</span>, <span class="math notranslate nohighlight">\(0.36\)</span> <span id="id25">[<a class="reference internal" href="../../../references.html#id879" title="Francesca Quareni, David A Yuen, Granville Sewell, and Ulrich R Christensen. High rayleigh number convection with strongly variable viscosity: a comparison between mean field and two-dimensional solutions. J. Geophys. Res., 90(B14):12633, 1985.">Quareni <em>et al.</em>, 1985</a>]</span>, and <span class="math notranslate nohighlight">\(0.31\)</span> <span id="id26">[<a class="reference internal" href="../../../references.html#id190" title="J J Niemela, L Skrbek, K R Sreenivasan, and R J Donnelly. Turbulent convection at very high rayleigh numbers. Nature, 404(6780):837–840, 3 2000.">Niemela <em>et al.</em>, 2000</a>]</span>, using various methods both numerical and laboratory-based. The reason for the deviation is uncertain. One possibility is that the boundary layer instability theory is only valid in the limit <span class="math notranslate nohighlight">\(Ra\to\infty\)</span> <span id="id27">[<a class="reference internal" href="../../../references.html#id761" title="Peter Olson. A comparison of heat transfer laws for mantle convection at very high rayleigh numbers. Phys. Earth Planet. Inter., 48(1):153–160, 8 1987.">Olson, 1987</a>]</span>. Alternatively, high <span class="math notranslate nohighlight">\(Ra\)</span> values may witness transitions to alternate scaling logics altogether - perhaps lowering <span class="math notranslate nohighlight">\(beta\)</span>  It was for a time suggested that, at very high <em>Rayleigh</em> numbers, an ‘asymptotic regime’ of <span class="math notranslate nohighlight">\(\beta \to \frac{1}{2}\)</span> might emerge, but this has not yet been observed <span id="id28">[<a class="reference internal" href="../../../references.html#id190" title="J J Niemela, L Skrbek, K R Sreenivasan, and R J Donnelly. Turbulent convection at very high rayleigh numbers. Nature, 404(6780):837–840, 3 2000.">Niemela <em>et al.</em>, 2000</a>]</span>.</p>
 <p>While the <em>beta</em> scaling strictly holds only for those isoviscous systems with purely basal (no volumetric) heating, Cartesian geometry, and free-slip boundaries, it has been found to hold for a wide range of systems if certain corrections are made.</p>
 </div>
 
@@ -546,15 +566,15 @@
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
     <a class='left-prev' id="prev-link" href="basics.html" title="previous page"><span class="section-number">4.2.1. </span>Basics of convection</a>
     <a class='right-next' id="next-link" href="heating.html" title="next page"><span class="section-number">4.2.3. </span>Isoviscous rheology with internal and mixed heating</a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
@@ -571,11 +591,9 @@
 
       </div>
     </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>

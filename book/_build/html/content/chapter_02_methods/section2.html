@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2.2. Numerical methods and the Underworld code &#8212; What kind of thing is a planet?</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -38,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -49,7 +46,7 @@
     <script src="../../_static/copybutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -63,14 +60,14 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="2.3. Suite-modelling, PlanetEngine and Everest" href="section3.html" />
     <link rel="prev" title="2.1. The analytical toolkit" href="section1.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -79,32 +76,32 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../../index.html">
-  
-  <img src="../../_static/logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">What kind of thing is a planet?</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">What kind of thing is a planet?</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../index.html">
    What kind of thing is a planet?
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Front matter
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../frontmatter/declaration.html">
    Declaration
@@ -131,22 +128,27 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Thesis
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter_01_background/main.html">
    1. Review and Theory
   </a>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="intro.html">
    2. Tools and Methods
   </a>
-  <ul class="current collapse-ul">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="section1.html">
      2.1. The analytical toolkit
@@ -168,14 +170,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_03_everest/abstract.html">
    3. Everest: a Framework for Abstractified Science
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_03_everest/introduction.html">
      3.1. Introduction
@@ -217,24 +222,32 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_04_isoviscous/abstract.html">
    4. Scaling Behaviours of Linear Rheologies: Constant Viscosity
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_04_isoviscous/introduction.html">
      4.1. Introduction
     </a>
    </li>
-   <li class="toctree-l2 collapsible-parent">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../chapter_04_isoviscous/background/intro.html">
      4.2. Background
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../chapter_04_isoviscous/background/basics.html">
        4.2.1. Basics of convection
@@ -261,8 +274,6 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_04_isoviscous/methods/intro.html">
@@ -285,14 +296,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_05_arrhenius/abstract.html">
    5. Scaling Behaviours of Linear Rheologies: Temperature-Dependent Viscosity
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_05_arrhenius/introduction.html">
      5.1. Introduction
@@ -304,14 +318,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_06_viscoplastic/abstract.html">
    6. Mode Boundaries in Viscoplastic Rheology
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_06_viscoplastic/introduction.html">
      6.1. Introduction
@@ -323,14 +340,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chapter_07_advanced/abstract.html">
    7. Big Data Methods for Computational Geodynamics
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter_07_advanced/introduction.html">
      7.1. Introduction
@@ -342,8 +362,6 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter_08_discussion/main.html">
@@ -356,24 +374,24 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   End matter
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../references.html">
    References
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Appendices
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../appendices/tables/main.html">
    Tables
@@ -381,6 +399,7 @@
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -396,21 +415,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -428,7 +447,7 @@
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -448,14 +467,14 @@
     </div>
 </div>
 
+            <!-- Full screen (wrap in <a> to have style consistency -->
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -482,16 +501,16 @@
     </div>
 </div>
 
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
         </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#numerical-methods">
    2.2.1. Numerical methods
@@ -509,8 +528,8 @@
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -520,7 +539,7 @@
                 
   <div class="section" id="numerical-methods-and-the-underworld-code">
 <h1><span class="section-number">2.2. </span>Numerical methods and the Underworld code<a class="headerlink" href="#numerical-methods-and-the-underworld-code" title="Permalink to this headline">¶</a></h1>
-<p>When the font of analysis is exhausted, numerical solutions become indispensable. Though the construction of robust and accurate systems for the computation of mantle convection problems is far from trivial, many successful approaches have been developed over the years, each with its own advantages and limitations. For this thesis we adopt a finite-element approach, which has been extensively developed by many groups over more than a quarter of a century. In particular, we follow after Professor Moresi and colleagues, the developers of modelling codes including <em>CITCOM</em>, <em>Ellipsis</em>, and most lately <em>Underworld</em> <span id="id1">[<a class="reference internal" href="../../references.html#id670">Beucher <em>et al.</em>, 2019</a>, <a class="reference internal" href="../../references.html#id669">Farrington <em>et al.</em>, 2005</a>, <a class="reference internal" href="../../references.html#id671">May and Moresi, 2008</a>, <a class="reference internal" href="../../references.html#id145">Moresi <em>et al.</em>, 2003</a>, <a class="reference internal" href="../../references.html#id381">Moresi <em>et al.</em>, 2002</a>, <a class="reference internal" href="../../references.html#id382">Moresi <em>et al.</em>, 2007</a>, <a class="reference internal" href="../../references.html#id384">Moresi and Solomatov, 1995</a>, <a class="reference internal" href="../../references.html#id153">Moresi <em>et al.</em>, 1996</a>, <a class="reference internal" href="../../references.html#id380">Zhong <em>et al.</em>, 1998</a>]</span>.</p>
+<p>When the font of analysis is exhausted, numerical solutions become indispensable. Though the construction of robust and accurate systems for the computation of mantle convection problems is far from trivial, many successful approaches have been developed over the years, each with its own advantages and limitations. For this thesis we adopt a finite-element approach, which has been extensively developed by many groups over more than a quarter of a century. In particular, we follow after Professor Moresi and colleagues, the developers of modelling codes including <em>CITCOM</em>, <em>Ellipsis</em>, and most lately <em>Underworld</em> <span id="id1">[<a class="reference internal" href="../../references.html#id670" title="Romain Beucher, Louis Moresi, Julian Giordani, John Mansour, Dan Sandiford, Rebecca Farrington, Luke Mondy, Claire Mallard, Patrice Rey, Guillaume Duclaux, and Others. UWGeodynamics: a teaching and research tool for numerical geodynamic modelling. Journal of Open Source Software, 4(36):1136, 2019.">Beucher <em>et al.</em>, 2019</a>, <a class="reference internal" href="../../references.html#id669" title="Rebecca Farrington, Louis Moresi, Steve Quenette, Robert Turnbull, and Patrick Sunter. Geodynamic benchmarking tests in HPC. In APAC Conference, Gold Coast, Australia. researchgate.net, 2005.">Farrington <em>et al.</em>, 2005</a>, <a class="reference internal" href="../../references.html#id671" title="Dave A May and Louis Moresi. Preconditioned iterative methods for stokes flow problems arising in computational geodynamics. Phys. Earth Planet. Inter., 171(1):33–47, 11 2008.">May and Moresi, 2008</a>, <a class="reference internal" href="../../references.html#id145" title="L Moresi, F Dufour, and H -B. Muuhlhaus. A lagrangian integration point finite element method for large deformation modeling of viscoelastic geomaterials. J. Comput. Phys., 184:476–497, 2003.">Moresi <em>et al.</em>, 2003</a>, <a class="reference internal" href="../../references.html#id381" title="L Moresi, F Dufour, and H-B Muhlhaus. Mantle convection modeling with Viscoelastic/Brittle lithosphere: numerical methodology and plate tectonic modeling. Pure Appl. Geophys., pages 2335, 2002.">Moresi <em>et al.</em>, 2002</a>, <a class="reference internal" href="../../references.html#id382" title="L Moresi, S Quenette, V Lemiale, C Mériaux, B Appelbe, and H-B Mühlhaus. Computational approaches to studying non-linear dynamics of the crust and mantle. Phys. Earth Planet. Inter., 163(1):69–82, 7 2007.">Moresi <em>et al.</em>, 2007</a>, <a class="reference internal" href="../../references.html#id384" title="L N Moresi and V S Solomatov. Numerical investigation of 2D convection with extremely large viscosity variations. Phys. Fluids, 8 1995.">Moresi and Solomatov, 1995</a>, <a class="reference internal" href="../../references.html#id153" title="Louis Moresi, Shijie Zhong, and Michael Gurnis. The accuracy of finite element solutions of stokes' flow with strongly varying viscosity. ELSEVIER Physics of the Earth and Planetary Interiors, 97:83–94, 1996.">Moresi <em>et al.</em>, 1996</a>, <a class="reference internal" href="../../references.html#id380" title="Shijie Zhong, Michael Gurnis, and Louis Moresi. Role of faults, nonlinear rheology, and viscosity structure in generating plates from instantaneous mantle flow models. J. Geophys. Res., 103(B7):15255–15268, 6 1998.">Zhong <em>et al.</em>, 1998</a>]</span>.</p>
 <p>Here we will discuss in broad terms the principles and infrastructure of our numerical modelling practice; particulars of model design and construction will be discussed in further chapters as relevance dictates.</p>
 <div class="section" id="numerical-methods">
 <h2><span class="section-number">2.2.1. </span>Numerical methods<a class="headerlink" href="#numerical-methods" title="Permalink to this headline">¶</a></h2>
@@ -533,7 +552,7 @@
 \end{align*} \end{split}\]</div>
 <p>Where <span class="math notranslate nohighlight">\(\eta\)</span> is dynamic viscosity, <span class="math notranslate nohighlight">\(D\)</span> the strain rate tensor, <span class="math notranslate nohighlight">\(p\)</span> dynamic pressure, <span class="math notranslate nohighlight">\(\Delta\rho\)</span> the density anomaly, <span class="math notranslate nohighlight">\(g\)</span> the gravity vector, <span class="math notranslate nohighlight">\(\overline{u}\)</span> the velocity vector, <span class="math notranslate nohighlight">\(T\)</span> temperature, <span class="math notranslate nohighlight">\(\kappa\)</span> thermal diffusivity, <span class="math notranslate nohighlight">\(t\)</span> time, and <span class="math notranslate nohighlight">\(H\)</span> a thermal source term, i.e. radiogenic heating.</p>
 <p>The first two equations together solve for velocity given buoyancy and viscosity without accounting for inertia (hence the lack of time-dependency), while the third equation governs determines the change in temperature at any given point after an infinitesimal time interval due to diffusion (the first term) and advection (the second). Temperature, being the only time-dependent quantity, is the only necessary variable of state for this system. It is further possible to construct the viscosity and diffusivity parameters as functions of space, time, temperature, velocity, et cetera, to achieve much more complex rheologies as desired; plastic, elastic, rigid, and insulating materials may all be implemented in this way, each with its own perils and caveats.</p>
-<p>We have already established that the equations are generally insoluble; numerical methods are the only recourse. There are unavoidable tradeoffs in terms of time, memory, accuracy, flexibility, extensibility, and robustness associated with every numerical convection scheme. Many methods have been developed, including smooth particle hydrodynamics <span id="id2">[<a class="reference internal" href="../../references.html#id688">Monaghan, 2005</a>]</span> and discrete elements <span id="id3">[<a class="reference internal" href="../../references.html#id689">Cundall and Strack, 1980</a>]</span>. We employ a finite elements approach <span id="id4">[<a class="reference internal" href="../../references.html#id678">Hughes, 2012</a>]</span> in which the domain is divided into a discrete network of cells (the ‘mesh’): all field values are hosted on the nodes, with integrals across elements approximated using Gauss quadrature <span id="id5">[<a class="reference internal" href="../../references.html#id686">Swarztrauber, 2003</a>]</span>. Such an approach can of course yield only an approximation of what the underlying equations imply, but the approximation can be arbitrarily accurate depending on the fineness of discretisation. The question, then, is how coarse can the approximation be made without losing fidelity to the governing equations?</p>
+<p>We have already established that the equations are generally insoluble; numerical methods are the only recourse. There are unavoidable tradeoffs in terms of time, memory, accuracy, flexibility, extensibility, and robustness associated with every numerical convection scheme. Many methods have been developed, including smooth particle hydrodynamics <span id="id2">[<a class="reference internal" href="../../references.html#id688" title="J J Monaghan. Smoothed particle hydrodynamics. Rep. Prog. Phys., 68(8):1703, 6 2005.">Monaghan, 2005</a>]</span> and discrete elements <span id="id3">[<a class="reference internal" href="../../references.html#id689" title="P A Cundall and O D L Strack. Discussion: a discrete numerical model for granular assemblies. Géotechnique, 30(3):331–336, 8 1980.">Cundall and Strack, 1980</a>]</span>. We employ a finite elements approach <span id="id4">[<a class="reference internal" href="../../references.html#id678" title="Thomas J R Hughes. The Finite Element Method: Linear Static and Dynamic Finite Element Analysis. Courier Corporation, 4 2012.">Hughes, 2012</a>]</span> in which the domain is divided into a discrete network of cells (the ‘mesh’): all field values are hosted on the nodes, with integrals across elements approximated using Gauss quadrature <span id="id5">[<a class="reference internal" href="../../references.html#id686" title="Paul N Swarztrauber. On computing the points and weights for Gauss–Legendre quadrature. SIAM J. Sci. Comput., 24(3):945–954, 0 2003.">Swarztrauber, 2003</a>]</span>. Such an approach can of course yield only an approximation of what the underlying equations imply, but the approximation can be arbitrarily accurate depending on the fineness of discretisation. The question, then, is how coarse can the approximation be made without losing fidelity to the governing equations?</p>
 <p>Computationally, the problem takes the form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -544,16 +563,16 @@ B^T \overline{u} = 0
 <div class="math notranslate nohighlight">
 \[ B^T A^{-1} B \overline{p} = B^T A^{-1} \overline{f} \]</div>
 <p>Such a form exposes the pressure to solution by a Schur Complement method, at the cost of introducing the non-trivial <span class="math notranslate nohighlight">\(A^{-1}\)</span> operation, which is both heavy and costly.</p>
-<p>To avoid having to generate <span class="math notranslate nohighlight">\(A^{-1}\)</span>, we may instead reproduce its effect using a <em>Krylov Subspace</em> method <em>(KSP)</em>, wherein matrix-matrix products are resolved by decomposing them into iterative series of matrix-vector products, with each vector comprising the residual of the previous iteration until the residual is less than some nominated threshold. One very popular implementation of this concept is the <em>Generalised Minimal Residual</em> method, or <em>GMRES</em> <span id="id6">[<a class="reference internal" href="../../references.html#id685">Saad and Schultz, 1986</a>]</span>. Once a solution for <span class="math notranslate nohighlight">\(p\)</span> is obtained, we are free to solve for <span class="math notranslate nohighlight">\(u\)</span> through similar methods; and this solution in turn may be used to advect the temperature field and any other state variables using a standard <em>Petrov-Galerkin</em> scheme; for convection problems an ‘upwind’ variant can be used to avoid ‘wiggles’ between nodes <span id="id7">[<a class="reference internal" href="../../references.html#id924">Brooks and Hughes, 1982</a>]</span>. The actual time integral is carried out using a <em>Runge-Kutta</em> method for accuracy <span id="id8">[<a class="reference internal" href="../../references.html#id687">Hairer <em>et al.</em>, 2006</a>]</span> and is taken over a time interval chosen to be shorter than either the diffusive or the advective timescales across each element, i.e. the <em>Courant</em> condition <span id="id9">[<a class="reference internal" href="../../references.html#id684">Courant <em>et al.</em>, 1967</a>]</span>. Once advection has been carried out, the system is fully iterated in time and the process may be repeated, with the advantage that the pressure solution for the previous timestep can be retained to quicken the convergence of the subsequent step. Performance can be improved even further by incorporating preconditioners for each solve, which exploit <em>a priori</em> analytical insights into certain model configurations that may constrain the solution space <span id="id10">[<a class="reference internal" href="../../references.html#id671">May and Moresi, 2008</a>]</span></p>
-<p>This approach is accurate, robust and stable <span id="id11">[<a class="reference internal" href="../../references.html#id384">Moresi and Solomatov, 1995</a>]</span>. However, even in the best case scenario, the complexity of such a direct solution scales with the cube of the number of elements <span class="math notranslate nohighlight">\(N^3\)</span>. To achieve a scaling behaviour closer to <span class="math notranslate nohighlight">\(N\)</span>, it is possible to drastically reduce the workload of the inner <em>KSP</em>s using an adaptive multi-grid approach. With this method, a solution is obtained first for a much coarser discretisation, and then corrected over successively finer meshes until the error is within a provided tolerance. In addition to speed and resilience, the multi-grid lends itself well to parallelisation, as the first-order global features of the model can be coordinated at the coarsest levels first, while finer local features captured in heavier arrays can be shared more judiciously, thus reducing communications overheads.</p>
-<p>The method we have outlined is the product of decades of meticulous development and is known to be as reliable as it is quick. It has been comprehensively benchmarked across a wide range of rheologies and parameters, including models with extreme viscosity contrasts <span id="id12">[<a class="reference internal" href="../../references.html#id153">Moresi <em>et al.</em>, 1996</a>]</span>, elastic behaviour <span id="id13">[<a class="reference internal" href="../../references.html#id381">Moresi <em>et al.</em>, 2002</a>]</span>, and strain-localising mechanisms <span id="id14">[<a class="reference internal" href="../../references.html#id382">Moresi <em>et al.</em>, 2007</a>]</span>. It has been tested against physical laboratory experiments <span id="id15">[<a class="reference internal" href="../../references.html#id680">Mériaux <em>et al.</em>, 2018</a>]</span> and has been demonstrated to be robust and scalable up to thousands of parallel processes <span id="id16">[<a class="reference internal" href="../../references.html#id669">Farrington <em>et al.</em>, 2005</a>]</span>.</p>
-<p>One shortcoming of the method we have described is the inappropriateness of the finite element mesh for preserving the geometries of integer-valued domains - for example, deformation history, or the distribution of various material phases. Though there are ways of accommodating such features using mesh-based approaches, they tend to be cumbersome and inefficient. A superior approach is to incorporate Lagrangian particle swarms <span id="id17">[<a class="reference internal" href="../../references.html#id145">Moresi <em>et al.</em>, 2003</a>]</span>, which are able to carry much higher-resolution information than the mesh and can transport both real-valued data (e.g. temperature, viscosity) and integer-valued data (e.g. history, material identity), which mesh-based variables necessarily cannot. Swarms and their associated variables are advected according to the Stokes solution at the same time as the underlying mesh-based state variables. In turn, the Stokes solver calls for the swarms to be interpolated to the mesh if and when they become relevant to the solution. Interpolation can be costly and complicated for unstructured networks like particle swarms - prohibitively so if the node weightings must be recalculated with each timestep, as is the case for any advecting swarm - so it is important to carry out such an operation as infrequently and efficiently as possible. Gauss quadrature is the standard method, with simple nearest-neighbour evaluation to determine which elements own which particles. An alternative is to use a grid-based Voronoi algorithm <span id="id18">[<a class="reference internal" href="../../references.html#id682">Velić <em>et al.</em>, 2009</a>]</span> in which domains of control for each node are iteratively built out cell by cell; where two nodes lay claim to the same territory, the interpolation grid is refined, but only inside the conflicted cell, thereby minimising superfluous calculations. Another strategy, particularly suited to the interpolation of very sparse swarms, uses a <em>k-d</em> tree to efficiently seek out the nearest particle from any given node. Regardless of interpolation style, the addition of particle swarms dramatically extends the utility of the finite element method.</p>
+<p>To avoid having to generate <span class="math notranslate nohighlight">\(A^{-1}\)</span>, we may instead reproduce its effect using a <em>Krylov Subspace</em> method <em>(KSP)</em>, wherein matrix-matrix products are resolved by decomposing them into iterative series of matrix-vector products, with each vector comprising the residual of the previous iteration until the residual is less than some nominated threshold. One very popular implementation of this concept is the <em>Generalised Minimal Residual</em> method, or <em>GMRES</em> <span id="id6">[<a class="reference internal" href="../../references.html#id685" title="Youcef Saad and Martin H Schultz. GMRES: a generalized minimal residual algorithm for solving nonsymmetric linear systems. SIAM J. Sci. and Stat. Comput., 7(3):856–869, 6 1986.">Saad and Schultz, 1986</a>]</span>. Once a solution for <span class="math notranslate nohighlight">\(p\)</span> is obtained, we are free to solve for <span class="math notranslate nohighlight">\(u\)</span> through similar methods; and this solution in turn may be used to advect the temperature field and any other state variables using a standard <em>Petrov-Galerkin</em> scheme; for convection problems an ‘upwind’ variant can be used to avoid ‘wiggles’ between nodes <span id="id7">[<a class="reference internal" href="../../references.html#id924" title="A N Brooks and T J R Hughes. Streamline upwind/Petrov-Galerkin formulations for convection dominated flows with particular emphasis on the incompressible Navier-Stokes equations. Comput. Methods Appl. Mech. Eng., 32(1-3):199–259, 1982.">Brooks and Hughes, 1982</a>]</span>. The actual time integral is carried out using a <em>Runge-Kutta</em> method for accuracy <span id="id8">[<a class="reference internal" href="../../references.html#id687" title="Ernst Hairer, Christian Lubich, and Michel Roche. The Numerical Solution of Differential-Algebraic Systems by Runge-Kutta Methods. Springer, 10 2006.">Hairer <em>et al.</em>, 2006</a>]</span> and is taken over a time interval chosen to be shorter than either the diffusive or the advective timescales across each element, i.e. the <em>Courant</em> condition <span id="id9">[<a class="reference internal" href="../../references.html#id684" title="R Courant, K Friedrichs, and H Lewy. On the partial difference equations of mathematical physics. International Business Machines Corporation. Journal of Research and Development, 11:215, 0 1967.">Courant <em>et al.</em>, 1967</a>]</span>. Once advection has been carried out, the system is fully iterated in time and the process may be repeated, with the advantage that the pressure solution for the previous timestep can be retained to quicken the convergence of the subsequent step. Performance can be improved even further by incorporating preconditioners for each solve, which exploit <em>a priori</em> analytical insights into certain model configurations that may constrain the solution space <span id="id10">[<a class="reference internal" href="../../references.html#id671" title="Dave A May and Louis Moresi. Preconditioned iterative methods for stokes flow problems arising in computational geodynamics. Phys. Earth Planet. Inter., 171(1):33–47, 11 2008.">May and Moresi, 2008</a>]</span></p>
+<p>This approach is accurate, robust and stable <span id="id11">[<a class="reference internal" href="../../references.html#id384" title="L N Moresi and V S Solomatov. Numerical investigation of 2D convection with extremely large viscosity variations. Phys. Fluids, 8 1995.">Moresi and Solomatov, 1995</a>]</span>. However, even in the best case scenario, the complexity of such a direct solution scales with the cube of the number of elements <span class="math notranslate nohighlight">\(N^3\)</span>. To achieve a scaling behaviour closer to <span class="math notranslate nohighlight">\(N\)</span>, it is possible to drastically reduce the workload of the inner <em>KSP</em>s using an adaptive multi-grid approach. With this method, a solution is obtained first for a much coarser discretisation, and then corrected over successively finer meshes until the error is within a provided tolerance. In addition to speed and resilience, the multi-grid lends itself well to parallelisation, as the first-order global features of the model can be coordinated at the coarsest levels first, while finer local features captured in heavier arrays can be shared more judiciously, thus reducing communications overheads.</p>
+<p>The method we have outlined is the product of decades of meticulous development and is known to be as reliable as it is quick. It has been comprehensively benchmarked across a wide range of rheologies and parameters, including models with extreme viscosity contrasts <span id="id12">[<a class="reference internal" href="../../references.html#id153" title="Louis Moresi, Shijie Zhong, and Michael Gurnis. The accuracy of finite element solutions of stokes' flow with strongly varying viscosity. ELSEVIER Physics of the Earth and Planetary Interiors, 97:83–94, 1996.">Moresi <em>et al.</em>, 1996</a>]</span>, elastic behaviour <span id="id13">[<a class="reference internal" href="../../references.html#id381" title="L Moresi, F Dufour, and H-B Muhlhaus. Mantle convection modeling with Viscoelastic/Brittle lithosphere: numerical methodology and plate tectonic modeling. Pure Appl. Geophys., pages 2335, 2002.">Moresi <em>et al.</em>, 2002</a>]</span>, and strain-localising mechanisms <span id="id14">[<a class="reference internal" href="../../references.html#id382" title="L Moresi, S Quenette, V Lemiale, C Mériaux, B Appelbe, and H-B Mühlhaus. Computational approaches to studying non-linear dynamics of the crust and mantle. Phys. Earth Planet. Inter., 163(1):69–82, 7 2007.">Moresi <em>et al.</em>, 2007</a>]</span>. It has been tested against physical laboratory experiments <span id="id15">[<a class="reference internal" href="../../references.html#id680" title="Catherine A Mériaux, Dave A May, John Mansour, Zhihao Chen, and Owen Kaluza. Benchmark of three-dimensional numerical models of subduction against a laboratory experiment. Phys. Earth Planet. Inter., 283:110–121, 9 2018.">Mériaux <em>et al.</em>, 2018</a>]</span> and has been demonstrated to be robust and scalable up to thousands of parallel processes <span id="id16">[<a class="reference internal" href="../../references.html#id669" title="Rebecca Farrington, Louis Moresi, Steve Quenette, Robert Turnbull, and Patrick Sunter. Geodynamic benchmarking tests in HPC. In APAC Conference, Gold Coast, Australia. researchgate.net, 2005.">Farrington <em>et al.</em>, 2005</a>]</span>.</p>
+<p>One shortcoming of the method we have described is the inappropriateness of the finite element mesh for preserving the geometries of integer-valued domains - for example, deformation history, or the distribution of various material phases. Though there are ways of accommodating such features using mesh-based approaches, they tend to be cumbersome and inefficient. A superior approach is to incorporate Lagrangian particle swarms <span id="id17">[<a class="reference internal" href="../../references.html#id145" title="L Moresi, F Dufour, and H -B. Muuhlhaus. A lagrangian integration point finite element method for large deformation modeling of viscoelastic geomaterials. J. Comput. Phys., 184:476–497, 2003.">Moresi <em>et al.</em>, 2003</a>]</span>, which are able to carry much higher-resolution information than the mesh and can transport both real-valued data (e.g. temperature, viscosity) and integer-valued data (e.g. history, material identity), which mesh-based variables necessarily cannot. Swarms and their associated variables are advected according to the Stokes solution at the same time as the underlying mesh-based state variables. In turn, the Stokes solver calls for the swarms to be interpolated to the mesh if and when they become relevant to the solution. Interpolation can be costly and complicated for unstructured networks like particle swarms - prohibitively so if the node weightings must be recalculated with each timestep, as is the case for any advecting swarm - so it is important to carry out such an operation as infrequently and efficiently as possible. Gauss quadrature is the standard method, with simple nearest-neighbour evaluation to determine which elements own which particles. An alternative is to use a grid-based Voronoi algorithm <span id="id18">[<a class="reference internal" href="../../references.html#id682" title="Mirko Velić, Dave May, and Louis Moresi. A fast robust algorithm for computing discrete voronoi diagrams. J. Math. Model. Algorithms, 8(3):343–355, 7 2009.">Velić <em>et al.</em>, 2009</a>]</span> in which domains of control for each node are iteratively built out cell by cell; where two nodes lay claim to the same territory, the interpolation grid is refined, but only inside the conflicted cell, thereby minimising superfluous calculations. Another strategy, particularly suited to the interpolation of very sparse swarms, uses a <em>k-d</em> tree to efficiently seek out the nearest particle from any given node. Regardless of interpolation style, the addition of particle swarms dramatically extends the utility of the finite element method.</p>
 </div>
 <div class="section" id="the-underworld-code">
 <h2><span class="section-number">2.2.2. </span>The Underworld code<a class="headerlink" href="#the-underworld-code" title="Permalink to this headline">¶</a></h2>
-<p>Particular software implementations of the methods outlined above have been developed over many computing generations, and several continue to co-exist today as part of a broad and branching family. The present state-of-the-art iteration is <em>Underworld</em>, which supports 2D, 3D, multigrid, and particle-in-cell features while also combining a powerful yet modular C-level infrastructure <span id="id19">[<a class="reference internal" href="../../references.html#id677">Quenette <em>et al.</em>, 2007</a>]</span> with a user-friendly, hyper-extensible <em>Python</em>-based API. Parallelisation is provided through <em>MPI</em> while the underlying solvers are implemented with <em>PETSc</em>. Though deeper layers of Underworld remain fully transparent and accessible, the <em>Python</em> layer is designed to encourage fluidity, creativity, and legibility in model building, providing encapsulated higher-level proxies for the multifarious underlying <em>C</em> assets while subtly encouraging a good modelling idiom in users. This has encouraged bespoke application development <span id="id20">[<a class="reference internal" href="../../references.html#id670">Beucher <em>et al.</em>, 2019</a>]</span> and the integration of geodynamics codes with other modelling packages <span id="id21">[<a class="reference internal" href="../../references.html#id681">Asten, 2018</a>]</span>.</p>
-<p>The higher-level Underworld syntax fully exploits <em>Python</em>’s object-oriented character, encapsulating standard model features like meshes, swarms, variables, and solvers as independent instances of generalised classes. Each object corresponds to <em>C</em>-level structures which are in turn organised under the <em>StGermain</em> interoperability framework for computational modelling <span id="id22">[<a class="reference internal" href="../../references.html#id677">Quenette <em>et al.</em>, 2007</a>]</span>. The algorithmic firepower at the heart of the operation draws on the ubiquitous standard <em>PETSc</em> code for partial differential equations. By default, the <em>PETSc</em> infrastructure is configured for robustness first, speed second; however, a range of options is exposed at the <em>Python</em> level to reconfigure the solvers as desired. The principles of encapsulation and localisation are carefully honoured in <em>Underworld</em>’s design, with use of global attributes minimised and namespace pollution strictly avoided. Consequently, deletion of obsolete references or ‘garbage collection’ operates mostly as a <em>Python</em> user would intuitively expect, so that in typical use cases it is rarely necessary to do more than the elementary due diligence to limit memory leaks. However, at the scales we have operated at, unavoidable pointer entropy at the <em>C</em>-level has been found to proliferate to problematic levels at times. This has been mitigated by prudent reuse of already instantiated objects and by spawning the heaviest or lengthiest jobs in subprocesses to harness system-level garbage collection.</p>
-<p>As accessible as the new tools are, care must still be taken to ensure an appropriately configured model, beginning with the choice of resolution. While temporal resolution, i.e. timestep size, is determined dynamically based on the prescribed tolerances, spatial resolution is the domain of the user. Overly fine elements are wasteful, while insufficiently fine elements will lossily discretise the underlying physics. As a rule of thumb, the spatial resolution in any given region should be half an order of magnitude finer at least than the smallest relevant model features in that vicinity. Of course, it is not always clear <em>a priori</em> what this scale will be. Boundary layer and plume theory can provide some information about featural dimensions at steady-state for simple rheologies; however, the sensitivity of mantle convection on potentially very small-scale instabilities means a resolution sufficient for a steady-state solution may still bias the solution at other stages. The appropriate resolution can be sought empirically, by running a suite of progressively finer models until the point of diminishing returns is reached. In theory, a well-constructed model should converge with resolution in the limit that a discretised model becomes indistinguishable from a continuous one. If convergence does not occur within a computationally feasible envelope, the model may be presumed to be misconfigured in some deeper sense. Another means of determining the correct resolution is to run a single, very-high resolution test and conduct a power spectral analysis of the constituent fields; the shortest wavelength that contains information must dictate the spatial resolution. The nexus of <em>Rayleigh</em> number, featural thickness, and resolution places an upper bound on what parameters can realistically be tested in the context of a large suite-modelling experiment: although <span class="math notranslate nohighlight">\(Ra\)</span> values approaching <span class="math notranslate nohighlight">\(10^9\)</span> are likely more appropriate for Earth whole-mantle convection <span id="id23">[<a class="reference internal" href="../../references.html#id8">Wolstencroft <em>et al.</em>, 2009</a>]</span>, most cases explored here are less than <span class="math notranslate nohighlight">\(Ra=10^7\)</span>, which is amenable to resolutions in the order of 128 radial cells. If resources are particularly at a premium, static or even adaptive mesh refinement can be employed to concentrate resolution in areas where it is most needed. Unfortunately, it is a present shortcoming of <em>Underworld</em> that only quadrangular elements are supported, starkly limiting the options for grid refinement. Work toward supporting unstructured meshes is, however, underway.</p>
+<p>Particular software implementations of the methods outlined above have been developed over many computing generations, and several continue to co-exist today as part of a broad and branching family. The present state-of-the-art iteration is <em>Underworld</em>, which supports 2D, 3D, multigrid, and particle-in-cell features while also combining a powerful yet modular C-level infrastructure <span id="id19">[<a class="reference internal" href="../../references.html#id677" title="Steve Quenette, Louis Moresi, P D Sunter, and Bill F Appelbe. Explaining StGermain: an aspect oriented environment for building extensible computational mechanics modeling software. In Parallel and Distributed Processing Symposium, IPDPS 2007, 1–8. N/A, 2 2007.">Quenette <em>et al.</em>, 2007</a>]</span> with a user-friendly, hyper-extensible <em>Python</em>-based API. Parallelisation is provided through <em>MPI</em> while the underlying solvers are implemented with <em>PETSc</em>. Though deeper layers of Underworld remain fully transparent and accessible, the <em>Python</em> layer is designed to encourage fluidity, creativity, and legibility in model building, providing encapsulated higher-level proxies for the multifarious underlying <em>C</em> assets while subtly encouraging a good modelling idiom in users. This has encouraged bespoke application development <span id="id20">[<a class="reference internal" href="../../references.html#id670" title="Romain Beucher, Louis Moresi, Julian Giordani, John Mansour, Dan Sandiford, Rebecca Farrington, Luke Mondy, Claire Mallard, Patrice Rey, Guillaume Duclaux, and Others. UWGeodynamics: a teaching and research tool for numerical geodynamic modelling. Journal of Open Source Software, 4(36):1136, 2019.">Beucher <em>et al.</em>, 2019</a>]</span> and the integration of geodynamics codes with other modelling packages <span id="id21">[<a class="reference internal" href="../../references.html#id681" title="Michael Asten. Education matters: the ARC basin GENESIS hub–connecting solid earth evolution to sedimentary basins. Preview, 2018(195):27–32, 2018.">Asten, 2018</a>]</span>.</p>
+<p>The higher-level Underworld syntax fully exploits <em>Python</em>’s object-oriented character, encapsulating standard model features like meshes, swarms, variables, and solvers as independent instances of generalised classes. Each object corresponds to <em>C</em>-level structures which are in turn organised under the <em>StGermain</em> interoperability framework for computational modelling <span id="id22">[<a class="reference internal" href="../../references.html#id677" title="Steve Quenette, Louis Moresi, P D Sunter, and Bill F Appelbe. Explaining StGermain: an aspect oriented environment for building extensible computational mechanics modeling software. In Parallel and Distributed Processing Symposium, IPDPS 2007, 1–8. N/A, 2 2007.">Quenette <em>et al.</em>, 2007</a>]</span>. The algorithmic firepower at the heart of the operation draws on the ubiquitous standard <em>PETSc</em> code for partial differential equations. By default, the <em>PETSc</em> infrastructure is configured for robustness first, speed second; however, a range of options is exposed at the <em>Python</em> level to reconfigure the solvers as desired. The principles of encapsulation and localisation are carefully honoured in <em>Underworld</em>’s design, with use of global attributes minimised and namespace pollution strictly avoided. Consequently, deletion of obsolete references or ‘garbage collection’ operates mostly as a <em>Python</em> user would intuitively expect, so that in typical use cases it is rarely necessary to do more than the elementary due diligence to limit memory leaks. However, at the scales we have operated at, unavoidable pointer entropy at the <em>C</em>-level has been found to proliferate to problematic levels at times. This has been mitigated by prudent reuse of already instantiated objects and by spawning the heaviest or lengthiest jobs in subprocesses to harness system-level garbage collection.</p>
+<p>As accessible as the new tools are, care must still be taken to ensure an appropriately configured model, beginning with the choice of resolution. While temporal resolution, i.e. timestep size, is determined dynamically based on the prescribed tolerances, spatial resolution is the domain of the user. Overly fine elements are wasteful, while insufficiently fine elements will lossily discretise the underlying physics. As a rule of thumb, the spatial resolution in any given region should be half an order of magnitude finer at least than the smallest relevant model features in that vicinity. Of course, it is not always clear <em>a priori</em> what this scale will be. Boundary layer and plume theory can provide some information about featural dimensions at steady-state for simple rheologies; however, the sensitivity of mantle convection on potentially very small-scale instabilities means a resolution sufficient for a steady-state solution may still bias the solution at other stages. The appropriate resolution can be sought empirically, by running a suite of progressively finer models until the point of diminishing returns is reached. In theory, a well-constructed model should converge with resolution in the limit that a discretised model becomes indistinguishable from a continuous one. If convergence does not occur within a computationally feasible envelope, the model may be presumed to be misconfigured in some deeper sense. Another means of determining the correct resolution is to run a single, very-high resolution test and conduct a power spectral analysis of the constituent fields; the shortest wavelength that contains information must dictate the spatial resolution. The nexus of <em>Rayleigh</em> number, featural thickness, and resolution places an upper bound on what parameters can realistically be tested in the context of a large suite-modelling experiment: although <span class="math notranslate nohighlight">\(Ra\)</span> values approaching <span class="math notranslate nohighlight">\(10^9\)</span> are likely more appropriate for Earth whole-mantle convection <span id="id23">[<a class="reference internal" href="../../references.html#id8" title="M Wolstencroft, J H Davies, and D R Davies. Nusselt–Rayleigh number scaling for spherical shell earth mantle simulation up to a rayleigh number of 109. Phys. Earth Planet. Inter., 176(1):132–141, 8 2009.">Wolstencroft <em>et al.</em>, 2009</a>]</span>, most cases explored here are less than <span class="math notranslate nohighlight">\(Ra=10^7\)</span>, which is amenable to resolutions in the order of 128 radial cells. If resources are particularly at a premium, static or even adaptive mesh refinement can be employed to concentrate resolution in areas where it is most needed. Unfortunately, it is a present shortcoming of <em>Underworld</em> that only quadrangular elements are supported, starkly limiting the options for grid refinement. Work toward supporting unstructured meshes is, however, underway.</p>
 <p><em>Underworld</em> provides an easy interface to the underlying <em>PETSc</em> options, most notably the choice of inner solve method and tolerance. The default configuration for the solver is <code class="docutils literal notranslate"><span class="pre">mg</span></code> or ‘multigrid’, which is the method we have outlined here: this arguably provides the best balance of speed, robustness, scalability, flexibility, and parallelisability. Alternatives include <code class="docutils literal notranslate"><span class="pre">mumps</span></code>, ‘multifrontal massively parallel sparse direct solver’, and the ‘lower-upper method’ <code class="docutils literal notranslate"><span class="pre">LU</span></code>. Careful benchmarking is called for to choose the correct configuration, and optimum results cannot be assumed for the default configuration. Tolerances in particular should always be calibrated manually using convergence and power spectrum tests as outlined above. Excessively fine tolerances will needlessly delay solver convergence, while overly generous tolerances will introduce numerical noise into the solution. The chosen tolerances ultimately determine the uncertainty inherent to the model and should always be chosen with care.</p>
 </div>
 <div class="section" id="underworld-in-the-annulus">
@@ -587,15 +606,15 @@ B^T \overline{u} = 0
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
     <a class='left-prev' id="prev-link" href="section1.html" title="previous page"><span class="section-number">2.1. </span>The analytical toolkit</a>
     <a class='right-next' id="next-link" href="section3.html" title="next page"><span class="section-number">2.3. </span>Suite-modelling, PlanetEngine and Everest</a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
@@ -612,11 +631,9 @@ B^T \overline{u} = 0
 
       </div>
     </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>

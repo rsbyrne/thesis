@@ -53,7 +53,7 @@ with open(osjoin(aliases.storagedir, 'condh.pkl'), mode = 'rb') as file:
 condgeotherms, condavts, condhs = (conddata[key] for key in ('geotherms', 'avts', 'hs'))
 
 
-# In[3]:
+# In[12]:
 
 
 canvas1 = Canvas(shape = (1, 2), size = (6, 4))
@@ -182,7 +182,7 @@ fig
 
 # ## Mixed heating
 
-# In[4]:
+# In[ ]:
 
 
 with open(osjoin(aliases.storagedir, 'condhfmixed.pkl'), mode = 'rb') as file:
@@ -203,7 +203,7 @@ condavts = [conddata['avts'][i] for i in selinds]
 #     )
 
 
-# In[5]:
+# In[ ]:
 
 
 canvas1 = Canvas(shape = (1, 2), size = (6, 4))

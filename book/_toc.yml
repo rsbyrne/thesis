@@ -1,14 +1,14 @@
-- file: index
-
-- part: Front matter
+format: jb-book
+root: index
+parts:
+- caption: Front matter
   chapters:
   - file: frontmatter/declaration
   - file: frontmatter/preamble
   - file: frontmatter/abstract
   - file: frontmatter/introduction
   - file: frontmatter/acknowledgements
-
-- part: Thesis
+- caption: Thesis
   numbered: true
   chapters:
   - file: content/chapter_01_background/main
@@ -56,11 +56,9 @@
     - file: content/chapter_07_advanced/conclusion
   - file: content/chapter_08_discussion/main
   - file: content/chapter_09_conclusion/main
-
-- part: End matter
+- caption: End matter
   chapters:
   - file: references
-
-- part: Appendices
+- caption: Appendices
   chapters:
   - file: appendices/tables/main
