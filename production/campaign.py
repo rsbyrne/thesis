@@ -166,7 +166,7 @@ class Campaign:
                 else:
                     with open(logfilepath, mode = 'r') as logfile:
                         logtext = logfile.read()
-                    if logtext.endswith(EXHAUSTEDCODE):
+                    if EXHAUSTEDCODE in logtext:
                         raise ExhaustedError
                     exc = subprocess.CalledProcessError(ret, cmd)
                     jobfile.write('\n' + str(exc))

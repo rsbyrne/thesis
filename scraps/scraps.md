@@ -32,3 +32,15 @@ As in *AKP*, the `Schema` contains a space whose points include every legal inst
 Schema(**parameters) -> Case
 ```
 
+
+
+
+The `Chora` class offers one more standard behaviour as part of the strict incision operation. If a retrieved element is itself a chora, the return value of the incision is instead the incision of that chora by the incisor. This special kind of strict incision is called 'deep incision', and the incisor carrying it out is a 'deep incisor'. Supporting this additional behaviour was a significant part of the motivation for the Incision Protocol and it has many implications, as shall be seen.
+
+
+
+
+
+While users are free to subclass `Chora` according to their purposes, *Everest* offers many subclasses of its own.
+
+

@@ -1,0 +1,131 @@
+\selectlanguage *{english}
+\contentsline {part}{I\hspace {1em}Front matter}{3}{part.1}%
+\contentsline {chapter}{\numberline {1}Declaration}{5}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Preamble}{7}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Abstract}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Introduction}{11}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Acknowledgements}{13}{chapter.5}%
+\contentsline {part}{II\hspace {1em}Thesis}{15}{part.2}%
+\contentsline {chapter}{\numberline {6}Review and Theory}{17}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Planets from first principles}{17}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Heat and geometry: planetary basics}{18}{section.6.2}%
+\contentsline {section}{\numberline {6.3}From planetary to exoplanetary: an expanding scope of inquiry}{20}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Local planets}{20}{subsection.6.3.1}%
+\contentsline {subsubsection}{Europa}{20}{subsubsection*.3}%
+\contentsline {subsubsection}{Io}{21}{subsubsection*.4}%
+\contentsline {subsubsection}{Enceladus}{21}{subsubsection*.5}%
+\contentsline {subsubsection}{Pluto}{22}{subsubsection*.6}%
+\contentsline {subsection}{\numberline {6.3.2}Exoplanets}{22}{subsection.6.3.2}%
+\contentsline {section}{\numberline {6.4}Geodynamics: an evolving discipline}{23}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Empirical foundations of geodynamic thought}{23}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Challenges to the conventional model of plate tectonics}{24}{subsection.6.4.2}%
+\contentsline {subsubsection}{The Naive Theory of plate tectonics}{24}{subsubsection*.7}%
+\contentsline {subsubsection}{Insufficiencies of the Naive Theory}{25}{subsubsection*.8}%
+\contentsline {subsubsection}{Naive Theory and the Urey Paradox}{25}{subsubsection*.9}%
+\contentsline {subsubsection}{Going beyond the Naive Theory}{25}{subsubsection*.10}%
+\contentsline {subsection}{\numberline {6.4.3}Continents: a decisive control in the tectonic system}{26}{subsection.6.4.3}%
+\contentsline {subsubsection}{Thermal effects of continental crust}{26}{subsubsection*.11}%
+\contentsline {subsubsection}{Continents as a resolution of the Urey paradox}{27}{subsubsection*.12}%
+\contentsline {subsubsection}{Continent\sphinxhyphen {}climate feedbacks}{27}{subsubsection*.13}%
+\contentsline {subsection}{\numberline {6.4.4}Tectonic modes: beyond plate tectonics}{27}{subsection.6.4.4}%
+\contentsline {subsubsection}{Mobile lid}{27}{subsubsection*.14}%
+\contentsline {subsubsection}{Stagnant lid}{28}{subsubsection*.15}%
+\contentsline {subsubsection}{Episodic overturn}{28}{subsubsection*.16}%
+\contentsline {subsubsection}{Magma ocean}{28}{subsubsection*.17}%
+\contentsline {subsubsection}{Sluggish lid}{28}{subsubsection*.18}%
+\contentsline {subsubsection}{Plume tectonics}{29}{subsubsection*.19}%
+\contentsline {subsubsection}{Heat pipe}{29}{subsubsection*.20}%
+\contentsline {subsubsection}{Null mode}{29}{subsubsection*.21}%
+\contentsline {subsubsection}{The future of tectonic modes}{30}{subsubsection*.22}%
+\contentsline {subsection}{\numberline {6.4.5}Tectonic mode transitions and planetary memory}{30}{subsection.6.4.5}%
+\contentsline {section}{\numberline {6.5}Review}{31}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Tools and Methods}{33}{chapter.7}%
+\contentsline {section}{\numberline {7.1}The analytical toolkit}{33}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}The Nusselt number}{33}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}The Prandtl, Grashof, Reynolds, and Rayleigh numbers}{34}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}Linear stability analysis and the critical \sphinxstyleemphasis {Rayleigh} number}{36}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.4}Boundary layer theory and the \(Ra-Nu\) scaling}{37}{subsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.1.5}Critical values for the internally\sphinxhyphen {}heated case}{39}{subsection.7.1.5}%
+\contentsline {subsection}{\numberline {7.1.6}Chaos and attraction: approximate solutions to insoluble equations}{39}{subsection.7.1.6}%
+\contentsline {section}{\numberline {7.2}Numerical methods and the Underworld code}{41}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Numerical methods}{41}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}The Underworld code}{43}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Underworld in the annulus}{44}{subsection.7.2.3}%
+\contentsline {section}{\numberline {7.3}Suite\sphinxhyphen {}modelling, PlanetEngine and Everest}{45}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}A conceptual meta\sphinxhyphen {}model for suite\sphinxhyphen {}modelling}{45}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Suite\sphinxhyphen {}modelling for geodynamics: PlanetEngine and Everest}{48}{subsection.7.3.2}%
+\contentsline {subsubsection}{\sphinxstyleemphasis {PlanetEngine}}{49}{subsubsection*.23}%
+\contentsline {subsubsection}{\sphinxstyleemphasis {Everest}}{51}{subsubsection*.24}%
+\contentsline {section}{\numberline {7.4}Conclusion}{52}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Everest: a Framework for Abstractified Science}{53}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Introduction}{53}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Motivation}{54}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Doctrine}{54}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Why a doctrine?}{54}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}First principles of \sphinxstyleemphasis {AKP}}{55}{subsection.8.3.2}%
+\contentsline {subsubsection}{Examples}{55}{subsubsection*.25}%
+\contentsline {paragraph}{Individual knowledge}{55}{paragraph*.26}%
+\contentsline {paragraph}{Social knowledge}{55}{paragraph*.27}%
+\contentsline {subsection}{\numberline {8.3.3}Knodes, Knodules, and the Procedural Encyclopedia}{56}{subsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.3.4}Structures of \sphinxstyleemphasis {AKP}}{57}{subsection.8.3.4}%
+\contentsline {subsubsection}{Schemas}{57}{subsubsection*.28}%
+\contentsline {subsubsection}{Cases and Schemoids}{57}{subsubsection*.29}%
+\contentsline {subsubsection}{Concretions and Configurations}{58}{subsubsection*.30}%
+\contentsline {subsubsection}{States, Controls, and Traverses}{58}{subsubsection*.31}%
+\contentsline {subsubsection}{Knowledge and data}{59}{subsubsection*.32}%
+\contentsline {subsection}{\numberline {8.3.5}Using \sphinxstyleemphasis {AKP}}{60}{subsection.8.3.5}%
+\contentsline {section}{\numberline {8.4}Framework}{60}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}The idea of \sphinxstyleemphasis {Everest}}{61}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}General structure and use pattern}{61}{subsection.8.4.2}%
+\contentsline {subsection}{\numberline {8.4.3}Top\sphinxhyphen {}level syntax}{62}{subsection.8.4.3}%
+\contentsline {section}{\numberline {8.5}Implementation}{63}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Object\sphinxhyphen {}oriented programming}{63}{subsection.8.5.1}%
+\contentsline {subsubsection}{\sphinxstyleemphasis {Everest} classtools}{64}{subsubsection*.33}%
+\contentsline {paragraph}{MRO classes}{64}{paragraph*.34}%
+\contentsline {subsection}{\numberline {8.5.2}The Incision Protocol}{64}{subsection.8.5.2}%
+\contentsline {subsubsection}{Defining the chora}{65}{subsubsection*.35}%
+\contentsline {subsubsection}{Chora subclasses}{65}{subsubsection*.36}%
+\contentsline {subsubsection}{Chorae containing chorae}{66}{subsubsection*.37}%
+\contentsline {subsubsection}{The muddling algorithm}{66}{subsubsection*.38}%
+\contentsline {section}{\numberline {8.6}Demonstration}{67}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Discussion}{67}{section.8.7}%
+\contentsline {section}{\numberline {8.8}Conclusion}{67}{section.8.8}%
+\contentsline {chapter}{\numberline {9}Scaling Behaviours of Linear Rheologies: Constant Viscosity}{69}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Introduction}{69}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Background}{69}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Basics of convection}{70}{subsection.9.2.1}%
+\contentsline {subsubsection}{Linear rheologies: the isoviscous case}{72}{subsubsection*.39}%
+\contentsline {subsection}{\numberline {9.2.2}Simple isoviscous rheology}{72}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Isoviscous rheology with internal and mixed heating}{74}{subsection.9.2.3}%
+\contentsline {subsubsection}{Internal heating}{74}{subsubsection*.40}%
+\contentsline {subsubsection}{Mixed heating}{76}{subsubsection*.41}%
+\contentsline {subsection}{\numberline {9.2.4}Isoviscous rheology in cylindrical geometry}{79}{subsection.9.2.4}%
+\contentsline {subsubsection}{Defining a coordinate system}{79}{subsubsection*.42}%
+\contentsline {subsubsection}{Basal heating}{80}{subsubsection*.43}%
+\contentsline {paragraph}{Conductive solution}{80}{paragraph*.44}%
+\contentsline {paragraph}{Instability and convection}{83}{paragraph*.45}%
+\contentsline {subsubsection}{Internal heating in the annulus}{85}{subsubsection*.46}%
+\contentsline {paragraph}{Conductive solution}{85}{paragraph*.47}%
+\contentsline {subsubsection}{Mixed heating in the annulus}{86}{subsubsection*.48}%
+\contentsline {paragraph}{Conductive solution}{86}{paragraph*.49}%
+\contentsline {subsection}{\numberline {9.2.5}Conclusion}{86}{subsection.9.2.5}%
+\contentsline {section}{\numberline {9.3}Methods}{86}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Results}{86}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Discussion}{86}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Conclusion}{86}{section.9.6}%
+\contentsline {chapter}{\numberline {10}Scaling Behaviours of Linear Rheologies: Temperature\sphinxhyphen {}Dependent Viscosity}{87}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Introduction}{87}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Conclusion}{87}{section.10.2}%
+\contentsline {chapter}{\numberline {11}Mode Boundaries in Viscoplastic Rheology}{89}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Introduction}{89}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Conclusion}{89}{section.11.2}%
+\contentsline {chapter}{\numberline {12}Big Data Methods for Computational Geodynamics}{91}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Introduction}{91}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Conclusion}{91}{section.12.2}%
+\contentsline {chapter}{\numberline {13}Discussion}{93}{chapter.13}%
+\contentsline {chapter}{\numberline {14}Conclusion}{95}{chapter.14}%
+\contentsline {part}{III\hspace {1em}End matter}{97}{part.3}%
+\contentsline {chapter}{\numberline {15}References}{99}{chapter.15}%
+\contentsline {part}{IV\hspace {1em}Appendices}{101}{part.4}%
+\contentsline {chapter}{\numberline {16}Tables}{103}{chapter.16}%
+\contentsline {chapter}{Bibliography}{105}{chapter*.50}%
