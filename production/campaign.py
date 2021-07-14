@@ -75,7 +75,7 @@ class Campaign:
     def __init__(self,
             workdir,
             name,
-            *args,
+            *args
             ):
         self.workdir = workdir
         self.name = name = str(name)
@@ -119,7 +119,7 @@ class Campaign:
     def choose_job(self):
         with self.lock():
             incompletes = glob.glob(
-                glob.escape(self.jobroot) + '*' + self.INCSUFFIX
+                glob.escape(str(self.jobroot)) + '*' + self.INCSUFFIX
                 )
             if incompletes:
                 incfilename = incompletes[0]
@@ -127,9 +127,19 @@ class Campaign:
                     jobid = incfile.read()
                 os.remove(incfilename)
             else:
-                jobid = str(len(glob.glob(
-                    glob.escape(self.jobroot) + '*' + self.JOBSUFFIX
-                    )))
+                jobfilepaths = glob.glob(
+                    glob.escape(str(self.jobroot)) + '*' + self.JOBSUFFIX
+                    )
+                jobids = [
+                    int(jobfilepath.rstrip('.campaign.job')[-12:])
+                        for jobfilepath in jobfilepaths
+                    ]
+                jobid = 0
+                while True:
+                    if not jobid in jobids:
+                        break
+                    jobid += 1
+                jobid = str(jobid)
                 self.get_jobfilepath(jobid).touch(exist_ok = False)
                 self.get_logfilepath(jobid).touch(exist_ok = False)
             return jobid
@@ -138,38 +148,44 @@ class Campaign:
         jobfilepath = self.get_jobfilepath(jobid)
         logfilepath = self.get_logfilepath(jobid)
         incfilepath = self.get_incfilepath(jobid)
-        with open(jobfilepath, mode = 'r+') as jobfile:
-            cmd = [
-                'python3', self.name,
-                self.campaignname, str(logfilepath), jobid, *self.args
-                ]
-            proc = subprocess.Popen(
-                cmd,
-                stdin = subprocess.DEVNULL,
-                stdout = subprocess.DEVNULL,
-                stderr = jobfile,
-                )
-            try:
-                ret = proc.wait()
-            except Exception as exc:
-                proc.terminate()
-                ret = -1
-                raise Exception from exc
-            finally:
-                if ret == 0:
-                    jobfile.write('\n' + COMPLETEDCODE)
-                elif ret < 0:
-                    jobfile.write('\n' + INCOMPLETECODE)
-                    incfilepath.touch(exist_ok = False)
-                    with open(jobfilepath, mode = 'r+') as incfile:
-                        incfile.write(jobid)
-                else:
-                    with open(logfilepath, mode = 'r') as logfile:
-                        logtext = logfile.read()
-                    if EXHAUSTEDCODE in logtext:
-                        raise ExhaustedError
-                    exc = subprocess.CalledProcessError(ret, cmd)
-                    jobfile.write('\n' + str(exc))
+        try:
+            with open(str(jobfilepath), mode = 'r+') as jobfile:
+                cmd = [
+                    'python3', self.name,
+                    self.campaignname, str(logfilepath), jobid, *self.args
+                    ]
+                proc = subprocess.Popen(
+                    cmd,
+                    stdin = subprocess.DEVNULL,
+                    stdout = subprocess.DEVNULL,
+                    stderr = jobfile,
+                    )
+                try:
+                    ret = proc.wait()
+                except Exception as exc:
+                    proc.terminate()
+                    ret = -1
+                    raise Exception from exc
+                finally:
+                    if ret == 0:
+                        jobfile.write('\n' + COMPLETEDCODE)
+                    elif ret < 0:
+                        jobfile.write('\n' + INCOMPLETECODE)
+                        incfilepath.touch(exist_ok = False)
+                        with open(str(jobfilepath), mode = 'r+') as incfile:
+                            incfile.write(jobid)
+                    else:
+                        with open(str(logfilepath), mode = 'r') as logfile:
+                            logtext = logfile.read()
+                        if EXHAUSTEDCODE in logtext:
+                            raise ExhaustedError
+                        exc = subprocess.CalledProcessError(ret, cmd)
+                        jobfile.write('\n' + str(exc))
+        except ExhaustedError as exc:
+            jobfilepath.unlink()
+            logfilepath.unlink()
+            incfilepath.unlink()
+            raise ExhaustedError from exc
 
     def run(self):
         while True:
@@ -183,6 +199,8 @@ class Campaign:
 if __name__ == '__main__':
 
     _, name, *args = sys.argv # name of campaign, passed args
+    if not args:
+        args = [':',]
     name = os.path.abspath(name)
     workdir = os.path.dirname(name)
 
