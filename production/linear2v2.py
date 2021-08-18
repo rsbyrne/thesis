@@ -11,8 +11,9 @@ import numpy as np
 
 import planetengine
 
-from campaign import get_job, get_logger
-
+from campaign import (
+    get_job, get_logger, ExhaustedError, EXHAUSTEDCODE,
+    )
 
 CAMPAIGNNAME, LOGPATH, COUNTER, *SLICE = sys.argv[1:]
 
@@ -28,14 +29,14 @@ with open(LOGPATH, mode = 'r+') as logfile:
         observers = True,
         innerMethod = 'lu',
         courant = 1.,
+        aspect = 1.,
         )
     dims = (
-        np.round(10. ** np.linspace(0, 5, 11), 3), # etaDelta
-        np.round(np.linspace(1., 0.5, 11), 3), # f
-        np.round(2. ** np.linspace(0, 1, 11), 3), # aspect
-        np.array([0., *np.round(10 ** np.linspace(-2, 1, 13), 3)]), # H
+        [float(a) for a in np.round(10. ** np.linspace(0, 5, 11), 3)],
+        [float(a) for a in np.round(np.linspace(1., 0.5, 11), 3)],
+        [0., *[float(a) for a in np.round(10 ** np.linspace(-2, 1, 13), 3)]],
         )
-    etaDelta, f, aspect, H = get_job(dims, SLICE, COUNTER, log=log)
+    etaDelta, f, H = get_job(dims, SLICE, COUNTER)
     if etaDelta == 1:
         from planetengine.systems import Isovisc as System
     else:

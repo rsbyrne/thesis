@@ -11,7 +11,7 @@ import numpy as np
 import planetengine
 import everest
 
-from campaign import get_job, get_logger
+from campaign import get_job, get_logger, ExhaustedError, EXHAUSTEDCODE
 
 
 CAMPAIGNNAME, LOGPATH, COUNTER, *SLICE = sys.argv[1:]
@@ -32,8 +32,11 @@ with open(LOGPATH, mode = 'r+') as logfile:
         [0.,0.1,1.,10.], # H
         10. ** np.linspace(5, 6, 21),
         )
-    inputs['f'], inputs['aspect'], inputs['H'], inputs['tauRef'] = \
-        get_job(dims, SLICE, COUNTER, log=log)
+    try:
+        inputs['f'], inputs['aspect'], inputs['H'], inputs['tauRef'] = \
+            get_job(dims, SLICE, COUNTER)
+    except ExhaustedError:
+        log(EXHAUSTEDCODE)
 
     log("Creating final...")
     final = (
@@ -44,7 +47,7 @@ with open(LOGPATH, mode = 'r+') as logfile:
     log("Creating system...")
     system = planetengine.systems.Viscoplastic(
         alpha = 1e7,
-        res = 32,
+        res = 64,
         observers = True,
         innerMethod = 'lu',
         **inputs

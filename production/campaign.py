@@ -41,8 +41,10 @@ class ExhaustedError(IndexError):
 EXHAUSTEDCODE = '---EXHAUSTED---'
 COMPLETEDCODE = '---COMPLETED---'
 INCOMPLETECODE = '---INCOMPLETE---'
+TIMEOUTCODE = '---TIMEOUT---'
 
-def get_job(dims, argn, counter):
+def get_job(dims, argn, counter, *, log):
+    global EXHAUSTEDCODE
     argn = tuple(proc_arg(arg) for arg in argn)
     counter = int(counter)
     jobs = get_jobs(dims, *argn)
@@ -50,6 +52,7 @@ def get_job(dims, argn, counter):
     try:
         job = jobs[counter]
     except IndexError:
+        log(EXHAUSTEDCODE)
         raise ExhaustedError
     return tuple(float(a) for a in job)
 
@@ -75,11 +78,17 @@ class Campaign:
     def __init__(self,
             workdir,
             name,
-            *args
+            *args,
+            timeout = None
             ):
         self.workdir = workdir
         self.name = name = str(name)
         self.args = args
+        if isinstance(timeout, str):
+            if timeout == 'None':
+                timeout = None
+            timeout = int(timeout)
+        self.timeout = timeout
         campaignname = self.campaignname = name + '_' + '-'.join(args)
         lockfilepath = self.lockfilepath = Path(
             workdir,
@@ -160,19 +169,26 @@ class Campaign:
                     stdout = subprocess.DEVNULL,
                     stderr = jobfile,
                     )
+                ret = -1
                 try:
-                    ret = proc.wait()
+                    ret = proc.wait(timeout = self.timeout)
+                except subprocess.TimeoutExpired as exc:
+                    ret = 'timeout'
+                    raise Exception from exc
                 except Exception as exc:
                     proc.terminate()
                     ret = -1
                     raise Exception from exc
                 finally:
-                    if ret == 0:
+                    if ret == 'timeout':
+                        jobfile.write('\n' + "Timed out after specified time (s): " + self.timeout)
+                        jobfile.write('\n' + TIMEOUTCODE)
+                    elif ret == 0:
                         jobfile.write('\n' + COMPLETEDCODE)
                     elif ret < 0:
                         jobfile.write('\n' + INCOMPLETECODE)
                         incfilepath.touch(exist_ok = False)
-                        with open(str(jobfilepath), mode = 'r+') as incfile:
+                        with open(str(incfilepath), mode = 'r+') as incfile:
                             incfile.write(jobid)
                     else:
                         with open(str(logfilepath), mode = 'r') as logfile:
@@ -198,9 +214,15 @@ class Campaign:
 
 if __name__ == '__main__':
 
-    _, name, *args = sys.argv # name of campaign, passed args
+    _, name, *allargs = sys.argv # name of campaign, passed args
+    flagargs = [arg for arg in allargs if arg.startswith('--')]
+    kwargs = {
+        k.strip():v.strip() for k, v in (flagarg[2:].split('=') for flagarg in flagargs)
+        }
+    args = [arg for arg in allargs if not arg in flagargs]
     if not args:
         args = [':',]
+    
     name = os.path.abspath(name)
     workdir = os.path.dirname(name)
 
@@ -208,6 +230,7 @@ if __name__ == '__main__':
         workdir,
         name,
         *args,
+        **kwargs,
         )
 
     campaign.run()
