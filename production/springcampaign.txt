@@ -1,0 +1,60 @@
+2021 August 23
+
+Vacant nodes:
+pluto1
+charon1
+charon2
+charon3
+charon4
+charon5
+miranda1
+miranda2
+# umbriel1
+# umbriel2
+# umbriel3
+umbriel4
+umbriel5
+umbriel6
+
+Campaigns:
+
+linear3_ins.py
+
+pluto1:
+python3 campaign.py linear3_ins.py : 0 0 : --timeout=2 &
+
+charon1:
+python3 campaign.py linear3_ins.py : 1 0 : --timeout=2 &
+
+charon2:
+python3 campaign.py linear3_ins.py : 2 0 : --timeout=2 &
+
+charon3:
+python3 campaign.py linear3_ins.py : 3 0 : --timeout=2 &
+
+charon4:
+python3 campaign.py linear3_ins.py : 4 0 : --timeout=2 &
+
+charon5:
+python3 campaign.py linear3_ins.py : 5 0 : --timeout=2 &
+
+miranda1:
+python3 campaign.py linear3_ins.py : 6 0 : --timeout=2 &
+
+miranda2:
+python3 campaign.py linear3_ins.py : 7 0 : --timeout=2 &
+
+umbriel1:
+
+umbriel2:
+
+umbriel3:
+
+umbriel4:
+python3 campaign.py linear3_ins.py : 8 0 : --timeout=2 &
+
+umbriel5:
+python3 campaign.py linear3_ins.py : 9 0 : --timeout=2 &
+
+umbriel6:
+python3 campaign.py linear3_ins.py : 10 0 : --timeout=2 &
