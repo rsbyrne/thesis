@@ -1,6 +1,5 @@
 # Custom
 data/
-resources/
 scratch/
 cache/
 *.pem

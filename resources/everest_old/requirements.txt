@@ -1,0 +1,1 @@
+diversipy==0.8

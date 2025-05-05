@@ -1,6 +1,8 @@
 ################################################################################
 
 
+import argparse
+import inspect
 import sys
 import os
 import glob
@@ -9,10 +11,12 @@ import time
 from pathlib import Path
 import random
 import itertools
+import functools
 import datetime
+import traceback
 from contextlib import contextmanager
-from signal import signal, SIGTERM, SIG_DFL
-from collections import abc as collabc
+from signal import signal, getsignal, SIGTERM
+# from collections import abc as collabc
 
 import numpy as np
 
@@ -29,93 +33,126 @@ ERRORCODE = '---ERROR---'
 JOBSUFFIX = '.campaign.job'
 INCSUFFIX = '.campaign.inc'
 
-class Job(collabc.Sequence):
+
+class _Job:
+
+    __slots__ = ('_manager', '_job')
+
+    def __init__(self, manager, job, /):
+        self._manager = manager
+        self._job = job
+        super().__init__()
+
+    def log(self, /, *args, **kwargs):
+        return self._manager._log(*args, **kwargs)
+
+    def __len__(self, /):
+        return len(self._job)
+
+    def __getitem__(self, index, /):
+        return self._job[index]
+
+
+def run(*dims):
+    return _JobManager(*dims)
+
+
+class _JobManager:
 
     def __init__(self, *dims):
         self.dims = dims
-        _, logfilepath, campaigname, jobid, *selectors = sys.argv
-        self.workdir = workdir
+        _, logfilepath, campaignname, jobid, *selectors = sys.argv
         self.campaignname = campaignname
-        self.logfilepath = logfilepath
+        self.logfilepath = Path(logfilepath)
         self.jobid = jobid
         self.jobno = int(jobid)
-        self.selectors = tuple(self.proc_arg(arg) for arg in self.selectors)
+        self.selectors = tuple(self.proc_arg(arg) for arg in selectors)
+        self._log = None
+        self._logfile = None
 
     def __enter__(self):
+        self._priorsignal = getsignal(SIGTERM)
         signal(SIGTERM, self._signal_handler)
-        self.logfile = open(self.logfilepath, mode='r+')
-        self.log = self.get_logger(self.logfile)
-        self.job = self.get_job()
-        return self
+        logfile = self._logfile = self.logfilepath.open(mode='r+')
+        self._log = self.get_logger(logfile)
+        try:
+            job = self.get_job()
+        except ExhaustedError as exc:
+            return self.__exit__(type(exc), None, None)
+        return _Job(self, job)
 
     def _signal_handler(self, sig, frame):
         self.__exit__(SystemExit, sig, None)
-        sys.exit(sig)
 
-    def __exit__(self, exctyp, excvalue, traceback):
-        signal(SIGTERM, SIG_DFL)
+    def __exit__(self, exctyp, excvalue, trace):
+        signal(SIGTERM, self._priorsignal)
         try:
-            try:
-                if exctyp is None:
-                    global COMPLETEDCODE
-                    self.log(COMPLETEDCODE)
-                    sys.exit(100)
-                elif issubclass(exctyp, SystemExit):
-                    self.log(INCOMPLETECODE)
-                    sys.exit(101)
-                elif issubclass(exctyp, ExhaustedError):
-                    sys.exit(102)
-                else:
-                    self.log(
-                        ERRORCODE + '\n'
-                        + str(exctyp(excvalue)) + '\n\n'
-                        + str(traceback)
-                        )
-                    sys.exit(103)
-            finally:
-                self.logfile.close()
-        except SystemExit as exc:
-            if exc.code == 102:
-                self.logfilepath.unlink()
-            raise exc
+            if exctyp is None:
+                self._log(COMPLETEDCODE)
+                sys.exit(100)
+            elif issubclass(exctyp, SystemExit):
+                self._log(INCOMPLETECODE)
+                sys.exit(101)
+            elif issubclass(exctyp, ExhaustedError):
+                self._log(EXHAUSTEDCODE)
+                sys.exit(102)
+            else:
+                self._log(
+                    *traceback.format_tb(trace),
+                    ERRORCODE,
+                    )
+                sys.exit(103)
+        finally:
+            self._logfile.close()
+            self._logfile = None
+            self._log = None
         assert False, "Job __exit__ should never complete!"
 
     @staticmethod
-    def get_logger(logfile):
+    def get_logger(arg):
     #     @mpi.dowrap
-        def log(*messages, logfile=logfile):
+        def log(*messages, logfile):
             logfile.write('\n')
             logfile.write(str(datetime.datetime.now()))
             for msg in messages:
                 logfile.write('\n')
-                logfile.write(msg)
+                logfile.write(str(msg))
             logfile.write('\n')
             logfile.flush()
-        return log
+        if isinstance(arg, str):
+            arg = Path(arg)
+        if isinstance(arg, Path):
+            def log_func(*messages, logfile=arg, log=log):
+                with logfile.open(mode='r+') as file:
+                    log(*messages, logfile=file)
+        else:
+            log_func = functools.partial(log, logfile=arg)
+        return log_func
 
-    @staticmethod
-    def proc_arg(astr):
+    @classmethod
+    def proc_arg(cls, astr, /):
         astr = astr.strip()
         if astr[0] == '[' and astr[-1] == ']':
-            return list(proc_arg(st) for st in astr[1:-1].split(','))
-        if astr[0] == '(' and astr[-1] == ')':
-            return list(proc_arg(st) for st in astr[1:-1].split(','))
+            return np.array([cls.proc_arg(st) for st in astr[1:-1].split(',')])
         els = astr.split(':')
         els = tuple(
             None if (el == 'None' or el == '')
             else int(el)
             for el in els
             )
-        nels = len(els)
-        if nels == 1:
-            return els[0]
+        if len(els) == 1:
+            return np.array([els[0]])
         return slice(*els)
 
-    def get_jobs(self, dims):
+    def get_jobs(self):
+        dims = self.dims
         combos = np.array(list(itertools.product(*dims))).reshape(
-            *(len(dim) for dim in self.dims), len(self)
+            *map(len, dims), len(self.dims)
             )
-        return combos[self.selectors]
+        jobs = combos[self.selectors]
+        if not len(jobs.shape) > 1:
+            raise ValueError(f"Jobs are the wrong shape: {jobs.shape}")
+        return jobs
 
     def get_job(self):
         global EXHAUSTEDCODE
@@ -127,47 +164,75 @@ class Job(collabc.Sequence):
             raise ExhaustedError
         return tuple(float(a) for a in job)
 
-    def __len__(self):
-        return len(self.dims)
-
-    def __getitem__(self, arg):
-        return self.job[arg]
-
 
 class Campaign:
 
-    def __init__(self,
-            workdir,
-            name,
-            *args,
-            timeout = None
-            ):
-        self.workdir = workdir
-        self.name = name = str(name)
-        self.args = args
-        if isinstance(timeout, str):
-            if timeout == 'None':
-                timeout = None
+    _DURATIONS = {
+        's': 1,
+        'm': 60,
+        'h': 60*60,
+        'd': 60*60*24,
+        'w': 60*60*24*7,
+        'b': int(2.628e+6),
+        'y': int(3.154e+7),
+        }
+
+    @classmethod
+    def _process_duration(cls, strn, /):
+        if strn[-1].isalpha():
+            strn, code = float(strn[:-1]), strn[-1]
+            return int(cls._DURATIONS[code] * strn)
+        return int(strn)
+
+    @classmethod
+    def _resolve_name(cls, name, script, workdir, args, /):
+        name = str(name)
+        if script is None:
+            if workdir is None:
+                script = os.path.abspath(name + '.py')
+                workdir = os.path.dirname(script)
             else:
-                timeout = float(timeout)
-                timeout = round(86400 * timeout)
+                workdir = os.path.abspath(str(workdir))
+                script = os.path.join(workdir, name)
+        else:
+            script = os.path.abspath(str(script))
+            if workdir is None:
+                workdir = os.path.dirname(script)
+            else:
+                workdir = os.path.abspath(str(workdir)) 
+        name = name + '_' + '-'.join(args)
+        return name, Path(workdir), Path(script)
+
+    def __init__(self,
+            name: str,
+            /,
+            *args,
+            script: str = None,
+            workdir: str = None,
+            timeout: str = None
+            ):
+        args = self.args = tuple(map(str, args))
+        name, workdir, script = \
+            self.name, self.workdir, self.script = \
+                self._resolve_name(name, script, workdir, args)
+        if timeout is not None:
+            timeout = self._process_duration(timeout)
         self.timeout = timeout
-        campaignname = self.campaignname = name + '_' + '-'.join(args)
-        lockfilepath = self.lockfilepath = Path(
+        self.lockfilepath = Path(
             workdir,
-            campaignname + '.campaign.lock'
+            name + '.campaign.lock'
             )
-        self.jobroot = Path(workdir, campaignname)
+        os.makedirs(workdir, exist_ok=True)
 
     def get_jobfilepath(self, jobid):
-        global JOBSUFFIX
         return Path(
-            str(self.jobroot) + '_' + jobid.zfill(12) + JOBSUFFIX
+            self.workdir,
+            self.name + '_' + jobid.zfill(12) + JOBSUFFIX,
             )
     def get_incfilepath(self, jobid):
-        global INCSUFFIX
         return Path(
-            str(self.jobroot) + '_' + jobid.zfill(12) + INCSUFFIX
+            self.workdir,
+            self.name + '_' + jobid.zfill(12) + INCSUFFIX,
             )
 
     @contextmanager
@@ -189,7 +254,8 @@ class Campaign:
     def choose_job(self):
         with self.lock():
             incompletes = glob.glob(
-                glob.escape(str(self.jobroot)) + '*' + self.INCSUFFIX
+                glob.escape(str(Path(self.workdir, self.name)))
+                + '*' + INCSUFFIX
                 )
             if incompletes:
                 incfilename = incompletes[0]
@@ -198,7 +264,8 @@ class Campaign:
                 os.remove(incfilename)
             else:
                 jobfilepaths = glob.glob(
-                    glob.escape(str(self.jobroot)) + '*' + self.JOBSUFFIX
+                    glob.escape(str(Path(self.workdir, self.name)))
+                    + '*' + JOBSUFFIX
                     )
                 jobids = [
                     int(jobfilepath.rstrip('.campaign.job')[-12:])
@@ -213,35 +280,59 @@ class Campaign:
                 self.get_jobfilepath(jobid).touch(exist_ok = False)
             return jobid
 
+    def _signal_handler(self, sig, stack):
+        raise SystemExit(sig)
+
     def run_job(self, jobid):
-        incfilepath = self.get_incfilepath(jobid)
+        print(f"Running job {jobid}...")
+        jobfilepath = self.get_jobfilepath(jobid)
+        joblog = _JobManager.get_logger(jobfilepath)
         args = (
-            jobfilepath,
-            self.campaignname,
+            str(jobfilepath),
+            self.name,
             jobid,
             *self.args
             )
-        cmd = ['python3', scriptname, *args]
+        cmd = ['python3', self.script, *args]
+#         with jobfilepath.open('a') as jobfile:
+        proc = subprocess.Popen(
+            cmd,
+            stdin=subprocess.DEVNULL,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            )
+        prior_handler = getsignal(SIGTERM)
+        signal(SIGTERM, self._signal_handler)
         try:
-            completed = subprocess.run(
-                cmd,
-                stdin=subprocess.DEVNULL,
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL,
-                check=True,
-                timeout=self.timeout
+            ret = proc.wait(self.timeout)
+            if ret != 0:
+                raise subprocess.CalledProcessError(ret, cmd)
+        except SystemExit as exc:
+            proc.terminate()
+            proc.wait()
+            sys.exit(exc.args[0])
+        except subprocess.TimeoutExpired:
+            joblog(
+                "\nTimed out after " + str(self.timeout) + " seconds "
+                + str(round(self.timeout / 86400, 3)) + " days).\n"
+                + TIMEOUTCODE
                 )
         except subprocess.CalledProcessError as exc:
             ret = exc.returncode
             if ret >= 100:
                 if ret == 101:
+                    incfilepath = self.get_incfilepath(jobid)
                     incfilepath.touch(exist_ok=False)
-                    with open(str(incfilepath), mode='r+') as incfile:
-                        incfile.write(jobid)
+                    inclog = _JobManager.get_logger(incfilepath)
+                    inclog(jobid)
                 elif ret == 102:
+                    jobfilepath.unlink()
                     raise ExhaustedError
             else:
                 sys.exit(2)
+        finally:
+            signal(SIGTERM, prior_handler)
+        print(f"Completed job {jobid}...")
 
     def run(self):
         while True:
@@ -250,35 +341,51 @@ class Campaign:
                 self.run_job(job)
             except ExhaustedError:
                 break
-            except subprocess.TimeoutExpired:
-                continue
 
 
 if __name__ == '__main__':
 
-    _, name, *allargs = sys.argv # name of campaign, passed args
-    flagargs = [arg for arg in allargs if arg.startswith('--')]
-    kwargs = {
-        k.strip():v.strip() for k, v in (
-            flagarg[2:].split('=') for flagarg in flagargs
-            )
-        }
-    args = [arg for arg in allargs if not arg in flagargs]
-    if not args:
-        args = [':',]
+    sig = inspect.signature(Campaign).parameters
 
-    name = os.path.abspath(name)
-    workdir = os.path.dirname(name)
+    parser = argparse.ArgumentParser(
+        description='Launch an Everest campaign.'
+        )
+
+    arg_kinds = {}
+    for key, param in sig.items():
+        if param.kind is param.POSITIONAL_ONLY:
+            parser.add_argument(key, type=param.annotation)
+            arg_kinds[key] = 0
+        elif param.kind is param.VAR_POSITIONAL:
+            parser.add_argument(key, nargs='*')
+            arg_kinds[key] = 1
+        elif param.kind is param.KEYWORD_ONLY:
+            parser.add_argument(f'-{key[0]}', f'--{key}', type=param.annotation)
+            arg_kinds[key] = 2
+        else:
+            raise ValueError(f"{param.kind} not acceptable as a param kind.")
+
+    options = parser.parse_args()
+
+    arg_groups = ([], [()], {})
+    for key, kind in arg_kinds.items():
+        val = getattr(options, key)
+        arggrp = arg_groups[kind]
+        if kind == 0:
+            arggrp.append(val)
+        elif kind == 2:
+            arggrp[key] = val
+        else:
+            arggrp[0] = val
 
     campaign = Campaign(
-        workdir,
-        name,
-        *args,
-        **kwargs,
+        *arg_groups[0],
+        *arg_groups[1].pop(),
+        **arg_groups[2],
         )
+
 
     campaign.run()
 
 
 ################################################################################
-

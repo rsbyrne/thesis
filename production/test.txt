@@ -1,0 +1,9 @@
+foo
+Traceback (most recent call last):
+  File "/home/morpheus/workspace/mount/production/my_campaign.py", line 5, in <module>
+    with Job(('foo',)) as job:
+  File "/home/morpheus/workspace/mount/production/campaign.py", line 54, in __enter__
+    self.job = self.get_job()
+  File "/home/morpheus/workspace/mount/production/campaign.py", line 133, in get_job
+    jobs = jobs.reshape(np.product(jobs.shape[:-1]), jobs.shape[-1])
+TypeError: 'numpy.float64' object cannot be interpreted as an integer

@@ -1,0 +1,2 @@
+Cronus (64 nodes)
+bash looprun.sh "python3 campaign.py ms98_starling.py : : : : --timeout=2 &" 64
