@@ -1,0 +1,85 @@
+###############################################################################
+# Learn more at https://jupyterbook.org/customize/config.html
+
+###############################################################################
+# Book settings
+title: "What kind of thing is a planet?"
+logo: "logo.png"
+author: "Rohan S. Byrne"
+copyright: "2021"
+email: "rohan.byrne@gmail.com"
+description: "The definitive version of my PhD thesis."
+exclude_patterns: ["*.py", "*.pkl"]
+
+###############################################################################
+# Execution settings
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: "cache"
+  exclude_patterns: ["_*",]
+  timeout: 30
+
+###############################################################################
+# Parse and render settings
+# See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+parse:
+  myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+    - jupyterbook_latex # Very important!
+  myst_url_schemes: [mailto, http, https]
+  myst_extended_syntax: true
+
+###############################################################################
+# HTML-specific settings
+html:
+  home_page_in_navbar: true
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: true
+  comments:
+    hypothesis: true
+
+###############################################################################
+# LaTeX-specific settings
+latex:
+  latex_engine: "pdflatex"
+  latex_documents:
+    targetname: "book.tex"
+  use_jupyterbook_latex: true
+#   biblio-style: "authoryear"
+
+###############################################################################
+# Options to configure the Sphinx document engine
+sphinx:
+  config:
+    bibtex_reference_style: "author_year"
+    language: "en"
+
+###############################################################################
+# Other settings
+
+# Information about where the book exists on the web
+repository:
+  url: "https://github.com/rsbyrne/thesis"
+  path_to_book: "book"
+  branch: "main"
+
+# Launch button settings
+launch_buttons:
+  notebook_interface: "jupyterlab"
+  binderhub_url: "https://mybinder.org"
+  colab_url: "https://colab.research.google.com"
+  thebe: true
+
+# Add bibliography
+bibtex_bibfiles:
+  - "references.bib"

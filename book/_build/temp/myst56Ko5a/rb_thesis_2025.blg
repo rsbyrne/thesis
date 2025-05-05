@@ -1,0 +1,80 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: rb_thesis_2025.aux
+The style file: abbrvnat.bst
+A level-1 auxiliary file: rb_thesis_2025-introduction.aux
+A level-1 auxiliary file: rb_thesis_2025-main.aux
+A level-1 auxiliary file: rb_thesis_2025-main-1.aux
+A level-1 auxiliary file: rb_thesis_2025-main-2.aux
+A level-1 auxiliary file: rb_thesis_2025-main-3.aux
+A level-1 auxiliary file: rb_thesis_2025-main-4.aux
+A level-1 auxiliary file: rb_thesis_2025-main-5.aux
+A level-1 auxiliary file: rb_thesis_2025-main-6.aux
+A level-1 auxiliary file: rb_thesis_2025-main-7.aux
+A level-1 auxiliary file: rb_thesis_2025-conclusion.aux
+Database file #1: main.bib
+Warning--I didn't find a database entry for "Daly1980-xl"
+Warning--I didn't find a database entry for "Urey1955-zs"
+Warning--I didn't find a database entry for "Christensen1985-bu"
+Warning--I didn't find a database entry for "Jochum1983-dn"
+Warning--I didn't find a database entry for "Gando2011-sh"
+Warning--I didn't find a database entry for "Huang2013-eu"
+Warning--I didn't find a database entry for "Korenaga2003-oy"
+Warning--I didn't find a database entry for "Korenaga2008-js"
+Warning--I didn't find a database entry for "Mareschal2012-ie"
+Warning--I didn't find a database entry for "Dye2012-cx"
+Warning--I didn't find a database entry for "Jaupart2015-un"
+Warning--I didn't find a database entry for "Korenaga2017-an"
+Warning--I didn't find a database entry for "Schubert2001-ea"
+Warning--I didn't find a database entry for "Moore2008-je"
+Warning--I didn't find a database entry for "Turcotte2014-by"
+Warning--I didn't find a database entry for "Roberts1967-aq"
+Warning--I didn't find a database entry for "Solomatov2000-xn"
+Warning--I didn't find a database entry for "Jaupart2010-zy"
+Warning--I didn't find a database entry for "Vilella2017-mg"
+Warning--I didn't find a database entry for "Weinstein1990-dd"
+Warning--I didn't find a database entry for "Parmentier1994-on"
+Warning--I didn't find a database entry for "Weller2016-nm"
+Warning--I didn't find a database entry for "Vilella2018-il"
+You've used 1 entry,
+            2773 wiz_defined-function locations,
+            662 strings with 5674 characters,
+and the built_in function-call counts, 418 in all, are:
+= -- 39
+> -- 10
+< -- 1
++ -- 4
+- -- 3
+* -- 33
+:= -- 73
+add.period$ -- 6
+call.type$ -- 1
+change.case$ -- 4
+chr.to.int$ -- 1
+cite$ -- 2
+duplicate$ -- 20
+empty$ -- 37
+format.name$ -- 4
+if$ -- 82
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 16
+num.names$ -- 4
+pop$ -- 4
+preamble$ -- 1
+purify$ -- 3
+quote$ -- 0
+skip$ -- 13
+stack$ -- 0
+substring$ -- 11
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 11
+warning$ -- 0
+while$ -- 4
+width$ -- 0
+write$ -- 26
+(There were 23 warnings)

@@ -1,0 +1,46 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  title: What kind of thing is a planet?
+  author: Rohan Scott Byrne
+  toc:
+    - file: content/introduction.md
+    - file: content/chapter_01/main.md
+    - file: content/chapter_02/main.md
+    - file: content/chapter_03/main.md
+    - file: content/chapter_04/main.md
+    - file: content/chapter_05/main.md
+    - file: content/chapter_06/main.md
+    - file: content/chapter_07/main.md
+    - file: content/chapter_08/main.md
+    - file: content/conclusion.md
+  exports:
+    - format: pdf
+      template: plain_latex_book
+      output: exports/rb_thesis_2025.pdf
+      articles:
+        - file: content/introduction.md
+        - file: content/chapter_01/main.md
+        - file: content/chapter_02/main.md
+        - file: content/chapter_03/main.md
+        - file: content/chapter_04/main.md
+        - file: content/chapter_05/main.md
+        - file: content/chapter_06/main.md
+        - file: content/chapter_07/main.md
+        - file: content/chapter_08/main.md
+        - file: content/conclusion.md
+#   toc:
+#     - file: content/introduction.md
+#     - file: content/conclusion.md
+#   exports:
+#     - format: pdf
+#       template: plain_latex_book
+#       output: exports/rb_thesis_2025.pdf
+# site:
+# exports:
+#   - format: pdf
+#     template: plain_latex_book
+#     output: exports/rbthesis2025.pdf
+#     articles:
+#       - introduction.md
+#       - conclusions.md
