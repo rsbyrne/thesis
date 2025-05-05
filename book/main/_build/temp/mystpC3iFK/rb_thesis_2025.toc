@@ -1,0 +1,40 @@
+\contentsline {section}{\numberline {0.1}Review and Theory}{1}{section.0.1}%
+\contentsline {subsection}{\numberline {0.1.1}Planets from first principles}{1}{subsection.0.1.1}%
+\contentsline {subsection}{\numberline {0.1.2}Heat and geometry: planetary basics}{1}{subsection.0.1.2}%
+\contentsline {subsection}{\numberline {0.1.3}From planetary to exoplanetary: an expanding scope of inquiry}{4}{subsection.0.1.3}%
+\contentsline {subsubsection}{Local planets}{4}{section*.2}%
+\contentsline {paragraph}{Europa}{4}{section*.3}%
+\contentsline {paragraph}{Io}{4}{section*.4}%
+\contentsline {paragraph}{Enceladus}{5}{section*.5}%
+\contentsline {paragraph}{Pluto}{5}{section*.6}%
+\contentsline {subsubsection}{Exoplanets}{5}{section*.7}%
+\contentsline {subsection}{\numberline {0.1.4}Geodynamics: an evolving discipline}{6}{subsection.0.1.4}%
+\contentsline {subsubsection}{Empirical foundations of geodynamic thought}{7}{section*.8}%
+\contentsline {subsubsection}{Challenges to the conventional model of plate tectonics}{7}{section*.9}%
+\contentsline {paragraph}{The Naive Theory of plate tectonics}{7}{section*.10}%
+\contentsline {paragraph}{Insufficiencies of the Naive Theory}{8}{section*.11}%
+\contentsline {paragraph}{Naive Theory and the Urey Paradox}{8}{section*.12}%
+\contentsline {paragraph}{Going beyond the Naive Theory}{8}{section*.13}%
+\contentsline {subsubsection}{Continents: a decisive control in the tectonic system}{9}{section*.14}%
+\contentsline {paragraph}{Thermal effects of continental crust}{9}{section*.15}%
+\contentsline {paragraph}{Continents as a resolution of the Urey paradox}{10}{section*.16}%
+\contentsline {paragraph}{Continent-climate feedbacks}{10}{section*.17}%
+\contentsline {subsubsection}{Tectonic modes: beyond plate tectonics}{10}{section*.18}%
+\contentsline {paragraph}{Mobile lid}{10}{section*.19}%
+\contentsline {paragraph}{Stagnant lid}{10}{section*.20}%
+\contentsline {paragraph}{Episodic overturn}{10}{section*.21}%
+\contentsline {paragraph}{Magma ocean}{11}{section*.22}%
+\contentsline {paragraph}{Sluggish lid}{11}{section*.23}%
+\contentsline {paragraph}{Plume tectonics}{11}{section*.24}%
+\contentsline {paragraph}{Heat pipe}{12}{section*.25}%
+\contentsline {paragraph}{Null mode}{12}{section*.26}%
+\contentsline {paragraph}{The future of tectonic modes}{12}{section*.27}%
+\contentsline {subsubsection}{Tectonic mode transitions and planetary memory}{12}{section*.28}%
+\contentsline {subsection}{\numberline {0.1.5}Review}{13}{subsection.0.1.5}%
+\contentsline {section}{\numberline {0.2}Tools and methods}{14}{section.0.2}%
+\contentsline {section}{\numberline {0.3}PlanetEngine and Everest}{14}{section.0.3}%
+\contentsline {section}{\numberline {0.4}Isoviscous rheologies}{14}{section.0.4}%
+\contentsline {section}{\numberline {0.5}Temperature-dependant rheology}{14}{section.0.5}%
+\contentsline {section}{\numberline {0.6}Viscoplastic rheology}{14}{section.0.6}%
+\contentsline {section}{\numberline {0.7}New techniques}{14}{section.0.7}%
+\contentsline {section}{\numberline {0.8}Discussion}{14}{section.0.8}%

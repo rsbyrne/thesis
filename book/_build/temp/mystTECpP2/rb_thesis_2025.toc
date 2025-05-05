@@ -1,3 +1,0 @@
-\contentsline {subsection}{\numberline {0.0.1}Isoviscous rheology with internal and mixed heating}{3}{subsection.0.0.1}%
-\contentsline {subsubsection}{Internal heating}{3}{section*.2}%
-\contentsline {subsubsection}{Mixed heating}{5}{section*.3}%

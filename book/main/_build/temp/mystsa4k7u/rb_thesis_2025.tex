@@ -1,0 +1,80 @@
+% Created with jtex v.1.0.20
+\documentclass[a4paper,11pt,oneside]{book}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{changepage}
+\usepackage{framed}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\bibliographystyle{abbrvnat}
+
+% Make list items more compact
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+
+
+\hypersetup{
+  colorlinks,
+  linkcolor={black},
+  citecolor={black},
+  urlcolor={black}
+}
+
+% Style quotes
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
+\definecolor{quoteshade}{rgb}{0.95, 0.95, 1}
+\renewenvironment{quote}{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{darkblue}\vrule width 2pt}%
+    {\color{quoteshade}\vrule width 4pt}%
+    \colorbox{quoteshade}%
+  }%
+  \MakeFramed {\advance\hsize-\width \FrameRestore}%
+  \noindent\hspace{-8pt}% disable indenting first paragraph
+  \begin{adjustwidth}{0pt}{0pt}% adjust as needed
+  \vspace{2pt}\vspace{2pt}%
+}
+{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+\title{\Huge \textbf{What kind of thing is a planet?}}
+\author{\textsc{Rohan Scott Byrne}}
+
+\begin{document}
+\sloppy
+
+\frontmatter
+\maketitle
+
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+\mainmatter
+
+% \include{preface.tex}
+% \include{acknowledgements.tex}
+
+\texttt{\{include\} ../content/introduction.md}
+\texttt{\{include\} ../content/chapter\_01\_background/main.md}
+\texttt{\{include\} ../content/chapter\_02\_methods/main.md}
+\texttt{\{include\} ../content/chapter\_03\_everest/main.md}
+\texttt{\{include\} ../content/chapter\_04\_isoviscous/main.md}
+\texttt{\{include\} ../content/chapter\_05\_arrhenius/main.md}
+\texttt{\{include\} ../content/chapter\_06\_viscoplastic/main.md}
+\texttt{\{include\} ../content/chapter\_07\_advanced/main.md}
+\texttt{\{include\} ../content/chapter\_08\_discussion/main.md}
+\texttt{\{include\} ../content/conclusion.md}
+
+
+
+\end{document}

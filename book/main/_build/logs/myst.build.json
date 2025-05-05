@@ -1,0 +1,41 @@
+{
+  "input": {
+    "files": [],
+    "opts": {
+      "execute": false,
+      "pdf": true,
+      "tex": false,
+      "typst": false,
+      "docx": false,
+      "md": false,
+      "xml": false,
+      "meca": false,
+      "cff": false,
+      "site": false,
+      "html": false,
+      "all": false,
+      "doiBib": false,
+      "watch": false,
+      "force": false,
+      "checkLinks": false,
+      "strict": false,
+      "ci": false,
+      "maxSizeWebp": 1572864
+    }
+  },
+  "exports": [
+    {
+      "format": "pdf",
+      "template": "/home/morpheus/workspace/mount/book/template",
+      "output": "/home/morpheus/workspace/mount/book/exports/rb_thesis_2025.pdf",
+      "articles": [
+        {
+          "file": "/home/morpheus/workspace/mount/book/main/main.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/morpheus/workspace/mount/book/main/main.md",
+      "$project": "/home/morpheus/workspace/mount/book/main"
+    }
+  ]
+}

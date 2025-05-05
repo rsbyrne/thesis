@@ -1,0 +1,39 @@
+version: 1
+title: What kind of thing is a planet?
+project:
+  title: What kind of thing is a planet?
+  author: Rohan Scott Byrne
+  exports:
+    - format: pdf
+#       template: eartharxiv
+      output: ../exports/rb_thesis_2025.pdf
+
+#       articles:
+#         - file: content/introduction.md
+#         - file: content/chapter_01_background/main.md
+#         - file: content/chapter_02_methods/main.md
+#         - file: content/chapter_03_everest/main.md
+#         - file: content/chapter_04_isoviscous/main.md
+#         - file: content/chapter_05_arrhenius/main.md
+#         - file: content/chapter_06_viscoplastic/main.md
+#         - file: content/chapter_07_advanced/main.md
+#         - file: content/chapter_08_discussion/main.md
+#         - file: content/conclusion.md
+#   bibliography:
+#     - references.bib
+
+
+#   toc:
+#     - file: content/introduction.md
+#     - file: content/chapter_01_background/main.md
+#     - file: content/chapter_02_methods/main.md
+#     - file: content/chapter_03_everest/main.md
+#     - file: content/chapter_04_isoviscous/main.md
+#     - file: content/chapter_05_arrhenius/main.md
+#     - file: content/chapter_06_viscoplastic/main.md
+#     - file: content/chapter_07_advanced/main.md
+#     - file: content/chapter_08_discussion/main.md
+#     - file: content/conclusion.md
+
+#       latex:
+#         use_chapters: true  # Force # to map to \chapter{}

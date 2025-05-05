@@ -1,1 +1,0 @@
-Some conclusion content.

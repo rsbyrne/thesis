@@ -1,0 +1,64 @@
+jtex: v1
+title: EarthArXiv
+description: A preprint template for EarthArXiv with the AGU bibstyle
+version: 1.0.0
+license: CC-BY-4.0
+thumbnail: ./thumbnail.png
+authors:
+  - name: Brenhin Keller
+    github: https://github.com/brenhinkeller
+    affiliations:
+      - Dartmouth College
+tags:
+  - paper
+  - geoscience
+  - earthscience
+  - preprint
+source: https://github.com/brenhinkeller/preprint-template.tex
+parts:
+  - id: abstract
+    required: true
+    description: No description
+    max_words: 500
+  - id: acknowledgments
+    description: No description
+doc:
+  - id: title
+    required: true
+  - id: authors
+    required: true
+  - id: keywords
+    required: true
+  - id: bibliography
+options:
+  - id: two_column
+    type: boolean
+  - id: line_numbers
+    type: boolean
+  - id: link
+    type: string
+    description: >
+      Include a link back to the article on curvenote.com. This link will be
+      placed inline at the end of all content, before the bibliography section.
+files:
+  - template.tex
+  - eartharxiv.sty
+packages:
+  - amsthm
+  - authblk
+  - background
+  - eartharxiv
+  - fancyhdr
+  - fontenc
+  - geometry
+  - inputenc
+  - lineno
+  - natbib
+  - newfloat
+  - scalerel
+  - sidecap
+  - tikz
+  - times
+  - titlesec
+  - txfonts
+  - xcolor
