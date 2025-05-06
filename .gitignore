@@ -2,6 +2,7 @@
 data/
 scratch/
 cache/
+book/main/_build
 *.pem
 
 # Byte-compiled / optimized / DLL files
