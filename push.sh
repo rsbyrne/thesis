@@ -4,7 +4,7 @@ cd "$(dirname "$0")"
 # bash configure_ssh.sh
 eval "$(ssh-agent)"
 ssh-add ~/.ssh/*.pem
-python3 -m nbconvert --clear-output working/*.ipynb dev/*.ipynb scratch/*.ipynb analysis/*.ipynb
+# python3 -m nbconvert --clear-output working/*.ipynb dev/*.ipynb scratch/*.ipynb analysis/*.ipynb
 git config --global user.email "rohan.byrne@gmail.com"
 git config --global user.name "rsbyrne"
 git add .
