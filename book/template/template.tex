@@ -11,6 +11,9 @@
 \usepackage{framed}
 \usepackage{hyperref}
 \usepackage{amssymb}
+\usepackage{amsmath}
+% \usepackage{amsfont}
+\usepackage{array}
 \bibliographystyle{abbrvnat}
 
 % Make list items more compact
@@ -21,9 +24,9 @@
 
 \hypersetup{
   colorlinks,
-  linkcolor={black},
-  citecolor={black},
-  urlcolor={black}
+  linkcolor={blue},
+  citecolor={blue},
+  urlcolor={blue}
 }
 
 % Style quotes
@@ -45,6 +48,19 @@
   \vspace{2pt}\end{adjustwidth}\endMakeFramed%
 }
 
+% Crazy chatbot shit here - caveats abound:
+
+\let\oldsection\section
+\renewcommand{\section}[1]{\chapter{#1}}
+
+\let\oldsubsection\subsection
+\renewcommand{\subsection}[1]{\oldsection{#1}}
+
+\let\oldsubsubsection\subsubsection
+\renewcommand{\subsubsection}[1]{\oldsubsection{#1}}
+
+% Crazy chatbot shit ended
+
 \title{\Huge \textbf{[-doc.title-]}[# if doc.subtitle #] \\ \huge [-doc.subtitle-][# endif #]}
 \author{\textsc{
 [#- for author in doc.authors #]
@@ -54,8 +70,6 @@
 
 \begin{document}
 \sloppy
-
-\renewcommand{\thesection}{\arabic{section}}  % Removes chapter prefix (thanks to DeepSeek for suggestion)
 
 \frontmatter
 \maketitle
@@ -70,7 +84,6 @@
 % \include{acknowledgements.tex}
 
 [- CONTENT -]
-
 
 [# if doc.bibliography #]
 \bibliography{[- doc.bibliography | join(", ") -]}

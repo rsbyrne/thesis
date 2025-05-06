@@ -1,6 +1,6 @@
 myst: v1
-title: Plain LaTeX Book
-description: A plain latex book theme
+title: RB thesis custom
+description: A template for my thesis.
 version: '1.0.0'
 authors:
   - name: Rowan Cockett
@@ -8,8 +8,7 @@ authors:
     affiliations:
       - Curvenote
       - Executable Books
-license: CC-BY-4.0
-thumbnail: ./thumbnail.png
+  - name: Rohan Byrne
 tags:
   - book
 # parts:

@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: rb_thesis_2025.aux
+The style file: abbrvnat.bst
+Reallocated field_info (elt_size=4) to 14436 items from 5000.
+Database file #1: main.bib
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Warning--I didn't find a database entry for "Bercovici-vk"
+Warning--can't use both author and editor fields in Baker2007-nt
+Warning--empty publisher in Banerdt1992-ic
+Warning--can't use both author and editor fields in Berner1997-km
+Warning--empty publisher in Chandrasekhar1961-ez
+Warning--can't use both author and editor fields in Dohm2007-am
+Warning--can't use both author and editor fields in Jarvis1991-ir
+Warning--can't use both author and editor fields in Jaupart2015-un
+Warning--empty publisher in Kumazawa1994-jl
+Warning--there's a number but no volume in Macdonald1998-az
+Warning--empty publisher in Maruyama1994-pq
+Warning--empty journal in Matson1998-sa
+Warning--can't use both author and editor fields in McEwen2000-hy
+Warning--can't use both author and editor fields in Moore2007-fv
+Warning--empty journal in Palymskiy2003-fq
+Warning--can't use both author and editor fields in Spencer2009-aq
+You've used 336 entries,
+            2773 wiz_defined-function locations,
+            2706 strings with 78643 characters,
+and the built_in function-call counts, 201890 in all, are:
+= -- 16671
+> -- 16973
+< -- 206
++ -- 5718
+- -- 5379
+* -- 19064
+:= -- 32184
+add.period$ -- 1009
+call.type$ -- 336
+change.case$ -- 2771
+chr.to.int$ -- 333
+cite$ -- 687
+duplicate$ -- 6994
+empty$ -- 13003
+format.name$ -- 5917
+if$ -- 40558
+int.to.chr$ -- 4
+int.to.str$ -- 1
+missing$ -- 367
+newline$ -- 1685
+num.names$ -- 1344
+pop$ -- 5311
+preamble$ -- 1
+purify$ -- 2465
+quote$ -- 0
+skip$ -- 5888
+stack$ -- 0
+substring$ -- 6871
+swap$ -- 732
+text.length$ -- 19
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 3526
+warning$ -- 15
+while$ -- 1523
+width$ -- 0
+write$ -- 4335
+(There were 16 warnings)
