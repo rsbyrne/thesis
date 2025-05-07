@@ -58,7 +58,7 @@ class GridSubs(_GridController):
     def update(self):
         super().update()
         self.mplax.grid(
-            b = True,
+#             b = True,
             axis = self.dim,
             which = self.stature,
             alpha = self.alpha if self.visible else 0.,

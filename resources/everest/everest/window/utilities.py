@@ -10,13 +10,6 @@ def unique_list(listlike, func = None):
         {e: None for e in listlike if func(e)}
         ).keys()
 
-def latex_safe(label):
-    if label.startswith('!$'):
-        return label[2:]
-    if label:
-        return f"${label}$"
-    return label
-
 ###############################################################################
 ''''''
 ###############################################################################

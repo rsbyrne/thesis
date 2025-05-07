@@ -5,8 +5,6 @@
 
 import weakref
 
-from . import _utilities
-
 from .exceptions import MissingAsset
 from ._base import _PropertyController, _Vanishable, _Colourable, _Fadable, _Fillable, _Kwargs
 
@@ -57,7 +55,7 @@ class _MplText(_MplLinear):
         return self.mplelement
     @property
     def text(self):
-        return _utilities.latex_safe(self._text)
+        return self._text
     @text.setter
     def text(self, value):
         self._text = value

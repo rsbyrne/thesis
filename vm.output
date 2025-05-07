@@ -1,0 +1,101 @@
+[I 2025-05-07 11:58:49.532 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2025-05-07 11:58:49.535 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2025-05-07 11:58:49.541 ServerApp] jupyterlab | extension was successfully linked.
+[I 2025-05-07 11:58:49.541 ServerApp] jupyterlab_myst | extension was successfully linked.
+[I 2025-05-07 11:58:49.542 ServerApp] Writing Jupyter server cookie secret to /home/morpheus/.local/share/jupyter/runtime/jupyter_cookie_secret
+[I 2025-05-07 11:58:49.703 ServerApp] notebook_shim | extension was successfully linked.
+/usr/local/lib/python3.13/dist-packages/traitlets/traitlets.py:1897: FutureWarning: ServerApp.preferred_dir config is deprecated in jupyter-server 2.0. Use FileContentsManager.preferred_dir instead
+  return t.cast(Sentinel, self._get_trait_default_generator(names[0])(self))
+[I 2025-05-07 11:58:49.714 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2025-05-07 11:58:49.716 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2025-05-07 11:58:49.716 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2025-05-07 11:58:49.718 LabApp] JupyterLab extension loaded from /usr/local/lib/python3.13/dist-packages/jupyterlab
+[I 2025-05-07 11:58:49.718 LabApp] JupyterLab application directory is /usr/local/share/jupyter/lab
+[I 2025-05-07 11:58:49.718 LabApp] Extension Manager is 'pypi'.
+[I 2025-05-07 11:58:49.740 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2025-05-07 11:58:49.750 ServerApp] jupyterlab_myst | extension was successfully loaded.
+[I 2025-05-07 11:58:49.751 ServerApp] Serving notebooks from local directory: /home/morpheus
+[I 2025-05-07 11:58:49.751 ServerApp] Jupyter Server 2.15.0 is running at:
+[I 2025-05-07 11:58:49.751 ServerApp] http://25c495e7ea40:8888/lab?token=5c9a633c06650dacf72c2cebe5aab3356392799f87377112
+[I 2025-05-07 11:58:49.751 ServerApp]     http://127.0.0.1:8888/lab?token=5c9a633c06650dacf72c2cebe5aab3356392799f87377112
+[I 2025-05-07 11:58:49.751 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2025-05-07 11:58:49.753 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/morpheus/.local/share/jupyter/runtime/jpserver-7-open.html
+    Or copy and paste one of these URLs:
+        http://25c495e7ea40:8888/lab?token=5c9a633c06650dacf72c2cebe5aab3356392799f87377112
+        http://127.0.0.1:8888/lab?token=5c9a633c06650dacf72c2cebe5aab3356392799f87377112
+[I 2025-05-07 11:58:50.125 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 2025-05-07 11:59:03.571 ServerApp] Clearing invalid/expired login cookie username-localhost-8890
+[I 2025-05-07 11:59:03.572 LabApp] 302 GET /lab/workspaces/auto-E (@172.17.0.1) 1.36ms
+[I 2025-05-07 11:59:11.473 ServerApp] User bfaf7f06c3424a709d13f829ae1d4b97 logged in.
+[I 2025-05-07 11:59:11.474 ServerApp] 302 POST /login?next=%2Flab%2Fworkspaces%2Fauto-E (bfaf7f06c3424a709d13f829ae1d4b97@172.17.0.1) 1.36ms
+[I 2025-05-07 11:59:12.559 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2025-05-07 11:59:12.564 LabApp] Build is up to date
+[I 2025-05-07 11:59:16.150 ServerApp] New terminal with automatic name: 1
+[W 2025-05-07 12:00:23.032 ServerApp] delete /workspace/untitled.txt
+[W 2025-05-07 12:00:26.012 ServerApp] delete /workspace/untitled1.txt
+[W 2025-05-07 12:00:26.014 ServerApp] 403 DELETE /api/contents/workspace/untitled1.txt?1746619226464 (172.17.0.1): Permission denied: workspace/.ipynb_checkpoints/untitled1-checkpoint.txt
+[W 2025-05-07 12:00:26.014 ServerApp] wrote error: 'Permission denied: workspace/.ipynb_checkpoints/untitled1-checkpoint.txt'
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 230, in perm_to_403
+        yield
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filecheckpoints.py", line 182, in delete_checkpoint
+        await run_sync(os.unlink, cp_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/.ipynb_checkpoints/untitled1-checkpoint.txt'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 336, in delete
+        await ensure_async(cm.delete(path))
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 901, in delete
+        await self.checkpoints.delete_all_checkpoints(path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/checkpoints.py", line 179, in delete_all_checkpoints
+        await self.delete_checkpoint(checkpoint["id"], path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filecheckpoints.py", line 181, in delete_checkpoint
+        with self.perm_to_403():
+             ~~~~~~~~~~~~~~~~^^
+      File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+        self.gen.throw(value)
+        ~~~~~~~~~~~~~~^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 239, in perm_to_403
+        raise HTTPError(403, "Permission denied: %s" % path) from e
+    tornado.web.HTTPError: HTTP 403: Forbidden (Permission denied: workspace/.ipynb_checkpoints/untitled1-checkpoint.txt)
+[W 2025-05-07 12:00:26.019 ServerApp] 403 DELETE /api/contents/workspace/untitled1.txt?1746619226464 (bfaf7f06c3424a709d13f829ae1d4b97@172.17.0.1) 7.02ms referer=http://localhost:8890/lab/workspaces/auto-E
+[I 2025-05-07 12:00:42.765 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2025-05-07 12:00:42.769 LabApp] Build is up to date
+[W 2025-05-07 12:01:39.036 ServerApp] delete /workspace/Dockerfile-Copy1
+[I 2025-05-07 12:08:35.548 ServerApp] Writing notebook-signing key to /home/morpheus/.local/share/jupyter/notebook_secret
+[W 2025-05-07 12:08:35.548 ServerApp] Notebook workspace/dev/dev_025.ipynb is not trusted
+[I 2025-05-07 12:08:35.733 ServerApp] Kernel started: f0fba118-5aee-47f9-9f4a-aa644acddd6b
+[I 2025-05-07 12:08:36.839 ServerApp] Connecting to kernel f0fba118-5aee-47f9-9f4a-aa644acddd6b.
+[I 2025-05-07 12:08:36.840 ServerApp] Connecting to kernel f0fba118-5aee-47f9-9f4a-aa644acddd6b.
+[I 2025-05-07 12:08:36.874 ServerApp] Connecting to kernel f0fba118-5aee-47f9-9f4a-aa644acddd6b.
+[I 2025-05-07 12:08:40.155 ServerApp] Kernel restarted: f0fba118-5aee-47f9-9f4a-aa644acddd6b
+[I 2025-05-07 12:08:40.164 ServerApp] Starting buffering for f0fba118-5aee-47f9-9f4a-aa644acddd6b:4c173ca6-ad3d-44ee-8666-7896692ee640
+[I 2025-05-07 12:08:40.228 ServerApp] Connecting to kernel f0fba118-5aee-47f9-9f4a-aa644acddd6b.
+[I 2025-05-07 12:08:40.228 ServerApp] Restoring connection for f0fba118-5aee-47f9-9f4a-aa644acddd6b:4c173ca6-ad3d-44ee-8666-7896692ee640
+[I 2025-05-07 12:08:51.700 ServerApp] Saving file at /workspace/dev/dev_025.ipynb

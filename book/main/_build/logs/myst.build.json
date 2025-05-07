@@ -26,16 +26,16 @@
   "exports": [
     {
       "format": "pdf",
-      "template": "/home/morpheus/workspace/mount/book/template",
-      "output": "/home/morpheus/workspace/mount/book/exports/rb_thesis_2025.pdf",
+      "template": "/home/morpheus/workspace/book/template",
+      "output": "/home/morpheus/workspace/book/exports/rb_thesis_2025.pdf",
       "articles": [
         {
-          "file": "/home/morpheus/workspace/mount/book/main/main.md",
+          "file": "/home/morpheus/workspace/book/main/main.md",
           "level": 0
         }
       ],
-      "$file": "/home/morpheus/workspace/mount/book/main/main.md",
-      "$project": "/home/morpheus/workspace/mount/book/main"
+      "$file": "/home/morpheus/workspace/book/main/main.md",
+      "$project": "/home/morpheus/workspace/book/main"
     }
   ]
 }

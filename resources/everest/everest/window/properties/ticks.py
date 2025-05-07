@@ -117,7 +117,7 @@ class TickSubs(_TickController):
         self.update()
     @property
     def labels(self):
-        return tuple(_utilities.latex_safe(label) for label in self._labels)
+        return tuple(self._labels)
     @labels.setter
     def labels(self, vals):
         self._labels[:] = vals

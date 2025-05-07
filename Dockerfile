@@ -3,7 +3,7 @@ MAINTAINER https://github.com/rsbyrne/
 
 USER root
 
-ENV THESISDIR $MASTERUSERHOME/thesis
+# ENV THESISDIR $MASTERUSERHOME/thesis
 
 # for apt to be noninteractive
 ENV DEBIAN_FRONTEND noninteractive
@@ -31,16 +31,14 @@ RUN rm -rf /var/lib/apt/lists/* && apt clean && apt update && apt install -y \
   latexmk
 
 # Publishing
-RUN pip3 install -U --no-cache-dir \
-  jupyter-book \
+RUN pip install -U --no-cache-dir \
   bibtexparser \
   ghp-import \
   myst-parser \
   sphinxcontrib-bibtex \
   sphinx \
   myst-nb \
-  pyyaml \
-  jupyterbook-latex
+  pyyaml
 
 # Needed by Pyppeteer
 # RUN rm -rf /var/lib/apt/lists/* && apt clean && apt update && apt install -y \
@@ -85,7 +83,9 @@ RUN pip3 install -U --no-cache-dir \
 #   wget
 # RUN pip3 install --no-cache-dir -U pyppeteer
 
-ADD . $THESISDIR
+# ADD . $THESISDIR
 RUN chown -R $MASTERUSER $THESISDIR
+
+ADD .
 
 USER $MASTERUSER
