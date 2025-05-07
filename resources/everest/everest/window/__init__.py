@@ -9,6 +9,14 @@ from . import animate
 from . import raster
 from .data import *
 from .colourmaps import *
+
+import matplotlib as _mpl
+
+_mpl.rcParams.update({
+    "text.usetex": True,
+    "font.family": "Helvetica"
+})
+
 ###############################################################################
 ''''''
 ###############################################################################

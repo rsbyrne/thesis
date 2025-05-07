@@ -14,6 +14,8 @@
 \usepackage{amsmath}
 % \usepackage{amsfont}
 \usepackage{array}
+\usepackage{titletoc}
+\usepackage{titlesec}
 \bibliographystyle{abbrvnat}
 
 % Make list items more compact
@@ -48,19 +50,15 @@
   \vspace{2pt}\end{adjustwidth}\endMakeFramed%
 }
 
-% Crazy chatbot shit here - caveats abound:
-
+% A crazy workaround to get sectioning right:
+\let\oldchapter\chapter
 \let\oldsection\section
-\renewcommand{\section}[1]{\chapter{#1}}
-
 \let\oldsubsection\subsection
+\renewcommand{\section}[1]{\oldchapter{#1}}
 \renewcommand{\subsection}[1]{\oldsection{#1}}
-
-\let\oldsubsubsection\subsubsection
 \renewcommand{\subsubsection}[1]{\oldsubsection{#1}}
 
-% Crazy chatbot shit ended
-
+% Title page config:
 \title{\Huge \textbf{[-doc.title-]}[# if doc.subtitle #] \\ \huge [-doc.subtitle-][# endif #]}
 \author{\textsc{
 [#- for author in doc.authors #]
@@ -68,8 +66,24 @@
 [#- endfor -#]
 }}
 
+% The document itself begins here:
+
 \begin{document}
 \sloppy
+
+% Chapter styling:
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries\centering}
+{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+% Section styling:
+\titleformat{\section}
+{\normalfont\Large\bfseries}
+{\thesection}{1em}{}
+
+% Fix spacing in TOC
+\contentsmargin{2.55em}
+\dottedcontents{section}[3.8em]{\bfseries}{2.3em}{1pc}
 
 \frontmatter
 \maketitle

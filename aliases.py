@@ -11,6 +11,7 @@ bookdir = os.path.join(thesisdir, 'book')
 productsdir = os.path.join(thesisdir, 'products')
 scratchdir = os.path.join(thesisdir, 'scratch')
 storagedir = os.path.join(thesisdir, 'storage')
+referencesdir = os.path.join(bookdir, 'main')
 
 if not resourcesdir in sys.path:
     sys.path.insert(0, resourcesdir)
