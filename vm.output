@@ -99,3 +99,71 @@
 [I 2025-05-07 12:08:40.228 ServerApp] Connecting to kernel f0fba118-5aee-47f9-9f4a-aa644acddd6b.
 [I 2025-05-07 12:08:40.228 ServerApp] Restoring connection for f0fba118-5aee-47f9-9f4a-aa644acddd6b:4c173ca6-ad3d-44ee-8666-7896692ee640
 [I 2025-05-07 12:08:51.700 ServerApp] Saving file at /workspace/dev/dev_025.ipynb
+[I 2025-05-07 12:11:00.560 ServerApp] Starting buffering for f0fba118-5aee-47f9-9f4a-aa644acddd6b:4c173ca6-ad3d-44ee-8666-7896692ee640
+[I 2025-05-07 23:49:19.409 ServerApp] Connecting to kernel f0fba118-5aee-47f9-9f4a-aa644acddd6b.
+[I 2025-05-07 23:49:19.546 ServerApp] Starting buffering for f0fba118-5aee-47f9-9f4a-aa644acddd6b:904f7d62-0ec2-4495-8823-8b74243f29a4
+[I 2025-05-07 23:49:19.973 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2025-05-07 23:49:20.280 LabApp] Build is up to date
+[I 2025-05-07 23:49:20.392 ServerApp] Connecting to kernel f0fba118-5aee-47f9-9f4a-aa644acddd6b.
+[W 2025-05-08 00:10:45.601 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/simple.ipynb is not trusted
+[W 2025-05-08 00:10:45.846 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/content/chapter_04_isoviscous/background/critical_ra_aspect_law.png?_xsrf=[secret] (bfaf7f06c3424a709d13f829ae1d4b97@172.17.0.1) 9.59ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 00:10:45.917 ServerApp] Kernel started: 2a293ed3-3569-4c96-ba68-98596f6bcafe
+[W 2025-05-08 00:10:45.932 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/content/chapter_04_isoviscous/background/critical_ra_aspect_law.png?_xsrf=[secret] (bfaf7f06c3424a709d13f829ae1d4b97@172.17.0.1) 1.25ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-08 00:10:46.001 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/content/chapter_04_isoviscous/background/critical_ra_aspect_law.png?_xsrf=[secret] (bfaf7f06c3424a709d13f829ae1d4b97@172.17.0.1) 1.41ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 00:10:46.471 ServerApp] Connecting to kernel 2a293ed3-3569-4c96-ba68-98596f6bcafe.
+[W 2025-05-08 00:10:55.291 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/content/chapter_04_isoviscous/background/critical_ra_aspect_law.png?_xsrf=[secret] (bfaf7f06c3424a709d13f829ae1d4b97@172.17.0.1) 1.21ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-08 00:10:56.832 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/content/chapter_04_isoviscous/background/critical_ra_aspect_law.png?_xsrf=[secret] (bfaf7f06c3424a709d13f829ae1d4b97@172.17.0.1) 1.17ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-08 00:10:59.839 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/content/chapter_04_isoviscous/background/critical_ra_aspect_law.png?_xsrf=[secret] (bfaf7f06c3424a709d13f829ae1d4b97@172.17.0.1) 1.14ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 00:11:00.658 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 00:11:01.937 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-08 00:11:03.049 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/content/chapter_04_isoviscous/background/critical_ra_aspect_law.png?_xsrf=[secret] (bfaf7f06c3424a709d13f829ae1d4b97@172.17.0.1) 1.21ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 00:13:01.399 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 00:13:24.051 ServerApp] Saving file at /workspace/resources/everest/everest/h5anchor/reader.py
+[I 2025-05-08 00:13:29.458 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 00:13:33.069 ServerApp] Kernel restarted: 2a293ed3-3569-4c96-ba68-98596f6bcafe
+[I 2025-05-08 00:13:33.077 ServerApp] Starting buffering for 2a293ed3-3569-4c96-ba68-98596f6bcafe:b6a123de-7275-417d-97af-1ab8b606cf39
+[I 2025-05-08 00:13:33.162 ServerApp] Connecting to kernel 2a293ed3-3569-4c96-ba68-98596f6bcafe.
+[I 2025-05-08 00:13:33.162 ServerApp] Restoring connection for 2a293ed3-3569-4c96-ba68-98596f6bcafe:b6a123de-7275-417d-97af-1ab8b606cf39
+[I 2025-05-08 00:15:02.510 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 00:19:03.004 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 00:21:04.227 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 00:23:04.980 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 00:25:06.194 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 00:39:04.982 ServerApp] Starting buffering for 2a293ed3-3569-4c96-ba68-98596f6bcafe:b6a123de-7275-417d-97af-1ab8b606cf39
+[I 2025-05-08 00:39:05.001 ServerApp] Starting buffering for f0fba118-5aee-47f9-9f4a-aa644acddd6b:c6a58879-b82b-442d-a8e5-b193b406ab34
+[I 2025-05-08 00:50:10.824 ServerApp] Connecting to kernel 2a293ed3-3569-4c96-ba68-98596f6bcafe.
+[I 2025-05-08 00:50:10.824 ServerApp] Restoring connection for 2a293ed3-3569-4c96-ba68-98596f6bcafe:b6a123de-7275-417d-97af-1ab8b606cf39
+[I 2025-05-08 00:50:10.848 ServerApp] Connecting to kernel f0fba118-5aee-47f9-9f4a-aa644acddd6b.
+[I 2025-05-08 00:50:10.848 ServerApp] Restoring connection for f0fba118-5aee-47f9-9f4a-aa644acddd6b:c6a58879-b82b-442d-a8e5-b193b406ab34
+[I 2025-05-08 00:52:37.418 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 00:54:38.204 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 00:58:38.551 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 00:59:36.319 ServerApp] Saving file at /workspace/resources/everest/everest/window/canvas.py
+[I 2025-05-08 00:59:56.827 ServerApp] Saving file at /workspace/resources/everest/everest/window/canvas.py
+[I 2025-05-08 01:00:05.231 ServerApp] Saving file at /workspace/resources/everest/everest/window/canvas.py
+[I 2025-05-08 01:00:06.685 ServerApp] Saving file at /workspace/resources/everest/everest/window/canvas.py
+[I 2025-05-08 01:00:09.453 ServerApp] Saving file at /workspace/resources/everest/everest/window/canvas.py
+[I 2025-05-08 01:00:16.033 ServerApp] Kernel restarted: 2a293ed3-3569-4c96-ba68-98596f6bcafe
+[I 2025-05-08 01:00:16.043 ServerApp] Starting buffering for 2a293ed3-3569-4c96-ba68-98596f6bcafe:b6a123de-7275-417d-97af-1ab8b606cf39
+[I 2025-05-08 01:00:16.108 ServerApp] Connecting to kernel 2a293ed3-3569-4c96-ba68-98596f6bcafe.
+[I 2025-05-08 01:00:16.109 ServerApp] Restoring connection for 2a293ed3-3569-4c96-ba68-98596f6bcafe:b6a123de-7275-417d-97af-1ab8b606cf39
+[I 2025-05-08 01:00:34.237 ServerApp] Saving file at /workspace/resources/everest/everest/window/canvas.py
+[I 2025-05-08 01:00:37.820 ServerApp] Saving file at /workspace/resources/everest/everest/window/canvas.py
+[I 2025-05-08 01:00:38.649 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 01:00:39.854 ServerApp] Saving file at /workspace/resources/everest/everest/window/canvas.py
+[I 2025-05-08 01:00:47.475 ServerApp] Kernel restarted: 2a293ed3-3569-4c96-ba68-98596f6bcafe
+[I 2025-05-08 01:00:47.482 ServerApp] Starting buffering for 2a293ed3-3569-4c96-ba68-98596f6bcafe:b6a123de-7275-417d-97af-1ab8b606cf39
+[I 2025-05-08 01:00:47.548 ServerApp] Connecting to kernel 2a293ed3-3569-4c96-ba68-98596f6bcafe.
+[I 2025-05-08 01:00:47.549 ServerApp] Restoring connection for 2a293ed3-3569-4c96-ba68-98596f6bcafe:b6a123de-7275-417d-97af-1ab8b606cf39
+[W 2025-05-08 01:00:56.178 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/content/chapter_04_isoviscous/background/critical_ra_aspect_law.png?_xsrf=[secret] (bfaf7f06c3424a709d13f829ae1d4b97@172.17.0.1) 1.60ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 01:02:39.768 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 01:06:48.791 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2025-05-08 01:06:48.795 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2025-05-08 01:06:48.800 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2025-05-08 01:08:41.762 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 01:21:31.774 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-08 01:21:51.923 ServerApp] 404 GET /home/ubuntu/workspace/book/content/chapter_04_isoviscous/background/critical_ra_aspect_law.png (bfaf7f06c3424a709d13f829ae1d4b97@172.17.0.1) 1.93ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 01:22:07.368 ServerApp] New terminal with automatic name: 2
+[I 2025-05-08 01:23:32.186 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 01:25:33.755 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-08 01:32:36.634 ServerApp] Saving file at /workspace/push.sh

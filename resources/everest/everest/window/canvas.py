@@ -7,9 +7,12 @@ matplotlib.rcParams['text.usetex'] = True
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 from PIL import Image as _PILImage
+import numpy as _np
 
 from .fig import Fig as _Fig
 from .ax import Ax
+
+
 
 class Canvas(_Fig):
 
@@ -96,13 +99,20 @@ class Canvas(_Fig):
     #     FigureCanvas(self.fig)
     #     return self.fig.canvas
 
+    def tostring_rgb(self):
+        return _np.asarray(
+            self.fig.canvas.renderer._renderer
+            ).take([0, 1, 2], axis=2).tobytes()
+
     def get_pilimg(self):
         self.fig.canvas.draw()
         return _PILImage.frombytes(
             'RGB',
             (self.fig.canvas.get_width_height()),
-            self.fig.canvas.tostring_rgb()
+            self.tostring_rgb()
             )
+
+
 
 ###############################################################################
 ''''''

@@ -31,7 +31,7 @@ class TagError(H5AnchorException, ValueError):
 # @disk.h5filewrap(mode = 'r')
 # def key_iterator():
 
-REMETACHARS = set('.^$*+?{}[]\|()')
+REMETACHARS = set(r'.^$*+?{}[]\|()')
 def isreg(instring):
     return bool(set(instring).intersection(REMETACHARS))
 FNMATCHMETACHARS = set('*?[]')
