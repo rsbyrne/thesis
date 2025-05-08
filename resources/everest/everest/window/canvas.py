@@ -48,8 +48,6 @@ class Canvas(_Fig):
 
         self.clear()
 
-        self.ax = self.make_ax
-
         self.axprops = dict(
             colour = colour,
             fill = fill,
@@ -65,7 +63,7 @@ class Canvas(_Fig):
         self.title = title
         self.fig.suptitle(title, fontsize = fontsize)
 
-    def make_ax(self, place = (0, 0), **kwargs):
+    def ax(self, place = (0, 0), **kwargs):
         rowNo, colNo = place
         index = self._calc_index(place)
         axObj = Ax(
@@ -75,6 +73,10 @@ class Canvas(_Fig):
             )
         self.axs[rowNo][colNo].append(axObj)
         return axObj
+
+    @property
+    def make_ax(self, /):
+        return self.ax
 
     def clear(self):
         self.fig.clf()

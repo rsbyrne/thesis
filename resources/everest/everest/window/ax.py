@@ -19,11 +19,12 @@ class Ax:
         }
 
     def __init__(self,
-            canvas = None,
-            index = 0,
-            projection = 'rectilinear',
-            name = None,
-            mplkwargs = None,
+            canvas=None,
+            index=0,
+            projection='rectilinear',
+            name=None,
+            mplkwargs=None,
+            density=1.,
             **kwargs
             ):
 
@@ -48,6 +49,7 @@ class Ax:
 
         self.position = ax.get_position()
         self.inches = canvas.sizeinches * self.position.size
+        self.density = density
 
         # Probably need a more generic solution for this:
         if projection == '3d':
@@ -69,7 +71,9 @@ class Ax:
         rowNo = int((index - colNo) / canvas.ncols)
         self.colNo, self.rowNo = colNo, rowNo
 
-        self.ax = ax
+        self.ax = ax  # For backwards compatibility
+        self.mplax = ax
+
         self.collections = []
 
         self.props.edges.margin = 0.  # pylint: disable=E1101
@@ -128,10 +132,12 @@ class Ax:
             i,
             data,
             scale = 'linear',
-            ticksPerInch = 0.8,
+            ticksPerInch = None,
             alpha = 0.5,
             hide = False
             ):
+        if ticksPerInch is None:
+            ticksPerInch = self.density
         nTicks = round(ticksPerInch * self._get_axis_screen_length(i, vol = self.vol))
         label, tickVals, minorTickVals, tickLabels, lims = \
             data.auto_axis_configs(nTicks)
@@ -172,6 +178,7 @@ class Ax:
             **{**spread.drawKwargs, **kwargs},
             )
         self.collections.append(collections)
+        return collections
 
     def clear(self):
         self.ax.clear()
@@ -179,22 +186,22 @@ class Ax:
         self.collections = []
 
     def scatter(self, *args, **kwargs):
-        self.draw(*args, variety = 'scatter', **kwargs)
+        return self.draw(*args, variety = 'scatter', **kwargs)
     def line(self, *args, **kwargs):
-        self.draw(*args, variety = 'line', **kwargs)
+        return self.draw(*args, variety = 'line', **kwargs)
 
     def annotate(self,
             x,
             y,
             label,
-            arrowProps = None,
+            arrowprops = None,
             points = None,
             horizontalalignment = 'center',
             verticalalignment = 'center',
             rotation = 0,
             **kwargs
             ):
-        arrowProps = dict() if arrowProps is None else arrowProps
+        arrowprops = dict() if arrowprops is None else arrowprops
         if self.vol:
             raise Exception("Not working for 3D yet.")
         self.ax.annotate(
@@ -203,7 +210,7 @@ class Ax:
             xytext = (10, 10) if points is None else points,
             textcoords = 'offset points',
             arrowprops = {
-                'arrowstyle': '->', **arrowProps
+                'arrowstyle': '->', **arrowprops
                 },
             horizontalalignment = horizontalalignment,
             verticalalignment = verticalalignment,
