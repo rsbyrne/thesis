@@ -9,7 +9,7 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 
-from thesiscode.utilities import hard_cache
+from thesiscode.utilities.cache import hard_cache
 import aliases
 from . import analysis
 

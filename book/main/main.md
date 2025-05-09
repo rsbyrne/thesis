@@ -10,6 +10,8 @@ exports:
   - format: pdf
     template: ../template
     output: ../exports/rb_thesis_2025.pdf
+kernelspec:
+  name: python3
 ---
 
 ```{include} ../content/main.md

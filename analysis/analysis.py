@@ -6,7 +6,7 @@ from sklearn.metrics import r2_score
 import scipy as sp
 import numpy as np
 
-from scipy.signal import blackman
+from scipy.signal.windows import blackman
 from scipy.fft import rfft, rfftfreq
 
 def time_smooth(x, *ys, sampleFactor = 1, kind = 'linear'):

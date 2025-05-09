@@ -6,7 +6,7 @@ import pandas as pd
 
 import aliases
 import analysis
-from thesiscode.utilities import hard_cache, hard_cache_df, hard_cache_df_multi
+from thesiscode.utilities.cache import hard_cache, hard_cache_df, hard_cache_df_multi
 
 reader = analysis.utilities.AnalysisReader('Arrhenius', aliases.datadir)
 
