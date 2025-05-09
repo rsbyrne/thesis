@@ -201,7 +201,6 @@ class Ax:
             rotation = 0,
             **kwargs
             ):
-        arrowprops = dict() if arrowprops is None else arrowprops
         if self.vol:
             raise Exception("Not working for 3D yet.")
         self.ax.annotate(
@@ -209,9 +208,10 @@ class Ax:
             (x, y),
             xytext = (10, 10) if points is None else points,
             textcoords = 'offset points',
-            arrowprops = {
+            arrowprops = (
+                None if arrowprops is None else {
                 'arrowstyle': '->', **arrowprops
-                },
+                }),
             horizontalalignment = horizontalalignment,
             verticalalignment = verticalalignment,
             rotation = rotation,

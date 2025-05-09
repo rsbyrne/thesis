@@ -41,3 +41,443 @@
 [I 2025-05-09 03:53:14.075 ServerApp] Connecting to kernel 4be4f63d-d150-4782-b8b0-ac3178bfcefc.
 [I 2025-05-09 03:53:22.271 ServerApp] Connecting to kernel 4be4f63d-d150-4782-b8b0-ac3178bfcefc.
 [I 2025-05-09 03:53:29.509 ServerApp] Kernel shutdown: 4be4f63d-d150-4782-b8b0-ac3178bfcefc
+[I 2025-05-09 03:56:13.927 ServerApp] Saving file at /workspace/push.sh
+[I 2025-05-09 03:56:14.660 ServerApp] Saving file at /workspace/push.sh
+[I 2025-05-09 03:56:14.868 ServerApp] Saving file at /workspace/push.sh
+[I 2025-05-09 03:56:15.041 ServerApp] Saving file at /workspace/push.sh
+[I 2025-05-09 03:56:15.203 ServerApp] Saving file at /workspace/push.sh
+[I 2025-05-09 03:56:26.390 ServerApp] Saving file at /workspace/push.sh
+[I 2025-05-09 03:56:27.176 ServerApp] Saving file at /workspace/push.sh
+[I 2025-05-09 03:56:27.337 ServerApp] Saving file at /workspace/push.sh
+[I 2025-05-09 03:57:01.495 ServerApp] Writing notebook-signing key to /home/morpheus/.local/share/jupyter/notebook_secret
+[W 2025-05-09 03:57:01.496 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/simple.ipynb is not trusted
+[I 2025-05-09 03:57:01.746 ServerApp] Kernel started: f76765a0-605a-4ae2-9edb-455cc825fddb
+[I 2025-05-09 03:57:02.119 ServerApp] Connecting to kernel f76765a0-605a-4ae2-9edb-455cc825fddb.
+[I 2025-05-09 03:57:05.739 ServerApp] Kernel restarted: f76765a0-605a-4ae2-9edb-455cc825fddb
+[I 2025-05-09 03:57:05.756 ServerApp] Starting buffering for f76765a0-605a-4ae2-9edb-455cc825fddb:7cf1c7be-a2b2-49d5-8912-32eeec65a5ba
+[I 2025-05-09 03:57:05.815 ServerApp] Connecting to kernel f76765a0-605a-4ae2-9edb-455cc825fddb.
+[I 2025-05-09 03:57:05.815 ServerApp] Restoring connection for f76765a0-605a-4ae2-9edb-455cc825fddb:7cf1c7be-a2b2-49d5-8912-32eeec65a5ba
+[I 2025-05-09 03:57:28.308 ServerApp] Kernel started: 02765aac-e9f7-4451-acbe-7f42d997f17e
+[I 2025-05-09 03:57:28.702 ServerApp] Connecting to kernel 02765aac-e9f7-4451-acbe-7f42d997f17e.
+[I 2025-05-09 03:57:34.214 ServerApp] Kernel shutdown: 02765aac-e9f7-4451-acbe-7f42d997f17e
+[I 2025-05-09 03:57:45.076 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 03:57:50.973 ServerApp] Kernel started: 4df53b1e-87c3-4d2d-bb9a-1f5b5c28a0cb
+[I 2025-05-09 03:57:51.346 ServerApp] Connecting to kernel 4df53b1e-87c3-4d2d-bb9a-1f5b5c28a0cb.
+[I 2025-05-09 03:57:56.507 ServerApp] Kernel shutdown: 4df53b1e-87c3-4d2d-bb9a-1f5b5c28a0cb
+[W 2025-05-09 04:35:48.864 ServerApp] Notebook workspace/dev/dev_025.ipynb is not trusted
+[I 2025-05-09 04:35:49.006 ServerApp] Kernel started: a1e9539f-326e-488a-bc37-6d0df21a48d4
+[I 2025-05-09 04:35:49.437 ServerApp] Connecting to kernel a1e9539f-326e-488a-bc37-6d0df21a48d4.
+[I 2025-05-09 04:36:19.201 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-09 04:40:57.385 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23my-cell?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 5.35ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:41:09.375 ServerApp] Kernel started: abb6bc4c-2ef6-4c64-bcb7-4b8d4c20f476
+[I 2025-05-09 04:41:09.797 ServerApp] Connecting to kernel abb6bc4c-2ef6-4c64-bcb7-4b8d4c20f476.
+[I 2025-05-09 04:41:15.127 ServerApp] Kernel shutdown: abb6bc4c-2ef6-4c64-bcb7-4b8d4c20f476
+[I 2025-05-09 04:41:49.173 ServerApp] Saving file at /workspace/dev/dev_025.ipynb
+[I 2025-05-09 04:42:11.395 ServerApp] Saving file at /workspace/book/main/main.md
+[I 2025-05-09 04:42:11.567 ServerApp] Saving file at /workspace/book/main/main.md
+[I 2025-05-09 04:42:17.744 ServerApp] Saving file at /workspace/book/main/main.md
+[I 2025-05-09 04:42:17.916 ServerApp] Saving file at /workspace/book/main/main.md
+[I 2025-05-09 04:42:20.182 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-09 04:43:06.210 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 04:43:06.424 ServerApp] Kernel started: 497a4e02-96bf-4908-8af6-6cb98136629b
+[W 2025-05-09 04:43:06.507 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.63ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 04:43:06.530 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.91ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 04:43:06.618 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.26ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 04:43:06.627 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.69ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 04:43:06.670 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.19ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 04:43:06.671 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.52ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[I 2025-05-09 04:43:06.810 ServerApp] Connecting to kernel 497a4e02-96bf-4908-8af6-6cb98136629b.
+[W 2025-05-09 04:43:13.294 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.53ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 04:43:13.295 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.69ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 04:43:13.309 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.82ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 04:43:14.276 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.56ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 04:43:14.277 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.74ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 04:43:14.358 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.55ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 04:45:51.980 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23my-cell?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.32ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-09 04:45:52.040 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23my-cell?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.06ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-09 04:46:02.365 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23my-cell?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.05ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:46:21.175 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:47:57.087 ServerApp] Uploading file to /workspace/dev/interactive-notebooks.ipynb
+[W 2025-05-09 04:47:58.400 ServerApp] Notebook workspace/dev/interactive-notebooks.ipynb is not trusted
+[I 2025-05-09 04:47:58.676 ServerApp] Kernel started: 0aaf1b8c-39ed-43cf-91ff-02d06ce6b4d5
+[I 2025-05-09 04:47:59.113 ServerApp] Connecting to kernel 0aaf1b8c-39ed-43cf-91ff-02d06ce6b4d5.
+[W 2025-05-09 04:48:13.639 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23my-cell?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.85ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:48:21.271 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-09 04:48:38.191 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23my-cell?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.48ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-09 04:49:07.023 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23my-cell?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.52ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:49:58.502 ServerApp] Saving file at /workspace/dev/interactive-notebooks.ipynb
+[W 2025-05-09 04:49:58.503 ServerApp] Notebook workspace/dev/interactive-notebooks.ipynb is not trusted
+[I 2025-05-09 04:50:21.367 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-09 04:51:42.996 ServerApp] 404 GET /files/workspace/dev/%23tbl%3Adata-cars?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.32ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/dev/interactive-notebooks.ipynb
+[W 2025-05-09 04:51:47.064 ServerApp] 404 GET /files/workspace/dev/%23tbl%3Adata-cars?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.52ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/dev/interactive-notebooks.ipynb
+[I 2025-05-09 04:51:58.612 ServerApp] Saving file at /workspace/dev/interactive-notebooks.ipynb
+[W 2025-05-09 04:51:58.612 ServerApp] Notebook workspace/dev/interactive-notebooks.ipynb is not trusted
+[I 2025-05-09 04:51:59.079 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:52:06.076 ServerApp] Kernel started: 659867c5-c136-4b37-90d9-17de562b1259
+[I 2025-05-09 04:52:06.492 ServerApp] Connecting to kernel 659867c5-c136-4b37-90d9-17de562b1259.
+[I 2025-05-09 04:52:11.740 ServerApp] Kernel shutdown: 659867c5-c136-4b37-90d9-17de562b1259
+[I 2025-05-09 04:52:59.392 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 04:52:59.392 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 04:53:21.328 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:53:21.491 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:53:32.800 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 04:53:32.800 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 04:53:42.907 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:53:43.608 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-09 04:53:44.899 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23my-cell?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.26ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:53:46.390 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:53:46.596 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:53:59.781 ServerApp] EOF on FD 19; stopping reading
+[I 2025-05-09 04:53:59.881 ServerApp] Terminal 2 closed
+[I 2025-05-09 04:54:05.992 ServerApp] Kernel started: 4da616e5-3901-4cf1-b972-bb9286155a3f
+[I 2025-05-09 04:54:06.368 ServerApp] Connecting to kernel 4da616e5-3901-4cf1-b972-bb9286155a3f.
+[I 2025-05-09 04:54:11.144 ServerApp] Kernel shutdown: 4da616e5-3901-4cf1-b972-bb9286155a3f
+[I 2025-05-09 04:55:27.608 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:55:27.800 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:55:28.132 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:55:29.575 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:55:29.731 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:55:30.860 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:55:39.943 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:55:40.083 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:55:52.966 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:55:53.121 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-09 04:57:18.079 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23nu_ra_scaling?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.13ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:57:40.025 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:58:07.260 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:58:12.012 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:58:12.180 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 04:58:12.339 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:00:07.871 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:02:07.984 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:03:52.805 ServerApp] Saving file at /workspace/resources/everest/everest/window/ax.py
+[I 2025-05-09 05:03:53.007 ServerApp] Saving file at /workspace/resources/everest/everest/window/ax.py
+[I 2025-05-09 05:03:53.172 ServerApp] Saving file at /workspace/resources/everest/everest/window/ax.py
+[I 2025-05-09 05:03:54.958 ServerApp] Saving file at /workspace/resources/everest/everest/window/ax.py
+[I 2025-05-09 05:04:08.557 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:04:11.213 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-09 05:04:59.786 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23beta_k_nu_scaling?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.49ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-09 05:05:04.807 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23beta_k_nu_scaling?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.59ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:05:16.589 ServerApp] Kernel restarted: f76765a0-605a-4ae2-9edb-455cc825fddb
+[I 2025-05-09 05:05:16.599 ServerApp] Starting buffering for f76765a0-605a-4ae2-9edb-455cc825fddb:7cf1c7be-a2b2-49d5-8912-32eeec65a5ba
+[I 2025-05-09 05:05:16.655 ServerApp] Connecting to kernel f76765a0-605a-4ae2-9edb-455cc825fddb.
+[I 2025-05-09 05:05:16.655 ServerApp] Restoring connection for f76765a0-605a-4ae2-9edb-455cc825fddb:7cf1c7be-a2b2-49d5-8912-32eeec65a5ba
+[I 2025-05-09 05:06:11.305 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:07:51.148 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-09 05:07:52.352 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23nu_ra_scaling?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.57ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[W 2025-05-09 05:07:52.372 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23beta_k_nu_scaling?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.02ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:07:54.861 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:07:57.516 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:07:57.728 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:07:57.924 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:08:10.672 ServerApp] Kernel started: e3eff973-4dba-48fd-99c8-73e32ad5464e
+[I 2025-05-09 05:08:11.105 ServerApp] Connecting to kernel e3eff973-4dba-48fd-99c8-73e32ad5464e.
+[I 2025-05-09 05:08:16.130 ServerApp] Kernel shutdown: e3eff973-4dba-48fd-99c8-73e32ad5464e
+[W 2025-05-09 05:08:33.591 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[I 2025-05-09 05:08:33.996 ServerApp] Kernel started: 34f86c5b-d566-4b54-b245-035ee3b1f108
+[I 2025-05-09 05:08:34.410 ServerApp] Connecting to kernel 34f86c5b-d566-4b54-b245-035ee3b1f108.
+[I 2025-05-09 05:08:40.058 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:08:40.058 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[I 2025-05-09 05:08:45.594 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:08:45.594 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[I 2025-05-09 05:09:25.819 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:09:25.819 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[W 2025-05-09 05:09:25.842 ServerApp] /home/morpheus/workspace/book/content/chapter_04_isoviscous/background/.~cylindrical.ipynb doesn't exist
+[W 2025-05-09 05:10:18.163 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.02ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:10:20.147 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.49ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:10:20.226 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.58ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:10:31.387 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:10:31.388 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[I 2025-05-09 05:10:34.330 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:10:34.330 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[W 2025-05-09 05:10:39.763 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.44ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:10:41.084 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.58ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:10:48.550 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.50ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:10:48.641 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.47ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:11:32.097 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.77ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:11:34.101 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.21ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:11:34.611 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.71ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:11:35.407 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:11:35.408 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[W 2025-05-09 05:11:36.092 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.47ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:11:41.452 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.37ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:11:45.814 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.41ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:12:06.417 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.39ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:12:22.056 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.40ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:12:28.433 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.72ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:12:55.648 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.56ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:12:55.649 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.88ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:12:56.829 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.68ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:12:56.830 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.07ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:12:56.831 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.61ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:13:12.463 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:13:12.463 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[W 2025-05-09 05:13:33.821 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.68ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:13:33.822 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.94ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:13:33.822 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.62ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:13:34.826 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.54ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:13:34.827 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.79ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:13:34.828 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.60ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:13:43.098 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:13:43.098 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[I 2025-05-09 05:13:44.539 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:13:44.539 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[I 2025-05-09 05:13:53.946 ServerApp] Kernel started: 7434e031-5f3c-4b8f-bb32-86a0b390e3c1
+[I 2025-05-09 05:13:54.454 ServerApp] Connecting to kernel 7434e031-5f3c-4b8f-bb32-86a0b390e3c1.
+[I 2025-05-09 05:13:56.071 ServerApp] Starting buffering for 0aaf1b8c-39ed-43cf-91ff-02d06ce6b4d5:b800b167-2a15-4d67-90b6-2930557283d0
+[I 2025-05-09 05:13:59.669 ServerApp] Kernel shutdown: 7434e031-5f3c-4b8f-bb32-86a0b390e3c1
+[I 2025-05-09 05:14:13.630 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:14:13.631 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[I 2025-05-09 05:14:13.962 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:14:13.962 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[I 2025-05-09 05:14:22.530 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:14:22.531 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[I 2025-05-09 05:15:00.923 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:15:00.924 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[I 2025-05-09 05:15:01.273 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:15:01.273 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[I 2025-05-09 05:15:48.183 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:15:48.184 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[I 2025-05-09 05:15:55.343 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:15:55.343 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[I 2025-05-09 05:15:55.719 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:15:55.720 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[W 2025-05-09 05:15:57.015 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.10ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:15:57.016 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.89ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:15:57.017 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.83ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:15:58.406 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.63ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:15:58.407 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.78ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:15:58.407 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.21ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:15:58.480 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.37ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:16:19.835 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:19.835 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb is not trusted
+[I 2025-05-09 05:16:29.577 ServerApp] Kernel restarted: 34f86c5b-d566-4b54-b245-035ee3b1f108
+[I 2025-05-09 05:16:29.588 ServerApp] Starting buffering for 34f86c5b-d566-4b54-b245-035ee3b1f108:e15ca119-f8a1-4ea3-92a8-1e5007f6a297
+[I 2025-05-09 05:16:29.662 ServerApp] Connecting to kernel 34f86c5b-d566-4b54-b245-035ee3b1f108.
+[I 2025-05-09 05:16:29.662 ServerApp] Restoring connection for 34f86c5b-d566-4b54-b245-035ee3b1f108:e15ca119-f8a1-4ea3-92a8-1e5007f6a297
+[I 2025-05-09 05:16:35.685 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:16:37.594 ServerApp] Starting buffering for 34f86c5b-d566-4b54-b245-035ee3b1f108:e15ca119-f8a1-4ea3-92a8-1e5007f6a297
+[I 2025-05-09 05:16:40.140 ServerApp] Connecting to kernel 34f86c5b-d566-4b54-b245-035ee3b1f108.
+[W 2025-05-09 05:16:40.444 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.51ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.445 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.82ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.503 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.36ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.504 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.66ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.504 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.11ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.578 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.37ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.579 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.62ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.579 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.59ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.706 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.40ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.707 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.67ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.707 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.749 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.35ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.750 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.66ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.750 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.56ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.864 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.40ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.865 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.71ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.866 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.07ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.972 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.57ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.973 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.84ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.974 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.23ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:40.974 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.57ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:41.059 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.16ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:41.059 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.49ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:41.060 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.57ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:41.061 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.56ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:41.136 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.40ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:41.137 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.76ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:41.138 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.65ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:16:41.139 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.56ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:16:49.349 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:16:49.506 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:16:49.667 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:17:11.879 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.59ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:17:11.879 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.84ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:17:11.880 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.62ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:17:11.881 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.61ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:17:12.179 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.90ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:17:12.180 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.23ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:17:12.181 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.68ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:17:12.193 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.80ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:17:12.243 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.29ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:17:15.621 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.54ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:17:15.677 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.20ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:17:15.678 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.64ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:17:15.681 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.69ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:17:15.790 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.41ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:18:49.450 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:19:00.095 ServerApp] 404 GET /api/contents/5002b7c5d32200336952e60dbd19e4b32f84f615b5b7810e002ff5cc2729772f.tex?content=0&hash=0&1746767942854 (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.57ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:19:00.095 ServerApp] 404 GET /api/contents/5002b7c5d32200336952e60dbd19e4b32f84f615b5b7810e002ff5cc2729772f.tex?content=0&hash=0&1746767942854 (172.17.0.1): No such file or directory: 5002b7c5d32200336952e60dbd19e4b32f84f615b5b7810e002ff5cc2729772f.tex
+[W 2025-05-09 05:19:57.437 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.46ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:19:57.484 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.07ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:19:57.484 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.39ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:19:57.495 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.74ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:19:57.625 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.31ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:20:37.701 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.50ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:20:37.701 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.86ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:20:37.702 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.61ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:20:37.732 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.01ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:20:37.846 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.46ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:20:49.594 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:20:54.763 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.07ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:20:54.763 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.46ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:20:54.764 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.57ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:20:54.794 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.89ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:20:57.363 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.50ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:20:57.364 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.77ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:20:57.364 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.61ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:20:57.394 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.86ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:20:57.410 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.72ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:06.466 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.12ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:06.467 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.74ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:06.467 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.13ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:06.548 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.31ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:06.571 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.84ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:16.374 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.63ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:16.375 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.94ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:16.375 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.60ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:16.403 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.88ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:17.072 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.58ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:17.072 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.83ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:17.073 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.61ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:17.098 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.73ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:18.087 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.60ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:18.129 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.75ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:18.130 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.03ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:18.130 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.44ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:21:18.196 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.19ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:22:21.063 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.89ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:22:21.064 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.17ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:22:21.065 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.60ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:22:21.193 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.66ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:22:33.814 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.64ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:22:33.815 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.81ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:22:33.816 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.19ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:22:33.870 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.05ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:22:49.752 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:22:53.736 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.87ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:22:53.736 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.19ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:22:53.737 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/%23isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.71ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:22:53.793 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondinternal?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.41ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:23:09.127 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:23:26.634 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:23:44.675 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:23:45.539 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:23:45.744 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:23:50.640 ServerApp] Kernel started: f461dfe8-a522-441f-a569-f8de5904555b
+[I 2025-05-09 05:23:51.069 ServerApp] Connecting to kernel f461dfe8-a522-441f-a569-f8de5904555b.
+[I 2025-05-09 05:24:07.865 ServerApp] Kernel shutdown: f461dfe8-a522-441f-a569-f8de5904555b
+[I 2025-05-09 05:25:44.911 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:26:00.863 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:26:00.864 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:26:01.079 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:26:01.079 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[W 2025-05-09 05:26:04.708 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.25ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:26:07.322 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.29ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:26:07.365 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.99ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[I 2025-05-09 05:26:16.415 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:26:16.415 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:26:24.875 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:26:24.876 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:26:25.063 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:26:25.064 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:26:34.914 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:26:34.915 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:27:09.799 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:27:11.140 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:27:13.256 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:27:13.588 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:27:41.448 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:27:48.584 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:27:53.166 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:27:53.166 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:27:57.339 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:27:57.339 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:27:57.511 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:27:57.511 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:27:57.690 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:27:57.690 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:28:03.935 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:28:03.936 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:28:06.671 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:28:06.671 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:28:11.488 ServerApp] Kernel started: 13888f11-af1d-4743-8e34-fab389858b18
+[I 2025-05-09 05:28:11.911 ServerApp] Connecting to kernel 13888f11-af1d-4743-8e34-fab389858b18.
+[I 2025-05-09 05:28:28.628 ServerApp] Kernel shutdown: 13888f11-af1d-4743-8e34-fab389858b18
+[I 2025-05-09 05:29:39.067 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:29:39.068 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:30:02.155 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:30:02.340 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:30:22.676 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:30:22.864 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:30:25.976 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:30:31.609 ServerApp] Kernel started: daef34b8-6e02-430b-a620-e241b3549d43
+[I 2025-05-09 05:30:32.057 ServerApp] Connecting to kernel daef34b8-6e02-430b-a620-e241b3549d43.
+[I 2025-05-09 05:30:49.470 ServerApp] Kernel shutdown: daef34b8-6e02-430b-a620-e241b3549d43
+[I 2025-05-09 05:31:51.340 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:32:02.831 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:32:02.832 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:32:03.016 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:32:03.016 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:32:03.176 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:32:03.176 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:32:19.440 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:32:19.440 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:32:21.147 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:32:21.148 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:32:22.635 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:32:22.636 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:32:28.501 ServerApp] Kernel started: 8e799c71-47c7-458d-bacb-9530c62e815c
+[I 2025-05-09 05:32:28.898 ServerApp] Connecting to kernel 8e799c71-47c7-458d-bacb-9530c62e815c.
+[I 2025-05-09 05:32:45.490 ServerApp] Kernel shutdown: 8e799c71-47c7-458d-bacb-9530c62e815c
+[I 2025-05-09 05:33:12.767 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:33:12.767 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[W 2025-05-09 05:34:12.442 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.77ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:34:13.378 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondffit?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.27ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[W 2025-05-09 05:34:15.345 ServerApp] 404 GET /files/workspace/book/content/chapter_04_isoviscous/background/isocondf?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.51ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:36:24.670 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:36:31.412 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:36:32.676 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:36:49.635 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:36:49.835 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:36:49.996 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:37:16.383 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:37:16.571 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:37:16.715 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:37:29.791 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:37:29.948 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/simple.ipynb
+[I 2025-05-09 05:37:40.759 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:37:40.760 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:37:40.932 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:37:40.933 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:37:47.756 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:37:47.756 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:37:48.128 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:37:48.128 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:38:00.924 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:38:00.925 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:38:01.112 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:38:01.113 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:38:09.763 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:38:09.764 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:38:25.225 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:38:27.157 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:38:31.869 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:38:32.209 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:38:34.478 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:38:41.888 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:38:46.441 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:38:46.629 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:38:54.696 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:38:58.492 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:39:15.153 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:39:15.153 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:39:22.277 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/heating.ipynb
+[W 2025-05-09 05:39:22.277 ServerApp] Notebook workspace/book/content/chapter_04_isoviscous/background/heating.ipynb is not trusted
+[I 2025-05-09 05:39:36.168 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:39:40.518 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:39:41.989 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:39:55.852 ServerApp] Kernel started: a8680985-3de3-4f44-b4f0-53399d4e3d21
+[I 2025-05-09 05:39:56.243 ServerApp] Connecting to kernel a8680985-3de3-4f44-b4f0-53399d4e3d21.
+[I 2025-05-09 05:40:12.681 ServerApp] Kernel shutdown: a8680985-3de3-4f44-b4f0-53399d4e3d21
+[I 2025-05-09 05:42:47.685 ServerApp] Saving file at /workspace/book/content/chapter_04_isoviscous/background/cylindrical.ipynb
+[I 2025-05-09 05:42:50.098 ServerApp] New terminal with automatic name: 2

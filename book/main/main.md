@@ -12,6 +12,7 @@ exports:
     output: ../exports/rb_thesis_2025.pdf
 kernelspec:
   name: python3
+  display_name: Thesis Myst Kernel
 ---
 
 ```{include} ../content/main.md
