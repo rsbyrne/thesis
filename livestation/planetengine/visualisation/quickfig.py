@@ -24,11 +24,14 @@ class QuickFig(_Fig):
             *args,
             onMesh = True,
             facecolour = 'black',
-            edgecolour = 'white',
+            edgecolour = None,
             colourBar = False,
             quality = 3.,
             **kwargs
             ):
+
+        if edgecolour is None:
+            edgecolour = facecolour
 
         args = list(args)
 

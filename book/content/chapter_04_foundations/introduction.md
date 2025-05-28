@@ -1,0 +1,3 @@
+In previous chapters, we have discussed the knowns and unknowns of planetary evolution ([](#chapter-01)), dived deep into the mathematics of convection ([](#chapter-02)), and presented the novel tools and techniques necessary to address these questions at scale ([](#chapter-03)). It is well past time to actually run some models.
+
+It is our intention to work methodically, starting with the simplest meaningful physics. In this chapter, we will discuss the critical threshold at which conduction gives way to convection, benchmarking code and validating theory as we go. 

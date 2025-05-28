@@ -11,7 +11,7 @@ exports:
     template: ../template
     output: ../exports/rb_thesis_2025.pdf
 kernelspec:
-  name: python3
+  name: python
   display_name: Thesis Myst Kernel
 ---
 

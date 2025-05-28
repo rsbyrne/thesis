@@ -10,10 +10,10 @@
 ```{include} chapter_03_everest/main.md
 ```
 
-```{include} chapter_04_isoviscous/main.md
+```{include} chapter_04_foundations/main.md
 ```
 
-```{include} chapter_05_arrhenius/main.md
+```{include} chapter_05_linear/main.md
 ```
 
 ```{include} chapter_06_viscoplastic/main.md

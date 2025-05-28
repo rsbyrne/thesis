@@ -1,3 +1,4 @@
+(chapter-03-framework)=
 ## Framework
 
 We have discussed the problem and devised a philosophy to undergird a potential solution. We must now design that solution, starting with its outer surface, the public API. The framework we have devised is called *Everest*.

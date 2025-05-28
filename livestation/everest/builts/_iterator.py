@@ -12,6 +12,7 @@ from ._unique import Unique
 from ..exceptions import EverestException
 from .. import mpi
 from ..value import Value
+from ..reader import PathNotInFrameError
 
 class LoadFail(EverestException):
     pass
@@ -160,8 +161,14 @@ class Iterator(Counter, Cycler, Stampable, Unique):
             inChron += self.chron
         counts, chrons = [], []
         if self.anchored:
-            counts.extend(self.readouts['count'])
-            chrons.extend(self.readouts['chron'])
+            try:
+                extracounts = self.readouts['count']
+                extrachrons = self.readouts['chron']
+            except PathNotInFrameError:
+                pass
+            else:
+                counts.extend(extracounts)
+                chrons.extend(extrachrons)
         dataDict = self.dataDict
         if len(dataDict):
             counts.extend(dataDict['count'])

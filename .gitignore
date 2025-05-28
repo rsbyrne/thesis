@@ -3,7 +3,7 @@ data/
 scratch/
 cache/
 book/main/_build
-livestation/
+livestation/data
 *.pem
 
 # Byte-compiled / optimized / DLL files

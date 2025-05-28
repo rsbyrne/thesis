@@ -1,3 +1,5 @@
+import weakref
+
 import numpy as np
 
 from everest.builts import Built
@@ -97,9 +99,11 @@ class System(Iterator, Getter):
             self._sort_inputs(self.inputs)
         self.schema = self.__class__
         self.chron = Value(0.)
-        self.varsOfState = {
+        varsOfState = self.varsOfState = {
             key: self.locals[key] for key in self.configsKeys
             }
+
+        self.locals.mesh._pe_system = weakref.ref(self)
 
         self._outkeys = ['chron', *sorted(self.varsOfState.keys())]
 
