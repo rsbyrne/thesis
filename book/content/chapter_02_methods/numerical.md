@@ -14,8 +14,6 @@ $$ \begin{align*}
 \frac{\partial T}{\partial t} + \overline{u} \cdot \nabla T &= \kappa \nabla^2 T + H
 \end{align*} $$
 
-
-
 Where $\eta$ is dynamic viscosity, $D$ the strain rate tensor, $p$ dynamic pressure, $\Delta\rho$ the density anomaly, $g$ the gravity vector, $\overline{u}$ the velocity vector, $T$ temperature, $\kappa$ thermal diffusivity, $t$ time, and $H$ a thermal source term, i.e. radiogenic heating.
 
 The first two equations together solve for velocity given buoyancy and viscosity without accounting for inertia (hence the lack of time-dependency), while the third equation governs determines the change in temperature at any given point after an infinitesimal time interval due to diffusion (the first term) and advection (the second). Temperature, being the only time-dependent quantity, is the only necessary variable of state for this system. It is further possible to construct the viscosity and diffusivity parameters as functions of space, time, temperature, velocity, et cetera, to achieve much more complex rheologies as desired; plastic, elastic, rigid, and insulating materials may all be implemented in this way, each with its own perils and caveats.

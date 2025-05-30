@@ -38,6 +38,8 @@ RUN pip install -U --no-cache-dir \
   sphinxcontrib-bibtex \
   sphinx \
   myst-nb \
+  jupytext \
+  mystmd \
   pyyaml
 
 # Needed by Pyppeteer

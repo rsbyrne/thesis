@@ -4,13 +4,19 @@
 ```{include} introduction.md
 ```
 
-```{include} section1.md
+```{include} rayleigh.md
 ```
 
-```{include} section2.md
+```{include} cylindrical.md
 ```
 
-```{include} section3.md
+```{include} numerical.md
+```
+
+```{include} modelling.md
+```
+
+```{include} ms98.md
 ```
 
 ```{include} conclusion.md

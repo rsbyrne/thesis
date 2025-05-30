@@ -15,6 +15,8 @@ from .utilities import message
 from . import mpi
 from .exceptions import EverestException
 
+class Timeout(EverestException): ...
+
 PYTEMP = '/home/jovyan'
 if not PYTEMP in sys.path: sys.path.append(PYTEMP)
 
@@ -68,9 +70,11 @@ class AccessForbidden(EverestException):
     pass
 
 @mpi.dowrap
-def lock(filename, password = None):
+def lock(filename, password = None, timeout=1e9):
     lockfilename = filename + '.lock'
-    while True:
+    elapsed = 0
+    start = time.time()
+    while elapsed < timeout:
         try:
             with open(lockfilename, 'x') as f:
                 if not password is None:
@@ -86,9 +90,13 @@ def lock(filename, password = None):
                             raise AccessForbidden
                 except FileNotFoundError:
                     pass
+        elapsed = time.time() - start
         random_sleep(0.1, 5.)
+    raise Timeout
+
 @mpi.dowrap
-def release(filename, password = ''):
+def release(filename, password = None):
+    password = '' if password is None else password
     lockfilename = filename + '.lock'
     try:
         with open(lockfilename, 'r') as f:
@@ -98,6 +106,18 @@ def release(filename, password = ''):
                 raise AccessForbidden
     except FileNotFoundError:
         pass
+
+class Locker:
+
+    def __init__(self, filename, password=None, timeout=1e9):
+        self.filename, self.password, self.timeout = \
+            filename, password, timeout
+
+    def __enter__(self):
+        lock(self.filename, self.password, self.timeout)
+
+    def __exit__(self, *_):
+        release(self.filename, self.password)
 
 LOCKCODE = tempname()
 H5FILES = dict()
