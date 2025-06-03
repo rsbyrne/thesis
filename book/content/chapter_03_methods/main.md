@@ -1,13 +1,7 @@
-(chapter-02)=
-# Tools and methods
+(chapter-03)=
+# Methods
 
 ```{include} introduction.md
-```
-
-```{include} rayleigh.md
-```
-
-```{include} cylindrical.md
 ```
 
 ```{include} numerical.md

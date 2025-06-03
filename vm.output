@@ -3956,3 +3956,384 @@
 [I 2025-05-30 09:16:22.847 ServerApp] Kernel started: 36fcf55c-5f23-438f-9372-0eb2d1722095
 [I 2025-05-30 09:16:23.406 ServerApp] Connecting to kernel 36fcf55c-5f23-438f-9372-0eb2d1722095.
 [I 2025-05-30 09:16:40.277 ServerApp] Kernel shutdown: 36fcf55c-5f23-438f-9372-0eb2d1722095
+[I 2025-05-30 22:50:27.365 ServerApp] Saving file at /workspace/book/content/main.md
+[I 2025-05-30 22:50:27.515 ServerApp] Saving file at /workspace/book/content/main.md
+[I 2025-05-30 22:51:46.878 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/rayleigh.md
+[W 2025-05-30 22:51:47.419 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23nu_ra_scaling?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.55ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/rayleigh.md
+[W 2025-05-30 22:51:47.419 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.94ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/rayleigh.md
+[W 2025-05-30 22:51:47.420 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 3.35ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/rayleigh.md
+[W 2025-05-30 22:51:47.420 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23beta_k_nu_scaling?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 3.64ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/rayleigh.md
+[W 2025-05-30 22:51:49.850 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23beta_k_nu_scaling?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.37ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/rayleigh.md
+[W 2025-05-30 22:51:49.851 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.67ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/rayleigh.md
+[W 2025-05-30 22:51:49.852 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23nu_ra_scaling?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.08ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/rayleigh.md
+[W 2025-05-30 22:51:49.852 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.55ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/rayleigh.md
+[I 2025-05-30 22:51:50.481 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/rayleigh.md
+[I 2025-05-30 22:52:21.330 ServerApp] Creating new file in /workspace/book/content/chapter_02_foundations
+[W 2025-05-30 22:52:53.396 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23beta_k_nu_scaling?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.34ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/rayleigh.md
+[W 2025-05-30 22:52:53.397 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23nu_ra_scaling?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.66ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/rayleigh.md
+[I 2025-05-30 22:52:55.188 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/rayleigh.md
+[I 2025-05-30 22:52:55.518 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/rayleigh.md
+[I 2025-05-30 22:53:10.115 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 22:53:55.666 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 22:54:07.902 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 22:54:08.064 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 22:54:59.051 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 22:55:36.093 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/rayleigh.md
+[I 2025-05-30 22:55:44.149 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 22:56:12.205 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:01:18.694 ServerApp] Kernel started: bee9927b-5992-477a-a3ba-23b981eb5d9c
+[I 2025-05-30 23:01:19.132 ServerApp] Connecting to kernel bee9927b-5992-477a-a3ba-23b981eb5d9c.
+[I 2025-05-30 23:03:09.676 ServerApp] Saving file at /workspace/book/content/main.md
+[I 2025-05-30 23:03:09.806 ServerApp] Saving file at /workspace/book/content/main.md
+[I 2025-05-30 23:03:09.966 ServerApp] Saving file at /workspace/book/content/main.md
+[I 2025-05-30 23:03:18.558 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:04:21.584 ServerApp] Saving file at /workspace/book/content/chapter_03_critical/main.md
+[I 2025-05-30 23:04:21.738 ServerApp] Saving file at /workspace/book/content/chapter_03_critical/main.md
+[I 2025-05-30 23:04:52.128 ServerApp] Saving file at /workspace/book/content/chapter_03_critical/introduction.md
+[I 2025-05-30 23:04:52.492 ServerApp] Saving file at /workspace/book/content/chapter_03_critical/introduction.md
+[I 2025-05-30 23:04:52.701 ServerApp] Saving file at /workspace/book/content/chapter_03_critical/introduction.md
+[I 2025-05-30 23:04:52.894 ServerApp] Saving file at /workspace/book/content/chapter_03_critical/introduction.md
+[I 2025-05-30 23:05:15.384 ServerApp] Saving file at /workspace/book/content/chapter_03_critical/introduction.md
+[I 2025-05-30 23:05:15.609 ServerApp] Saving file at /workspace/book/content/chapter_03_critical/introduction.md
+[I 2025-05-30 23:05:15.852 ServerApp] Saving file at /workspace/book/content/chapter_03_critical/introduction.md
+[I 2025-05-30 23:05:16.044 ServerApp] Saving file at /workspace/book/content/chapter_03_critical/introduction.md
+[I 2025-05-30 23:06:49.043 ServerApp] Saving file at /workspace/book/content/main.md
+[I 2025-05-30 23:06:49.401 ServerApp] Saving file at /workspace/book/content/main.md
+[I 2025-05-30 23:06:50.256 ServerApp] Saving file at /workspace/book/content/main.md
+[I 2025-05-30 23:06:50.369 ServerApp] Saving file at /workspace/book/content/main.md
+[I 2025-05-30 23:06:56.762 ServerApp] Creating new directory in /workspace/book/content
+[I 2025-05-30 23:07:19.548 ServerApp] Saving file at /workspace/book/content/main.md
+[I 2025-05-30 23:07:19.743 ServerApp] Saving file at /workspace/book/content/main.md
+[I 2025-05-30 23:07:19.836 ServerApp] Saving file at /workspace/book/content/main.md
+[I 2025-05-30 23:07:27.802 ServerApp] Copying 'workspace/book/content/chapter_04_critical/main.md' to '/workspace/book/content/chapter_03_methods'
+[I 2025-05-30 23:07:32.688 ServerApp] Saving file at /workspace/book/content/chapter_03_methods/main.md
+[I 2025-05-30 23:07:32.876 ServerApp] Saving file at /workspace/book/content/chapter_03_methods/main.md
+[I 2025-05-30 23:07:33.041 ServerApp] Saving file at /workspace/book/content/chapter_03_methods/main.md
+[I 2025-05-30 23:07:49.979 ServerApp] Copying 'workspace/book/content/conclusion.md' to '/workspace/book/content/chapter_03_methods'
+[I 2025-05-30 23:07:50.071 ServerApp] Copying 'workspace/book/content/introduction.md' to '/workspace/book/content/chapter_03_methods'
+[I 2025-05-30 23:07:57.454 ServerApp] Saving file at /workspace/book/content/chapter_03_methods/main.md
+[I 2025-05-30 23:08:09.929 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/main.md
+[I 2025-05-30 23:08:10.108 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/main.md
+[I 2025-05-30 23:08:10.285 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/main.md
+[I 2025-05-30 23:09:00.898 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/main.md
+[I 2025-05-30 23:09:01.084 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/main.md
+[I 2025-05-30 23:09:12.538 ServerApp] Saving file at /workspace/book/content/chapter_03_methods/main.md
+[I 2025-05-30 23:09:12.846 ServerApp] Saving file at /workspace/book/content/chapter_03_methods/main.md
+[I 2025-05-30 23:09:16.035 ServerApp] Saving file at /workspace/book/content/chapter_03_methods/main.md
+[I 2025-05-30 23:10:03.930 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/main.md
+[I 2025-05-30 23:11:19.385 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[W 2025-05-30 23:11:22.311 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.14ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:11:22.312 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.61ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:11:22.453 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.27ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:11:22.454 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.57ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:11:23.835 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.23ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:11:23.836 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.54ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:11:59.381 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.34ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:11:59.382 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.69ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:00.555 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.24ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:00.556 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.56ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:02.567 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.28ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:02.568 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.60ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:07.046 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.08ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:07.047 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.62ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:18.454 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.27ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:18.455 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.59ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:21.612 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.26ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:21.613 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.54ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:26.413 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.25ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:26.414 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.55ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:32.415 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.26ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:32.416 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.62ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:35.181 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.34ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:35.181 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.75ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:39.364 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.26ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:39.365 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.56ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:40.635 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.18ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:40.636 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.50ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:12:42.259 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:12:42.439 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:12:42.661 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:47.010 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.25ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:47.011 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.56ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:49.408 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.22ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:49.409 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.53ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:56.056 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.25ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:56.057 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.57ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:57.519 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.24ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:12:57.520 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.55ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:01.911 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.19ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:01.912 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.51ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:04.482 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.25ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:04.483 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.59ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:07.448 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.23ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:07.449 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.54ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:08.702 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.10ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:08.703 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:13:11.605 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:15.774 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.17ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:15.775 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.62ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:18.884 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.19ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:18.885 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.53ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:21.634 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.20ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:21.635 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.59ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:22.780 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.21ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:22.781 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.52ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:13:23.221 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:13:23.417 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:13:23.541 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:27.147 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.22ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:27.148 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.56ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:29.023 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.19ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:29.024 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.07ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:32.685 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.26ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:32.685 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:33.835 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.31ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:33.835 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.72ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:13:33.945 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:13:34.031 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:13:34.178 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:58.531 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.26ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:13:58.531 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.60ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:01.107 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.27ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:01.108 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.57ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:06.481 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.27ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:06.482 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.60ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:09.199 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.24ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:09.199 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.56ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:14:10.517 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:14:10.678 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:19.800 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.28ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:19.800 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.55ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:22.025 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.13ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:22.026 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.60ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:25.333 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.29ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:25.333 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.61ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:34.060 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.20ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:34.060 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.50ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:14:37.366 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:14:37.525 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:14:37.685 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:48.417 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.28ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:48.417 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.59ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:55.554 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.28ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:14:55.555 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.57ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:14:57.638 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:14:57.758 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:15:01.139 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.22ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:15:01.139 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.54ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:15:04.390 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:15:04.540 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.27ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:15:04.541 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.63ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:15:09.510 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.26ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:15:09.512 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.11ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:15:10.802 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:15:10.957 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:15:11.137 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:15:14.821 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:15:44.822 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:15:44.957 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:15:45.124 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:15:48.140 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:17:48.883 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:18:53.724 ServerApp] Kernel started: 717410a4-f08b-458c-91f6-06cbd668b4b7
+[I 2025-05-30 23:18:54.185 ServerApp] Connecting to kernel 717410a4-f08b-458c-91f6-06cbd668b4b7.
+[I 2025-05-30 23:19:01.712 ServerApp] Kernel shutdown: 717410a4-f08b-458c-91f6-06cbd668b4b7
+[I 2025-05-30 23:19:49.057 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:19:50.842 ServerApp] Saving file at /workspace/book/content/main.md
+[I 2025-05-30 23:19:50.992 ServerApp] Saving file at /workspace/book/content/main.md
+[I 2025-05-30 23:19:51.134 ServerApp] Saving file at /workspace/book/content/main.md
+[I 2025-05-30 23:19:59.078 ServerApp] Kernel started: 144c59d4-fc89-43da-8f10-12406122c783
+[I 2025-05-30 23:19:59.446 ServerApp] Connecting to kernel 144c59d4-fc89-43da-8f10-12406122c783.
+[I 2025-05-30 23:20:05.257 ServerApp] Kernel shutdown: 144c59d4-fc89-43da-8f10-12406122c783
+[W 2025-05-30 23:20:28.254 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.68ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:20:28.255 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.62ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:20:30.249 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.21ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:20:30.250 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 0.57ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:20:31.701 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.55ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:20:31.702 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.20ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:20:46.866 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:20:47.062 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.22ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-05-30 23:20:47.063 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 1.51ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-05-30 23:20:51.328 ServerApp] Kernel started: c84215ae-ba9e-44fc-a99e-6265633da704
+[I 2025-05-30 23:20:51.748 ServerApp] Connecting to kernel c84215ae-ba9e-44fc-a99e-6265633da704.
+[I 2025-05-30 23:21:10.450 ServerApp] Kernel shutdown: c84215ae-ba9e-44fc-a99e-6265633da704
+[I 2025-05-30 23:21:27.587 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:21:37.725 ServerApp] Saving file at /workspace/book/content/chapter_03_methods/main.md
+[I 2025-05-30 23:21:48.560 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/main.md
+[I 2025-05-30 23:21:56.494 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/main.md
+[I 2025-05-30 23:22:10.412 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-05-30 23:22:19.885 ServerApp] Kernel started: d1632717-d915-48de-828b-3af12a710cf7
+[I 2025-05-30 23:22:20.243 ServerApp] Connecting to kernel d1632717-d915-48de-828b-3af12a710cf7.
+[I 2025-05-30 23:22:38.501 ServerApp] Kernel shutdown: d1632717-d915-48de-828b-3af12a710cf7
+[I 2025-05-30 23:23:29.016 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:26:49.103 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:27:34.912 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:27:54.478 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:29:26.734 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:29:26.959 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:31:13.872 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:31:20.318 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:33:20.539 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:33:57.340 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-05-30 23:35:21.244 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:37:21.865 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:37:36.564 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:37:36.860 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:39:19.484 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:39:30.949 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:39:31.289 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:41:31.208 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[I 2025-05-30 23:43:31.417 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/cylindrical_mixed.ipynb
+[W 2025-05-30 23:45:43.522 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.22ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/exports/rb_thesis_2025.pdf
+[W 2025-05-30 23:45:43.523 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (00f2fb044e4a4364b98b674b18384aae@172.17.0.1) 2.98ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/exports/rb_thesis_2025.pdf
+[I 2025-05-30 23:46:56.836 ServerApp] Saving file at /workspace/book/content/chapter_03_methods/introduction.md
+[I 2025-05-30 23:47:27.244 ServerApp] Saving file at /workspace/book/content/chapter_03_methods/conclusion.md
+[I 2025-05-30 23:47:33.867 ServerApp] Kernel started: 5e9a3bb7-9cae-47e4-8f79-9b530dc31b15
+[I 2025-05-30 23:47:34.320 ServerApp] Connecting to kernel 5e9a3bb7-9cae-47e4-8f79-9b530dc31b15.
+[I 2025-05-30 23:47:52.950 ServerApp] Kernel shutdown: 5e9a3bb7-9cae-47e4-8f79-9b530dc31b15
+[W 2025-06-02 09:31:19.133 ServerApp] WebSocket ping timeout after 119993 ms.
+[I 2025-06-02 09:31:24.137 ServerApp] Starting buffering for bee9927b-5992-477a-a3ba-23b981eb5d9c:a964317c-6b6d-4b74-bed0-835160ca4b8b
+[W 2025-06-02 09:31:27.347 ServerApp] WebSocket ping timeout after 119994 ms.
+[I 2025-06-02 09:31:32.349 ServerApp] Starting buffering for 99d2ff54-e855-4c40-8401-1cbd9f4ccf0e:d4bcde11-9a74-45b0-9237-074112698582
+[W 2025-06-02 09:31:33.002 ServerApp] WebSocket ping timeout after 119994 ms.
+[W 2025-06-02 09:31:37.591 TerminalsExtensionApp] WebSocket ping timeout after 119995 ms.
+[I 2025-06-02 09:31:38.005 ServerApp] Starting buffering for 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c:d3501e26-f581-406f-b446-bb3c412cd4ee
+[I 2025-06-02 10:51:12.163 ServerApp] Connecting to kernel 99d2ff54-e855-4c40-8401-1cbd9f4ccf0e.
+[I 2025-06-02 10:51:12.295 ServerApp] Connecting to kernel 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c.
+[I 2025-06-02 10:51:12.468 ServerApp] Connecting to kernel bee9927b-5992-477a-a3ba-23b981eb5d9c.
+[I 2025-06-02 10:51:13.291 ServerApp] Starting buffering for 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c:03d97f59-b46f-481b-aff4-31c80a14ee73
+[I 2025-06-02 10:51:13.291 ServerApp] Starting buffering for 99d2ff54-e855-4c40-8401-1cbd9f4ccf0e:53f4f35a-b616-4306-a37c-77a39c668170
+[I 2025-06-02 10:51:13.322 ServerApp] Starting buffering for bee9927b-5992-477a-a3ba-23b981eb5d9c:83787531-bb99-40d0-a424-de5e47cf4e72
+[I 2025-06-02 10:51:14.911 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2025-06-02 10:51:14.927 LabApp] Build is up to date
+[W 2025-06-02 10:51:16.027 ServerApp] Notebook workspace/working/working_003.ipynb is not trusted
+[W 2025-06-02 10:51:18.941 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.16ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-02 10:51:18.941 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/auto-E
+[I 2025-06-02 10:51:19.113 ServerApp] Connecting to kernel 99d2ff54-e855-4c40-8401-1cbd9f4ccf0e.
+[I 2025-06-02 10:51:19.195 ServerApp] Connecting to kernel 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c.
+[I 2025-06-02 10:51:19.253 ServerApp] Connecting to kernel bee9927b-5992-477a-a3ba-23b981eb5d9c.
+[W 2025-06-02 11:21:14.613 TerminalsExtensionApp] WebSocket ping timeout after 119994 ms.
+[W 2025-06-02 11:21:19.114 ServerApp] WebSocket ping timeout after 119991 ms.
+[W 2025-06-02 11:21:19.196 ServerApp] WebSocket ping timeout after 119990 ms.
+[W 2025-06-02 11:21:19.254 ServerApp] WebSocket ping timeout after 119991 ms.
+[I 2025-06-02 11:21:24.117 ServerApp] Starting buffering for 99d2ff54-e855-4c40-8401-1cbd9f4ccf0e:eff4504c-ae74-4a88-abe3-9ad1d1af0612
+[I 2025-06-02 11:21:24.197 ServerApp] Starting buffering for 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c:52a4c947-113b-4354-8b49-15d32accaf25
+[I 2025-06-02 11:21:24.255 ServerApp] Starting buffering for bee9927b-5992-477a-a3ba-23b981eb5d9c:3fa6e4be-8a4a-406a-b403-22461d3e3fc6
+[I 2025-06-02 12:29:04.715 ServerApp] Kernel restarted: 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c
+[I 2025-06-02 12:29:04.755 ServerApp] Connecting to kernel 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c.
+[I 2025-06-02 12:29:04.755 ServerApp] Restoring connection for 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c:52a4c947-113b-4354-8b49-15d32accaf25
+[I 2025-06-02 12:29:05.266 ServerApp] Connecting to kernel bee9927b-5992-477a-a3ba-23b981eb5d9c.
+[I 2025-06-02 12:29:05.266 ServerApp] Restoring connection for bee9927b-5992-477a-a3ba-23b981eb5d9c:3fa6e4be-8a4a-406a-b403-22461d3e3fc6
+[I 2025-06-02 12:29:08.909 ServerApp] Replaying 3 buffered messages
+[I 2025-06-02 12:29:21.458 ServerApp] Starting buffering for 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c:52a4c947-113b-4354-8b49-15d32accaf25
+[I 2025-06-02 12:29:21.485 ServerApp] Connecting to kernel 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c.
+[I 2025-06-02 12:29:21.485 ServerApp] Restoring connection for 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c:52a4c947-113b-4354-8b49-15d32accaf25
+[I 2025-06-02 12:29:23.835 ServerApp] Connecting to kernel 99d2ff54-e855-4c40-8401-1cbd9f4ccf0e.
+[I 2025-06-02 12:29:23.835 ServerApp] Restoring connection for 99d2ff54-e855-4c40-8401-1cbd9f4ccf0e:eff4504c-ae74-4a88-abe3-9ad1d1af0612
+[I 2025-06-02 12:30:44.537 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 12:32:44.993 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 12:34:46.464 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 12:36:47.532 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 12:38:47.784 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 12:40:49.579 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 12:42:50.520 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 12:46:05.675 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 12:46:05.903 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 12:48:06.528 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 12:50:06.834 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 12:52:07.192 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 12:54:07.580 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 13:00:07.976 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 13:02:10.319 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 13:04:11.125 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 13:06:11.898 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 13:08:12.542 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 13:10:14.529 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 13:13:24.737 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 13:13:24.912 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 13:15:24.915 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 13:15:56.920 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 13:16:34.422 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 13:18:34.841 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 13:28:38.503 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 13:30:38.926 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 13:32:39.534 ServerApp] Saving file at /workspace/working/working_003.ipynb
+[I 2025-06-02 13:32:42.638 ServerApp] Starting buffering for 99d2ff54-e855-4c40-8401-1cbd9f4ccf0e:eff4504c-ae74-4a88-abe3-9ad1d1af0612
+[I 2025-06-02 13:32:42.643 ServerApp] Starting buffering for bee9927b-5992-477a-a3ba-23b981eb5d9c:3fa6e4be-8a4a-406a-b403-22461d3e3fc6
+[I 2025-06-02 13:32:42.643 ServerApp] Starting buffering for 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c:52a4c947-113b-4354-8b49-15d32accaf25
+[I 2025-06-02 22:31:25.629 ServerApp] Connecting to kernel 99d2ff54-e855-4c40-8401-1cbd9f4ccf0e.
+[I 2025-06-02 22:31:25.681 ServerApp] Connecting to kernel 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c.
+[I 2025-06-02 22:31:25.715 ServerApp] Connecting to kernel bee9927b-5992-477a-a3ba-23b981eb5d9c.
+[I 2025-06-02 22:31:26.025 ServerApp] Starting buffering for 99d2ff54-e855-4c40-8401-1cbd9f4ccf0e:6d8025a6-75f6-48cb-97e9-e3282db0b590
+[I 2025-06-02 22:31:26.042 ServerApp] Starting buffering for 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c:06e68e8e-49b3-4b38-b355-a696deef8025
+[I 2025-06-02 22:31:26.048 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2025-06-02 22:31:26.054 LabApp] Build is up to date
+[I 2025-06-02 22:31:26.088 ServerApp] Starting buffering for bee9927b-5992-477a-a3ba-23b981eb5d9c:b9c2efe6-8b7d-4229-b01a-42c1f818a66c
+[I 2025-06-02 22:31:34.971 ServerApp] Connecting to kernel bee9927b-5992-477a-a3ba-23b981eb5d9c.
+[I 2025-06-02 22:31:42.986 ServerApp] Connecting to kernel 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c.
+[I 2025-06-02 22:31:49.341 ServerApp] Uploading file to /workspace/storage/simple_critical__-_-_.data
+[I 2025-06-02 22:31:49.981 ServerApp] Connecting to kernel 99d2ff54-e855-4c40-8401-1cbd9f4ccf0e.
+[I 2025-06-03 00:46:57.173 ServerApp] Connecting to kernel 99d2ff54-e855-4c40-8401-1cbd9f4ccf0e.
+[I 2025-06-03 00:46:57.243 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2025-06-03 00:46:57.248 LabApp] Build is up to date
+[I 2025-06-03 00:46:57.301 ServerApp] Connecting to kernel 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c.
+[I 2025-06-03 00:46:57.314 ServerApp] Connecting to kernel bee9927b-5992-477a-a3ba-23b981eb5d9c.
+[W 2025-06-03 00:47:08.542 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 2.03ms referer=http://localhost:8890/lab/workspaces/auto-E
+[I 2025-06-03 00:47:08.542 ServerApp] Connecting to kernel 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c.
+[W 2025-06-03 00:47:08.652 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.93ms referer=http://localhost:8890/lab/workspaces/auto-E
+[I 2025-06-03 00:47:08.657 ServerApp] Connecting to kernel 99d2ff54-e855-4c40-8401-1cbd9f4ccf0e.
+[I 2025-06-03 00:47:08.727 ServerApp] Connecting to kernel bee9927b-5992-477a-a3ba-23b981eb5d9c.
+[I 2025-06-03 00:47:40.320 ServerApp] Creating new notebook in /workspace/working
+[I 2025-06-03 00:47:40.999 ServerApp] Kernel started: 1897f9b2-918a-40ea-a3c9-15e2a2ad2d8f
+[I 2025-06-03 00:47:41.466 ServerApp] Connecting to kernel 1897f9b2-918a-40ea-a3c9-15e2a2ad2d8f.
+[W 2025-06-03 00:47:53.022 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.11ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:47:53.054 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.80ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:48:36.425 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.26ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:48:36.432 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.65ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:48:39.089 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.13ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:48:39.092 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.61ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:48:41.609 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.14ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:48:41.611 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:48:43.335 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.09ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:48:43.344 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.65ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-06-03 00:48:47.825 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:49:08.302 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.23ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:49:08.303 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.60ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:49:13.861 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.16ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:49:13.864 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.62ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:49:16.031 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.11ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:49:16.036 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.62ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-06-03 00:49:16.680 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-06-03 00:49:48.363 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[W 2025-06-03 00:50:27.781 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.28ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:50:27.783 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.63ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-06-03 00:50:44.049 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:50:52.771 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.33ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[W 2025-06-03 00:50:52.776 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.65ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-06-03 00:50:53.318 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-06-03 00:50:53.919 ServerApp] Saving file at /workspace/book/content/chapter_02_foundations/heating.md
+[I 2025-06-03 00:52:30.527 ServerApp] Saving file at /workspace/book/content/chapter_03_methods/ms98.md
+[I 2025-06-03 00:54:30.719 ServerApp] Saving file at /workspace/book/content/chapter_03_methods/ms98.md
+[I 2025-06-03 00:55:30.262 ServerApp] Saving file at /workspace/book/content/chapter_03_methods/ms98.md
+[I 2025-06-03 00:57:30.491 ServerApp] Saving file at /workspace/book/content/chapter_03_methods/ms98.md
+[I 2025-06-03 01:04:08.776 ServerApp] Starting buffering for 1897f9b2-918a-40ea-a3c9-15e2a2ad2d8f:1e130648-cdcb-4a26-8b52-d856426d1ab7
+[I 2025-06-03 01:04:09.001 ServerApp] Connecting to kernel 1897f9b2-918a-40ea-a3c9-15e2a2ad2d8f.
+[I 2025-06-03 01:04:09.001 ServerApp] Restoring connection for 1897f9b2-918a-40ea-a3c9-15e2a2ad2d8f:1e130648-cdcb-4a26-8b52-d856426d1ab7
+[W 2025-06-03 01:05:39.002 ServerApp] WebSocket ping timeout after 90001 ms.
+[I 2025-06-03 01:05:44.003 ServerApp] Starting buffering for 1897f9b2-918a-40ea-a3c9-15e2a2ad2d8f:1e130648-cdcb-4a26-8b52-d856426d1ab7
+[I 2025-06-03 03:50:04.607 LabApp] 302 GET /lab/workspaces/auto-E (@172.17.0.1) 2.64ms
+[I 2025-06-03 03:50:12.092 ServerApp] User faff8ca08bf04da1bee3e11c9ce879ca logged in.
+[I 2025-06-03 03:50:12.093 ServerApp] 302 POST /login?next=%2Flab%2Fworkspaces%2Fauto-E (faff8ca08bf04da1bee3e11c9ce879ca@172.17.0.1) 1.66ms
+[I 2025-06-03 03:50:16.142 ServerApp] Connecting to kernel 99d2ff54-e855-4c40-8401-1cbd9f4ccf0e.
+[I 2025-06-03 03:50:16.174 ServerApp] Connecting to kernel 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c.
+[I 2025-06-03 03:50:16.224 ServerApp] Connecting to kernel bee9927b-5992-477a-a3ba-23b981eb5d9c.
+[I 2025-06-03 03:50:16.250 ServerApp] Connecting to kernel 1897f9b2-918a-40ea-a3c9-15e2a2ad2d8f.
+[I 2025-06-03 03:50:16.303 ServerApp] Starting buffering for 1897f9b2-918a-40ea-a3c9-15e2a2ad2d8f:1236d3be-b3d0-43da-a9ee-8d04970e4343
+[W 2025-06-03 03:50:16.675 ServerApp] 404 GET /api/contents/workspace/working/Untitled.ipynb?content=0&hash=0&1748922616659 (faff8ca08bf04da1bee3e11c9ce879ca@172.17.0.1) 0.71ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-03 03:50:16.675 ServerApp] 404 GET /api/contents/workspace/working/Untitled.ipynb?content=0&hash=0&1748922616659 (172.17.0.1): No such file or directory: workspace/working/Untitled.ipynb
+[I 2025-06-03 03:50:16.858 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2025-06-03 03:50:16.864 LabApp] Build is up to date
+[I 2025-06-03 03:50:17.758 ServerApp] Connecting to kernel 42aa4242-fa95-4e77-9cbe-baeb13ba6a4c.
+[I 2025-06-03 03:50:17.787 ServerApp] Connecting to kernel 1897f9b2-918a-40ea-a3c9-15e2a2ad2d8f.
+[I 2025-06-03 03:50:17.802 ServerApp] Connecting to kernel 99d2ff54-e855-4c40-8401-1cbd9f4ccf0e.
+[I 2025-06-03 03:50:17.827 ServerApp] Connecting to kernel bee9927b-5992-477a-a3ba-23b981eb5d9c.

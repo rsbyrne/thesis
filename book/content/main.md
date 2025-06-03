@@ -4,10 +4,10 @@
 ```{include} chapter_01_background/main.md
 ```
 
-```{include} chapter_02_methods/main.md
+```{include} chapter_02_foundations/main.md
 ```
 
-```{include} chapter_03_everest/main.md
+```{include} chapter_03_methods/main.md
 ```
 
 ```{include} chapter_04_critical/main.md
