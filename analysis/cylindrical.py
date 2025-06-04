@@ -30,11 +30,11 @@ def sub_area(h, f):
     f = safe_f(f)
     return (radius(h, f)**2 - r_inner(f)**2) / (2 * r_mid(f))
 
-sym_h, sym_f, sym_H = sympy.symbols('h f H')
+sym_h, sym_f = sympy.symbols('h f', real=True)
 sym_r_i = sym_f / (1 - sym_f)
 sym_r_o = 1 / (1 - sym_f)
 sym_r = sym_r_i + sym_h
 sym_r_m = (sym_r_o + sym_r_i) / 2
-sym_r_star = (sym_H + sym_r_i) / sym_r_o
+sym_r_star = (sym_h + sym_r_i) / sym_r_o
 sym_disc = (sym_r**2 - sym_r_i**2) / (2 * sym_r_m)
 sym_s_star = 2 * sym_r_star / (1 + sym_f)

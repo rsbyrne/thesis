@@ -1,6 +1,10 @@
 ```{code-cell} ipython3
-:tags: [remove-cell]
-
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
 import os
 from glob import glob
 import pickle
@@ -285,7 +289,7 @@ for (H, f), values in frm.iterrows():
     h, T = values['h'], values['geotherm']
 
     ax1.line(
-        Channel(T / H, lims = (0, 0.5), label = '$T/H$'),
+        Channel(T / H, lims = (0, 0.5), capped=(True, True), label = '$T/H$'),
         Channel(h, lims = (0, 1), label = '$h$'),
         color = cmap(f, fs, style = 'turbo'),
         linewidth = H / 5
@@ -334,17 +338,15 @@ ax1 = canvas2.make_ax((0, 0))
 ax2 = canvas2.make_ax((0, 1))
 allx, ally = [], []
 for (H, f), values in frm.iterrows():
-    if f == 1:
-        f = 0.99999
     h, T = values['h'], values['geotherm']
     dT, hdT = analysis.derivative(T, h, n = 1)
     ax1.line(
         xchan := Channel(
-            dT / H, lims = (-1, 0), label = r'$\delta T / \delta h H$'
+            dT / H, lims = (-1, 0), label = r'$\frac{\delta T / \delta h}{H}$'
             ),
         Channel(hdT, lims = (0, 1), label = '$h$'),
         color = cmap(f, fs, style = 'turbo'),
-        linewidth = H / 5
+        # linewidth = H / 5
         )
     ax2.line(
         xchan,
@@ -353,7 +355,7 @@ for (H, f), values in frm.iterrows():
             lims = (-1, 0), label = r"$-\mathrm{Disc} / {s^*}$"
             ),
         color = cmap(f, fs, style = 'turbo'),
-        linewidth = H / 5
+        # linewidth = H / 5
         )
     ally.extend(ychan.data)
     allx.extend(xchan.data)
@@ -403,51 +405,116 @@ fig
 ```
 
 ```{code-cell} ipython3
-:label: internalgeotherm
-:tags: [remove-cell]
-
-canvas = Canvas(size = (8, 4), shape = (1, 2))
-ax1 = canvas.make_ax((0, 0))
-ax2 = canvas.make_ax((0, 1))
-for (H, f), values in frm.iterrows():
-    if f == 1:
-        continue
-    h, T = values['h'], values['geotherm']
-    thchan = Channel(T/H, label=r'T/H')
-    hchan = Channel(h, lims = (0, 1), label = '$h$')
-    dT, hdT = analysis.derivative(T, h, n = 1)
-    sstar = cylindrical.s_star(hdT, f)
-#     phi = dT * sstar / H
-    D = -cylindrical.sub_area(hdT, f)
-    ax1.line(
-        thchan,
-        hchan,
-        color = cmap(f, fs, style = 'turbo'),
-        linewidth = H / 5
-        )
-    ax2.line(
-        thchan,
-        hchan,
-        color = cmap(f, fs, style = 'turbo'),
-        linewidth = H / 5
-        )
-# ax2.props.edges.y.label.visible = False
-# ax2.props.edges.y.ticks.major.labels = []
-canvas
-```
-
-```{code-cell} ipython3
 ---
 editable: true
-label: cylindrical_geotherm_internal_symbolic
+label: internalgeotherm
 slideshow:
   slide_type: ''
 tags: [remove-cell]
 ---
-sym_dtdh = (-cylindrical.sym_H * cylindrical.sym_disc / cylindrical.sym_s_star).simplify()
-display(sym_dtdh)
-# sym_dtdh.subs(dict(f=0.5, h=1.))
+# def cylindrical_internal_conductive_symbolic():
+#     cyl = cylindrical
+#     sym_H, sym_C = sympy.symbols('H C', real=True)
+#     sym_dtdh = (-sym_H * cyl.sym_disc / cyl.sym_s_star)
+#     integrated = sympy.integrate(sym_dtdh, cyl.sym_h) + sym_C
+#     C_sol = sympy.solve(integrated.subs({cyl.sym_h: 1}), sym_C)[sym_C]
+#     integrated = integrated.subs({sym_C: C_sol}).simplify()
+#     for condition in (
+#             sympy.Q.is_true(sym_h >= 0),
+#             sympy.Q.is_true(sym_h <= 1),
+#             sympy.Q.is_true(sym_f > 0),
+#             sympy.Q.is_true(sym_f < 1),
+#             ):
+#         integrated = sympy.refine(integrated, condition)
+#     return sym_H, sym_h, sym_f, integrated.simplify()
+
+# sym_H, sym_h, sym_f, integrated = cylindrical_internal_conductive_symbolic()
+
+def cylindrical_conductive_internal_geotherm(h, f, H):
+    f = cylindrical.safe_f(f)
+    u = f*h - f - h
+    return (H / (4 * (f - 1)**2)) * (2 * f**2 * np.log(np.abs(u)) - u**2 + 1)
+
+canvas = Canvas(size = (8, 4), shape = (1, 2))
+ax1 = canvas.make_ax((0, 0))
+ax2 = canvas.make_ax((0, 1))
+
+h_vals = np.linspace(0, 1, 100)
+allx, ally = [], []
+for (H, f), values in frm.iterrows():
+    # if H != 1:
+    #     continue
+    hs, Ts = values['h'], values['geotherm']
+    hchan = Channel(hs, label='$h$')
+    real = Ts / H
+    ax1.line(
+        Channel(
+            real,
+            lims=(0, 0.5), capped=(True, True), label='$T/H$',
+            ),
+        hchan,
+        color=cmap(f, fs, style = 'turbo'),
+        linewidth=0.3,
+        )
+    synthetic = cylindrical_conductive_internal_geotherm(hs, f, H) / H
+    ax1.line(
+        Channel(
+            synthetic,
+            lims=(0, 0.5), capped=(True, True),
+            ),
+        hchan,
+        color=cmap(f, fs, style = 'turbo'),
+        linestyle='dotted',
+        )
+    ax2.line(
+        xchan := Channel(
+            synthetic, lims=(0, 0.5), capped=(True, True),
+            label=r'$T/H (\mathrm{synthetic})$',
+            ),
+        ychan := Channel(
+            real, lims=(0, 0.5), capped=(True, True),
+            label=r'$T/H (\mathrm{empirical})$',
+            ),
+        color=cmap(f, fs, style = 'turbo'),
+        # linewidth = H / 5
+        )
+    ally.extend(ychan.data)
+    allx.extend(xchan.data)
+
+linscore = r2_score(ally, allx)
+ax2.line(
+    trendline := Channel(
+        np.linspace(min(allx), max(allx), 10),
+        lims=(0, 0.5), capped=(True, True),
+        ),
+    trendline,
+    color = '#ff7f0e',
+    linestyle = '--',
+    )
+trendlabel = f"${r'y=x, \\ R^2 =' + str(round(linscore, 10))}$"
+ax2.annotate(
+    0.3,
+    0.3,
+    label = trendlabel,
+    points = (15, -45),
+    arrowprops = dict(arrowstyle = "->", color = '#ff7f0e'),
+    )
+
+ax1.props.legend.set_handles_labels(
+    (row[0] for row in ax1.collections[len(Hs)-1::len(Hs)][1::2]),
+    (str(f) for f in fs),
+    )
+ax1.props.legend.title.text = '$f$'
+ax1.props.legend.title.visible = True
+# ax1.props.legend.mplprops['bbox_to_anchor'] = (1.75, 1.05)
+# ax1.props.legend.mplprops['ncol'] = 2
+ax1.props.legend.frame.colour = 'black'
+ax1.props.legend.frame.visible = True
+
+canvas
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
 
 ## Thinking outside the box: building a cylindrical domain
 
@@ -735,17 +802,24 @@ We show that this holds exactly {numref}`isocondinternal_fig`.
 As before, the geothermal gradient required to transmit this flux must account for the varying layer length ${s^*}$ - a function of $h$ and the $f$ parameter. Thus:
 
 $$
-\frac{dT}{dh} \propto \frac{\phi_q}{s^{*}} = -\frac{H \cdot \mathrm{Disc}(h)}{{s^*}}
+\frac{dT}{dh} \propto \frac{\phi_q}{s^{*}} = -\frac{H \cdot \mathrm{Disc}(h)}{{s^*}} = \frac{H h \left(- f h + 2 f + h\right)}{2 \left(f h - f - h\right)}
 $$
 
-The integral with respect to $h$ yields the geotherm:
+The integral with respect to $h \in [0, 1]$ with $T(0)=1$ yields the geotherm:
 
-![](#cylindrical_geotherm_internal_symbolic)
+$$
+\begin{equation}
+T(h) = \frac{H}{4 (f - 1)^2} \left[ 
+2 f^{2} \ln \left| f h - f - h \right| \;-\; \bigl(f h - f - h \bigr)^2 + 1 \right]
+\end{equation}
+$$
 
-```{figure} #internalgeotherm
-:name: internalgeotherm_fig
+The 
 
-The conductive geotherm under internal heating.
+```{figure} #cylindrical_internal_geotherm
+:name: cylindrical_internal_geotherm_fig
+
+The conductive geotherm for cylindrical domains under internal heating. The empirical results and the symbolically-derived closed-form solution match exactly.
 ```
 
 ### Mixed heating in the annulus
