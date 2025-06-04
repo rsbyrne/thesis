@@ -1,4 +1,4 @@
-```{code-cell} ipython3
+```{code-cell} python
 :tags: [remove-cell]
 
 import os
@@ -19,9 +19,9 @@ from everest.window.colourmaps import cmap
 from analysis import analysis, cylindrical
 ```
 
-```{code-cell} ipython3
-:label: simplesinu
+```{code-cell} python
 :tags: [remove-cell]
+:label: simplesinu
 
 imop.hstack(*map(
     image.fromfile,
@@ -29,14 +29,10 @@ imop.hstack(*map(
     ))
 ```
 
-```{code-cell} ipython3
----
-editable: true
-label: isocondf
-slideshow:
-  slide_type: ''
-tags: [remove-cell]
----
+(isocondf)=
+```{code-cell} python
+:tags: [remove-cell]
+
 impaths = sorted(
     os.path.relpath(path)
     for path in glob(os.path.join(aliases.storagedir, 'cond_f*.png'))
@@ -199,8 +195,8 @@ isocondf_linscore = linscore
 fig
 ```
 
-```{code-cell} ipython3
-:label: isocondffit
+(isocondffit)=
+```{code-cell} python
 :tags: [remove-cell]
 
 canvas = Canvas(size = (3, 3))
@@ -238,7 +234,7 @@ ax.annotate(
 canvas
 ```
 
-```{code-cell} ipython3
+```{code-cell} python
 :tags: [remove-cell]
 
 with open(
@@ -265,8 +261,8 @@ frm['h'] = frm['geotherm'].apply(lambda x: np.linspace(0, 1, len(x)))
 # frm['sstar'] = frm.apply(lambda fr: cylindrical.s_star(fr['h'], fr.name[1]), axis = 1)
 ```
 
-```{code-cell} ipython3
-:label: isocondinternal
+(isocondinternal)=
+```{code-cell} python
 :tags: [remove-cell]
 
 canvas1 = Canvas(size = (8, 8/3), shape = (1, 3))
@@ -402,8 +398,8 @@ fig
 # ax2.props.legend.frame.visible = True
 ```
 
-```{code-cell} ipython3
-:label: internalgeotherm
+(internalgeotherm)=
+```{code-cell} python
 :tags: [remove-cell]
 
 canvas = Canvas(size = (8, 4), shape = (1, 2))
@@ -434,19 +430,6 @@ for (H, f), values in frm.iterrows():
 # ax2.props.edges.y.label.visible = False
 # ax2.props.edges.y.ticks.major.labels = []
 canvas
-```
-
-```{code-cell} ipython3
----
-editable: true
-label: cylindrical_geotherm_internal_symbolic
-slideshow:
-  slide_type: ''
-tags: [remove-cell]
----
-sym_dtdh = (-cylindrical.sym_H * cylindrical.sym_disc / cylindrical.sym_s_star).simplify()
-display(sym_dtdh)
-# sym_dtdh.subs(dict(f=0.5, h=1.))
 ```
 
 ## Thinking outside the box: building a cylindrical domain
@@ -739,8 +722,6 @@ $$
 $$
 
 The integral with respect to $h$ yields the geotherm:
-
-![](#cylindrical_geotherm_internal_symbolic)
 
 ```{figure} #internalgeotherm
 :name: internalgeotherm_fig

@@ -9,6 +9,7 @@ livestation/cache
 *.pem
 *.log
 *.frm
+*.ipynb
 core
 
 # Byte-compiled / optimized / DLL files

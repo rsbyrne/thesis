@@ -194,7 +194,7 @@ ax3.line(
 
 ax4.line(
     Channel(condhs, label = '$ H $', capped = (True, True)),
-    Channel(slopeslopes, label = 'slope', capped = (True, True))
+    Channel(slopeslopes, label = r'$\mathrm{slope}$', capped = (True, True))
     )
 
 ax3.props.edges.y.swap()
@@ -373,7 +373,7 @@ $$
 H_{\mathrm{cr}} = \frac{1}{{{T_{c}}_{\mathrm{av}}}_{(H=0)}}, \quad \mathrm{Ra} < {\mathrm{Ra}}_{\mathrm{cr}}
 $$
 
-Where $H_{crit}$ is the critical heating factor above which the mantle cools into the core and at which the lower boundary becomes effectively insulating, as previously discussed.
+Where $H_\mathrm{crit}$ is the critical heating factor above which the mantle cools into the core and at which the lower boundary becomes effectively insulating, as previously discussed.
 
 If we define a 'conductive *Nusselt* number' - something of an oxymoron - we can see how the true *Nusselt* number should be expected to scale:
 
