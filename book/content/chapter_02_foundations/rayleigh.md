@@ -1,4 +1,4 @@
-```{code-cell} python
+```{code-cell} ipython3
 :tags: [remove-cell]
 
 import os
@@ -16,8 +16,8 @@ from everest.window.colourmaps import cmap
 from analysis import analysis
 ```
 
-(nu_ra_scaling)=
-```{code-cell} python
+```{code-cell} ipython3
+:label: nu_ra_scaling
 :tags: [remove-cell]
 
 canvas = Canvas(size=(2.5, 2.5))
@@ -75,13 +75,9 @@ ax.props.title.visible = True
 canvas
 ```
 
-(beta_k_nu_scaling)=
 ```{code-cell} ipython3
+:label: beta_k_nu_scaling
 :tags: [remove-cell]
-
-#| label: beta_k_nu_scaling
-
-# from matplotlib import colors as _mcolors
 
 canvas = Canvas(size=(3.2, 3.2))
 ax = canvas.ax(density=1.2)
@@ -160,15 +156,16 @@ ax.props.title.visible = True
 canvas
 ```
 
-```{code-cell} python
+```{code-cell} ipython3
 :tags: [remove-cell]
+
 with open(os.path.join(aliases.storagedir, 'condh.pkl'), mode = 'rb') as file:
     conddata = pickle.loads(file.read())
 condgeotherms, condavts, condhs = (conddata[key] for key in ('geotherms', 'avts', 'hs'))
 ```
 
-(isocondh)=
-```{code-cell} python
+```{code-cell} ipython3
+:label: isocondh
 :tags: [remove-cell]
 
 canvas1 = Canvas(shape = (1, 2), size = (6, 4))
@@ -232,7 +229,7 @@ fig = imop.hstack(canvas1, canvas2)
 fig
 ```
 
-```{code-cell} python
+```{code-cell} ipython3
 :tags: [remove-cell]
 
 with open(os.path.join(aliases.storagedir, 'condhfmixed.pkl'), mode = 'rb') as file:
@@ -253,8 +250,8 @@ condavts = [conddata['avts'][i] for i in selinds]
 #     )
 ```
 
-(isocondhmixed)=
-```{code-cell} python
+```{code-cell} ipython3
+:label: isocondhmixed
 :tags: [remove-cell]
 
 canvas1 = Canvas(shape = (1, 2), size = (6, 4))
@@ -373,17 +370,21 @@ Tectonics is known to us through its sensible processes of orogeny, seismicity, 
 
 The essential model of planetary solid-state thermal circulation is Rayleigh-Benard convection, in which a fluid held between two plane layers of different temperatures is observed to spontaneously self-organise into counter-rotating cells to maximise the efficiency of transport [@Getling1998-gv]. Characterising the geometry or 'planforms' of convection, and finding what determines them, is the core business of this thesis.
 
++++
+
 ### The Nusselt number
 
-A geodynamically rigid planet with Earth’s interior temperature would not be able to access even these modest energies: it would be trapped by its flat, linear conductive geotherm. That the planetary geotherm is evidently much greater than this is evidence that more kinetic processes are at work. The dimensionless temperature gradient is related to the Nusselt number or $\mathrm{Nu}$, the ratio of the measured temperature gradient to the reference gradient, which is the purely conductive geotherm. It can be given in terms of the rate of change of the dimensionless potential temperature $\theta^*$ with respect to dimensionless depth $y^*$ [@Schubert2001-ea]:
+A geodynamically rigid planet with Earth’s interior temperature would not be able to access even these modest energies: it would be trapped by its flat, linear conductive geotherm. That the planetary geotherm is evidently much greater than this is evidence that more kinetic processes are at work. The dimensionless temperature gradient is related to the Nusselt number or $\mathrm{Nu}$, the ratio of the measured temperature gradient to the reference gradient, which is the purely conductive geotherm. It can be given in terms of the rate of change of the dimensionless potential temperature $\theta^*$ with respect to dimensionless height from mantle base $h$ [@Schubert2001-ea]:
 
-$$ \mathrm{Nu} = \left| \frac{\partial \theta^*}{\partial y^*} \right| _S $$
+$$ \mathrm{Nu} = -\left| \frac{\partial \theta^*}{\partial h} \right| _S $$
 
-Where $|x|_S$ indicates the average value across a surface. The asterisks indicate a non-dimensionalised quantity: this is a convention throughout the literature. When dimensionless parameters are used - unit mantle thickness and unit temperature range - the conductive geotherm for a non-curved domain is exactly one. In non-curved domains, $\mathrm{Nu}$ is equivalent to the dimensionless surface temperature gradient, and so it is confusingly defined as such in some contexts [@Blankenbach1989-li]. For curved domains, where the outer length is greater than the inner length, the conductive geotherm is proportionately lesser as it is in a sense ‘stretched out’ across the circumference; letting $f$ be the ratio of inner to outer lengths (either circumferential or radial), $\mathrm{Nu}$ in these cases diverges from the dimensionless temperature gradient by a factor of $f$ for cylinders and $f^2$ for shells.
+Where $|x|_S$ indicates the average value across a surface. (We could alternatively have used the depth $z$ instead of the $h$: it has no impact on the dynamics.) The asterisks indicate a non-dimensionalised quantity: this is a convention throughout the literature. When dimensionless parameters are used - unit mantle thickness and unit temperature range - the conductive geotherm for a non-curved domain is exactly one. In non-curved domains, $\mathrm{Nu}$ is equivalent to the dimensionless surface temperature gradient, and so it is confusingly defined as such in some contexts [@Blankenbach1989-li]. For curved domains, where the outer length is greater than the inner length, the conductive geotherm is proportionately lesser as it is in a sense ‘stretched out’ across the circumference; letting $f$ be the ratio of inner to outer lengths (either circumferential or radial), $\mathrm{Nu}$ in these cases diverges from the dimensionless temperature gradient by a factor of $f$ for cylinders and $f^2$ for shells.
 
 There is a practice in some quarters of adding a constant $1$ to $\mathrm{Nu}$, reflecting a difference of opinion over whether $\mathrm{Nu}$ is best constructed as an arithmetic quantity (i.e $\mathrm{Nu}$ as the convective flux after conductive flux is substracted) or as a geometric quantity, as we have stated it here. We prefer the latter usage, reterming the former as $\mathrm{Nu}_{+}$.
 
 Though harder to measure in practice than in theory, it is implicit that Earth’s Nusselt number must be much greater than one; it is sometimes cited in the order of $10$ [@Tackley1996-vw], which is characteristic of laminar (sub-turbulent) flow [@White1984-fn].
+
++++
 
 ### The Prandtl, Grashof, Reynolds, and Rayleigh numbers
 
@@ -523,25 +524,27 @@ Where $b$ is the vertical length scale (the distance from top to **b**ottom).
 
 Because the *Rayleigh* number so expressed is equivalent to the coefficient of the buoyancy term, it should now be clear why it is often simply dubbed ‘convective vigour’, as that is its primary effect. By parameterising the system in this way, the behaviour of seemingly distinct scenarios can be seen to be related through their common *Rayleigh* number; what’s more, a dimensionless treatment of the problem can be readily converted to a dimensionalised one by expanding the terms of $\mathrm{Ra}$ with their empirical or inferred values.
 
++++
+
 ### Linear stability analysis and the critical *Rayleigh* number
 
 Remarkably, the value of the critical wavelength $\mathrm{Ra}_{\mathrm{cr}}$ is independent of the thermal properties of the system and, for the sorts of plane box geometries often under discussion, should theoretically be exactly $2\sqrt{2}$ - or just $\sqrt{2}$ in the half cell [@Chandrasekhar1961-ez]. This can be obtained empirically, but in simple cases such as that of planar basally-heated isoviscous flow, an expression for $\mathrm{Ra}_\mathrm{cr}$ due to arbitrary perturbations can be derived from the assumptions already held using linear stability analysis.
 
 First consider the state of a purely conducting system at thermal equilibrium:
 
-$$ T_c^* = \frac{T_0}{T_1 - T_0} + y^* $$
+$$ {T_c}^*(h) = \frac{T_o}{T_i - T_o} -h + 1 $$
 
-Where $T_c^*$ is the dimensionless conductive temperature at dimensionless depth $y^*$; i.e. there is a linear dependency of temperature and depth.
+Where ${T_c}^*$ is the dimensionless conductive temperature at dimensionless depth $h$ and $T_o$ and $T_i$ stand for the outer (upper) and inner (lower) temperature respectively. Put simply, there is a linear dependency of temperature and depth.
 
 Let us now impose a thermal anomaly $\theta^{'*}$, uncertain in wavelength and infinitesimal in amplitude:
 
-$$ \theta^{'*} \equiv T^{'*} - T_c^* $$
+$$ \theta^{'*} \equiv T^{'*} - {T_c}^* $$
 
 Where the starred notation indicates a non-dimensionalised parameter and the prime notation, here and hence, identifies a perturbation. The choice of $\theta$ here relates to potential temperature, the quantity conserved along adiabats, which is what this perturbation will ultimately induce.
 
 Before perturbation, the pressure gradient forces were defined solely by the hydrostatic pressure $p_c$ - the pressure field which is purely sufficient to counteract the force of gravity. After the introduction of the perturbation, but before the resultant perturbed state is realised, the pressure field is modified in two ways: by the buoyancy anomaly of the perturbation, but also by the contribution of the modified density of the parcel to pre-perturbative hydrostatic pressure. Taking this into account, we can define a true perturbation pressure $\Pi^{'*}$ as:
 
-$$ \Pi^{'*} \equiv p^{'*} - p_c^* $$
+$$ \Pi^{'*} \equiv p^{'*} - {p_c}^* $$
 
 Where $p^{'*}$ is the pressure deviation relative to the hydrostatic pressure.
 
@@ -593,6 +596,8 @@ A value which is borne out in laboratory testing [@Whitehead2011-gs].
 The global minimum of the curve of aspect ratio to 'notional' *Rayleigh* number gives the 'critical' *Rayleigh* number below which convection yields to conduction.
 ```
 
++++
+
 ### Boundary layer theory and the $\mathrm{Ra}-\mathrm{Nu}$ scaling
 
 While heat may be transported by convection in the interior of the system, heat may only cross in or out of the system as a whole via conduction. This occurs across two thin layers at the outer and inner boundaries. Since we stipulate that these layers are purely conductive, a *Rayleigh* number defined only across each layer must be below the critical value for that layer: ${\mathrm{Ra}}_{layer} < {{\mathrm{Ra}}_{layer}}_{\mathrm{cr}}$ [@Olson1987-do]. This is the first observation of boundary layer theory, whence can be deduced the following fundamental power law relationship between the *Rayleigh* and *Nusselt* numbers [@Schubert2001-ea]:
@@ -641,29 +646,29 @@ We have already established that when the *Rayleigh* number is supercritical, he
 
 It is possible to obtain an expression for the thickness of these boundary layers by considering the linear stability of just the layers themselves. First, we must determine the rate at which the conductive layer expands. This is complicated in the first instance by the fact that the actual layer thickness itself is hard to define in a continuum. Traditionally, however, it has sufficed to define it as the domain across which the first ten percent of temperature is gained or lost. Hence:
 
-$$ y_T = 2 \eta_T \sqrt{\kappa t} \approx 2.32 \sqrt{\kappa t} $$
+$$ z_T = 2 \eta_T \sqrt{\kappa t} \approx 2.32 \sqrt{\kappa t} $$
 
-Where $y_T$ is the boundary layer thickness, $\sqrt{\kappa t}$ is interpreted as the characteristic length scale of thermal diffusion $\kappa$, and $\eta_T$ is the inverse error function of $0.1$, a constant term approximately equal to $1.16$.
+Where $z_T$ is the boundary layer thickness, $\sqrt{\kappa t}$ is interpreted as the characteristic length scale of thermal diffusion $\kappa$, and $\eta_T$ is the inverse error function of $0.1$, a constant term approximately equal to $1.16$.
 
 As the boundary grows, so do the thermal buoyancy forces. The relevant *Rayleigh* number to parameterise the vigour of the incipient convection is taken over the boundary layer thickness itself, and hence grows as the layer grows:
 
-$$ \mathrm{Ra}_{y_T} = \frac{\alpha \Delta T g {{y_T}^*}^3}{\nu \kappa} $$
+$$ \mathrm{Ra}_{z_T} = \frac{\alpha \Delta T g {{z_T}^*}^3}{\nu \kappa} $$
 
 Where $\alpha$ is the thermal expansivity and $\nu$ is the dynamic viscosity $\frac{\nu}{\rho}$.
 
-Now what we are interested in is what the thickness of the boundary layer will be when the *Rayleigh* number defined over it, $\mathrm{Ra}_{y_T}$, is at its critical value, ${\mathrm{Ra}_{y_T}}_\mathrm{cr}$. Below this value, convective disruption of the layer will not be possible, as any perturbations within the layer will be thermally diffused before they can grow; while above this value, convection is inevitable and the conductive profile of the layer cannot be sustained. The expression for ${\mathrm{Ra}_{y_T}}_\mathrm{cr}$ is the same as that for $\mathrm{Ra}_{y_T}$, except that the temperature contrast $T$ is half that of the system as a whole; this is because the dimensionless temperature change across either boundary layer goes from zero or unit at the outer edge to exactly $0.5$ at the inner edge, where the layers face the tepid conditions of the intracellular fluid; so we write:
+Now what we are interested in is what the thickness of the boundary layer will be when the *Rayleigh* number defined over it, $\mathrm{Ra}_{z_T}$, is at its critical value, ${\mathrm{Ra}_{z_T}}_\mathrm{cr}$. Below this value, convective disruption of the layer will not be possible, as any perturbations within the layer will be thermally diffused before they can grow; while above this value, convection is inevitable and the conductive profile of the layer cannot be sustained. The expression for ${\mathrm{Ra}_{z_T}}_\mathrm{cr}$ is the same as that for $\mathrm{Ra}_{z_T}$, except that the temperature contrast $T$ is half that of the system as a whole; this is because the dimensionless temperature change across either boundary layer goes from zero or unit at the outer edge to exactly $0.5$ at the inner edge, where the layers face the tepid conditions of the intracellular fluid; so we write:
 
-$$ {\mathrm{Ra}_{y_T}}_\mathrm{cr} = \frac{\mathrm{Ra}_{y_T}}{2} $$
+$$ {\mathrm{Ra}_{z_T}}_\mathrm{cr} = \frac{\mathrm{Ra}_{z_T}}{2} $$
 
 And accordingly:
 
-$$ y_T = \left\{ \frac{2 \mathrm{Ra}_F \nu \kappa}{\alpha g \Delta T} \right\} ^{\frac{1}{3}} $$
+$$ z_T = \left\{ \frac{2 \mathrm{Ra}_F \nu \kappa}{\alpha g \Delta T} \right\} ^{\frac{1}{3}} $$
 
 Where $\mathrm{Ra}_F$ is coined to refer to the minimum critical *Rayleigh* number across the layer as defined when that layer is at the brink of collapse.
 
-At this point we might be tempted to define a general critical *Rayleigh* number for the layer by the same means we deduced one for the system as a whole previously. Unfortunately, the dynamic quality of the layer thickness $y_T$ poses one unknown too many. For a boundary layer that is developing through time, it is not guaranteed that an appropriate perturbation of the appropriate scale will emerge at the appropriate moment, nor even that the geometry of the layer will ever be sufficient to permit such a perturbation in the first place. We have come as far as analytical methods can take us; to close the loop, it is necessary to obtain $\mathrm{Ra}_F$ empirically:
+At this point we might be tempted to define a general critical *Rayleigh* number for the layer by the same means we deduced one for the system as a whole previously. Unfortunately, the dynamic quality of the layer thickness $z_T$ poses one unknown too many. For a boundary layer that is developing through time, it is not guaranteed that an appropriate perturbation of the appropriate scale will emerge at the appropriate moment, nor even that the geometry of the layer will ever be sufficient to permit such a perturbation in the first place. We have come as far as analytical methods can take us; to close the loop, it is necessary to obtain $\mathrm{Ra}_F$ empirically:
 
-$$ y_T = \left\{ \frac{807 \nu \kappa}{\alpha g \Delta T} \right\} ^{\frac{1}{3}} $$
+$$ z_T = \left\{ \frac{807 \nu \kappa}{\alpha g \Delta T} \right\} ^{\frac{1}{3}} $$
 
 Where the value $807$ is the experimentally determined $\mathrm{Ra}_F$ for a free-slip surface [@Jaupart1985-ig].
 
@@ -676,6 +681,8 @@ Or more generally:
 $$ \mathrm{Nu} \propto \mathrm{Ra}^\beta, \quad \beta \approx \frac{1}{3} $$
 
 That a scaling law of this form would obtain for two dimensionless flow constants such as these is not surprising; empirically, just such a relationship is in fact very widely attested [@Turcotte1969-ol; @McKenzie1974-wb; @Solomatov1995-is]. Authors have differed, however, on the proper value of $\beta$. Though the canonicity of the analytically-derived value of one third is beyond dispute, it is clear from the divergent results of numerous studies that, in any real scenario, many more variables than we have accounted for must enter the equation. Time-dependence, long-lived thermal heterogeneities, aspect ratio, internal heating, and countless other factors all have a part to play. Obtaining robust scaling laws that account for all these factors is the vexing business of this thesis.
+
++++
 
 ### Chaos and attraction: approximate solutions to insoluble equations
 

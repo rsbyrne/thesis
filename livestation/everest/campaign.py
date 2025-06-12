@@ -162,13 +162,20 @@ class Job(collabc.Sequence):
 class Campaign:
 
     def __init__(self,
-            workdir,
+            filepath,
+            selection,
             name,
-            *args,
-            timeout = None
+            workdir,
+            timeout = None,
             ):
         name = self.name = str(name)
-        self.args = args
+        if not isinstance(filepath, Path):
+            filepath = Path(filepath)
+        self.filepath = filepath.absolute()
+        if not isinstance(workdir, Path):
+            workdir = Path(workdir)
+        workdir = workdir.absolute()
+        self.selection = selection
         randid = self.randid = random.randint(1e12, 1e13-1)
         if isinstance(timeout, str):
             if timeout == 'None':
@@ -177,7 +184,7 @@ class Campaign:
                 timeout = float(timeout)
                 timeout = round(86400 * timeout)
         self.timeout = timeout
-        campaignname = self.campaignname = name + '_' + '-'.join(args)
+        campaignname = self.campaignname = name + '_' + '-'.join(selection)
         self.lockfilepath = Path(
             workdir, campaignname + LOCKSUFFIX
             )
@@ -287,9 +294,9 @@ class Campaign:
             str(self.workdir),
             self.campaignname,
             jobid,
-            *self.args
+            *self.selection
             )
-        cmd = ['python3', self.name + '.py', *args]
+        cmd = ['python3', str(self.filepath), *args]
 
         try:
 
@@ -397,6 +404,8 @@ class Campaign:
                     self.run_job(job)
                 except ExhaustedError:
                     break
+                except Warning as exc:
+                    self.log("A warning was raised.", exc, 'Continuing...')
         except Exception as exc:
             try:
                 self.log("There was a problem.", exc)
@@ -420,19 +429,18 @@ if __name__ == '__main__':
             flagarg[2:].split('=') for flagarg in flagargs
             )
         }
-    args = [arg for arg in allargs if not arg in flagargs]
-    if not args:
-        args = [':',]
+    selection = [arg for arg in allargs if not arg in flagargs]
+    if not selection:
+        selection = [':',]
 
     filepath = Path(filename).absolute()
     workdir = filepath.parent
     name = filepath.with_suffix('').name
 
     campaign = Campaign(
-        workdir,
-        name,
-        *args,
-        **kwargs,
+        filepath=filepath,
+        selection=selection,
+        **{**dict(name=name, workdir=workdir), **kwargs},
         )
 
     campaign.run()

@@ -128,6 +128,7 @@ class H5Wrap:
         self.filename = self.arg.h5filename
         global LOCKCODE
         self.lockcode = LOCKCODE
+        self.opener = None
     @mpi.dowrap
     def _open_h5file(self):
         global H5FILES
@@ -163,6 +164,7 @@ class H5Wrap:
             self.arg.h5file.close()
             del self.arg.h5file
             del H5FILES[self.filename]
+        self.opener = None
     def __exit__(self, *args):
         self._close_h5file()
         if self.master:

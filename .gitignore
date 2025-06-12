@@ -1,11 +1,9 @@
 # Custom
-data/
 scratch/
 cache/
-book/main/_build
-livestation/data
-livestation/scratch
-livestation/cache
+book/main/_build/
+/data
+livestation/data/
 *.pem
 *.log
 *.frm
