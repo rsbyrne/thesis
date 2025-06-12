@@ -2,7 +2,7 @@
 scratch/
 cache/
 book/main/_build/
-/data
+/data/
 livestation/data/
 *.pem
 *.log
