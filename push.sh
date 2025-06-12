@@ -9,6 +9,7 @@ git config --global user.email "rohan.byrne@gmail.com"
 git config --global user.name "rsbyrne"
 git add .
 git commit -m "Quick push"
+git ls-tree -r main --name-only > tracked.txt
 git push
 #ghp-import -n -p -f book/_build/html
 cd $currentDir

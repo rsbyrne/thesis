@@ -79,6 +79,7 @@ book/build.sh
 book/content/chapter_01_background/main.md
 book/content/chapter_02_foundations/conclusion.md
 book/content/chapter_02_foundations/cylindrical.md
+book/content/chapter_02_foundations/cylindrical_mixed.md
 book/content/chapter_02_foundations/cylindrical_old.md
 book/content/chapter_02_foundations/heating.md
 book/content/chapter_02_foundations/introduction.md
@@ -221,6 +222,7 @@ livestation/everest/fetch.py
 livestation/everest/globevars.py
 livestation/everest/linux/cliplogs.sh
 livestation/everest/linux/run.sh
+livestation/everest/looprun.sh
 livestation/everest/mpi.py
 livestation/everest/pyklet.py
 livestation/everest/reader.py
@@ -325,6 +327,7 @@ livestation/planetengine/utilities.py
 livestation/planetengine/visualisation/__init__.py
 livestation/planetengine/visualisation/quickfig.py
 livestation/production/simple_critical.py
+livestation/production/simple_critical_6.py
 livestation/production/simple_critical_aspect_f.py
 livestation/production/simple_critical_aspect_h_f03.py
 livestation/production/simple_critical_aspect_h_f04.py
@@ -698,6 +701,7 @@ production/2025/ms98_starling
 production/2025/ms98_starling.py
 production/2025/ms98_starling.txt
 production/2025/new_campaign.py
+production/2025/simple_critical_2.py
 production/campaign.py
 production/my_campaign.py
 production/my_project.py
@@ -1099,6 +1103,10 @@ resources/everest/everest/window/ax.py
 resources/everest/everest/window/canvas.py
 resources/everest/everest/window/colourmaps/__init__.py
 resources/everest/everest/window/colourmaps/turbo.py
+resources/everest/everest/window/data/__init__.py
+resources/everest/everest/window/data/channel.py
+resources/everest/everest/window/data/pile.py
+resources/everest/everest/window/data/spread.py
 resources/everest/everest/window/exceptions.py
 resources/everest/everest/window/fig.py
 resources/everest/everest/window/image.py
@@ -1742,6 +1750,7 @@ storage/condhfinsulating.pkl
 storage/condhfmixed.pkl
 storage/livestation
 storage/localscript.py
+storage/simple_critical_2__-_-_.data
 storage/simple_critical__-_-_.data
 storage/simple_sinu_0.png
 storage/simple_sinu_1.png
@@ -1756,6 +1765,7 @@ thesiscode/referencing/searchengine.py
 thesiscode/utilities/__init__.py
 thesiscode/utilities/cache.py
 thesiscode/utilities/misc.py
+tracked.txt
 vm.id
 vm.output
 working/book_scraps.md
