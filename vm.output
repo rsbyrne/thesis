@@ -8346,3 +8346,687 @@
 [W 2025-06-13 04:09:34.660 ServerApp] delete /workspace/storage/alphacrit_f_fine-Copy1.pkl
 [W 2025-06-13 04:09:34.670 ServerApp] delete /workspace/storage/alphacrit_h_fine-Copy1.pkl
 [W 2025-06-13 04:09:34.676 ServerApp] /home/morpheus/workspace/storage/alphacrit_h_fine-Copy1.pkl doesn't exist
+[W 2025-06-13 04:27:55.459 ServerApp] 500 PATCH /api/contents/workspace/storage/livestation/simple_critical.frm?1749786801617 (172.17.0.1): Unknown error renaming file: workspace/storage/livestation/simple_critical.frm [Errno 2] No such file or directory: '/home/morpheus/workspace/storage/simple_critical.frm'
+[W 2025-06-13 04:27:55.460 ServerApp] wrote error: "Unknown error renaming file: workspace/storage/livestation/simple_critical.frm [Errno 2] No such file or directory: '/home/morpheus/workspace/storage/simple_critical.frm'"
+    Traceback (most recent call last):
+      File "/usr/lib/python3.13/shutil.py", line 856, in move
+        os.rename(src, real_dst)
+        ~~~~~~~~~^^^^^^^^^^^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/simple_critical.frm' -> '/home/morpheus/workspace/storage/simple_critical.frm'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1069, in rename_file
+        await run_sync(shutil.move, old_os_path, new_os_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+      File "/usr/lib/python3.13/shutil.py", line 876, in move
+        copy_function(src, real_dst)
+        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/shutil.py", line 469, in copy2
+        copystat(src, dst, follow_symlinks=follow_symlinks)
+        ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/shutil.py", line 385, in copystat
+        lookup("utime")(dst, ns=(st.st_atime_ns, st.st_mtime_ns),
+        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            follow_symlinks=follow)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/morpheus/workspace/storage/simple_critical.frm'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1073, in rename_file
+        raise web.HTTPError(500, f"Unknown error renaming file: {old_path} {e}") from e
+    tornado.web.HTTPError: HTTP 500: Internal Server Error (Unknown error renaming file: workspace/storage/livestation/simple_critical.frm [Errno 2] No such file or directory: '/home/morpheus/workspace/storage/simple_critical.frm')
+[E 2025-06-13 04:27:55.463 ServerApp] {
+      "Host": "localhost:8890",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_critical/critical.ipynb",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+    }
+[E 2025-06-13 04:27:55.463 ServerApp] 500 PATCH /api/contents/workspace/storage/livestation/simple_critical.frm?1749786801617 (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 2073850.19ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 08:02:23.498 ServerApp] Uploading file to /workspace/storage/simple_critical_4__-_-_-_ (1).data
+[I 2025-06-13 08:02:23.531 ServerApp] Uploading file to /workspace/storage/simple_critical_2__-_-_ (3).data
+[I 2025-06-13 08:02:23.599 ServerApp] Uploading file to /workspace/storage/simple_critical_5__-_-_-_.data
+[I 2025-06-13 08:02:23.664 ServerApp] Uploading file to /workspace/storage/simple_critical__-_-_ (4).data
+[I 2025-06-13 08:02:23.735 ServerApp] Uploading file to /workspace/storage/simple_critical_3__-_-_-_ (1).data
+[W 2025-06-13 08:02:58.604 ServerApp] delete /workspace/storage/simple_critical__-_-_ .data
+[I 2025-06-13 08:04:22.906 ServerApp] Copying 'workspace/livestation/production/simple_critical_6.py' to '/workspace/storage'
+[I 2025-06-13 08:04:22.907 ServerApp] Copying 'workspace/livestation/production/simple_critical.py' to '/workspace/storage'
+[I 2025-06-13 08:04:55.680 ServerApp] Uploading file to /workspace/storage/simple_critical_3.py
+[I 2025-06-13 08:04:55.682 ServerApp] Uploading file to /workspace/storage/simple_critical_4.py
+[I 2025-06-13 08:04:55.683 ServerApp] Uploading file to /workspace/storage/simple_critical_5.py
+[I 2025-06-13 08:04:55.688 ServerApp] Uploading file to /workspace/storage/simple_critical_2.py
+[W 2025-06-13 08:05:06.113 ServerApp] delete /workspace/storage/simple_critical_2__-_-_.data
+[I 2025-06-13 08:06:05.749 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:08:05.946 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:10:06.134 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:11:46.974 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:13:47.445 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:14:48.783 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:14:49.359 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:15:22.412 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:15:22.916 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:16:25.880 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:16:26.212 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:16:40.456 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:16:40.701 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:16:55.331 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:16:55.561 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:16:55.732 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:17:10.119 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:17:10.310 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:17:15.497 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:17:15.699 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:17:15.896 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:17:16.037 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:17:59.165 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:17:59.333 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:17:59.496 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:18:07.581 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:18:07.781 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:18:07.994 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:18:27.370 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:18:37.837 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:18:42.550 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:18:45.398 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:18:52.135 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:18:52.314 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:19:00.701 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:19:13.399 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:21:13.604 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:21:29.532 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:21:30.843 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:21:31.063 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:21:31.237 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:21:31.396 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:23:29.643 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:24:03.664 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:24:04.552 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:24:53.785 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:26:54.862 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:28:04.051 ServerApp] Copying 'workspace/storage/livestation/alphacrit_aspect_f.pkl' to '/workspace/storage'
+[I 2025-06-13 08:28:04.052 ServerApp] Copying 'workspace/storage/livestation/alphacrit_aspect_h_f03.pkl' to '/workspace/storage'
+[I 2025-06-13 08:28:04.053 ServerApp] Copying 'workspace/storage/livestation/alphacrit_aspect_h_f04.pkl' to '/workspace/storage'
+[I 2025-06-13 08:28:04.103 ServerApp] Copying 'workspace/storage/livestation/alphacrit_aspect_h_f05.pkl' to '/workspace/storage'
+[I 2025-06-13 08:28:54.966 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:29:08.988 ServerApp] Copying 'workspace/storage/simple_critical_all.data' to '/workspace/storage'
+[I 2025-06-13 08:30:55.041 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:32:55.135 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:34:07.148 ServerApp] Copying 'workspace/storage/simple_critical_all.data' to '/workspace/storage'
+[I 2025-06-13 08:34:55.319 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:35:02.036 ServerApp] Creating new directory in /workspace/storage
+[I 2025-06-13 08:36:55.593 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:51:01.893 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:53:02.178 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:55:02.868 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:58:23.354 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:58:23.551 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:58:23.719 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 08:58:23.868 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 09:00:23.521 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 09:00:42.909 ServerApp] Copying 'workspace/storage/simple_critical_all.data' to '/workspace/storage'
+[W 2025-06-13 09:01:31.262 ServerApp] delete /workspace/storage/simple_critical_all-Copy1.data
+[W 2025-06-13 09:01:31.266 ServerApp] delete /workspace/storage/simple_critical_all-Copy2.data
+[W 2025-06-13 09:01:31.280 ServerApp] delete /workspace/storage/simple_critical_all-Copy3.data
+[W 2025-06-13 09:01:31.296 ServerApp] /home/morpheus/workspace/storage/simple_critical_all-Copy3.data doesn't exist
+[I 2025-06-13 09:02:23.915 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 09:02:55.331 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 09:03:02.882 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 09:03:10.446 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 09:03:25.506 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 09:03:36.062 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 09:03:45.681 ServerApp] Kernel started: 270600b8-7ea7-4bce-872b-e885d23a518a
+[I 2025-06-13 09:03:49.119 ServerApp] Connecting to kernel 270600b8-7ea7-4bce-872b-e885d23a518a.
+[I 2025-06-13 09:05:03.173 ServerApp] Kernel restarted: dcf45fe2-9b80-40a2-b554-ea1e9d6ebde3
+[I 2025-06-13 09:05:03.209 ServerApp] Starting buffering for dcf45fe2-9b80-40a2-b554-ea1e9d6ebde3:88146f3c-fe35-4b5e-9806-0e7ddbf44c10
+[I 2025-06-13 09:05:03.266 ServerApp] Connecting to kernel dcf45fe2-9b80-40a2-b554-ea1e9d6ebde3.
+[I 2025-06-13 09:05:03.266 ServerApp] Restoring connection for dcf45fe2-9b80-40a2-b554-ea1e9d6ebde3:88146f3c-fe35-4b5e-9806-0e7ddbf44c10
+[I 2025-06-13 09:05:08.620 ServerApp] Saving file at /workspace/working/working_004.ipynb
+[I 2025-06-13 09:05:36.814 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 09:07:37.206 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 09:09:37.359 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 09:11:37.611 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 09:13:37.788 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 09:14:59.120 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 09:15:18.442 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 09:15:19.196 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 10:47:56.006 ServerApp] Connecting to kernel 1897f9b2-918a-40ea-a3c9-15e2a2ad2d8f.
+[I 2025-06-13 10:47:56.058 ServerApp] Connecting to kernel 18b2e2b5-6d9c-4b49-a8ad-13a7c40fae1f.
+[I 2025-06-13 10:47:56.244 ServerApp] Connecting to kernel 7e0dc392-1499-476a-8025-753471e21d51.
+[I 2025-06-13 10:47:56.371 ServerApp] Connecting to kernel dcf45fe2-9b80-40a2-b554-ea1e9d6ebde3.
+[I 2025-06-13 10:47:56.380 ServerApp] Connecting to kernel 5046d3fb-32f9-4133-8720-f33f8ca953fa.
+[I 2025-06-13 10:47:56.516 ServerApp] Connecting to kernel 6c084b28-b7d4-44e5-a192-8f9782bb1556.
+[I 2025-06-13 10:47:56.577 ServerApp] Connecting to kernel b57dd19a-16dc-4b87-af1c-e2f533ad8231.
+[I 2025-06-13 10:47:56.615 ServerApp] Connecting to kernel f4109c1b-6e15-4191-a15a-21376457c919.
+[I 2025-06-13 10:47:56.668 ServerApp] Connecting to kernel 270600b8-7ea7-4bce-872b-e885d23a518a.
+[I 2025-06-13 10:47:57.262 ServerApp] Starting buffering for 5046d3fb-32f9-4133-8720-f33f8ca953fa:ed88a19d-70d9-45b6-be86-b7013057ac2a
+[I 2025-06-13 10:47:57.337 ServerApp] Starting buffering for 6c084b28-b7d4-44e5-a192-8f9782bb1556:252f2a56-e86b-4197-b23c-3c3715854032
+[W 2025-06-13 10:47:57.444 ServerApp] 404 GET /api/contents/workspace/storage/simple_critical_6.py?content=0&hash=0&1749811676699 (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.02ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:47:57.444 ServerApp] 404 GET /api/contents/workspace/storage/simple_critical_6.py?content=0&hash=0&1749811676699 (172.17.0.1): No such file or directory: workspace/storage/simple_critical_6.py
+[W 2025-06-13 10:47:57.445 ServerApp] 404 GET /api/contents/workspace/storage/simple_critical_2.py?content=0&hash=0&1749811676699 (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.37ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:47:57.445 ServerApp] 404 GET /api/contents/workspace/storage/simple_critical_2.py?content=0&hash=0&1749811676699 (172.17.0.1): No such file or directory: workspace/storage/simple_critical_2.py
+[W 2025-06-13 10:47:57.445 ServerApp] 404 GET /api/contents/workspace/storage/simple_critical.py?content=0&hash=0&1749811676699 (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.67ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:47:57.445 ServerApp] 404 GET /api/contents/workspace/storage/simple_critical.py?content=0&hash=0&1749811676699 (172.17.0.1): No such file or directory: workspace/storage/simple_critical.py
+[W 2025-06-13 10:47:57.452 ServerApp] 404 GET /api/contents/workspace/storage/simple_critical_5.py?content=0&hash=0&1749811676700 (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.50ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:47:57.453 ServerApp] 404 GET /api/contents/workspace/storage/simple_critical_5.py?content=0&hash=0&1749811676700 (172.17.0.1): No such file or directory: workspace/storage/simple_critical_5.py
+[W 2025-06-13 10:47:57.472 ServerApp] 404 GET /api/contents/workspace/storage/simple_critical.py?content=0&hash=0&1749811676700 (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.56ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:47:57.472 ServerApp] 404 GET /api/contents/workspace/storage/simple_critical.py?content=0&hash=0&1749811676700 (172.17.0.1): No such file or directory: workspace/storage/simple_critical.py
+[W 2025-06-13 10:47:57.474 ServerApp] 404 GET /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000234.campaign.job.log?content=0&hash=0&1749811676701 (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.23ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:47:57.474 ServerApp] 404 GET /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000234.campaign.job.log?content=0&hash=0&1749811676701 (172.17.0.1): No such file or directory: workspace/storage/livestation/simple_critical_6/simple_critical_6_:-:-:_000000000234.campaign.job.log
+[W 2025-06-13 10:47:57.487 ServerApp] 404 GET /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000238.campaign.job.log?content=0&hash=0&1749811676701 (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.97ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:47:57.487 ServerApp] 404 GET /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000238.campaign.job.log?content=0&hash=0&1749811676701 (172.17.0.1): No such file or directory: workspace/storage/livestation/simple_critical_6/simple_critical_6_:-:-:_000000000238.campaign.job.log
+[W 2025-06-13 10:47:57.512 ServerApp] 404 GET /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000247.campaign.job.log?content=0&hash=0&1749811676701 (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.93ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:47:57.512 ServerApp] 404 GET /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000247.campaign.job.log?content=0&hash=0&1749811676701 (172.17.0.1): No such file or directory: workspace/storage/livestation/simple_critical_6/simple_critical_6_:-:-:_000000000247.campaign.job.log
+[W 2025-06-13 10:47:57.513 ServerApp] 404 GET /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000260.campaign.job.log?content=0&hash=0&1749811676702 (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.25ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:47:57.513 ServerApp] 404 GET /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000260.campaign.job.log?content=0&hash=0&1749811676702 (172.17.0.1): No such file or directory: workspace/storage/livestation/simple_critical_6/simple_critical_6_:-:-:_000000000260.campaign.job.log
+[W 2025-06-13 10:47:57.513 ServerApp] 404 GET /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000264.campaign.job.log?content=0&hash=0&1749811676702 (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.56ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:47:57.513 ServerApp] 404 GET /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000264.campaign.job.log?content=0&hash=0&1749811676702 (172.17.0.1): No such file or directory: workspace/storage/livestation/simple_critical_6/simple_critical_6_:-:-:_000000000264.campaign.job.log
+[W 2025-06-13 10:47:57.514 ServerApp] 404 GET /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000256.campaign.job.log?content=0&hash=0&1749811676702 (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.52ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:47:57.514 ServerApp] 404 GET /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000256.campaign.job.log?content=0&hash=0&1749811676702 (172.17.0.1): No such file or directory: workspace/storage/livestation/simple_critical_6/simple_critical_6_:-:-:_000000000256.campaign.job.log
+[W 2025-06-13 10:47:57.552 ServerApp] 404 GET /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000265.campaign.job.log?content=0&hash=0&1749811676703 (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.96ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:47:57.552 ServerApp] 404 GET /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000265.campaign.job.log?content=0&hash=0&1749811676703 (172.17.0.1): No such file or directory: workspace/storage/livestation/simple_critical_6/simple_critical_6_:-:-:_000000000265.campaign.job.log
+[W 2025-06-13 10:47:57.553 ServerApp] 404 GET /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000268.campaign.job.log?content=0&hash=0&1749811676703 (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.51ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:47:57.553 ServerApp] 404 GET /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000268.campaign.job.log?content=0&hash=0&1749811676703 (172.17.0.1): No such file or directory: workspace/storage/livestation/simple_critical_6/simple_critical_6_:-:-:_000000000268.campaign.job.log
+[I 2025-06-13 10:48:04.494 ServerApp] Connecting to kernel 1897f9b2-918a-40ea-a3c9-15e2a2ad2d8f.
+[I 2025-06-13 10:48:04.593 ServerApp] Connecting to kernel 270600b8-7ea7-4bce-872b-e885d23a518a.
+[I 2025-06-13 10:48:04.710 ServerApp] Connecting to kernel b57dd19a-16dc-4b87-af1c-e2f533ad8231.
+[I 2025-06-13 10:48:04.980 ServerApp] Connecting to kernel dcf45fe2-9b80-40a2-b554-ea1e9d6ebde3.
+[I 2025-06-13 10:48:04.986 ServerApp] Connecting to kernel 18b2e2b5-6d9c-4b49-a8ad-13a7c40fae1f.
+[I 2025-06-13 10:48:05.088 ServerApp] Connecting to kernel f4109c1b-6e15-4191-a15a-21376457c919.
+[I 2025-06-13 10:48:05.089 ServerApp] Connecting to kernel 7e0dc392-1499-476a-8025-753471e21d51.
+[W 2025-06-13 10:48:05.546 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.05ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:06.579 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.09ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:06.603 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.72ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:07.394 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.04ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:07.411 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.07ms referer=http://localhost:8890/lab/workspaces/auto-E
+[I 2025-06-13 10:48:07.906 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2025-06-13 10:48:07.911 LabApp] Build is up to date
+[W 2025-06-13 10:48:09.051 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.06ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:09.052 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.57ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:09.053 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.70ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:09.564 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.06ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:09.565 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.70ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:09.565 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.07ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:09.607 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.78ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:09.618 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.62ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:10.241 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.23ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:10.241 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.51ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:10.246 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.56ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:10.272 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.84ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:10.273 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.18ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:10.552 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23nu_ra_scaling?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.06ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:10.787 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.28ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:10.788 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.57ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:10.788 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:10.806 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.76ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:10.806 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.10ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:11.076 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23nu_ra_scaling?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.02ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:11.106 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23beta_k_nu_scaling?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.75ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:11.368 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.02ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:11.379 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.21ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:11.379 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.46ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:11.397 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.80ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:11.397 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.12ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:11.694 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23nu_ra_scaling?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.02ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:11.727 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23beta_k_nu_scaling?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.75ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:12.375 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.11ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:12.375 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.39ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:12.376 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.53ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:12.412 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.92ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:48:12.413 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.28ms referer=http://localhost:8890/lab/workspaces/auto-E
+[I 2025-06-13 10:49:40.707 ServerApp] Connecting to kernel 1897f9b2-918a-40ea-a3c9-15e2a2ad2d8f.
+[I 2025-06-13 10:49:40.788 ServerApp] Connecting to kernel 18b2e2b5-6d9c-4b49-a8ad-13a7c40fae1f.
+[I 2025-06-13 10:49:40.855 ServerApp] Connecting to kernel 7e0dc392-1499-476a-8025-753471e21d51.
+[I 2025-06-13 10:49:40.898 ServerApp] Connecting to kernel dcf45fe2-9b80-40a2-b554-ea1e9d6ebde3.
+[I 2025-06-13 10:49:40.942 ServerApp] Connecting to kernel 5046d3fb-32f9-4133-8720-f33f8ca953fa.
+[I 2025-06-13 10:49:41.000 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2025-06-13 10:49:41.005 LabApp] Build is up to date
+[I 2025-06-13 10:49:41.095 ServerApp] Connecting to kernel 6c084b28-b7d4-44e5-a192-8f9782bb1556.
+[I 2025-06-13 10:49:41.098 ServerApp] Connecting to kernel b57dd19a-16dc-4b87-af1c-e2f533ad8231.
+[I 2025-06-13 10:49:41.265 ServerApp] Connecting to kernel f4109c1b-6e15-4191-a15a-21376457c919.
+[I 2025-06-13 10:49:41.310 ServerApp] Connecting to kernel 270600b8-7ea7-4bce-872b-e885d23a518a.
+[I 2025-06-13 10:49:41.555 ServerApp] Starting buffering for 5046d3fb-32f9-4133-8720-f33f8ca953fa:887bc8a3-aaa7-450e-992a-e12740855c21
+[I 2025-06-13 10:49:41.982 ServerApp] Starting buffering for 6c084b28-b7d4-44e5-a192-8f9782bb1556:d45be2b7-3866-49ca-b305-44c93d60d10f
+[I 2025-06-13 10:50:06.915 ServerApp] Connecting to kernel 1897f9b2-918a-40ea-a3c9-15e2a2ad2d8f.
+[I 2025-06-13 10:50:06.969 ServerApp] Connecting to kernel 18b2e2b5-6d9c-4b49-a8ad-13a7c40fae1f.
+[I 2025-06-13 10:50:07.033 ServerApp] Connecting to kernel 7e0dc392-1499-476a-8025-753471e21d51.
+[I 2025-06-13 10:50:07.080 ServerApp] Connecting to kernel dcf45fe2-9b80-40a2-b554-ea1e9d6ebde3.
+[I 2025-06-13 10:50:07.150 ServerApp] Connecting to kernel 5046d3fb-32f9-4133-8720-f33f8ca953fa.
+[I 2025-06-13 10:50:07.159 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2025-06-13 10:50:07.165 LabApp] Build is up to date
+[I 2025-06-13 10:50:07.217 ServerApp] Connecting to kernel 6c084b28-b7d4-44e5-a192-8f9782bb1556.
+[I 2025-06-13 10:50:07.267 ServerApp] Connecting to kernel b57dd19a-16dc-4b87-af1c-e2f533ad8231.
+[I 2025-06-13 10:50:07.368 ServerApp] Connecting to kernel f4109c1b-6e15-4191-a15a-21376457c919.
+[I 2025-06-13 10:50:07.448 ServerApp] Connecting to kernel 270600b8-7ea7-4bce-872b-e885d23a518a.
+[I 2025-06-13 10:50:08.249 ServerApp] Starting buffering for 5046d3fb-32f9-4133-8720-f33f8ca953fa:243b49ed-40f4-436d-b47f-425a46c6eedf
+[I 2025-06-13 10:50:08.274 ServerApp] Starting buffering for 6c084b28-b7d4-44e5-a192-8f9782bb1556:c1e6abe0-0923-479e-be07-8faa13977780
+[I 2025-06-13 10:50:14.819 ServerApp] Connecting to kernel 1897f9b2-918a-40ea-a3c9-15e2a2ad2d8f.
+[I 2025-06-13 10:50:15.076 ServerApp] Connecting to kernel dcf45fe2-9b80-40a2-b554-ea1e9d6ebde3.
+[I 2025-06-13 10:50:15.082 ServerApp] Connecting to kernel 7e0dc392-1499-476a-8025-753471e21d51.
+[I 2025-06-13 10:50:15.232 ServerApp] Connecting to kernel f4109c1b-6e15-4191-a15a-21376457c919.
+[I 2025-06-13 10:50:15.237 ServerApp] Connecting to kernel b57dd19a-16dc-4b87-af1c-e2f533ad8231.
+[I 2025-06-13 10:50:15.314 ServerApp] Connecting to kernel 18b2e2b5-6d9c-4b49-a8ad-13a7c40fae1f.
+[I 2025-06-13 10:50:15.315 ServerApp] Connecting to kernel 270600b8-7ea7-4bce-872b-e885d23a518a.
+[W 2025-06-13 10:50:15.896 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.07ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:16.879 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.01ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:16.929 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.84ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:17.361 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondh?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.06ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:17.363 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondhmixed?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:18.206 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.11ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:18.207 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.41ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:18.207 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.55ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:18.650 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.22ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:18.651 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.62ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:18.651 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.60ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:18.676 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.80ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:18.677 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.15ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:19.155 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.96ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:19.156 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.67ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:19.157 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.03ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:19.173 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.44ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:19.174 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.74ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:19.497 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23nu_ra_scaling?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.08ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:19.712 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.16ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:19.712 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.44ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:19.716 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.55ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:19.729 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.74ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:19.730 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.08ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:20.092 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23nu_ra_scaling?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.08ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:20.120 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23beta_k_nu_scaling?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.87ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:20.332 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.07ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:20.332 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.40ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:20.333 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.55ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:20.368 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.76ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:20.369 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.55ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:21.343 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23nu_ra_scaling?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.99ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:21.383 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23beta_k_nu_scaling?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.79ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:21.609 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.18ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:21.610 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.47ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:21.610 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.54ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:21.636 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.84ms referer=http://localhost:8890/lab/workspaces/auto-E
+[W 2025-06-13 10:50:21.637 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.19ms referer=http://localhost:8890/lab/workspaces/auto-E
+[I 2025-06-13 10:50:40.323 ServerApp] Kernel shutdown: 1897f9b2-918a-40ea-a3c9-15e2a2ad2d8f
+[I 2025-06-13 10:50:40.348 ServerApp] Kernel shutdown: 18b2e2b5-6d9c-4b49-a8ad-13a7c40fae1f
+[I 2025-06-13 10:50:40.356 ServerApp] Kernel shutdown: 7e0dc392-1499-476a-8025-753471e21d51
+[I 2025-06-13 10:50:40.363 ServerApp] Kernel shutdown: dcf45fe2-9b80-40a2-b554-ea1e9d6ebde3
+[I 2025-06-13 10:50:40.375 ServerApp] Kernel shutdown: 5046d3fb-32f9-4133-8720-f33f8ca953fa
+[I 2025-06-13 10:50:40.423 ServerApp] Kernel shutdown: 6c084b28-b7d4-44e5-a192-8f9782bb1556
+[I 2025-06-13 10:50:40.706 ServerApp] Kernel shutdown: f4109c1b-6e15-4191-a15a-21376457c919
+[I 2025-06-13 10:50:40.706 ServerApp] Kernel shutdown: b57dd19a-16dc-4b87-af1c-e2f533ad8231
+[I 2025-06-13 10:50:40.769 ServerApp] Kernel shutdown: 270600b8-7ea7-4bce-872b-e885d23a518a
+[I 2025-06-13 10:51:01.516 ServerApp] EOF on FD 34; stopping reading
+[I 2025-06-13 10:51:01.617 ServerApp] Terminal 2 closed
+[I 2025-06-13 10:51:01.617 ServerApp] EOF on FD 33; stopping reading
+[I 2025-06-13 10:51:01.718 ServerApp] Terminal 3 closed
+[I 2025-06-13 10:51:01.719 ServerApp] EOF on FD 13; stopping reading
+[I 2025-06-13 10:51:01.819 ServerApp] Terminal 1 closed
+[E 2025-06-13 10:51:01.823 ServerApp] Exception in callback functools.partial(<function WebSocketProtocol._run_callback.<locals>.<lambda> at 0x7f16e407f060>, <Task finished name='Task-6294259' coro=<TermSocket.on_message() done, defined at /usr/local/lib/python3.13/dist-packages/jupyter_server_terminals/handlers.py:60> exception=AssertionError()>)
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/ioloop.py", line 750, in _run_callback
+        ret = callback()
+      File "/usr/local/lib/python3.13/dist-packages/tornado/websocket.py", line 640, in <lambda>
+        self.stream.io_loop.add_future(result, lambda f: f.result())
+                                                         ~~~~~~~~^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server_terminals/handlers.py", line 62, in on_message
+        await ensure_async(super().on_message(message))  # type:ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/tornado/gen.py", line 233, in wrapper
+        yielded = ctx_run(next, result)
+      File "/usr/local/lib/python3.13/dist-packages/terminado/websocket.py", line 101, in on_message
+        assert self.terminal is not None
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    AssertionError
+[E 2025-06-13 10:51:02.457 ServerApp] Uncaught exception GET /terminals/websocket/1 (172.17.0.1)
+    HTTPServerRequest(protocol='http', host='localhost:8890', method='GET', uri='/terminals/websocket/1', version='HTTP/1.1', remote_ip='172.17.0.1')
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server_terminals/handlers.py", line 58, in get
+        await ensure_async(resp)  # type:ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/tornado/websocket.py", line 273, in get
+        await self.ws_connection.accept_connection(self)
+      File "/usr/local/lib/python3.13/dist-packages/tornado/websocket.py", line 863, in accept_connection
+        await self._accept_connection(handler)
+      File "/usr/local/lib/python3.13/dist-packages/tornado/websocket.py", line 946, in _accept_connection
+        await self._receive_frame_loop()
+      File "/usr/local/lib/python3.13/dist-packages/tornado/websocket.py", line 1102, in _receive_frame_loop
+        await self._receive_frame()
+      File "/usr/local/lib/python3.13/dist-packages/tornado/websocket.py", line 1193, in _receive_frame
+        await handled_future
+    AssertionError
+[I 2025-06-13 10:51:02.459 ServerApp] EOF on FD 120; stopping reading
+[I 2025-06-13 10:51:02.559 ServerApp] Terminal 5 closed
+[I 2025-06-13 10:51:02.560 ServerApp] EOF on FD 66; stopping reading
+[I 2025-06-13 10:51:02.661 ServerApp] Terminal 4 closed
+[E 2025-06-13 10:51:02.662 ServerApp] Exception in callback functools.partial(<function WebSocketProtocol._run_callback.<locals>.<lambda> at 0x7f16e574ccc0>, <Task finished name='Task-6294267' coro=<TermSocket.on_message() done, defined at /usr/local/lib/python3.13/dist-packages/jupyter_server_terminals/handlers.py:60> exception=AssertionError()>)
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/ioloop.py", line 750, in _run_callback
+        ret = callback()
+      File "/usr/local/lib/python3.13/dist-packages/tornado/websocket.py", line 640, in <lambda>
+        self.stream.io_loop.add_future(result, lambda f: f.result())
+                                                         ~~~~~~~~^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server_terminals/handlers.py", line 62, in on_message
+        await ensure_async(super().on_message(message))  # type:ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/tornado/gen.py", line 233, in wrapper
+        yielded = ctx_run(next, result)
+      File "/usr/local/lib/python3.13/dist-packages/terminado/websocket.py", line 101, in on_message
+        assert self.terminal is not None
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    AssertionError
+[E 2025-06-13 10:51:02.662 ServerApp] Uncaught exception GET /terminals/websocket/4 (172.17.0.1)
+    HTTPServerRequest(protocol='http', host='localhost:8890', method='GET', uri='/terminals/websocket/4', version='HTTP/1.1', remote_ip='172.17.0.1')
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server_terminals/handlers.py", line 58, in get
+        await ensure_async(resp)  # type:ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/tornado/websocket.py", line 273, in get
+        await self.ws_connection.accept_connection(self)
+      File "/usr/local/lib/python3.13/dist-packages/tornado/websocket.py", line 863, in accept_connection
+        await self._accept_connection(handler)
+      File "/usr/local/lib/python3.13/dist-packages/tornado/websocket.py", line 946, in _accept_connection
+        await self._receive_frame_loop()
+      File "/usr/local/lib/python3.13/dist-packages/tornado/websocket.py", line 1102, in _receive_frame_loop
+        await self._receive_frame()
+      File "/usr/local/lib/python3.13/dist-packages/tornado/websocket.py", line 1193, in _receive_frame
+        await handled_future
+    AssertionError
+[I 2025-06-13 10:51:14.055 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2025-06-13 10:51:14.060 LabApp] Build is up to date
+[I 2025-06-13 10:51:33.312 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2025-06-13 10:51:33.316 LabApp] Build is up to date
+[I 2025-06-13 10:52:18.673 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2025-06-13 10:52:18.678 LabApp] Build is up to date
+[I 2025-06-13 10:52:43.876 ServerApp] Kernel started: 2a316ae9-a8b2-47f0-a175-6496cc52fe46
+[I 2025-06-13 10:52:44.287 ServerApp] Connecting to kernel 2a316ae9-a8b2-47f0-a175-6496cc52fe46.
+[I 2025-06-13 10:52:44.309 ServerApp] Connecting to kernel 2a316ae9-a8b2-47f0-a175-6496cc52fe46.
+[I 2025-06-13 10:52:44.332 ServerApp] Connecting to kernel 2a316ae9-a8b2-47f0-a175-6496cc52fe46.
+[I 2025-06-13 10:52:47.447 ServerApp] Kernel restarted: 2a316ae9-a8b2-47f0-a175-6496cc52fe46
+[I 2025-06-13 10:52:47.464 ServerApp] Starting buffering for 2a316ae9-a8b2-47f0-a175-6496cc52fe46:8ce908e8-f56a-4f40-9c55-0d9fa7b91a8b
+[I 2025-06-13 10:52:47.491 ServerApp] Connecting to kernel 2a316ae9-a8b2-47f0-a175-6496cc52fe46.
+[I 2025-06-13 10:52:47.491 ServerApp] Restoring connection for 2a316ae9-a8b2-47f0-a175-6496cc52fe46:8ce908e8-f56a-4f40-9c55-0d9fa7b91a8b
+[I 2025-06-13 10:54:43.277 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 10:56:43.399 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 10:58:27.685 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:00:28.228 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:02:30.489 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:04:31.541 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:06:32.111 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:08:33.339 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:10:34.076 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:12:35.685 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:13:26.388 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:15:26.618 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:17:26.002 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:19:26.540 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:21:28.284 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:23:28.457 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:25:29.226 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:27:30.331 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:31:31.360 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:33:31.532 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:35:31.929 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:37:32.437 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:39:32.669 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:41:33.048 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:43:33.314 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:45:33.739 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[W 2025-06-13 11:48:45.594 ServerApp] 404 GET /api/contents/78597931a524b28b1482c2a2d61838dfc252fd7df84a5a384aa4c924f66742d2.tex?content=0&hash=0&1749815324836 (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.84ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04_critical/critical.ipynb
+[W 2025-06-13 11:48:45.594 ServerApp] 404 GET /api/contents/78597931a524b28b1482c2a2d61838dfc252fd7df84a5a384aa4c924f66742d2.tex?content=0&hash=0&1749815324836 (172.17.0.1): No such file or directory: 78597931a524b28b1482c2a2d61838dfc252fd7df84a5a384aa4c924f66742d2.tex
+[I 2025-06-13 11:49:33.968 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:51:34.123 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:53:34.615 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:55:34.760 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:57:35.527 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 11:59:36.151 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:01:22.952 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:01:23.201 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:01:24.100 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:02:18.637 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:03:58.973 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:04:08.617 ServerApp] Starting buffering for 2a316ae9-a8b2-47f0-a175-6496cc52fe46:8ce908e8-f56a-4f40-9c55-0d9fa7b91a8b
+[I 2025-06-13 12:26:21.284 ServerApp] Connecting to kernel 2a316ae9-a8b2-47f0-a175-6496cc52fe46.
+[I 2025-06-13 12:26:21.582 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2025-06-13 12:26:21.586 LabApp] Build is up to date
+[I 2025-06-13 12:26:22.061 ServerApp] Starting buffering for 2a316ae9-a8b2-47f0-a175-6496cc52fe46:e8cb48ad-184a-4dac-b9fa-68ba697e8004
+[I 2025-06-13 12:26:23.243 ServerApp] Connecting to kernel 2a316ae9-a8b2-47f0-a175-6496cc52fe46.
+[I 2025-06-13 12:28:22.809 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:30:23.095 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:32:23.734 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:33:24.365 ServerApp] Kernel started: d0aa8258-634a-4f4f-a4ac-119ad18c1e93
+[I 2025-06-13 12:33:24.746 ServerApp] Connecting to kernel d0aa8258-634a-4f4f-a4ac-119ad18c1e93.
+[I 2025-06-13 12:33:41.596 ServerApp] Kernel started: 8730ee2b-bd56-45d0-b4b7-33c5e16cc2cb
+[I 2025-06-13 12:33:41.990 ServerApp] Connecting to kernel 8730ee2b-bd56-45d0-b4b7-33c5e16cc2cb.
+[W 2025-06-13 12:33:42.809 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.01ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:42.810 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.56ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:42.860 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.82ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:43.236 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.15ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:43.237 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:43.237 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.54ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:43.265 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.72ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:43.269 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.59ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:44.015 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.97ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:44.030 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.06ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:44.059 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.88ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:44.088 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.74ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:44.102 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.64ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:44.352 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.13ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:44.352 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.42ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:44.365 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.65ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:44.366 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.65ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:44.366 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.99ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:44.707 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.05ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:44.743 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.83ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:44.744 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.57ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:44.745 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.67ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:44.746 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.08ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:45.098 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.21ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:45.099 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:45.099 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.86ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:45.163 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.05ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:45.164 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:45.410 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.00ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:45.415 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.63ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:45.416 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.57ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:45.447 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.87ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[W 2025-06-13 12:33:45.448 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 1.21ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02_foundations/cylindrical.ipynb
+[I 2025-06-13 12:34:24.374 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:36:01.551 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:37:32.724 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:39:33.050 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:40:59.332 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:40:59.775 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:42:17.543 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:42:17.891 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:44:17.847 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:44:44.271 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:44:52.151 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[W 2025-06-13 12:46:05.264 ServerApp] 404 GET /api/contents/c73909576d9f212a5956cc1ef48af4f3be54fb5c9791e547160ebce4adb93a31.tex?content=0&hash=0&1749818764724 (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 0.66ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04_critical/critical.ipynb
+[W 2025-06-13 12:46:05.264 ServerApp] 404 GET /api/contents/c73909576d9f212a5956cc1ef48af4f3be54fb5c9791e547160ebce4adb93a31.tex?content=0&hash=0&1749818764724 (172.17.0.1): No such file or directory: c73909576d9f212a5956cc1ef48af4f3be54fb5c9791e547160ebce4adb93a31.tex
+[I 2025-06-13 12:46:53.041 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:48:54.205 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:50:55.622 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:52:55.910 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:54:56.602 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 12:56:57.355 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:02:57.874 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:03:46.908 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:05:48.536 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:07:49.873 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:09:50.043 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:11:50.880 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:13:51.276 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:15:51.514 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:17:51.918 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:19:52.179 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:21:29.342 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:23:29.547 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:25:29.928 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:36:34.125 ServerApp] Creating new file in /workspace/livestation/production
+[W 2025-06-13 13:36:34.125 ServerApp] 403 POST /api/contents/workspace/livestation/production?1749821793948 (172.17.0.1): Permission denied: workspace/livestation/production/untitled.txt
+[W 2025-06-13 13:36:34.125 ServerApp] wrote error: 'Permission denied: workspace/livestation/production/untitled.txt'
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 230, in perm_to_403
+        yield
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 220, in atomic_writing
+        with atomic_writing(os_path, *args, **kwargs) as f:
+             ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/contextlib.py", line 141, in __enter__
+        return next(self.gen)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 114, in atomic_writing
+        fileobj = open(path, "wb", **kwargs)  # noqa: SIM115
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/livestation/production/untitled.txt'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 286, in post
+        await self._new_untitled(path, type=type, ext=ext)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 233, in _new_untitled
+        model = await ensure_async(
+                ^^^^^^^^^^^^^^^^^^^
+            self.contents_manager.new_untitled(path=path, type=type, ext=ext)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 993, in new_untitled
+        return await self.new(model, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 1019, in new
+        model = await self.save(model, path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/largefilemanager.py", line 133, in save
+        return await super().save(model, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 969, in save
+        await self._save_file(os_path, model["content"], model.get("format"))
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 572, in _save_file
+        with self.atomic_writing(os_path, text=False) as f:
+             ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/contextlib.py", line 141, in __enter__
+        return next(self.gen)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 217, in atomic_writing
+        with self.perm_to_403(os_path):
+             ~~~~~~~~~~~~~~~~^^^^^^^^^
+      File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+        self.gen.throw(value)
+        ~~~~~~~~~~~~~~^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 239, in perm_to_403
+        raise HTTPError(403, "Permission denied: %s" % path) from e
+    tornado.web.HTTPError: HTTP 403: Forbidden (Permission denied: workspace/livestation/production/untitled.txt)
+[W 2025-06-13 13:36:34.133 ServerApp] 403 POST /api/contents/workspace/livestation/production?1749821793948 (1395001477e84bcda5d6adfb057d3a4b@172.17.0.1) 9.30ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:36:51.789 ServerApp] Creating new file in /workspace/production/2025
+[I 2025-06-13 13:39:06.936 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 13:39:07.203 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 13:39:07.407 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 13:39:07.655 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 13:51:10.859 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 13:52:00.425 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:53:10.930 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 13:54:00.877 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:56:01.210 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 13:58:01.622 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 14:00:02.224 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 14:01:54.084 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:01:54.337 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:01:54.480 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:01:54.632 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:01:54.798 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:02:03.091 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-13 14:02:09.313 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:02:09.491 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:02:09.663 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:02:24.126 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:02:24.348 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:02:24.535 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:02:24.899 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:02:50.859 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:02:51.035 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:02:51.185 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:03:05.415 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:03:05.629 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:03:05.839 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:03:05.968 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:03:17.398 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:03:17.595 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:03:17.718 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:05:09.246 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:05:09.450 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:05:09.622 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:05:09.808 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:06:25.288 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:06:25.505 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:06:25.717 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:06:25.853 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:06:36.110 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:06:36.365 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:06:36.503 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:06:36.663 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:07:32.817 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:07:33.012 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:07:33.122 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:07:50.472 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:07:51.505 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:07:51.707 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:07:52.838 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:07:53.045 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:07:53.206 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:08:25.116 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:08:25.290 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:08:25.448 ServerApp] Saving file at /workspace/production/2025/simple_critical_enhance.py
+[I 2025-06-13 14:08:33.509 ServerApp] New terminal with automatic name: 1

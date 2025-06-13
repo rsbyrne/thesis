@@ -1731,7 +1731,16 @@ resources/useful/latex.ipynb
 scraps/doctrine.md
 scraps/researchengineers.md
 scraps/scraps.md
+storage/alphacrit_aspect_fine.pkl
+storage/alphacrit_aspect_h_f06.pkl
+storage/alphacrit_aspect_h_f07.pkl
+storage/alphacrit_aspect_h_f08.pkl
+storage/alphacrit_aspect_h_f09.pkl
+storage/alphacrit_aspect_h_f10.pkl
 storage/alphacrit_f_3.pkl
+storage/alphacrit_f_fine.pkl
+storage/alphacrit_h_fine.pkl
+storage/alphacrit_internal_fine.pkl
 storage/annucond.png
 storage/cond_f0-1.png
 storage/cond_f0-2.png
@@ -1751,6 +1760,7 @@ storage/condhfmixed.pkl
 storage/livestation
 storage/localscript.py
 storage/simple_critical_2__-_-_.data
+storage/simple_critical_6_:-:-:.data
 storage/simple_critical__-_-_.data
 storage/simple_sinu_0.png
 storage/simple_sinu_1.png
