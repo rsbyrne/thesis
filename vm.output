@@ -7507,3 +7507,842 @@
 [I 2025-06-12 06:18:59.353 ServerApp] Saving file at /workspace/push.sh
 [I 2025-06-12 06:19:01.767 ServerApp] Saving file at /workspace/push.sh
 [I 2025-06-12 06:19:02.237 ServerApp] Saving file at /workspace/push.sh
+[I 2025-06-12 07:11:20.475 ServerApp] EOF on FD 106; stopping reading
+[I 2025-06-12 07:11:20.576 ServerApp] Terminal 5 closed
+[I 2025-06-12 07:12:06.146 ServerApp] Connecting to kernel dcf45fe2-9b80-40a2-b554-ea1e9d6ebde3.
+[I 2025-06-12 07:12:34.866 ServerApp] Kernel restarted: dcf45fe2-9b80-40a2-b554-ea1e9d6ebde3
+[I 2025-06-12 07:12:34.877 ServerApp] Starting buffering for dcf45fe2-9b80-40a2-b554-ea1e9d6ebde3:88146f3c-fe35-4b5e-9806-0e7ddbf44c10
+[I 2025-06-12 07:12:34.932 ServerApp] Connecting to kernel dcf45fe2-9b80-40a2-b554-ea1e9d6ebde3.
+[I 2025-06-12 07:12:34.932 ServerApp] Restoring connection for dcf45fe2-9b80-40a2-b554-ea1e9d6ebde3:88146f3c-fe35-4b5e-9806-0e7ddbf44c10
+[I 2025-06-12 07:12:57.137 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:14:06.657 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:15:23.446 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:15:23.662 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:15:40.453 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:15:40.690 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:17:40.670 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:17:51.082 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:17:58.254 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:18:02.746 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:19:02.277 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:19:02.434 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:19:32.785 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:19:52.758 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:19:55.102 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:19:55.310 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:20:12.654 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:20:13.458 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:20:51.186 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:20:51.374 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:21:04.094 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:21:04.218 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:21:04.425 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:21:12.534 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:21:25.935 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[W 2025-06-12 07:21:37.159 ServerApp] 404 GET /api/contents/e72d6a9d426265ec4a831987faff0d441b2a12690e5b38ecfabb6a31f76288a5.tex?content=0&hash=0&1749712897091 (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 1.81ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/book/content/chapter_04_critical/critical.ipynb
+[W 2025-06-12 07:21:37.159 ServerApp] 404 GET /api/contents/e72d6a9d426265ec4a831987faff0d441b2a12690e5b38ecfabb6a31f76288a5.tex?content=0&hash=0&1749712897091 (172.17.0.1): No such file or directory: e72d6a9d426265ec4a831987faff0d441b2a12690e5b38ecfabb6a31f76288a5.tex
+[I 2025-06-12 07:22:53.974 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:22:54.138 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:23:00.246 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:23:21.987 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:23:22.158 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:23:34.191 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:24:52.887 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:25:43.791 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:25:43.987 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:26:00.222 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:26:00.423 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:26:00.616 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:26:58.131 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:26:58.371 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:26:58.699 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:27:29.464 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:27:29.654 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:27:36.339 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:27:36.500 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:29:36.507 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:31:36.607 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[I 2025-06-12 07:33:37.972 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[W 2025-06-12 08:39:32.044 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 2.76ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/working/working_004.ipynb
+[W 2025-06-12 08:39:32.046 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 0.77ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/working/working_004.ipynb
+[W 2025-06-12 08:39:32.046 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 1.20ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/working/working_004.ipynb
+[W 2025-06-12 08:39:32.070 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 0.81ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/working/working_004.ipynb
+[W 2025-06-12 08:39:32.071 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 0.61ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/working/working_004.ipynb
+[W 2025-06-12 08:39:33.039 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 1.15ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/working/working_004.ipynb
+[W 2025-06-12 08:39:33.040 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 0.77ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/working/working_004.ipynb
+[W 2025-06-12 08:39:33.040 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 1.24ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/working/working_004.ipynb
+[W 2025-06-12 08:39:33.268 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23cylindrical_internal_geotherm?_xsrf=[secret] (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 1.23ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/working/working_004.ipynb
+[W 2025-06-12 08:39:33.269 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondinternal?_xsrf=[secret] (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 0.79ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/working/working_004.ipynb
+[W 2025-06-12 08:39:33.412 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23simplesinu?_xsrf=[secret] (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 1.19ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/working/working_004.ipynb
+[W 2025-06-12 08:39:33.414 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondffit?_xsrf=[secret] (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 0.80ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/working/working_004.ipynb
+[W 2025-06-12 08:39:33.414 ServerApp] 404 GET /files/workspace/book/content/chapter_02_foundations/%23isocondf?_xsrf=[secret] (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 1.21ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/working/working_004.ipynb
+[I 2025-06-12 08:41:18.978 ServerApp] Saving file at /workspace/book/content/chapter_04_critical/critical.ipynb
+[W 2025-06-13 03:54:36.411 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A.data?1749786876411 (172.17.0.1): Permission denied: workspace/storage/livestation/simple_critical_6_:-:-:.data
+[W 2025-06-13 03:54:36.411 ServerApp] wrote error: 'Permission denied: workspace/storage/livestation/simple_critical_6_:-:-:.data'
+    Traceback (most recent call last):
+      File "/usr/lib/python3.13/shutil.py", line 856, in move
+        os.rename(src, real_dst)
+        ~~~~~~~~~^^^^^^^^^^^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/simple_critical_6/simple_critical_6_:-:-:.data' -> '/home/morpheus/workspace/storage/livestation/simple_critical_6_:-:-:.data'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 230, in perm_to_403
+        yield
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1069, in rename_file
+        await run_sync(shutil.move, old_os_path, new_os_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+      File "/usr/lib/python3.13/shutil.py", line 876, in move
+        copy_function(src, real_dst)
+        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/shutil.py", line 468, in copy2
+        copyfile(src, dst, follow_symlinks=follow_symlinks)
+        ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/shutil.py", line 262, in copyfile
+        with open(dst, 'wb') as fdst:
+             ~~~~^^^^^^^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/simple_critical_6_:-:-:.data'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1068, in rename_file
+        with self.perm_to_403():
+             ~~~~~~~~~~~~~~~~^^
+      File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+        self.gen.throw(value)
+        ~~~~~~~~~~~~~~^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 239, in perm_to_403
+        raise HTTPError(403, "Permission denied: %s" % path) from e
+    tornado.web.HTTPError: HTTP 403: Forbidden (Permission denied: workspace/storage/livestation/simple_critical_6_:-:-:.data)
+[W 2025-06-13 03:54:36.726 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A.data?1749786876411 (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 318.93ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000234.campaign.job.log
+[W 2025-06-13 03:54:36.726 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A.frm?1749786876411 (172.17.0.1): Permission denied: workspace/storage/livestation/simple_critical_6_:-:-:.frm
+[W 2025-06-13 03:54:36.726 ServerApp] wrote error: 'Permission denied: workspace/storage/livestation/simple_critical_6_:-:-:.frm'
+    Traceback (most recent call last):
+      File "/usr/lib/python3.13/shutil.py", line 856, in move
+        os.rename(src, real_dst)
+        ~~~~~~~~~^^^^^^^^^^^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/simple_critical_6/simple_critical_6_:-:-:.frm' -> '/home/morpheus/workspace/storage/livestation/simple_critical_6_:-:-:.frm'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 230, in perm_to_403
+        yield
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1069, in rename_file
+        await run_sync(shutil.move, old_os_path, new_os_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+      File "/usr/lib/python3.13/shutil.py", line 876, in move
+        copy_function(src, real_dst)
+        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/shutil.py", line 468, in copy2
+        copyfile(src, dst, follow_symlinks=follow_symlinks)
+        ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/shutil.py", line 262, in copyfile
+        with open(dst, 'wb') as fdst:
+             ~~~~^^^^^^^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/simple_critical_6_:-:-:.frm'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1068, in rename_file
+        with self.perm_to_403():
+             ~~~~~~~~~~~~~~~~^^
+      File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+        self.gen.throw(value)
+        ~~~~~~~~~~~~~~^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 239, in perm_to_403
+        raise HTTPError(403, "Permission denied: %s" % path) from e
+    tornado.web.HTTPError: HTTP 403: Forbidden (Permission denied: workspace/storage/livestation/simple_critical_6_:-:-:.frm)
+[W 2025-06-13 03:54:36.728 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A.frm?1749786876411 (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 321.09ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/storage/livestation/simple_critical_6/simple_critical_6_%3A-%3A-%3A_000000000234.campaign.job.log
+[I 2025-06-13 03:54:57.283 ServerApp] New terminal with automatic name: 5
+[I 2025-06-13 03:57:41.269 ServerApp] EOF on FD 121; stopping reading
+[I 2025-06-13 03:57:41.370 ServerApp] Terminal 5 closed
+[W 2025-06-13 03:59:47.791 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/simple_critical_6_%3A-%3A-%3A.data?1749787187792 (172.17.0.1): Permission denied: workspace/storage/livestation/simple_critical_6_:-:-:.data
+[W 2025-06-13 03:59:47.791 ServerApp] wrote error: 'Permission denied: workspace/storage/livestation/simple_critical_6_:-:-:.data'
+    Traceback (most recent call last):
+      File "/usr/lib/python3.13/shutil.py", line 856, in move
+        os.rename(src, real_dst)
+        ~~~~~~~~~^^^^^^^^^^^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/simple_critical_6_:-:-:.data' -> '/home/morpheus/workspace/storage/simple_critical_6_:-:-:.data'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 230, in perm_to_403
+        yield
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1069, in rename_file
+        await run_sync(shutil.move, old_os_path, new_os_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+      File "/usr/lib/python3.13/shutil.py", line 877, in move
+        os.unlink(src)
+        ~~~~~~~~~^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/simple_critical_6_:-:-:.data'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1068, in rename_file
+        with self.perm_to_403():
+             ~~~~~~~~~~~~~~~~^^
+      File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+        self.gen.throw(value)
+        ~~~~~~~~~~~~~~^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 239, in perm_to_403
+        raise HTTPError(403, "Permission denied: %s" % path) from e
+    tornado.web.HTTPError: HTTP 403: Forbidden (Permission denied: workspace/storage/livestation/simple_critical_6_:-:-:.data)
+[W 2025-06-13 03:59:47.794 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/simple_critical_6_%3A-%3A-%3A.data?1749787187792 (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 5.38ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/tracked.txt
+[I 2025-06-13 04:00:02.963 ServerApp] New terminal with automatic name: 5
+[W 2025-06-13 04:07:36.102 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_f_fine.pkl?1749787656096 (172.17.0.1): Permission denied: workspace/storage/livestation/alphacrit_f_fine.pkl
+[W 2025-06-13 04:07:36.102 ServerApp] wrote error: 'Permission denied: workspace/storage/livestation/alphacrit_f_fine.pkl'
+    Traceback (most recent call last):
+      File "/usr/lib/python3.13/shutil.py", line 856, in move
+        os.rename(src, real_dst)
+        ~~~~~~~~~^^^^^^^^^^^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_f_fine.pkl' -> '/home/morpheus/workspace/storage/alphacrit_f_fine.pkl'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 230, in perm_to_403
+        yield
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1069, in rename_file
+        await run_sync(shutil.move, old_os_path, new_os_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+      File "/usr/lib/python3.13/shutil.py", line 877, in move
+        os.unlink(src)
+        ~~~~~~~~~^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_f_fine.pkl'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1068, in rename_file
+        with self.perm_to_403():
+             ~~~~~~~~~~~~~~~~^^
+      File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+        self.gen.throw(value)
+        ~~~~~~~~~~~~~~^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 239, in perm_to_403
+        raise HTTPError(403, "Permission denied: %s" % path) from e
+    tornado.web.HTTPError: HTTP 403: Forbidden (Permission denied: workspace/storage/livestation/alphacrit_f_fine.pkl)
+[W 2025-06-13 04:07:36.105 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_f_fine.pkl?1749787656096 (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 9.60ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/storage/livestation
+[W 2025-06-13 04:07:36.106 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_aspect_h_f08.pkl?1749787656097 (172.17.0.1): Permission denied: workspace/storage/livestation/alphacrit_aspect_h_f08.pkl
+[W 2025-06-13 04:07:36.106 ServerApp] wrote error: 'Permission denied: workspace/storage/livestation/alphacrit_aspect_h_f08.pkl'
+    Traceback (most recent call last):
+      File "/usr/lib/python3.13/shutil.py", line 856, in move
+        os.rename(src, real_dst)
+        ~~~~~~~~~^^^^^^^^^^^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_aspect_h_f08.pkl' -> '/home/morpheus/workspace/storage/alphacrit_aspect_h_f08.pkl'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 230, in perm_to_403
+        yield
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1069, in rename_file
+        await run_sync(shutil.move, old_os_path, new_os_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+      File "/usr/lib/python3.13/shutil.py", line 877, in move
+        os.unlink(src)
+        ~~~~~~~~~^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_aspect_h_f08.pkl'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1068, in rename_file
+        with self.perm_to_403():
+             ~~~~~~~~~~~~~~~~^^
+      File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+        self.gen.throw(value)
+        ~~~~~~~~~~~~~~^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 239, in perm_to_403
+        raise HTTPError(403, "Permission denied: %s" % path) from e
+    tornado.web.HTTPError: HTTP 403: Forbidden (Permission denied: workspace/storage/livestation/alphacrit_aspect_h_f08.pkl)
+[W 2025-06-13 04:07:36.107 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_aspect_h_f08.pkl?1749787656097 (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 8.56ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/storage/livestation
+[W 2025-06-13 04:07:36.108 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_aspect_h_f06.pkl?1749787656097 (172.17.0.1): Permission denied: workspace/storage/livestation/alphacrit_aspect_h_f06.pkl
+[W 2025-06-13 04:07:36.108 ServerApp] wrote error: 'Permission denied: workspace/storage/livestation/alphacrit_aspect_h_f06.pkl'
+    Traceback (most recent call last):
+      File "/usr/lib/python3.13/shutil.py", line 856, in move
+        os.rename(src, real_dst)
+        ~~~~~~~~~^^^^^^^^^^^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_aspect_h_f06.pkl' -> '/home/morpheus/workspace/storage/alphacrit_aspect_h_f06.pkl'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 230, in perm_to_403
+        yield
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1069, in rename_file
+        await run_sync(shutil.move, old_os_path, new_os_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+      File "/usr/lib/python3.13/shutil.py", line 877, in move
+        os.unlink(src)
+        ~~~~~~~~~^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_aspect_h_f06.pkl'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1068, in rename_file
+        with self.perm_to_403():
+             ~~~~~~~~~~~~~~~~^^
+      File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+        self.gen.throw(value)
+        ~~~~~~~~~~~~~~^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 239, in perm_to_403
+        raise HTTPError(403, "Permission denied: %s" % path) from e
+    tornado.web.HTTPError: HTTP 403: Forbidden (Permission denied: workspace/storage/livestation/alphacrit_aspect_h_f06.pkl)
+[W 2025-06-13 04:07:36.110 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_aspect_h_f06.pkl?1749787656097 (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 13.62ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/storage/livestation
+[W 2025-06-13 04:07:36.112 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_aspect_h_f07.pkl?1749787656097 (172.17.0.1): Permission denied: workspace/storage/livestation/alphacrit_aspect_h_f07.pkl
+[W 2025-06-13 04:07:36.112 ServerApp] wrote error: 'Permission denied: workspace/storage/livestation/alphacrit_aspect_h_f07.pkl'
+    Traceback (most recent call last):
+      File "/usr/lib/python3.13/shutil.py", line 856, in move
+        os.rename(src, real_dst)
+        ~~~~~~~~~^^^^^^^^^^^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_aspect_h_f07.pkl' -> '/home/morpheus/workspace/storage/alphacrit_aspect_h_f07.pkl'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 230, in perm_to_403
+        yield
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1069, in rename_file
+        await run_sync(shutil.move, old_os_path, new_os_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+      File "/usr/lib/python3.13/shutil.py", line 877, in move
+        os.unlink(src)
+        ~~~~~~~~~^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_aspect_h_f07.pkl'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1068, in rename_file
+        with self.perm_to_403():
+             ~~~~~~~~~~~~~~~~^^
+      File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+        self.gen.throw(value)
+        ~~~~~~~~~~~~~~^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 239, in perm_to_403
+        raise HTTPError(403, "Permission denied: %s" % path) from e
+    tornado.web.HTTPError: HTTP 403: Forbidden (Permission denied: workspace/storage/livestation/alphacrit_aspect_h_f07.pkl)
+[W 2025-06-13 04:07:36.114 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_aspect_h_f07.pkl?1749787656097 (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 3.84ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/storage/livestation
+[W 2025-06-13 04:07:36.120 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_aspect_fine.pkl?1749787656098 (172.17.0.1): Permission denied: workspace/storage/livestation/alphacrit_aspect_fine.pkl
+[W 2025-06-13 04:07:36.120 ServerApp] wrote error: 'Permission denied: workspace/storage/livestation/alphacrit_aspect_fine.pkl'
+    Traceback (most recent call last):
+      File "/usr/lib/python3.13/shutil.py", line 856, in move
+        os.rename(src, real_dst)
+        ~~~~~~~~~^^^^^^^^^^^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_aspect_fine.pkl' -> '/home/morpheus/workspace/storage/alphacrit_aspect_fine.pkl'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 230, in perm_to_403
+        yield
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1069, in rename_file
+        await run_sync(shutil.move, old_os_path, new_os_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+      File "/usr/lib/python3.13/shutil.py", line 877, in move
+        os.unlink(src)
+        ~~~~~~~~~^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_aspect_fine.pkl'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1068, in rename_file
+        with self.perm_to_403():
+             ~~~~~~~~~~~~~~~~^^
+      File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+        self.gen.throw(value)
+        ~~~~~~~~~~~~~~^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 239, in perm_to_403
+        raise HTTPError(403, "Permission denied: %s" % path) from e
+    tornado.web.HTTPError: HTTP 403: Forbidden (Permission denied: workspace/storage/livestation/alphacrit_aspect_fine.pkl)
+[W 2025-06-13 04:07:36.122 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_aspect_fine.pkl?1749787656098 (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 3.21ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/storage/livestation
+[W 2025-06-13 04:07:36.136 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_h_fine.pkl?1749787656096 (172.17.0.1): Permission denied: workspace/storage/livestation/alphacrit_h_fine.pkl
+[W 2025-06-13 04:07:36.136 ServerApp] wrote error: 'Permission denied: workspace/storage/livestation/alphacrit_h_fine.pkl'
+    Traceback (most recent call last):
+      File "/usr/lib/python3.13/shutil.py", line 856, in move
+        os.rename(src, real_dst)
+        ~~~~~~~~~^^^^^^^^^^^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_h_fine.pkl' -> '/home/morpheus/workspace/storage/alphacrit_h_fine.pkl'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 230, in perm_to_403
+        yield
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1069, in rename_file
+        await run_sync(shutil.move, old_os_path, new_os_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+      File "/usr/lib/python3.13/shutil.py", line 877, in move
+        os.unlink(src)
+        ~~~~~~~~~^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_h_fine.pkl'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1068, in rename_file
+        with self.perm_to_403():
+             ~~~~~~~~~~~~~~~~^^
+      File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+        self.gen.throw(value)
+        ~~~~~~~~~~~~~~^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 239, in perm_to_403
+        raise HTTPError(403, "Permission denied: %s" % path) from e
+    tornado.web.HTTPError: HTTP 403: Forbidden (Permission denied: workspace/storage/livestation/alphacrit_h_fine.pkl)
+[W 2025-06-13 04:07:36.138 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_h_fine.pkl?1749787656096 (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 44.48ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/storage/livestation
+[W 2025-06-13 04:07:36.138 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_aspect_h_f09.pkl?1749787656097 (172.17.0.1): Permission denied: workspace/storage/livestation/alphacrit_aspect_h_f09.pkl
+[W 2025-06-13 04:07:36.139 ServerApp] wrote error: 'Permission denied: workspace/storage/livestation/alphacrit_aspect_h_f09.pkl'
+    Traceback (most recent call last):
+      File "/usr/lib/python3.13/shutil.py", line 856, in move
+        os.rename(src, real_dst)
+        ~~~~~~~~~^^^^^^^^^^^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_aspect_h_f09.pkl' -> '/home/morpheus/workspace/storage/alphacrit_aspect_h_f09.pkl'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 230, in perm_to_403
+        yield
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1069, in rename_file
+        await run_sync(shutil.move, old_os_path, new_os_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+      File "/usr/lib/python3.13/shutil.py", line 877, in move
+        os.unlink(src)
+        ~~~~~~~~~^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_aspect_h_f09.pkl'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1068, in rename_file
+        with self.perm_to_403():
+             ~~~~~~~~~~~~~~~~^^
+      File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+        self.gen.throw(value)
+        ~~~~~~~~~~~~~~^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 239, in perm_to_403
+        raise HTTPError(403, "Permission denied: %s" % path) from e
+    tornado.web.HTTPError: HTTP 403: Forbidden (Permission denied: workspace/storage/livestation/alphacrit_aspect_h_f09.pkl)
+[W 2025-06-13 04:07:36.140 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_aspect_h_f09.pkl?1749787656097 (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 25.78ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/storage/livestation
+[W 2025-06-13 04:07:36.140 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_aspect_h_f10.pkl?1749787656096 (172.17.0.1): Permission denied: workspace/storage/livestation/alphacrit_aspect_h_f10.pkl
+[W 2025-06-13 04:07:36.141 ServerApp] wrote error: 'Permission denied: workspace/storage/livestation/alphacrit_aspect_h_f10.pkl'
+    Traceback (most recent call last):
+      File "/usr/lib/python3.13/shutil.py", line 856, in move
+        os.rename(src, real_dst)
+        ~~~~~~~~~^^^^^^^^^^^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_aspect_h_f10.pkl' -> '/home/morpheus/workspace/storage/alphacrit_aspect_h_f10.pkl'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 230, in perm_to_403
+        yield
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1069, in rename_file
+        await run_sync(shutil.move, old_os_path, new_os_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+      File "/usr/lib/python3.13/shutil.py", line 877, in move
+        os.unlink(src)
+        ~~~~~~~~~^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_aspect_h_f10.pkl'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1068, in rename_file
+        with self.perm_to_403():
+             ~~~~~~~~~~~~~~~~^^
+      File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+        self.gen.throw(value)
+        ~~~~~~~~~~~~~~^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 239, in perm_to_403
+        raise HTTPError(403, "Permission denied: %s" % path) from e
+    tornado.web.HTTPError: HTTP 403: Forbidden (Permission denied: workspace/storage/livestation/alphacrit_aspect_h_f10.pkl)
+[W 2025-06-13 04:07:36.142 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_aspect_h_f10.pkl?1749787656096 (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 46.43ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/storage/livestation
+[W 2025-06-13 04:07:36.148 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_internal_fine.pkl?1749787656097 (172.17.0.1): Permission denied: workspace/storage/livestation/alphacrit_internal_fine.pkl
+[W 2025-06-13 04:07:36.148 ServerApp] wrote error: 'Permission denied: workspace/storage/livestation/alphacrit_internal_fine.pkl'
+    Traceback (most recent call last):
+      File "/usr/lib/python3.13/shutil.py", line 856, in move
+        os.rename(src, real_dst)
+        ~~~~~~~~~^^^^^^^^^^^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_internal_fine.pkl' -> '/home/morpheus/workspace/storage/alphacrit_internal_fine.pkl'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 230, in perm_to_403
+        yield
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1069, in rename_file
+        await run_sync(shutil.move, old_os_path, new_os_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+      File "/usr/lib/python3.13/shutil.py", line 877, in move
+        os.unlink(src)
+        ~~~~~~~~~^^^^^
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/storage/livestation/alphacrit_internal_fine.pkl'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1068, in rename_file
+        with self.perm_to_403():
+             ~~~~~~~~~~~~~~~~^^
+      File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+        self.gen.throw(value)
+        ~~~~~~~~~~~~~~^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 239, in perm_to_403
+        raise HTTPError(403, "Permission denied: %s" % path) from e
+    tornado.web.HTTPError: HTTP 403: Forbidden (Permission denied: workspace/storage/livestation/alphacrit_internal_fine.pkl)
+[W 2025-06-13 04:07:36.150 ServerApp] 403 PATCH /api/contents/workspace/storage/livestation/alphacrit_internal_fine.pkl?1749787656097 (0ea98f75647e4e26b31f53d287b5b621@172.17.0.1) 35.24ms referer=http://localhost:8890/lab/workspaces/auto-E/tree/workspace/storage/livestation
+[I 2025-06-13 04:08:35.750 ServerApp] Copying 'workspace/storage/livestation/alphacrit_aspect_fine.pkl' to '/workspace/storage'
+[I 2025-06-13 04:08:35.752 ServerApp] Copying 'workspace/storage/livestation/alphacrit_aspect_h_f06.pkl' to '/workspace/storage'
+[I 2025-06-13 04:08:35.752 ServerApp] Copying 'workspace/storage/livestation/alphacrit_aspect_h_f07.pkl' to '/workspace/storage'
+[I 2025-06-13 04:08:35.753 ServerApp] Copying 'workspace/storage/livestation/alphacrit_aspect_h_f08.pkl' to '/workspace/storage'
+[I 2025-06-13 04:08:35.754 ServerApp] Copying 'workspace/storage/livestation/alphacrit_aspect_h_f09.pkl' to '/workspace/storage'
+[I 2025-06-13 04:08:36.244 ServerApp] Copying 'workspace/storage/livestation/alphacrit_f_fine.pkl' to '/workspace/storage'
+[I 2025-06-13 04:08:36.245 ServerApp] Copying 'workspace/storage/livestation/alphacrit_aspect_h_f10.pkl' to '/workspace/storage'
+[I 2025-06-13 04:08:36.246 ServerApp] Copying 'workspace/storage/livestation/alphacrit_h_fine.pkl' to '/workspace/storage'
+[I 2025-06-13 04:08:36.246 ServerApp] Copying 'workspace/storage/livestation/alphacrit_internal_fine.pkl' to '/workspace/storage'
+[W 2025-06-13 04:09:03.867 ServerApp] delete /workspace/storage/alphacrit_aspect_fine-Copy1.pkl
+[W 2025-06-13 04:09:03.869 ServerApp] delete /workspace/storage/alphacrit_aspect_h_f09-Copy1.pkl
+[W 2025-06-13 04:09:03.872 ServerApp] delete /workspace/storage/alphacrit_aspect_h_f06-Copy1.pkl
+[W 2025-06-13 04:09:03.877 ServerApp] delete /workspace/storage/alphacrit_aspect_h_f10-Copy1.pkl
+[W 2025-06-13 04:09:03.880 ServerApp] delete /workspace/storage/alphacrit_aspect_h_f07-Copy1.pkl
+[W 2025-06-13 04:09:03.893 ServerApp] delete /workspace/storage/alphacrit_aspect_h_f08-Copy1.pkl
+[W 2025-06-13 04:09:03.899 ServerApp] /home/morpheus/workspace/storage/alphacrit_aspect_h_f10-Copy1.pkl doesn't exist
+[W 2025-06-13 04:09:03.899 ServerApp] /home/morpheus/workspace/storage/alphacrit_aspect_h_f07-Copy1.pkl doesn't exist
+[W 2025-06-13 04:09:34.657 ServerApp] delete /workspace/storage/alphacrit_internal_fine-Copy1.pkl
+[W 2025-06-13 04:09:34.660 ServerApp] delete /workspace/storage/alphacrit_f_fine-Copy1.pkl
+[W 2025-06-13 04:09:34.670 ServerApp] delete /workspace/storage/alphacrit_h_fine-Copy1.pkl
+[W 2025-06-13 04:09:34.676 ServerApp] /home/morpheus/workspace/storage/alphacrit_h_fine-Copy1.pkl doesn't exist
