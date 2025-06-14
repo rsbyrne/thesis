@@ -54,7 +54,7 @@ SOCK='/var/run/docker.sock'
 > $OUTPUTFILE
 docker run \
   -v $MOUNTFROM:$MOUNTTO -v $SOCK:$SOCK \
-  --shm-size 2g -p 8888:8888 \
+  --shm-size 2g -p 8888:9999 \
   --interactive --tty --detach \
   $IMAGE \
   $SCRIPT &> $OUTPUTFILE

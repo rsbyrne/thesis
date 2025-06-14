@@ -2,8 +2,10 @@
 ''''''
 ###############################################################################
 
-from . import utilities
-from . import analysis
+from . import (
+    utilities, analysis, common, cylindrical, visualisation,
+    # isovisc, arrhenius, viscoplastic, cospar,
+    )
 
 ###############################################################################
 ###############################################################################

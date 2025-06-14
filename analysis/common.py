@@ -2,15 +2,11 @@
 ''''''
 ###############################################################################
 
-import os
 import itertools
 
-import pandas as pd
-import numpy as np
 from PIL import Image
 
-from thesiscode.utilities.cache import hard_cache
-import aliases
+from aliases import *
 from . import analysis
 
 from everest.h5anchor import Reader, Fetch, Scope
@@ -18,9 +14,10 @@ from everest.window import raster
     
 
 def get_reader():
-    return Reader('merged', aliases.datadir)
+    return Reader('merged', datadir)
 
-def make_typeskeys():
+@utilities.cache.hard_cache('typeskeys')
+def get_typeskeys():
     reader = get_reader()
     types = dict()
     with reader.open():
@@ -35,22 +32,18 @@ def make_typeskeys():
 #     print('Done!')
     typeskeys = {k : set(sk for sk, sv in types.items() if sv == k) for k in set(types.values())}
     return typeskeys
-def get_typeskeys():
-    return hard_cache('typeskeys', make_typeskeys)
 
-def make_typescopes():
+@utilities.cache.hard_cache('typescopes')
+def get_typescopes():
     typeskeys = get_typeskeys()
     return {k : Scope(zip(v, itertools.repeat('...'))) for k, v in typeskeys.items()}
-def get_typescopes():
-    return hard_cache('typescopes', make_typescopes)
 
-def make_inputs():
+@utilities.cache.hard_cache('allinputs')
+def get_inputs():
     typescopes = get_typescopes()
     reader = get_reader()
     inputs = {k: reader[v : 'inputs'] for k, v in typescopes.items()}
     return inputs
-def get_inputs():
-    return hard_cache('allinputs', make_inputs)
 
 def make_inputs_frame(inputs):
     inputs = pd.DataFrame(inputs).transpose()
@@ -149,8 +142,8 @@ class Rasters(dict):
 def make_rasters(reader, inputs, dest):
     datakeys = ['theta', 'epsilon', 'psi']
     errorkeys = []
-    initialpath = os.path.join(aliases.cachedir, 'rasters', dest, 'initial')
-    finalpath = os.path.join(aliases.cachedir, 'rasters', dest, 'final')
+    initialpath = os.path.join(cachedir, 'rasters', dest, 'initial')
+    finalpath = os.path.join(cachedir, 'rasters', dest, 'final')
     if os.path.isdir(initialpath) and os.path.isdir(finalpath):
         return initialpath, finalpath
     os.makedirs(initialpath, exist_ok = True)
