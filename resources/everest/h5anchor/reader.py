@@ -40,7 +40,7 @@ class Reader(H5Manager):
         # expects h5filewrap
         if searchArea is None:
             searchArea = self.h5file
-        # print("Seeking", key, "from", searchArea)
+        print("Seeking", key, "from", searchArea)
         splitkey = key.split('/')
         try:
             if splitkey[0] == '':
@@ -174,12 +174,13 @@ class Reader(H5Manager):
         if type(key) in {tuple, list}:
             key = self.join(*key)
         key = os.path.abspath(os.path.join(self.cwd, key))
-        # print("Getting string:", key)
+        print("Getting string:", key)
         sought = self._seek(key, _indices = _indices)
         resolved = self._seekresolve(sought)
         return resolved
 
     def _getfetch(self, fetch, scope = None):
+        print("Fetching")
         return fetch(self.__getitem__, scope, path = self.cwd)
 
     def _getslice(self, inp):

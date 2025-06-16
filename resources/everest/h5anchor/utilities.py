@@ -1,4 +1,4 @@
-import collections
+from collections import abc as collabc
 
 from everest.wordhash import w_hash
 
@@ -8,7 +8,7 @@ def flatten_dict(d, parent_key = '', sep = '_'):
     parent_key = parent_key.strip(sep)
     for k, v in d.items():
         new_key = parent_key + sep + k if parent_key else k
-        if isinstance(v, collections.MutableMapping):
+        if isinstance(v, collabc.MutableMapping):
             items.extend(flatten_dict(v, new_key, sep).items())
         else:
             items.append((new_key, v))

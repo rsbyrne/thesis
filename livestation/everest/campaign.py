@@ -58,7 +58,7 @@ def get_logger(path):
         raise ValueError
 #     @mpi.dowrap
     def log(*messages):
-        messages = (str(datetime.datetime.now()), *messages, '')
+        messages = (datetime.datetime.now(), *messages, '')
         with path.open(mode='a') as logfile:
             for msg in messages:
                 logfile.write('\n' + str(msg))
@@ -150,7 +150,7 @@ class Job(collabc.Sequence):
             job = jobs[self.jobno]
         except IndexError:
             raise ExhaustedError
-        return tuple(float(a) for a in job)
+        return tuple(a if a is None else float(a) for a in job)
 
     def __len__(self):
         return len(self.dims)
@@ -183,7 +183,7 @@ class Campaign:
             else:
                 timeout = float(timeout)
                 timeout = round(86400 * timeout)
-        self.timeout = timeout
+        self.timeout = (int(1e12) if timeout is None else timeout)
         campaignname = self.campaignname = name + '_' + '-'.join(selection)
         self.lockfilepath = Path(
             workdir, campaignname + LOCKSUFFIX

@@ -142,8 +142,6 @@ class H5Wrap:
             H5FILES[self.filename] = self.arg.h5file
             return True
     def __enter__(self):
-        self._priorhandler = getsignal(SIGTERM)
-        signal(SIGTERM, self._signal_handler)
         while True:
             try:
                 self.master = lock(self.filename, self.lockcode)
@@ -151,6 +149,8 @@ class H5Wrap:
             except AccessForbidden:
                 random_sleep(0.1, 5.)
         self.opener = self._open_h5file()
+        self._priorhandler = getsignal(SIGTERM)
+        signal(SIGTERM, self._signal_handler)
         # if self.master:
         #     mpi.message("Logging in at", time.time())
         return None
@@ -166,11 +166,17 @@ class H5Wrap:
             del H5FILES[self.filename]
         self.opener = None
     def __exit__(self, *args):
-        self._close_h5file()
-        if self.master:
-            # mpi.message("Logging out at", time.time())
-            release(self.filename, self.lockcode)
-        signal(SIGTERM, self._priorhandler)
+        try:
+            master = self.master
+        except AttributeError:
+            pass
+        else:
+            self._close_h5file()
+            if master:
+                # mpi.message("Logging out at", time.time())
+                release(self.filename, self.lockcode)
+            signal(SIGTERM, self._priorhandler)
+            del self.master
 
 class SetMask:
     # expects @mpi.dowrap

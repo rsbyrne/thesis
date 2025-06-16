@@ -9,6 +9,7 @@ from . import animate
 from . import raster
 from .data import *
 from .colourmaps import *
+from . import utilities
 
 import matplotlib as _mpl
 
