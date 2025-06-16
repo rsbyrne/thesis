@@ -38,7 +38,6 @@ with (
 
 initial = PostSinusoidal(factor=1.1, prior=Conductive())
 final = (planetengine.finals.Averages, {'tolerance': 1e-3, 'minlength': 100})
-final = 5  # TESTING!
 
 with Job(*(dims[key] for key in sorted(dims))) as job:
 
@@ -68,8 +67,7 @@ with Job(*(dims[key] for key in sorted(dims))) as job:
     datafilepath = job.camproot.with_suffix('.data')
 
     log("Setup complete.", "Starting loop...")
-#     while True:
-    for _ in range(3):  # TESTING!
+    while True:
 
         if alpha > 1e7:
             alpha = 1e7

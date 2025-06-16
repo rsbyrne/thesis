@@ -2623,3 +2623,72 @@
         raise HTTPError(403, "Permission denied: %s" % path) from e
     tornado.web.HTTPError: HTTP 403: Forbidden (Permission denied: workspace/livestation/production/simple_critical.data)
 [W 2025-06-16 04:05:03.901 ServerApp] 403 POST /api/contents/workspace/livestation/production?1750046703616 (4f4f0b48dbfe44b49eb7cb052d133d10@172.17.0.1) 66.50ms referer=http://localhost:8890/lab/workspaces/other/tree/workspace/production/pre_2024/linear3_ins.py
+[I 2025-06-16 05:42:34.897 ServerApp] Saving file at /workspace/production/2025/ms98_starling.py
+[I 2025-06-16 06:08:16.416 ServerApp] Saving file at /workspace/working/working_006.ipynb
+[I 2025-06-16 06:08:19.639 ServerApp] Saving file at /workspace/working/working_006.ipynb
+[I 2025-06-16 06:09:16.780 ServerApp] Copying 'workspace/storage/simple_critical.data' to '/workspace/livestation/production'
+[W 2025-06-16 06:09:16.803 ServerApp] 403 POST /api/contents/workspace/livestation/production?1750054156292 (172.17.0.1): Permission denied: workspace/livestation/production/simple_critical-Copy1.data
+[W 2025-06-16 06:09:16.803 ServerApp] wrote error: 'Permission denied: workspace/livestation/production/simple_critical-Copy1.data'
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 230, in perm_to_403
+        yield
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 220, in atomic_writing
+        with atomic_writing(os_path, *args, **kwargs) as f:
+             ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/contextlib.py", line 141, in __enter__
+        return next(self.gen)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 114, in atomic_writing
+        fileobj = open(path, "wb", **kwargs)  # noqa: SIM115
+    PermissionError: [Errno 13] Permission denied: '/home/morpheus/workspace/livestation/production/simple_critical-Copy1.data'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 279, in post
+        await self._copy(copy_from, path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 217, in _copy
+        model = await ensure_async(self.contents_manager.copy(copy_from, copy_to))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1126, in copy
+        return await AsyncContentsManager.copy(self, from_path=from_path, to_path=to_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 1064, in copy
+        model = await self.save(model, to_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/largefilemanager.py", line 133, in save
+        return await super().save(model, path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 969, in save
+        await self._save_file(os_path, model["content"], model.get("format"))
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 572, in _save_file
+        with self.atomic_writing(os_path, text=False) as f:
+             ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/contextlib.py", line 141, in __enter__
+        return next(self.gen)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 217, in atomic_writing
+        with self.perm_to_403(os_path):
+             ~~~~~~~~~~~~~~~~^^^^^^^^^
+      File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+        self.gen.throw(value)
+        ~~~~~~~~~~~~~~^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/fileio.py", line 239, in perm_to_403
+        raise HTTPError(403, "Permission denied: %s" % path) from e
+    tornado.web.HTTPError: HTTP 403: Forbidden (Permission denied: workspace/livestation/production/simple_critical-Copy1.data)
+[W 2025-06-16 06:09:16.806 ServerApp] 403 POST /api/contents/workspace/livestation/production?1750054156292 (4f4f0b48dbfe44b49eb7cb052d133d10@172.17.0.1) 26.80ms referer=http://localhost:8890/lab/workspaces/other/tree/workspace/working/working_006.ipynb
+[I 2025-06-16 06:10:20.373 ServerApp] Saving file at /workspace/working/working_006.ipynb
+[I 2025-06-16 06:11:13.468 ServerApp] Kernel restarted: 4135c585-94fd-4182-9ac7-e03f655f7b3a
+[I 2025-06-16 06:11:13.477 ServerApp] Starting buffering for 4135c585-94fd-4182-9ac7-e03f655f7b3a:779ed39b-9c2d-4a98-9c40-d782d4080640
+[I 2025-06-16 06:11:13.492 ServerApp] Connecting to kernel 4135c585-94fd-4182-9ac7-e03f655f7b3a.
+[I 2025-06-16 06:11:13.492 ServerApp] Restoring connection for 4135c585-94fd-4182-9ac7-e03f655f7b3a:779ed39b-9c2d-4a98-9c40-d782d4080640
+[I 2025-06-16 06:11:49.517 ServerApp] Saving file at /workspace/working/working_006.ipynb
+[I 2025-06-16 06:13:49.739 ServerApp] Saving file at /workspace/working/working_006.ipynb
+[I 2025-06-16 06:15:18.748 ServerApp] Saving file at /workspace/working/working_006.ipynb
