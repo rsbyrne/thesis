@@ -51,7 +51,7 @@ with Job(*(dims[key] for key in sorted(dims))) as job:
 
     log("Params: ", params)
 
-    alpha = criticals[tuple(params[key] for key in sorted(params))][-1]
+    alpha = criticals[tuple(params[key] for key in sorted(params))][-1] * 1 + 1e-5
     log("Initial alpha: " + str(alpha))
 
     if params['etaDelta'] is None:
