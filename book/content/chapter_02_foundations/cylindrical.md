@@ -1,3 +1,17 @@
+---
+jupytext:
+  notebook_metadata_filter: -all
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.19.0
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
 ```{code-cell} ipython3
 ---
 editable: true
@@ -843,9 +857,17 @@ The conductive geotherm for cylindrical domains under internal heating. The empi
 
 Like in the Cartesian case, the annular mixed heating regime contains both the internally-heated and basally-heated endmembers. The system reproduces basal heating in the trivial case of $H=0$. The internal heating endmember arises in the dynamic case where the heating rate is at its 'critical' value, $H_\mathrm{cr}$. At this exact value, the temperature in a layer infinitely close to the mantle base is equal to the fixed temperature of the mantle base proper. Consequently the flux across the boundary drops to zero, just as it would in the (basally insulated) internal heating case.
 
-As before, we would like to obtain an exact closed-form solution for the geotherm and the average temperature. In addition, it would be good to have a value for $H_\mathrm{cr}$, or a function for it in the case where that value depends on the curvature parameter $f$, which one expects it might.
+At values of $H$ away from the critical value, there is always some non-zero flux across the lower boundary. The flux may be positive (heat flowing *into* the mantle) or negative (heat flowing *out* of the mantle). In either case we can say for sure that:
 
-The first step, again, is to convert the empirical temperature profile into a geothermal gradient by taking a differential, then convert that gradient into the (axisymmetric) heat flux $\phi$ by multiplying by the non-dimensionalised height-dependent angular length $s^{*}$. Once we have the flux, we can take another differential to obtain the gradient of the flux.
+$$
+\phi_o + \phi_i + H = 0
+$$
+
+This is true whether $H$ is high or low, or indeed, whether the mantle is conductive or convective. Let us consider the purely conductive case for now.
+
+As before, we would like to obtain an exact closed-form solution for the conductive geotherm and average temperature. The value of $H_\mathrm{cr}$ is fully dynamic in the case of a mobile fluid, but in the purely conductive state, it will have a fixed value which is some function of the fixed model parameters. It would be good to obtain an expression for this too.
+
+The first step, as previously, is to convert the empirical temperature profile into a geothermal gradient by taking a differential, then convert that gradient into the (axisymmetric) heat flux $\phi$ by multiplying by the non-dimensionalised height-dependent angular length $s^{*}$. Once we have the flux, we can take another differential to obtain the gradient of the flux.
 
 $$
 {\phi_q}_o = H + {\phi_q}_i

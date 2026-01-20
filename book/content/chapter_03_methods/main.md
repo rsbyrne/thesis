@@ -4,13 +4,22 @@
 ```{include} introduction.md
 ```
 
-```{include} numerical.md
+```{include} theory.md
 ```
 
-```{include} modelling.md
+```{include} formalisation.md
 ```
 
-```{include} ms98.md
+```{include} everest.md
+```
+
+```{include} planetengine.md
+```
+
+```{include} validation.md
+```
+
+```{include} discussion.md
 ```
 
 ```{include} conclusion.md

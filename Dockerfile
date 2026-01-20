@@ -30,8 +30,11 @@ RUN rm -rf /var/lib/apt/lists/* && apt clean && apt update && apt install -y \
   texlive-xetex \
   latexmk
 
+RUN apt-get install -y \
+  jq
+
 # Publishing
-RUN pip install -U --no-cache-dir \
+RUN pip install -U --no-cache-dir --break-system-packages \
   bibtexparser \
   ghp-import \
   myst-parser \
@@ -87,7 +90,5 @@ RUN pip install -U --no-cache-dir \
 
 # ADD . $THESISDIR
 RUN chown -R $MASTERUSER $THESISDIR
-
-ADD .
 
 USER $MASTERUSER

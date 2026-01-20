@@ -7,6 +7,7 @@ for PYTHONNAME in "${PYTHONADD[@]}"; do
     export PYTHONPATH=$PYTHONPATH:$PWD/$PYTHONNAME
 done
 # bash $WORKSPACE/bootupconfig.sh
+bash $WORKSPACE/catchup.sh
 jupyter lab \
   --no-browser --allow-root --port=9999 --ip='0.0.0.0' \
   --preferred-dir=$WORKSPACE \

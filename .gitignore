@@ -3,6 +3,7 @@ scratch/
 cache/
 dropbox/
 book/main/_build/
+book/
 /data/
 livestation/data/
 *.pem
@@ -10,6 +11,9 @@ livestation/data/
 *.frm
 *.ipynb
 core
+book/content/**/*.ipynb
+!book/content/**/*.md
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

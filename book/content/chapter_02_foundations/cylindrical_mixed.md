@@ -4,7 +4,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.2
+    jupytext_version: 1.19.0
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -137,49 +137,6 @@ canvas
 ```
 
 ```{code-cell} ipython3
-canvas = Canvas(shape=(nrows, ncols), size=(2*ncols, 3*nrows))
-
-for index, f in enumerate(fs):
-    rowno, colno = position = index // ncols, index % ncols
-    ax = canvas.ax(
-        position,
-        title=f'$f={f}$'
-        )
-
-    for H in Hs:
-        T = frm.loc[H, f]['geotherm']
-        dT, hdT = analysis.derivative(T, h, n = 1)
-        ax.line(
-            Channel(
-                dT, label = r'$ \delta T / \delta r^* $',
-                lims=(-10, 10), capped=(True, True),
-                ),
-            Channel(
-                cylindrical.r_star(hdT, f), label='$r^*$',
-                lims=(None, 1),
-                ),
-            c = cmap(H, Hs, style = 'plasma'),
-            )
-    if not (rowno == 1 and colno == round(ncols / 2)):
-        ax.props.edges.x.label.visible = False
-    if not (rowno == 1 and colno == 0):
-        ax.props.edges.y.label.visible = False
-        # ax.props.edges.y.ticks.major.labels = ()
-    if index == 0:
-        ax.props.legend.set_handles_labels(
-            (row[0] for row in ax.collections),
-            (str(H) for H in np.round(Hs, 1)),
-            )
-        ax.props.legend.title.text = '$ H $'
-        ax.props.legend.title.visible = True
-        ax.props.legend.mplprops['bbox_to_anchor'] = (-0.1, 1.05)
-        # ax1.props.legend.mplprops['ncol'] = 2
-        ax.props.legend.frame.colour = 'black'
-        ax.props.legend.frame.visible = True
-canvas
-```
-
-```{code-cell} ipython3
 canvas = Canvas(size=(6, 3))
 ax = canvas.make_ax((0, 0))
 ```
@@ -271,12 +228,12 @@ imop.vstack(*canvasses)
 ```{code-cell} ipython3
 canvasses = []
 
-fs_to_draw = (0.5, 0.1)
+fs_to_draw = (1., 0.5, 0.1)
 for i, f in enumerate(fs_to_draw):
 
     canvas = Canvas(
-        size=(9, 3), shape=(1, 3),
-        title=f"$f={f}$",
+        size=(6, 2), shape=(1, 3),
+        # title=f"$f={f}$",
         )
     ax1 = canvas.make_ax((0, 0))
     ax2 = canvas.make_ax((0, 1))
@@ -286,7 +243,7 @@ for i, f in enumerate(fs_to_draw):
     for H in Hs:
         Ts = subfrm.loc[H, 'geotherm']
         dTs, hdTs = analysis.derivative(Ts, hs, n = 1)
-        fluxes = dTs * cylindrical.s_star(hdTs, f)
+        fluxes = -dTs * cylindrical.s_star(hdTs, f)
         dfluxes, hdfluxes = analysis.derivative(fluxes, hdTs, n = 1)
         ax1.line(
             Channel(
@@ -297,34 +254,26 @@ for i, f in enumerate(fs_to_draw):
             c = cmap(H, Hs, style = 'plasma'),
             )
         ax2.line(
-            Channel(fluxes, label=r"$\phi(h)$"),
+            Channel(fluxes, label=r"$\phi_q(h)$", lims=(-4, 10), capped=(True, True)),
             Channel(hdTs, label=r"$h$", lims=(0, 1), capped=(True, True)),
             c = cmap(H, Hs, style = 'plasma'),
             )
         ax3.line(
-            Channel(dfluxes, label=r"${\phi(h)}^{'}$"),
+            Channel(dfluxes, label=r"${\phi_q(h)}^{'}$", lims=(0, 20), capped=(True, True)),
             Channel(hdfluxes, label=r"$h$", lims=(0, 1), capped=(True, True)),
             c = cmap(H, Hs, style = 'plasma'),
             )
+        for ax in (ax2, ax3):
+            ax.props.edges.y.label.visible = False
+            ax.props.edges.y.ticks.major.labels = ()
+        # if i < len(fs_to_draw) - 1:
+        #     for ax in (ax1, ax2, ax3):
+        #         ax.props.edges.x.label.visible = False
+        #         ax.props.edges.x.ticks.major.labels = ()
     
     canvasses.append(canvas)
 
 imop.vstack(*canvasses)
-
-# def model(h, H):
-#     a = -0.11196818 * H + 0.36646053
-#     b = -2.45738185 * H + 6.40652432
-#     return a / h + b
-
-# ax4 = canvas.make_ax((3, 0))
-# for H in Hs:
-#     Ts = subfrm.loc[H, 'geotherm']
-#     ddTs, hddTs = analysis.derivative(Ts, hs, n = 2)
-#     ax4.line(
-#         Channel(cylindrical.r_star(hddTs, f)[:10], lims=(None, None)),
-#         Channel(model(hddTs, H)[:10]),
-#         c = cmap(H, Hs, style = 'plasma'),   
-#         )
 ```
 
 ```{code-cell} ipython3

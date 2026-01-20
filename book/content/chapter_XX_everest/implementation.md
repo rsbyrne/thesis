@@ -33,7 +33,7 @@ Some tools are so generic as to defy placement even within the program itself. T
 - `TypeMap` is a *Python* `Mapping` type with an unconventional `__getitem__` (square brackets) method based on comparing classes and subclasses. A 'typemap' is initialised with a mapping of types and items. Calling `mytypemap[x]` will iteratively compare the 'type' of `x` (or simply `x` if it is itself a type) to the keys of the provided mapping, stopping at the first key for which `issubclass(type(x), key)` evaluates `True`; that key is then used to retrieve the desired item. If no matches are found, the call may optionally be deferred to another typemap, or a default may be returned. Because both typemap instances and *Python* types themselves are immutable, the output can be cached so that future lookups are extremely quick. `TypeMap` is useful for imposing a kind 'strong typing' on procedures without completely sacrificing the intentionally dynamically-typed nature of *Python*.
 - `FrozenMap` is an immutable *Python* `dict` equivalent. Being immutable, it can be hashed, and thus cached. *Python* lacks such a data structure natively.
 
-#### *Everest* Simpli
+#### *Everest* Simpli 
 
 The `simpli` subpackage is the means by which *Everest* supports the *Message Passing Interface* (MPI) protocol for parallel computing. While MPI is certainly a very robust and versatile parallelisation method, it can be counter-intuitive to write for and tends to fail in opaque ways. The `simpli` package provides a number of context managers and wrappers that help the user write code that either runs smoothly in MPI or fails swiftly and meaningfully.
 

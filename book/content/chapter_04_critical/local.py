@@ -4,7 +4,7 @@ from aliases import * # important this goes first to configure PATH
     'crit_isomixed', 'crit_isointernal', 'crit_arrmixed', 'crit_arrinternal'
     )
 def make_frames():
-    with (Path(storagedir) / 'simple_critical_enhance.data').open(mode='rb') as file:
+    with (Path(storagedir) / 'simple_critical.data').open(mode='rb') as file:
         data = pickle.load(file)
     keys = tuple(sorted(('f', 'aspect', 'H', 'flux', 'etaDelta')))
     data = pd.DataFrame([
