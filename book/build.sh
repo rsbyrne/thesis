@@ -1,7 +1,7 @@
 #!/bin/bash
 
 currentDir=$PWD
-cd "$(dirname "$0")"/main || exit
+cd "$(dirname "$0")" || exit
 
 QUIET=0
 FORCED=0

@@ -1,0 +1,58 @@
+{
+  "input": {
+    "files": [],
+    "opts": {
+      "execute": false,
+      "executeParallel": 7,
+      "pdf": true,
+      "tex": false,
+      "typst": false,
+      "docx": false,
+      "md": false,
+      "xml": false,
+      "meca": false,
+      "cff": false,
+      "site": false,
+      "html": false,
+      "all": false,
+      "doiBib": false,
+      "watch": false,
+      "force": false,
+      "checkLinks": false,
+      "strict": false,
+      "ci": false,
+      "maxSizeWebp": 1572864,
+      "keepHost": false
+    }
+  },
+  "exports": [
+    {
+      "format": "pdf",
+      "template": "/home/morpheus/workspace/testbook/templates/test",
+      "output": "/home/morpheus/workspace/testbook/exports/test.pdf",
+      "articles": [
+        {
+          "file": "/home/morpheus/workspace/testbook/abstract.md",
+          "level": 1,
+          "slug": "abstract"
+        },
+        {
+          "level": 1,
+          "title": "Main Content"
+        },
+        {
+          "file": "/home/morpheus/workspace/testbook/foo.md",
+          "level": 2,
+          "slug": "foo"
+        },
+        {
+          "file": "/home/morpheus/workspace/testbook/bah.md",
+          "level": 2,
+          "slug": "bah"
+        }
+      ],
+      "$file": "/home/morpheus/workspace/testbook/myst.yml",
+      "$project": "/home/morpheus/workspace/testbook"
+    }
+  ]
+}

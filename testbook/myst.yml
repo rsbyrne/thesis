@@ -1,0 +1,18 @@
+version: 1
+
+project:
+  title: "Test doc"
+  authors:
+    - name: "Test Man"
+  # Parts are defined at the project level to satisfy template requirements [cite: 423]
+  exports:
+    - format: pdf
+      template: templates/test
+      output: exports/test.pdf
+  toc:
+    - file: index.md
+    - file: abstract.md
+    - title: "Main Content"
+      children: 
+        - file: foo.md
+        - file: bah.md

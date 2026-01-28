@@ -1,0 +1,46 @@
+% Created with jtex v.1.0.20
+\documentclass[a4paper,11pt,oneside]{book}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{changepage}
+\usepackage{framed}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\bibliographystyle{abbrvnat}
+
+% Make list items more compact
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+
+
+\title{\Huge \textbf{Test doc}}
+\author{Test Man}
+
+\begin{document}
+
+\maketitle
+
+This is just some arbitrary text I wrote directly in the .tex file.
+
+This is my abstract block.
+
+\include{test-abstract}
+
+\section{Main Content}
+
+\include{test-foo}
+
+\include{test-bah}
+
+
+
+This is my test block.
+
+\end{document}
