@@ -4805,3 +4805,342 @@
 [I 2026-02-05 06:12:20.852 ServerApp] Saving file at /workspace/book/content/chapter_03/scaling.ipynb
 [I 2026-02-05 06:12:20.854 ServerApp] Saving scaling.ipynb
 [I 2026-02-05 06:12:20.897 ServerApp] Saving scaling.md
+[I 2026-02-05 09:19:43.210 ServerApp] Starting buffering for 450e9a91-c9d2-4710-bac0-2ffb79e35a77:c6d47251-525a-45f8-8d91-6a56f7a67f97
+[I 2026-02-05 09:19:43.212 ServerApp] Starting buffering for 4fb85da9-9710-41ed-b151-65cc47d8d05a:0e2358ff-5331-4def-a9bc-e9da0d3feb0d
+[I 2026-02-05 09:19:43.213 ServerApp] Starting buffering for 854c8b7f-3ab2-4b1d-838a-0df10aeaebe7:ba7397df-27cf-4a39-b65b-54a57fe94cc9
+[I 2026-02-05 09:19:43.213 ServerApp] Starting buffering for ce7fd363-fb00-4388-a205-29abffff089a:bf5bc3aa-0bec-42c7-84ae-f6b4a7764244
+[I 2026-02-05 09:19:43.214 ServerApp] Starting buffering for e6a24a88-583e-4b8f-8286-a0656200989b:cc9efba7-68c6-4387-9c05-2f0e2be266e3
+[I 2026-02-08 22:18:55.348 ServerApp] Connecting to kernel 450e9a91-c9d2-4710-bac0-2ffb79e35a77.
+[I 2026-02-08 22:18:55.397 ServerApp] Connecting to kernel e6a24a88-583e-4b8f-8286-a0656200989b.
+[I 2026-02-08 22:18:55.463 ServerApp] Connecting to kernel ce7fd363-fb00-4388-a205-29abffff089a.
+[I 2026-02-08 22:18:55.496 ServerApp] Starting buffering for 450e9a91-c9d2-4710-bac0-2ffb79e35a77:86b52c41-1341-4d2d-907f-0d0c726230ea
+[I 2026-02-08 22:18:55.500 ServerApp] Connecting to kernel 854c8b7f-3ab2-4b1d-838a-0df10aeaebe7.
+[I 2026-02-08 22:18:55.562 ServerApp] Starting buffering for e6a24a88-583e-4b8f-8286-a0656200989b:a4ebaffd-6f08-4cfc-913a-d3626d491764
+[I 2026-02-08 22:18:55.580 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-08 22:18:55.584 ServerApp] Starting buffering for ce7fd363-fb00-4388-a205-29abffff089a:62a4e5bc-502b-436a-ae72-c442ffd021d5
+[I 2026-02-08 22:18:55.584 ServerApp] Connecting to kernel 4fb85da9-9710-41ed-b151-65cc47d8d05a.
+[I 2026-02-08 22:18:55.586 ServerApp] Starting buffering for 854c8b7f-3ab2-4b1d-838a-0df10aeaebe7:802aaf22-1d7f-48c3-ac79-7538ebfaaf2a
+[I 2026-02-08 22:18:55.664 ServerApp] Starting buffering for 4fb85da9-9710-41ed-b151-65cc47d8d05a:8be344b8-70ec-4d2f-b9a2-86f00bd297f6
+[I 2026-02-08 22:18:55.666 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-08 22:18:55.667 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-08 22:18:55.668 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-08 22:18:55.838 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2026-02-08 22:18:55.845 LabApp] Build is up to date
+[I 2026-02-08 22:18:56.047 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-08 22:18:56.909 ServerApp] Reading SOURCE from workspace/book/content/chapter_03/scaling.md
+[I 2026-02-08 22:18:56.910 ServerApp] Reading SOURCE from workspace/book/content/chapter_03/introduction.md
+[I 2026-02-08 22:18:56.927 ServerApp] Reading SOURCE from workspace/book/content/chapter_03/theory.md
+[I 2026-02-08 22:18:56.927 ServerApp] Reading SOURCE from workspace/book/content/chapter_03/scraps.md
+[I 2026-02-08 22:18:57.421 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-08 22:18:57.429 ServerApp] Connecting to kernel 4fb85da9-9710-41ed-b151-65cc47d8d05a.
+[I 2026-02-08 22:18:57.456 ServerApp] Connecting to kernel e6a24a88-583e-4b8f-8286-a0656200989b.
+[I 2026-02-08 22:18:57.484 ServerApp] Connecting to kernel 450e9a91-c9d2-4710-bac0-2ffb79e35a77.
+[I 2026-02-08 22:18:57.618 ServerApp] Connecting to kernel ce7fd363-fb00-4388-a205-29abffff089a.
+[I 2026-02-08 22:18:57.644 ServerApp] Connecting to kernel 854c8b7f-3ab2-4b1d-838a-0df10aeaebe7.
+[I 2026-02-08 22:53:48.013 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-08 22:53:48.015 ServerApp] Saving theory.ipynb
+[I 2026-02-08 22:53:48.274 ServerApp] Saving theory.md
+[I 2026-02-08 22:54:30.185 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-08 22:54:30.187 ServerApp] Saving theory.ipynb
+[I 2026-02-08 22:54:31.160 ServerApp] Saving theory.md
+[I 2026-02-09 00:37:03.848 ServerApp] Starting buffering for 4fb85da9-9710-41ed-b151-65cc47d8d05a:e74164f7-67a4-446c-a490-118886f2d1df
+[I 2026-02-09 00:37:03.850 ServerApp] Starting buffering for ce7fd363-fb00-4388-a205-29abffff089a:d9a76234-87a3-4486-8d5c-bd51766212f7
+[I 2026-02-09 00:37:03.850 ServerApp] Starting buffering for 854c8b7f-3ab2-4b1d-838a-0df10aeaebe7:005d03af-4b0d-4828-aec6-00d653f7e29a
+[I 2026-02-09 00:37:03.851 ServerApp] Starting buffering for e6a24a88-583e-4b8f-8286-a0656200989b:5162d345-744f-4c9c-9d75-933781d17c25
+[I 2026-02-09 00:37:03.852 ServerApp] Starting buffering for 450e9a91-c9d2-4710-bac0-2ffb79e35a77:c5ef03e9-30cc-40d7-a276-7d625c64c1e4
+[I 2026-02-09 00:52:33.651 ServerApp] Connecting to kernel 450e9a91-c9d2-4710-bac0-2ffb79e35a77.
+[I 2026-02-09 00:52:33.674 ServerApp] Connecting to kernel e6a24a88-583e-4b8f-8286-a0656200989b.
+[I 2026-02-09 00:52:33.705 ServerApp] Connecting to kernel ce7fd363-fb00-4388-a205-29abffff089a.
+[I 2026-02-09 00:52:33.709 ServerApp] Starting buffering for 450e9a91-c9d2-4710-bac0-2ffb79e35a77:aad2ed80-af4c-4844-b261-af5bac52a68d
+[I 2026-02-09 00:52:33.710 ServerApp] Starting buffering for e6a24a88-583e-4b8f-8286-a0656200989b:9216a93b-ae00-401f-971d-4db993396517
+[I 2026-02-09 00:52:33.731 ServerApp] Connecting to kernel 854c8b7f-3ab2-4b1d-838a-0df10aeaebe7.
+[I 2026-02-09 00:52:33.803 ServerApp] Connecting to kernel 4fb85da9-9710-41ed-b151-65cc47d8d05a.
+[I 2026-02-09 00:52:33.822 ServerApp] Starting buffering for ce7fd363-fb00-4388-a205-29abffff089a:e59ff673-fafb-4c30-83fc-f84040681709
+[I 2026-02-09 00:52:33.841 ServerApp] Starting buffering for 854c8b7f-3ab2-4b1d-838a-0df10aeaebe7:eda98a9d-bb3a-48ee-b282-530aeeeb9856
+[I 2026-02-09 00:52:33.858 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-09 00:52:33.860 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-09 00:52:33.861 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-09 00:52:33.877 ServerApp] Starting buffering for 4fb85da9-9710-41ed-b151-65cc47d8d05a:eef419ef-fb9a-4cd6-8b18-b29257ff5c87
+[I 2026-02-09 00:52:33.930 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-09 00:52:33.932 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-09 00:52:33.933 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-09 00:52:34.201 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2026-02-09 00:52:34.208 LabApp] Build is up to date
+[I 2026-02-09 00:52:34.543 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-09 00:52:34.547 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-09 00:52:34.548 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-09 00:52:34.549 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-09 00:52:34.592 ServerApp] Reading SOURCE from workspace/book/content/chapter_03/introduction.md
+[I 2026-02-09 00:52:34.594 ServerApp] Reading SOURCE from workspace/book/content/chapter_03/scraps.md
+[I 2026-02-09 00:52:34.594 ServerApp] Reading SOURCE from workspace/book/content/chapter_03/theory.md
+[I 2026-02-09 00:52:34.595 ServerApp] Reading SOURCE from workspace/book/content/chapter_03/scaling.md
+[I 2026-02-09 00:52:35.437 ServerApp] Connecting to kernel 4fb85da9-9710-41ed-b151-65cc47d8d05a.
+[I 2026-02-09 00:52:35.484 ServerApp] Connecting to kernel 450e9a91-c9d2-4710-bac0-2ffb79e35a77.
+[I 2026-02-09 00:52:35.505 ServerApp] Connecting to kernel ce7fd363-fb00-4388-a205-29abffff089a.
+[I 2026-02-09 00:52:35.528 ServerApp] Connecting to kernel 854c8b7f-3ab2-4b1d-838a-0df10aeaebe7.
+[I 2026-02-09 00:52:35.536 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-09 00:52:35.552 ServerApp] Connecting to kernel e6a24a88-583e-4b8f-8286-a0656200989b.
+[I 2026-02-09 01:00:36.272 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:00:36.274 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:00:36.410 ServerApp] Saving theory.md
+[I 2026-02-09 01:02:36.556 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:02:36.558 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:02:36.584 ServerApp] Saving theory.md
+[I 2026-02-09 01:04:36.724 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:04:36.726 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:04:37.010 ServerApp] Saving theory.md
+[I 2026-02-09 01:06:37.105 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:06:37.106 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:06:37.122 ServerApp] Saving theory.md
+[I 2026-02-09 01:08:37.284 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:08:37.286 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:08:37.311 ServerApp] Saving theory.md
+[I 2026-02-09 01:10:18.564 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:10:18.566 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:10:18.865 ServerApp] Saving theory.md
+[I 2026-02-09 01:12:18.956 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:12:18.957 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:12:18.993 ServerApp] Saving theory.md
+[I 2026-02-09 01:14:19.279 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:14:19.281 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:14:19.307 ServerApp] Saving theory.md
+[I 2026-02-09 01:14:36.326 ServerApp] Saving file at /workspace/book/scratch.ipynb
+[I 2026-02-09 01:14:36.327 ServerApp] Saving scratch.ipynb
+[I 2026-02-09 01:14:39.404 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-09 01:16:19.500 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:16:19.502 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:16:19.517 ServerApp] Saving theory.md
+[I 2026-02-09 01:18:19.606 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:18:19.607 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:18:19.630 ServerApp] Saving theory.md
+[I 2026-02-09 01:20:19.755 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:20:19.758 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:20:19.774 ServerApp] Saving theory.md
+[I 2026-02-09 01:22:19.913 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:22:19.915 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:22:19.958 ServerApp] Saving theory.md
+[I 2026-02-09 01:24:20.080 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:24:20.083 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:24:20.331 ServerApp] Saving theory.md
+[I 2026-02-09 01:26:20.427 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:26:20.428 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:26:20.549 ServerApp] Saving theory.md
+[I 2026-02-09 01:28:20.676 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:28:20.678 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:28:20.708 ServerApp] Saving theory.md
+[I 2026-02-09 01:30:20.800 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:30:20.802 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:30:20.839 ServerApp] Saving theory.md
+[I 2026-02-09 01:32:20.935 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:32:20.937 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:32:20.960 ServerApp] Saving theory.md
+[I 2026-02-09 01:34:21.333 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:34:21.335 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:34:21.372 ServerApp] Saving theory.md
+[I 2026-02-09 01:34:38.347 ServerApp] Saving file at /workspace/book/scratch.ipynb
+[I 2026-02-09 01:34:38.348 ServerApp] Saving scratch.ipynb
+[I 2026-02-09 01:34:41.552 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-09 01:36:22.285 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:36:22.286 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:36:22.301 ServerApp] Saving theory.md
+[I 2026-02-09 01:36:39.326 ServerApp] Saving file at /workspace/book/scratch.ipynb
+[I 2026-02-09 01:36:39.327 ServerApp] Saving scratch.ipynb
+[I 2026-02-09 01:37:05.260 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-09 01:38:22.406 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:38:22.408 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:38:22.423 ServerApp] Saving theory.md
+[I 2026-02-09 01:40:22.552 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:40:22.554 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:40:22.569 ServerApp] Saving theory.md
+[I 2026-02-09 01:42:22.644 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:42:22.646 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:42:22.661 ServerApp] Saving theory.md
+[I 2026-02-09 01:44:22.775 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 01:44:22.777 ServerApp] Saving theory.ipynb
+[I 2026-02-09 01:44:22.790 ServerApp] Saving theory.md
+[I 2026-02-09 02:16:23.391 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:16:23.394 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:16:23.411 ServerApp] Saving theory.md
+[I 2026-02-09 02:18:23.539 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:18:23.541 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:18:23.555 ServerApp] Saving theory.md
+[I 2026-02-09 02:20:23.641 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:20:23.643 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:20:23.658 ServerApp] Saving theory.md
+[I 2026-02-09 02:22:23.762 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:22:23.764 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:22:23.784 ServerApp] Saving theory.md
+[I 2026-02-09 02:24:23.902 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:24:23.904 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:24:23.921 ServerApp] Saving theory.md
+[I 2026-02-09 02:26:24.010 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:26:24.011 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:26:24.065 ServerApp] Saving theory.md
+[I 2026-02-09 02:28:24.193 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:28:24.195 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:28:24.215 ServerApp] Saving theory.md
+[I 2026-02-09 02:30:24.313 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:30:24.315 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:30:24.623 ServerApp] Saving theory.md
+[I 2026-02-09 02:32:24.710 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:32:24.712 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:32:24.738 ServerApp] Saving theory.md
+[I 2026-02-09 02:34:24.827 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:34:24.829 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:34:24.861 ServerApp] Saving theory.md
+[I 2026-02-09 02:36:24.972 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:36:24.974 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:36:25.221 ServerApp] Saving theory.md
+[I 2026-02-09 02:38:25.351 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:38:25.353 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:38:25.370 ServerApp] Saving theory.md
+[I 2026-02-09 02:40:25.461 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:40:25.462 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:40:25.485 ServerApp] Saving theory.md
+[I 2026-02-09 02:40:40.538 ServerApp] Saving file at /workspace/book/scratch.ipynb
+[I 2026-02-09 02:40:40.539 ServerApp] Saving scratch.ipynb
+[I 2026-02-09 02:40:45.590 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-02-09 02:42:25.604 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:42:25.606 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:42:25.622 ServerApp] Saving theory.md
+[I 2026-02-09 02:46:25.748 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:46:25.751 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:46:25.840 ServerApp] Saving theory.md
+[I 2026-02-09 02:48:25.937 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:48:25.939 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:48:26.003 ServerApp] Saving theory.md
+[I 2026-02-09 02:50:26.090 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:50:26.092 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:50:26.220 ServerApp] Saving theory.md
+[I 2026-02-09 02:52:26.307 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:52:26.309 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:52:26.342 ServerApp] Saving theory.md
+[I 2026-02-09 02:54:26.472 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:54:26.474 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:54:26.489 ServerApp] Saving theory.md
+[I 2026-02-09 02:56:26.828 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 02:56:26.831 ServerApp] Saving theory.ipynb
+[I 2026-02-09 02:56:26.847 ServerApp] Saving theory.md
+[I 2026-02-09 03:06:28.529 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 03:06:28.531 ServerApp] Saving theory.ipynb
+[I 2026-02-09 03:06:28.569 ServerApp] Saving theory.md
+[I 2026-02-09 03:08:28.644 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 03:08:28.646 ServerApp] Saving theory.ipynb
+[I 2026-02-09 03:08:28.729 ServerApp] Saving theory.md
+[I 2026-02-09 03:10:28.859 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 03:10:28.861 ServerApp] Saving theory.ipynb
+[I 2026-02-09 03:10:28.878 ServerApp] Saving theory.md
+[I 2026-02-09 03:12:29.016 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 03:12:29.018 ServerApp] Saving theory.ipynb
+[I 2026-02-09 03:12:29.089 ServerApp] Saving theory.md
+[I 2026-02-09 03:14:29.187 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 03:14:29.188 ServerApp] Saving theory.ipynb
+[I 2026-02-09 03:14:29.203 ServerApp] Saving theory.md
+[I 2026-02-09 03:18:29.317 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 03:18:29.319 ServerApp] Saving theory.ipynb
+[I 2026-02-09 03:18:29.468 ServerApp] Saving theory.md
+[I 2026-02-09 03:20:29.591 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 03:20:29.594 ServerApp] Saving theory.ipynb
+[I 2026-02-09 03:20:29.610 ServerApp] Saving theory.md
+[I 2026-02-09 03:22:29.699 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 03:22:29.700 ServerApp] Saving theory.ipynb
+[I 2026-02-09 03:22:29.727 ServerApp] Saving theory.md
+[I 2026-02-09 03:24:29.816 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 03:24:29.817 ServerApp] Saving theory.ipynb
+[I 2026-02-09 03:24:29.852 ServerApp] Saving theory.md
+[I 2026-02-09 03:26:29.964 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 03:26:29.967 ServerApp] Saving theory.ipynb
+[I 2026-02-09 03:26:30.012 ServerApp] Saving theory.md
+[I 2026-02-09 03:30:30.550 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 03:30:30.552 ServerApp] Saving theory.ipynb
+[I 2026-02-09 03:30:30.611 ServerApp] Saving theory.md
+[I 2026-02-09 03:38:33.603 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 03:38:33.604 ServerApp] Saving theory.ipynb
+[I 2026-02-09 03:38:33.713 ServerApp] Saving theory.md
+[I 2026-02-09 03:54:33.885 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 03:54:33.887 ServerApp] Saving theory.ipynb
+[I 2026-02-09 03:54:33.905 ServerApp] Saving theory.md
+[I 2026-02-09 03:56:34.027 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 03:56:34.029 ServerApp] Saving theory.ipynb
+[I 2026-02-09 03:56:34.262 ServerApp] Saving theory.md
+[I 2026-02-09 03:58:34.646 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 03:58:34.649 ServerApp] Saving theory.ipynb
+[I 2026-02-09 03:58:34.738 ServerApp] Saving theory.md
+[I 2026-02-09 04:00:30.510 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:00:30.512 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:00:30.526 ServerApp] Saving theory.md
+[I 2026-02-09 04:02:30.612 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:02:30.613 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:02:30.634 ServerApp] Saving theory.md
+[I 2026-02-09 04:04:30.745 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:04:30.747 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:04:30.770 ServerApp] Saving theory.md
+[I 2026-02-09 04:06:30.892 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:06:30.893 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:06:30.936 ServerApp] Saving theory.md
+[I 2026-02-09 04:08:31.018 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:08:31.020 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:08:31.035 ServerApp] Saving theory.md
+[I 2026-02-09 04:09:38.047 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:09:38.049 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:09:38.103 ServerApp] Saving theory.md
+[I 2026-02-09 04:10:31.124 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:10:31.126 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:10:31.141 ServerApp] Saving theory.md
+[I 2026-02-09 04:12:31.232 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:12:31.234 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:12:31.253 ServerApp] Saving theory.md
+[I 2026-02-09 04:14:31.342 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:14:31.344 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:14:31.358 ServerApp] Saving theory.md
+[I 2026-02-09 04:16:31.448 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:16:31.450 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:16:31.464 ServerApp] Saving theory.md
+[I 2026-02-09 04:18:31.577 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:18:31.579 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:18:31.596 ServerApp] Saving theory.md
+[I 2026-02-09 04:20:31.674 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:20:31.675 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:20:31.807 ServerApp] Saving theory.md
+[I 2026-02-09 04:22:31.918 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:22:31.920 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:22:31.984 ServerApp] Saving theory.md
+[I 2026-02-09 04:24:32.072 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:24:32.074 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:24:32.091 ServerApp] Saving theory.md
+[I 2026-02-09 04:26:32.190 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:26:32.192 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:26:32.217 ServerApp] Saving theory.md
+[I 2026-02-09 04:28:32.338 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:28:32.340 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:28:32.357 ServerApp] Saving theory.md
+[I 2026-02-09 04:30:32.471 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:30:32.473 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:30:32.550 ServerApp] Saving theory.md
+[I 2026-02-09 04:31:43.141 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:31:43.143 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:31:43.159 ServerApp] Saving theory.md
+[I 2026-02-09 04:32:42.065 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:32:42.067 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:32:42.081 ServerApp] Saving theory.md
+[I 2026-02-09 04:34:42.211 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:34:42.213 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:34:42.230 ServerApp] Saving theory.md
+[I 2026-02-09 04:36:42.356 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:36:42.359 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:36:42.376 ServerApp] Saving theory.md
+[I 2026-02-09 04:38:42.513 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:38:42.515 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:38:42.592 ServerApp] Saving theory.md
+[I 2026-02-09 04:40:42.753 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:40:42.755 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:40:42.770 ServerApp] Saving theory.md
+[I 2026-02-09 04:42:42.898 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:42:42.900 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:42:42.915 ServerApp] Saving theory.md
+[I 2026-02-09 04:44:02.298 ServerApp] Saving file at /workspace/book/content/chapter_03/theory.ipynb
+[I 2026-02-09 04:44:02.300 ServerApp] Saving theory.ipynb
+[I 2026-02-09 04:44:02.317 ServerApp] Saving theory.md
+[I 2026-02-09 04:44:36.334 ServerApp] Starting buffering for ce7fd363-fb00-4388-a205-29abffff089a:85fa54f2-8d09-4973-b4e5-8df2ef79d57f
+[I 2026-02-09 04:45:11.723 ServerApp] Reading SOURCE from workspace/book/content/chapter_03/theory.md
+[I 2026-02-09 04:45:11.984 ServerApp] Connecting to kernel ce7fd363-fb00-4388-a205-29abffff089a.
