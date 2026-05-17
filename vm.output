@@ -6874,3 +6874,35 @@
 [I 2026-05-17 22:41:14.284 ServerApp] Connecting to kernel e6a24a88-583e-4b8f-8286-a0656200989b.
 [I 2026-05-17 22:41:14.430 ServerApp] Connecting to kernel 854c8b7f-3ab2-4b1d-838a-0df10aeaebe7.
 [I 2026-05-17 22:50:30.664 ServerApp] Saving file at /workspace/push.sh
+[I 2026-05-17 22:54:12.854 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-17 22:54:30.336 ServerApp] Opening workspace/dev/theory.md to check if it is a paired notebook
+[W 2026-05-17 22:54:30.346 ServerApp] 409 PATCH /api/contents/workspace/dev/theory.md?1779058469770 (172.17.0.1): File already exists: workspace/book/content/chapter_03/theory.md
+[W 2026-05-17 22:54:30.346 ServerApp] wrote error: 'File already exists: workspace/book/content/chapter_03/theory.md'
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupytext/async_contentsmanager.py", line 498, in rename_file
+        await self.super.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1064, in rename_file
+        raise web.HTTPError(409, "File already exists: %s" % new_path)
+    tornado.web.HTTPError: HTTP 409: Conflict (File already exists: workspace/book/content/chapter_03/theory.md)
+[W 2026-05-17 22:54:30.348 ServerApp] 409 PATCH /api/contents/workspace/dev/theory.md?1779058469770 (5799de999c59436d8ae43ea1586c71df@172.17.0.1) 13.66ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/old/modelling.md
+[I 2026-05-17 22:54:36.611 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-17 22:54:48.772 ServerApp] Opening workspace/dev/theory.md to check if it is a paired notebook
+[I 2026-05-17 22:55:01.643 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-17 22:55:09.910 ServerApp] Opening workspace/dev/theory_newer.md to check if it is a paired notebook
+[I 2026-05-17 22:55:09.921 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
