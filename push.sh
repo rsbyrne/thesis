@@ -1,7 +1,7 @@
 #!/bin/bash
 currentDir=$PWD
 cd "$(dirname "$0")"
-bash configure_ssh.sh
+# bash configure_ssh.sh
 eval "$(ssh-agent)"
 ssh-add ~/.ssh/*.pem
 # python3 -m nbconvert --clear-output working/*.ipynb dev/*.ipynb analysis/*.ipynb
