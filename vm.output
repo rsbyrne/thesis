@@ -6906,3 +6906,6 @@
 [I 2026-05-17 22:55:01.643 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
 [I 2026-05-17 22:55:09.910 ServerApp] Opening workspace/dev/theory_newer.md to check if it is a paired notebook
 [I 2026-05-17 22:55:09.921 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-17 23:01:14.106 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-17 23:01:33.133 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-17 23:01:33.133 ServerApp] Opening workspace/book/content/chapter_03/theory_newer.md to check if it is a paired notebook
