@@ -116,6 +116,7 @@ dev/dev_023.ipynb
 dev/dev_024.ipynb
 dev/dev_025.ipynb
 dev/foo.pkl
+dev/gospel.md
 dev/interactive-notebooks.ipynb
 dev/keutwsmaesc-tsiuwrdroiq.pkl
 dev/my-data.hdf5
@@ -124,6 +125,7 @@ dev/test.h5
 dev/test.py
 dev/test1.h5
 dev/test2.h5
+dev/theory.md
 dev/thesis_initialise.py
 dev/untitled.md
 dev/untitled.py
