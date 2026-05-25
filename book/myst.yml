@@ -33,10 +33,12 @@ project:
 
     - title: Modelling from First Principles
       children:
-        - file: content/chapter_03/introduction.md
-        - file: content/chapter_03/scaling.md
-        - file: content/chapter_03/theory.md
-        - file: content/chapter_03/modelish.md
+        # - file: content/chapter_03/introduction.md
+        # - file: content/chapter_03/scaling.md
+        # - file: content/chapter_03/theory.md
+        # - file: content/chapter_03/modelish.md
+        - file: content/chapter_03/everest.md
+        - file: content/chapter_03/ms98.md
 
   math:
     '\R': '\mathbb{R}'

@@ -7516,3 +7516,16 @@
 [I 2026-05-25 01:52:17.512 ServerApp] Saving scraps.md
 [I 2026-05-25 01:55:07.915 ServerApp] New terminal with automatic name: 3
 [I 2026-05-25 01:56:53.595 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 02:00:06.017 ServerApp] Opening workspace/book/content/chapter_03/old/modelling.md to check if it is a paired notebook
+[I 2026-05-25 02:00:18.970 ServerApp] Opening workspace/book/content/chapter_03/old/ms98.md to check if it is a paired notebook
+[I 2026-05-25 02:00:57.463 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-25 02:00:59.128 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 02:00:59.751 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-25 02:01:01.164 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-25 02:01:01.364 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-25 02:01:01.545 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-25 02:01:05.305 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[W 2026-05-25 02:01:14.852 ServerApp] delete /workspace/book/content/chapter_03/old/introduction.md
+[W 2026-05-25 02:01:14.852 ServerApp] delete /workspace/book/content/chapter_03/old/conclusion.md
+[W 2026-05-25 02:01:14.856 ServerApp] delete /workspace/book/content/chapter_03/old/main.md
+[W 2026-05-25 02:01:18.913 ServerApp] delete /workspace/book/content/chapter_03/old
