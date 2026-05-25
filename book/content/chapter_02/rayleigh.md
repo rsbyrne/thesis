@@ -413,7 +413,7 @@ $$ \mathrm{Gr} = \frac{g \beta \Delta T L^3}{\nu ^2} $$
 
 Where $g$ is gravity, $\beta$ is the coefficient of volume expansion, $\Delta T$ is the temperature drop, and $L$ is a representative length scale. Without a sufficient *Prandtl* number, heat will escape from each parcel faster than the parcel itself can be transported by buoyancy, while a low *Grashof* number would imply that the drag of the medium on each parcel is too great for buoyancy to overcome.
 
-The third import dimensionless quantity is the *Reynolds* number $\mathrm{Re}$, the ratio of inertial forces to viscous forces and thus a measure of flow turbulence:
+The third important dimensionless quantity is the *Reynolds* number $\mathrm{Re}$, the ratio of inertial forces to viscous forces and thus a measure of flow turbulence:
 
 $$ \mathrm{Re} =\frac{u L}{\nu} $$
 
@@ -423,7 +423,7 @@ In free (unforced or 'natural') convection, we find that the *Reynolds* and *Gra
 
 $$ \mathrm{Gr} = \mathrm{Re}^2 $$
 
-The product of $\mathrm{Gr}$ and $\mathrm{Pr}$ (or equivalently, $\mathrm{Gr}$ and $\mathrm{Re}^2$ produce a crucial dimensionless quantity for characterising thermal fluids: the *Rayleigh* number $\mathrm{Ra}$. The *Rayleigh* number, often termed the 'convective vigour', can be interpreted as the ratio of the diffusive and convective time scales in the medium; i.e. $\mathrm{Ra}$ serves as the *Peclet* number for heat. A simple formulation is as follows:
+The product of $\mathrm{Gr}$ and $\mathrm{Pr}$ (or equivalently, $\mathrm{Gr}$ and $\mathrm{Re}^2$) produce a crucial dimensionless quantity for characterising thermal fluids: the *Rayleigh* number $\mathrm{Ra}$. The *Rayleigh* number, often termed the 'convective vigour', can be interpreted as the ratio of the diffusive and convective time scales in the medium; i.e. $\mathrm{Ra}$ serves as the *Peclet* number for heat. A simple formulation is as follows:
 
 $$ \mathrm{Ra} = \frac{\alpha g \Delta T b^3}{\kappa \nu} $$
 
@@ -527,8 +527,8 @@ $$
     {\tau}
     {
         = \begin{cases}
-            \Delta T & {\tiny (basal)}
-         \\ \frac{b^2}{\kappa c_p} H & {\tiny (volume)}
+            \Delta T & {\tiny (\text{basal})}
+         \\ \frac{b^2}{\kappa c_p} H & {\tiny (\text{volume})}
             \end{cases}
         }
     {(\text{temperature})}
@@ -643,7 +643,7 @@ A conditional definition like this implies a piecewise function. If the relation
 ```{figure} #beta_k_nu_scaling
 :name: beta_k_nu_scaling_fig
 
-The $\beta$ scaling for varying values of the proportionality constant $k$. When either $R$ or $\mathrm{Nu}$ fall below one, a conductive geotherm is implied.
+The $\beta$ scaling for varying values of the proportionality constant $k$. When either $Ra^*$ or $\mathrm{Nu}$ fall below one, a conductive geotherm is implied.
 ```
 
 In the state where $\mathrm{Nu}$ satisfies the $\beta$ law, the interior of each cell becomes a homogeneous region of uniform temperature $T^{\mathrm{cell}}$ and variable but low velocities, with strong gradients and shears at the margins, and overall cell dimensions approaching an aspect ratio of $\sqrt{2}$. Because of the fixed temperature scale, the only way heat transport can be enhanced in such a system is by thinning the boundary layers, which in practice occurs by dripping/pluming until only the theoretical stable boundary thickness is left. For this reason, $\mathrm{Nu}$ also functions as a useful proxy for boundary layer thickness when this is otherwise hard to define.

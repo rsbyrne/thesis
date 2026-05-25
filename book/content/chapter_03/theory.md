@@ -971,7 +971,6 @@ c & d
 = p
 $$
 
-
 +++
 
 ### Polytesimal spaces

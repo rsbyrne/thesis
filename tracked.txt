@@ -98,15 +98,12 @@ book/content/chapter_03/chapter_XX_everest/implementation.md
 book/content/chapter_03/chapter_XX_everest/introduction.md
 book/content/chapter_03/chapter_XX_everest/main.md
 book/content/chapter_03/chapter_XX_everest/motivation.md
+book/content/chapter_03/everest.md
 book/content/chapter_03/introduction.md
 book/content/chapter_03/main.md
 book/content/chapter_03/modelish.md
 book/content/chapter_03/modelish_test.svg
-book/content/chapter_03/old/conclusion.md
-book/content/chapter_03/old/introduction.md
-book/content/chapter_03/old/main.md
-book/content/chapter_03/old/modelling.md
-book/content/chapter_03/old/ms98.md
+book/content/chapter_03/ms98.md
 book/content/chapter_03/scaling.md
 book/content/chapter_03/scraps.md
 book/content/chapter_03/theory.md

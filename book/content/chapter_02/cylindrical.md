@@ -26,6 +26,7 @@ import math
 
 import numpy as np
 import pandas as pd
+from pandas import IndexSlice as idx
 from sklearn.metrics import r2_score
 
 import aliases # important this goes first to configure PATH
@@ -212,8 +213,6 @@ fig = imop.paste(
 
 # Display
 
-isocondf_linscore = linscore
-
 fig
 ```
 
@@ -284,9 +283,13 @@ frm['h'] = frm['geotherm'].apply(lambda x: np.linspace(0, 1, len(x)))
 ```
 
 ```{code-cell} ipython3
-:label: isocondinternal
-:tags: [remove-cell]
-
+---
+label: isocondinternal
+tags: [remove-cell]
+editable: true
+slideshow:
+  slide_type: ''
+---
 canvas1 = Canvas(size = (8, 8/3), shape = (1, 3))
 ax1 = canvas1.make_ax((0, 0))
 ax2 = canvas1.make_ax((0, 1))
@@ -528,19 +531,197 @@ ax1.props.legend.frame.visible = True
 canvas
 ```
 
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+with open(os.path.join(aliases.storagedir, 'condhfmixed.pkl'), mode = 'rb') as file:
+    conddata = pickle.loads(file.read())
+condhs, condfs = zip(*conddata['hfs'])
+condhs = tuple(round(val, 1) for val in condhs)
+frm = pd.DataFrame(dict(
+    H = condhs, f = condfs, T = conddata['avts'], geotherm = conddata['geotherms']
+    ))
+frm = frm.set_index(['H', 'f']).drop(index=12, level=0)
+Hs, fs = (
+    np.array(sorted(set(frm.index.get_level_values(level))))
+    for level in ('H', 'f')
+    )
+
+nfs = len(fs)
+nrows = 2
+ncols = round(nfs / nrows)
+depths = np.linspace(0, 1, 65)
+hs = np.linspace(0, 1, 65)
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+label: cylindrical_mixed_geotherm
+---
+canvas = Canvas(size=(6, 6))
+
+ychan = Channel(
+    hs, label='$h$',
+    capped=(True, True),
+    )
+
+ax = canvas.ax()
+
+for H, f in sorted(frm.index):
+    T_chan = Channel(
+        frm.loc[H, f]['geotherm'], label='$T$',
+        lims=(0., 2.), capped=(True, True),
+        )
+    ax.line(
+        T_chan, ychan,
+        c = cmap(H, Hs, style = 'plasma'),
+        alpha = f,
+        )
+
+ax.props.legend.set_handles_labels(
+    (row[0] for row in ax.collections[nfs-1::nfs]),
+    (str(H) for H in np.round(Hs, 1)),
+    )
+ax.props.legend.title.text = '$ H $'
+ax.props.legend.title.visible = True
+# ax.props.legend.mplprops['bbox_to_anchor'] = (1, 1)
+# ax1.props.legend.mplprops['ncol'] = 2
+ax.props.legend.frame.colour = 'black'
+ax.props.legend.frame.visible = True
+
+canvas
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+label: cylindrical_mixed_geotherm_analysis
+---
+canvasses = []
+
+fs_to_draw = (0.5, 0.1)
+for i, f in enumerate(fs_to_draw):
+
+    canvas = Canvas(
+        size=(6, 3), shape=(1, 3),
+        title=f"$f={f}$",
+        )
+    ax1 = canvas.make_ax((0, 0))
+    ax2 = canvas.make_ax((0, 1))
+    ax3 = canvas.make_ax((0, 2))
+    subfrm = frm.loc[idx[:, f],].loc[idx[:, f],].droplevel('f', axis=0)
+    rs = cylindrical.radius(hs, f)
+    r_outer = cylindrical.r_outer(f)
+    r_inner = cylindrical.r_inner(f)
+    for H in Hs:
+        Ts = subfrm.loc[H, 'geotherm']
+        dTs, rdTs = analysis.derivative(Ts, rs, n = 1)
+        ddTs, rddTs = analysis.derivative(rdTs * dTs, rdTs, n = 1)
+        ax1.line(
+            Channel(
+                Ts, label=r'$T(r)$',
+                lims=(0, 2), capped=(True, True),
+                ),
+            Channel(
+                rs / r_outer, label=r"$r^{*}$",
+                lims=(r_inner / r_outer, 1), capped=(True, True)
+                ),
+            c = cmap(H, Hs, style = 'plasma'),
+            )
+        ax2.line(
+            Channel(
+                dTs, label=r"${T(r)}^{'}$",
+                lims=(-10, 10), capped=(True, True),
+                ),
+            Channel(
+                rdTs / r_outer, label=r"$r^{*}$",
+                lims=(r_inner / r_outer, 1), capped=(True, True)
+                ),
+            c = cmap(H, Hs, style = 'plasma'),
+            )
+        ax3.line(
+            Channel(
+                ddTs, label=r"$\frac{d}{dr} \left( r{T(r)}^{'} \right)$",
+                lims=(-20, 0), capped=(True, True),
+                ),
+            Channel(
+                rddTs / r_outer, label=r"$r^{*}$",
+                lims=(r_inner / r_outer, 1), capped=(True, True)
+                ),
+            c = cmap(H, Hs, style = 'plasma'),
+            )
+        axs = (ax1, ax2, ax3)
+
+        for ax in (ax2, ax3):
+            ax.props.edges.y.label.visible = False
+            ax.props.edges.y.ticks.major.labels = ()
+        # if i < (len(fs_to_draw) - 1):
+        #     for ax in (ax1, ax2, ax3):
+        #         ax.props.edges.x.label.visible = False
+        #         ax.props.edges.x.ticks.major.labels = ()
+    
+    canvasses.append(canvas)
+
+imop.vstack(*canvasses)
+
+# def model(h, H):
+#     a = -0.11196818 * H + 0.36646053
+#     b = -2.45738185 * H + 6.40652432
+#     return a / h + b
+
+# ax4 = canvas.make_ax((3, 0))
+# for H in Hs:
+#     Ts = subfrm.loc[H, 'geotherm']
+#     ddTs, hddTs = analysis.derivative(Ts, hs, n = 2)
+#     ax4.line(
+#         Channel(cylindrical.r_star(hddTs, f)[:10], lims=(None, None)),
+#         Channel(model(hddTs, H)[:10]),
+#         c = cmap(H, Hs, style = 'plasma'),   
+#         )
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+label: fullcase_r2score_value
+---
+def cylindrical_mixed_heating(h, f, H=0.0):
+    f = cylindrical.safe_f(f)
+    r_i, r_o = f / (1 - f), 1 / (1 - f)
+    h = np.asarray(h, dtype=float)
+    r  = r_i + h * (r_o - r_i)
+    coeff = H / 4
+    log_ratio = np.log(r / r_o) / np.log(r_i / r_o)
+    return (
+          -coeff * (r**2 - r_o**2)
+        + (1 + coeff * (r_i**2 - r_o**2)) * log_ratio
+        )
+
+all_synth = np.concat(tuple(cylindrical_mixed_heating(hs, f=f, H=H) for H, f in frm.index))
+all_natural = np.concat(frm['geotherm'].values)
+fullcase_r2score_value = r2_score(all_natural, all_synth)
+fullcase_r2score_value
+```
+
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ## Thinking outside the box: building a cylindrical domain
 
 Thus far we have restricted this discussion to rectilinear ('Cartesian') planar boxes. Real planets are of course three-dimensional balls, not two-dimensional boxes. While we are bound to the planar realm by the dictates of pragmatism, we can at least step towards realism by embracing a curved geometry. Indeed, it transpires that even this small step introduces substantial complications - and raises new and fascinating questions.
-
-+++
-
-### TESTING LATEX STUFF
-
-$$
-\vector{2}
-$$
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
@@ -622,13 +803,13 @@ $$
 r_m \equiv \frac{r_{i} + r_{o}}{2} = \frac{1 + f}{2 \left( 1 - f \right)}
 $$
 
-Since the circumference of a complete circle is $ 2 \pi r$ (we would hope no citation is needed for that one), the angular length at depth $r_m$ can be calculated from $\Theta$:
+Since the circumference of a complete circle is $ 2 \pi r$, the angular length at depth $r_m$ can be calculated from $\Theta$:
 
 $$
 A = r_m \Theta
 $$
 
-Such a scheme leaves us with two competing claims for a 'natural' denominator of the angular coordinate - $\Theta$ and $r_m$. While authors have sometimes preferred to keep $\Theta$ and $r_m$ constant and allow $A$ to vary [@Jarvis1994-np], we have for the most part chosen to fix $A$ and $r_m$ with $\Theta$ as the free parameter, as in [@Jarvis1993-cb]. One of the virtues of this choice is that it preserves the $(g, h)$ coordinate system over varying $A$. This simplifies comparisons with plane-layer simulations, though potentially at the cost of producing planforms which could be unstable if scaled to the full annulus.
+Such a scheme leaves us with two competing claims for a 'natural' denominator of the angular coordinate - $\Theta$ and $r_m$. While authors have sometimes preferred to keep $\Theta$ and $r_m$ constant and allow $A$ to vary [@Jarvis1994-np], we have for the most part chosen to fix $A$ and $r_m$ with $\Theta$ as the free parameter, as in [@Jarvis1993-cb]. One of the virtues of this choice is that it preserves the $(l, h)$ coordinate system over varying $A$. This simplifies comparisons with plane-layer simulations, though potentially at the cost of producing planforms which could be unstable if scaled to the full annulus.
 
 In the Cartesian case, when the height of the box is set to unit, the aspect ratio is not only equivalent to the box width: it is also equivalent to the box *area*. The virtue of defining cylindrical $A$ using the mid-depth is that this property is preserved even for extreme values of $f$. Parameterising a model in terms of area is particularly advantageous when dealing with system forcings, like internal heat, which scale with area.
 
@@ -769,7 +950,7 @@ $$
 T_{\mathrm{cell}} = \frac{f}{f + 1} \quad \leftarrow {\Delta r}_i = {\Delta r}_o
 $$
 
-This, however, would imply that the inner and outer *Rayleigh* numbers are divergent. If we instead choose to conserve $Ra$, then: [@`Jarvis1993-cb]
+This, however, would imply that the inner and outer *Rayleigh* numbers are divergent. If we instead choose to conserve $Ra$, then: [@Jarvis1993-cb]
 
 $$
 T_{\mathrm{cell}} = \frac{1}{1 + f^{-3/4}} \quad \leftarrow \mathrm{Ra}_i = \mathrm{Ra}_o
@@ -777,7 +958,7 @@ $$
 
 Both possibilities converge on $0.5$ when $f\to1$ and $0$ when $f\to0$, as we would expect.
 
-However it is estimated, it is clear that, as $Ra$ increases and boundaries thin, more of the mantle will fall in the intracellular region and global temperatures as a whole will approach $T_{cell}$. Conversely, if $\mathrm{Ra}$ slips below its critical value, the boundary layers will disapper and the entire domain will enter the conductive regime: $T^{av} = T_{c}$. These two temperatures therefore make up respectively the lower and upper endmembers of global temperature:
+However it is estimated, it is clear that, as $\mathrm{Ra}$ increases and boundaries thin, more of the mantle will fall in the intracellular region and global temperatures as a whole will approach $T_\mathrm{cell}$. Conversely, if $\mathrm{Ra}$ slips below its critical value, the boundary layers will disapper and the entire domain will enter the conductive regime: $T^{\mathrm{av}} = T_{c}$. These two temperatures therefore make up respectively the lower and upper endmembers of global temperature:
 
 $$ \begin{align*}
 T_{\mathrm{av}} &\approx T_{c}, \quad \mathrm{Ra} < \mathrm{Ra}_{\mathrm{cr}} \\
@@ -786,7 +967,7 @@ T_{\mathrm{av}} &\approx T_{c}, \quad \mathrm{Ra} < \mathrm{Ra}_{\mathrm{cr}} \\
 
 It makes intuitive sense that the effect of increasing $\mathrm{Ra}$ should be to decrease global temperatures, since that is exactly why convection is preferred wherever possible - though this intuition may not hold for all rheologies.
 
-Of course, what we desire most of all is a cylindrical scaling for the mantle convection power law $Nu \propto {\mathrm{Ra}^*}^\beta$. Following [@Jarvis1993-cb] and mandating equality of inner and outer $\mathrm{Ra}_\mathrm{layer}$, it is possible to construct a 'geometric correction' $g(f)$ that functions as a coefficient of the *beta* scaling:
+Of course, what we desire most of all is a cylindrical scaling for the mantle convection power law $\mathrm{Nu} \propto {\mathrm{Ra}^*}^\beta$. Following [@Jarvis1993-cb] and mandating equality of inner and outer $\mathrm{Ra}_\mathrm{layer}$, it is possible to construct a 'geometric correction' $g(f)$ that functions as a coefficient of the *beta* scaling:
 
 $$
 g(f) = \frac{\mathrm{Nu}_{c}}{{T_{\mathrm{cell}}}^{4/3}} \quad \leftarrow \mathrm{Ra}_i = \mathrm{Ra}_o
@@ -857,11 +1038,11 @@ Note how the correct choice of coordinate system dramatically simplifies things.
 The conductive geotherm for cylindrical domains under internal heating. The empirical results and the symbolically-derived closed-form solution match exactly.
 ```
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### Mixed heating in the annulus
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 Like in the Cartesian case, the annular mixed heating regime contains both the internally-heated and basally-heated endmembers. The system reproduces basal heating in the trivial case of $H=0$. The internal heating endmember arises in the dynamic case where the heating rate is at its 'critical' value, $H_\mathrm{cr}$. At this exact value, the temperature in a layer infinitely close to the mantle base is equal to the fixed temperature of the mantle base proper. Consequently the flux across the boundary drops to zero, just as it would in the (basally insulated) internal heating case.
 
@@ -881,7 +1062,7 @@ $$
 {\phi_q}_o = H + {\phi_q}_i
 $$
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 In the Cartesian case, $H_\mathrm{cr}$ for mixed heating is equal to the inverse of the average temperature for purely basal heating. If the same holds for the annulus, we should therefore expect:
 
@@ -901,6 +1082,49 @@ We know that the flux through any given layer due to internally-generated heat a
 $$
 \phi = -H \cdot + \phi_{i}
 $$
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+```{figure} #cylindrical_mixed_geotherm
+:name: cylindrical_mixed_geotherm_fig
+
+The equilibrium conductive geotherms for cylindrical mixed heating for varying $H$ (colour) and $f$ (opacity, where $1$ is solid and $0$ is invisible).
+```
+
+INCOMPLETE
+
+```{figure} #cylindrical_mixed_geotherm_analysis
+:name: cylindrical_mixed_geotherm_analysis_fig
+
+An analysis of two select cases of the cylindrical mixed heating model.
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+$$
+\Delta r = r_o - r_i \\
+r = r_i + \Delta r \\
+$$
+
+$$
+\frac{d}{dr} \left( r T(r)' \right) = -rH
+$$
+
+$$
+T(h) = -\frac{H}{4} \left(r^2 - {r_o}^2 \right) + \left( 1 + \frac{H}{4} \left( {r_i}^2 - {r_o}^2 \right) \right) \frac{\ln{r / r_o}}{\ln{r_i / r_o}}
+$$
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+INCOMPLETE
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+### Geotherms for various cases - summarised
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+Our purpose in this section was to derive closed-form expressions of the geothermal and thermal flux gradients for conductive heat transport at equilibrium. The general case (the 'supremum', in a sense) countenances a mixed heating regime in a curved domain, with three free parameters: the rate of internal heat production per area ($H$ in the range $0-10$), the degree of curvature ($f$ in the range $0-1$), and the nature of the lower boundary layer (effectively a boolean variable or 'switch' which toggles between a fixed gradient of zero or a fixed value of $1$). All other cases explored in this section are effectively endmembers of this general case: non-heating $H=0$ versus heating $H>0$ and non-curved ($f=1$) versus curved ($f<1$) for each of the two choices of boundary condition; discarding the farcical case of neither basal nor volumetric heating, that gives us six cases in total. Some of these scalings were derived symbolically; others were derived empirically, then reduced into a symbolic form. All align with the literature, albeit in several cases in somewhat novel forms as inspired by the logic we have outlined and/or a close inspection of the empirical data. The results are intended to serve simultaneously as a convenient reference, a benchmarking exercise for our physics code, and as a theoretical backstop for the work that is to come.
 
 +++
 
@@ -939,3 +1163,7 @@ $$ \begin{align*}
 T(h) &= -H {\left( \frac{r_o}{2} \right)}^2 \left( 
 2 f^{2} \ln \left| r^* \right| \;-\; {r^*}^2 + 1 \right)
 \end{align*} $$
+
+```{code-cell} ipython3
+
+```

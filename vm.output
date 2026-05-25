@@ -7529,3 +7529,702 @@
 [W 2026-05-25 02:01:14.852 ServerApp] delete /workspace/book/content/chapter_03/old/conclusion.md
 [W 2026-05-25 02:01:14.856 ServerApp] delete /workspace/book/content/chapter_03/old/main.md
 [W 2026-05-25 02:01:18.913 ServerApp] delete /workspace/book/content/chapter_03/old
+[I 2026-05-25 03:52:32.304 ServerApp] Kernel shutdown: 450e9a91-c9d2-4710-bac0-2ffb79e35a77
+[I 2026-05-25 03:52:32.307 ServerApp] Kernel shutdown: e6a24a88-583e-4b8f-8286-a0656200989b
+[I 2026-05-25 03:52:32.308 ServerApp] Kernel shutdown: ce7fd363-fb00-4388-a205-29abffff089a
+[I 2026-05-25 03:52:32.310 ServerApp] Kernel shutdown: 854c8b7f-3ab2-4b1d-838a-0df10aeaebe7
+[I 2026-05-25 03:52:32.311 ServerApp] Kernel shutdown: 4fb85da9-9710-41ed-b151-65cc47d8d05a
+[I 2026-05-25 03:52:32.312 ServerApp] Kernel shutdown: a2792b21-5238-4239-92c0-dfa6607b7dc6
+[I 2026-05-25 03:52:32.313 ServerApp] Kernel shutdown: 09563e90-1cfa-412f-b5c7-f7b5ed66eff4
+[I 2026-05-25 03:52:48.449 ServerApp] EOF on FD 68; stopping reading
+[I 2026-05-25 03:52:48.549 ServerApp] Terminal 3 closed
+[I 2026-05-25 03:57:22.005 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[W 2026-05-25 03:57:34.402 ServerApp] Notebook workspace/book/content/chapter_02/rayleigh.ipynb is not trusted
+[I 2026-05-25 03:57:34.403 ServerApp] Reading SOURCE from workspace/book/content/chapter_02/rayleigh.md
+[I 2026-05-25 03:57:34.570 ServerApp] Kernel started: 6b885ff2-ce29-4ba3-b2b2-fb713adab86b
+[W 2026-05-25 03:57:34.847 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.82ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[I 2026-05-25 03:57:34.946 ServerApp] Connecting to kernel 6b885ff2-ce29-4ba3-b2b2-fb713adab86b.
+[W 2026-05-25 03:57:35.041 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.70ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 03:57:35.041 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.19ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 03:57:35.104 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.98ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 03:57:35.105 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.29ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 03:57:35.852 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.13ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 03:57:35.852 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.33ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 03:57:36.419 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.05ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 03:57:36.419 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 03:57:36.612 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.04ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 03:57:36.703 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.03ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 03:57:37.085 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.07ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 03:57:54.857 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.80ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 03:57:54.889 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.83ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 03:58:38.573 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.04ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 03:58:38.615 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.79ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[I 2026-05-25 03:59:34.829 ServerApp] Saving file at /workspace/book/content/chapter_02/rayleigh.ipynb
+[I 2026-05-25 03:59:34.831 ServerApp] Saving rayleigh.ipynb
+[W 2026-05-25 03:59:34.831 ServerApp] Notebook workspace/book/content/chapter_02/rayleigh.ipynb is not trusted
+[I 2026-05-25 03:59:34.842 ServerApp] Saving rayleigh.md
+[W 2026-05-25 03:59:34.842 ServerApp] Stripping metadata from workspace/book/content/chapter_02/rayleigh.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-05-25 04:02:09.558 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.09ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 04:02:09.663 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.07ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 04:02:09.934 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.08ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 04:02:58.360 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.06ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 04:02:58.419 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.87ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[I 2026-05-25 04:03:36.827 ServerApp] Saving file at /workspace/book/content/chapter_02/rayleigh.ipynb
+[I 2026-05-25 04:03:36.828 ServerApp] Saving rayleigh.ipynb
+[W 2026-05-25 04:03:36.828 ServerApp] Notebook workspace/book/content/chapter_02/rayleigh.ipynb is not trusted
+[I 2026-05-25 04:03:36.964 ServerApp] Saving rayleigh.md
+[W 2026-05-25 04:03:36.964 ServerApp] Stripping metadata from workspace/book/content/chapter_02/rayleigh.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-05-25 04:09:31.967 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.11ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 04:09:32.117 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.10ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 04:10:20.438 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.07ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[W 2026-05-25 04:10:20.495 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.91ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/rayleigh.ipynb
+[I 2026-05-25 04:11:39.839 ServerApp] Saving file at /workspace/book/content/chapter_02/rayleigh.ipynb
+[I 2026-05-25 04:11:39.841 ServerApp] Saving rayleigh.ipynb
+[W 2026-05-25 04:11:39.841 ServerApp] Notebook workspace/book/content/chapter_02/rayleigh.ipynb is not trusted
+[I 2026-05-25 04:11:39.851 ServerApp] Saving rayleigh.md
+[W 2026-05-25 04:11:39.851 ServerApp] Stripping metadata from workspace/book/content/chapter_02/rayleigh.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-05-25 04:45:47.771 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 04:45:47.772 ServerApp] Reading SOURCE from workspace/book/content/chapter_02/heating.md
+[I 2026-05-25 04:45:48.089 ServerApp] Kernel started: 6f1514c6-ce7a-4565-8f98-c14c3949aa9d
+[W 2026-05-25 04:45:48.340 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.27ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/heating.ipynb
+[W 2026-05-25 04:45:48.408 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.24ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/heating.ipynb
+[W 2026-05-25 04:45:48.409 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/heating.ipynb
+[W 2026-05-25 04:45:48.526 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.12ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/heating.ipynb
+[W 2026-05-25 04:45:48.527 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.30ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 04:45:48.680 ServerApp] Connecting to kernel 6f1514c6-ce7a-4565-8f98-c14c3949aa9d.
+[W 2026-05-25 04:45:50.655 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.06ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/heating.ipynb
+[W 2026-05-25 04:45:50.689 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.72ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/heating.ipynb
+[W 2026-05-25 04:45:50.721 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.72ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/heating.ipynb
+[W 2026-05-25 04:45:50.721 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/heating.ipynb
+[W 2026-05-25 04:45:50.778 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.87ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/heating.ipynb
+[W 2026-05-25 04:45:50.839 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.91ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 04:45:54.962 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 04:45:54.963 ServerApp] Saving heating.ipynb
+[W 2026-05-25 04:45:54.963 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 04:45:54.971 ServerApp] Saving heating.md
+[W 2026-05-25 04:45:54.971 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 05:24:42.091 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 05:24:42.093 ServerApp] Saving heating.ipynb
+[W 2026-05-25 05:24:42.093 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 05:24:42.103 ServerApp] Saving heating.md
+[W 2026-05-25 05:24:42.103 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-05-25 05:25:59.105 ServerApp] Notebook workspace/book/content/chapter_02/test/test.ipynb is not trusted
+[I 2026-05-25 05:25:59.107 ServerApp] Reading SOURCE from workspace/book/content/chapter_02/test/test.md
+[I 2026-05-25 05:25:59.312 ServerApp] Kernel started: 36a2754b-e366-4cce-b816-00c39909ed3d
+[I 2026-05-25 05:25:59.752 ServerApp] Connecting to kernel 36a2754b-e366-4cce-b816-00c39909ed3d.
+[I 2026-05-25 05:26:00.580 ServerApp] Starting buffering for 36a2754b-e366-4cce-b816-00c39909ed3d:5439db32-18bb-4d47-a1c8-18405d36e331
+[I 2026-05-25 05:26:58.104 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 05:26:58.106 ServerApp] Saving heating.ipynb
+[W 2026-05-25 05:26:58.106 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 05:26:58.114 ServerApp] Saving heating.md
+[W 2026-05-25 05:26:58.114 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 05:27:01.665 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 05:27:01.667 ServerApp] Saving heating.ipynb
+[W 2026-05-25 05:27:01.667 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 05:27:01.674 ServerApp] Saving heating.md
+[W 2026-05-25 05:27:01.675 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 05:27:06.185 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 05:27:06.187 ServerApp] Saving heating.ipynb
+[W 2026-05-25 05:27:06.187 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 05:27:06.194 ServerApp] Saving heating.md
+[W 2026-05-25 05:27:06.194 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 05:27:09.077 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 05:27:09.079 ServerApp] Saving heating.ipynb
+[W 2026-05-25 05:27:09.079 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 05:27:09.087 ServerApp] Saving heating.md
+[W 2026-05-25 05:27:09.087 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 05:35:17.335 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 05:35:17.337 ServerApp] Saving heating.ipynb
+[W 2026-05-25 05:35:17.337 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 05:35:17.345 ServerApp] Saving heating.md
+[W 2026-05-25 05:35:17.345 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 05:35:33.608 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 05:35:33.609 ServerApp] Saving heating.ipynb
+[W 2026-05-25 05:35:33.610 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 05:35:33.618 ServerApp] Saving heating.md
+[W 2026-05-25 05:35:33.618 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 05:35:34.407 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 05:35:34.409 ServerApp] Saving heating.ipynb
+[W 2026-05-25 05:35:34.409 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 05:35:34.417 ServerApp] Saving heating.md
+[W 2026-05-25 05:35:34.417 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 05:35:34.595 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 05:35:34.597 ServerApp] Saving heating.ipynb
+[W 2026-05-25 05:35:34.597 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 05:35:34.605 ServerApp] Saving heating.md
+[W 2026-05-25 05:35:34.605 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 05:35:37.555 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 05:35:37.557 ServerApp] Saving heating.ipynb
+[W 2026-05-25 05:35:37.557 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 05:35:37.565 ServerApp] Saving heating.md
+[W 2026-05-25 05:35:37.565 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 05:35:50.495 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 05:35:50.497 ServerApp] Saving heating.ipynb
+[W 2026-05-25 05:35:50.497 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 05:35:50.506 ServerApp] Saving heating.md
+[W 2026-05-25 05:35:50.506 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 05:35:50.803 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 05:35:50.805 ServerApp] Saving heating.ipynb
+[W 2026-05-25 05:35:50.805 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 05:35:50.813 ServerApp] Saving heating.md
+[W 2026-05-25 05:35:50.813 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 05:35:51.043 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 05:35:51.045 ServerApp] Saving heating.ipynb
+[W 2026-05-25 05:35:51.045 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 05:35:51.053 ServerApp] Saving heating.md
+[W 2026-05-25 05:35:51.053 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 05:35:51.214 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 05:35:51.216 ServerApp] Saving heating.ipynb
+[W 2026-05-25 05:35:51.216 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 05:35:51.224 ServerApp] Saving heating.md
+[W 2026-05-25 05:35:51.224 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 05:35:51.371 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 05:35:51.373 ServerApp] Saving heating.ipynb
+[W 2026-05-25 05:35:51.373 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 05:35:51.382 ServerApp] Saving heating.md
+[W 2026-05-25 05:35:51.382 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 05:35:52.269 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 05:35:52.271 ServerApp] Saving heating.ipynb
+[W 2026-05-25 05:35:52.271 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 05:35:52.279 ServerApp] Saving heating.md
+[W 2026-05-25 05:35:52.279 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:11:17.570 ServerApp] Reading SOURCE from workspace/book/content/chapter_02/cylindrical.md
+[I 2026-05-25 06:11:17.915 ServerApp] Kernel started: a1115244-35c2-4a56-8839-1ce00e5d75bf
+[I 2026-05-25 06:11:18.292 ServerApp] Connecting to kernel a1115244-35c2-4a56-8839-1ce00e5d75bf.
+[W 2026-05-25 06:11:18.509 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.98ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:18.510 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.22ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:18.515 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:18.688 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.00ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:18.689 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.63ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:18.689 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.93ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:18.693 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:18.694 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:18.898 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.33ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:18.898 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.53ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:18.899 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.85ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:18.899 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.23ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:18.900 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.52ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:19.020 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.29ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:19.020 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:19.021 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.77ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:19.022 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.57ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:19.023 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.91ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:19.099 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.11ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:19.100 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.32ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:19.100 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:19.106 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.63ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:19.106 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.91ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:33.814 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.30ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:33.814 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:33.815 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:33.820 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.55ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:33.821 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:35.137 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.11ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:35.137 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:35.138 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.89ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:35.266 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.03ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:35.267 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:35.307 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.75ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:35.308 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.60ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:35.308 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.90ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:35.497 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.14ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:35.498 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.35ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:35.499 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:35.584 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.04ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:35.585 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:42.064 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.25ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:42.064 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.55ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:42.065 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.57ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:42.085 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.11ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:11:42.086 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.33ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:11:48.373 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:11:48.375 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:11:48.405 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:11:48.405 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:16:29.714 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:16:29.715 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:16:29.802 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:16:29.802 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:17:29.125 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:17:29.126 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:17:29.151 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:17:29.151 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:26:33.362 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:26:33.363 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:26:33.419 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:26:33.419 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:26:33.621 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:26:33.622 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:26:33.651 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:26:33.651 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:26:33.795 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:26:33.797 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:26:33.918 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:26:33.918 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:26:54.225 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:26:54.226 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:26:54.249 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:26:54.249 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:27:07.725 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:27:07.726 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:27:07.763 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:27:07.763 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:27:07.908 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:27:07.909 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:27:07.938 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:27:07.938 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:27:15.145 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:27:15.146 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:27:15.172 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:27:15.172 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:27:48.713 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:27:48.714 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:27:48.747 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:27:48.748 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-05-25 06:29:23.945 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:29:23.946 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.81ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:29:24.035 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.21ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 06:29:24.035 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.44ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:42:18.866 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:42:18.867 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:42:18.912 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:42:18.912 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:44:00.125 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 06:44:19.246 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:44:19.248 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:44:19.271 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:44:19.271 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-05-25 06:44:20.012 ServerApp] Notebook workspace/book/content/chapter_02/cylindrical_mixed.ipynb is not trusted
+[I 2026-05-25 06:44:20.014 ServerApp] Reading SOURCE from workspace/book/content/chapter_02/cylindrical_mixed.md
+[I 2026-05-25 06:44:20.418 ServerApp] Kernel started: 74407e7e-7b57-482d-a2e5-3ff49084c912
+[I 2026-05-25 06:44:20.747 ServerApp] Connecting to kernel 74407e7e-7b57-482d-a2e5-3ff49084c912.
+[I 2026-05-25 06:46:19.433 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:46:19.435 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:46:19.511 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:46:19.511 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:48:19.710 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:48:19.711 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:48:19.734 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:48:19.734 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:50:19.895 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:50:19.896 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:50:19.920 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:50:19.920 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:52:20.073 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:52:20.075 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:52:20.098 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:52:20.098 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:54:20.259 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:54:20.261 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:54:20.284 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:54:20.284 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:56:20.470 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:56:20.472 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:56:20.494 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:56:20.494 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 06:58:20.701 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 06:58:20.702 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 06:58:20.728 ServerApp] Saving cylindrical.md
+[W 2026-05-25 06:58:20.728 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 07:00:20.903 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 07:00:20.904 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 07:00:20.927 ServerApp] Saving cylindrical.md
+[W 2026-05-25 07:00:20.927 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 07:02:21.092 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 07:02:21.094 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 07:02:21.117 ServerApp] Saving cylindrical.md
+[W 2026-05-25 07:02:21.118 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 07:04:21.267 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 07:04:21.269 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 07:04:21.311 ServerApp] Saving cylindrical.md
+[W 2026-05-25 07:04:21.311 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 07:06:20.349 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 07:06:20.350 ServerApp] Saving cylindrical_mixed.ipynb
+[W 2026-05-25 07:06:20.351 ServerApp] Notebook workspace/book/content/chapter_02/cylindrical_mixed.ipynb is not trusted
+[I 2026-05-25 07:06:20.364 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 07:06:21.463 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 07:06:21.465 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 07:06:21.490 ServerApp] Saving cylindrical.md
+[W 2026-05-25 07:06:21.490 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 07:06:23.097 ServerApp] Kernel restarted: 74407e7e-7b57-482d-a2e5-3ff49084c912
+[I 2026-05-25 07:06:23.103 ServerApp] Starting buffering for 74407e7e-7b57-482d-a2e5-3ff49084c912:38a54fa9-f786-4c24-be77-8d5e9e66226c
+[I 2026-05-25 07:06:23.170 ServerApp] Connecting to kernel 74407e7e-7b57-482d-a2e5-3ff49084c912.
+[I 2026-05-25 07:06:23.170 ServerApp] Restoring connection for 74407e7e-7b57-482d-a2e5-3ff49084c912:38a54fa9-f786-4c24-be77-8d5e9e66226c
+[I 2026-05-25 07:08:20.477 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 07:08:20.479 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 07:08:20.497 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 07:10:20.621 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 07:10:20.622 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 07:10:20.670 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 07:38:20.893 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 07:38:20.894 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 07:38:20.913 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 07:40:21.037 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 07:40:21.039 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 07:40:21.062 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 07:42:21.182 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 07:42:21.184 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 07:42:21.203 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 07:44:21.320 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 07:44:21.321 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 07:44:21.416 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 07:48:21.541 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 07:48:21.543 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 07:48:21.563 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 07:51:38.793 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 07:51:38.795 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 07:51:38.817 ServerApp] Saving cylindrical.md
+[W 2026-05-25 07:51:38.817 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 07:51:41.726 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 07:51:41.727 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 07:51:41.749 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 07:52:21.694 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 07:52:21.695 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 07:52:21.801 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 07:52:27.199 ServerApp] Kernel restarted: 74407e7e-7b57-482d-a2e5-3ff49084c912
+[I 2026-05-25 07:52:27.226 ServerApp] Starting buffering for 74407e7e-7b57-482d-a2e5-3ff49084c912:38a54fa9-f786-4c24-be77-8d5e9e66226c
+[I 2026-05-25 07:52:27.277 ServerApp] Connecting to kernel 74407e7e-7b57-482d-a2e5-3ff49084c912.
+[I 2026-05-25 07:52:27.277 ServerApp] Restoring connection for 74407e7e-7b57-482d-a2e5-3ff49084c912:38a54fa9-f786-4c24-be77-8d5e9e66226c
+[I 2026-05-25 07:53:38.965 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 07:53:38.967 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 07:53:38.991 ServerApp] Saving cylindrical.md
+[W 2026-05-25 07:53:38.991 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 07:54:21.923 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 07:54:21.924 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 07:54:22.059 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 07:56:22.181 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 07:56:22.183 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 07:56:22.202 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 07:57:02.350 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 07:58:22.354 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 07:58:22.355 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 07:58:22.379 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 07:59:12.555 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:00:22.530 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 08:00:22.532 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 08:00:22.710 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 08:00:32.770 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:01:53.006 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:02:22.863 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 08:02:22.865 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 08:02:22.889 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 08:02:42.960 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:04:23.027 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 08:04:23.029 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 08:04:23.186 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 08:06:23.338 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 08:06:23.339 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 08:06:23.363 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 08:08:23.548 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 08:08:23.550 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 08:08:23.574 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 08:10:23.871 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 08:10:23.873 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 08:10:23.939 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 08:18:25.036 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 08:18:25.037 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 08:18:25.063 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 08:20:25.225 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 08:20:25.226 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 08:20:25.253 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 08:22:25.413 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 08:22:25.415 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 08:22:25.443 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 08:24:25.605 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 08:24:25.606 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 08:24:25.641 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 08:26:25.794 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 08:26:25.796 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 08:26:26.121 ServerApp] Saving cylindrical_mixed.md
+[W 2026-05-25 08:26:26.138 ServerApp] /home/morpheus/workspace/book/content/chapter_02/.~cylindrical_mixed.ipynb doesn't exist
+[I 2026-05-25 08:27:52.399 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 08:27:52.400 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 08:27:52.427 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 08:28:15.253 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:28:15.255 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:28:15.280 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:28:15.280 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:28:53.784 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:28:53.786 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:28:53.810 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:28:53.810 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:28:54.125 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:28:54.127 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:28:54.187 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:28:54.188 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:29:52.638 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 08:29:52.640 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 08:29:52.666 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 08:30:46.469 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:30:46.471 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:30:46.504 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:30:46.504 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:32:46.866 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:32:46.867 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:32:46.942 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:32:46.942 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:33:43.602 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:33:43.604 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:33:43.627 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:33:43.627 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:33:52.238 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:33:52.239 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:33:52.263 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:33:52.263 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:33:56.421 ServerApp] Kernel restarted: a1115244-35c2-4a56-8839-1ce00e5d75bf
+[I 2026-05-25 08:33:56.428 ServerApp] Starting buffering for a1115244-35c2-4a56-8839-1ce00e5d75bf:9fc47998-95a7-4053-afea-b1a74be78c46
+[I 2026-05-25 08:33:56.508 ServerApp] Connecting to kernel a1115244-35c2-4a56-8839-1ce00e5d75bf.
+[I 2026-05-25 08:33:56.508 ServerApp] Restoring connection for a1115244-35c2-4a56-8839-1ce00e5d75bf:9fc47998-95a7-4053-afea-b1a74be78c46
+[W 2026-05-25 08:33:57.278 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.73ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:33:57.279 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.98ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:33:57.279 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:33:57.357 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.69ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:33:57.358 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:33:57.456 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.10ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:08.927 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.43ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:08.927 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.70ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:08.928 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.05ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:08.935 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.55ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:08.938 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:08.941 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:11.462 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.17ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:11.463 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.59ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:11.464 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.97ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:11.471 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.53ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:11.472 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:11.540 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.97ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:12.227 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.11ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:12.228 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.34ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:12.228 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:12.235 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.61ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:12.236 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.91ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:34:12.264 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.68ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:34:48.240 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:34:48.242 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:34:48.278 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:34:48.279 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:34:49.152 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:34:49.153 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:34:49.186 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:34:49.187 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:34:49.489 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:34:49.490 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:34:49.739 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:34:49.740 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:37:18.495 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:37:38.413 ServerApp] Kernel shutdown: 36a2754b-e366-4cce-b816-00c39909ed3d
+[I 2026-05-25 08:37:42.430 ServerApp] Saving file at /workspace/book/content/chapter_02/heating.ipynb
+[I 2026-05-25 08:37:42.432 ServerApp] Saving heating.ipynb
+[W 2026-05-25 08:37:42.432 ServerApp] Notebook workspace/book/content/chapter_02/heating.ipynb is not trusted
+[I 2026-05-25 08:37:42.447 ServerApp] Saving heating.md
+[W 2026-05-25 08:37:42.447 ServerApp] Stripping metadata from workspace/book/content/chapter_02/heating.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:37:43.008 ServerApp] Starting buffering for 6f1514c6-ce7a-4565-8f98-c14c3949aa9d:de09da65-00ad-4faa-bee3-d80df99ecff3
+[I 2026-05-25 08:37:45.234 ServerApp] Starting buffering for 6b885ff2-ce29-4ba3-b2b2-fb713adab86b:00cebe0f-4e9e-4a02-822a-05a43ee1403d
+[I 2026-05-25 08:37:47.652 ServerApp] Kernel shutdown: 6f1514c6-ce7a-4565-8f98-c14c3949aa9d
+[I 2026-05-25 08:37:48.980 ServerApp] Kernel shutdown: 6b885ff2-ce29-4ba3-b2b2-fb713adab86b
+[I 2026-05-25 08:40:48.401 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:40:48.550 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:40:48.552 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:40:48.594 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:40:48.594 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:42:17.275 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:42:17.435 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:42:17.437 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:42:17.469 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:42:17.469 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:42:17.820 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:42:17.822 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:42:17.881 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:42:17.881 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:43:04.700 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:43:04.858 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:43:04.860 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:43:04.894 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:43:04.894 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:44:26.571 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:44:26.723 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:44:26.725 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:44:26.754 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:44:26.754 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-05-25 08:44:59.604 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:44:59.604 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.73ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:44:59.605 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.09ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:45:01.002 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:45:01.165 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:45:01.166 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:45:01.408 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:45:01.408 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-05-25 08:45:14.700 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.09ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:45:14.701 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.62ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:45:14.702 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.91ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:45:19.763 ServerApp] 404 GET /api/contents/workspace/book/_build/temp/mysthm1iHb/files?content=1&hash=0&1779698778981 (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.99ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:45:19.763 ServerApp] 404 GET /api/contents/workspace/book/_build/temp/mysthm1iHb/files?content=1&hash=0&1779698778981 (172.17.0.1): No such file or directory: workspace/book/_build/temp/mysthm1iHb/files
+[I 2026-05-25 08:47:01.755 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:47:01.929 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:47:01.931 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:47:01.964 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:47:01.964 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:47:46.427 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:47:46.583 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:47:46.584 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:47:46.617 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:47:46.617 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:47:52.475 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:47:52.626 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:47:52.627 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:47:52.657 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:47:52.657 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:47:53.141 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:47:53.142 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:47:53.228 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:47:53.229 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:49:31.744 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:49:31.905 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:49:31.906 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:49:31.935 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:49:31.935 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:49:34.908 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:49:34.909 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:49:34.941 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:49:34.941 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:49:43.023 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:49:43.177 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:49:43.178 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:49:43.208 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:49:43.208 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:51:43.257 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:51:43.434 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:51:43.436 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:51:43.468 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:51:43.468 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-05-25 08:52:44.342 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.27ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:44.343 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:44.343 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.83ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:44.421 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.09ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:44.422 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.42ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:52.767 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.06ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:52.768 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.59ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:52.768 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.91ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:52.843 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.09ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:52.843 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.30ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:56.934 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.16ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:56.935 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.37ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:56.935 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:56.955 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.64ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:56.956 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:57.009 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.98ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:57.009 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.22ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:57.104 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.06ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:57.105 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.60ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:57.105 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.91ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:57.225 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.02ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:52:57.226 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:53:43.521 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:53:43.671 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:53:43.673 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:53:43.713 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:53:43.714 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-05-25 08:53:48.720 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.22ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:53:48.721 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:53:48.722 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:53:48.739 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.67ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:53:48.740 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.97ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:53:51.339 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.17ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:53:51.340 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.40ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:53:51.340 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:53:51.412 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.07ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:53:51.412 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.29ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:53:53.586 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.18ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:53:53.587 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.40ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:53:53.588 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.45ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:53:53.603 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.55ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:53:53.604 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:53:54.636 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:53:54.792 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:53:54.796 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:53:54.993 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:53:54.993 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:53:55.108 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical_mixed.ipynb
+[I 2026-05-25 08:53:55.109 ServerApp] Saving cylindrical_mixed.ipynb
+[I 2026-05-25 08:53:55.179 ServerApp] Saving cylindrical_mixed.md
+[I 2026-05-25 08:54:02.059 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:54:02.211 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:54:02.213 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:54:02.282 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:54:02.282 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:54:09.945 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:54:10.099 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:54:10.101 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:54:10.129 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:54:10.129 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-05-25 08:54:18.894 ServerApp] 404 GET /api/contents/workspace/book/_build/temp/mystMYFM0Y/files?content=1&hash=0&1779699318116 (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.95ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/_build/temp/mystMYFM0Y/files
+[W 2026-05-25 08:54:18.894 ServerApp] 404 GET /api/contents/workspace/book/_build/temp/mystMYFM0Y/files?content=1&hash=0&1779699318116 (172.17.0.1): No such file or directory: workspace/book/_build/temp/mystMYFM0Y/files
+[I 2026-05-25 08:56:10.211 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:56:10.374 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:56:10.376 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:56:10.406 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:56:10.406 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-05-25 08:56:13.483 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.29ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:56:13.483 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:56:13.484 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.80ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:56:13.507 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.84ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:56:13.507 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.13ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:56:15.529 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:56:15.530 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:56:15.577 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:56:15.577 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:56:22.874 ServerApp] Kernel restarted: a1115244-35c2-4a56-8839-1ce00e5d75bf
+[I 2026-05-25 08:56:22.881 ServerApp] Starting buffering for a1115244-35c2-4a56-8839-1ce00e5d75bf:9fc47998-95a7-4053-afea-b1a74be78c46
+[I 2026-05-25 08:56:22.942 ServerApp] Connecting to kernel a1115244-35c2-4a56-8839-1ce00e5d75bf.
+[I 2026-05-25 08:56:22.943 ServerApp] Restoring connection for a1115244-35c2-4a56-8839-1ce00e5d75bf:9fc47998-95a7-4053-afea-b1a74be78c46
+[I 2026-05-25 08:56:27.816 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 08:56:46.035 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:56:46.036 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:56:46.065 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:56:46.066 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:57:20.145 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.md
+[I 2026-05-25 08:57:21.722 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.md
+[W 2026-05-25 08:57:33.325 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.12ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:57:33.325 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.57ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:57:33.326 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.90ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:57:33.411 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.06ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:57:33.416 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.54ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:57:52.276 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:57:52.278 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:57:52.495 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:57:52.495 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:57:53.839 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:57:53.841 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:57:53.875 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:57:53.875 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-05-25 08:57:55.289 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.28ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:57:55.289 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.52ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:57:55.290 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.88ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:57:55.307 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.72ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 08:57:55.307 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.00ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:57:56.695 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:57:56.696 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:57:56.730 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:57:56.730 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 08:58:06.040 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 08:58:06.041 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 08:58:06.096 ServerApp] Saving cylindrical.md
+[W 2026-05-25 08:58:06.096 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 09:01:08.429 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 09:01:08.580 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 09:01:08.582 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 09:01:08.668 ServerApp] Saving cylindrical.md
+[W 2026-05-25 09:01:08.668 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-05-25 09:01:20.494 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 09:01:20.661 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 09:01:20.663 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 09:01:20.695 ServerApp] Saving cylindrical.md
+[W 2026-05-25 09:01:20.695 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-05-25 09:01:31.665 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.28ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 09:01:31.666 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[W 2026-05-25 09:01:31.666 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.82ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 09:01:32.957 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-25 09:01:33.112 ServerApp] Saving file at /workspace/book/content/chapter_02/cylindrical.ipynb
+[I 2026-05-25 09:01:33.114 ServerApp] Saving cylindrical.ipynb
+[I 2026-05-25 09:01:33.143 ServerApp] Saving cylindrical.md
+[W 2026-05-25 09:01:33.143 ServerApp] Stripping metadata from workspace/book/content/chapter_02/cylindrical.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)

@@ -275,15 +275,15 @@ The ratio of internal heat production to surface heat flux inside a planet is ca
 
 Analytically, the addition of internal heating introduces many complications. Most significantly, the temperature scale is no longer an independent variable, but a natural one emerging from the dynamic balance of heat production and heat transport. This dependency invalidates the derivation of $\mathrm{Ra}$ previously provided, and unfortunately, no obvious or unambiguous alternative scaling is known [@Schubert2001-ea; @Moore2008-je; @Korenaga2017-an].
 
++++
+
+### Internal heating
+
 ```{figure} #isocondh
 :name: isocondh_fig
 
 Summary of the scaling behaviours of isoviscous conduction for varying internal heating parameter $H$. Temperature goes linearly as a function of dimensionless height from the base of the mantle, $h^2$.
 ```
-
-+++
-
-### Internal heating
 
 To provide some bounds on the expected behaviour of a mixed-heating model, it is helpful to review the effects of purely internal heating. Without the ability to arbitrarily specify a temperature scale, it is natural to use that which arises from pure conduction. Under a scenario of pure internal heating, the conductive geotherm is no longer linear, but scales with length squared [@Turcotte2014-by] {numref}`isocondh_fig`:
 
@@ -339,12 +339,6 @@ This relationship appears to hold empirically with good confidence [@Vilella2017
 
 Qualitatively, the addition of internal heating to the isoviscous convection problem imposes an asymmetry between upwellings and downwellings, which would otherwise be temperature-reversed mirrors of one another [@Weinstein1990-dd]. Because the thermal gradient of the conductive state rapidly drops with depth, the local *Rayleigh* numbers of deeper layers can quickly become subcritical, such that a large portion of the domain from the base up is locked in a near-conductive state. At high $H$, large-scale motions cease, and only a thin sub-surface 'mixing layer' witnesses any meaningful convection at all [@Parmentier1994-on].
 
-```{figure} #isocondhmixed
-:name: isocondhmixed_fig
-
-Summary of the scaling behaviours of the conductive solution for mixed heating. The inner boundary is set to dimensionless temperature $T=1$, the outer to $T=0$. On the right, average temperature and the slope of $\delta T / \delta h$ are given as functions of $H$. Gradient clearly varies as a function of dimensionless height $h$ above the mantle base according to a slope given by $-H$. The conductive geotherm for mixed heating is therefore, in fact, a parabola.
-```
-
 One final feature of purely internal heating systems worth mentioning - obvious when pointed out but easily overlooked - is that the total heat production is fixed. This is *not* the case for basal heating (using a fixed lower boundary temperature) because one can always, as it were, 'suck' more heat out of the core by thinning the lower boundary layer. Consequently, for a given 'total heating rate' $H_\mathrm{total} = H \cdot \mathrm{Area} $, the whole domain must necessarily be warming, cooling, or at equilibrium depending on the ratio of $H_\mathrm{total}$ and ${\phi_q}_c$. This is just another reason to add to the many already presented for why we should expect purely internally-heated models to be less dynamic in every way than basally-heated ones.
 
 +++
@@ -373,7 +367,13 @@ Where ${\phi_q}_o$ and ${\phi_q}_i$ are the inner and outer heat fluxes.
 
 At the limit where internal heating becomes negligible compared to the inner-outer temperature drop, internal heating can be ignored altogether and the system approximates a purely basally-heated model. At the opposite extreme, if the interior temperature due to internal heating is high enough, the inner flux may become negative, and the mantle will cool into the core: a case hard to envision in nature. Between these regimes is a transition point when the interior temperature becomes equal to the lower boundary condition. In this borderline case, the inner (core-mantle) flux is exactly zero (i.e. insulating), so that the mixed-heating system reproduces a purely internally-heated system. Thus, the mixed-heating model includes both internally-heated and basally-heated endmembers.
 
-To sharpen this analysis, we can look at more closely at the conductive profile. While it is possible to derive this from first principles, it is more easily illustrated by a numerical approach {numref}`isocondhmixed_fig`. It is clear that the conductive geotherm forms a parabola whose second derivative is exactly equal to $-H$; the rest follows by integration, with the constants provided by logic and observation:
+```{figure} #isocondhmixed
+:name: isocondhmixed_fig
+
+Summary of the scaling behaviours of the conductive solution for mixed heating. The inner boundary is set to dimensionless temperature $T=1$, the outer to $T=0$. On the right, average temperature and the slope of $\delta T / \delta h$ are given as functions of $H$. Gradient clearly varies as a function of dimensionless height $h$ above the mantle base according to a slope given by $-H$. The conductive geotherm for mixed heating is therefore, in fact, a parabola.
+```
+
+To sharpen this analysis, we can look more closely at the conductive profile. While it is possible to derive this from first principles, it is more easily illustrated by a numerical approach {numref}`isocondhmixed_fig`. It is clear that the conductive geotherm forms a parabola whose second derivative is exactly equal to $-H$; the rest follows by integration, with the constants provided by logic and observation:
 
 $$ \begin{align*}
 {T_c(h)}^{''} &= -H \\
@@ -412,7 +412,7 @@ $$
 {\phi_q}_o = H + {\phi_q}_i
 $$
 
-To analyse the mixed heating case, then, we need to invert our perspective and focus not on the outer boundary but on the inner boundary, whose core-ward temperature is equal to $1$ and whose mantle-ward temperature - the 'interior temperature' ${T_i}^{*}$ - is to be determined. Unfortunately, no universally accepted analytical treatment of ${\mathrm{interior}}^*$ post-convection has yet been devised.
+To analyse the mixed heating case, then, we need to invert our perspective and focus not on the outer boundary but on the inner boundary, whose core-ward temperature is equal to $1$ and whose mantle-ward temperature - the 'interior temperature' ${T_\mathrm{interior}}^*$ - is to be determined. Unfortunately, no universally accepted analytical treatment of ${T_\mathrm{interior}}^*$ post-convection has yet been devised.
 
 One workaround starts with the interior temperature analytically obtained for a purely internally-heated system and modify it with empirical constants to accommodate the addition of basal heating [@Moore2008-je]:
 

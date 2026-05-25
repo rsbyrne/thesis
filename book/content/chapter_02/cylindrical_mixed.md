@@ -30,6 +30,7 @@ import math
 import numpy as np
 import pandas as pd
 from pandas import IndexSlice as idx
+from matplotlib import pyplot as plt
 from sklearn.metrics import r2_score
 
 import aliases # important this goes first to configure PATH
@@ -39,10 +40,6 @@ from everest.window import Canvas, DataChannel as Channel
 from everest.window.colourmaps import cmap
 
 from analysis import analysis, cylindrical
-```
-
-```{code-cell} ipython3
-math.log(0.5)
 ```
 
 ### Mixed heating in the annulus
@@ -95,50 +92,80 @@ hs = np.linspace(0, 1, 65)
 ```
 
 ```{code-cell} ipython3
-canvas = Canvas(shape=(nrows, ncols), size=(2*ncols, 3*nrows))
+canvas = Canvas(size=(6, 6))
 
 ychan = Channel(
     hs, label='$h$',
     capped=(True, True),
     )
 
-for index, f in enumerate(fs):
-    rowno, colno = position = index // ncols, index % ncols
-    ax = canvas.ax(
-        position,
-        title=f'$f={f}$'
+ax = canvas.ax()
+
+for H, f in sorted(frm.index):
+    T_chan = Channel(
+        frm.loc[H, f]['geotherm'], label='$T$',
+        lims=(0., 2.), capped=(True, True),
         )
-    for H in Hs:
-        ax.line(
-            Channel(
-                frm.loc[H, f]['geotherm'], label='$T$',
-                lims=(0., 2.), capped=(True, True),
-                ),
-            ychan,
-            c = cmap(H, Hs, style = 'plasma'),
-            )
-    if not (rowno == 1 and colno == round(ncols / 2)):
-        ax.props.edges.x.label.visible = False
-    if not (rowno == 1 and colno == 0):
-        ax.props.edges.y.label.visible = False
-        ax.props.edges.y.ticks.major.labels = ()
-    if index == 0:
-        ax.props.legend.set_handles_labels(
-            (row[0] for row in ax.collections),
-            (str(H) for H in np.round(Hs, 1)),
-            )
-        ax.props.legend.title.text = '$ H $'
-        ax.props.legend.title.visible = True
-        ax.props.legend.mplprops['bbox_to_anchor'] = (-0.1, 1.05)
-        # ax1.props.legend.mplprops['ncol'] = 2
-        ax.props.legend.frame.colour = 'black'
-        ax.props.legend.frame.visible = True
+    ax.line(
+        T_chan, ychan,
+        c = cmap(H, Hs, style = 'plasma'),
+        alpha = f,
+        )
+
+ax.props.legend.set_handles_labels(
+    (row[0] for row in ax.collections[nfs-1::nfs]),
+    (str(H) for H in np.round(Hs, 1)),
+    )
+ax.props.legend.title.text = '$ H $'
+ax.props.legend.title.visible = True
+# ax.props.legend.mplprops['bbox_to_anchor'] = (1, 1)
+# ax1.props.legend.mplprops['ncol'] = 2
+ax.props.legend.frame.colour = 'black'
+ax.props.legend.frame.visible = True
+
 canvas
 ```
 
 ```{code-cell} ipython3
-canvas = Canvas(size=(6, 3))
-ax = canvas.make_ax((0, 0))
+# canvas = Canvas(shape=(nrows, ncols), size=(2*ncols, 3*nrows))
+
+# ychan = Channel(
+#     hs, label='$h$',
+#     capped=(True, True),
+#     )
+
+# for index, f in enumerate(fs):
+#     rowno, colno = position = index // ncols, index % ncols
+#     ax = canvas.ax(
+#         position,
+#         title=f'$f={f}$'
+#         )
+#     for H in Hs:
+#         ax.line(
+#             Channel(
+#                 frm.loc[H, f]['geotherm'], label='$T$',
+#                 lims=(0., 2.), capped=(True, True),
+#                 ),
+#             ychan,
+#             c = cmap(H, Hs, style = 'plasma'),
+#             )
+#     if not (rowno == 1 and colno == round(ncols / 2)):
+#         ax.props.edges.x.label.visible = False
+#     if not (rowno == 1 and colno == 0):
+#         ax.props.edges.y.label.visible = False
+#         ax.props.edges.y.ticks.major.labels = ()
+#     if index == 0:
+#         ax.props.legend.set_handles_labels(
+#             (row[0] for row in ax.collections),
+#             (str(H) for H in np.round(Hs, 1)),
+#             )
+#         ax.props.legend.title.text = '$ H $'
+#         ax.props.legend.title.visible = True
+#         ax.props.legend.mplprops['bbox_to_anchor'] = (-0.1, 1.05)
+#         # ax1.props.legend.mplprops['ncol'] = 2
+#         ax.props.legend.frame.colour = 'black'
+#         ax.props.legend.frame.visible = True
+# canvas
 ```
 
 ```{code-cell} ipython3
@@ -291,9 +318,17 @@ def cylindrical_mixed_heating(h, f, H=0.0):
 ```
 
 ```{code-cell} ipython3
-import math
-import numpy as np
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+all_synth = np.concat(tuple(cylindrical_mixed_heating(hs, f=f, H=H) for H, f in frm.index))
+all_natural = np.concat(frm['geotherm'].values)
+r2_score(all_natural, all_synth)
 ```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 $$
 \Delta r = r_o - r_i \\
@@ -301,14 +336,14 @@ r = r_i + \Delta r \\
 $$
 
 $$
-\frac{d}{dr} \left( r \frac{dT}{dr} \right) = -rH
+\frac{d}{dr} \left( r T(r)' \right) = -rH
 $$
 
 $$
 T(h) = -\frac{H}{4} \left(r^2 - {r_o}^2 \right) + \left( 1 + \frac{H}{4} \left( {r_i}^2 - {r_o}^2 \right) \right) \frac{\ln{r / r_o}}{\ln{r_i / r_o}}
 $$
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 $$
 r_i = \frac{f}{1 - f}, \quad r_o = \frac{1}{1 - f}, \quad r_m = \frac{r_{i} + r_{o}}{2}

@@ -966,28 +966,6 @@ Particular symmetries should be readily apparent. It is clear that the 'entities
 
 --- INCOMPLETE ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ```{code-cell} ipython3
 
 ```
