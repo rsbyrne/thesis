@@ -1,0 +1,6 @@
+---
+math:
+  '\R': '\mathbb{R}'
+  '\vector': '\boldsymbol{#1}'
+  '\der': '\frac{d#1}{d#2}'
+---

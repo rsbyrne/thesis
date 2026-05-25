@@ -2,8 +2,11 @@
 scratch/
 cache/
 dropbox/
-book/main/_build/
-book/
+book/_build/
+book/_old_template
+book/exports
+book/content/**/*.ipynb
+!book/content/**/*.md
 /data/
 livestation/data/
 *.pem
@@ -11,8 +14,6 @@ livestation/data/
 *.frm
 *.ipynb
 core
-book/content/**/*.ipynb
-!book/content/**/*.md
 
 
 # Byte-compiled / optimized / DLL files

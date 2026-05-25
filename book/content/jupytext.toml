@@ -1,0 +1,2 @@
+default_jupytext_formats = "ipynb,md:myst"
+notebook_metadata_filter = "kernelspec,jupytext,myst"

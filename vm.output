@@ -7514,3 +7514,5 @@
 [I 2026-05-25 01:52:17.500 ServerApp] Saving file at /workspace/book/content/chapter_03/scraps.ipynb
 [I 2026-05-25 01:52:17.501 ServerApp] Saving scraps.ipynb
 [I 2026-05-25 01:52:17.512 ServerApp] Saving scraps.md
+[I 2026-05-25 01:55:07.915 ServerApp] New terminal with automatic name: 3
+[I 2026-05-25 01:56:53.595 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml

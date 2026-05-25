@@ -1,0 +1,45 @@
+version: 1
+
+project:
+  id: planet-thesis
+  title: What Kind Of Thing Is A Planet?
+  bibliography: references.bib
+  authors:
+    - name: Rohan S. Byrne
+      affiliations: University of Melbourne
+  keywords: ["Planets", "Astrophysics", "Philosophy"]
+
+  exports:
+    - format: pdf
+      template: templates/thesis-latex
+      output: exports/rb_thesis_2026.pdf
+
+  toc:
+
+    - file: content/index.md
+
+    - title: Review and Theory
+      children:
+        - file: content/chapter_01/main.md
+
+    - title: Foundations
+      children:
+        - file: content/chapter_02/introduction.md
+        - file: content/chapter_02/rayleigh.md
+        - file: content/chapter_02/heating.md
+        - file: content/chapter_02/cylindrical.md
+        - file: content/chapter_02/numerical.md
+        - file: content/chapter_02/conclusion.md
+
+    - title: Modelling from First Principles
+      children:
+        - file: content/chapter_03/introduction.md
+        - file: content/chapter_03/scaling.md
+        - file: content/chapter_03/theory.md
+        - file: content/chapter_03/modelish.md
+
+  math:
+    '\R': '\mathbb{R}'
+    '\vector': '\boldsymbol{#1}'
+    '\der': '\frac{d#1}{d#2}'
+    '\cursor': '\mathinner{\color{darkgray}{\mathrm{I}}}'
