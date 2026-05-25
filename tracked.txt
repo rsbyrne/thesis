@@ -125,6 +125,7 @@ dev/test.h5
 dev/test.py
 dev/test1.h5
 dev/test2.h5
+dev/theory_notsure.md
 dev/thesis_initialise.py
 dev/untitled.md
 dev/untitled.py
