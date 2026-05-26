@@ -80,8 +80,6 @@ book/content/backmatter/conclusion.md
 book/content/chapter_01/main.md
 book/content/chapter_02/conclusion.md
 book/content/chapter_02/cylindrical.md
-book/content/chapter_02/cylindrical_mixed.md
-book/content/chapter_02/cylindrical_old.md
 book/content/chapter_02/heating.md
 book/content/chapter_02/introduction.md
 book/content/chapter_02/main.md

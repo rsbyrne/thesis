@@ -623,12 +623,13 @@ fs_to_draw = (0.5, 0.1)
 for i, f in enumerate(fs_to_draw):
 
     canvas = Canvas(
-        size=(6, 3), shape=(1, 3),
+        size=(6, 3), shape=(1, 4),
         title=f"$f={f}$",
         )
     ax1 = canvas.make_ax((0, 0))
     ax2 = canvas.make_ax((0, 1))
     ax3 = canvas.make_ax((0, 2))
+    ax4 = canvas.make_ax((0, 3))
     subfrm = frm.loc[idx[:, f],].loc[idx[:, f],].droplevel('f', axis=0)
     rs = cylindrical.radius(hs, f)
     r_outer = cylindrical.r_outer(f)
@@ -636,7 +637,8 @@ for i, f in enumerate(fs_to_draw):
     for H in Hs:
         Ts = subfrm.loc[H, 'geotherm']
         dTs, rdTs = analysis.derivative(Ts, rs, n = 1)
-        ddTs, rddTs = analysis.derivative(rdTs * dTs, rdTs, n = 1)
+        ddTs, rddTs = analysis.derivative(dTs, rdTs, n = 1)
+        alt_ddTs, alt_rddTs = analysis.derivative(rdTs * dTs, rdTs, n = 1)
         ax1.line(
             Channel(
                 Ts, label=r'$T(r)$',
@@ -650,7 +652,7 @@ for i, f in enumerate(fs_to_draw):
             )
         ax2.line(
             Channel(
-                dTs, label=r"${T(r)}^{'}$",
+                dTs, label=r"$T'(r)$",
                 lims=(-10, 10), capped=(True, True),
                 ),
             Channel(
@@ -661,7 +663,8 @@ for i, f in enumerate(fs_to_draw):
             )
         ax3.line(
             Channel(
-                ddTs, label=r"$\frac{d}{dr} \left( r{T(r)}^{'} \right)$",
+                # ddTs, label=r"$\frac{d}{dr} \left( r{T(r)}^{'} \right)$",
+                ddTs, label=r"$T''(r)$",
                 lims=(-20, 0), capped=(True, True),
                 ),
             Channel(
@@ -670,9 +673,20 @@ for i, f in enumerate(fs_to_draw):
                 ),
             c = cmap(H, Hs, style = 'plasma'),
             )
-        axs = (ax1, ax2, ax3)
+        ax4.line(
+            Channel(
+                alt_ddTs, label=r"$\frac{d}{dr} \left( r{T(r)}^{'} \right)$",
+                lims=(-20, 0), capped=(True, True),
+                ),
+            Channel(
+                alt_rddTs / r_outer, label=r"$r^{*}$",
+                lims=(r_inner / r_outer, 1), capped=(True, True)
+                ),
+            c = cmap(H, Hs, style = 'plasma'),
+            )
+        axs = (ax1, ax2, ax3, ax4)
 
-        for ax in (ax2, ax3):
+        for ax in axs[1:]:
             ax.props.edges.y.label.visible = False
             ax.props.edges.y.ticks.major.labels = ()
         # if i < (len(fs_to_draw) - 1):
@@ -698,6 +712,38 @@ imop.vstack(*canvasses)
 #         Channel(model(hddTs, H)[:10]),
 #         c = cmap(H, Hs, style = 'plasma'),   
 #         )
+```
+
+```{code-cell} ipython3
+canvas = Canvas(
+    size=(6, 6),
+    )
+ax = canvas.make_ax()
+
+f = 0.1
+
+subfrm = frm.loc[idx[:, f],].loc[idx[:, f],].droplevel('f', axis=0)
+
+for H in Hs:
+
+    if not H: continue
+
+    Ts = subfrm.loc[H, 'geotherm']
+    dTs, rdTs = analysis.derivative(Ts, rs, n = 1)
+    ddTs, rddTs = analysis.derivative(dTs, rdTs, n = 1)
+    alt_ddTs, alt_rddts = analysis.derivative(rdTs * dTs, rdTs, n = 1)
+
+    ax.line(
+        Channel(
+            -alt_ddTs / H
+            ),
+        Channel(
+            alt_rddTs
+            ),
+        c = cmap(H, Hs, style = 'plasma'),
+        )
+
+canvas
 ```
 
 ```{code-cell} ipython3
@@ -1089,7 +1135,7 @@ The conductive geotherm for cylindrical domains under internal heating. The empi
 
 Like in the Cartesian case, the annular mixed heating regime contains both the internally-heated and basally-heated endmembers. The system reproduces basal heating in the trivial case of $H=0$. The internal heating endmember arises in the dynamic case where the heating rate is at its 'critical' value, $H_\mathrm{cr}$. At this exact value, the temperature in a layer infinitely close to the mantle base is equal to the fixed temperature of the mantle base proper. Consequently the flux across the boundary drops to zero, just as it would in the (basally insulated) internal heating case.
 
-At values of $H$ away from the critical value, there is always some non-zero flux across the lower boundary. The flux may be positive (heat flowing *into* the mantle) or negative (heat flowing *out* of the mantle). In either case we can say for sure that:
+At values of $H$ away from the critical value, there is always some non-zero flux across the lower boundary, and the system effectively splits into two separate subregimes. The low-$H$ subregime is 'monocooling': only the outer boundary cools the system. The high-$H$ subregime is 'duocooling': both boundaries cool the system. The flux may be positive (heat flowing *into* the mantle) or negative (heat flowing *out* of the mantle). In either case we can say for sure that:
 
 $$
 \phi_o + \phi_i + H = 0
@@ -1100,6 +1146,28 @@ At equilibrium, this must obtain regardless of whether $H$ is high or low, or in
 As before, we would like to obtain an exact closed-form solution for the conductive geotherm and average temperature. The value of $H_\mathrm{cr}$ is fully dynamic in the case of a mobile fluid, but in the purely conductive state, it will have a fixed value which is some function of the fixed model parameters. It would be good to obtain an expression for this too.
 
 The first step, as previously, is to convert the empirical temperature profile into a geothermal gradient by taking a differential, then convert that gradient into the (axisymmetric) heat flux $\phi$ by multiplying by the non-dimensionalised height-dependent angular length $s^{*}$. Once we have the flux, we can take another differential to obtain the gradient of the flux.
+
++++
+
+```{figure} #cylindrical_mixed_geotherm
+:name: cylindrical_mixed_geotherm_fig
+
+The equilibrium conductive geotherms for cylindrical mixed heating for varying $H$ (colour) and $f$ (opacity, where $1$ is solid and $0$ is invisible), obtained numerically. Curves that are convex towards the origin indicate the 'monocooling' subregime, where both volumetric and basal heating contribute to surface heat flux; curves that are concave towards the origin indicate the unrealistic 'duocooling' subregime, where heat leaves the system through both upper and lower boundaries and peak temperatures are found in the mid-mantle.
+```
+
++++
+
+The numerical results for the cylindrical mixed-heating case {numref}`cylindrical_mixed_geotherm_fig` show the sorts of trends we are now familiar with from both the Cartesian mixed-heating and the cylindrical basally- and internally-heated cases. The two subregimes are evident, as is the effect of curvature.
+
+If we zoom in on a couple of cases {numref}`cylindrical_mixed_geotherm_analysis_fig` and plot the empirical results and the first two derivatives with resepct to the dimensionless radius $r^*$, we quickly obtain an obvious linear trend that converges on the origin. This suggests
+
++++
+
+```{figure} #cylindrical_mixed_geotherm_analysis
+:name: cylindrical_mixed_geotherm_analysis_fig
+
+An analysis of two select cases of the cylindrical mixed heating model from the numerical dataset {numref}`cylindrical_mixed_geotherm_fig`, plotted in terms of the dimensionless radius $r^*$ (where the outer radius is scaled to $1$ and the inner radius is scaled to $f$). The second derivative of temperature with respect to radius, scaled by radius, produces linear trends that converge on the origin (the planetary centre) for all curvatures.
+```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
@@ -1112,9 +1180,9 @@ H_\mathrm{cr} &= \frac{2}{\large{\sqrt[e]{f}}}
 
 The annular case also contains the Cartesian case as an endmember when $f$ approaches $1$. This gives us some clues about the limiting behaviour of the conductive geotherm for annular systems.
 
-The existence of $H_\mathrm{cr}$ effectively splits the conductive regime into two separate subregimes. The low-$H$ subregime is 'monocooling': only the outer boundary cools the system. The high-$H$ subregime is 'duocooling': both boundaries cool the system.
+The existence of $H_\mathrm{cr}$ effectively splits the conductive regime into two separate subregimes. The low-$H$ subregime is 'monocooling': only the outer boundary cools the system. The high-$H$ subregime is 'duocooling': both boundaries cool the system. The two subregimes are clearly evident in the empirical results {numref}`cylindrical_mixed_geotherm_fig`, where the duocooling subregime bows to the right above the linear geotherm.
 
-Let us first consider the monocooling subregime. In these cases, all the flux through lower layers must pass through upper layers and ultimately through the upper boundary wall. The situation is comparable to the basally- and internally-heated cases, except with the addition of the lower boundary flux itself. If we can figure out what this is, it can simply be added to the flux for each subsequent layer all the way to the top of the domain. At $H=0$, the lower boundary flux is trivially $-1$. As $H$ increases, the total system temperature rises relative to the fixed lower boundary temperature and suppresses the flux across that boundary. At $H=H_\mathrm{cr}$, the flux should come to zero by definition. The lower boundary flux is therefore constrained in this subregime to the range $[-1, 0]$.
+Let us first consider the monocooling subregime. In these cases, all the flux through lower layers must pass through upper layers and ultimately through the upper boundary wall. The situation is comparable to the basally- and internally-heated cases, except with the addition of the lower boundary flux itself. If we can figure out what this is, it can simply be added to the flux for each subsequent layer all the way to the top of the domain.  At $H=H_\mathrm{cr}$, the flux should come to zero by definition. The lower boundary flux is therefore constrained in this subregime to the range $[-1, 0]$.
 
 We know that the flux through any given layer due to internally-generated heat alone should come to $-H \cdot \mathrm{Disc}$ - i.e. each layer must transport the entirety of the heat produced by all lower layers. We can adjust this to account for the lower boundary flux $\phi_{i}$, whatever it is:
 
@@ -1123,32 +1191,6 @@ $$
 $$
 
 This should hold whether the inner boundary flux is positive or negative.
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-```{figure} #cylindrical_mixed_geotherm
-:name: cylindrical_mixed_geotherm_fig
-
-The equilibrium conductive geotherms for cylindrical mixed heating for varying $H$ (colour) and $f$ (opacity, where $1$ is solid and $0$ is invisible), obtained numerically. Curves that are convex towards the origin indicate the 'monocooling' subregime, where both volumetric and basal heating contribute to surface heat flux; curves that are concave towards the origin indicate the unrealistic 'duocooling' subregime, where heat leaves the system through both upper and lower boundaries and peak temperatures are found in the mid-mantle.
-```
-
-{numref}`cylindrical_mixed_geotherm_fig`
-
-```{figure} #cylindrical_mixed_geotherm_analysis
-:name: cylindrical_mixed_geotherm_analysis_fig
-
-An analysis of two select cases of the cylindrical mixed heating model from the numerical dataset {numref}`cylindrical_mixed_geotherm_fig`, plotted in terms of the dimensionless radius $r^*$ (where the outer radius is scaled to $1$ and the inner radius is scaled to $f$). The second derivative of temperature with respect to radius, scaled by radius, produces linear trends that converge on the origin (the planetary centre) for all curvatures.
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-$$
-\frac{d}{dr} \left( r T(r)' \right) = -rH
-$$
-
-$$
-T(h) = -\frac{H}{4} \left(r^2 - {r_o}^2 \right) + \left( 1 + \frac{H}{4} \left( {r_i}^2 - {r_o}^2 \right) \right) \frac{\ln{r / r_o}}{\ln{r_i / r_o}}
-$$
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
@@ -1169,6 +1211,7 @@ Our purpose in this section was to derive closed-form expressions of the geother
 Basal heating in the Cartesian ($f \rightarrow 1$, $H=0$):
 
 $$ \begin{align*}
+T''(h) &= 0 \\
 T'(h) &= -1 \\
 T(h) &= 1-h
 \end{align*} $$
@@ -1176,6 +1219,7 @@ T(h) &= 1-h
 Internal heating in the Cartesian ($f \rightarrow 1$, $H \gt 0$, insulating base):
 
 $$ \begin{align*}
+T''(h) &= -H \\
 T'(h) &= -H\cdot h \\
 {T(h)} &= H \frac{1 - h^2}{2}
 \end{align*} $$
@@ -1183,6 +1227,7 @@ T'(h) &= -H\cdot h \\
 Mixed heating in the Cartesian ($f \rightarrow 1$, $H \ge 0$):
 
 $$ \begin{align*}
+T''(h) &= -H \\
 T'(h) &= -H \left( h - \frac{1}{2} \right) - 1 \\
 T(h) &= H \frac{h \left( 1 - h \right)}{2} - h + 1
 \end{align*} $$
@@ -1190,6 +1235,7 @@ T(h) &= H \frac{h \left( 1 - h \right)}{2} - h + 1
 Basal heating in the annulus ($0 < f < 1$, $H=0$):
 
 $$ \begin{align*}
+T''(h) &= -\frac{1}{r(h)^2 \ln f} \\
 T'(h) &= \frac{1}{r^*(h) \; r_o\ln{f}} \\
 T(h) &= \log_f r^*(h)
 \end{align*} $$
@@ -1197,6 +1243,7 @@ T(h) &= \log_f r^*(h)
 Internal heating in the annulus ($0 < f < 1$, $H \gt 0$, insulating base):
 
 $$ \begin{align*}
+T''(h) &= -\frac{H}{2} \left( 1 + {\left( \frac{r_i}{r(h)} \right)}^2 \right) \\
 T'(h) &= -H \frac{\mathrm{Disc}(h)}{s^*(h)} \\
 T(h) &= H \frac{{r_o}^2}{4}
 \left( 
@@ -1207,10 +1254,10 @@ T(h) &= H \frac{{r_o}^2}{4}
 Mixed heating in the annulus ($0 < f < 1$, $H \ge 0$):
 
 $$ \begin{align*}
+T''(h) &= H_\mathrm{coeff} \; {T_{\mathrm{basal}}}''(h) - \frac{H}{2} \\
 T'(h) &= H_\mathrm{coeff} \; {T_{\mathrm{basal}}}'(h) - \frac{H}{2}r(h) \\
-T(h) &= H_\mathrm{coeff} \; \log_f \left( r^*(h) \right) - \frac{H}{4} \left( r(h)^2 - {r_o}^2 \right) \\
-&\mathrm{where} \quad H_\mathrm{coeff} = \left( 1 - \frac{H}{2}r_m \right)
-\end{align*} $$
+T(h) &= H_\mathrm{coeff} \; T_{\mathrm{basal}} - \frac{H}{4} \left( r(h)^2 - {r_o}^2 \right) \\
+&\mathrm{where} \quad H_\mathrm{coeff} = 1 - \frac{H}{2}r_m \end{align*} $$
 
 Where:
 
