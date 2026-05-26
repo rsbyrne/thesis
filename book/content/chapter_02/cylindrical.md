@@ -324,15 +324,20 @@ for (H, f), values in frm.iterrows():
         )
     ax3.line(
         phichan,
-        dchan := Channel(cylindrical.sub_area(hdT, f), label = r"$\mathrm{Disc}$"),
+        # dchan := Channel(cylindrical.sub_area(hdT, f), label = r"$\mathrm{Disc}$"),
+        dchan := Channel(
+            cylindrical.disc(hdT, f),
+            label = r"$\mathrm{Disc}$",
+            lims = (0, 1),
+            ),
         color = cmap(f, fs, style = 'turbo'),
         linewidth = H / 5
         )
     ally.extend(dchan.data)
     allx.extend(phichan.data)
 
-# ax2.props.edges.y.label.visible = False
-# ax2.props.edges.y.ticks.major.labels = []
+ax2.props.edges.y.label.visible = False
+ax2.props.edges.y.ticks.major.labels = []
 
 linscore = r2_score(ally, allx)
 ax3.line(
@@ -368,7 +373,8 @@ for (H, f), values in frm.iterrows():
     ax2.line(
         xchan,
         ychan := Channel(
-            -cylindrical.sub_area(hdT, f) / cylindrical.s_star(hdT, f),
+            # -cylindrical.sub_area(hdT, f) / cylindrical.s_star(hdT, f),
+            -cylindrical.disc(hdT, f) / cylindrical.s_star(hdT, f),
             lims = (-1, 0), label = r"$-\mathrm{Disc} / {s^*}$"
             ),
         color = cmap(f, fs, style = 'turbo'),
@@ -449,8 +455,11 @@ tags: [remove-cell]
 
 def cylindrical_conductive_internal_geotherm(h, f, H):
     f = cylindrical.safe_f(f)
-    u = f*h - f - h
-    return (H / (4 * (f - 1)**2)) * (2 * f**2 * np.log(np.abs(u)) - u**2 + 1)
+    rstar = cylindrical.r_star(h, f) # f*h - f - h
+    return (
+        (H / (4 * (f - 1)**2))
+        * (2 * f**2 * np.log(np.abs(rstar)) - rstar**2 + 1)
+        )
 
 canvas = Canvas(size = (8, 4), shape = (1, 2))
 ax1 = canvas.make_ax((0, 0))
@@ -733,7 +742,7 @@ If the domain is allowed to curve around a certain locus, a cylindrical or annul
 
 Our choice of radii implies a degree of curvature $f$:
 
-$$ f \equiv \frac{r_o}{r_i} $$
+$$ f \equiv \frac{r_i}{r_o} $$
 
 Where $f\to1$ is equivalent to an infinitely wide Cartesian box, $f\to0$ represents a complete disc (i.e. no hole in the middle), and the values $\sim 0.5$ and $\sim 0.9$ would be appropriate for the whole mantle and upper mantle respectively. The ratio of radii $f$ is identical to the ratio of circumferences, so that $f=0.5$ represents a system where the arc length of the base is half that of the surface. (Note that this would imply infinite planetary radius at $f=1$ - hence the planar-like endmember $f=1$ is not strictly reachable under an assumption of curvature, though arbitrarily high values can be set to reproduce that behaviour [@Jarvis1993-cb])
 
@@ -754,23 +763,33 @@ r_i = \frac{f}{1 - f}, \quad r_o = \frac{1}{1 - f}
 $$
 
 $$
-r(h) = r_i + h
+r(h) = r_i + h = \frac{f}{1 - f} + h
 $$
 
 In short: honouring this constraint allows us to produce a workable radial coordinate system simply by setting a desired value of $f$.
 
-At other times, it may be convenient to set the radius at the outer boundary as unit, and relax the constraint for the mantle thickness to be unit. This has the effect of scaling the inner radius so that it is exactly $f$. We will call this metric the 'planetary radial scale' ${r^*}$:
+Many useful simplifications and physically meaningful representations of equations involve manipulations around $f$. In various expansions which we will encounter, the $f$ parameter often turns up in ratios of logarithms; in these cases, it will tidy up the notation considerably to consider a logarithm of base $f$:
+
+$$
+{\log_f}{x} = \frac{\ln{x}}{\ln{f}}
+$$
+
+While the convention of unit layer thickness has many advantages, at other times it may be convenient to set the radius at the outer boundary as unit, and relax the constraint for the mantle thickness. This has the effect of scaling the inner radius so that it is exactly $f$. We will call this metric the 'planetary radial scale' ${r^*}$:
 
 $$
 {{r^*}}_i = f, \quad {{r^*}}_o = 1
 $$
 
-$$
-\Delta {r^*} = 1 - f
-$$
+From this we can obtain the 'dimensionless radial thickness', which appears very commonly in closed-form solutions and can also be expressed in terms of the natural $r$ constants:
 
 $$
-{r^*}(h) = \frac{h + r_i}{r_o} = \frac{\Delta {{r^*}}}{r} = h(1-f) + f
+\Delta {r^*} = 1 - f = \frac{r_i + r_o}{r_o}
+$$
+
+Finally, we can write a general statement for $r^*$ as a function of $h$:
+
+$$
+{r^*}(h) = \frac{r(h)}{r_o} = h \Delta {r^*} + f
 $$
 
 (Note that ${r^*}$ and $r$ converge as $f$ approaches zero.)
@@ -803,6 +822,14 @@ $$
 r_m \equiv \frac{r_{i} + r_{o}}{2} = \frac{1 + f}{2 \left( 1 - f \right)}
 $$
 
+Because the height of the domain in $r$ coordinates is constrained to be one, we can exploit the difference of squares to come up with a useful system of substitutions based on $2r_m$:
+
+$$
+{r_o}^2 - {r_i}^2 = (r_o - r_i)(r_o + r_i) = 2r_m = \frac{1+f}{1-f}
+$$
+
+
+
 Since the circumference of a complete circle is $ 2 \pi r$, the angular length at depth $r_m$ can be calculated from $\Theta$:
 
 $$
@@ -813,10 +840,12 @@ Such a scheme leaves us with two competing claims for a 'natural' denominator of
 
 In the Cartesian case, when the height of the box is set to unit, the aspect ratio is not only equivalent to the box width: it is also equivalent to the box *area*. The virtue of defining cylindrical $A$ using the mid-depth is that this property is preserved even for extreme values of $f$. Parameterising a model in terms of area is particularly advantageous when dealing with system forcings, like internal heat, which scale with area.
 
-While it is trivial to divide the domain in an angular sense (i.e. splitting the wedge into more wedges), dividing it in a radial sense requires a little more consideration. The proportion of the annulus lying below a particular depth - which we shall call $\mathrm{Disc}$ - is a function of the inner and mid-radii:
+While it is trivial to divide the domain in an angular sense (i.e. splitting the wedge into more wedges), dividing it in a radial sense requires a little more consideration.
+
+It will shortly prove useful to have a function at hand that provides the proportion of the annulus that lies below a particular depth - i.e. a ratio from $0$ to $1$ where $0$ obtains at the base of the annulus and $1$ obtains at the outer edge. We shall dub this '$\mathrm{Disc}$'. For a Cartesian box, $Disc(h) = h$ (because the proportion of the domain below, say, 80% of the way up, is by definition 80% in a square box). It is a little tricker in the annulus, but if we use the dimensionless radius $r^*$ (a function of $h$ which comes to $1$ at the outer boundary and $f$ at the inner boundary), we can represent it very simply as:
 
 $$
-\mathrm{Disc}(r) = \frac{r^2 - {r_i}^2}{2 r_m} = \frac{r^{*} - f^2}{1-f^2}
+\mathrm{Disc}(h) = \frac{{r^*(h)}^2 - f^2}{1-f^2}
 $$
 
 As we have already established that the total area will always equal the aspect ratio $A$, the true area under any depth can then be given simply as $\mathrm{Disc} \cdot A$.
@@ -824,7 +853,7 @@ As we have already established that the total area will always equal the aspect 
 Laying the datum for the aspect ratio through the mid-depth also has the benefit of providing a good reference scale for the angular length, which allows us to set aside $\theta$ and $\Theta$ altogether and deal with both radial and angular distances in like units. Let $s$ be the angular length at any given depth. We already know that $s_m = A$ by definition, but we can just as easily calculate $s$ for any value of $r$:
 
 $$
-s(r) = r \Theta = r \frac{A}{r_m} = r A \frac{2 \left( 1 - f \right)}{1 + f}
+s(h) = r(h) \Theta = r(h) \frac{A}{r_m} = r(h) A \frac{2 \left( 1 - f \right)}{1 + f}
 $$
 
 At low values of $f$ (therefore high curvature), $s$ is strongly dependent on $r$, with the inner surface much shorter than the outer surface. Conversely, at values of $f$ approaching $1$, the dependence on $r$ disappears as the value of $r_o$ becomes indistinguishable from $r_i$ - in which case $s \approx A$ throughout the domain, as it does in a Cartesian box.
@@ -832,14 +861,24 @@ At low values of $f$ (therefore high curvature), $s$ is strongly dependent on $r
 It will shortly prove convenient to non-dimensionalise $s$ as ${s^*} = s / A$, such that the dimensionless length through the mid-depth ${s^*} = 1$. We can then write ${s^*}$ very simply as a function of ${r^*}$ and the inner and outer lengths accordingly:
 
 $$
-s^*(r^*) = 2 \frac{r^*}{1+f}
+s^*(h) = 2 \frac{r^*(h)}{1+f}
 $$
 
 $$
 {s^*}_i = 2 \frac{f}{1+f}, \quad {s^*}_o = 2 \frac{1}{1+f}
 $$
 
+If we expand the terms and recall the $2r_m$ substitution we previously mentioned, this turns out to be equivalent to simply the local radius normalised by the midpoint radius - which makes sense, since the angular coordinate system is based on the length through the mid-depth:
+
+$$ \begin{align*}
+s^*(h) &= 2 \cdot \frac{1}{1+f} \cdot \frac{1}{r_o} \cdot r(h)
+= 2 \cdot \frac{1-f}{1+f} r(h) \\
+&= \frac{r(h)}{r_m}
+\end{align*} $$
+
 The length $s$ is, among other things, the factor by which an average measurement of some variable taken across a layer can be converted into a total value for that layer. It is vital to account for varying $s$ whenever comparing between different layers in a given system, or between equivalent layers in systems of differing $f$.
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### Conduction in the basally-heated cylindrical case
 
@@ -862,38 +901,37 @@ The analytical scaling of conductive temperature with $\ln{r^{*}}/\ln{f}$ holds 
 In a cylindrical domain, however, the length of each layer $s$ is a function of depth and curvature as we have shown; consequently, shallower layers are able to transmit the same flux with a smaller temperature drop:
 
 $$
-\phi_q = - s \cdot \frac{dT}{dh}
+\phi_q(h) = - s(h) \cdot \frac{dT}{dh}
 $$
 
 To define the flux, we need the geothermal gradient. The conductive geotherm can be elegantly stated in terms of ${r^*}$ {numref}`isocondf_fig` {numref}`isocondffit_fig`:
 
 $$
-T_c(h) = \frac{\ln{{r^*}}}{\ln{f}}
+T_c(h) = {\log_f}{r^*(h)}
 $$
 
 And so the geothermal gradient:
 
-$$
-\frac{dT_c}{dh} = \frac{f-1}{{r^*}\ln{f}}
-$$
+$$ \begin{align*}
+T_c'(h) &= \frac{1-f}{{r^*(h)}\ln{f}} \\
+&= \frac{1}{{r^*(h)} \; r_o \ln{f}}
+\end{align*} $$
 
 And finally the flux itself can be written as:
 
 $$ \begin{align*}
-{\phi_q}_c &= -\frac{{s^*}(f-1)}{{r^*}\ln{f}} \\
-&= - \frac{2(1-f)}{(f+1)\ln{f}}
+{\phi_q}_c(h) &= -\frac{s^*(h)}{r^*(h)} \frac{1}{r_o\ln{f}} \\
+&= - \frac{2}{f+1} \frac{1}{r_o\ln{f}} \\
+&= - \frac{2}{\Delta r^*} \frac{1}{r_o\ln{f}} \\
+&= -\frac{1}{r_m \ln{f}}
 \end{align*} $$
 
 $$ \begin{align*}
-&\to 1 &as \quad f \to 1 \\
-&\to 0 &as \quad f \to 0
+&\to 1 &\mathrm{as} \quad f \to 1 \\
+&\to 0 &\mathrm{as} \quad f \to 0
 \end{align*} $$
 
-Or very succinctly in terms of the 'true' radius of the mid-depth:
-
-$$
-{\phi_q}_c = -\frac{1}{r_m \ln{f}}
-$$
+Note how succinctly the flux can be expressed in terms of the mid-depth radius $r_m$.
 
 To facilitate comparison between systems of different curvature, we can then use the above to define a dimensionless planetary flux ${\phi_q}^*$ - which is really just another name for the *Nusselt* number $\mathrm{Nu}$:
 
@@ -912,6 +950,8 @@ T_{\mathrm{av}} &= \dfrac{1}{2} \large{\sqrt[e]{f}} \\
 \end{align*} $$
 
 The relationship is apparent in the numerical results {numref}`isocondf_fig`.
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 #### Instability and convection
 
@@ -998,10 +1038,10 @@ T_c(h) &= \frac{H}{2} \left( 1 - h^2 \right) \\
 
 This is intuitive because the source flux visible to each layer is proportional to the area below that layer, which goes linearly with height $h$ in a planar domain.
 
-In the annulus, though, the proportion of the domain beneath a given height $h$ is instead represented by $\mathrm{Disc}$, as we have shown. If we further assume that $H$ is non-dimensionalised so as to represent the total flux of the model (i.e. it equals $1$ for all geometries), then the flux through each layer height $h$ of the annulus must simply be:
+In the annulus, though, the proportion of the domain beneath a given height $h$ is instead represented by $\mathrm{Disc}$, as we have shown. If the total area is constrained to a value of $1$, the total heat below each layer is just the product of $\mathrm{Disc}$ and the heat production rate - so the flux through each layer height $h$ of the annulus must simply be:
 
 $$
-{\phi_q}(h) = H \cdot \mathrm{Disc}
+{\phi_q}(h) = H \cdot \mathrm{Disc}(h)
 $$
 
 We show that this holds exactly {numref}`isocondinternal_fig`.
@@ -1009,25 +1049,28 @@ We show that this holds exactly {numref}`isocondinternal_fig`.
 As before, the geothermal gradient required to transmit this flux must account for the varying layer length ${s^*}$ - a function of $h$ and the $f$ parameter. Thus:
 
 $$ \begin{align*}
-\frac{dT_c}{dh} = -\frac{\phi_q}{s^{*}}
-&= - H \frac{\mathrm{Disc}}{{s^*}} \\
-&= -\frac{H}{2} \frac{1+f}{1-f^2} \frac{(r^{*} + f)(r^{*} - f)}{r^{*}} = -\frac{H}{2} \frac{h(r^* - f)}{r^*} \\
+\frac{dT_c}{dh} = -\frac{\phi_q(h)}{s^{*}}
+&= - H \frac{\mathrm{Disc}(h)}{{s^*}(h)} \\
+&= -\frac{H}{2} \frac{1+f}{1-f^2} \frac{(r^{*}(h) + f)(r^{*}(h) - f)}{r^{*}(h)} = -\frac{H}{2} \frac{h(r^*(h) - f)}{r^*(h)} \\
 &= -\frac{H}{2} \frac{h \left(f h - 2 f - h\right)}{\left(f h - f - h\right)}
 \end{align*} $$
 
-To put it succinctly, the basic form of the relation is a rational function in terms of $r^{*}$:
+All of this is to say, in essence, the gradient is a rational function in terms of $r^{*}$:
 
 $$
-\frac{dT_c}{dh} \propto \frac{r^{*} - f^2}{r^{*}}
+\frac{dT_c}{dh} \propto \frac{r^{*}(h) - f^2}{r^{*}(h)}
 $$
 
 The integral with respect to $h \in [0, 1]$ with $T(0)=1$ yields the geotherm:
 
 $$ \begin{align*}
-T(h) &= \frac{H}{4 (f - 1)^2} \left[ 
+T(h) &= \frac{H}{4 (f - 1)^2}
+\left[
 2 f^{2} \ln \left| f h - f - h \right| \;-\; \bigl(f h - f - h \bigr)^2 + 1 \right] \\
-&= -H {\left( \frac{r_o}{2} \right)}^2 \left( 
-2 f^{2} \ln \left| r^* \right| \;-\; {r^*}^2 + 1 \right)
+&= \frac{H}{4} {r_o}^2
+\left( 
+2 f^{2} \ln \left| r^*(h) \right| \;-\; {r^*}(h)^2 + 1
+\right)
 \end{align*} $$
 
 Note how the correct choice of coordinate system dramatically simplifies things.
@@ -1052,15 +1095,11 @@ $$
 \phi_o + \phi_i + H = 0
 $$
 
-This is true whether $H$ is high or low, or indeed, whether the mantle is conductive or convective. Let us consider the purely conductive case for now.
+At equilibrium, this must obtain regardless of whether $H$ is high or low, or indeed, whether the mantle is conductive or convective. Let us consider the purely conductive case for now.
 
 As before, we would like to obtain an exact closed-form solution for the conductive geotherm and average temperature. The value of $H_\mathrm{cr}$ is fully dynamic in the case of a mobile fluid, but in the purely conductive state, it will have a fixed value which is some function of the fixed model parameters. It would be good to obtain an expression for this too.
 
 The first step, as previously, is to convert the empirical temperature profile into a geothermal gradient by taking a differential, then convert that gradient into the (axisymmetric) heat flux $\phi$ by multiplying by the non-dimensionalised height-dependent angular length $s^{*}$. Once we have the flux, we can take another differential to obtain the gradient of the flux.
-
-$$
-{\phi_q}_o = H + {\phi_q}_i
-$$
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
@@ -1077,34 +1116,31 @@ The existence of $H_\mathrm{cr}$ effectively splits the conductive regime into t
 
 Let us first consider the monocooling subregime. In these cases, all the flux through lower layers must pass through upper layers and ultimately through the upper boundary wall. The situation is comparable to the basally- and internally-heated cases, except with the addition of the lower boundary flux itself. If we can figure out what this is, it can simply be added to the flux for each subsequent layer all the way to the top of the domain. At $H=0$, the lower boundary flux is trivially $-1$. As $H$ increases, the total system temperature rises relative to the fixed lower boundary temperature and suppresses the flux across that boundary. At $H=H_\mathrm{cr}$, the flux should come to zero by definition. The lower boundary flux is therefore constrained in this subregime to the range $[-1, 0]$.
 
-We know that the flux through any given layer due to internally-generated heat alone should come to $\phi=-H \cdot \mathrm{Disc}$ - i.e. each layer must transport the entirety of the heat produced by all lower layers. We can adjust this to account for the lower boundary flux $\phi_{i}$, whatever it is:
+We know that the flux through any given layer due to internally-generated heat alone should come to $-H \cdot \mathrm{Disc}$ - i.e. each layer must transport the entirety of the heat produced by all lower layers. We can adjust this to account for the lower boundary flux $\phi_{i}$, whatever it is:
 
 $$
-\phi = -H \cdot + \phi_{i}
+\phi(h) = -H \cdot \mathrm{Disc}(h) + \phi_{i}
 $$
+
+This should hold whether the inner boundary flux is positive or negative.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ```{figure} #cylindrical_mixed_geotherm
 :name: cylindrical_mixed_geotherm_fig
 
-The equilibrium conductive geotherms for cylindrical mixed heating for varying $H$ (colour) and $f$ (opacity, where $1$ is solid and $0$ is invisible).
+The equilibrium conductive geotherms for cylindrical mixed heating for varying $H$ (colour) and $f$ (opacity, where $1$ is solid and $0$ is invisible), obtained numerically. Curves that are convex towards the origin indicate the 'monocooling' subregime, where both volumetric and basal heating contribute to surface heat flux; curves that are concave towards the origin indicate the unrealistic 'duocooling' subregime, where heat leaves the system through both upper and lower boundaries and peak temperatures are found in the mid-mantle.
 ```
 
-INCOMPLETE
+{numref}`cylindrical_mixed_geotherm_fig`
 
 ```{figure} #cylindrical_mixed_geotherm_analysis
 :name: cylindrical_mixed_geotherm_analysis_fig
 
-An analysis of two select cases of the cylindrical mixed heating model.
+An analysis of two select cases of the cylindrical mixed heating model from the numerical dataset {numref}`cylindrical_mixed_geotherm_fig`, plotted in terms of the dimensionless radius $r^*$ (where the outer radius is scaled to $1$ and the inner radius is scaled to $f$). The second derivative of temperature with respect to radius, scaled by radius, produces linear trends that converge on the origin (the planetary centre) for all curvatures.
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-$$
-\Delta r = r_o - r_i \\
-r = r_i + \Delta r \\
-$$
 
 $$
 \frac{d}{dr} \left( r T(r)' \right) = -rH
@@ -1120,7 +1156,7 @@ INCOMPLETE
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-### Geotherms for various cases - summarised
+### Conductive geotherms for various cases - summarised
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
@@ -1128,42 +1164,62 @@ Our purpose in this section was to derive closed-form expressions of the geother
 
 +++
 
-Basal heating in the Cartesian:
+**Conductive equilibrium temperature profiles ($0 \le h \le 1$)**:
+
+Basal heating in the Cartesian ($f \rightarrow 1$, $H=0$):
 
 $$ \begin{align*}
-{T(h)}^{'} &= -1 \\
-{T(h)} &= 1-h
+T'(h) &= -1 \\
+T(h) &= 1-h
 \end{align*} $$
 
-Internal heating in the Cartesian:
+Internal heating in the Cartesian ($f \rightarrow 1$, $H \gt 0$, insulating base):
 
 $$ \begin{align*}
-{T(h)}^{'} &= -H\cdot h \\
-{T(h)} &= \frac{H}{2} \left( 1 - h^2 \right)
+T'(h) &= -H\cdot h \\
+{T(h)} &= H \frac{1 - h^2}{2}
 \end{align*} $$
 
-Mixed heating in the Cartesian:
+Mixed heating in the Cartesian ($f \rightarrow 1$, $H \ge 0$):
 
 $$ \begin{align*}
-{T(h)}^{'} &= -H \left( h - \frac{1}{2} \right) - 1 \\
-T(h) &= \frac{Hh}{2} \left( 1 - h \right) - h - 1
+T'(h) &= -H \left( h - \frac{1}{2} \right) - 1 \\
+T(h) &= H \frac{h \left( 1 - h \right)}{2} - h + 1
 \end{align*} $$
 
-Basal heating in the annulus:
+Basal heating in the annulus ($0 < f < 1$, $H=0$):
 
 $$ \begin{align*}
-T(h)^{'} &= \frac{f-1}{r^*\ln{f}} \\
-T(h) &= \frac{\ln{r^*}}{\ln{f}}
+T'(h) &= \frac{1}{r^*(h) \; r_o\ln{f}} \\
+T(h) &= \log_f r^*(h)
 \end{align*} $$
 
-Internal heating in the annulus:
+Internal heating in the annulus ($0 < f < 1$, $H \gt 0$, insulating base):
 
 $$ \begin{align*}
-{T(h)}^{'} &= -H \frac{\mathrm{Disc}}{{s^*}} \\
-T(h) &= -H {\left( \frac{r_o}{2} \right)}^2 \left( 
-2 f^{2} \ln \left| r^* \right| \;-\; {r^*}^2 + 1 \right)
+T'(h) &= -H \frac{\mathrm{Disc}(h)}{s^*(h)} \\
+T(h) &= H \frac{{r_o}^2}{4}
+\left( 
+2 f^{2} \ln \left| r^*(h) \right| \;-\; {r^*(h)}^2 + 1
+\right)
 \end{align*} $$
 
-```{code-cell} ipython3
+Mixed heating in the annulus ($0 < f < 1$, $H \ge 0$):
 
-```
+$$ \begin{align*}
+T'(h) &= H_\mathrm{coeff} \; {T_{\mathrm{basal}}}'(h) - \frac{H}{2}r(h) \\
+T(h) &= H_\mathrm{coeff} \; \log_f \left( r^*(h) \right) - \frac{H}{4} \left( r(h)^2 - {r_o}^2 \right) \\
+&\mathrm{where} \quad H_\mathrm{coeff} = \left( 1 - \frac{H}{2}r_m \right)
+\end{align*} $$
+
+Where:
+
+$$ \begin{align*}
+r_i &= \frac{f}{1 - f} \\
+r_o &= \frac{1}{1 - f} \\
+r_m &= \frac{r_{i} + r_{o}}{2} \\
+r(h) &= r_i + h \\
+{r^*}(h) &= \frac{r(h)}{r_o} \\
+s^*(h) &= \frac{r(h)}{r_m} \\
+\mathrm{Disc}(h) &= \frac{{r^*(h)}^2 - f^2}{1 - f^2} \\
+\end{align*} $$

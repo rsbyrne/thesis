@@ -19,18 +19,19 @@ def r_mid(f):
     return (r_inner(f) + r_outer(f)) / 2
 
 def r_star(h, f):
-    f = safe_f(f)
-    rinner, router = r_inner(f), r_outer(f)
-    rstar = (h + rinner) / router # equiv to (h * (1 - f) + f)
-    return rstar
+    return radius(h, f) / r_outer(f)
 
 def s_star(h, f):
     f = safe_f(f)
     return 2 * r_star(h, f) / (1 + f)
 
-def sub_area(h, f):
+def disc(h, f):
     f = safe_f(f)
-    return (radius(h, f)**2 - r_inner(f)**2) / (2 * r_mid(f))
+    return (r_star(h, f)**2 - f**2) / (1 - f**2)
+
+# def sub_area(h, f):
+#     f = safe_f(f)
+#     return (radius(h, f)**2 - r_inner(f)**2) / (2 * r_mid(f))
 
 sym_h, sym_f = sympy.symbols('h f', real=True)
 sym_r_i = sym_f / (1 - sym_f)

@@ -289,7 +289,7 @@ To provide some bounds on the expected behaviour of a mixed-heating model, it is
 
 $$ \begin{align*}
 \frac{dT_c}{dh} &= H\cdot h \\
-\therefore T_c(h) &= \frac{H}{2} \left( 1 - h^2 \right)
+\therefore T_c(h) &= H \frac{1 - h^2}{2}
 \end{align*} $$
 
 Where $H$ is the per-mass heating rate and $h$ is the dimensionless height from the base of the mantle. The maximum mantle temperature possible for a given value of $H$ is thus $H/2$. Because, at the outer boundary, the thermal flux is exactly $H$ (or, technically, $H \cdot \rho$ if dimensionalised), $H$ here is identical to the 'conductive *Nusselt* number', ${Nu}_{c}$.
@@ -376,9 +376,9 @@ Summary of the scaling behaviours of the conductive solution for mixed heating. 
 To sharpen this analysis, we can look more closely at the conductive profile. While it is possible to derive this from first principles, it is more easily illustrated by a numerical approach {numref}`isocondhmixed_fig`. It is clear that the conductive geotherm forms a parabola whose second derivative is exactly equal to $-H$; the rest follows by integration, with the constants provided by logic and observation:
 
 $$ \begin{align*}
-{T_c(h)}^{''} &= -H \\
-{T_c(h)}^{'} &= -H \left( h - \frac{1}{2} \right) - 1 \\
-T_c(h) &= \frac{Hh}{2} \left( 1 - h \right) - h + 1 \\
+{T_c''(h)} &= -H \\
+{T_c'(h)} &= -H \left( h - \frac{1}{2} \right) - 1 \\
+T_c(h) &= H \frac{h \left( 1 - h \right)}{2} - h + 1_c \\
 {T_c}_\mathrm{av} &= \frac{H}{12} + \frac{1}{2}
 \end{align*} $$
 
