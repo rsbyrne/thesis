@@ -28,6 +28,8 @@ import numpy as np
 import pandas as pd
 from pandas import IndexSlice as idx
 from sklearn.metrics import r2_score
+from sklearn.linear_model import LinearRegression
+import scipy as sp
 
 import aliases # important this goes first to configure PATH
 
@@ -256,8 +258,6 @@ canvas
 ```
 
 ```{code-cell} ipython3
-:tags: [remove-cell]
-
 with open(
         os.path.join(aliases.storagedir, 'condhfinsulating.pkl'),
         mode = 'rb',
@@ -290,6 +290,11 @@ editable: true
 slideshow:
   slide_type: ''
 ---
+def basal_geotherm(hs, f):  # What we get to in the end
+    return np.log(cylindrical.r_star(hs, f)) / np.log(f)
+def basal_geotherm_gradient(hs, f):
+    return 1 / (cylindrical.radius(hs, f) * np.log(f))
+
 canvas1 = Canvas(size = (8, 8/3), shape = (1, 3))
 ax1 = canvas1.make_ax((0, 0))
 ax2 = canvas1.make_ax((0, 1))
@@ -575,36 +580,52 @@ slideshow:
 tags: [remove-cell]
 label: cylindrical_mixed_geotherm
 ---
-canvas = Canvas(size=(6, 6))
+canvas = Canvas(size=(8, 4), shape = (1, 2))
 
-ychan = Channel(
-    hs, label='$h$',
-    capped=(True, True),
-    )
-
-ax = canvas.ax()
+ax1 = canvas.make_ax((0, 0))
+ax2 = canvas.make_ax((0, 1))
 
 for H, f in sorted(frm.index):
-    T_chan = Channel(
-        frm.loc[H, f]['geotherm'], label='$T$',
-        lims=(0., 2.), capped=(True, True),
+    Ts = frm.loc[H, f]['geotherm']
+    ax1.line(
+        Channel(
+            Ts, label='$T$',
+            lims=(0., 2.), capped=(True, True),
+            ),
+        Channel(
+            hs, label='$h$',
+            lims=(0, 1), capped=(True, True),
+            ),
+        c = cmap(H, Hs, style = 'plasma'),
+        alpha = f,
         )
-    ax.line(
-        T_chan, ychan,
+    dTs, hdTs = analysis.derivative(Ts, hs, n = 1)
+    ax2.line(
+        Channel(
+            -dTs * cylindrical.s_star(hdTs, f), label=r"$\phi_q$",
+            lims=(-5., 10.), capped=(True, True),
+            ),
+        Channel(
+            hdTs, label='$h$',
+            lims=(0, 1), capped=(True, True),
+            ),
         c = cmap(H, Hs, style = 'plasma'),
         alpha = f,
         )
 
-ax.props.legend.set_handles_labels(
-    (row[0] for row in ax.collections[nfs-1::nfs]),
+ax2.props.edges.y.label.visible = False
+ax2.props.edges.y.ticks.major.labels = ()
+
+ax2.props.legend.set_handles_labels(
+    (row[0] for row in ax2.collections[nfs-1::nfs]),
     (str(H) for H in np.round(Hs, 1)),
     )
-ax.props.legend.title.text = '$ H $'
-ax.props.legend.title.visible = True
+ax2.props.legend.title.text = '$ H $'
+ax2.props.legend.title.visible = True
 # ax.props.legend.mplprops['bbox_to_anchor'] = (1, 1)
 # ax1.props.legend.mplprops['ncol'] = 2
-ax.props.legend.frame.colour = 'black'
-ax.props.legend.frame.visible = True
+ax2.props.legend.frame.colour = 'black'
+ax2.props.legend.frame.visible = True
 
 canvas
 ```
@@ -617,131 +638,75 @@ slideshow:
 tags: [remove-cell]
 label: cylindrical_mixed_geotherm_analysis
 ---
-canvasses = []
+canvas = Canvas(size=(6, 2), shape = (1, 2))
 
-fs_to_draw = (0.5, 0.1)
-for i, f in enumerate(fs_to_draw):
+fit_data = []
 
-    canvas = Canvas(
-        size=(6, 3), shape=(1, 4),
-        title=f"$f={f}$",
-        )
-    ax1 = canvas.make_ax((0, 0))
-    ax2 = canvas.make_ax((0, 1))
-    ax3 = canvas.make_ax((0, 2))
-    ax4 = canvas.make_ax((0, 3))
-    subfrm = frm.loc[idx[:, f],].loc[idx[:, f],].droplevel('f', axis=0)
-    rs = cylindrical.radius(hs, f)
-    r_outer = cylindrical.r_outer(f)
-    r_inner = cylindrical.r_inner(f)
-    for H in Hs:
-        Ts = subfrm.loc[H, 'geotherm']
-        dTs, rdTs = analysis.derivative(Ts, rs, n = 1)
-        ddTs, rddTs = analysis.derivative(dTs, rdTs, n = 1)
-        alt_ddTs, alt_rddTs = analysis.derivative(rdTs * dTs, rdTs, n = 1)
-        ax1.line(
-            Channel(
-                Ts, label=r'$T(r)$',
-                lims=(0, 2), capped=(True, True),
-                ),
-            Channel(
-                rs / r_outer, label=r"$r^{*}$",
-                lims=(r_inner / r_outer, 1), capped=(True, True)
-                ),
-            c = cmap(H, Hs, style = 'plasma'),
-            )
-        ax2.line(
-            Channel(
-                dTs, label=r"$T'(r)$",
-                lims=(-10, 10), capped=(True, True),
-                ),
-            Channel(
-                rdTs / r_outer, label=r"$r^{*}$",
-                lims=(r_inner / r_outer, 1), capped=(True, True)
-                ),
-            c = cmap(H, Hs, style = 'plasma'),
-            )
-        ax3.line(
-            Channel(
-                # ddTs, label=r"$\frac{d}{dr} \left( r{T(r)}^{'} \right)$",
-                ddTs, label=r"$T''(r)$",
-                lims=(-20, 0), capped=(True, True),
-                ),
-            Channel(
-                rddTs / r_outer, label=r"$r^{*}$",
-                lims=(r_inner / r_outer, 1), capped=(True, True)
-                ),
-            c = cmap(H, Hs, style = 'plasma'),
-            )
-        ax4.line(
-            Channel(
-                alt_ddTs, label=r"$\frac{d}{dr} \left( r{T(r)}^{'} \right)$",
-                lims=(-20, 0), capped=(True, True),
-                ),
-            Channel(
-                alt_rddTs / r_outer, label=r"$r^{*}$",
-                lims=(r_inner / r_outer, 1), capped=(True, True)
-                ),
-            c = cmap(H, Hs, style = 'plasma'),
-            )
-        axs = (ax1, ax2, ax3, ax4)
+for H, f in sorted(frm.index):
 
-        for ax in axs[1:]:
-            ax.props.edges.y.label.visible = False
-            ax.props.edges.y.ticks.major.labels = ()
-        # if i < (len(fs_to_draw) - 1):
-        #     for ax in (ax1, ax2, ax3):
-        #         ax.props.edges.x.label.visible = False
-        #         ax.props.edges.x.ticks.major.labels = ()
-    
-    canvasses.append(canvas)
-
-imop.vstack(*canvasses)
-
-# def model(h, H):
-#     a = -0.11196818 * H + 0.36646053
-#     b = -2.45738185 * H + 6.40652432
-#     return a / h + b
-
-# ax4 = canvas.make_ax((3, 0))
-# for H in Hs:
-#     Ts = subfrm.loc[H, 'geotherm']
-#     ddTs, hddTs = analysis.derivative(Ts, hs, n = 2)
-#     ax4.line(
-#         Channel(cylindrical.r_star(hddTs, f)[:10], lims=(None, None)),
-#         Channel(model(hddTs, H)[:10]),
-#         c = cmap(H, Hs, style = 'plasma'),   
-#         )
-```
-
-```{code-cell} ipython3
-canvas = Canvas(
-    size=(6, 6),
-    )
-ax = canvas.make_ax()
-
-f = 0.1
-
-subfrm = frm.loc[idx[:, f],].loc[idx[:, f],].droplevel('f', axis=0)
-
-for H in Hs:
-
+    if f == 1: continue
     if not H: continue
 
-    Ts = subfrm.loc[H, 'geotherm']
-    dTs, rdTs = analysis.derivative(Ts, rs, n = 1)
-    ddTs, rddTs = analysis.derivative(dTs, rdTs, n = 1)
-    alt_ddTs, alt_rddts = analysis.derivative(rdTs * dTs, rdTs, n = 1)
+    rs = cylindrical.radius(hs, f)
+    Ts = frm.loc[H, f]['geotherm']
+    dTs, hdTs = analysis.derivative(Ts, hs, n = 1)
+    fluxes = dTs * cylindrical.s_star(hdTs, f)
+    xs = cylindrical.radius(hdTs, f)**2
+    ys = fluxes
 
-    ax.line(
-        Channel(
-            -alt_ddTs / H
-            ),
-        Channel(
-            alt_rddTs
-            ),
-        c = cmap(H, Hs, style = 'plasma'),
-        )
+    model = LinearRegression()
+    model.fit(xs.reshape(-1, 1), ys.reshape(-1, 1))
+    r_squared = model.score(xs.reshape(-1, 1), ys.reshape(-1, 1))
+    if r_squared < 0.99: print(f"Bad fit! f={f}, H={H}, r2={r_squared}")
+    fit_data.append((H, f, model.coef_[0][0], model.intercept_[0]))
+
+    # Tchan = Channel(
+    #     ys, label=r"$\phi_q$",
+    #     lims=(-10., 10.), capped=(True, True),
+    #     )
+    # rchan = Channel(
+    #     xs, label='$r^2$',
+    #     # lims=(0., 1.),capped=(True, True),
+    #     )
+    # ax1.line(
+    #     Tchan, rchan,
+    #     c = cmap(H, Hs, style = 'plasma'),
+    #     # alpha = f,
+    #     )
+
+fit_data = np.array(fit_data)
+fit_data.flags.writeable = False
+
+ax1 = canvas.make_ax((0, 0))
+ax1.scatter(
+    Channel(fit_data[:, 1], label="$f$", lims=(0, 1)),
+    Channel(fit_data[:, 2], label="$C_1$"),
+    10,
+    fit_data[:, 0],
+    cmap='plasma',
+    )
+
+ax2 = canvas.make_ax((0, 1))
+ax2.scatter(
+    Channel(fit_data[:, 1], label="$f$", lims=(0, 1)),
+    Channel(fit_data[:, 3], label="$C_2$"),
+    10,
+    fit_data[:, 0],
+    cmap='plasma',
+    )
+# ax2.scatter(fit_data[:, 0], fit_data[:, 1], 1, fit_data[:, 3])
+# ax2.scatter(fit_data[:, 2], fit_data[:, 3], fit_data[:, 1] * 20, fit_data[:, 0])
+
+# ax1.props.legend.set_handles_labels(
+#     (row[0] for row in ax.collections[nfs-1::nfs]),
+#     (str(H) for H in np.round(Hs, 1)),
+#     )
+# ax1.props.legend.title.text = '$ H $'
+# ax1.props.legend.title.visible = True
+# # ax.props.legend.mplprops['bbox_to_anchor'] = (1, 1)
+# # ax1.props.legend.mplprops['ncol'] = 2
+# ax1.props.legend.frame.colour = 'black'
+# ax1.props.legend.frame.visible = True
 
 canvas
 ```
@@ -888,10 +853,11 @@ In the Cartesian case, when the height of the box is set to unit, the aspect rat
 
 While it is trivial to divide the domain in an angular sense (i.e. splitting the wedge into more wedges), dividing it in a radial sense requires a little more consideration.
 
-It will shortly prove useful to have a function at hand that provides the proportion of the annulus that lies below a particular depth - i.e. a ratio from $0$ to $1$ where $0$ obtains at the base of the annulus and $1$ obtains at the outer edge. We shall dub this '$\mathrm{Disc}$'. For a Cartesian box, $Disc(h) = h$ (because the proportion of the domain below, say, 80% of the way up, is by definition 80% in a square box). It is a little tricker in the annulus, but if we use the dimensionless radius $r^*$ (a function of $h$ which comes to $1$ at the outer boundary and $f$ at the inner boundary), we can represent it very simply as:
+It will shortly prove useful to have a function at hand that provides the proportion of the annulus that lies below a particular depth - i.e. a ratio from $0$ to $1$ where $0$ obtains at the base of the annulus and $1$ obtains at the outer edge. We shall dub this '$\mathrm{Disc}$'. For a Cartesian box, $Disc(h) = h$ (because the proportion of the domain below, say, 80% of the way up, is by definition 80% in a square box). It is a little tricker in the annulus, but if we use the dimensionless radius $r^*$ (a function of $h$ which comes to $1$ at the outer boundary and $f$ at the inner boundary), we can obtain it via:
 
 $$
 \mathrm{Disc}(h) = \frac{{r^*(h)}^2 - f^2}{1-f^2}
+= \frac{r(h)^2 - {r_i}^2}{2r_m}
 $$
 
 As we have already established that the total area will always equal the aspect ratio $A$, the true area under any depth can then be given simply as $\mathrm{Disc} \cdot A$.
@@ -960,7 +926,8 @@ And so the geothermal gradient:
 
 $$ \begin{align*}
 T_c'(h) &= \frac{1-f}{{r^*(h)}\ln{f}} \\
-&= \frac{1}{{r^*(h)} \; r_o \ln{f}}
+&= \frac{1}{{r^*(h)} \; r_o \ln{f}} \\
+&= \frac{1}{ r(h) \ln{f} }
 \end{align*} $$
 
 And finally the flux itself can be written as:
@@ -1145,7 +1112,7 @@ At equilibrium, this must obtain regardless of whether $H$ is high or low, or in
 
 As before, we would like to obtain an exact closed-form solution for the conductive geotherm and average temperature. The value of $H_\mathrm{cr}$ is fully dynamic in the case of a mobile fluid, but in the purely conductive state, it will have a fixed value which is some function of the fixed model parameters. It would be good to obtain an expression for this too.
 
-The first step, as previously, is to convert the empirical temperature profile into a geothermal gradient by taking a differential, then convert that gradient into the (axisymmetric) heat flux $\phi$ by multiplying by the non-dimensionalised height-dependent angular length $s^{*}$. Once we have the flux, we can take another differential to obtain the gradient of the flux.
+The first step, as previously, is to convert the empirical temperature profile into a geothermal gradient by taking a differential, then convert that gradient into the (axisymmetric) heat flux $\phi$ by multiplying by the negative of the non-dimensionalised height-dependent angular length $s^{*}$.
 
 +++
 
@@ -1159,42 +1126,135 @@ The equilibrium conductive geotherms for cylindrical mixed heating for varying $
 
 The numerical results for the cylindrical mixed-heating case {numref}`cylindrical_mixed_geotherm_fig` show the sorts of trends we are now familiar with from both the Cartesian mixed-heating and the cylindrical basally- and internally-heated cases. The two subregimes are evident, as is the effect of curvature.
 
-If we zoom in on a couple of cases {numref}`cylindrical_mixed_geotherm_analysis_fig` and plot the empirical results and the first two derivatives with resepct to the dimensionless radius $r^*$, we quickly obtain an obvious linear trend that converges on the origin. This suggests
+The shape of the flux curve is close to linear for all cases. We know intuitively that the flux through any given layer is going to be a linear superposition of two flux sources (or sinks): a global term (which accounts for the flux entering or exiting through the boundaries) and an area-dependent term (which accounts for the flux being produced per area by the internal heating force).
+
+The area is clearly going to be related to $r^2$, so a good first step might be to regress the flux against $r(h)**2$. This produces exactly linear relations (to better than a 99.999% fit) for all bar the extreme $f=1$ case, implying an overall expression for $\phi_q$ of the form:
+
+$$
+\phi_q(h) = C_1 r(h)^2 + C_2
+$$
+
+Logically, the fit parameters $C_1$ (slope) and $C_2$ (intercept) must be pure functions of $f$ and $H$ {numref}`cylindrical_mixed_geotherm_analysis_fig`. If we can figure out the content of these functions, we have a statement for the geothermal flux by substitution. The $C_2$ term is height-independent, so we know it must describe the boundary flux. The $C_1$ term, by contrast, is dependent on the square of height, i.e. it is an areal term. Evidently this must be associated with the volumetric heat flux.
 
 +++
 
 ```{figure} #cylindrical_mixed_geotherm_analysis
 :name: cylindrical_mixed_geotherm_analysis_fig
 
-An analysis of two select cases of the cylindrical mixed heating model from the numerical dataset {numref}`cylindrical_mixed_geotherm_fig`, plotted in terms of the dimensionless radius $r^*$ (where the outer radius is scaled to $1$ and the inner radius is scaled to $f$). The second derivative of temperature with respect to radius, scaled by radius, produces linear trends that converge on the origin (the planetary centre) for all curvatures.
+The results of a linear regression of $\phi_q$ against $r^2$ for each combination of $f$ and $H$ (except for $f=1$). $C_1$ is the slope of the fit and $C_2$ is the intercept. The goodness of fit, as expected, is extremely high ($>>0.99$ in all cases).
 ```
 
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
++++
 
-In the Cartesian case, $H_\mathrm{cr}$ for mixed heating is equal to the inverse of the average temperature for purely basal heating. If the same holds for the annulus, we should therefore expect:
+In the monocooling subregime, the flux through any layer at equilibrium must be the flux through the base (a constant term) plus the flux entering into the system from all the layers below the current depth. Intuitively and numerically, we know that the latter forcing comes to $H \cdot \mathrm{Disc}(h)$. If we crack open this expression to expose $r(h)^2$, we end up with a variable term and a constant term:
 
-$$ \begin{align*}
-T_{\mathrm{av}} &= \frac{\large{\sqrt[e]{f}}}{2} \\
-H_\mathrm{cr} &= \frac{2}{\large{\sqrt[e]{f}}}
-\end{align*} $$
+$$\phi_{q\;\mathrm{internal}} = \frac{H}{2r_m} r(h)^2 - \frac{H {r_i}^2}{2r_m}$$
 
-The annular case also contains the Cartesian case as an endmember when $f$ approaches $1$. This gives us some clues about the limiting behaviour of the conductive geotherm for annular systems.
+We therefore advance $-\frac{H}{2r_m}$ as a good ansatz for $C_1$.
 
-The existence of $H_\mathrm{cr}$ effectively splits the conductive regime into two separate subregimes. The low-$H$ subregime is 'monocooling': only the outer boundary cools the system. The high-$H$ subregime is 'duocooling': both boundaries cool the system. The two subregimes are clearly evident in the empirical results {numref}`cylindrical_mixed_geotherm_fig`, where the duocooling subregime bows to the right above the linear geotherm.
-
-Let us first consider the monocooling subregime. In these cases, all the flux through lower layers must pass through upper layers and ultimately through the upper boundary wall. The situation is comparable to the basally- and internally-heated cases, except with the addition of the lower boundary flux itself. If we can figure out what this is, it can simply be added to the flux for each subsequent layer all the way to the top of the domain.  At $H=H_\mathrm{cr}$, the flux should come to zero by definition. The lower boundary flux is therefore constrained in this subregime to the range $[-1, 0]$.
-
-We know that the flux through any given layer due to internally-generated heat alone should come to $-H \cdot \mathrm{Disc}$ - i.e. each layer must transport the entirety of the heat produced by all lower layers. We can adjust this to account for the lower boundary flux $\phi_{i}$, whatever it is:
+To deduce $C_2$, we need to obtain a preliminary representation of the actual geotherm, which we get by dividing out $-s^*$ from our flux ansatz and integrating once:
 
 $$
-\phi(h) = -H \cdot \mathrm{Disc}(h) + \phi_{i}
+T'(h) = -\frac{H}{2} r(h) + C_2 \frac{r_m}{r(h)} \\
+T(h) = -\frac{H}{4} r(h)^2 + C_2 r_m \ln r(h) + C_3
 $$
 
-This should hold whether the inner boundary flux is positive or negative.
+This has the downside of giving us a new constant to manage, $C_3$. We need to use our knowledge of the boundary conditions to solve for both of these. We'll start by exploring the outer boundary ($h=1$, $T=0$) to get $C_3$ in terms of $C_2$:
 
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
+$$
+C_3 = \frac{H}{4} {r_o}^2 - C_2 r_m \ln r_o \\
+\therefore \quad T(h) = \frac{H}{4} \left( {r_o}^2 - r(h)^2 \right) + C_2 r_m \ln \left( \frac{r(h)}{r_o} \right)
+$$
 
-INCOMPLETE
+One constant down, one to go. Now we can use the other boundary condition ($h=0$, $T=1$) to obtain $C_2$:
+
+$$
+C_2 = \frac{1 - \frac{H}{2} r_m}{r_m \ln f}
+$$
+
+Substituting back in (and making the obvious $r_m$ cancellation), we get a complete form:
+
+$$
+T(h) = \frac{H}{4} \left( {r_o}^2 - r(h)^2 \right) + \frac{1 - \frac{H}{2} r_m}{\ln f} \ln \left( \frac{r(h)}{r_o} \right)
+$$
+
+This may look very complicated, but we can simplify powerfully using our toolbox of coordinate transforms. Recalling that $r(h)/r_0 = r^*(h)$ and $\ln(x) / \ln(f) = \log_f$.
+
+$$
+T(h) = \frac{H}{4} \left( {r_o}^2 - r(h)^2 \right) + \left( 1 - \frac{H}{2} r_m \right) \log_f r^*(h)
+$$
+
+We instantly recognise the expression $\log_f r^*(h)$ as the geothermal profile for the purely basally-heated endmember. If we substitute, flip signs, and rearrange, we get the following statement:
+
+$$
+T(h) = H_\mathrm{coeff} \; T_{\mathrm{basal}}(h) - \frac{H}{4} \left( r(h)^2 - {r_o}^2 \right)
+$$
+
+Where:
+
+$$
+H_\mathrm{coeff} = 1 - \frac{H}{2}r_m
+$$
+
+When we test our maths against the numerical results, we find they are in absolute agreement ($r^2 > 0.9999999$) - which, depending on how we look at it, is either a validation of the numerical code or a vindication of Poisson.
+
+That $T_\mathrm{mixed}(h)$ takes this particular form is both intuitive and a little surprising. We know that the other cases we've explored should all be present as subsets of $T_\mathrm{mixed}(h)$ for particular combindations of $H$ and $f$, and on that note it is pleasing to see $T_\mathrm{basal}$ expressed so forcefully in the maths. On the other hand, we might not have expected to find that the two heating systems would be so disconnected from one another, with the first term representing the basal heat contribution suppressed by $H$ and the second term the volumetric heat contribution without respect to basal heat at all.
+
+```{code-cell} ipython3
+:label: h_crit_vs_f_chart
+
+canvas = Canvas()
+ax = canvas.make_ax()
+xs = np.linspace(0.00001, 0.9999, 1000)
+ys = 2 / (cylindrical.r_mid(xs) + cylindrical.r_inner(xs)**2 * np.log(xs))
+ax.line(
+    Channel(xs, lims=(0, 1), label="$f$"),
+    Channel(ys, lims=(2, 4), label=r"$H_\mathrm{crit}$"),
+    )
+canvas
+```
+
+```{figure} #h_crit_vs_f_chart
+:name: h_crit_vs_f_chart_fig
+
+$H_\mathrm{crit}$ plotted against $f$. At $f=0$, a solid cylinder is implied, while at $f=1$, we have an infinitely thin shell.
+```
+
++++
+
+As discussed earlier, moving along the $H$ scale from low to high values takes us from a 'monocooling' regime (where the lower boundary heats and the upper boundary cools) to a (usually unrealistic) 'duocooling' regime where both boundaries cool. Separating these two regimes is a value $H_\mathrm{crit}$ at which the equilibrium temperature just shy of the lower boundary is naturally brought to $1$ and the flux consequently drops to zero, dynamically insulating the system.
+
+We can obtain an expression for $H_\mathrm{crit}$ by setting the geothermal gradient to zero at $h=0$ and processing it until $H$ stands on its own:
+
+$$
+T'(0) = H_\mathrm{coeff} \; T_{\mathrm{basal}}'(0) - \frac{H}{2} r_i = 0 \\
+\quad \left( 1 - \frac{H}{2}r_m \right) \frac{1}{r_i \ln f} = \frac{H}{2} r_i \\
+\dots
+$$
+
+Eventually we get:
+
+$$
+H_\mathrm{crit}(f) = \frac{2}{r_m + {r_i}^2 \ln f}
+$$
+
+As visualised in {numref}`cylindrical_mixed_geotherm_analysis_fig`.
+
+We know that the Cartesian endmember demonstrates a critical $H$ value of $2$. Does this formulation $H_\mathrm{crit}$ support that? In general, to reproduce Cartesian cases from annular laws, we have to take the limit as $f$ approaches $1$ - which is tricky in this case, since $\ln{1}=0$ is in the denominator. Nevertheless, with a bit of care (and L'Hopital's rule), it can be demonstrated that:
+
+$$\lim_{f \to 1} H_\mathrm{crit} = \frac{2}{1} = 2$$
+
+Which is as we expected. For amusement, we can also take the opposite limit ($f \to 1$), at which - conceptually - there is no lower boundary to speak of. In that case, $H_\mathrm{crit}$ must be interpreted as the heating rate at which the core temperature is exactly $1$. It can be shown that this occurs at $H=4$:
+
+$$\lim_{f \to 0} H_\mathrm{crit} = \frac{2}{1/2 + 0} = 4$$
+
+Since $H_\mathrm{crit}$ is a function of $f$, and $f$ can only range in the interval $(0-1)$, having these two limits in hand allows us to observe that $H_\mathrm{crit}$ itself must be restricted to the range $(2, 4)$. 
+
+It is important to have a precise comprehension of the behaviour of $H$ and $H_\mathrm{crit}$ because without it, we cannot calibrate the relative contributions of basal and internal heating ahead of time. Since the temperature contrast across the annulus is already non-dimensionalised into the unit interval, ideally we would non-dimensionalise $H$ as well:
+
+$$
+H^*(H, f) \equiv \frac{H}{H_\mathrm{crit}(f)}
+$$
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
@@ -1236,7 +1296,7 @@ Basal heating in the annulus ($0 < f < 1$, $H=0$):
 
 $$ \begin{align*}
 T''(h) &= -\frac{1}{r(h)^2 \ln f} \\
-T'(h) &= \frac{1}{r^*(h) \; r_o\ln{f}} \\
+T'(h) &= \frac{1} {r(h) \ln{f} } \\
 T(h) &= \log_f r^*(h)
 \end{align*} $$
 
@@ -1268,5 +1328,5 @@ r_m &= \frac{r_{i} + r_{o}}{2} \\
 r(h) &= r_i + h \\
 {r^*}(h) &= \frac{r(h)}{r_o} \\
 s^*(h) &= \frac{r(h)}{r_m} \\
-\mathrm{Disc}(h) &= \frac{{r^*(h)}^2 - f^2}{1 - f^2} \\
+\mathrm{Disc}(h) &= \frac{r(h)^2 - {r_i}^2}{2r_m} \\
 \end{align*} $$
