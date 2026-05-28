@@ -1,15 +1,14 @@
 ---
 jupytext:
-  notebook_metadata_filter: -all
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.19.0
 kernelspec:
+  name: python3
   display_name: Python 3 (ipykernel)
   language: python
-  name: python3
 ---
 
 ```{code-cell} ipython3
@@ -170,215 +169,9 @@ ax.props.title.visible = True
 canvas
 ```
 
-```{code-cell} ipython3
-:tags: [remove-cell]
+## General mantle convection theory
 
-with open(os.path.join(aliases.storagedir, 'condh.pkl'), mode = 'rb') as file:
-    conddata = pickle.loads(file.read())
-condgeotherms, condavts, condhs = (conddata[key] for key in ('geotherms', 'avts', 'hs'))
-```
-
-```{code-cell} ipython3
-:label: isocondh
-:tags: [remove-cell]
-
-canvas1 = Canvas(shape = (1, 2), size = (6, 4))
-
-ax1 = canvas1.make_ax((0, 0))
-ax2 = canvas1.make_ax((0, 1))
-
-for H, T in zip(condhs, condgeotherms):
-
-    h = np.linspace(0, 1, len(T))
-    c = cmap(H, condhs, style = 'plasma')
-
-    ax1.line(
-        Tchan := Channel(T, label = '$ T $', lims = (None, 6.), capped = (True, True)),
-        Channel(h, label = '$ h $'),
-        c = c,
-        )
-
-    ax2.line(
-        Tchan,
-        Channel(h**2., label = r"$ h^{2} $", capped = (True, True)),
-        c = c,
-        )
-
-ax2.props.edges.y.swap()
-
-ax2.props.legend.set_handles_labels(
-    (row[0] for row in ax1.collections),
-    (str(round(H, 1)) for H in condhs),
-    )
-ax2.props.legend.title.text = '$ H $'
-ax2.props.legend.title.visible = True
-# ax2.props.legend.mplprops['bbox_to_anchor'] = (1.75, 0.85)
-# ax1.props.legend.mplprops['ncol'] = 2
-ax2.props.legend.frame.colour = 'black'
-ax2.props.legend.frame.visible = True
-
-canvas2 = Canvas(shape = (2, 1), size = (2, 4))
-ax1 = canvas2.make_ax((0, 0))
-ax2 = canvas2.make_ax((1, 0))
-
-for H, T in zip(condhs, condgeotherms):
-    h = np.linspace(0, 1, len(T))
-    c = cmap(H, condhs, style = 'plasma')
-    y, x = analysis.derivative(T, h)
-    ax1.line(
-        Channel(x * H, label = r"$ H \cdot h $", lims = (0, 1), capped = (True, True)),
-        Channel(y, label = r"$ \delta T / \delta h $", lims = (-1, 0), capped = (True, True)),
-        c = c,
-        )
-    y = T
-    x = H / 2 * (1 - h**2)
-    ax2.line(
-        Channel(x, label = r"$ \frac{H}{2} \left( 1 - h^2 \right) $", lims = (0, 5), capped = (True, True)),
-        Channel(y, label = "$ T $", lims = (0, 5), capped = (True, True)),
-        c = c,
-        )
-
-fig = imop.hstack(canvas1, canvas2)
-
-fig
-```
-
-```{code-cell} ipython3
-:tags: [remove-cell]
-
-with open(os.path.join(aliases.storagedir, 'condhfmixed.pkl'), mode = 'rb') as file:
-    conddata = pickle.loads(file.read())
-condhfs = conddata['hfs']
-inddict = {k:v for v, k in enumerate(condhfs)}
-condhs = sorted(set(tup[0] for tup in inddict.keys()))[:-1]
-selinds = [inddict[H, 1] for H in condhs]
-condgeotherms = [conddata['geotherms'][i] for i in selinds]
-condavts = [conddata['avts'][i] for i in selinds]
-
-# impaths = sorted(os.path.relpath(path) for path in glob(os.path.join(aliases.storagedir, 'cond_hf_mixed_*1-0.png')))
-# ims = tuple(image.fromfile(path) for path in impaths)
-# ims = (ims[0], *ims[2:], ims[1])
-# thumbs = imop.vstack(
-#     imop.hstack(*ims[:5]),
-#     imop.hstack(*ims[5:]),
-#     )
-```
-
-```{code-cell} ipython3
-:label: isocondhmixed
-:tags: [remove-cell]
-
-canvas1 = Canvas(shape = (1, 2), size = (6, 4))
-
-ax1 = canvas1.make_ax((0, 0))
-ax2 = canvas1.make_ax((0, 1))
-
-slopeslopes = []
-
-for H, T in zip(condhs, condgeotherms):
-
-    h = np.linspace(0, 1, len(T))
-    c = cmap(H, condhs, style = 'plasma')
-    dT = np.gradient(T, h, edge_order = 2)
-    ddT = np.gradient(dT, h, edge_order = 2)
-
-    ax1.line(
-        Channel(T, label = r'$ T $', lims = (None, 2.), capped = (True, True)),
-        Channel(h, label = r'$ h $'),
-        c = c,
-        )
-    ax2.line(
-        Channel(dT, label = r'$ \delta T / \delta h $'),
-        Channel(h, label = '$ h $', lims = (0, 1), capped = (True, True)),
-        c = c,
-        )
-    slopeslopes.append(np.round(ddT.mean(), 2))
-
-ax2.props.edges.y.swap()
-ax2.props.edges.y.label.visible = False
-ax2.props.edges.y.ticks.major.labels = ()
-
-ax2.props.legend.set_handles_labels(
-    (row[0] for row in ax1.collections),
-    (str(H) for H in np.round(condhs, 1)),
-    )
-ax2.props.legend.title.text = '$ H $'
-ax2.props.legend.title.visible = True
-# ax2.props.legend.mplprops['bbox_to_anchor'] = (1., 1.)
-# ax1.props.legend.mplprops['ncol'] = 2
-ax2.props.legend.frame.colour = 'black'
-ax2.props.legend.frame.visible = True
-
-canvas2 = Canvas(shape = (2, 1), size = (2, 4))
-ax3 = canvas2.make_ax((0, 0))
-ax4 = canvas2.make_ax((1, 0))
-
-ax3.line(
-    Channel(condhs, label = '$ H$ ', capped = (True, True)),
-    Channel(condavts, label = '$ T_{av} $', lims = (0.5, 1.5), capped = (True, True)),
-    )
-
-ax4.line(
-    Channel(condhs, label = '$ H $', capped = (True, True)),
-    Channel(slopeslopes, label = 'slope', capped = (True, True))
-    )
-
-ax3.props.edges.y.swap()
-ax3.props.edges.x.swap()
-ax3.props.edges.x.label.visible = False
-ax3.props.edges.x.ticks.major.labels = ()
-
-ax4.props.edges.y.swap()
-
-fig = imop.hstack(canvas1, canvas2, pad = (255, 255, 255))
-# fig = imop.paste(canvas1, canvas2, coord = (0.5, 0.5))
-
-fig
-
-# Reproduces exactly
-# def myfn1(h, H):
-#     return -H * (h - 0.5) - 1
-# def myfn2(h, H):
-#     return 0.5 * H * h * (1 - h) - h - 1
-
-# canvas2 = Canvas(shape = (1, 2), size = (6, 4))
-# ax1 = canvas2.make_ax((0, 0))
-# ax2 = canvas2.make_ax((0, 1))
-# h = np.linspace(0, 1, 101)
-# midh = h[:-1] + np.diff(h) / 2
-# for H in condhs:
-#     H = 0.0001 if H == 0 else H
-#     c = cmap(H, condhs, style = 'turbo')
-#     ax1.line(
-#         Channel([myfn2(hval, H) for hval in h], label = 'T'),
-#         Channel(h, label = 'h'),
-#         c = c,
-#         )
-#     ax2.line(
-#         Channel([myfn1(hval, H) for hval in midh], label = '\delta T / \delta h'),
-#         Channel(midh, label = 'h', lims = (0, 1), capped = (True, True)),
-#         c = c,
-#         )
-
-# ax2.props.edges.y.swap()
-# ax2.props.edges.y.label.visible = False
-# ax2.props.edges.y.ticks.major.labels = ()
-
-# ax2.props.legend.set_handles_labels(
-#     (row[0] for row in ax1.collections),
-#     (str(H) for H in np.round(condhs, 1)),
-#     )
-# ax2.props.legend.title.text = 'H'
-# ax2.props.legend.title.visible = True
-# # ax2.props.legend.mplprops['bbox_to_anchor'] = (1., 1.)
-# # ax1.props.legend.mplprops['ncol'] = 2
-# ax2.props.legend.frame.colour = 'black'
-# ax2.props.legend.frame.visible = True
-
-# canvas2
-```
-
-## The analytical toolkit
++++
 
 Tectonics is known to us through its sensible processes of orogeny, seismicity, and volcanism. The energy available to carry out these permutations ultimately derives from the depletion of the thermal gradient of the Earth’s hot interior with space, mitigated to an uncertain degree by internal heat production via radiogenics, core despinning, and other means. Estimates of global heat flow vary from around $42$ terawatts [@Dye2012-cx] to upwards of $47$ terawatts [@Davies2010-gz]. Of this power, a mere $1\%$ is thought to be necessary to account for all the geological activity witnessed on Earth [@Turcotte2014-by]; if our Earth is a heat engine, it is a weak one.
 
@@ -753,3 +546,95 @@ $$ \begin{align*}
 \end{align*} $$
 
 The fixed points of these new equations are the same as for the Lorenz equations, as is the conductive solution when $A=B=C=0$, which as before is stable only for subcritical $\mathrm{Ra}$; however, the convective solutions can be shown to be stable for all $r>1$. We might take this to imply that mantle convection cannot be chaotic after all. However, it must be recalled that the Lorenz analysis begins with severe truncation of non-linear terms. For higher-order truncations, it is evident that chaotic phases can exist [@Schubert2001-ea], particularly at high *Rayleigh* numbers; what is not certain is whether, for a given degree of truncation and a given range of parameters, chaotic behaviours will manifest for a particular system. When we attempt to engage with the problem numerically and empirically through modelling, which is the purpose of this thesis, it will be seen that certain parameter bands are chaotic and time-dependent while others are not; ultimately it will be argued that such zones of chaos represent boundaries in a very high-dimensional phase space, and relate fundamentally to the nature and proper characterisation of tectonic modes.
+
++++
+
+### Incorporating radiogenic heat: the internal- and mixed-heating cases
+
+On Earth and other planets, the geothermal flux is not solely driven by basal heating from the core: there is a substantial, variable, and transient contribution from radioactive decay as well [@Daly1980-xl]. In mantle convection studies this is dubbed 'internal heating', and a system driven by both basal and internal heating is said to be 'mixed-heating'.
+
+The ratio of internal heat production to surface heat flux inside a planet is called the *Urey* ratio $\mathrm{Ur}$  [@Urey1955-zs]. Values less than one signify that a planet on the whole is cooling, while values greater than one represent global interior warming. To avoid projecting unreasonable global temperatures into Earth's past, it was originally calculated that, for a *beta* exponent of $1/3$, the *Urey* number must be greater than $\sim0.7$ [@Christensen1985-bu]. This assumption was forced into revision when it transpired that the radiogenic inventory of bulk mantle materials is far too low to support such a high radiogenic fraction [@Jochum1983-dn]. Direct evidence from geoneutrinos now suggests that the *Urey* ratio must be around $0.5$ [@Gando2011-sh], and further argues that heat production is non-uniform throughout the mantle [@Huang2013-eu]. Thermal histories that honour these facts have proved very difficult to construct [@Korenaga2003-oy; @Korenaga2008-js; @Mareschal2012-ie; @Dye2012-cx; @Jaupart2015-un; @Korenaga2017-an].
+
+Analytically, the addition of internal heating introduces many complications. Most significantly, the temperature scale is no longer an independent variable, but a natural one emerging from the dynamic balance of heat production and heat transport. This dependency invalidates the derivation of $\mathrm{Ra}$ previously provided, and unfortunately, no obvious or unambiguous alternative scaling is known [@Schubert2001-ea; @Moore2008-je; @Korenaga2017-an].
+
+To prise open the behaviour of such systems, a combined analytical and numerical approach is called for. We will undertake this in subsequent chapters, first establishing a groundwork of conductive geothermal solutions (Chapter 3) and then closely surveying the behaviour at the critical point where conduction tips over into convection.
+
++++
+
+### Moving to a rounder planet
+
+The Earth, it hardly needs to be stated, is round. All the analysis presented so far has ignored this fact - and for good reason. The addition of curvature complicates matters considerably.
+
+There are two main ways in which curvature changes the game. The first is that different layers now have different lengths. The second is that conduction and gravitation are no longer in alignment: planetary curvature allow heat to take 'shortcuts' across gravitational potential surfaces which may not be available to advecting parcels.
+
+In particular, curved geometries break the symmetry between upper and lower boundaries. This invalidates many of the assumptions that made the planar case amenable to analysis. The additional space at the top of the model now allows more room for downwellings relative to basal upwellings, tending to promote instability [@Jarvis1991-ir]; on the other hand, the curved geotherm and the increased surface for radiating heat would tend to permit a comparatively thicker upper boundary layer. The effect of these countervailing forcings on the fundamental scalings of $\mathrm{Nu}$, $\mathrm{Ra}$, $\mathrm{Ra}_{\mathrm{cr}}$, and the all-important relation $\mathrm{Nu} \propto R^{\beta}$ is not obvious.
+
+To begin to unpack the complexities of convection in the annulus, we can start with the assumption that - as in the planar case - the convective steady state will eventually result in a broad intracellular region of uniform temperature $T_{\mathrm{cell}}$. Assuming a unit temperature drop $\Delta T = 1$, we can write:
+
+$$ \begin{align*}
+{\Delta T}_o &= T_{\mathrm{cell}} \\
+{\Delta T}_i &= 1 - T_{\mathrm{cell}}
+\end{align*} $$
+
+Knowing that the inner and outer fluxes ${\phi_q}_i$ and ${\phi_q}_o$ must be equal at steady state, and that the outer boundary - due to its greater length - can sustain that flux with a gradient shallower by a factor of $f$, we can deduce a relation between the outer and inner thermal gradients, and thence between $T_{\mathrm{cell}}$ and the inner and outer boundary layer thicknesses ${\Delta r}_i$ and ${\Delta r}_o$:
+
+$$ \begin{align*}
+f \frac{{\Delta T}_i}{{\Delta r}_i} &= \frac{{\Delta T}_o}{{\Delta r}_o} \\
+\frac{{\Delta r}_i}{{\Delta r}_o} &= f \frac{1 - T_{\mathrm{cell}}}{T_{\mathrm{cell}}}
+\end{align*} $$
+
+For each of the two layers, we can prescribe a layer-specific *Rayleigh* number accordingly:
+
+$$ \begin{align*}
+\mathrm{Ra}_o &\propto T_{\mathrm{cell}} {{\Delta r}_o}^3 \\
+\mathrm{Ra}_i &\propto (1 - T_{\mathrm{cell}}) {{\Delta r}_i}^3
+\end{align*} $$
+
+Having maintained non-dimensionality throughout, it is simple relate these two boundary *Rayleigh* numbers to the bulk $\mathrm{Ra}$ value:
+
+$$
+\mathrm{Ra}_{\mathrm{layer}} = \mathrm{Ra} \cdot {\Delta T}_{\mathrm{layer}} \cdot {{\Delta r}_{\mathrm{layer}}}^3
+$$
+
+At this point, however, we have exhausted the insight we can obtain without making further assumptions. If we provide that the inner and outer boundary thicknesses must be the same, as they are in the planar case, we can see that:
+
+$$
+T_{\mathrm{cell}} = \frac{f}{f + 1} \quad \leftarrow {\Delta r}_i = {\Delta r}_o
+$$
+
+This, however, would imply that the inner and outer *Rayleigh* numbers are divergent. If we instead choose to conserve $Ra$, then: [@Jarvis1993-cb]
+
+$$
+T_{\mathrm{cell}} = \frac{1}{1 + f^{-3/4}} \quad \leftarrow \mathrm{Ra}_i = \mathrm{Ra}_o
+$$
+
+Both possibilities converge on $0.5$ when $f\to1$ and $0$ when $f\to0$, as we would expect.
+
+However it is estimated, it is clear that, as $\mathrm{Ra}$ increases and boundaries thin, more of the mantle will fall in the intracellular region and global temperatures as a whole will approach $T_\mathrm{cell}$. Conversely, if $\mathrm{Ra}$ slips below its critical value, the boundary layers will disapper and the entire domain will enter the conductive regime: $T^{\mathrm{av}} = T_{c}$. These two temperatures therefore make up respectively the lower and upper endmembers of global temperature:
+
+$$ \begin{align*}
+T_{\mathrm{av}} &\approx T_{c}, \quad \mathrm{Ra} < \mathrm{Ra}_{\mathrm{cr}} \\
+&\to T_{\mathrm{cell}}, \quad \mathrm{Ra} \to \infty
+\end{align*} $$
+
+It makes intuitive sense that the effect of increasing $\mathrm{Ra}$ should be to decrease global temperatures, since that is exactly why convection is preferred wherever possible - though this intuition may not hold for all rheologies.
+
+Of course, what we desire most of all is a cylindrical scaling for the mantle convection power law $\mathrm{Nu} \propto {\mathrm{Ra}^*}^\beta$. Following [@Jarvis1993-cb] and mandating equality of inner and outer $\mathrm{Ra}_\mathrm{layer}$, it is possible to construct a 'geometric correction' $g(f)$ that functions as a coefficient of the *beta* scaling:
+
+$$
+g(f) = \frac{\mathrm{Nu}_{c}}{{T_{\mathrm{cell}}}^{4/3}} \quad \leftarrow \mathrm{Ra}_i = \mathrm{Ra}_o
+$$
+
+$$
+\mathrm{Nu} = g(f) \cdot {\mathrm{Ra}^*}^\frac{1}{3}
+$$
+
+Using this scaling, Jarvis was able to obtain a *beta* exponent of $0.321 \pm 0.001$ across four values of $f$ from $(1.0 - 0.1)$ [@Jarvis1993-cb].
+
+Clearly, there is still work to be done before the annular case can be said to be as well understood as the Cartesian case. The next few chapters of this thesis attempt to make a contribution to this multi-decadal objective.
+
+#### Internal heating in the annulus
+
+The addition of internal heating makes the Cartesian case considerably more complicated. Its interactions with the cylindrical case - already complex in itself - are more complex still.
+
+Thankfully, as with the Cartesian case, a combination of analytical and numerical techniques can begin to constrain the behaviour of such systems. We will take steps toward this in the subsequent chapters.
