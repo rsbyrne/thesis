@@ -25,3 +25,22 @@ $$ {{\mathrm{Ra}_{H}}_\mathrm{cr}}_{\min} = 867.8, \quad {\lambda^{*}}_\mathrm{c
 [@Roberts1967-aq]
 
 In other words, for the onset of convection in an internally-heated system with basal-insulating, surface-isothermal, free-slip boundaries, the critical *Rayleigh* number and characteristic wavelength are both a little more than one quarter greater than for the equivalent basally-heated case.
+
+
+
+### Misc
+
+Internal heating in the annulus ($0 < f < 1$, $H \gt 0$, insulating base):
+
+$$ \begin{align*}
+T''(h) &= -\frac{H}{2} \left( 1 + {\left( \frac{r_i}{r(h)} \right)}^2 \right) \\
+T'(h) &= -H \frac{\mathrm{Disc}(h)}{s^*(h)} \\
+T(h) &= H \frac{{r_o}^2}{4}
+\left( 
+2 f^{2} \ln \left| r^*(h) \right| \;-\; {r^*(h)}^2 + 1
+\right) \\
+&= H_\mathrm{coeff} \; T_\mathrm{basal}(h) - \frac{H}{4} \left( r(h)^2 - {r_o}^2 \right) \\
+T_\mathrm{av} &= H_\mathrm{coeff} \; T_\mathrm{av, basal} + \frac{H}{4} r_m \\
+&\mathrm{where} \quad H_\mathrm{coeff} = \frac{H}{2} {r_i}^2 \ln f
+\end{align*} $$
+

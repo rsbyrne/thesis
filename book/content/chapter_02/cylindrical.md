@@ -910,10 +910,10 @@ The analytical scaling of conductive temperature with $\ln{r^{*}}/\ln{f}$ holds 
 
 ```
 
-In a cylindrical domain, however, the length of each layer $s$ is a function of depth and curvature as we have shown; consequently, shallower layers are able to transmit the same flux with a smaller temperature drop:
+In a cylindrical domain, however, the (dimensionless) length of each layer $s^*$ is a function of depth and curvature as we have shown; consequently, shallower layers are able to transmit the same flux with a smaller temperature drop:
 
 $$
-\phi_q(h) = - s(h) \cdot \frac{dT}{dh}
+\phi_q(h) = - s^*(h) \cdot \frac{dT}{dh}
 $$
 
 To define the flux, we need the geothermal gradient. The conductive geotherm can be elegantly stated in terms of ${r^*}$ {numref}`isocondf_fig` {numref}`isocondffit_fig`:
@@ -955,14 +955,38 @@ $$ \begin{align*}
 
 Where the subscript $c$, here as elsewhere, denotes a purely conductive endmember. Because $\mathrm{Nu}$ now inherits a dependency on $f$, it is no longer equivalent to the dimensionless surface temperature gradient, and so it is important always to present and discuss it in its proper terms as a ratio of fluxes.
 
-Just as the flux now scales with $f$, so must the average mantle temperature. In the planar case, the average temperature of the system is always half the temperature drop. In the cylindrical case, however:
+Just as the flux now scales with $f$, so must the average mantle temperature. In the planar case, the average temperature of the system is always half the temperature drop. In the cylindrical case, it is slightly more complicated, since the geotherm has to 'splay' to conduct heat through layers of unequal size. A decent approximation for the average temperature is evident just from inspection of the numerical data {numref}`isocondf_fig`:
+
+$$
+T_{\mathrm{av}} \approx \dfrac{1}{2} \large{\sqrt[e]{f}}
+$$
+
+To get a precise statement of $T_\mathrm{av}$, we have to integrate the geotherm. This is easier to do in terms of $r$ than $h$. We can substitute $dr$ for $dh$ (because $r$ is linearly transposed $h$) and multiply by $s^* = r/r_m$ to ensure that the outer layers (which are longer) are weighted more than the inner layers:
+
+$$T_\mathrm{av} = \frac{1}{r_m} \int_{r_i}^{r_o} T(r) \cdot r \, dr$$
+
+Applied to our geotherm equation, with some expansion and extraction of constants, the integral for the basal case turns out to be fairly straightforward:
+
+$$
+T_\mathrm{av} = \frac{1}{r_m \ln f} \int_{r_i}^{r_o} r \ln \left( \frac{r}{r_o} \right) \, dr
+$$
+
+Which comes to:
+
+$$T_\mathrm{av} = \frac{1}{2} \left(-\frac{1}{\ln f} - \frac{{r_i}^2}{r_m} \right)$$
+
+Evidently, our approximation $\sqrt[e]{f}$ works because it is roughly equal to the second part of the above.
+
+In theory, $T_\mathrm{av}$ for the mixed case should reproduce the same for the Cartesian case in the limit $f \to 1$. Proving this is actually a little tricky and involves a double application of L'Hopital's rule:
 
 $$ \begin{align*}
-T_{\mathrm{av}} &= \dfrac{1}{2} \large{\sqrt[e]{f}} \\
-&\equiv T_c
+T_\mathrm{av, cond} &= \lim_{f \to 1} \frac{1}{2} \left(-\frac{1}{\ln f} - \frac{{r_i}^2}{r_m} \right) \\
+&= \lim_{f \to 1} \frac{2f^2 \ln f - f^2 + 1}{2(f^2 - 1)\ln f} \\
+&= \lim_{f \to 1} \frac{4f \ln f}{4f \ln f + 2f - \frac{2}{f}} \\
+&= \frac{1}{2}
 \end{align*} $$
 
-The relationship is apparent in the numerical results {numref}`isocondf_fig`.
+Which is reassuring.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
@@ -1064,17 +1088,16 @@ As before, the geothermal gradient required to transmit this flux must account f
 $$ \begin{align*}
 \frac{dT_c}{dh} = -\frac{\phi_q(h)}{s^{*}}
 &= - H \frac{\mathrm{Disc}(h)}{{s^*}(h)} \\
-&= -\frac{H}{2} \frac{1+f}{1-f^2} \frac{(r^{*}(h) + f)(r^{*}(h) - f)}{r^{*}(h)} = -\frac{H}{2} \frac{h(r^*(h) - f)}{r^*(h)} \\
-&= -\frac{H}{2} \frac{h \left(f h - 2 f - h\right)}{\left(f h - f - h\right)}
+&= -\frac{H}{2} \frac{r(h)^2 - {r_i}^2}{r(h)}
 \end{align*} $$
 
 All of this is to say, in essence, the gradient is a rational function in terms of $r^{*}$:
 
 $$
-\frac{dT_c}{dh} \propto \frac{r^{*}(h) - f^2}{r^{*}(h)}
+\frac{dT_c}{dh} \propto \frac{r^{*}(h)^2 - f^2}{r^{*}(h)}
 $$
 
-The integral with respect to $h \in [0, 1]$ with $T(0)=1$ yields the geotherm:
+The integral with respect to $h \in [0, 1]$ with $T(1)=0$ yields the geotherm:
 
 $$ \begin{align*}
 T(h) &= \frac{H}{4 (f - 1)^2}
@@ -1094,13 +1117,41 @@ Note how the correct choice of coordinate system dramatically simplifies things.
 The conductive geotherm for cylindrical domains under internal heating. The empirical results and the symbolically-derived closed-form solution match exactly.
 ```
 
+If we break down our coordinate simplifications and shuffle things around, we can find an interesting symmetry lurking inside $T(h)_\mathrm{internal}$:
+
+$$ \begin{align*}
+T_\mathrm{internal}(h) &= H \frac{{r_o}^2}{4}
+  \left( 
+    2 f^{2} \ln \left| r^*(h) \right| \;-\; {r^*(h)}^2 + 1
+    \right) \\
+&= H_\mathrm{coeff} \; T_\mathrm{basal}(h) - \frac{H}{4} \left( r(h)^2 - {r_o}^2 \right) \\
+&\mathrm{where} \quad H_\mathrm{coeff} = \frac{H}{2} {r_i}^2 \ln f
+\end{align*} $$
+
+In other words, internally-heated geotherm is a linear superposition of the basally-heated geotherm and a volumetric ($r^2$) heating term.
+
+We can exploit this symmetry to obtain the internally-heated $T_\mathrm{av}$ with ease. We can now simply borrow the basally-heated result (scaled by the appropriate constant), leaving us only the integral of the second term to evaluate:
+
+$$
+T_\mathrm{av} = H_\mathrm{coeff} \; T_\mathrm{av, basal} +
+\frac{1}{r_m} \int_{r_i}^{r_o} -\frac{H}{4} (r^2 - {r_o}^2) r \, dr
+$$
+
+This comes to:
+
+$$
+T_\mathrm{av} = H_\mathrm{coeff} \; T_\mathrm{av, basal} + \frac{H}{4} r_m
+$$
+
+We could simplify a little further, but retaining this form will ease comparison with the final case: the mixed internal- and basally-heated case.
+
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### Mixed heating in the annulus
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Like in the Cartesian case, the annular mixed heating regime contains both the internally-heated and basally-heated endmembers. The system reproduces basal heating in the trivial case of $H=0$. The internal heating endmember arises in the dynamic case where the heating rate is at its 'critical' value, $H_\mathrm{cr}$. At this exact value, the temperature in a layer infinitely close to the mantle base is equal to the fixed temperature of the mantle base proper. Consequently the flux across the boundary drops to zero, just as it would in the (basally insulated) internal heating case.
+Like in the Cartesian case, the annular mixed heating regime contains both the internally-heated and basally-heated endmembers. The system reproduces basal heating in the trivial case of $H=0$. The internal heating endmember arises in the dynamic case where the heating rate is at its 'critical' value, $H_\mathrm{crit}$. At this exact value, the temperature in a layer infinitely close to the mantle base is equal to the fixed temperature of the mantle base proper. Consequently the flux across the boundary drops to zero, just as it would in the (basally insulated) internal heating case.
 
 At values of $H$ away from the critical value, there is always some non-zero flux across the lower boundary, and the system effectively splits into two separate subregimes. The low-$H$ subregime is 'monocooling': only the outer boundary cools the system. The high-$H$ subregime is 'duocooling': both boundaries cool the system. The flux may be positive (heat flowing *into* the mantle) or negative (heat flowing *out* of the mantle). In either case we can say for sure that:
 
@@ -1110,7 +1161,7 @@ $$
 
 At equilibrium, this must obtain regardless of whether $H$ is high or low, or indeed, whether the mantle is conductive or convective. Let us consider the purely conductive case for now.
 
-As before, we would like to obtain an exact closed-form solution for the conductive geotherm and average temperature. The value of $H_\mathrm{cr}$ is fully dynamic in the case of a mobile fluid, but in the purely conductive state, it will have a fixed value which is some function of the fixed model parameters. It would be good to obtain an expression for this too.
+As before, we would like to obtain an exact closed-form solution for the conductive geotherm and average temperature. The value of $H_\mathrm{crit}$ is fully dynamic in the case of a mobile fluid, but in the purely conductive state, it will have a fixed value which is some function of the fixed model parameters. It would be good to obtain an expression for this too.
 
 The first step, as previously, is to convert the empirical temperature profile into a geothermal gradient by taking a differential, then convert that gradient into the (axisymmetric) heat flux $\phi$ by multiplying by the negative of the non-dimensionalised height-dependent angular length $s^{*}$.
 
@@ -1150,7 +1201,7 @@ In the monocooling subregime, the flux through any layer at equilibrium must be 
 
 $$\phi_{q\;\mathrm{internal}} = \frac{H}{2r_m} r(h)^2 - \frac{H {r_i}^2}{2r_m}$$
 
-We therefore advance $-\frac{H}{2r_m}$ as a good ansatz for $C_1$.
+We therefore advance $\frac{H}{2r_m}$ as a good ansatz for $C_1$.
 
 To deduce $C_2$, we need to obtain a preliminary representation of the actual geotherm, which we get by dividing out $-s^*$ from our flux ansatz and integrating once:
 
@@ -1198,10 +1249,13 @@ $$
 
 When we test our maths against the numerical results, we find they are in absolute agreement ($r^2 > 0.9999999$) - which, depending on how we look at it, is either a validation of the numerical code or a vindication of Poisson.
 
-That $T_\mathrm{mixed}(h)$ takes this particular form is both intuitive and a little surprising. We know that the other cases we've explored should all be present as subsets of $T_\mathrm{mixed}(h)$ for particular combindations of $H$ and $f$, and on that note it is pleasing to see $T_\mathrm{basal}$ expressed so forcefully in the maths. On the other hand, we might not have expected to find that the two heating systems would be so disconnected from one another, with the first term representing the basal heat contribution suppressed by $H$ and the second term the volumetric heat contribution without respect to basal heat at all.
+That $T_\mathrm{mixed}(h)$ takes this particular form is both intuitive and a little surprising. We know that the other cases we've explored should all be present as subsets of $T_\mathrm{mixed}(h)$ for particular combindations of $H$ and $f$, and on that note it is pleasing to see $T_\mathrm{basal}$ expressed so forcefully in the maths; it also cannot escape notice that the entire second term is identical to the second term of the alternate form of $T_\mathrm{internal}$. On the other hand, we might not have expected to find that the two heating systems would be so disconnected from one another, with the first term representing the basal heat contribution suppressed by $H$ and the second term the volumetric heat contribution without respect to basal heat at all.
+
+The maths links up with intuition when we recognise that the equilibrium solution imposes a certain symmetry all the way through the domain from top to bottom; pick any two depths, and the space between them is a conductive equilibrium profile in isolation, with an upper and lower boundary of its own. Thus we find the basal and internal endmembers lurking 'inside' the general (mixed-heating) case both physically, mathematically, and literally.
 
 ```{code-cell} ipython3
 :label: h_crit_vs_f_chart
+:tags: [remove-cell]
 
 canvas = Canvas()
 ax = canvas.make_ax()
@@ -1244,16 +1298,48 @@ We know that the Cartesian endmember demonstrates a critical $H$ value of $2$. D
 
 $$\lim_{f \to 1} H_\mathrm{crit} = \frac{2}{1} = 2$$
 
-Which is as we expected. For amusement, we can also take the opposite limit ($f \to 1$), at which - conceptually - there is no lower boundary to speak of. In that case, $H_\mathrm{crit}$ must be interpreted as the heating rate at which the core temperature is exactly $1$. It can be shown that this occurs at $H=4$:
+Which is as we expected. For amusement, we can also take the opposite limit ($f \to 1$), at which - conceptually - there is no lower boundary collapses into a point. One might imagine that no flux is possible across a 'boundary' like that, but in fact, the maths is the same if the core is treated as a Dirac delta line source - more intuitively, like a copper wire that threads the centre of the disc and connects to some buffer elsewhere, and the flux 'into' the point is just the flux 'along' the wire. However we conceive of it, the $H_\mathrm{crit}$ value for this scenario turns out to be:
 
 $$\lim_{f \to 0} H_\mathrm{crit} = \frac{2}{1/2 + 0} = 4$$
 
-Since $H_\mathrm{crit}$ is a function of $f$, and $f$ can only range in the interval $(0-1)$, having these two limits in hand allows us to observe that $H_\mathrm{crit}$ itself must be restricted to the range $(2, 4)$. 
+Since $H_\mathrm{crit}$ is a function of $f$, and $f$ can only range in the interval $(0-1)$, having these two limits in hand allows us to observe that $H_\mathrm{crit}$ itself must be restricted to the range $(2, 4)$, regardless of $f$. A value below $2$ is guaranteed to be monocooling regardless of geometry; likewise, a value greater than $4$ is guaranteed to be duocooling for all geometries. This somewhat surprising result gives $H$ a meaningful absolute scaling: $H<2$ is always intuitively "not much heating" and $H>4$ is always "rather a lot of heating".
+
+We defined $H_\mathrm{crit}$ as the heat production rate at which the lower boundary flux drops to zero. This also implies that $H_\mathrm{crit}$ is the plane of symmetry through which the mixed heating case collapses into the purely internally-heated case. We can prove this is by substitution. First, we express the law for internal heating in the annulus in like terms with the mixed-heating law:
+
+$$
+T_\mathrm{internal}(h) = \left( \frac{H}{2} {r_i}^2 \ln f \right) T_\mathrm{basal}(h) - \frac{H}{4} \left( r(h)^2 - {r_o}^2 \right)
+$$
+
+If we put this alongside the similarly-expressed form for the mixed heating case:
+
+$$
+T_\mathrm{mixed}(h) = \left( 1 - \frac{H}{2} \right) \; T_{\mathrm{basal}} - \frac{H}{4} \left( r(h)^2 - {r_o}^2 \right)
+$$
+
+It is apparent that the two laws are equivalent except for the coefficient of the first term; thus, if the coefficients can be proven to be equivalent in the case $H=H_\mathrm{crit}$, then the laws are accordingly equivalent:
+
+$$ \begin{align*}
+\frac{H_\mathrm{crit}}{2} {r_i}^2 \ln f &= 1 - \frac{H_\mathrm{crit}}{2} r_m \\
+&= \left( \frac{1}{r_m + {r_i}^2 \ln f} \right) {r_i}^2 \ln f \\
+&= \frac{H_\mathrm{crit}}{2} {r_i}^2 \ln f \quad \text{Q.E.D.}
+\end{align*} $$
+
+It might be objected that the insulated case is not *fully* captured by the mixed case because the mixed case only reproduces it at that one $H$ value; but as we discussed earlier, the insulating case is effectively invariant to $H$ anyway, and other measures can be used to rescale the geotherm if desired.
 
 It is important to have a precise comprehension of the behaviour of $H$ and $H_\mathrm{crit}$ because without it, we cannot calibrate the relative contributions of basal and internal heating ahead of time. Since the temperature contrast across the annulus is already non-dimensionalised into the unit interval, ideally we would non-dimensionalise $H$ as well:
 
 $$
 H^*(H, f) \equiv \frac{H}{H_\mathrm{crit}(f)}
+$$
+
+A model parameterised this way will reliably be monocooling as long as $H^*$ is kept within $(0, 1)$; equivalently, a dataset parameterised in $H$ can be cleaved along the $H^*=1$ plane to allow each subregime to be analysed independently.
+
++++
+
+We are still yet to obtain $T_\mathrm{av}$ for this final, general case. We might imagine this would require a lengthy a complicated integral, but actually, the symmetries between the mixed, internal, and basal cases allow us to assemble $T_\mathrm{av}$ from what we already have.
+
+$$
+T_\mathrm{av} = H_\mathrm{coeff} \; T_\mathrm{av, basal} + \frac{H}{4} r_m
 $$
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -1273,7 +1359,8 @@ Basal heating in the Cartesian ($f \rightarrow 1$, $H=0$):
 $$ \begin{align*}
 T''(h) &= 0 \\
 T'(h) &= -1 \\
-T(h) &= 1-h
+T(h) &= 1-h \\
+T_\mathrm{av} &= \frac{1}{2}
 \end{align*} $$
 
 Internal heating in the Cartesian ($f \rightarrow 1$, $H \gt 0$, insulating base):
@@ -1281,7 +1368,8 @@ Internal heating in the Cartesian ($f \rightarrow 1$, $H \gt 0$, insulating base
 $$ \begin{align*}
 T''(h) &= -H \\
 T'(h) &= -H\cdot h \\
-{T(h)} &= H \frac{1 - h^2}{2}
+{T(h)} &= H \frac{1 - h^2}{2} \\
+T_\mathrm{av} &= \frac{H}{3}
 \end{align*} $$
 
 Mixed heating in the Cartesian ($f \rightarrow 1$, $H \ge 0$):
@@ -1289,7 +1377,8 @@ Mixed heating in the Cartesian ($f \rightarrow 1$, $H \ge 0$):
 $$ \begin{align*}
 T''(h) &= -H \\
 T'(h) &= -H \left( h - \frac{1}{2} \right) - 1 \\
-T(h) &= H \frac{h \left( 1 - h \right)}{2} - h + 1
+T(h) &= H \frac{h \left( 1 - h \right)}{2} - h + 1 \\
+T_\mathrm{av} &= \frac{H}{12} + \frac{1}{2} \\
 \end{align*} $$
 
 Basal heating in the annulus ($0 < f < 1$, $H=0$):
@@ -1297,27 +1386,29 @@ Basal heating in the annulus ($0 < f < 1$, $H=0$):
 $$ \begin{align*}
 T''(h) &= -\frac{1}{r(h)^2 \ln f} \\
 T'(h) &= \frac{1} {r(h) \ln{f} } \\
-T(h) &= \log_f r^*(h)
+T(h) &= \log_f r^*(h) \\
+T_{\mathrm{av}} &= \frac{1}{2} \left(-\frac{1}{\ln f} - \frac{{r_i}^2}{r_m} \right)
 \end{align*} $$
 
 Internal heating in the annulus ($0 < f < 1$, $H \gt 0$, insulating base):
 
 $$ \begin{align*}
-T''(h) &= -\frac{H}{2} \left( 1 + {\left( \frac{r_i}{r(h)} \right)}^2 \right) \\
-T'(h) &= -H \frac{\mathrm{Disc}(h)}{s^*(h)} \\
-T(h) &= H \frac{{r_o}^2}{4}
-\left( 
-2 f^{2} \ln \left| r^*(h) \right| \;-\; {r^*(h)}^2 + 1
-\right)
+T''(h) &= H_\mathrm{coeff} \; {T_\mathrm{basal}}''(h) - \frac{H}{2} \\
+T'(h) &= H_\mathrm{coeff} \; {T_\mathrm{basal}}'(h) - \frac{H}{2}r(h) \\
+T(h) &= H_\mathrm{coeff} \; T_\mathrm{basal}(h) - \frac{H}{4} \left( r(h)^2 - {r_o}^2 \right) \\
+T_\mathrm{av} &= H_\mathrm{coeff} \; T_\mathrm{av, basal} + \frac{H}{4} r_m \\
+&\mathrm{where} \quad H_\mathrm{coeff} = \frac{H}{2} {r_i}^2 \ln f
 \end{align*} $$
 
 Mixed heating in the annulus ($0 < f < 1$, $H \ge 0$):
 
 $$ \begin{align*}
-T''(h) &= H_\mathrm{coeff} \; {T_{\mathrm{basal}}}''(h) - \frac{H}{2} \\
-T'(h) &= H_\mathrm{coeff} \; {T_{\mathrm{basal}}}'(h) - \frac{H}{2}r(h) \\
-T(h) &= H_\mathrm{coeff} \; T_{\mathrm{basal}} - \frac{H}{4} \left( r(h)^2 - {r_o}^2 \right) \\
-&\mathrm{where} \quad H_\mathrm{coeff} = 1 - \frac{H}{2}r_m \end{align*} $$
+T''(h) &= H_\mathrm{coeff} \; {T_\mathrm{basal}}''(h) - \frac{H}{2} \\
+T'(h) &= H_\mathrm{coeff} \; {T_\mathrm{basal}}'(h) - \frac{H}{2}r(h) \\
+T(h) &= H_\mathrm{coeff} \; T_\mathrm{basal}(h) - \frac{H}{4} \left( r(h)^2 - {r_o}^2 \right) \\
+T_\mathrm{av} &= H_\mathrm{coeff} \; T_\mathrm{av, basal} + \frac{H}{4} r_m \\
+&\mathrm{where} \quad H_\mathrm{coeff} = 1 - \frac{H}{2}r_m
+\end{align*} $$
 
 Where:
 
