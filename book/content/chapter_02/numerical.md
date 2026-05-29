@@ -1,8 +1,23 @@
+---
+jupytext:
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.19.0
+kernelspec:
+  name: python3
+  display_name: Python 3 (ipykernel)
+  language: python
+---
+
 ## Numerical methods and the Underworld code
 
 When the font of analysis is exhausted, numerical solutions become indispensable. Though the construction of robust and accurate systems for the computation of mantle convection problems is far from trivial, many successful approaches have been developed over the years, each with its own advantages and limitations. For this thesis we adopt a finite-element approach, which has been extensively developed by many groups over more than a quarter of a century. In particular, we follow after Professor Moresi and colleagues, the developers of modelling codes including *CITCOM*, *Ellipsis*, and most lately *Underworld* [@Moresi1995-rn; @Moresi1996-fn; @Zhong1998-qg; @Moresi2002-pj; @Moresi2003-ip; @Farrington2005-mo; @Moresi2007-dg; @May2008-pq; @Beucher2019-aq].
 
 Here we will discuss in broad terms the principles and infrastructure of our numerical modelling practice; particulars of model design and construction will be discussed in further chapters as relevance dictates.
+
++++
 
 ### Numerical methods
 
@@ -41,6 +56,8 @@ The method we have outlined is the product of decades of meticulous development 
 
 One shortcoming of the method we have described is the inappropriateness of the finite element mesh for preserving the geometries of integer-valued domains - for example, deformation history, or the distribution of various material phases. Though there are ways of accommodating such features using mesh-based approaches, they tend to be cumbersome and inefficient. A superior approach is to incorporate Lagrangian particle swarms [@Moresi2003-ip], which are able to carry much higher-resolution information than the mesh and can transport both real-valued data (e.g. temperature, viscosity) and integer-valued data (e.g. history, material identity), which mesh-based variables necessarily cannot. Swarms and their associated variables are advected according to the Stokes solution at the same time as the underlying mesh-based state variables. In turn, the Stokes solver calls for the swarms to be interpolated to the mesh if and when they become relevant to the solution. Interpolation can be costly and complicated for unstructured networks like particle swarms - prohibitively so if the node weightings must be recalculated with each timestep, as is the case for any advecting swarm - so it is important to carry out such an operation as infrequently and efficiently as possible. Gauss quadrature is the standard method, with simple nearest-neighbour evaluation to determine which elements own which particles. An alternative is to use a grid-based Voronoi algorithm [@Velic2009-yd] in which domains of control for each node are iteratively built out cell by cell; where two nodes lay claim to the same territory, the interpolation grid is refined, but only inside the conflicted cell, thereby minimising superfluous calculations. Another strategy, particularly suited to the interpolation of very sparse swarms, uses a *k-d* tree to efficiently seek out the nearest particle from any given node. Regardless of interpolation style, the addition of particle swarms dramatically extends the utility of the finite element method.
 
++++
+
 ### The Underworld code
 
 Particular software implementations of the methods outlined above have been developed over many computing generations, and several continue to co-exist today as part of a broad and branching family. The present state-of-the-art iteration is *Underworld*, which supports 2D, 3D, multigrid, and particle-in-cell features while also combining a powerful yet modular C-level infrastructure [@Quenette2007-em] with a user-friendly, hyper-extensible *Python*-based API. Parallelisation is provided through *MPI* while the underlying solvers are implemented with *PETSc*. Though deeper layers of Underworld remain fully transparent and accessible, the *Python* layer is designed to encourage fluidity, creativity, and legibility in model building, providing encapsulated higher-level proxies for the multifarious underlying *C* assets while subtly encouraging a good modelling idiom in users. This has encouraged bespoke application development [@Beucher2019-aq] and the integration of geodynamics codes with other modelling packages [@Asten2018-qj].
@@ -50,6 +67,8 @@ The higher-level Underworld syntax fully exploits *Python*’s object-oriented c
 As accessible as the new tools are, care must still be taken to ensure an appropriately configured model, beginning with the choice of resolution. While temporal resolution, i.e. timestep size, is determined dynamically based on the prescribed tolerances, spatial resolution is the domain of the user. Overly fine elements are wasteful, while insufficiently fine elements will lossily discretise the underlying physics. As a rule of thumb, the spatial resolution in any given region should be half an order of magnitude finer at least than the smallest relevant model features in that vicinity. Of course, it is not always clear *a priori* what this scale will be. Boundary layer and plume theory can provide some information about featural dimensions at steady-state for simple rheologies; however, the sensitivity of mantle convection on potentially very small-scale instabilities means a resolution sufficient for a steady-state solution may still bias the solution at other stages. The appropriate resolution can be sought empirically, by running a suite of progressively finer models until the point of diminishing returns is reached. In theory, a well-constructed model should converge with resolution in the limit that a discretised model becomes indistinguishable from a continuous one. If convergence does not occur within a computationally feasible envelope, the model may be presumed to be misconfigured in some deeper sense. Another means of determining the correct resolution is to run a single, very-high resolution test and conduct a power spectral analysis of the constituent fields; the shortest wavelength that contains information must dictate the spatial resolution. The nexus of *Rayleigh* number, featural thickness, and resolution places an upper bound on what parameters can realistically be tested in the context of a large suite-modelling experiment: although $Ra$ values approaching $10^9$ are likely more appropriate for Earth whole-mantle convection [@Wolstencroft2009-bz], most cases explored here are less than $Ra=10^7$, which is amenable to resolutions in the order of 128 radial cells. If resources are particularly at a premium, static or even adaptive mesh refinement can be employed to concentrate resolution in areas where it is most needed. Unfortunately, it is a present shortcoming of *Underworld* that only quadrangular elements are supported, starkly limiting the options for grid refinement. Work toward supporting unstructured meshes is, however, underway.
 
 *Underworld* provides an easy interface to the underlying *PETSc* options, most notably the choice of inner solve method and tolerance. The default configuration for the solver is `mg` or ‘multigrid’, which is the method we have outlined here: this arguably provides the best balance of speed, robustness, scalability, flexibility, and parallelisability. Alternatives include `mumps`, ‘multifrontal massively parallel sparse direct solver’, and the ‘lower-upper method’ `LU`. Careful benchmarking is called for to choose the correct configuration, and optimum results cannot be assumed for the default configuration. Tolerances in particular should always be calibrated manually using convergence and power spectrum tests as outlined above. Excessively fine tolerances will needlessly delay solver convergence, while overly generous tolerances will introduce numerical noise into the solution. The chosen tolerances ultimately determine the uncertainty inherent to the model and should always be chosen with care.
+
++++
 
 ### Underworld in the annulus
 

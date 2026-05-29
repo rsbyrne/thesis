@@ -25,41 +25,31 @@ project:
     - title: Tools and Methods
       children:
         - file: content/chapter_02/introduction.md
-        - file: content/chapter_02/general.md
-        # - file: content/chapter_03/scaling.md
-        # - file: content/chapter_03/theory.md
-        # - file: content/chapter_03/modelish.md
         - file: content/chapter_02/numerical.md
         - file: content/chapter_02/everest.md
         - file: content/chapter_02/ms98.md
 
-    - title: Conduction
+    - title: Foundations
       children:
         - file: content/chapter_03/introduction.md
+        - file: content/chapter_03/general.md
         - file: content/chapter_03/cartesian.md
         - file: content/chapter_03/cylindrical.md
+        - file: content/chapter_03/theory.md
+        # - file: content/chapter_03/critical.md
         - file: content/chapter_03/conclusion.md
-
-    - title: Criticality
-      children:
-        - file: content/chapter_04/introduction.md
-        - file: content/chapter_04/theory.md
 
     - title: Linear Convection
       children:
-        - file: content/chapter_05/introduction.md
+        - file: content/chapter_04/introduction.md
 
     - title: Nonlinear Convection
       children:
+        - file: content/chapter_05/introduction.md
+
+    - title: Towards a General Theory of Planets
+      children:
         - file: content/chapter_06/introduction.md
-
-    - title: Model as Data
-      children:
-        - file: content/chapter_07/introduction.md
-
-    - title: Towards Planetology
-      children:
-        - file: content/chapter_08/introduction.md
 
   math:
     '\R': '\mathbb{R}'

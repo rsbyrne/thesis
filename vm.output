@@ -60225,3 +60225,446 @@
 [I 2026-05-28 07:08:13.018 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
 [I 2026-05-28 07:08:36.317 ServerApp] Saving file at /workspace/book/myst.yml
 [I 2026-05-28 07:08:43.087 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-29 04:01:31.490 ServerApp] Connecting to kernel a1115244-35c2-4a56-8839-1ce00e5d75bf.
+[I 2026-05-29 04:01:31.517 ServerApp] Connecting to kernel 8abdd611-4567-43c3-90c9-c483782817ae.
+[I 2026-05-29 04:01:31.538 ServerApp] Connecting to kernel 74300950-bec4-4dee-a330-d74a092516e6.
+[I 2026-05-29 04:01:31.559 ServerApp] Starting buffering for a1115244-35c2-4a56-8839-1ce00e5d75bf:8deb72c2-2484-44db-b272-d440263ec2ee
+[I 2026-05-29 04:01:31.563 ServerApp] Connecting to kernel b371ad27-366b-4f81-ba88-3dfa5e4ec5d4.
+[I 2026-05-29 04:01:31.581 ServerApp] Starting buffering for 8abdd611-4567-43c3-90c9-c483782817ae:caf74c9e-a33d-4fe9-bd78-e75fa6753db2
+[I 2026-05-29 04:01:31.585 ServerApp] Connecting to kernel a28ecd74-1b90-4b4e-ac4b-d3b2c4611a36.
+[I 2026-05-29 04:01:31.597 ServerApp] Starting buffering for 74300950-bec4-4dee-a330-d74a092516e6:f289bb99-591e-4273-9497-82009c3f8bf5
+[I 2026-05-29 04:01:31.649 ServerApp] Starting buffering for a28ecd74-1b90-4b4e-ac4b-d3b2c4611a36:1e2d376c-fb4a-4bb4-9045-15438c1019ff
+[I 2026-05-29 04:01:31.650 ServerApp] Connecting to kernel b965df50-f351-4039-9df4-1ebd42849d08.
+[I 2026-05-29 04:01:31.652 ServerApp] Starting buffering for b371ad27-366b-4f81-ba88-3dfa5e4ec5d4:f876ca17-4e15-4b94-abf9-5513d0b85aad
+[I 2026-05-29 04:01:31.679 ServerApp] Connecting to kernel b7c977c8-f038-4cd7-a89c-fe201c248c19.
+[I 2026-05-29 04:01:31.708 ServerApp] Starting buffering for b965df50-f351-4039-9df4-1ebd42849d08:ad88549f-86a6-482a-b8db-fd0ff9c7107e
+[I 2026-05-29 04:01:31.814 ServerApp] Starting buffering for b7c977c8-f038-4cd7-a89c-fe201c248c19:13106e10-e9a6-4d3c-9a43-fb38ef54f4e9
+[I 2026-05-29 04:01:31.950 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-29 04:01:31.952 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-29 04:01:31.954 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-29 04:01:31.956 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[W 2026-05-29 04:01:31.958 ServerApp] 404 GET /api/contents/workspace/book/content/chapter_04/background.ipynb?content=0&hash=0&1780027295883 (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.50ms referer=http://localhost:8890/lab/workspaces/research
+[W 2026-05-29 04:01:31.958 ServerApp] 404 GET /api/contents/workspace/book/content/chapter_04/background.ipynb?content=0&hash=0&1780027295883 (172.17.0.1): No such file or directory: workspace/book/content/chapter_04/background.ipynb
+[W 2026-05-29 04:01:31.961 ServerApp] 404 GET /api/contents/workspace/book/content/chapter_04/Untitled.ipynb?content=0&hash=0&1780027295883 (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.82ms referer=http://localhost:8890/lab/workspaces/research
+[W 2026-05-29 04:01:31.961 ServerApp] 404 GET /api/contents/workspace/book/content/chapter_04/Untitled.ipynb?content=0&hash=0&1780027295883 (172.17.0.1): No such file or directory: workspace/book/content/chapter_04/Untitled.ipynb
+[W 2026-05-29 04:01:31.977 ServerApp] 404 GET /api/contents/workspace/book/content/chapter_04/_old_rayleigh.ipynb?content=0&hash=0&1780027295883 (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.02ms referer=http://localhost:8890/lab/workspaces/research
+[W 2026-05-29 04:01:31.977 ServerApp] 404 GET /api/contents/workspace/book/content/chapter_04/_old_rayleigh.ipynb?content=0&hash=0&1780027295883 (172.17.0.1): No such file or directory: workspace/book/content/chapter_04/_old_rayleigh.ipynb
+[W 2026-05-29 04:01:31.978 ServerApp] 404 GET /api/contents/workspace/book/content/chapter_04/background.ipynb?content=0&hash=0&1780027295883 (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.77ms referer=http://localhost:8890/lab/workspaces/research
+[W 2026-05-29 04:01:31.979 ServerApp] 404 GET /api/contents/workspace/book/content/chapter_04/background.ipynb?content=0&hash=0&1780027295883 (172.17.0.1): No such file or directory: workspace/book/content/chapter_04/background.ipynb
+[W 2026-05-29 04:01:31.981 ServerApp] 404 GET /api/contents/workspace/book/content/chapter_03/_old_heating.ipynb?content=0&hash=0&1780027295883 (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.64ms referer=http://localhost:8890/lab/workspaces/research
+[W 2026-05-29 04:01:31.981 ServerApp] 404 GET /api/contents/workspace/book/content/chapter_03/_old_heating.ipynb?content=0&hash=0&1780027295883 (172.17.0.1): No such file or directory: workspace/book/content/chapter_03/_old_heating.ipynb
+[W 2026-05-29 04:01:31.981 ServerApp] 404 GET /api/contents/workspace/book/content/chapter_04/rayleigh.ipynb?content=0&hash=0&1780027295883 (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.47ms referer=http://localhost:8890/lab/workspaces/research
+[W 2026-05-29 04:01:31.981 ServerApp] 404 GET /api/contents/workspace/book/content/chapter_04/rayleigh.ipynb?content=0&hash=0&1780027295883 (172.17.0.1): No such file or directory: workspace/book/content/chapter_04/rayleigh.ipynb
+[I 2026-05-29 04:01:32.267 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2026-05-29 04:01:32.271 LabApp] Build is up to date
+[I 2026-05-29 04:01:34.122 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-29 04:01:56.204 ServerApp] Creating new directory in /workspace/book/content/chapter_02
+[I 2026-05-29 04:02:17.733 ServerApp] Opening workspace/book/content/chapter_02/theory.ipynb to check if it is a paired notebook
+[I 2026-05-29 04:02:17.735 ServerApp] Opening workspace/book/content/chapter_02/scaling.md to check if it is a paired notebook
+[I 2026-05-29 04:02:17.736 ServerApp] Opening workspace/book/content/chapter_02/theory.md to check if it is a paired notebook
+[I 2026-05-29 04:02:17.737 ServerApp] Opening workspace/book/content/chapter_02/scaling.ipynb to check if it is a paired notebook
+[I 2026-05-29 04:02:17.737 ServerApp] Opening workspace/book/content/chapter_02/modelish.md to check if it is a paired notebook
+[I 2026-05-29 04:02:17.741 ServerApp] Opening workspace/book/content/chapter_02/modelish.ipynb to check if it is a paired notebook
+[I 2026-05-29 04:02:17.756 ServerApp] Reading SOURCE from workspace/book/content/chapter_02/theory.md
+[I 2026-05-29 04:02:17.782 ServerApp] Reading OUTPUTS from workspace/book/content/chapter_02/theory.ipynb
+[I 2026-05-29 04:02:17.789 ServerApp] Reading OUTPUTS from workspace/book/content/chapter_02/scaling.ipynb
+[I 2026-05-29 04:02:17.815 ServerApp] Reading OUTPUTS from workspace/book/content/chapter_02/modelish.ipynb
+[I 2026-05-29 04:02:17.848 ServerApp] Reading SOURCE from workspace/book/content/chapter_02/scaling.md
+[I 2026-05-29 04:02:17.860 ServerApp] Reading SOURCE from workspace/book/content/chapter_02/modelish.md
+[W 2026-05-29 04:02:17.917 ServerApp] 500 PATCH /api/contents/workspace/book/content/chapter_02/theory.md?1780027341676 (172.17.0.1): Unknown error renaming file: workspace/book/content/chapter_02/theory.md [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_02/theory.md'
+[W 2026-05-29 04:02:17.917 ServerApp] wrote error: "Unknown error renaming file: workspace/book/content/chapter_02/theory.md [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_02/theory.md'"
+    Traceback (most recent call last):
+      File "/usr/lib/python3.13/shutil.py", line 856, in move
+        os.rename(src, real_dst)
+        ~~~~~~~~~^^^^^^^^^^^^^^^
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_02/theory.md' -> '/home/morpheus/workspace/book/content/chapter_02/extra/theory.md'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1069, in rename_file
+        await run_sync(shutil.move, old_os_path, new_os_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+      File "/usr/lib/python3.13/shutil.py", line 876, in move
+        copy_function(src, real_dst)
+        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/shutil.py", line 468, in copy2
+        copyfile(src, dst, follow_symlinks=follow_symlinks)
+        ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/shutil.py", line 260, in copyfile
+        with open(src, 'rb') as fsrc:
+             ~~~~^^^^^^^^^^^
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_02/theory.md'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupytext/async_contentsmanager.py", line 524, in rename_file
+        await self.super.rename_file(old_alt_path, new_alt_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1073, in rename_file
+        raise web.HTTPError(500, f"Unknown error renaming file: {old_path} {e}") from e
+    tornado.web.HTTPError: HTTP 500: Internal Server Error (Unknown error renaming file: workspace/book/content/chapter_02/theory.md [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_02/theory.md')
+[E 2026-05-29 04:02:17.920 ServerApp] {
+      "Host": "localhost:8890",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8890/lab/workspaces/research/tree/workspace/book/myst.yml",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+    }
+[E 2026-05-29 04:02:17.920 ServerApp] 500 PATCH /api/contents/workspace/book/content/chapter_02/theory.md?1780027341676 (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 185.28ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/myst.yml
+[W 2026-05-29 04:02:17.920 ServerApp] 500 PATCH /api/contents/workspace/book/content/chapter_02/scaling.md?1780027341677 (172.17.0.1): Unknown error renaming file: workspace/book/content/chapter_02/scaling.ipynb [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_02/scaling.ipynb'
+[W 2026-05-29 04:02:17.921 ServerApp] wrote error: "Unknown error renaming file: workspace/book/content/chapter_02/scaling.ipynb [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_02/scaling.ipynb'"
+    Traceback (most recent call last):
+      File "/usr/lib/python3.13/shutil.py", line 856, in move
+        os.rename(src, real_dst)
+        ~~~~~~~~~^^^^^^^^^^^^^^^
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_02/scaling.ipynb' -> '/home/morpheus/workspace/book/content/chapter_02/extra/scaling.ipynb'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1069, in rename_file
+        await run_sync(shutil.move, old_os_path, new_os_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+      File "/usr/lib/python3.13/shutil.py", line 876, in move
+        copy_function(src, real_dst)
+        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/shutil.py", line 468, in copy2
+        copyfile(src, dst, follow_symlinks=follow_symlinks)
+        ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/shutil.py", line 260, in copyfile
+        with open(src, 'rb') as fsrc:
+             ~~~~^^^^^^^^^^^
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_02/scaling.ipynb'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupytext/async_contentsmanager.py", line 524, in rename_file
+        await self.super.rename_file(old_alt_path, new_alt_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1073, in rename_file
+        raise web.HTTPError(500, f"Unknown error renaming file: {old_path} {e}") from e
+    tornado.web.HTTPError: HTTP 500: Internal Server Error (Unknown error renaming file: workspace/book/content/chapter_02/scaling.ipynb [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_02/scaling.ipynb')
+[E 2026-05-29 04:02:17.922 ServerApp] {
+      "Host": "localhost:8890",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8890/lab/workspaces/research/tree/workspace/book/myst.yml",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+    }
+[E 2026-05-29 04:02:17.922 ServerApp] 500 PATCH /api/contents/workspace/book/content/chapter_02/scaling.md?1780027341677 (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 188.04ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/myst.yml
+[W 2026-05-29 04:02:17.924 ServerApp] 500 PATCH /api/contents/workspace/book/content/chapter_02/modelish.ipynb?1780027341678 (172.17.0.1): Unknown error renaming file: workspace/book/content/chapter_02/modelish.md [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_02/modelish.md'
+[W 2026-05-29 04:02:17.924 ServerApp] wrote error: "Unknown error renaming file: workspace/book/content/chapter_02/modelish.md [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_02/modelish.md'"
+    Traceback (most recent call last):
+      File "/usr/lib/python3.13/shutil.py", line 856, in move
+        os.rename(src, real_dst)
+        ~~~~~~~~~^^^^^^^^^^^^^^^
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_02/modelish.md' -> '/home/morpheus/workspace/book/content/chapter_02/extra/modelish.md'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1069, in rename_file
+        await run_sync(shutil.move, old_os_path, new_os_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+      File "/usr/lib/python3.13/shutil.py", line 876, in move
+        copy_function(src, real_dst)
+        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/shutil.py", line 468, in copy2
+        copyfile(src, dst, follow_symlinks=follow_symlinks)
+        ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/shutil.py", line 260, in copyfile
+        with open(src, 'rb') as fsrc:
+             ~~~~^^^^^^^^^^^
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_02/modelish.md'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupytext/async_contentsmanager.py", line 524, in rename_file
+        await self.super.rename_file(old_alt_path, new_alt_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1073, in rename_file
+        raise web.HTTPError(500, f"Unknown error renaming file: {old_path} {e}") from e
+    tornado.web.HTTPError: HTTP 500: Internal Server Error (Unknown error renaming file: workspace/book/content/chapter_02/modelish.md [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_02/modelish.md')
+[E 2026-05-29 04:02:17.926 ServerApp] {
+      "Host": "localhost:8890",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8890/lab/workspaces/research/tree/workspace/book/myst.yml",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+    }
+[E 2026-05-29 04:02:17.926 ServerApp] 500 PATCH /api/contents/workspace/book/content/chapter_02/modelish.ipynb?1780027341678 (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 185.87ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/myst.yml
+[W 2026-05-29 04:02:17.942 ServerApp] /home/morpheus/workspace/book/content/chapter_02/modelish_test.svg doesn't exist
+[W 2026-05-29 04:02:46.407 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-05-29 04:02:46.409 ServerApp] Reading SOURCE from workspace/book/content/chapter_02/general.md
+[I 2026-05-29 04:02:46.578 ServerApp] Connecting to kernel b965df50-f351-4039-9df4-1ebd42849d08.
+[W 2026-05-29 04:02:46.822 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.20ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:02:46.882 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.90ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:02:46.888 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.56ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:02:46.946 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.83ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:02:46.952 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:02:47.044 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.06ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:02:47.044 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:02:50.539 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.25ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:02:50.540 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.65ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:02:51.972 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.37ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:02:51.981 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.90ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:02:52.079 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.15ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:02:52.185 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.02ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:02:52.473 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.33ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:02:54.761 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.10ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:02:54.852 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.08ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:02:55.144 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.18ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[I 2026-05-29 04:03:06.935 ServerApp] Reading SOURCE from workspace/book/content/chapter_02/introduction.md
+[I 2026-05-29 04:03:07.098 ServerApp] Connecting to kernel 74300950-bec4-4dee-a330-d74a092516e6.
+[W 2026-05-29 04:03:26.983 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.00ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:03:26.990 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.54ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:03:28.743 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.40ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-05-29 04:03:28.845 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.33ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[I 2026-05-29 04:03:48.668 ServerApp] Creating new notebook in /workspace/book/content/chapter_02
+[I 2026-05-29 04:03:48.672 ServerApp] Saving Untitled.ipynb
+[I 2026-05-29 04:03:48.703 ServerApp] Saving Untitled.md
+[I 2026-05-29 04:03:48.772 ServerApp] Reading SOURCE from workspace/book/content/chapter_02/Untitled.md
+[I 2026-05-29 04:03:50.603 ServerApp] Kernel started: 93516914-a3b0-46e7-a1c5-443358951e78
+[I 2026-05-29 04:03:50.991 ServerApp] Connecting to kernel 93516914-a3b0-46e7-a1c5-443358951e78.
+[I 2026-05-29 04:04:01.173 ServerApp] Saving file at /workspace/book/content/chapter_02/Untitled.ipynb
+[I 2026-05-29 04:04:01.175 ServerApp] Saving Untitled.ipynb
+[I 2026-05-29 04:04:01.185 ServerApp] Saving Untitled.md
+[W 2026-05-29 04:04:05.544 ServerApp] delete /workspace/book/content/chapter_02/numerical.md
+[I 2026-05-29 04:06:09.255 ServerApp] Saving file at /workspace/book/content/chapter_02/numerical.ipynb
+[I 2026-05-29 04:06:09.256 ServerApp] Saving numerical.ipynb
+[I 2026-05-29 04:06:09.266 ServerApp] Saving numerical.md
+[I 2026-05-29 04:06:30.957 ServerApp] Reading SOURCE from workspace/book/content/chapter_03/cylindrical.md
+[I 2026-05-29 04:06:31.219 ServerApp] Connecting to kernel a1115244-35c2-4a56-8839-1ce00e5d75bf.
+[W 2026-05-29 04:06:31.504 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.18ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cylindrical.ipynb
+[W 2026-05-29 04:06:31.553 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.85ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cylindrical.ipynb
+[W 2026-05-29 04:06:31.561 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cylindrical.ipynb
+[W 2026-05-29 04:06:31.562 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.59ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cylindrical.ipynb
+[W 2026-05-29 04:06:31.929 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.09ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cylindrical.ipynb
+[W 2026-05-29 04:06:31.930 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.52ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cylindrical.ipynb
+[W 2026-05-29 04:06:31.931 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.53ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cylindrical.ipynb
+[W 2026-05-29 04:06:31.938 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.53ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cylindrical.ipynb
+[W 2026-05-29 04:06:31.939 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.52ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cylindrical.ipynb
+[W 2026-05-29 04:06:31.999 ServerApp] Notebook workspace/book/content/chapter_03/cartesian.ipynb is not trusted
+[I 2026-05-29 04:06:32.000 ServerApp] Reading SOURCE from workspace/book/content/chapter_03/cartesian.md
+[I 2026-05-29 04:06:32.152 ServerApp] Connecting to kernel a28ecd74-1b90-4b4e-ac4b-d3b2c4611a36.
+[W 2026-05-29 04:06:32.198 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.80ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.207 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.53ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.208 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.209 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.209 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.291 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.63ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.299 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.53ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.300 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.56ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.301 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.88ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.301 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.366 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.84ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.370 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.371 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.45ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.383 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.64ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.384 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.94ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.384 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.45ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.398 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.55ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.436 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.74ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.445 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.59ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.446 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.56ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.446 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.88ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.447 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.448 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.45ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.487 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.73ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.532 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.77ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.539 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.540 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.541 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.59ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.541 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.89ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.542 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.45ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.542 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.43ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.570 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.63ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.617 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.74ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.622 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.623 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.628 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.629 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.630 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.633 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.654 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.62ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.655 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.682 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.29ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.683 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.81ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.723 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.08ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.731 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.80ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.732 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.75ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.732 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.08ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.732 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.44ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.737 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.63ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.738 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.98ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.738 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.766 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.79ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.766 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.11ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.815 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.97ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.824 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.83ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.824 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.18ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.825 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.64ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.825 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.97ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.829 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.60ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.830 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.93ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.831 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.914 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.12ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.920 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.90ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.921 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.83ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.926 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.81ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.927 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.78ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.927 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.23ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.932 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.64ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:32.933 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.60ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:33.036 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23simplesinu?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.07ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:33.047 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.83ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:33.048 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.81ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:33.048 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.18ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:33.049 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.57ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:33.052 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.52ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:33.053 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.53ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:06:33.061 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[I 2026-05-29 04:07:32.640 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[W 2026-05-29 04:10:16.950 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.21ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:10:16.950 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:10:17.747 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.19ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:10:17.747 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.52ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:10:17.806 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.28ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:10:17.806 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.73ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:10:17.850 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.27ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:10:17.900 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.19ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:10:17.945 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.17ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[W 2026-05-29 04:10:17.946 ServerApp] 404 GET /files/workspace/book/content/chapter_03/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.80ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_03/cartesian.ipynb
+[I 2026-05-29 04:12:21.278 ServerApp] Saving file at /workspace/book/content/chapter_03/introduction.md
+[I 2026-05-29 04:33:01.082 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:33:04.195 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-29 04:34:04.709 ServerApp] Starting buffering for 74300950-bec4-4dee-a330-d74a092516e6:149280da-d888-41b1-ba76-9881f0bd5fe6
+[I 2026-05-29 04:34:05.388 ServerApp] Starting buffering for b965df50-f351-4039-9df4-1ebd42849d08:1cc46d47-0f1e-4878-be58-56ef6ef646db
+[I 2026-05-29 04:34:12.082 ServerApp] Starting buffering for a1115244-35c2-4a56-8839-1ce00e5d75bf:ec5e5e16-f8cb-44af-8103-801e1ce398f7
+[I 2026-05-29 04:34:12.887 ServerApp] Starting buffering for a28ecd74-1b90-4b4e-ac4b-d3b2c4611a36:90b4cf9b-eac0-456f-a76f-9906f38b8e99
+[I 2026-05-29 04:34:15.712 ServerApp] Starting buffering for 93516914-a3b0-46e7-a1c5-443358951e78:724282a5-8ecd-4910-ae84-d8fcb2ff2dfd
+[W 2026-05-29 04:34:33.149 ServerApp] delete /workspace/book/content/chapter_04/introduction.md
+[W 2026-05-29 04:34:33.199 ServerApp] delete /workspace/book/content/chapter_04/conclusion.md
+[I 2026-05-29 04:34:49.716 ServerApp] Opening workspace/book/content/chapter_04/_scraps.md to check if it is a paired notebook
+[I 2026-05-29 04:34:49.720 ServerApp] Opening workspace/book/content/chapter_04/local.py to check if it is a paired notebook
+[I 2026-05-29 04:34:49.720 ServerApp] Opening workspace/book/content/chapter_04/_scratch.ipynb to check if it is a paired notebook
+[W 2026-05-29 04:34:49.736 ServerApp] Notebook workspace/book/content/chapter_04/_scratch.ipynb is not trusted
+[I 2026-05-29 04:34:49.737 ServerApp] Reading SOURCE from workspace/book/content/chapter_04/_scratch.md
+[I 2026-05-29 04:35:01.188 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:35:02.036 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-29 04:35:02.097 ServerApp] Saving file at /workspace/book/content/chapter_03/_scraps.md
+[W 2026-05-29 04:35:08.918 ServerApp] delete /workspace/book/content/chapter_03/scraps.md
+[I 2026-05-29 04:36:08.169 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:36:10.405 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:36:11.783 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:36:13.197 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:36:14.602 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:36:16.002 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:36:17.548 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:36:17.623 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-29 04:36:18.628 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:36:21.333 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-29 04:36:21.508 ServerApp] Reading SOURCE from workspace/book/content/chapter_02/introduction.md
+[I 2026-05-29 04:36:21.640 ServerApp] Connecting to kernel 74300950-bec4-4dee-a330-d74a092516e6.
+[I 2026-05-29 04:38:08.259 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:38:10.728 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[W 2026-05-29 04:38:42.009 ServerApp] delete /workspace/book/content/chapter_03/test/test.md
+[W 2026-05-29 04:38:42.011 ServerApp] delete /workspace/book/content/chapter_03/test/test.ipynb
+[W 2026-05-29 04:38:45.726 ServerApp] delete /workspace/book/content/chapter_03/test
+[I 2026-05-29 04:39:25.121 ServerApp] Saving file at /workspace/book/content/chapter_06/introduction.md
+[I 2026-05-29 04:39:31.796 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:39:33.686 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:39:35.161 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-29 04:39:36.734 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:39:37.669 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:39:45.233 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-29 04:40:03.609 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:40:04.912 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[W 2026-05-29 04:40:09.758 ServerApp] delete /workspace/book/content/chapter_07/introduction.md
+[W 2026-05-29 04:40:14.063 ServerApp] delete /workspace/book/content/chapter_07
+[W 2026-05-29 04:40:19.506 ServerApp] delete /workspace/book/content/chapter_08
+[I 2026-05-29 04:40:22.473 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:40:29.547 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-29 04:40:53.479 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:40:59.627 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-05-29 04:46:03.062 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-05-29 04:46:11.950 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
