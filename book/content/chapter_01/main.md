@@ -118,6 +118,18 @@ Tectonics, from the Greek tectonicus, ‘pertaining to building’, is a body of
 
 Geodynamics is to the theory of plate tectonics as genetics is to the theory of evolution. It seeks to interface the enormously successful narrative power of tectonics with the explanatory and predictive power of the underlying laws of physics - that is, classical mechanics and thermodynamics. Geodynamics defined in this way is necessarily younger than tectonic theory, which is itself only two generations old; as a discipline, it is arguably yet to move beyond descriptive science and acquire true predictive and prescriptive powers.
 
+## A very brief history of a very big idea
+
+Like evolution, tectonics began as an empirical project that projected sensible forces in the present through deep time to generate a novel and compelling historical account of the natural world. However, also like evolution, tectonics met with controversy and scepticism due to the apparent lack of an underlying physical mechanism.
+
+The need for such a mechanism was recognised as early as Wegener [@Wegener1924-pv]. (His proposals invoking centrifugal and tidal forces - while quite inappropriate for the Earth - are now appreciated as decisive drivers of tectonism on other planets, like Io.) The idea that thermal convection might account for tectonic drift first emerged a decade or so later, with Arthur Holmes and others; however these accounts - inspired by the then-recent discovery of radioactive elements rather than by a sustained consideration of how fluids might behave at large scales - were largely qualitative, and far from decisive [@Bercovici2000-on].
+
+It wasn't until the 1960s, with the advent of sea floor observation and numerical computing, that mantle convection was seriously revisited as a causal mechanism for plate tectonics. In this new synthesis, tectonic plates were to be viewed as surface manifestations of deep thermal currents. The similarities between the behaviours of viscous fluids in the lab and the crustal profiles produced by deep sensing were quantifiable and compelling, and from the 1970s onwards, plate tectonics gradually emerged as the dominant paradigm in geology [@Bercovici2015-zx].
+
+It is an irony of paradigms that the work done within them invariably (and often rapidly) acts to discredit the unifying premise of the paradigm itself (TODO: CITE KUHN HERE). Decades have now passed, and early optimism that a sufficiently fine-tuned numerical model might reproduce plate tectonics *in silico* have long since yielded to a more nuanced - perhaps even jaded - viewpoint. The availability of cheap compute in the 21st century has not yet succeeded in bringing forth a unified dynamical model of convection-driven plate tectonics, and at this point, the sober observer must conclude that it potentially never will. Meanwhile, new observations - like the discovery of the asthenosphere and the apparently dominant role of slab pull forces over tractional forces - hack at the foundations of the geodynamic premise. There is an appreciation (e.g. [@Weller2012-cx]) that we are 'missing something', and no sign yet of an emerging consensus of what that thing might be.
+
+The gradient of any curve is flattest at its inflection points; if this is such a point for geodynamics, it would be wise to consider the subtleties of our position with uncommon closeness.
+
 ## Empirical foundations of geodynamic thought
 
 The world that geodynamics sets out to describe is characterised by several axiomatic properties. Some have been apparent since ancient times; others only much more recently. What is important to note is how powerfully suggestive they are of a unifying underlying phenomenon when assembled side by side, as follows:

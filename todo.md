@@ -1,0 +1,4 @@
+- Add Kuhn to bibliography and cite intro to Background chapter.
+- Add IEA citations to general.ipynb of Foundations chapter.
+- Add Lord Kelvin citation to general.ipynb of Foundations chapter.
+- Look for sources on beta scaling for internally heated and mixed heated annular domains.

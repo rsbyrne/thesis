@@ -1,10 +1,14 @@
 import os
 import pickle
 import functools
+import hashlib
+import inspect
 
 import pandas as pd
 
 import aliases
+
+
 
 def hard_cache(*names):
     def decorator(create):
@@ -28,7 +32,7 @@ def hard_cache(*names):
                         return resource
             case _:
                 def wrapper(refresh=False):
-                    paths = tuple(os.path.join(aliases.cachedir, name + '.csv') for name in names)
+                    paths = tuple(os.path.join(aliases.cachedir, name + '.pkl') for name in names)
                     if refresh:
                         for path in paths:
                             if os.path.exists(path):

@@ -173,7 +173,9 @@ canvas
 
 +++
 
-Tectonics is known to us through its sensible processes of orogeny, seismicity, and volcanism. The energy available to carry out these permutations ultimately derives from the depletion of the thermal gradient of the Earth’s hot interior with space, mitigated to an uncertain degree by internal heat production via radiogenics, core despinning, and other means. Estimates of global heat flow vary from around $42$ terawatts [@Dye2012-cx] to upwards of $47$ terawatts [@Davies2010-gz]. Of this power, a mere $1\%$ is thought to be necessary to account for all the geological activity witnessed on Earth [@Turcotte2014-by]; if our Earth is a heat engine, it is a weak one.
+Tectonics is known to us through its sensible processes of orogeny, seismicity, and volcanism. The energy available to carry out these permutations ultimately derives from the depletion of the thermal gradient of the Earth’s hot interior with space, mitigated to an uncertain degree by internal heat production via radiogenics, core despinning, and other means.
+
+Estimates of global heat flow vary from around $42$ terawatts [@Dye2012-cx] to upwards of $47$ terawatts [@Davies2010-gz]. Of this power, a mere $1\%$ - less than half a terawatt - is thought to be necessary to account for all the geological activity witnessed on Earth [@Turcotte2014-by]. For comparison, the power consumption of human civilisation is more than $20$ terawatts, and the power received by Earth from the sun is a colossal $170,000$ terawatts. If our Earth is a heat engine, it is a weak one. (TODO - add IEA citations)
 
 The essential model of planetary solid-state thermal circulation is Rayleigh-Benard convection, in which a fluid held between two plane layers of different temperatures is observed to spontaneously self-organise into counter-rotating cells to maximise the efficiency of transport [@Getling1998-gv]. Characterising the geometry or 'planforms' of convection, and finding what determines them, is the core business of this thesis.
 
@@ -181,11 +183,15 @@ The essential model of planetary solid-state thermal circulation is Rayleigh-Ben
 
 ### The Nusselt number
 
-A geodynamically rigid planet with Earth’s interior temperature would not be able to access even these modest energies: it would be trapped by its flat, linear conductive geotherm. That the planetary geotherm is evidently much greater than this is evidence that more kinetic processes are at work. The dimensionless temperature gradient is related to the Nusselt number or $\mathrm{Nu}$, the ratio of the measured temperature gradient to the reference gradient, which is the purely conductive geotherm. It can be given in terms of the rate of change of the dimensionless potential temperature $\theta^*$ with respect to dimensionless height from mantle base $h$ [@Schubert2001-ea]:
+A geodynamically rigid planet with Earth’s interior temperature would not be able to access even these modest energies: it would be trapped by its flat, linear conductive geotherm. (This was the world as imagined by Lord Kelvin in the 19th century, who thereby deduced that the Earth could not be more than a few million years old.) That the planetary geotherm is evidently much greater than this is evidence that more kinetic processes are at work.
+
+The dimensionless temperature gradient is related to the Nusselt number or $\mathrm{Nu}$, the ratio of the measured temperature gradient to the reference gradient, which is the purely conductive geotherm. It can be given in terms of the rate of change of the dimensionless potential temperature $\theta^*$ with respect to dimensionless height from mantle base $h$ [@Schubert2001-ea]:
 
 $$ \mathrm{Nu} = -\left| \frac{\partial \theta^*}{\partial h} \right| _S $$
 
-Where $|x|_S$ indicates the average value across a surface. (We could alternatively have used the depth $z$ instead of the $h$: it has no impact on the dynamics.) The asterisks indicate a non-dimensionalised quantity: this is a convention throughout the literature. When dimensionless parameters are used - unit mantle thickness and unit temperature range - the conductive geotherm for a non-curved domain is exactly one. In non-curved domains, $\mathrm{Nu}$ is equivalent to the dimensionless surface temperature gradient, and so it is confusingly defined as such in some contexts [@Blankenbach1989-li]. For curved domains, where the outer length is greater than the inner length, the conductive geotherm is proportionately lesser as it is in a sense ‘stretched out’ across the circumference; letting $f$ be the ratio of inner to outer lengths (either circumferential or radial), $\mathrm{Nu}$ in these cases diverges from the dimensionless temperature gradient by a factor of $f$ for cylinders and $f^2$ for shells.
+Where $|x|_S$ indicates the average value across a surface. (We could alternatively have used the depth $z$ instead of the $h$: it has no impact on the dynamics.) The asterisks indicate a non-dimensionalised quantity: this is a convention throughout the literature.
+
+When dimensionless parameters are used - unit mantle thickness and unit temperature range - the conductive geotherm for a non-curved domain is exactly one. In non-curved domains, $\mathrm{Nu}$ is equivalent to the dimensionless surface temperature gradient, and so it is confusingly defined as such in some contexts [@Blankenbach1989-li]. For curved domains, where the outer length is greater than the inner length, the conductive geotherm is proportionately lesser as it is in a sense 'stretched out' across the circumference; letting $f$ be the ratio of inner to outer lengths (either circumferential or radial), $\mathrm{Nu}$ in these cases diverges from the dimensionless temperature gradient by a factor of $f$ for cylinders and $f^2$ for shells.
 
 There is a practice in some quarters of adding a constant $1$ to $\mathrm{Nu}$, reflecting a difference of opinion over whether $\mathrm{Nu}$ is best constructed as an arithmetic quantity (i.e $\mathrm{Nu}$ as the convective flux after conductive flux is substracted) or as a geometric quantity, as we have stated it here. We prefer the latter usage, reterming the former as $\mathrm{Nu}_{+}$.
 
@@ -216,7 +222,7 @@ In free (unforced or 'natural') convection, we find that the *Reynolds* and *Gra
 
 $$ \mathrm{Gr} = \mathrm{Re}^2 $$
 
-The product of $\mathrm{Gr}$ and $\mathrm{Pr}$ (or equivalently, $\mathrm{Gr}$ and $\mathrm{Re}^2$) produce a crucial dimensionless quantity for characterising thermal fluids: the *Rayleigh* number $\mathrm{Ra}$. The *Rayleigh* number, often termed the 'convective vigour', can be interpreted as the ratio of the diffusive and convective time scales in the medium; i.e. $\mathrm{Ra}$ serves as the *Peclet* number for heat. A simple formulation is as follows:
+The product of $\mathrm{Gr}$ and $\mathrm{Pr}$ (or equivalently, $\mathrm{Pr}$ and $\mathrm{Re}^2$) produce a crucial dimensionless quantity for characterising thermal fluids: the *Rayleigh* number $\mathrm{Ra}$. The *Rayleigh* number, often termed the 'convective vigour', can be interpreted as the ratio of the diffusive and convective time scales in the medium; i.e. $\mathrm{Ra}$ serves as the *Peclet* number for heat. A simple formulation is as follows:
 
 $$ \mathrm{Ra} = \frac{\alpha g \Delta T b^3}{\kappa \nu} $$
 
@@ -557,8 +563,6 @@ The ratio of internal heat production to surface heat flux inside a planet is ca
 
 Analytically, the addition of internal heating introduces many complications. Most significantly, the temperature scale is no longer an independent variable, but a natural one emerging from the dynamic balance of heat production and heat transport. This dependency invalidates the derivation of $\mathrm{Ra}$ previously provided, and unfortunately, no obvious or unambiguous alternative scaling is known [@Schubert2001-ea; @Moore2008-je; @Korenaga2017-an].
 
-To prise open the behaviour of such systems, a combined analytical and numerical approach is called for. We will undertake this in subsequent chapters, first establishing a groundwork of conductive geothermal solutions (Chapter 3) and then closely surveying the behaviour at the critical point where conduction tips over into convection.
-
 +++
 
 ### Moving to a rounder planet
@@ -631,10 +635,10 @@ $$
 
 Using this scaling, Jarvis was able to obtain a *beta* exponent of $0.321 \pm 0.001$ across four values of $f$ from $(1.0 - 0.1)$ [@Jarvis1993-cb].
 
-Clearly, there is still work to be done before the annular case can be said to be as well understood as the Cartesian case. The next few chapters of this thesis attempt to make a contribution to this multi-decadal objective.
+The addition of internal heating complicates the cylindrical case even further. Not only do we have to account for the asymmetrical upper and lower boundaries: we also have to account for the fact that there is physically more room in the upper part of a curved domain than in the lower part: assuming a uniform distribution of heat-producing elements and a core ratio of 50% (close to that of Earth), close to 60% of the disc lies above the mid-depth; closer to two thirds for a true sphere.
 
-#### Internal heating in the annulus
+Even without the further complication of mixed heating, the behaviour of internally-heated fluids in annular domains is not well understood. Qualitatively, we can comfortably say that curvature should suppress convective vigour - which, given that internal heating itself suppress convection, suggests that such systems should be expected to be fairly quiescent. That makes system behaviour in subcritical conditions all the more important.
 
-The addition of internal heating makes the Cartesian case considerably more complicated. Its interactions with the cylindrical case - already complex in itself - are more complex still.
++++
 
-Thankfully, as with the Cartesian case, a combination of analytical and numerical techniques can begin to constrain the behaviour of such systems. We will take steps toward this in the subsequent chapters.
+### From analytical to numerical

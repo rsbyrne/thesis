@@ -12,10 +12,6 @@ kernelspec:
 ---
 
 ```{code-cell} ipython3
-print('foo')
-```
-
-```{code-cell} ipython3
 ---
 editable: true
 slideshow:
@@ -34,22 +30,34 @@ from everest.window.colourmaps import cmap
 from analysis import cylindrical
 ```
 
+## Criticality as a function of geometry and heat
+
++++
+
+
+
++++
+
 ## Varying curvature
 
 ```{code-cell} ipython3
-isomixed, isointernal, arrmixed, arrinternal = make_frames(refresh=True)
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+isomixed, isointernal, arrmixed, arrinternal = datas = make_frames(cache_refresh=False)
+print(sum(map(len, datas)))
 ```
 
 ```{code-cell} ipython3
-slc = isomixed.loc[0, 1]
-slc
-```
-
-```{code-cell} ipython3
-sum(map(len, (isomixed, isointernal, arrmixed, arrinternal)))
-```
-
-```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
 slc = isomixed.loc[0, 1]
 
 canvas = Canvas(size=(12, 4), shape=(1, 3))
@@ -349,6 +357,10 @@ canvas
 
 ```{code-cell} ipython3
 (0.5, 0.75, 1.25, 1.5, 1.75, 2, 2.25, 2.75, 3, 3.25, 3.5, 3.75)
+```
+
+```{code-cell} ipython3
+
 ```
 
 ```{code-cell} ipython3

@@ -1,8 +1,8 @@
 from aliases import * # important this goes first to configure PATH
 
-@utilities.cache.hard_cache(
-    'crit_isomixed', 'crit_isointernal', 'crit_arrmixed', 'crit_arrinternal'
-    )
+from everest.caching import cache
+
+@cache('critical_analysis_data', cachedir)
 def make_frames():
     with (Path(storagedir) / 'simple_critical.data').open(mode='rb') as file:
         data = pickle.load(file)
@@ -18,13 +18,15 @@ def make_frames():
     arr = data.loc[~data['etaDelta'].isna()]
     mixed = data.loc[data['flux'].isna()]
     internal = data.loc[~data['flux'].isna()]
+    outs = []
     for left in (iso, arr):
         for right in (mixed, internal):
             frm = pd.merge(left, right, 'inner').dropna(axis=1)
             if 'flux' in frm.columns:
                 frm = frm.drop('flux', axis=1)
-            yield (
+            outs.append(
                 frm.set_index(sorted(set.intersection(*map(set, (frm, keys)))))
                 ['alpha']
                 .sort_index()
                 )
+    return tuple(outs)

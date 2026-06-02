@@ -12,5 +12,17 @@ kernelspec:
 ---
 
 ```{code-cell} ipython3
+from analysis import analysis, cylindrical
+```
 
+```{code-cell} ipython3
+cylindrical.disc(0.5, 0.5)
+```
+
+```{code-cell} ipython3
+1 - (0.75**2 - 0.5**2) / (1**2 - 0.5**2)
+```
+
+```{code-cell} ipython3
+1 - (0.75**3 - 0.5**3) / (1**3 - 0.5**3)
 ```

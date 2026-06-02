@@ -11,6 +11,8 @@ kernelspec:
   language: python
 ---
 
++++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
+
 # Tools and Methods
 
 +++
