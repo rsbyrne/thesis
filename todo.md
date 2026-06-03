@@ -4,4 +4,4 @@
 - Look for sources on beta scaling for internally heated and mixed heated annular domains.
 - Add a section on temperature-dependent and strain rate-dependent rheologies to the General section of the Foundations chapter.
 - Discuss the 'bias towards big models' in the numerical methods chapter (which we now reference in the general section of the Foundations chapter).
-- 
+- Cite Paul Byrne on the subject of the siloisation of mantle convection theory

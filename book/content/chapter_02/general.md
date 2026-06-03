@@ -183,7 +183,7 @@ The paradigmatic model of planetary solid-state thermal advection is Rayleigh-Be
 
 Fluids are notoriously complex, but the framing of the problem in this particular way allows us to make suprisingly substantial inroads through analytical methods alone. The key lies in the scale-invariant nature of such systems and, in particular, the way they behave at their various boundaries and critical points.
 
-In this section, we will present some of the fundamental ideas, classical results, and recent speculations in the field of viscous fluid convection. Many of these behaviours - observed, deduced, or postulated - will shortly be encountered again as we put our new model through its paces.
+In this section, we will endeavour to present a complete, but not unduly detailed, map of how the basic intuitions of fluid physics can be developed into high-level formal constructs like the Rayleigh number, the Nusselt number, and Rayleigh-Benard convection, building up the practical toolkit of analytical devices which the rest of this thesis will depend on.
 
 +++
 
@@ -565,7 +565,7 @@ The fixed points of these new equations are the same as for the Lorenz equations
 
 +++
 
-On Earth and other planets, the geothermal flux is not solely driven by basal heating from the core: there is a substantial, variable, and transient contribution from radioactive decay as well [@Daly1980-xl]. In mantle convection studies this is dubbed 'internal heating', and a system driven by both basal and internal heating is said to be 'mixed-heating'.
+On Earth and other planets, the geothermal flux is not solely driven by basal heating from the core: there is a substantial, variable, and transient contribution from radioactive decay as well [@Daly1980-xl]. In mantle convection studies this is dubbed 'internal heating', and a system driven by both basal and internal heating is said to be 'mixed-heating'. There is no doubt that the Earth (along with probably most rocky planets) is experiencing some degree of 'mixed-heating' in principle, though the debate over the relative significance of the different heat sources is long and ongoing [@Thomson1862-kb; @Urey1955-zs; @Korenaga2003-oy; @Korenaga2008-js; @Gando2011-sh; @Mareschal2012-ie; @Huang2013-eu; @Jaupart2015-un].
 
 The ratio of internal heat production to surface heat flux inside a planet is called the *Urey* ratio $\mathrm{Ur}$  [@Urey1955-zs]. Values less than one signify that a planet on the whole is cooling, while values greater than one represent global interior warming. To avoid projecting unreasonable global temperatures into Earth's past, it was originally calculated that, for a *beta* exponent of $1/3$, the *Urey* number must be greater than $\sim0.7$ [@Christensen1985-bu]. This assumption was forced into revision when it transpired that the radiogenic inventory of bulk mantle materials is far too low to support such a high radiogenic fraction [@Jochum1983-dn]. Direct evidence from geoneutrinos now suggests that the *Urey* ratio must be around $0.5$ [@Gando2011-sh], and further argues that heat production is non-uniform throughout the mantle [@Huang2013-eu]. Thermal histories that honour these facts have proved very difficult to construct [@Korenaga2003-oy; @Korenaga2008-js; @Mareschal2012-ie; @Dye2012-cx; @Jaupart2015-un; @Korenaga2017-an].
 
@@ -793,12 +793,14 @@ In general, the behaviour of internally-heated fluids in annular domains is not 
 
 +++
 
-## From analytical to numerical methods
+### Review
 
 +++
 
-In this section, we have endeavoured to 'fill the toolbox' with the most relevant analytical instruments drawn from across the mantle convection literature. While much of the theory is canonical and attested beyond dispute, it is clear that there remain substantial gaps: dubious derivations inspired by small-run numerical studies and peppered with unquantified or arbitrary constants, as well as certain scenarios and combinations of scenarios that are yet to be rigorously described in the literature.
+While much of the theory just presented is canonical and attested beyond dispute, it is clear that there remain substantial gaps: dubious derivations inspired by small-run numerical studies and peppered with unquantified or arbitrary constants, as well as certain scenarios and combinations of scenarios that are yet to be rigorously described in the literature.
 
-It may seem odd or incredible that such basic questions would remain unanswered (or unconvincingly answered) given the many decades of sustained inquiry and the availability in more recent times of increasingly cheap and powerful computers. It is as if generations of scientists have relegated the details to 'future work' and then forgotten to get around to it. Indeed, we speculate that this is exactly what has happened, and that - far from suggesting any defects in the conduct of individual workers - the driver is in fact an unfortunate sociological force emerging from the way scientific publishing works. (See Chapter 2 for more detail on this topic.)
+It may seem odd or even incredible that such basic questions would remain unanswered (or unconvincingly answered) given the many decades of sustained inquiry and the availability in more recent times of increasingly cheap and powerful computers. It is as if generations of scientists have relegated the details to 'future work' and then forgotten to get around to it. 
 
-Whatever the cause, the consequence is that there is a great deal of 'low-hanging' fruit to be plucked - but only if we have appropriate tooling at our disposal.
+We speculate that this is exactly what has happened, and that - far from suggesting any defects in the conduct of individual workers - the driver is in fact an unfortunate sociological force emerging from the way scientific publishing works: a bias towards fewer, bigger, more detailed models - which are easier to run and easier to justify - over more, smaller, less detailed models - which are harder to justify and almost impossible to run without specialised tooling.
+
+In a subsequent chapter, we will conduct an analysis of this problem and propose a methodology and associated software explicitly designed to overcome it. For now, we will continue down a well-trod road and explore the classic numerical modelling techniques that have emerged over the years to fill in the gaps whither analysis cannot go.

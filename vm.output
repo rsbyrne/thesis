@@ -62999,3 +62999,337 @@
 [I 2026-06-03 01:40:16.363 ServerApp] Saving file at /workspace/book/content/chapter_07/conclusion.md
 [I 2026-06-03 01:40:22.163 ServerApp] Saving file at /workspace/book/myst.yml
 [I 2026-06-03 01:40:26.411 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 01:45:53.670 ServerApp] Reading SOURCE from workspace/book/content/chapter_02/theory.md
+[I 2026-06-03 01:45:53.878 ServerApp] Kernel started: 9fbad7fa-0d0a-4380-8bde-c3aceccab9e3
+[I 2026-06-03 01:45:54.303 ServerApp] Connecting to kernel 9fbad7fa-0d0a-4380-8bde-c3aceccab9e3.
+[I 2026-06-03 01:46:30.933 ServerApp] Starting buffering for 9fbad7fa-0d0a-4380-8bde-c3aceccab9e3:4a3ed11c-906a-473e-ba3f-b08a75d59a5e
+[I 2026-06-03 01:46:33.586 ServerApp] Kernel shutdown: 9fbad7fa-0d0a-4380-8bde-c3aceccab9e3
+[W 2026-06-03 01:46:39.803 ServerApp] delete /workspace/book/content/chapter_02/theory.ipynb
+[W 2026-06-03 01:46:39.809 ServerApp] delete /workspace/book/content/chapter_02/theory.md
+[I 2026-06-03 01:49:30.606 ServerApp] Saving file at /workspace/book/content/chapter_04/introduction.md
+[I 2026-06-03 01:49:33.877 ServerApp] Saving file at /workspace/book/content/chapter_04/introduction.md
+[I 2026-06-03 01:50:07.978 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 01:52:08.154 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 01:54:08.360 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 01:56:08.501 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 01:58:08.672 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 02:00:08.828 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 02:00:43.928 ServerApp] Saving file at /workspace/todo.md
+[I 2026-06-03 02:02:09.006 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 02:02:09.069 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 02:04:09.186 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 02:04:09.250 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 02:06:09.369 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 02:06:09.433 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 02:08:09.526 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 02:08:09.593 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 02:10:09.700 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 02:10:09.764 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 02:12:09.854 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 02:12:09.926 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 02:14:10.015 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 02:14:10.078 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 03:45:01.421 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 03:45:01.488 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 03:47:01.714 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 03:47:01.776 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 03:49:01.863 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 03:49:01.948 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 03:50:16.137 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 03:50:16.205 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[W 2026-06-03 03:50:56.832 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-03 03:50:56.835 ServerApp] Reading SOURCE from workspace/book/content/chapter_02/general.md
+[I 2026-06-03 03:50:57.074 ServerApp] Kernel started: 5f142881-15bf-4dad-90a5-03b5557bf748
+[W 2026-06-03 03:50:57.522 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.98ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 03:50:57.569 ServerApp] Connecting to kernel 5f142881-15bf-4dad-90a5-03b5557bf748.
+[W 2026-06-03 03:50:57.598 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.25ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:57.610 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.35ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:57.686 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.12ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:57.697 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.22ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:57.780 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.32ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:57.793 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.33ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:57.906 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.32ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:57.916 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.00ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:57.999 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.09ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:58.010 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.32ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:58.094 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.35ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:58.102 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.05ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:58.717 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.40ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:58.725 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.15ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:58.928 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.29ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:58.974 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.42ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:59.120 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.36ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:59.181 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.26ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:59.339 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.40ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:59.349 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.18ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:59.771 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.29ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:50:59.817 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.32ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:51:00.161 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.39ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:51:00.213 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.40ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:51:00.383 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.21ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:51:00.433 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.34ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:51:00.830 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.29ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:51:00.881 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.29ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:51:01.378 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.28ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:51:01.390 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.83ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:51:02.081 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.25ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:51:02.128 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.37ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:51:14.884 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.75ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:51:14.927 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.35ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 03:51:17.764 ServerApp] Saving file at /workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 03:51:17.766 ServerApp] Saving general.ipynb
+[W 2026-06-03 03:51:17.766 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-03 03:51:17.818 ServerApp] Saving general.md
+[W 2026-06-03 03:51:40.345 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.33ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:51:40.346 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.79ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 03:51:55.416 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[W 2026-06-03 03:52:08.323 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.56ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:52:08.364 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.63ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:52:09.038 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.16ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:52:09.079 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.13ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:52:09.648 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.27ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:52:09.683 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.28ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:52:10.323 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.11ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:52:10.339 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.01ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:52:11.553 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.28ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:52:11.597 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.64ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:52:12.227 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.92ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 03:52:12.281 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.75ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 03:52:27.894 ServerApp] Saving file at /workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 03:52:27.896 ServerApp] Saving general.ipynb
+[W 2026-06-03 03:52:27.896 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-03 03:52:27.906 ServerApp] Saving general.md
+[I 2026-06-03 03:52:44.244 ServerApp] Kernel started: b4960a6e-3d58-44d9-a75f-8ad87f7290e2
+[I 2026-06-03 03:52:44.947 ServerApp] Connecting to kernel b4960a6e-3d58-44d9-a75f-8ad87f7290e2.
+[I 2026-06-03 03:53:28.651 ServerApp] New terminal with automatic name: 3
+[I 2026-06-03 04:06:18.450 ServerApp] Saving file at /workspace/todo.md
+[I 2026-06-03 04:08:00.416 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 04:08:00.482 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 04:10:00.595 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 04:10:00.660 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 04:12:00.753 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 04:12:00.816 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 04:14:00.922 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 04:14:00.988 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 04:16:01.330 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 04:16:01.397 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 04:17:32.840 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 04:17:37.580 ServerApp] Reading SOURCE from workspace/book/content/chapter_03/introduction.md
+[I 2026-06-03 04:17:37.773 ServerApp] Kernel started: dec28358-b69a-4eba-b7cd-cbdcba1898ac
+[I 2026-06-03 04:17:38.190 ServerApp] Connecting to kernel dec28358-b69a-4eba-b7cd-cbdcba1898ac.
+[I 2026-06-03 04:18:01.650 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 04:42:01.901 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 04:52:13.817 ServerApp] Reading SOURCE from workspace/book/content/chapter_03/numerical.md
+[I 2026-06-03 04:52:14.093 ServerApp] Kernel started: 1440fa85-e12b-4008-92d3-a5f5b09755be
+[I 2026-06-03 04:52:14.784 ServerApp] Connecting to kernel 1440fa85-e12b-4008-92d3-a5f5b09755be.
+[I 2026-06-03 04:54:03.361 ServerApp] Kernel shutdown: 1440fa85-e12b-4008-92d3-a5f5b09755be
+[W 2026-06-03 04:55:38.945 ServerApp] 500 PATCH /api/contents/workspace/book/content/chapter_03/numerical.md?1780462538921 (172.17.0.1): Unknown error renaming file: workspace/book/content/chapter_03/numerical.ipynb [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_03/numerical.ipynb'
+[W 2026-06-03 04:55:38.945 ServerApp] wrote error: "Unknown error renaming file: workspace/book/content/chapter_03/numerical.ipynb [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_03/numerical.ipynb'"
+    Traceback (most recent call last):
+      File "/usr/lib/python3.13/shutil.py", line 856, in move
+        os.rename(src, real_dst)
+        ~~~~~~~~~^^^^^^^^^^^^^^^
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_03/numerical.ipynb' -> '/home/morpheus/workspace/book/content/chapter_02/numerical.ipynb'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1069, in rename_file
+        await run_sync(shutil.move, old_os_path, new_os_path)
+      File "/usr/local/lib/python3.13/dist-packages/anyio/to_thread.py", line 56, in run_sync
+        return await get_async_backend().run_sync_in_worker_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+        return await future
+               ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/anyio/_backends/_asyncio.py", line 967, in run
+        result = context.run(func, *args)
+      File "/usr/lib/python3.13/shutil.py", line 876, in move
+        copy_function(src, real_dst)
+        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/shutil.py", line 468, in copy2
+        copyfile(src, dst, follow_symlinks=follow_symlinks)
+        ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/lib/python3.13/shutil.py", line 260, in copyfile
+        with open(src, 'rb') as fsrc:
+             ~~~~^^^^^^^^^^^
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_03/numerical.ipynb'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupytext/async_contentsmanager.py", line 524, in rename_file
+        await self.super.rename_file(old_alt_path, new_alt_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1073, in rename_file
+        raise web.HTTPError(500, f"Unknown error renaming file: {old_path} {e}") from e
+    tornado.web.HTTPError: HTTP 500: Internal Server Error (Unknown error renaming file: workspace/book/content/chapter_03/numerical.ipynb [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_03/numerical.ipynb')
+[E 2026-06-03 04:55:38.948 ServerApp] {
+      "Host": "localhost:8890",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+    }
+[E 2026-06-03 04:55:38.948 ServerApp] 500 PATCH /api/contents/workspace/book/content/chapter_03/numerical.md?1780462538921 (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 8.22ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 04:56:42.763 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-06-03 04:56:42.965 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-06-03 04:56:48.973 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 04:58:38.864 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-06-03 04:58:39.305 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 04:58:56.152 ServerApp] Reading SOURCE from workspace/book/content/chapter_02/numerical.md
+[I 2026-06-03 04:58:56.451 ServerApp] Kernel started: fbc23a4d-5751-4211-a233-1152264f355b
+[I 2026-06-03 04:58:56.895 ServerApp] Connecting to kernel fbc23a4d-5751-4211-a233-1152264f355b.
+[I 2026-06-03 04:59:05.664 ServerApp] Creating new notebook in /workspace/book/content/chapter_02
+[I 2026-06-03 04:59:05.668 ServerApp] Saving Untitled.ipynb
+[I 2026-06-03 04:59:05.819 ServerApp] Saving Untitled.md
+[I 2026-06-03 04:59:05.949 ServerApp] Reading SOURCE from workspace/book/content/chapter_02/Untitled.md
+[I 2026-06-03 04:59:07.119 ServerApp] Kernel started: 798d6d0e-c3d2-47f8-814f-61255f8358ec
+[I 2026-06-03 04:59:07.725 ServerApp] Connecting to kernel 798d6d0e-c3d2-47f8-814f-61255f8358ec.
+[W 2026-06-03 05:00:13.094 ServerApp] delete /workspace/book/content/chapter_02/_ms98.md
+[I 2026-06-03 05:01:14.397 ServerApp] Saving file at /workspace/book/content/chapter_02/ms98.ipynb
+[I 2026-06-03 05:01:14.399 ServerApp] Saving ms98.ipynb
+[I 2026-06-03 05:01:14.531 ServerApp] Saving ms98.md
+[I 2026-06-03 05:01:57.472 ServerApp] Saving file at /workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 05:01:57.474 ServerApp] Saving general.ipynb
+[W 2026-06-03 05:01:57.475 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-03 05:01:57.485 ServerApp] Saving general.md
+[I 2026-06-03 05:02:28.869 ServerApp] Saving file at /workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 05:02:28.870 ServerApp] Saving general.ipynb
+[W 2026-06-03 05:02:28.871 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-03 05:02:28.879 ServerApp] Saving general.md
+[I 2026-06-03 05:03:03.226 ServerApp] Saving file at /workspace/book/content/chapter_02/ms98.ipynb
+[I 2026-06-03 05:03:03.228 ServerApp] Saving ms98.ipynb
+[I 2026-06-03 05:03:03.240 ServerApp] Saving ms98.md
+[I 2026-06-03 05:03:57.513 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[W 2026-06-03 05:05:41.035 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.33ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 05:05:41.079 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.85ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 05:05:45.214 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.06ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 05:05:45.260 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.97ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 05:05:57.629 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:06:29.124 ServerApp] Saving file at /workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 05:06:29.126 ServerApp] Saving general.ipynb
+[W 2026-06-03 05:06:29.127 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-03 05:06:29.138 ServerApp] Saving general.md
+[I 2026-06-03 05:07:47.001 ServerApp] Saving file at /workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 05:07:47.003 ServerApp] Saving general.ipynb
+[W 2026-06-03 05:07:47.004 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-03 05:07:47.014 ServerApp] Saving general.md
+[I 2026-06-03 05:08:08.310 ServerApp] Saving file at /workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 05:08:08.312 ServerApp] Saving general.ipynb
+[W 2026-06-03 05:08:08.312 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-03 05:08:08.365 ServerApp] Saving general.md
+[I 2026-06-03 05:09:57.897 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:11:58.065 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:12:03.182 ServerApp] Saving file at /workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 05:12:03.184 ServerApp] Saving general.ipynb
+[W 2026-06-03 05:12:03.185 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-03 05:12:03.194 ServerApp] Saving general.md
+[I 2026-06-03 05:13:58.224 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:15:58.341 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:17:58.461 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:19:58.583 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:21:58.687 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:23:58.840 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:25:59.055 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:27:59.166 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:29:59.275 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:31:59.394 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:33:59.507 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:35:59.751 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:37:59.918 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:40:00.033 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:42:00.301 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:43:28.544 ServerApp] Saving file at /workspace/book/content/chapter_02/introduction.md
+[I 2026-06-03 05:44:04.642 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 05:46:04.785 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[W 2026-06-03 05:46:41.202 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.78ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 05:46:41.215 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.99ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 05:46:44.772 ServerApp] Saving file at /workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 05:46:44.774 ServerApp] Saving general.ipynb
+[W 2026-06-03 05:46:44.775 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-03 05:46:44.784 ServerApp] Saving general.md
+[I 2026-06-03 05:48:04.914 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[W 2026-06-03 05:48:37.083 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.08ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-03 05:48:37.122 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.70ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 05:48:45.097 ServerApp] Saving file at /workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 05:48:45.099 ServerApp] Saving general.ipynb
+[W 2026-06-03 05:48:45.099 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-03 05:48:45.367 ServerApp] Saving general.md
+[I 2026-06-03 05:48:55.440 ServerApp] Saving file at /workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-03 05:48:55.442 ServerApp] Saving general.ipynb
+[W 2026-06-03 05:48:55.443 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-03 05:48:55.454 ServerApp] Saving general.md
+[I 2026-06-03 05:50:05.072 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 05:50:56.453 ServerApp] Saving file at /workspace/book/content/chapter_02/numerical.ipynb
+[I 2026-06-03 05:50:56.455 ServerApp] Saving numerical.ipynb
+[I 2026-06-03 05:50:56.469 ServerApp] Saving numerical.md
+[I 2026-06-03 05:52:56.582 ServerApp] Saving file at /workspace/book/content/chapter_02/numerical.ipynb
+[I 2026-06-03 05:52:56.584 ServerApp] Saving numerical.ipynb
+[I 2026-06-03 05:52:56.598 ServerApp] Saving numerical.md
+[I 2026-06-03 05:54:56.724 ServerApp] Saving file at /workspace/book/content/chapter_02/numerical.ipynb
+[I 2026-06-03 05:54:56.726 ServerApp] Saving numerical.ipynb
+[I 2026-06-03 05:54:56.816 ServerApp] Saving numerical.md
+[I 2026-06-03 05:56:56.911 ServerApp] Saving file at /workspace/book/content/chapter_02/numerical.ipynb
+[I 2026-06-03 05:56:56.914 ServerApp] Saving numerical.ipynb
+[I 2026-06-03 05:56:57.677 ServerApp] Saving numerical.md
+[I 2026-06-03 05:58:57.803 ServerApp] Saving file at /workspace/book/content/chapter_02/numerical.ipynb
+[I 2026-06-03 05:58:57.806 ServerApp] Saving numerical.ipynb
+[I 2026-06-03 05:58:57.937 ServerApp] Saving numerical.md
+[I 2026-06-03 05:59:09.520 ServerApp] Saving file at /workspace/book/content/chapter_02/numerical.ipynb
+[I 2026-06-03 05:59:09.522 ServerApp] Saving numerical.ipynb
+[I 2026-06-03 05:59:09.579 ServerApp] Saving numerical.md
+[I 2026-06-03 05:59:36.053 ServerApp] Saving file at /workspace/book/content/chapter_02/numerical.ipynb
+[I 2026-06-03 05:59:36.055 ServerApp] Saving numerical.ipynb
+[I 2026-06-03 05:59:36.238 ServerApp] Saving numerical.md
+[I 2026-06-03 05:59:40.071 ServerApp] Saving file at /workspace/book/content/chapter_02/numerical.ipynb
+[I 2026-06-03 05:59:40.073 ServerApp] Saving numerical.ipynb
+[I 2026-06-03 05:59:40.456 ServerApp] Saving numerical.md
+[I 2026-06-03 05:59:43.555 ServerApp] Saving file at /workspace/book/content/chapter_02/numerical.ipynb
+[I 2026-06-03 05:59:43.558 ServerApp] Saving numerical.ipynb
+[I 2026-06-03 05:59:43.574 ServerApp] Saving numerical.md
+[I 2026-06-03 05:59:44.445 ServerApp] Saving file at /workspace/book/content/chapter_02/numerical.ipynb
+[I 2026-06-03 05:59:44.447 ServerApp] Saving numerical.ipynb
+[I 2026-06-03 05:59:44.462 ServerApp] Saving numerical.md
+[I 2026-06-03 05:59:47.879 ServerApp] Saving file at /workspace/book/content/chapter_02/ms98.ipynb
+[I 2026-06-03 05:59:47.881 ServerApp] Saving ms98.ipynb
+[I 2026-06-03 05:59:47.950 ServerApp] Saving ms98.md
+[I 2026-06-03 06:00:05.539 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 06:02:06.488 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 06:08:08.489 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 06:10:08.703 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 06:12:09.112 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 06:13:07.786 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 06:14:04.906 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 06:14:05.299 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 06:14:11.561 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 06:14:13.891 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 06:14:16.082 ServerApp] Saving file at /workspace/book/content/chapter_02/conclusion.md
+[I 2026-06-03 06:14:20.351 ServerApp] Starting buffering for 5f142881-15bf-4dad-90a5-03b5557bf748:3b2600b9-b5d8-44e2-9ad1-b687678a4dc0
+[I 2026-06-03 06:14:22.013 ServerApp] Starting buffering for fbc23a4d-5751-4211-a233-1152264f355b:747d5bf8-dc26-4e8a-8c6e-7568c3c77a0b
+[I 2026-06-03 06:14:23.067 ServerApp] Starting buffering for 798d6d0e-c3d2-47f8-814f-61255f8358ec:bcfc65c3-d250-4215-9104-b00dda7caea8
+[I 2026-06-03 06:14:51.792 ServerApp] Saving file at /workspace/book/myst.yml
+[I 2026-06-03 06:14:54.064 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-03 06:14:58.233 ServerApp] Kernel shutdown: fbc23a4d-5751-4211-a233-1152264f355b
+[I 2026-06-03 06:14:58.233 ServerApp] Kernel shutdown: dec28358-b69a-4eba-b7cd-cbdcba1898ac
+[I 2026-06-03 06:14:58.235 ServerApp] Kernel shutdown: 5f142881-15bf-4dad-90a5-03b5557bf748
+[I 2026-06-03 06:14:58.236 ServerApp] Kernel shutdown: b4960a6e-3d58-44d9-a75f-8ad87f7290e2
+[I 2026-06-03 06:14:58.239 ServerApp] Kernel shutdown: 798d6d0e-c3d2-47f8-814f-61255f8358ec

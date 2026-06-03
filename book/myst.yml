@@ -26,22 +26,21 @@ project:
       children:
         - file: content/chapter_02/introduction.md
         - file: content/chapter_02/general.md
-        - file: content/chapter_02/theory.md
+        - file: content/chapter_02/numerical.md
+        - file: content/chapter_02/ms98.md
         - file: content/chapter_02/conclusion.md
 
     - title: Tools and Methods
       children:
         - file: content/chapter_03/introduction.md
-        - file: content/chapter_03/numerical.md
         - file: content/chapter_03/everest.md
-        - file: content/chapter_03/ms98.md
         - file: content/chapter_03/conclusion.md
 
     - title: Critical Convection
       children:
         - file: content/chapter_04/introduction.md
         - file: content/chapter_04/conduction.md
-        - file: content/chapter_04/critical.md
+        # - file: content/chapter_04/critical.md
         - file: content/chapter_04/conclusion.md
 
     - title: Linear Convection

@@ -13,7 +13,9 @@ kernelspec:
 
 ## Numerical methods and the Underworld code
 
-When the font of analysis is exhausted, numerical solutions become indispensable. Though the construction of robust and accurate systems for the computation of mantle convection problems is far from trivial, many successful approaches have been developed over the years, each with its own advantages and limitations. For this thesis we adopt a finite-element approach, which has been extensively developed by many groups over more than a quarter of a century. In particular, we follow after Professor Moresi and colleagues, the developers of modelling codes including *CITCOM*, *Ellipsis*, and most lately *Underworld* [@Moresi1995-rn; @Moresi1996-fn; @Zhong1998-qg; @Moresi2002-pj; @Moresi2003-ip; @Farrington2005-mo; @Moresi2007-dg; @May2008-pq; @Beucher2019-aq].
+Since the dawn of the computer age, numerical methods have been indispensable to geoscience. This is a necessary consequence of the fact that our subjects all too often dwell in spatiotemporal scales far beyond our capacity to directly observe. For the computational geophysicist, model data *is* empirical data. It is beholden upon us to justify that transference rigorously.
+
+Though the construction of robust and accurate systems for the computation of mantle convection problems is far from trivial, many successful approaches have been developed over the years, each with its own advantages and limitations. For this thesis we adopt a finite-element approach, which has been extensively developed by many groups over more than a quarter of a century. In particular, we follow after Professor Moresi and colleagues, the developers of modelling codes including *CITCOM*, *Ellipsis*, and most lately *Underworld* [@Moresi1995-rn; @Moresi1996-fn; @Zhong1998-qg; @Moresi2002-pj; @Moresi2003-ip; @Farrington2005-mo; @Moresi2007-dg; @May2008-pq; @Beucher2019-aq].
 
 Here we will discuss in broad terms the principles and infrastructure of our numerical modelling practice; particulars of model design and construction will be discussed in further chapters as relevance dictates.
 
