@@ -22,33 +22,42 @@ project:
       children:
         - file: content/chapter_01/main.md
 
-    - title: Tools and Methods
-      children:
-        - file: content/chapter_02/introduction.md
-        - file: content/chapter_02/numerical.md
-        - file: content/chapter_02/everest.md
-        - file: content/chapter_02/ms98.md
-
     - title: Foundations
       children:
+        - file: content/chapter_02/introduction.md
+        - file: content/chapter_02/general.md
+        - file: content/chapter_02/theory.md
+        - file: content/chapter_02/conclusion.md
+
+    - title: Tools and Methods
+      children:
         - file: content/chapter_03/introduction.md
-        - file: content/chapter_03/general.md
-        - file: content/chapter_03/conduction.md
-        - file: content/chapter_03/critical.md
-        - file: content/chapter_03/theory.md
+        - file: content/chapter_03/numerical.md
+        - file: content/chapter_03/everest.md
+        - file: content/chapter_03/ms98.md
         - file: content/chapter_03/conclusion.md
+
+    - title: Critical Convection
+      children:
+        - file: content/chapter_04/introduction.md
+        - file: content/chapter_04/conduction.md
+        - file: content/chapter_04/critical.md
+        - file: content/chapter_04/conclusion.md
 
     - title: Linear Convection
       children:
-        - file: content/chapter_04/introduction.md
+        - file: content/chapter_05/introduction.md
+        - file: content/chapter_05/conclusion.md
 
     - title: Nonlinear Convection
       children:
-        - file: content/chapter_05/introduction.md
+        - file: content/chapter_06/introduction.md
+        - file: content/chapter_06/conclusion.md
 
     - title: Towards a General Theory of Planets
       children:
-        - file: content/chapter_06/introduction.md
+        - file: content/chapter_07/introduction.md
+        - file: content/chapter_07/conclusion.md
 
   math:
     '\R': '\mathbb{R}'

@@ -2,3 +2,6 @@
 - Add IEA citations to general.ipynb of Foundations chapter.
 - Add Lord Kelvin citation to general.ipynb of Foundations chapter.
 - Look for sources on beta scaling for internally heated and mixed heated annular domains.
+- Add a section on temperature-dependent and strain rate-dependent rheologies to the General section of the Foundations chapter.
+- Discuss the 'bias towards big models' in the numerical methods chapter (which we now reference in the general section of the Foundations chapter).
+- 

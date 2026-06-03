@@ -177,7 +177,13 @@ Tectonics is known to us through its sensible processes of orogeny, seismicity, 
 
 Estimates of global heat flow vary from around $42$ terawatts [@Dye2012-cx] to upwards of $47$ terawatts [@Davies2010-gz]. Of this power, a mere $1\%$ - less than half a terawatt - is thought to be necessary to account for all the geological activity witnessed on Earth [@Turcotte2014-by]. For comparison, the power consumption of human civilisation is more than $20$ terawatts, and the power received by Earth from the sun is a colossal $170,000$ terawatts. If our Earth is a heat engine, it is a weak one. (TODO - add IEA citations)
 
-The essential model of planetary solid-state thermal circulation is Rayleigh-Benard convection, in which a fluid held between two plane layers of different temperatures is observed to spontaneously self-organise into counter-rotating cells to maximise the efficiency of transport [@Getling1998-gv]. Characterising the geometry or 'planforms' of convection, and finding what determines them, is the core business of this thesis.
+Although the net geothermal flux of the Earth is not much in the grand scheme of things, it is nevertheless much greater than we would expect it to be if the Earth were simply a giant, inert rock. The internal temperatures necessary to sustain such a flux from conduction alone would liquify, if not vaporise, the sorts of materials the bulk Earth is made from. Clearly some sort of active heat transport is implicated.
+
+The paradigmatic model of planetary solid-state thermal advection is Rayleigh-Benard convection, in which a fluid held between two plane layers of different temperatures is observed to spontaneously self-organise into counter-rotating cells to maximise the efficiency of transport [@Getling1998-gv]. Within this paradigm, workers seek to explain large-scale planetary structures in terms of convective planforms and their boundary layers: for example, Earth's mid-ocean ridges are broadly imagined to be related to the 'upward' limbs of each cell, while its trenches are supposed to be related to the 'downward' limbs.
+
+Fluids are notoriously complex, but the framing of the problem in this particular way allows us to make suprisingly substantial inroads through analytical methods alone. The key lies in the scale-invariant nature of such systems and, in particular, the way they behave at their various boundaries and critical points.
+
+In this section, we will present some of the fundamental ideas, classical results, and recent speculations in the field of viscous fluid convection. Many of these behaviours - observed, deduced, or postulated - will shortly be encountered again as we put our new model through its paces.
 
 +++
 
@@ -557,15 +563,155 @@ The fixed points of these new equations are the same as for the Lorenz equations
 
 ### Incorporating radiogenic heat: the internal- and mixed-heating cases
 
++++
+
 On Earth and other planets, the geothermal flux is not solely driven by basal heating from the core: there is a substantial, variable, and transient contribution from radioactive decay as well [@Daly1980-xl]. In mantle convection studies this is dubbed 'internal heating', and a system driven by both basal and internal heating is said to be 'mixed-heating'.
 
 The ratio of internal heat production to surface heat flux inside a planet is called the *Urey* ratio $\mathrm{Ur}$  [@Urey1955-zs]. Values less than one signify that a planet on the whole is cooling, while values greater than one represent global interior warming. To avoid projecting unreasonable global temperatures into Earth's past, it was originally calculated that, for a *beta* exponent of $1/3$, the *Urey* number must be greater than $\sim0.7$ [@Christensen1985-bu]. This assumption was forced into revision when it transpired that the radiogenic inventory of bulk mantle materials is far too low to support such a high radiogenic fraction [@Jochum1983-dn]. Direct evidence from geoneutrinos now suggests that the *Urey* ratio must be around $0.5$ [@Gando2011-sh], and further argues that heat production is non-uniform throughout the mantle [@Huang2013-eu]. Thermal histories that honour these facts have proved very difficult to construct [@Korenaga2003-oy; @Korenaga2008-js; @Mareschal2012-ie; @Dye2012-cx; @Jaupart2015-un; @Korenaga2017-an].
 
-Analytically, the addition of internal heating introduces many complications. Most significantly, the temperature scale is no longer an independent variable, but a natural one emerging from the dynamic balance of heat production and heat transport. This dependency invalidates the derivation of $\mathrm{Ra}$ previously provided, and unfortunately, no obvious or unambiguous alternative scaling is known [@Schubert2001-ea; @Moore2008-je; @Korenaga2017-an].
+Analytically, the addition of internal heating introduces many complications. Most significantly, the temperature scale is no longer an independent variable (determined by the boundaries), but a natural one emerging from the dynamic (internal) balance of heat production and heat transport. This dependency invalidates the derivation of $\mathrm{Ra}$ previously provided, and unfortunately, no obvious or unambiguous alternative scaling is known [@Schubert2001-ea; @Moore2008-je; @Korenaga2017-an].
+
+A classic response to this problem is to attempt to develop some alternate form of $\mathrm{Ra}$ that is adjusted to account for the new temperature scale.
+
++++
+
+#### Internally-heated convection in a Cartesian domain
+
++++
+
+Let us consider the case of purely internal heating first (i.e. volumetric heating in a domain with an insulated lower boundary). What sort of temperature scale might we expect from such a system? In the basally-heated case, the (dimensionless) temperature drop was exactly $1$; in an internally-heated system, it instead depends on the maximum temperature reached - which could be observed anywhere in the domain in theory, though one would tend to expect to find it at the bottom (insulating) boundary.
+
+If we make the assumption that the highest possible temperatures achievable in such a system will be those encountered at the base of the mantle in a scenario of no convection (i.e. the maximum of a purely conductive geotherm), we can deduce that the temperature drop for an internally heated Cartesian domain should take the general form of:
+
+$$
+{\Delta T}_H = \frac{\rho H b^2}{k}
+$$
+
+Where $k$ is the conductivity, $\rho$ is the density, $H$ is the per-mass heating rate, and $b$ is the characteristic spatial length. The relation is easily derived from first principles, as we will illustrate in the next section.
+
+This new temperature scale allows an 'internally heated *Rayleigh* number' ${\mathrm{Ra}}_H$ to be defined [@Roberts1967-aq]:
+
+$$ \begin{align*}
+{\mathrm{Ra}}_H &= {\mathrm{Ra}}_B \cdot {\Delta T}_H \\
+&= \frac{\alpha g \rho H b^5}{k \kappa \nu}
+\end{align*} $$
+
+Where ${\mathrm{Ra}}_B$ is the *Rayleigh* number derived for basal heating, introducing the parameters of thermal expansivity $\alpha$, gravity $g$, thermal diffusivity $\kappa$, and momentum diffusivity $\nu$ [@Turcotte2014-by]. As in the basally-heated case, there exists for this number a critical value ${{\mathrm{Ra}}_{H}}_{\mathrm{cr}}$ which divides the purely conductive regime from the convecting regime [@Roberts1967-aq;@Schubert2001-ea]:
+
+$$ {{\mathrm{Ra}_{H}}_\mathrm{cr}}_{\min} = 867.8, \quad {\lambda^{*}}_\mathrm{cr} = 3.51 $$
+
+In other words, for the onset of convection in an internally-heated system with basal-insulating, surface-isothermal, free-slip boundaries, the critical *Rayleigh* number and characteristic wavelength are both a little more than one quarter greater than for the equivalent basally-heated case.
+
+Usually we would be interested in deriving some scaling for the *Nusselt* number with respect to ${\mathrm{Ra}}_H$. In this case, however, $\mathrm{Nu}$ must always equal one. This follows because there are no other sources or sinks in the model except for $H$, which - at equilibrium - must be radiated in full from the upper boundary whether the interior is convecting or not. Rather than serving to augment the surface flux, convection in a purely internally-heated system only functions to smooth out interior temperatures. To describe this, we must choose a represenative internal temperature $T_v$, which should reflect a typical temperature in those regions where advection dominates [@Solomatov2000-xn]. Normalising $T_v$ by the true (measured) temperature scale $\Delta T$ gives ${T_v}^*$, the non-dimensional internal temperature, which then informs the definition of an 'internal *Rayleigh* number' ${\mathrm{Ra}}_v$:
+
+$$ \mathrm{Ra}_v = \frac{\alpha g {T_v}^* \Delta T b^3}{\kappa \nu} $$
+
+This observes, in other words, that - in an internally-heated system - the thermal contrast available to drive convection will always be less by some factor than the thermal contrast across the system as a whole.
+
+While the flux across the upper boundary is fixed by the choice of parameter $H$, the actual geometry of the boundary that supplies this flux must be a function of the *Rayleigh* number. At steady state, the interior temperature and the layer thickness adjust until a balance is reached, resulting in an outer temperature drop ${\Delta T}_o$ and outer boundary thickness ${\delta}_o$ that scale with, but are not solely determined by, the heating rate [@Schubert2001-ea]:
+
+$$ \begin{align*}
+{\Delta T}_o &\propto \frac{H^{3/4}}{\mathrm{Ra}^{1/4}} \\
+\delta_o &\propto \frac{1}{{\left(\mathrm{Ra}_H\right)}^{1/4}}
+\end{align*} $$
+
+Wherein we observe that the implied flux (temperature drop divided by boundary thickness) remains equal to $\mathrm{Nu}_c = H$, and hence $Nu=1$, as expected: all of that inner motion occurs without leaving any thermal trace on the surface.
+
+By taking a boundary layer approach to the heat-producing regions [@Jaupart2010-zy] and exploiting certain known requisites of the purely conductive state [@Vilella2017-mg], one can derive an alternative statement of the expected outer boundary layer properties in terms of the critical *Rayleigh* number:
+
+$$ \begin{align*}
+\frac{\delta_o}{h} &= {\left( \frac{{\mathrm{Ra}_H}_\mathrm{cr}}{\mathrm{Ra}_H} \right)}^{1/4} \\
+\frac{{\Delta T}_o}{{\Delta T}_H} &= \frac{1}{2} \frac{\delta_o}{h}
+\end{align*} $$
+
+This relationship appears to hold empirically with good confidence [@Vilella2017-mg].
+
+Qualitatively, the addition of internal heating to the isoviscous convection problem imposes an asymmetry between upwellings and downwellings, which would otherwise be temperature-reversed mirrors of one another [@Weinstein1990-dd]. Because the thermal gradient of the conductive state rapidly drops with depth, the local *Rayleigh* numbers of deeper layers can quickly become subcritical, such that a large portion of the domain from the base up is locked in a near-conductive state. At high $H$, large-scale motions cease, and only a thin sub-surface 'mixing layer' witnesses any meaningful convection at all [@Parmentier1994-on].
+
+One final feature of purely internal heating systems worth mentioning - obvious when pointed out but easily overlooked - is that the total heat production is fixed. This is *not* the case for basal heating (using a fixed lower boundary temperature) because one can always, as it were, 'suck' more heat out of the core by thinning the lower boundary layer. Consequently, for a given 'total heating rate' $H_\mathrm{total} = H \cdot \mathrm{Area} $, the whole domain must necessarily be warming, cooling, or at equilibrium depending on the ratio of $H_\mathrm{total}$ and ${\phi_q}_c$. This is just another reason to add to the many already presented for why we should expect purely internally-heated models to be less dynamic in every way than basally-heated ones.
+
++++
+
+#### Mixed-heated convection in a Cartesian domain
+
++++
+
+In the real Earth, we can be confident that heat enters the system not only through radiogenic decay, but through conduction from the (extremely hot) core. In such 'mixed-heating' scenarios, the thermal balance is more complex than the sum of its parts - though, surprisingly, not *that* much more complex.
+
+Trivially, we can observe that the mixed heating case must contain both the basal and internally heated cases as endmembers. At the limit where internal heating becomes negligible compared to the inner-outer temperature drop, internal heating can be ignored altogether and the system approximates a purely basally-heated model. At the opposite extreme, if the interior temperature due to internal heating is high enough, the inner flux may become negative, and the mantle will cool into the core (a case hard to envision in nature). Between these regimes is a transition point when the interior temperature becomes equal to the lower boundary condition. In this borderline case, the inner (core-mantle) flux is exactly zero (i.e. insulating), so that the mixed-heating system reproduces a purely internally-heated system as well.
+
+In making sense of this new, more complex, scenario, our first instinct might be to repeat the same trick from before and simply modify the *Rayleigh* number to account for the new thermal and spatial scales. Alas, we now have two choices of starting point - a basally-derived $\mathrm{Ra}$ and an internally-derived one - and it is not initially clear they can be brought into correspondence.. One path forward is to define a dimensionless heating rate $H$ [@Schubert2001-ea]:
+
+$$ \begin{align*}
+H &= {\mathrm{Ra}}_H / \mathrm{Ra} \\
+&= \frac{\rho H^{*} D^2}{k {\Delta T}^{*}}
+\end{align*} $$
+
+The conventional basally-heated $\mathrm{Ra}$ derivation can then be used, with $H$ as a correcting coefficient.
+
+While the purely internally-heated case has only one boundary layer (the outer), and the purely basally-heated case has symmetrical outer and inner boundaries, the mixed-heating case has two asymmetrical boundaries which are at least pseudo-independent of each other. While, at steady-state, the outer boundary flux is constrained to be always greater than the inner, the inner boundary flux may freely adjust itself as a function of the temperature differential between the prescribed lower boundary condition and the interior temperature. This intrinsic feedback makes quantitative analysis much more complicated.
+
+As usual, a close consideration of the situation at the boundaries can set us on the right course. In the sorts of scenarios relevant to planetary settings, the lower boundary will remain hotter than the interior and the flux will be positive and substantial, in which case the outer boundary is required to transport the volumetric heating $H$ in addition to the basal heating [@Moore2008-je]:
+
+$$ \begin{align*}
+{\phi_q}_o &\propto {\left| \frac{dT}{dh} \right|}_{h=1} \\
+&\propto H + {\phi_q}_i \propto H + {\left| \frac{dT}{dh} \right|}_{h=0}
+\end{align*} $$
+
+Where ${\phi_q}_o$ and ${\phi_q}_i$ are the inner and outer heat fluxes.
+
+One thing we can immediately observe from first principles is that the outer heat flux should be equal to the balance of $H$ and whatever flux, positive or negative, is occurring over the lower boundary:
+
+$$
+{\phi_q}_o = H + {\phi_q}_i
+$$
+
+To analyse the mixed heating case, then, we need to invert our perspective and focus not on the outer boundary but on the inner boundary, whose core-ward temperature is equal to $1$ and whose mantle-ward temperature - the 'interior temperature' ${T_\mathrm{interior}}^*$ - is to be determined. Unfortunately, no universally accepted analytical treatment of ${T_\mathrm{interior}}^*$ post-convection has yet been devised.
+
+One workaround starts with the interior temperature analytically obtained for a purely internally-heated system and modify it with empirical constants to accommodate the addition of basal heating [@Moore2008-je]:
+
+$$
+T_\mathrm{interior} = 0.49 + 1.24 H^{3/4} {\mathrm{Ra}}^{-1/4}, \quad H < H_\mathrm{inv}
+$$
+
+This scaling, however, is back-formed from an observed and arbitrary measurement of $T_\mathrm{interior}$ taken across the middle 60% of a finite-element numerical model, and no justification for this particular choice is ventured nor defended across the range of $\mathrm{Ra}$ and $H$ values sampled.
+
+Given a known value of $T_\mathrm{interior}$, the associated *Nusselt* number should be proportional to that temperature drop divided by the stable outer boundary thickness ${\delta}_o$. Conventional boundary layer analysis can be used to argue a scaling of the form [@Schubert2001-ea]:
+
+$$
+\delta_o = {\left( \frac{\mathrm{Ra}}{{\mathrm{Ra}}_{\mathrm{cr}}} \frac{\Delta T_b}{\Delta T} \right)}^{-1/3}
+$$
+
+Empirically, the same authors [@Moore2008-je] found that this scaling holds only for a much lower exponent of $\sim -0.303$ for $\mathrm{Ra}<=10^8$ and $H<10$, while apparently approaching the theoretical value with increasing $H$; the discrepancy was attributed to disruption by plumes from the lower boundary.
+
+The next step is to attempt to derive the *Nusselt*-*Rayleigh* scaling, which we expect to approach the conventional power law behaviour under the *beta* exponent $\beta = 1/3$. The expected relationship, however, does not manifest even approximately for the mixed heating case unless alternative definitions of ${\mathrm{Nu}}$ and $\mathrm{Ra}$ are used. Subtracting the basal component from ${\mathrm{Nu}}$ and using the arithmetic difference between $\mathrm{Ra}$ and $\mathrm{Ra}_\mathrm{cr}$ yields the following with some confidence [@Moore2008-je]:
+
+$$
+\mathrm{Nu} - 1 = \frac{H}{2} + 0.206 \cdot {\left( \mathrm{Ra} - {\mathrm{Ra}}_{\mathrm{cr}} \right)}^{0.318}
+$$
+
+While the above was calculated using a planar 2D model, an equivalent model suite in the spherical shell closely reproduced this relationship after geometry was accounted for [@Weller2016-nm].
+
+An alternative parameterisation [@Vilella2018-il] expresses ${\mathrm{Nu}}$ in terms of the critical heating rate $H_\mathrm{crit}$ after convection:
+
+$$
+H_\mathrm{crit} = 2 + 2 C_N {\left( \frac{\mathrm{Ra}}{{\mathrm{Ra}}_{\mathrm{cr}}} - 1 \right)}^{1/3}
+$$
+
+Where $C_N$ is an empirically-obtained constant argued to be exactly equal to $1.5$. This definition of the convective $H_\mathrm{crit}$ further defines two independent *Nusselt* numbers depending on the magnitude of heating:
+
+$$ \begin{align*}
+{\mathrm{Nu}} &= \frac{1}{2} \left( H + H_{\mathrm{crit}} \right), \quad &H \le H_{\mathrm{crit}} \\
+{\mathrm{Nu}} &=  H - {\left( 2 \frac{{\Delta T}_{\mathrm{TBL},b}}{\Delta T} H \right)}^{1/2} \quad &H \ge H_{\mathrm{crit}}
+\end{align*} $$
+
+Where ${\Delta T}_{\mathrm{TBL},b}$ is the temperature jump across the inner boundary layer, recalling that the mantle must cool into the core above $H_\mathrm{crit}$.
 
 +++
 
 ### Moving to a rounder planet
+
++++
 
 The Earth, it hardly needs to be stated, is round. All the analysis presented so far has ignored this fact - and for good reason. The addition of curvature complicates matters considerably.
 
@@ -635,10 +781,24 @@ $$
 
 Using this scaling, Jarvis was able to obtain a *beta* exponent of $0.321 \pm 0.001$ across four values of $f$ from $(1.0 - 0.1)$ [@Jarvis1993-cb].
 
-The addition of internal heating complicates the cylindrical case even further. Not only do we have to account for the asymmetrical upper and lower boundaries: we also have to account for the fact that there is physically more room in the upper part of a curved domain than in the lower part: assuming a uniform distribution of heat-producing elements and a core ratio of 50% (close to that of Earth), close to 60% of the disc lies above the mid-depth; closer to two thirds for a true sphere.
++++
 
-Even without the further complication of mixed heating, the behaviour of internally-heated fluids in annular domains is not well understood. Qualitatively, we can comfortably say that curvature should suppress convective vigour - which, given that internal heating itself suppress convection, suggests that such systems should be expected to be fairly quiescent. That makes system behaviour in subcritical conditions all the more important.
+#### Radiogenic heat in a cylindrical planet
 
 +++
 
-### From analytical to numerical
+Incorporating a volumetric heat source was problematic enough in the Cartesian case; in the cylindrical case, matters are even worse. Not only do we have to account for the asymmetrical upper and lower boundaries: we also have to account for the fact that there is physically more room in the upper part of a curved domain than in the lower part: assuming a uniform distribution of heat-producing elements and a core ratio of 50% (close to that of Earth), close to 60% of the disc lies above the mid-depth; closer to two thirds for a true sphere.
+
+In general, the behaviour of internally-heated fluids in annular domains is not well understood. Qualitatively, we can comfortably say that curvature should suppress convective vigour - which, given that internal heating itself suppress convection, suggests that such systems should be expected to be fairly quiescent.
+
++++
+
+## From analytical to numerical methods
+
++++
+
+In this section, we have endeavoured to 'fill the toolbox' with the most relevant analytical instruments drawn from across the mantle convection literature. While much of the theory is canonical and attested beyond dispute, it is clear that there remain substantial gaps: dubious derivations inspired by small-run numerical studies and peppered with unquantified or arbitrary constants, as well as certain scenarios and combinations of scenarios that are yet to be rigorously described in the literature.
+
+It may seem odd or incredible that such basic questions would remain unanswered (or unconvincingly answered) given the many decades of sustained inquiry and the availability in more recent times of increasingly cheap and powerful computers. It is as if generations of scientists have relegated the details to 'future work' and then forgotten to get around to it. Indeed, we speculate that this is exactly what has happened, and that - far from suggesting any defects in the conduct of individual workers - the driver is in fact an unfortunate sociological force emerging from the way scientific publishing works. (See Chapter 2 for more detail on this topic.)
+
+Whatever the cause, the consequence is that there is a great deal of 'low-hanging' fruit to be plucked - but only if we have appropriate tooling at our disposal.

@@ -44,6 +44,10 @@ from analysis import analysis, cylindrical
 
 +++
 
+The ultimate endmember of convection is conduction: a state of affairs where heat moves while matter does not.
+
++++
+
 ### Conduction in a Cartesian domain
 
 ```{code-cell} ipython3
@@ -345,7 +349,7 @@ $$
 If $h_{T_{max}}$ is less than zero for a particular value of $H$, then that maximum will never be realised and the true maximum temperature will be that at the mantle base, which is unit in our dimensionless treatment. The condition $h_{T_{max}} > 0$ thus represents the regime boundary between those conductive solutions that cool into the core and those that only cool into space. This occurs at exactly $H = 2$, or more generally:
 
 $$
-H_{\mathrm{cr}} = \frac{1}{{{T_{c}}_{\mathrm{av}}}_{(H=0)}}, \quad \mathrm{Ra} < {\mathrm{Ra}}_{\mathrm{cr}}
+H_{\mathrm{crit}} = \frac{1}{{{T_{c}}_{\mathrm{av}}}_{(H=0)}}, \quad \mathrm{Ra} < {\mathrm{Ra}}_{\mathrm{cr}}
 $$
 
 Where $H_\mathrm{crit}$ is the critical heating factor above which the mantle cools into the core and at which the lower boundary becomes effectively insulating, as previously discussed.
