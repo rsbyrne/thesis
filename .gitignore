@@ -2,11 +2,14 @@
 scratch/
 cache/
 dropbox/
+temp/
 book/_build/
 book/_old_template
 book/exports
-book/content/**/*.ipynb
+book/content/*
+!book/content/**/
 !book/content/**/*.md
+!book/content/**/*.py
 /data/
 livestation/data/
 *.pem

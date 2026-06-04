@@ -19,6 +19,7 @@ sudo pip install -U --no-cache-dir --break-system-packages \
   jupytext \
   mystmd \
   pyyaml \
-  jupyterlab_myst
+  jupyterlab_myst \
+  
 
 sudo jupyter server extension enable jupytext

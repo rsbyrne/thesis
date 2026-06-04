@@ -203,10 +203,6 @@ fig = imop.hstack(canvas1, canvas2)
 fig
 ```
 
-FRAGMENTARY
-
-+++
-
 When we insulate the lower boundary (setting its derivative to zero) and supply heat from the interior instead, we get an 'internally heated' geotherm. The marginally more exotic lower boundary in this case might seem to make things more complicated, but actually it simplifies matters: since every layer must transact all of the heat produced by lower layers, and since those lower layers cumulatively produce heat in direct proportion to how many of them there are (i.e. in proportion to the present mantle depth $h$), the temperature gradient scales with length squared {numref}`isocondh_fig`:
 
 $$ \begin{align*}
@@ -1310,6 +1306,54 @@ all_synth = np.concat(tuple(cylindrical_mixed_heating(hs, f=f, H=H) for H, f in 
 all_natural = np.concat(frm['geotherm'].values)
 fullcase_r2score_value = r2_score(all_natural, all_synth)
 fullcase_r2score_value
+```
+
+```{code-cell} ipython3
+import numpy as np
+from pysr import PySRRegressor
+
+# ---------------------------------------------------------
+# 1. GENERATE SYNTHETIC "GEODYNAMICS" DATA
+# ---------------------------------------------------------
+np.random.seed(42)
+
+# Create 500 random data points for f (0.1 to 1.0) and H (0 to 10)
+f = np.random.uniform(0.1, 1.0, 500)
+H = np.random.uniform(0.0, 10.0, 500)
+
+# We invent a "secret" physical law that PySR has to discover blindly.
+# Let's say Ra_c anchors at 657.51 and scales with H and inversely with f^2.
+Ra_c_true = 657.51 + 12.5 * (H / f**2)
+
+# Add a tiny bit of "numerical noise" to mimic real model outputs
+Ra_c_measured = Ra_c_true + np.random.normal(0, 0.05, 500)
+
+# Stack our input variables into a 2D matrix (X)
+X = np.stack((f, H), axis=1)
+y = Ra_c_measured
+
+# ---------------------------------------------------------
+# 2. CONFIGURE THE SYMBOLIC REGRESSOR
+# ---------------------------------------------------------
+model = PySRRegressor(
+    niterations=40,  # Number of evolutionary generations to run
+    binary_operators=["+", "-", "*", "/"], # The fundamental math operations
+    unary_operators=["exp"], # Crucial for finding your Frank-Kamenetskii viscosity law!
+    model_selection="best",  # Automatically picks the "Goldilocks" equation
+    loss="loss(prediction, target) = (prediction - target)^2" # Mean Squared Error
+    )
+
+# ---------------------------------------------------------
+# 3. RELEASE THE EVOLUTIONARY HOUNDS
+# ---------------------------------------------------------
+print("Evolving equations...")
+model.fit(X, y, variable_names=["f", "H"])
+
+# ---------------------------------------------------------
+# 4. VIEW THE RESULTS
+# ---------------------------------------------------------
+print("\n=== THE DISCOVERED LAW ===")
+print(model.sympy())
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
