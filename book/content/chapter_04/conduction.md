@@ -44,11 +44,69 @@ from analysis import analysis, cylindrical
 
 +++
 
-The ultimate endmember of convection is conduction: a state of affairs where heat moves while matter does not.
+The minimal endmember of convection is conduction: a state of affairs where heat moves while matter does not. Every convecting system 'contains' a conducting system as a potential of its parameter space, and a system's behaviour when in a state of pure conduction can serve as a strong guide for its behaviour under true convection. In particular, knowing the notional conductive temperature at every position in the system allows us to assess the real (convective) temperature in terms of an anomaly above or below that value; that is to say, the conductive temperature provides a robust and meaningful 'natural scale' for the temperature anywhere in the domain. Because a system's behaviour at equilibrium under conduction is fully time-independent, it can in theory be calculated directly from the fixed model parameters before the model is even run: i.e. it is work that only needs to be done once, which is why we're doing it now.
+
+A rigorous understanding of conduction not only aids with global intepretation: it is also essential for boundary layer analysis. A boundary layer is defined by conduction: it is in a sense a 'tiny domain' within the larger domain where the local conditions are subcritical for convection and which therefore has 'no choice' but to shuttle heat slowly via conduction. Insofar as convection is a device for maximising heat transport, it ultimately only works by minimising boundary layer thickness, recognising (as it were) that in the final analysis, heat can only leave a closed domain via conduction, and conduction can only be accelerated by generating higher temperature drops over shorter distances. Thus any expression of the conductive geotherm across an entire domain is also an expression for the geotherm across its boundary layers, adjusted for the different thermal and spatial scales (and assuming the domain is internally congruent, as is typically the case).
+
+It is trivial to calculate the conductive geotherm from purely numerical means. For starters, any convection model can be tuned for pure conduction simply by dropping the *Rayleigh* number (or equivalent) below the critical threshold. This is wasteful, of course, because the advection step is being calculated and applied redundantly. For that reason, most numerical convection codes (like *Underworld*) offer a conduction-only solver, which in principle only has to be run once. Our models actually employ such a solver as a normal part of their initialisation routine, using it to provide an extremely precise conductive geotherm based solely on the geodynamic parameters and boundary conditions at startup, mostly for the benefit of the analysis code (for example, when calculating the *Nusselt* number): this is much more robust than calculating a conductive geotherm ahead of time and simply calibrating the data after the fact.
+
+However, if we wish to reduce model data into symbolic forms, it is not enough to have a quantitative understanding of the conductive state. We need expressions - indeed, laws - that describe the domain as a whole and produce analytically perfect geotherms as a (continuous) function of the physically meaningful model parameters. Since our models are dimensionless and all share the same basic boundary setup, there are only two free parameters that can determine the conductive geotherm: the internal heat production rate $H$ and the mantle curvature $f$. Thus, without knowing any more than we already do, we can confidently say:
+
+$$
+T_\mathrm{c}(h) = g(f, H)
+$$
+
+Where $g$ is some function to be determined.
+
+Our basic model setup is fairly simple, by design, and so it is technically possible to obtain $g$ by symbolic means alone. This is the classic approach as found in the textbook literature ([@Schubert2001-ea]). It starts with an observation from Fourier's law, wherein the heat flowing out of each infinitesimal volume must (at equilbrium) exactly equal the heat being produced in the volume:
+
+$$\nabla^2 T = -H$$
+
+Where $\nabla$ is the differential operator (equivalent to $d/dx$ in one dimension) and $\nabla^2$ is a synonym for the Laplace operator $\Delta$. To find $T(h)$, we need to integrate the expression twice and solve for the resultant integration constants. In a Cartesian geometry, this produces a quadratic (since the derivative of the derivative of a constant is a square). In a cylindrical geometry, the integral is distorted by the changing spatial scales implied at each mantle height $h$:
+
+$$
+\frac{d}{dr} \left( r \frac{dT}{dr} \right) = -H r
+$$
+
+Where $r$ is the planetary radius (we discuss this below).
+
+This brings us to the general form:
+
+$$
+T(r) = -\frac{H}{4} r^2 + C_1 \ln r + C_2
+$$
+
+Where $C_1$ and $C_2$ are the integration constants. The physics of each different case are entirely contained within these constants, which can be obtained by solving for the stipulated boundary conditions - two conditions (upper and lower) for two unknowns.
+
+Though the maths can get suprisingly thorny, it is not especially challenging for the cases we are considering. Nevertheless, in this section, we are going to go about obtaining $T(h)$ in a rather different way. Instead of starting with Fourier's law, we will start with numerical data produced by a direct solve inside an appropriately configured 'live' model. That data will then be analysed for obvious symmetries, informed by basic logic and intuition, to generate provisional expressions that can be worked algebraically to reproduce the geotherm itself. It will be seen that, in all cases, we can reproduce the classic formulations from observation alone. The exercise will not only serve to test our code: it will also test our larger problem-solving methodology, and demonstrate how a data-first approach can not only acquire symbolic truth, but can do so in a way that surfaces important symmetries that might have been overlooked or downplayed under a conventional approach.
 
 +++
 
 ### Conduction in a Cartesian domain
+
++++
+
+As discussed in a previous chapter, the Cartesian domain is a subset and an endmember of the cylindrical domain, obtained by taking $f$ to the limit of $1$. Conceptually, a Cartesian domain represents a geophysical layer that is arbitrarily thin relative to the bulk planetary radius; this is far from unrealistic, given that so-called 'super-Earths' could easily have relatively thin active mantles stretched across a relatively long outer circumference [@Shoji2015-cf].
+
+Conduction in the Cartesian case is trivial to obtain by either analytical or numerical means. Nevertheless, it is worth obtaining these formulations explicitly because we will shortly be relying on them to validate the cylindrical cases.
+
++++
+
+#### Basal heating
+
++++
+
+The basally-heated Cartesian case is the simplest possible case we could consider, and appropriately, it has the simplest possible geotherm. A temperature drop of $1$ is felt across a spatial extent of $1$ in equal steps through equal distances - thus:
+
+$$
+\frac{dT}{dh} = 1
+$$
+
+Bluntly, this is not even worth graphing.
+
++++
+
+#### Internal heating
 
 ```{code-cell} ipython3
 :tags: [remove-cell]
@@ -144,6 +202,33 @@ fig = imop.hstack(canvas1, canvas2)
 
 fig
 ```
+
+FRAGMENTARY
+
++++
+
+When we insulate the lower boundary (setting its derivative to zero) and supply heat from the interior instead, we get an 'internally heated' geotherm. The marginally more exotic lower boundary in this case might seem to make things more complicated, but actually it simplifies matters: since every layer must transact all of the heat produced by lower layers, and since those lower layers cumulatively produce heat in direct proportion to how many of them there are (i.e. in proportion to the present mantle depth $h$), the temperature gradient scales with length squared {numref}`isocondh_fig`:
+
+$$ \begin{align*}
+\frac{dT_c}{dh} &= H\cdot h \\
+\therefore T_c(h) &= H \frac{1 - h^2}{2}
+\end{align*} $$
+
+Where $H$ is the per-mass heating rate and $h$ is the dimensionless height from the base of the mantle. The maximum mantle temperature possible for a given value of $H$ is thus $H/2$.
+
+A consequence of pure internal heating is that the gradient at the upper boundary (for $h$ in $(0, 1)$) is always $H$, since $H$ is the only heat source and the outer boundary is the only heat sink. We will touch on this again when we discuss the equivalent cylindrical case.
+
++++
+
+```{figure} #isocondh
+:name: isocondh_fig
+
+Summary of the scaling behaviours of isoviscous conduction for varying internal heating parameter $H$. The parabola is evident (albeit on its side, when $h$ is allowed to be vertical, as is conventional); temperature clearly goes linearly as a function of the square of the dimensionless height from the base of the mantle $h^2$.
+```
+
++++
+
+#### Mixed heating
 
 ```{code-cell} ipython3
 :tags: [remove-cell]
@@ -288,50 +373,9 @@ fig
 # canvas2
 ```
 
-#### Internal heating
+If we permit the system to have both a lower boundary of temperature $1$ and a volumetric heating factor of $H$, we enter the mixed-heating regime. With two different heat sources, and (potentially) two different heat sinks, matters are more complicated - but not much more.
 
-+++
-
-```{figure} #isocondh
-:name: isocondh_fig
-
-Summary of the scaling behaviours of isoviscous conduction for varying internal heating parameter $H$. Temperature goes linearly as a function of dimensionless height from the base of the mantle, $h^2$.
-```
-
-+++
-
-FRAGMENTARY
-
-+++
-
-To provide some bounds on the expected behaviour of a mixed-heating model, it is helpful to review the effects of purely internal heating. Without the ability to arbitrarily specify a temperature scale, it is natural to use that which arises from pure conduction. Under a scenario of pure internal heating, the conductive geotherm is no longer linear, but scales with length squared [@Turcotte2014-by] {numref}`isocondh_fig`:
-
-$$ \begin{align*}
-\frac{dT_c}{dh} &= H\cdot h \\
-\therefore T_c(h) &= H \frac{1 - h^2}{2}
-\end{align*} $$
-
-Where $H$ is the per-mass heating rate and $h$ is the dimensionless height from the base of the mantle. The maximum mantle temperature possible for a given value of $H$ is thus $H/2$. Because, at the outer boundary, the thermal flux is exactly $H$ (or, technically, $H \cdot \rho$ if dimensionalised), $H$ here is identical to the 'conductive *Nusselt* number', ${Nu}_{c}$.
-
-+++
-
-#### Mixed heating
-
-+++
-
-```{figure} #isocondhmixed
-:name: isocondhmixed_fig
-
-Summary of the scaling behaviours of the conductive solution for mixed heating. The inner boundary is set to dimensionless temperature $T=1$, the outer to $T=0$. On the right, average temperature and the slope of $\delta T / \delta h$ are given as functions of $H$. Gradient clearly varies as a function of dimensionless height $h$ above the mantle base according to a slope given by $-H$. The conductive geotherm for mixed heating is therefore, in fact, a parabola.
-```
-
-+++
-
-FRAGMENTARY
-
-+++
-
-To sharpen this analysis, we can look more closely at the conductive profile. While it is possible to derive this from first principles, it is more easily illustrated by a numerical approach {numref}`isocondhmixed_fig`. It is clear that the conductive geotherm forms a parabola whose second derivative is exactly equal to $-H$; the rest follows by integration, with the constants provided by logic and observation:
+The numerical data exposes the trend immediately ({numref}`isocondhmixed_fig`). It is clear that the conductive geotherm forms a parabola whose second derivative is exactly equal to $-H$; the rest follows by integration, with the constants provided by logic and observation:
 
 $$ \begin{align*}
 {T_c''(h)} &= -H \\
@@ -352,7 +396,7 @@ $$
 H_{\mathrm{crit}} = \frac{1}{{{T_{c}}_{\mathrm{av}}}_{(H=0)}}, \quad \mathrm{Ra} < {\mathrm{Ra}}_{\mathrm{cr}}
 $$
 
-Where $H_\mathrm{crit}$ is the critical heating factor above which the mantle cools into the core and at which the lower boundary becomes effectively insulating, as previously discussed.
+At $H_\mathrm{crit}$ exactly, the flux across the lower boundary is zero, making it effectively insulating - thus the model reproduces an internally-heated model at that value.
 
 If we define a 'conductive *Nusselt* number' - something of an oxymoron - we can see how the true *Nusselt* number should be expected to scale:
 
@@ -366,168 +410,23 @@ I.e. the surface flux in the mixed case is simply the sum of the two heat driver
 
 +++
 
-### Establishing a cylindrical coordinate system
+```{figure} #isocondhmixed
+:name: isocondhmixed_fig
 
-```{code-cell} ipython3
-:label: simplesinu
-:tags: [remove-cell]
-
-imop.hstack(*map(
-    image.fromfile,
-    reversed(glob(os.path.join(aliases.storagedir, 'simple_sinu_*.png')))
-    ))
+Summary of the scaling behaviours of the conductive solution for mixed heating. The inner boundary is set to dimensionless temperature $T=1$, the outer to $T=0$. On the right, average temperature and the slope of $\delta T / \delta h$ are given as functions of $H$. Gradient clearly varies as a function of dimensionless height $h$ above the mantle base according to a slope given by $-H$. The conductive geotherm for mixed heating is therefore, in fact, a parabola.
 ```
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-Thus far we have restricted this discussion to rectilinear ('Cartesian') planar boxes. Real planets are of course three-dimensional balls, not two-dimensional boxes. While we are bound to the planar realm by the dictates of pragmatism, we can at least step towards realism by embracing a curved geometry. Indeed, it transpires that even this small step introduces substantial complications - and interesting new behaviours.
-
-In any convection model, gravity defines the natural 'down' direction and gives us our first most important scale: the depth $z$ from the surface, or its complement, the height from the model base $h=1-z$.
-
-If the domain is allowed to curve around a certain locus, a cylindrical or annular geometry is obtained which is more appropriate for planetary mantles. While we retain $h$ and $z$ as terms relevant to any action within the domain, we must also introduce a concept of radial height $r$, understood here to represent the distance from the planetary centre of gravity. The cylindrical domain, for us representing the mantle, is thus bounded by the inner radius $r_{i}$ and the outer radius $r_{o}$, defining an area of $\pi(r_o^2 - r_i^2)$.
-
-Our choice of radii implies a degree of curvature $f$:
-
-$$ f \equiv \frac{r_i}{r_o} $$
-
-Where $f\to1$ is equivalent to an infinitely wide Cartesian box, $f\to0$ represents a complete disc (i.e. no hole in the middle), and the values $\sim 0.5$ and $\sim 0.9$ would be appropriate for the whole mantle and upper mantle respectively. The ratio of radii $f$ is identical to the ratio of circumferences, so that $f=0.5$ represents a system where the arc length of the base is half that of the surface. (Note that this would imply infinite planetary radius at $f=1$ - hence the planar-like endmember $f=1$ is not strictly reachable under an assumption of curvature, though arbitrarily high values can be set to reproduce that behaviour [@Jarvis1993-cb].) Since areas and volumes of spheres are direct functions of radius, raising $f$ to the power of the number of dimensions in our domain $n$ (i.e. $n=2$ for a cylindrical model and $n=3$ for a true spherical model) effectively gives us the 'core ratio': the proportion of the planet as a whole ($r_o^n$) that lies below the mantle ($r_i^n$).
-
-If we further stipulate that the radial thickness of the domain is restricted to unit:
-
-$$
-\Delta r = r_{o} - r_{i} = 1
-$$
-
-$$
-r_{o} \to 1 \quad \mathrm{as} \quad f \to 0
-$$
-
-Then:
-
-$$
-r_i = \frac{f}{1 - f}, \quad r_o = \frac{1}{1 - f}
-$$
-
-$$
-r(h) = r_i + h = \frac{f}{1 - f} + h
-$$
-
-In short: honouring this constraint allows us to produce a workable radial coordinate system simply by setting a desired value of $f$.
-
-Many useful simplifications and physically meaningful representations of equations involve manipulations around $f$. In various expansions which we will encounter, the $f$ parameter often turns up in ratios of logarithms; in these cases, it will tidy up the notation considerably to consider a logarithm of base $f$:
-
-$$
-{\log_f}{x} = \frac{\ln{x}}{\ln{f}}
-$$
-
-While the convention of unit layer thickness has many advantages, at other times it may be convenient to set the radius at the outer boundary as unit, and relax the constraint for the mantle thickness. This has the effect of scaling the inner radius so that it is exactly $f$. We will call this metric the 'planetary radial scale' ${r^*}$:
-
-$$
-{{r^*}}_i = f, \quad {{r^*}}_o = 1
-$$
-
-From this we can obtain the 'dimensionless radial thickness', which appears very commonly in closed-form solutions and can also be expressed in terms of the natural $r$ constants:
-
-$$
-\Delta {r^*} = 1 - f = \frac{r_i + r_o}{r_o}
-$$
-
-Finally, we can write a general statement for $r^*$ as a function of $h$:
-
-$$
-{r^*}(h) = \frac{r(h)}{r_o} = h \Delta {r^*} + f
-$$
-
-(Note that ${r^*}$ and $r$ converge as $f$ approaches zero.)
-
-This leaves us with four different terms to describe radial position: $h$, the dimensionless height from the mantle base; $z$, its complement; $r$, the radial scale such that the thickness of the mantle is one; and ${r^*}$, the radial scale such that the total planetary radius is one. Each of these scales will prove natural in some contexts and less so in others, and all find use in our analysis.
-
-We have our radial coordinate system: now we need a system for our angular position too. The obvious way to do this is by simply providing an angle $\theta$ in radians anticlockwise from an arbitrary origin - i.e. $0 \le \theta < 2\pi$. In practice, we will often want to work with only a small wedge of the planet at any given time. This is equivalent to choosing a maximum value, $\Theta$:
-
-$$ 0 \le \theta < \Theta \le 2\pi $$
-
-If the simulation is to be interpreted as (implicitly) a piece of a global, radially symmetrical planform, values of $\Theta$ must fall within $\pi / l$, where $l$ is any positive integer. This allows the domain to be mirrored and multiplied to cover the full disc without distortion ([](#simplesinu_fig)).
-
-```{figure} #simplesinu
-:name: simplesinu_fig
-
-Illustration of the relationship between a wedge of an annulus and the full disc. We can tile the wedge across the whole disk by first mirroring it, then copying it. If we wish to avoid stretching or squeezing the original state to make it fit, we must ensure that $\Theta$ (angular extent of the wedge in radians) is a positive integer ratio of $\pi$. In this case, $\Theta$ goes from $\pi/3$ (left) to $2\pi/6$ (centre) to $2\pi$ (right: the full annulus).
-```
-
-In the same way that we built an artificial scale $r$ for the purpose of normalising the radial thickness, we can also build a scale $l$ for the width. This also gives us a chance to reverse the convention from anticlockwise (right-to-left) to clockwise (left-to-right), which is more familiar for Cartesian domains.
-
-$$
-l = \frac{\Theta - \theta}{\Theta}
-$$
-
-Defined this way, the coordinate pair $(l, h)$ reproduces in the annulus the $(x, y)$ coordinate system of a Cartesian unit square. This gives us a universal coordinate system for all cylindrical domains, regardless of curvature: allowing, for example, the 'splaying' of a Cartesian box model into an annular wedge, or the 'squaring up' of a wedge into a box.
-
-When dealing with a Cartesian box geometry, one characteristic measure is the aspect ratio $A$, where for instance $A=1$ would denote a square box and $A=3$ a wide rectangle. If we wish to carry this measure into the cylindrical domain we need to choose a particular ring - a curve of constant depth - to be the characteristic angular length scale. The two most obvious candidates would be the outer and inner boundaries. However, it proves most convenient to take a different approach and instead draw an arc through the mid-depth, halfway (radially) between the outer and inner boundaries. The aspect ratio can then be defined as the length of this arc divided by the radial length. The mid-radius can be calculated from $f$:
-
-$$
-r_m \equiv \frac{r_{i} + r_{o}}{2} = \frac{1 + f}{2 \left( 1 - f \right)}
-$$
-
-Because the height of the domain in $r$ coordinates is constrained to be one, we can exploit the difference of squares to come up with a useful system of substitutions based on $2r_m$ (i.e. twice the mid-radius):
-
-$$
-{r_o}^2 - {r_i}^2 = (r_o - r_i)(r_o + r_i) = 2r_m = \frac{1+f}{1-f}
-$$
-
-
-
-Since the circumference of a complete circle is $ 2 \pi r$, the angular length at depth $r_m$ can be calculated from $\Theta$:
-
-$$
-A = r_m \Theta
-$$
-
-Such a scheme leaves us with two competing claims for a 'natural' denominator of the angular coordinate - $\Theta$ and $r_m$. While authors have sometimes preferred to keep $\Theta$ and $r_m$ constant and allow $A$ to vary [@Jarvis1994-np], we have for the most part chosen to fix $A$ and $r_m$ with $\Theta$ as the free parameter, as in [@Jarvis1993-cb]. One of the virtues of this choice is that it preserves the $(l, h)$ coordinate system over varying $A$. This simplifies comparisons with plane-layer simulations, though potentially at the cost of producing planforms which could be unstable if scaled to the full annulus.
-
-In the Cartesian case, when the height of the box is set to unit, the aspect ratio is not only equivalent to the box width: it is also equivalent to the box *area*. The virtue of defining cylindrical $A$ using the mid-depth is that this property is preserved even for extreme values of $f$. Parameterising a model in terms of area is particularly advantageous when dealing with system forcings, like internal heat, which scale with area.
-
-While it is trivial to divide the domain in an angular sense (i.e. splitting the wedge into more wedges), dividing it in a radial sense requires a little more consideration.
-
-It will shortly prove useful to have a function at hand that provides the proportion of the annulus that lies below a particular depth - i.e. a ratio from $0$ to $1$ where $0$ obtains at the base of the annulus and $1$ obtains at the outer edge. We shall dub this '$\mathrm{Disc}$'. For a Cartesian box, $Disc(h) = h$ (because the proportion of the domain below, say, 80% of the way up, is by definition 80% in a square box). It is a little tricker in the annulus, but if we use the dimensionless radius $r^*$ (a function of $h$ which comes to $1$ at the outer boundary and $f$ at the inner boundary), we can obtain it via:
-
-$$
-\mathrm{Disc}(h) = \frac{{r^*(h)}^2 - f^2}{1-f^2}
-= \frac{r(h)^2 - {r_i}^2}{2r_m}
-$$
-
-As we have already established that the total area will always equal the aspect ratio $A$, the true area under any depth can then be given simply as $\mathrm{Disc} \cdot A$.
-
-Laying the datum for the aspect ratio through the mid-depth also has the benefit of providing a good reference scale for the angular length, which allows us to set aside $\theta$ and $\Theta$ altogether and deal with both radial and angular distances in like units. Let $s$ be the angular length at any given depth. We already know that $s_m = A$ by definition, but we can just as easily calculate $s$ for any value of $r$:
-
-$$
-s(h) = r(h) \Theta = r(h) \frac{A}{r_m} = r(h) A \frac{2 \left( 1 - f \right)}{1 + f}
-$$
-
-At low values of $f$ (therefore high curvature), $s$ is strongly dependent on $r$, with the inner surface much shorter than the outer surface. Conversely, at values of $f$ approaching $1$, the dependence on $r$ disappears as the value of $r_o$ becomes indistinguishable from $r_i$ - in which case $s \approx A$ throughout the domain, as it does in a Cartesian box.
-
-It will shortly prove convenient to non-dimensionalise $s$ as ${s^*} = s / A$, such that the dimensionless length through the mid-depth ${s^*} = 1$. We can then write ${s^*}$ very simply as a function of ${r^*}$ and the inner and outer lengths accordingly:
-
-$$
-s^*(h) = 2 \frac{r^*(h)}{1+f}
-$$
-
-$$
-{s^*}_i = 2 \frac{f}{1+f}, \quad {s^*}_o = 2 \frac{1}{1+f}
-$$
-
-If we expand the terms and recall the $2r_m$ substitution we previously mentioned, this turns out to be equivalent to simply the local radius normalised by the midpoint radius - which makes sense, since the angular coordinate system is based on the length through the mid-depth:
-
-$$ \begin{align*}
-s^*(h) &= 2 \cdot \frac{1}{1+f} \cdot \frac{1}{r_o} \cdot r(h)
-= 2 \cdot \frac{1-f}{1+f} r(h) \\
-&= \frac{r(h)}{r_m}
-\end{align*} $$
-
-The length $s$ is, among other things, the factor by which an average measurement of some variable taken across a layer can be converted into a total value for that layer. It is vital to account for varying $s$ whenever comparing between different layers in a given system, or between equivalent layers in systems of differing $f$.
 
 +++
 
-### Conduction in the basally-heated cylindrical case
+### Conduction in cylindrical domains
+
++++
+
+The Cartesian cases revealed themselves more or less directly upon observation. The cylindrical cases are not so trivial, but the 'method of inspection' still gets us where we need to go.
+
++++
+
+#### Basal heating
 
 ```{code-cell} ipython3
 ---
@@ -834,7 +733,7 @@ Which is reassuring.
 
 +++
 
-### Internal heating in the annulus
+#### Internal heating
 
 ```{code-cell} ipython3
 ---
@@ -1219,7 +1118,7 @@ We could simplify a little further, but retaining this form will ease comparison
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-### Mixed heating in the annulus
+#### Mixed heating
 
 ```{code-cell} ipython3
 ---
@@ -1612,7 +1511,7 @@ $$
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Our purpose in this section was to derive closed-form expressions of the geothermal and thermal flux gradients for conductive heat transport at equilibrium. The general case (the 'supremum', in a sense) countenances a mixed heating regime in a curved domain, with three free parameters: the rate of internal heat production per area ($H$ in the range $0-10$), the degree of curvature ($f$ in the range $0-1$), and the nature of the lower boundary layer (effectively a boolean variable or 'switch' which toggles between a fixed gradient of zero or a fixed value of $1$). All other cases explored in this section are effectively endmembers of this general case: non-heating $H=0$ versus heating $H>0$ and non-curved ($f=1$) versus curved ($f<1$) for each of the two choices of boundary condition; discarding the farcical case of neither basal nor volumetric heating, that gives us six cases in total. Some of these scalings were derived symbolically; others were derived empirically, then reduced into a symbolic form. All align with the literature, albeit in several cases in somewhat novel forms as inspired by the logic we have outlined and/or a close inspection of the empirical data. The results are intended to serve simultaneously as a convenient reference, a benchmarking exercise for our physics code, and as a theoretical backstop for the work that is to come.
+Our purpose in this section was to derive closed-form expressions of the geothermal and thermal flux gradients for conductive heat transport at equilibrium. The general case (the 'supremum', in a sense) countenances a mixed heating regime in a curved domain, with three free parameters: the rate of internal heat production per area ($H$ in the range $0-10$), the degree of curvature ($f$ in the range $0-1$), and the nature of the lower boundary layer (effectively a boolean variable or 'switch' which toggles between a fixed gradient of zero or a fixed value of $1$). All other cases explored in this section are effectively endmembers of this general case: non-heating $H=0$ versus heating $H>0$ and non-curved ($f=1$) versus curved ($f<1$) for each of the two choices of boundary condition; discarding the farcical case of neither basal nor volumetric heating, that gives us six cases in total. Each expression derived empirically, then reduced into a symbolic form. All align with the literature, albeit in several cases in somewhat novel forms as inspired by the logic we have outlined and/or a close inspection of the empirical data. The results are intended to serve simultaneously as a convenient reference, a benchmarking exercise for our physics code, and as a theoretical backstop for the work that is to come.
 
 +++
 

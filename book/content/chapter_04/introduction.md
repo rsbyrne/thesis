@@ -1,6 +1,6 @@
 # Critical Convection
 
-FRAGMENT
+In an earlier chapter, we saw how convecting systems can be parameterised and analysed in terms of their subcritical behaviours. In this chapter, we will put our model (and its deployment architecture, Everest) through its paces by systematically and exhaustively characterising the conductive geotherms and critical *Rayleigh* numbers across the full parameter space contemplated by this thesis.
 
 In contrast to classical approaches, which are predominantly analytical, we intend to test and demonstrate the merits of a 'data-driven' approach in which non-trivial symbolic relations are extracted from numerical data wherever possible. Our reasons for proceeding in this way are fourfold:
 

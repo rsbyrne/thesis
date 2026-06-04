@@ -91,7 +91,8 @@ book/content/chapter_02/junk/cylindrical_basal.md
 book/content/chapter_02/junk/cylindrical_internal.md
 book/content/chapter_02/junk/heating.md
 book/content/chapter_02/junk/simple.md
-book/content/chapter_02/theory.md
+book/content/chapter_02/ms98.md
+book/content/chapter_02/numerical.md
 book/content/chapter_03/conclusion.md
 book/content/chapter_03/everest.md
 book/content/chapter_03/extra/chapter_XX_everest/conclusion.md
@@ -108,8 +109,6 @@ book/content/chapter_03/extra/modelish_test.svg
 book/content/chapter_03/extra/scaling.md
 book/content/chapter_03/extra/theory.md
 book/content/chapter_03/introduction.md
-book/content/chapter_03/ms98.md
-book/content/chapter_03/numerical.md
 book/content/chapter_03/scraps.md
 book/content/chapter_04/conclusion.md
 book/content/chapter_04/conduction.md

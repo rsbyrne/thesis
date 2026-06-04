@@ -34,7 +34,7 @@ from analysis import cylindrical
 
 +++
 
-
+NOTE TO SUPERVISOR: I'm writing up this section now. I have used my Everest/PlanetEngine software to generate over a hundred thousand models in complex converging series to identify to five or six decimal places exactly what the critical Rayleigh number is for varying geometry and heating scenarios. I expect this will be about five thousand words. I don't believe this work has been done before (certainly not in this way).
 
 +++
 
@@ -318,51 +318,4 @@ ax.scatter(
 for x, y, z in zip(chanx.data, chany.data, slc.index):
     ax.annotate(x, y, round(z, 2))
 canvas
-```
-
-```{code-cell} ipython3
-slc.index
-```
-
-```{code-cell} ipython3
-grpby = slc.groupby('f')
-grpby.max() - grpby.min()
-```
-
-```{code-cell} ipython3
-crit_func(subslc.values)
-```
-
-## Varying heat input
-
-```{code-cell} ipython3
-isomixed
-```
-
-```{code-cell} ipython3
-slc = isomixed[:, 1., 0.999][:]
-```
-
-```{code-cell} ipython3
-canvas = Canvas(size=(6, 6))
-ax1 = canvas.make_ax()
-
-ax1.scatter(
-    Channel(slc.index, lims=(0, 5)),
-    slc.values,
-    )
-
-canvas
-```
-
-```{code-cell} ipython3
-(0.5, 0.75, 1.25, 1.5, 1.75, 2, 2.25, 2.75, 3, 3.25, 3.5, 3.75)
-```
-
-```{code-cell} ipython3
-
-```
-
-```{code-cell} ipython3
-
 ```
