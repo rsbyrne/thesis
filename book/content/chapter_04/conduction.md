@@ -1309,6 +1309,80 @@ fullcase_r2score_value
 ```
 
 ```{code-cell} ipython3
+
+
+# Execute this BEFORE running PySR (e.g., limit to 8 GB)
+limit_memory(8.0)
+```
+
+```{code-cell} ipython3
+from pysr import PySRRegressor
+
+flat_data = []
+
+for (H_val, f_val), temp_list in frm['geotherm'].items():
+    for h_val, T_val in zip(hs, temp_list):
+        flat_data.append([H_val, f_val, h_val, T_val])
+
+df_flat = pd.DataFrame(flat_data, columns=['H', 'f', 'h', 'T'])
+df_flat = df_flat[df_flat['h'] < 1.]
+
+df_flat['r'] = cylindrical.radius(df_flat['h'], df_flat['f'])
+
+X_vars = 'H', 'f', 'r'
+
+X = df_flat[list(X_vars)].values
+y = df_flat['T'].values
+
+model = PySRRegressor(
+    niterations=200,
+    maxsize=30,
+    parsimony=1e-6,
+    binary_operators=["+", "-", "*", "/"],
+    unary_operators=["log"],
+    nested_constraints={
+        "log": {"log": 0},
+        "/": {"/": 0},
+        },
+    model_selection="accuracy",
+    verbosity=1,
+    progress=False,
+    output_directory=os.path.join(aliases.cachedir, 'pysr'),
+    )
+
+print("Evolving known geotherm equations...")
+model.fit(X, y, variable_names=X_vars)
+```
+
+```{code-cell} ipython3
+symp_rep = model.sympy()
+```
+
+```{code-cell} ipython3
+repr(symp_rep)
+```
+
+```{code-cell} ipython3
+model.latex()
+```
+
+$$
+0.0834 H + 0.389f + \frac{f}{r}
+$$
+
+```{code-cell} ipython3
+model.equations_
+```
+
+```{code-cell} ipython3
+obj = model.equations_
+```
+
+```{code-cell} ipython3
+obj.to_csv()
+```
+
+```{code-cell} ipython3
 import numpy as np
 from pysr import PySRRegressor
 

@@ -44,4 +44,14 @@ import math
 # from everest.window import Canvas, DataChannel as Channel
 import utilities
 
+
+import resource as _resource
+
+def limit_memory(max_gb):
+    """Sets a hard memory limit for the current Python process."""
+    limit_bytes = int(max_gb * 1024 * 1024 * 1024)
+    soft, hard = _resource.getrlimit(resource.RLIMIT_AS)
+    _resource.setrlimit(resource.RLIMIT_AS, (limit_bytes, hard))
+    print(f"Kernel memory limited to {max_gb} GB.")
+
 # import analysis

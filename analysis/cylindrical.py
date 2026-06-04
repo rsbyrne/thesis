@@ -3,7 +3,7 @@ from aliases import *
 import sympy
 
 def safe_f(f):
-    return np.clip(f, 0.0001, 0.9999)
+    return np.clip(f, 0.000001, 0.999999)
 
 def r_outer(f):
     f = safe_f(f)

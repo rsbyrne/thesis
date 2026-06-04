@@ -76379,3 +76379,306 @@ Precompiling project...
 [I 2026-06-04 05:49:09.082 ServerApp] Saving conduction.ipynb
 [I 2026-06-04 05:49:09.115 ServerApp] Saving conduction.md
 [W 2026-06-04 05:49:09.115 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 05:51:09.228 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 05:51:09.424 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 05:51:09.427 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 05:51:09.460 ServerApp] Saving conduction.md
+[W 2026-06-04 05:51:09.460 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 05:53:09.598 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 05:53:09.775 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 05:53:09.777 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 05:53:09.845 ServerApp] Saving conduction.md
+[W 2026-06-04 05:53:09.846 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 05:57:09.937 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 05:57:10.122 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 05:57:10.124 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 05:57:10.164 ServerApp] Saving conduction.md
+[W 2026-06-04 05:57:10.164 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 05:58:34.851 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 05:58:34.984 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 05:58:34.988 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 05:58:35.157 ServerApp] Saving conduction.md
+[W 2026-06-04 05:58:35.157 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:00:35.500 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 06:00:35.680 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:00:35.682 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:00:35.715 ServerApp] Saving conduction.md
+[W 2026-06-04 06:00:35.715 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-06-04 06:01:43.634 ServerApp] Notebook workspace/scratch/scratch_002.ipynb is not trusted
+[I 2026-06-04 06:01:44.059 ServerApp] Kernel started: f93dffd8-932d-41ef-aff0-3746685a3263
+[I 2026-06-04 06:01:44.428 ServerApp] Connecting to kernel f93dffd8-932d-41ef-aff0-3746685a3263.
+[I 2026-06-04 06:01:51.099 ServerApp] Kernel restarted: f93dffd8-932d-41ef-aff0-3746685a3263
+[I 2026-06-04 06:01:51.110 ServerApp] Starting buffering for f93dffd8-932d-41ef-aff0-3746685a3263:df63796b-fbba-4a7f-80cd-37863cee0280
+[I 2026-06-04 06:01:51.170 ServerApp] Connecting to kernel f93dffd8-932d-41ef-aff0-3746685a3263.
+[I 2026-06-04 06:01:51.170 ServerApp] Restoring connection for f93dffd8-932d-41ef-aff0-3746685a3263:df63796b-fbba-4a7f-80cd-37863cee0280
+[I 2026-06-04 06:02:51.571 ServerApp] Saving file at /workspace/working/working_007.ipynb
+[I 2026-06-04 06:02:51.572 ServerApp] Saving working_007.ipynb
+[I 2026-06-04 06:03:44.520 ServerApp] Saving file at /workspace/scratch/scratch_002.ipynb
+[I 2026-06-04 06:03:44.521 ServerApp] Saving scratch_002.ipynb
+[I 2026-06-04 06:08:25.371 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 06:08:25.565 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:08:25.567 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:08:25.606 ServerApp] Saving conduction.md
+[W 2026-06-04 06:08:25.606 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:10:26.995 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:10:26.997 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:10:27.111 ServerApp] Saving conduction.md
+[W 2026-06-04 06:10:27.111 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:14:11.335 ServerApp] Creating new directory in /workspace/cache
+[I 2026-06-04 06:14:27.514 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 06:14:27.839 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:14:27.841 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:14:27.870 ServerApp] Saving conduction.md
+[W 2026-06-04 06:14:27.870 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:16:28.039 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 06:16:28.217 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:16:28.218 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:16:28.252 ServerApp] Saving conduction.md
+[W 2026-06-04 06:16:28.253 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:23:35.538 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 06:23:35.815 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:23:35.817 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:23:35.856 ServerApp] Saving conduction.md
+[W 2026-06-04 06:23:35.856 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:24:09.454 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 06:24:09.590 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:24:09.592 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:24:09.632 ServerApp] Saving conduction.md
+[W 2026-06-04 06:24:09.632 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:24:14.151 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 06:24:14.327 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:24:14.329 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:24:14.367 ServerApp] Saving conduction.md
+[W 2026-06-04 06:24:14.367 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:25:27.006 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 06:25:27.148 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:25:27.150 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:25:27.180 ServerApp] Saving conduction.md
+[W 2026-06-04 06:25:27.180 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:27:27.289 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 06:27:27.746 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:27:27.748 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:27:27.841 ServerApp] Saving conduction.md
+[W 2026-06-04 06:27:27.841 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:29:27.951 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 06:29:28.136 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:29:28.138 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:29:28.216 ServerApp] Saving conduction.md
+[W 2026-06-04 06:29:28.216 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:37:28.380 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 06:37:28.533 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:37:28.535 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:37:28.600 ServerApp] Saving conduction.md
+[W 2026-06-04 06:37:28.600 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:37:36.287 ServerApp] Saving file at /workspace/analysis/cylindrical.py
+[I 2026-06-04 06:38:26.216 ServerApp] Kernel restarted: 3fc26922-ffa4-4381-98c7-7a73b33e80fd
+[I 2026-06-04 06:38:26.251 ServerApp] Starting buffering for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3
+[I 2026-06-04 06:38:26.318 ServerApp] Connecting to kernel 3fc26922-ffa4-4381-98c7-7a73b33e80fd.
+[I 2026-06-04 06:38:26.318 ServerApp] Restoring connection for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3
+[I 2026-06-04 06:39:28.649 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 06:39:28.771 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:39:28.773 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:39:28.802 ServerApp] Saving conduction.md
+[W 2026-06-04 06:39:28.802 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:39:29.415 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:39:29.417 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:39:29.488 ServerApp] Saving conduction.md
+[W 2026-06-04 06:39:29.488 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:41:28.895 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 06:41:29.028 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:41:29.030 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:41:29.070 ServerApp] Saving conduction.md
+[W 2026-06-04 06:41:29.070 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-06-04 06:41:59.221 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.67ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:41:59.301 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.92ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:41:59.302 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.43ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:41:59.303 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 3.00ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:41:59.365 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.71ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:41:59.366 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.20ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:41:59.407 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.68ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:41:59.408 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.17ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:41:59.447 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.99ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:02.634 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.33ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:02.667 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.41ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:02.669 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.87ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:02.669 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.27ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:02.711 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.53ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:02.711 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.91ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:02.746 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.58ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:02.746 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.79ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:02.785 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:17.520 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.10ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:17.558 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.72ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:17.558 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.02ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:17.559 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.38ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:17.599 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:17.600 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.80ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:17.693 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.62ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:17.694 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.01ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:42:17.756 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.44ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:43:29.128 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 06:43:29.335 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:43:29.337 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:43:29.378 ServerApp] Saving conduction.md
+[W 2026-06-04 06:43:29.378 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-06-04 06:44:59.803 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.53ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:44:59.838 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.74ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:44:59.839 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.20ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:44:59.840 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.75ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:44:59.878 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.54ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:44:59.880 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.02ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:44:59.921 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.76ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:44:59.922 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.42ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:00.014 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.26ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:04.684 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.43ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:04.718 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.40ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:04.719 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.81ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:04.720 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.70ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:04.756 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.30ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:04.756 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.74ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:04.797 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:04.798 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.78ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:04.839 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.13ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:09.181 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.13ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:09.215 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.34ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:09.216 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.83ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:09.216 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.29ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:09.251 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.12ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:09.252 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.73ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:09.290 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.40ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:09.291 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.87ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:09.331 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.18ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:14.192 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.34ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:14.226 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:14.227 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.81ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:14.227 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.62ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:14.269 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:14.270 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.93ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:14.362 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:14.363 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.78ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:14.430 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.36ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:20.621 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.30ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:20.652 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:20.653 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.87ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:20.654 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.66ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:20.692 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.42ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:20.692 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.69ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:20.734 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.39ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:20.734 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.66ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:45:20.770 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.00ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:45:29.751 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 06:45:29.973 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:45:29.975 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:45:30.014 ServerApp] Saving conduction.md
+[W 2026-06-04 06:45:30.014 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:47:30.123 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 06:47:30.300 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:47:30.303 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:47:30.375 ServerApp] Saving conduction.md
+[W 2026-06-04 06:47:30.375 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:51:30.516 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 06:51:30.698 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:51:30.699 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:51:30.731 ServerApp] Saving conduction.md
+[W 2026-06-04 06:51:30.731 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:51:45.251 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[W 2026-06-04 06:51:50.972 ServerApp] delete /workspace/book/content/chapter_04/outputs/20260604_065133_StYGtd/checkpoint.pkl
+[W 2026-06-04 06:51:50.973 ServerApp] delete /workspace/book/content/chapter_04/outputs/20260604_065133_StYGtd/hall_of_fame.csv.bak
+[W 2026-06-04 06:51:50.973 ServerApp] delete /workspace/book/content/chapter_04/outputs/20260604_065133_StYGtd/hall_of_fame.csv
+[I 2026-06-04 06:52:15.832 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:52:15.834 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:52:15.875 ServerApp] Saving conduction.md
+[W 2026-06-04 06:52:15.875 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-06-04 06:52:23.490 ServerApp] delete /workspace/book/content/chapter_04/outputs/20260604_055813_nGTrCc/checkpoint.pkl
+[W 2026-06-04 06:52:23.491 ServerApp] delete /workspace/book/content/chapter_04/outputs/20260604_055813_nGTrCc/hall_of_fame.csv
+[W 2026-06-04 06:52:23.492 ServerApp] delete /workspace/book/content/chapter_04/outputs/20260604_055813_nGTrCc/hall_of_fame.csv.bak
+[W 2026-06-04 06:52:26.859 ServerApp] delete /workspace/book/content/chapter_04/outputs/20260604_055813_nGTrCc
+[I 2026-06-04 06:52:40.976 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:52:40.978 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:52:41.050 ServerApp] Saving conduction.md
+[W 2026-06-04 06:52:41.050 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[W 2026-06-04 06:52:51.219 ServerApp] delete /workspace/book/content/chapter_04/outputs/20260604_065133_StYGtd/hall_of_fame.csv
+[W 2026-06-04 06:52:51.236 ServerApp] delete /workspace/book/content/chapter_04/outputs/20260604_065133_StYGtd/hall_of_fame.csv.bak
+[I 2026-06-04 06:52:53.052 ServerApp] Kernel restarted: 3fc26922-ffa4-4381-98c7-7a73b33e80fd
+[I 2026-06-04 06:52:53.063 ServerApp] Starting buffering for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3
+[I 2026-06-04 06:52:53.128 ServerApp] Connecting to kernel 3fc26922-ffa4-4381-98c7-7a73b33e80fd.
+[I 2026-06-04 06:52:53.128 ServerApp] Restoring connection for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3
+[W 2026-06-04 06:52:54.722 ServerApp] delete /workspace/book/content/chapter_04/outputs/20260604_065133_StYGtd
+[W 2026-06-04 06:52:54.723 ServerApp] 400 DELETE /api/contents/workspace/book/content/chapter_04/outputs/20260604_065133_StYGtd?1780555974709 (172.17.0.1): Directory /home/morpheus/workspace/book/content/chapter_04/outputs/20260604_065133_StYGtd not empty
+[W 2026-06-04 06:52:54.723 ServerApp] wrote error: 'Directory /home/morpheus/workspace/book/content/chapter_04/outputs/20260604_065133_StYGtd not empty'
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 336, in delete
+        await ensure_async(cm.delete(path))
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 900, in delete
+        await self.delete_file(path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1038, in delete_file
+        raise web.HTTPError(400, "Directory %s not empty" % os_path)
+    tornado.web.HTTPError: HTTP 400: Bad Request (Directory /home/morpheus/workspace/book/content/chapter_04/outputs/20260604_065133_StYGtd not empty)
+[W 2026-06-04 06:52:54.725 ServerApp] 400 DELETE /api/contents/workspace/book/content/chapter_04/outputs/20260604_065133_StYGtd?1780555974709 (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 3.33ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-04 06:53:02.330 ServerApp] delete /workspace/book/content/chapter_04/outputs/20260604_065133_StYGtd/hall_of_fame.csv.bak
+[W 2026-06-04 06:53:02.332 ServerApp] delete /workspace/book/content/chapter_04/outputs/20260604_065133_StYGtd/hall_of_fame.csv
+[W 2026-06-04 06:53:04.984 ServerApp] delete /workspace/book/content/chapter_04/outputs/20260604_065133_StYGtd
+[W 2026-06-04 06:53:07.697 ServerApp] delete /workspace/book/content/chapter_04/outputs
+[I 2026-06-04 06:53:12.761 ServerApp] Kernel restarted: 3fc26922-ffa4-4381-98c7-7a73b33e80fd
+[I 2026-06-04 06:53:12.779 ServerApp] Starting buffering for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3
+[I 2026-06-04 06:53:12.844 ServerApp] Connecting to kernel 3fc26922-ffa4-4381-98c7-7a73b33e80fd.
+[I 2026-06-04 06:53:12.844 ServerApp] Restoring connection for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3
+[I 2026-06-04 06:54:18.217 ServerApp] Kernel interrupted: 3fc26922-ffa4-4381-98c7-7a73b33e80fd
+[I 2026-06-04 06:54:29.183 ServerApp] Kernel restarted: 3fc26922-ffa4-4381-98c7-7a73b33e80fd
+[I 2026-06-04 06:54:29.191 ServerApp] Starting buffering for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3
+[I 2026-06-04 06:54:29.264 ServerApp] Connecting to kernel 3fc26922-ffa4-4381-98c7-7a73b33e80fd.
+[I 2026-06-04 06:54:29.264 ServerApp] Restoring connection for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3
+[I 2026-06-04 06:54:41.618 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:54:41.620 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:54:41.640 ServerApp] Saving conduction.md
+[W 2026-06-04 06:54:41.640 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:54:54.713 ServerApp] Kernel restarted: 3fc26922-ffa4-4381-98c7-7a73b33e80fd
+[I 2026-06-04 06:54:54.722 ServerApp] Starting buffering for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3
+[I 2026-06-04 06:54:54.776 ServerApp] Connecting to kernel 3fc26922-ffa4-4381-98c7-7a73b33e80fd.
+[I 2026-06-04 06:54:54.776 ServerApp] Restoring connection for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3
+[I 2026-06-04 06:56:42.669 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:56:42.671 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:56:42.789 ServerApp] Saving conduction.md
+[W 2026-06-04 06:56:42.789 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 06:58:43.839 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 06:58:43.841 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 06:58:43.880 ServerApp] Saving conduction.md
+[W 2026-06-04 06:58:43.880 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 07:01:36.713 ServerApp] Saving file at /workspace/aliases.py
+[I 2026-06-04 07:01:38.956 ServerApp] Saving file at /workspace/aliases.py
+[I 2026-06-04 07:01:39.171 ServerApp] Saving file at /workspace/aliases.py
+[I 2026-06-04 07:01:53.853 ServerApp] Saving file at /workspace/aliases.py
+[I 2026-06-04 07:01:55.154 ServerApp] Saving file at /workspace/aliases.py
+[I 2026-06-04 07:02:44.517 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 07:02:44.742 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 07:02:44.744 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 07:02:44.804 ServerApp] Saving conduction.md
+[W 2026-06-04 07:02:44.804 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 07:04:08.850 ServerApp] Saving file at /workspace/catchup.sh
+[I 2026-06-04 07:04:10.681 ServerApp] Saving file at /workspace/catchup.sh
+[I 2026-06-04 07:05:19.184 ServerApp] Starting buffering for 692cd9bb-7e54-437b-82e4-4fe937c30170:a8aa5601-9c5a-45bb-b944-27b34774fc73
+[I 2026-06-04 07:05:22.590 ServerApp] Starting buffering for 0ff769a8-3fc8-408d-bf25-d82e64d8b39b:2f24ae5a-08bd-46cd-8027-a69aa02b6a6b
+[I 2026-06-04 07:05:30.078 ServerApp] Starting buffering for 85157886-82ce-4ff7-9b1f-a15fd3aefac7:18ab175e-de57-4b55-8980-a963de100258
+[I 2026-06-04 07:05:33.410 ServerApp] Kernel shutdown: 0ff769a8-3fc8-408d-bf25-d82e64d8b39b
+[I 2026-06-04 07:05:35.602 ServerApp] Kernel shutdown: 85157886-82ce-4ff7-9b1f-a15fd3aefac7
+[I 2026-06-04 07:05:36.589 ServerApp] Kernel shutdown: e4da00fe-482c-4d37-b570-7ef505fbba38
+[I 2026-06-04 07:05:39.930 ServerApp] Kernel shutdown: 9c77ad14-701a-4f30-b31a-3524a9142044
+[I 2026-06-04 07:05:40.710 ServerApp] Kernel shutdown: f93dffd8-932d-41ef-aff0-3746685a3263
+[I 2026-06-04 07:05:45.562 ServerApp] Kernel shutdown: 692cd9bb-7e54-437b-82e4-4fe937c30170
+[I 2026-06-04 07:07:18.443 ServerApp] Kernel restarted: 3fc26922-ffa4-4381-98c7-7a73b33e80fd
+[I 2026-06-04 07:07:18.450 ServerApp] Starting buffering for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3
+[I 2026-06-04 07:07:18.509 ServerApp] Connecting to kernel 3fc26922-ffa4-4381-98c7-7a73b33e80fd.
+[I 2026-06-04 07:07:18.509 ServerApp] Restoring connection for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3
+[I 2026-06-04 07:07:37.780 ServerApp] Kernel restarted: 3fc26922-ffa4-4381-98c7-7a73b33e80fd
+[I 2026-06-04 07:07:37.788 ServerApp] Starting buffering for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3
+[I 2026-06-04 07:07:37.847 ServerApp] Connecting to kernel 3fc26922-ffa4-4381-98c7-7a73b33e80fd.
+[I 2026-06-04 07:07:37.847 ServerApp] Restoring connection for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3

@@ -8,6 +8,7 @@ sudo apt-get install -y \
   jq
 
 sudo apt install python-is-python3
+sudo apt install htop
 
 sudo pip install -U --no-cache-dir --break-system-packages \
   bibtexparser \
