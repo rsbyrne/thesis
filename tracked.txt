@@ -84,6 +84,7 @@ book/content/chapter_02/_scraps.md
 book/content/chapter_02/_scratch.md
 book/content/chapter_02/conclusion.md
 book/content/chapter_02/general.md
+book/content/chapter_02/geometry.md
 book/content/chapter_02/introduction.md
 book/content/chapter_02/junk/basics.md
 book/content/chapter_02/junk/cylindrical.md
