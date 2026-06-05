@@ -38,6 +38,8 @@ from everest.window import Canvas, DataChannel as Channel
 from everest.window.colourmaps import cmap
 
 from analysis import analysis, cylindrical
+
+aliases.limit_memory(8.0)
 ```
 
 ## Conduction
@@ -1309,13 +1311,6 @@ fullcase_r2score_value
 ```
 
 ```{code-cell} ipython3
-
-
-# Execute this BEFORE running PySR (e.g., limit to 8 GB)
-limit_memory(8.0)
-```
-
-```{code-cell} ipython3
 from pysr import PySRRegressor
 
 flat_data = []
@@ -1355,79 +1350,31 @@ model.fit(X, y, variable_names=X_vars)
 ```
 
 ```{code-cell} ipython3
-symp_rep = model.sympy()
-```
-
-```{code-cell} ipython3
-repr(symp_rep)
-```
-
-```{code-cell} ipython3
-model.latex()
-```
-
-$$
-0.0834 H + 0.389f + \frac{f}{r}
-$$
-
-```{code-cell} ipython3
-model.equations_
-```
-
-```{code-cell} ipython3
-obj = model.equations_
-```
-
-```{code-cell} ipython3
-obj.to_csv()
+symp_rep.simplify()
 ```
 
 ```{code-cell} ipython3
 import numpy as np
-from pysr import PySRRegressor
+from sklearn.metrics import r2_score, mean_squared_error
 
-# ---------------------------------------------------------
-# 1. GENERATE SYNTHETIC "GEODYNAMICS" DATA
-# ---------------------------------------------------------
-np.random.seed(42)
+# 1. Ask PySR to calculate the predictions using its chosen "best" equation
+# (Make sure X is the same matrix you fed into it during training)
+y_predicted = model.predict(X)
 
-# Create 500 random data points for f (0.1 to 1.0) and H (0 to 10)
-f = np.random.uniform(0.1, 1.0, 500)
-H = np.random.uniform(0.0, 10.0, 500)
+# 2. Calculate the metrics
+r2 = r2_score(y, y_predicted)
+rmse = np.sqrt(mean_squared_error(y, y_predicted))
+max_error = np.max(np.abs(y - y_predicted))
 
-# We invent a "secret" physical law that PySR has to discover blindly.
-# Let's say Ra_c anchors at 657.51 and scales with H and inversely with f^2.
-Ra_c_true = 657.51 + 12.5 * (H / f**2)
+# 3. Print the results
+print(f"R-squared: {r2:.6f}")
+print(f"RMSE:      {rmse:.6e}")
+print(f"Max Error: {max_error:.6e}")
+```
 
-# Add a tiny bit of "numerical noise" to mimic real model outputs
-Ra_c_measured = Ra_c_true + np.random.normal(0, 0.05, 500)
-
-# Stack our input variables into a 2D matrix (X)
-X = np.stack((f, H), axis=1)
-y = Ra_c_measured
-
-# ---------------------------------------------------------
-# 2. CONFIGURE THE SYMBOLIC REGRESSOR
-# ---------------------------------------------------------
-model = PySRRegressor(
-    niterations=40,  # Number of evolutionary generations to run
-    binary_operators=["+", "-", "*", "/"], # The fundamental math operations
-    unary_operators=["exp"], # Crucial for finding your Frank-Kamenetskii viscosity law!
-    model_selection="best",  # Automatically picks the "Goldilocks" equation
-    loss="loss(prediction, target) = (prediction - target)^2" # Mean Squared Error
-    )
-
-# ---------------------------------------------------------
-# 3. RELEASE THE EVOLUTIONARY HOUNDS
-# ---------------------------------------------------------
-print("Evolving equations...")
-model.fit(X, y, variable_names=["f", "H"])
-
-# ---------------------------------------------------------
-# 4. VIEW THE RESULTS
-# ---------------------------------------------------------
-print("\n=== THE DISCOVERED LAW ===")
-print(model.sympy())
+```{code-cell} ipython3
+symp_rep = model.sympy()
+repr(symp_rep)
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}

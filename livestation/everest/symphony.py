@@ -19,7 +19,6 @@ import shlex
 import itertools
 import pathlib
 import abc
-import collections
 import types
 import shutil
 import os

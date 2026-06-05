@@ -76682,3 +76682,283 @@ Precompiling project...
 [I 2026-06-04 07:07:37.788 ServerApp] Starting buffering for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3
 [I 2026-06-04 07:07:37.847 ServerApp] Connecting to kernel 3fc26922-ffa4-4381-98c7-7a73b33e80fd.
 [I 2026-06-04 07:07:37.847 ServerApp] Restoring connection for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3
+[I 2026-06-04 07:08:23.034 ServerApp] Saving file at /workspace/aliases.py
+[I 2026-06-04 07:08:44.910 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 07:08:44.937 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 07:08:44.938 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 07:08:44.956 ServerApp] Saving conduction.md
+[W 2026-06-04 07:08:44.956 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 07:09:26.947 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 07:09:27.023 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 07:09:27.025 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 07:09:27.042 ServerApp] Saving conduction.md
+[W 2026-06-04 07:09:27.042 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 07:09:36.987 ServerApp] Kernel restarted: 3fc26922-ffa4-4381-98c7-7a73b33e80fd
+[I 2026-06-04 07:09:36.995 ServerApp] Starting buffering for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3
+[I 2026-06-04 07:09:37.063 ServerApp] Connecting to kernel 3fc26922-ffa4-4381-98c7-7a73b33e80fd.
+[I 2026-06-04 07:09:37.064 ServerApp] Restoring connection for 3fc26922-ffa4-4381-98c7-7a73b33e80fd:5ee25667-7ec9-46c3-af2f-cd73779382a3
+[I 2026-06-04 07:11:27.158 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 07:11:27.358 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 07:11:27.362 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 07:11:27.409 ServerApp] Saving conduction.md
+[W 2026-06-04 07:11:27.409 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 07:13:27.667 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 07:13:27.887 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 07:13:27.889 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 07:13:27.928 ServerApp] Saving conduction.md
+[W 2026-06-04 07:13:27.928 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 07:15:27.988 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 07:15:28.320 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 07:15:28.323 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 07:15:28.355 ServerApp] Saving conduction.md
+[W 2026-06-04 07:15:28.355 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 07:17:28.456 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 07:17:28.643 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 07:17:28.645 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 07:17:28.683 ServerApp] Saving conduction.md
+[W 2026-06-04 07:17:28.683 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 07:19:28.794 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 07:19:28.979 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 07:19:28.982 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 07:19:29.019 ServerApp] Saving conduction.md
+[W 2026-06-04 07:19:29.019 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-04 07:21:29.332 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-04 07:21:29.669 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-04 07:21:29.671 ServerApp] Saving conduction.ipynb
+[I 2026-06-04 07:21:30.016 ServerApp] Saving conduction.md
+[W 2026-06-04 07:21:30.016 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-05 01:56:58.514 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-05 01:57:01.109 ServerApp] Reading SOURCE from workspace/book/content/chapter_04/critical.md
+[I 2026-06-05 01:57:01.410 ServerApp] Kernel started: a51a271d-98ed-4561-a52c-b5be836a98e4
+[I 2026-06-05 01:57:02.039 ServerApp] Connecting to kernel a51a271d-98ed-4561-a52c-b5be836a98e4.
+[I 2026-06-05 01:57:22.744 ServerApp] Kernel restarted: a51a271d-98ed-4561-a52c-b5be836a98e4
+[I 2026-06-05 01:57:22.792 ServerApp] Starting buffering for a51a271d-98ed-4561-a52c-b5be836a98e4:0bcaf0df-03d4-4e89-9a03-d1812dd9925a
+[I 2026-06-05 01:57:22.883 ServerApp] Connecting to kernel a51a271d-98ed-4561-a52c-b5be836a98e4.
+[I 2026-06-05 01:57:22.883 ServerApp] Restoring connection for a51a271d-98ed-4561-a52c-b5be836a98e4:0bcaf0df-03d4-4e89-9a03-d1812dd9925a
+[I 2026-06-05 01:59:01.363 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-05 01:59:01.365 ServerApp] Saving critical.ipynb
+[I 2026-06-05 01:59:01.733 ServerApp] Saving critical.md
+[I 2026-06-05 02:01:01.918 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-05 02:01:01.920 ServerApp] Saving critical.ipynb
+[I 2026-06-05 02:01:01.963 ServerApp] Saving critical.md
+[I 2026-06-05 02:03:02.159 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-05 02:03:02.161 ServerApp] Saving critical.ipynb
+[I 2026-06-05 02:03:02.187 ServerApp] Saving critical.md
+[I 2026-06-05 02:05:02.350 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-05 02:05:02.352 ServerApp] Saving critical.ipynb
+[I 2026-06-05 02:05:02.417 ServerApp] Saving critical.md
+[I 2026-06-05 02:11:02.688 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-05 02:11:02.690 ServerApp] Saving critical.ipynb
+[I 2026-06-05 02:11:02.711 ServerApp] Saving critical.md
+[I 2026-06-05 02:13:02.836 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-05 02:13:02.838 ServerApp] Saving critical.ipynb
+[I 2026-06-05 02:13:03.009 ServerApp] Saving critical.md
+[I 2026-06-05 02:15:03.623 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-05 02:15:03.625 ServerApp] Saving critical.ipynb
+[I 2026-06-05 02:15:03.867 ServerApp] Saving critical.md
+[I 2026-06-05 02:17:04.155 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-05 02:17:04.156 ServerApp] Saving critical.ipynb
+[I 2026-06-05 02:17:04.200 ServerApp] Saving critical.md
+[I 2026-06-05 02:19:05.711 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-05 02:19:05.712 ServerApp] Saving critical.ipynb
+[I 2026-06-05 02:19:05.736 ServerApp] Saving critical.md
+[I 2026-06-05 02:21:05.998 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-05 02:21:06.000 ServerApp] Saving critical.ipynb
+[I 2026-06-05 02:21:06.042 ServerApp] Saving critical.md
+[I 2026-06-05 02:29:33.646 ServerApp] Copying 'workspace/resources/everest/clitools.py' to '/workspace/livestation/everest'
+[I 2026-06-05 02:29:33.648 ServerApp] Copying 'workspace/resources/everest/caching.py' to '/workspace/livestation/everest'
+[I 2026-06-05 02:29:33.676 ServerApp] Saving clitools.py in format py:sphinx
+[W 2026-06-05 02:29:33.676 ServerApp] Stripping metadata from workspace/livestation/everest/clitools.py as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-05 02:29:33.686 ServerApp] Saving caching.py in format py:sphinx
+[W 2026-06-05 02:29:33.686 ServerApp] Stripping metadata from workspace/livestation/everest/caching.py as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-05 02:30:12.416 ServerApp] Saving file at /workspace/livestation/everest/clitools.py
+[I 2026-06-05 02:30:15.191 ServerApp] Saving file at /workspace/livestation/everest/clitools.py
+[I 2026-06-05 02:30:33.996 ServerApp] Saving file at /workspace/livestation/everest/caching.py
+[I 2026-06-05 02:32:26.923 ServerApp] Saving file at /workspace/livestation/everest/campaign.py
+[I 2026-06-05 02:32:32.894 ServerApp] Saving file at /workspace/livestation/everest/campaign.py
+[I 2026-06-05 02:32:35.106 ServerApp] Saving file at /workspace/livestation/everest/campaign.py
+[I 2026-06-05 02:32:35.308 ServerApp] Saving file at /workspace/livestation/everest/campaign.py
+[I 2026-06-05 02:32:35.488 ServerApp] Saving file at /workspace/livestation/everest/campaign.py
+[I 2026-06-05 02:35:56.080 ServerApp] Saving file at /workspace/livestation/everest/campaign.py
+[I 2026-06-05 02:36:00.576 ServerApp] Saving file at /workspace/livestation/everest/campaign.py
+[I 2026-06-05 02:36:50.510 ServerApp] Saving file at /workspace/resources/everest/symphony.py
+[I 2026-06-05 02:38:22.196 ServerApp] Saving file at /workspace/resources/everest/symphony.py
+[I 2026-06-05 02:39:04.416 ServerApp] Saving file at /workspace/resources/everest/symphony.py
+[I 2026-06-05 02:40:00.743 ServerApp] Saving file at /workspace/resources/everest/symphony.py
+[I 2026-06-05 02:40:11.220 ServerApp] Saving file at /workspace/resources/everest/symphony.py
+[I 2026-06-05 02:40:12.866 ServerApp] Saving file at /workspace/resources/everest/symphony.py
+[I 2026-06-05 02:40:13.027 ServerApp] Saving file at /workspace/resources/everest/symphony.py
+[I 2026-06-05 02:50:10.290 ServerApp] Saving file at /workspace/resources/everest/symphony.py
+[I 2026-06-05 02:50:20.160 ServerApp] Creating new file in /workspace/livestation/everest
+[I 2026-06-05 02:50:29.007 ServerApp] Saving file at /workspace/livestation/everest/symphony.py
+[I 2026-06-05 02:50:36.472 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-05 02:50:36.531 ServerApp] Saving file at /workspace/book/content/chapter_04/local.py
+[W 2026-06-05 02:50:50.376 ServerApp] Notebook workspace/production/symphony_dev/dev_000.ipynb is not trusted
+[W 2026-06-05 02:50:50.415 ServerApp] 404 GET /api/contents/.ssh/general.pem?content=0&hash=0&1780627850410 (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.22ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/production/symphony_dev/dev_000.ipynb
+[I 2026-06-05 02:50:50.416 ServerApp] Refusing to serve hidden file or directory '/home/morpheus/.ssh/general.pem', via 404 Error
+[E 2026-06-05 02:50:50.416 ServerApp] Uncaught exception GET /api/contents/.ssh/general.pem?content=0&hash=0&1780627850410 (172.17.0.1)
+    HTTPServerRequest(protocol='http', host='localhost:8890', method='GET', uri='/api/contents/.ssh/general.pem?content=0&hash=0&1780627850410', version='HTTP/1.1', remote_ip='172.17.0.1')
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 156, in get
+        model = await ensure_async(
+                ^^^^^^^^^^^^^^^^^^^
+        ...<7 lines>...
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupytext/async_contentsmanager.py", line 217, in _get_with_require_hash_argument
+        return await self.super.get(path, **super_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 926, in get
+        model = await self._file_model(
+                ^^^^^^^^^^^^^^^^^^^^^^^
+            path, content=content, format=format, require_hash=require_hash
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 827, in _file_model
+        model = self._base_model(path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 237, in _base_model
+        raise web.HTTPError(404, four_o_four)
+    tornado.web.HTTPError: HTTP 404: Not Found (file or directory does not exist: '.ssh/general.pem')
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 182, in get
+        await self._finish_error(
+            HTTPStatus.NOT_FOUND, f"file or directory {path!r} does not exist"
+        )
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 114, in _finish_error
+        self.write(message)
+        ~~~~~~~~~~^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 914, in write
+        raise RuntimeError("Cannot write() after finish()")
+    RuntimeError: Cannot write() after finish()
+[W 2026-06-05 02:50:50.419 ServerApp] 404 GET /api/contents/workspace/mount/production/symphony_dev/symphony.py?content=0&hash=0&1780627850410 (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 4.34ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/production/symphony_dev/dev_000.ipynb
+[W 2026-06-05 02:50:50.419 ServerApp] 404 GET /api/contents/workspace/mount/production/symphony_dev/symphony.py?content=0&hash=0&1780627850410 (172.17.0.1): No such file or directory: workspace/mount/production/symphony_dev/symphony.py
+[W 2026-06-05 02:50:50.419 ServerApp] 404 GET /api/contents/workspace/mount/production/symphony_dev/symphony.py?content=0&hash=0&1780627850411 (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 4.74ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/production/symphony_dev/dev_000.ipynb
+[W 2026-06-05 02:50:50.419 ServerApp] 404 GET /api/contents/workspace/mount/production/symphony_dev/symphony.py?content=0&hash=0&1780627850411 (172.17.0.1): No such file or directory: workspace/mount/production/symphony_dev/symphony.py
+[I 2026-06-05 02:50:50.626 ServerApp] Kernel started: c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57
+[I 2026-06-05 02:50:51.027 ServerApp] Connecting to kernel c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57.
+[I 2026-06-05 02:51:12.538 ServerApp] Saving file at /workspace/production/symphony_dev/symphony.py
+[W 2026-06-05 02:51:21.370 ServerApp] delete /workspace/production/symphony_dev/symphony.py
+[I 2026-06-05 02:51:30.920 ServerApp] New terminal with automatic name: 4
+[I 2026-06-05 02:52:37.995 ServerApp] Kernel restarted: c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57
+[I 2026-06-05 02:52:38.002 ServerApp] Starting buffering for c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57:637e2db7-80bb-4f60-b31a-7a8a64a2e8a5
+[I 2026-06-05 02:52:38.098 ServerApp] Connecting to kernel c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57.
+[I 2026-06-05 02:52:38.098 ServerApp] Restoring connection for c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57:637e2db7-80bb-4f60-b31a-7a8a64a2e8a5
+[I 2026-06-05 02:52:50.429 ServerApp] Saving file at /workspace/production/symphony_dev/dev_000.ipynb
+[I 2026-06-05 02:52:50.431 ServerApp] Saving dev_000.ipynb
+[I 2026-06-05 02:53:56.679 ServerApp] Creating new file in /workspace/production/symphony_dev
+[I 2026-06-05 02:54:06.753 ServerApp] Saving file at /workspace/production/symphony_dev/old_symphony.py
+[I 2026-06-05 02:54:50.510 ServerApp] Saving file at /workspace/production/symphony_dev/dev_000.ipynb
+[I 2026-06-05 02:54:50.511 ServerApp] Saving dev_000.ipynb
+[I 2026-06-05 02:56:28.167 ServerApp] Kernel restarted: c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57
+[I 2026-06-05 02:56:28.174 ServerApp] Starting buffering for c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57:637e2db7-80bb-4f60-b31a-7a8a64a2e8a5
+[I 2026-06-05 02:56:28.235 ServerApp] Connecting to kernel c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57.
+[I 2026-06-05 02:56:28.235 ServerApp] Restoring connection for c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57:637e2db7-80bb-4f60-b31a-7a8a64a2e8a5
+[I 2026-06-05 02:56:44.959 ServerApp] Saving file at /workspace/production/symphony_dev/dev_000.ipynb
+[I 2026-06-05 02:56:44.961 ServerApp] Saving dev_000.ipynb
+[I 2026-06-05 02:56:48.238 ServerApp] Kernel restarted: c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57
+[I 2026-06-05 02:56:48.250 ServerApp] Starting buffering for c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57:637e2db7-80bb-4f60-b31a-7a8a64a2e8a5
+[I 2026-06-05 02:56:48.310 ServerApp] Connecting to kernel c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57.
+[I 2026-06-05 02:56:48.310 ServerApp] Restoring connection for c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57:637e2db7-80bb-4f60-b31a-7a8a64a2e8a5
+[I 2026-06-05 02:58:08.254 ServerApp] Saving file at /workspace/production/symphony_dev/work/my_project/__init__.py
+[I 2026-06-05 02:58:11.872 ServerApp] Kernel restarted: c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57
+[I 2026-06-05 02:58:11.880 ServerApp] Starting buffering for c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57:637e2db7-80bb-4f60-b31a-7a8a64a2e8a5
+[I 2026-06-05 02:58:11.951 ServerApp] Connecting to kernel c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57.
+[I 2026-06-05 02:58:11.951 ServerApp] Restoring connection for c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57:637e2db7-80bb-4f60-b31a-7a8a64a2e8a5
+[I 2026-06-05 02:58:45.248 ServerApp] Saving file at /workspace/production/symphony_dev/dev_000.ipynb
+[I 2026-06-05 02:58:45.249 ServerApp] Saving dev_000.ipynb
+[W 2026-06-05 02:59:35.808 ServerApp] delete /workspace/production/symphony_dev/old_symphony.py
+[I 2026-06-05 03:00:31.137 ServerApp] Saving file at /workspace/production/symphony_dev/dev_000.ipynb
+[I 2026-06-05 03:00:31.138 ServerApp] Saving dev_000.ipynb
+[I 2026-06-05 03:02:31.566 ServerApp] Saving file at /workspace/production/symphony_dev/dev_000.ipynb
+[I 2026-06-05 03:02:31.567 ServerApp] Saving dev_000.ipynb
+[I 2026-06-05 03:53:28.493 ServerApp] Opening workspace/livestation/everest/symphony.py to check if it is a paired notebook
+[I 2026-06-05 03:53:33.194 ServerApp] Uploading file to /workspace/livestation/everest/symphony.py
+[I 2026-06-05 03:54:37.012 ServerApp] Saving file at /workspace/livestation/everest/symphony.py
+[I 2026-06-05 03:54:50.343 ServerApp] Saving file at /workspace/livestation/everest/symphony.py
+[I 2026-06-05 03:57:34.828 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-05 03:57:34.958 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-05 03:57:34.961 ServerApp] Saving critical.ipynb
+[I 2026-06-05 03:57:34.995 ServerApp] Saving critical.md
+[I 2026-06-05 03:57:38.868 ServerApp] Creating new file in /workspace/book/content/chapter_04
+[W 2026-06-05 03:57:50.384 ServerApp] delete /workspace/book/content/chapter_04/untitled.txt
+[I 2026-06-05 03:57:52.140 ServerApp] Creating new file in /workspace/book/content/chapter_04
+[W 2026-06-05 03:58:01.594 ServerApp] delete /workspace/book/content/chapter_04/untitled.txt
+[I 2026-06-05 03:58:08.948 ServerApp] Creating new notebook in /workspace/book/content/chapter_04
+[I 2026-06-05 03:58:08.954 ServerApp] Saving Untitled.ipynb
+[I 2026-06-05 03:58:08.970 ServerApp] Saving Untitled.md
+[I 2026-06-05 03:58:09.200 ServerApp] Reading SOURCE from workspace/book/content/chapter_04/Untitled.md
+[I 2026-06-05 03:58:11.206 ServerApp] Kernel started: 9d2b591f-8ed6-4692-a4f7-3e55cc4dd26f
+[I 2026-06-05 03:58:11.659 ServerApp] Connecting to kernel 9d2b591f-8ed6-4692-a4f7-3e55cc4dd26f.
+[I 2026-06-05 03:58:16.447 ServerApp] Saving file at /workspace/book/content/chapter_04/scratch.ipynb
+[I 2026-06-05 03:58:16.448 ServerApp] Saving scratch.ipynb
+[I 2026-06-05 03:58:16.461 ServerApp] Saving scratch.md
+[I 2026-06-05 03:58:30.139 ServerApp] Saving file at /workspace/book/content/chapter_04/scratch.ipynb
+[I 2026-06-05 03:58:30.142 ServerApp] Saving scratch.ipynb
+[I 2026-06-05 03:58:30.168 ServerApp] Saving scratch.md
+[W 2026-06-05 03:58:54.604 ServerApp] delete /workspace/book/content/chapter_04/scratch.md
+[I 2026-06-05 03:58:54.605 ServerApp] Kernel shutdown: 9d2b591f-8ed6-4692-a4f7-3e55cc4dd26f
+[W 2026-06-05 03:58:54.906 ServerApp] delete /workspace/book/content/chapter_04/scratch.ipynb
+[I 2026-06-05 03:59:04.468 ServerApp] Creating new notebook in /workspace/book/content/chapter_04
+[I 2026-06-05 03:59:04.472 ServerApp] Saving Untitled.ipynb
+[I 2026-06-05 03:59:04.489 ServerApp] Saving Untitled.md
+[I 2026-06-05 03:59:04.593 ServerApp] Reading SOURCE from workspace/book/content/chapter_04/Untitled.md
+[I 2026-06-05 03:59:06.245 ServerApp] Kernel started: 0dea9224-ce45-4afa-a6be-dc3f9fb33d94
+[I 2026-06-05 03:59:06.640 ServerApp] Connecting to kernel 0dea9224-ce45-4afa-a6be-dc3f9fb33d94.
+[I 2026-06-05 04:01:02.618 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-05 04:01:02.620 ServerApp] Saving critical_working.ipynb
+[I 2026-06-05 04:01:02.658 ServerApp] Saving critical_working.md
+[I 2026-06-05 04:01:09.300 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-05 04:01:09.302 ServerApp] Saving critical.ipynb
+[I 2026-06-05 04:01:09.397 ServerApp] Saving critical.md
+[I 2026-06-05 04:03:09.523 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-05 04:03:09.525 ServerApp] Saving critical.ipynb
+[I 2026-06-05 04:03:09.786 ServerApp] Saving critical.md
+[W 2026-06-05 04:03:09.797 ServerApp] /home/morpheus/workspace/book/content/chapter_04/.~critical.md doesn't exist
+[I 2026-06-05 04:05:09.844 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-05 04:05:09.846 ServerApp] Saving critical.ipynb
+[I 2026-06-05 04:05:09.864 ServerApp] Saving critical.md
+[I 2026-06-05 04:07:09.977 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-05 04:07:09.980 ServerApp] Saving critical.ipynb
+[I 2026-06-05 04:07:10.033 ServerApp] Saving critical.md
+[I 2026-06-05 05:04:14.054 ServerApp] Uploading file to /workspace/book/Paperpile - References - Jun 5.bib
+[I 2026-06-05 05:04:14.782 ServerApp] Saving file at /workspace/book/Paperpile - References - Jun 5.bib
+[I 2026-06-05 05:05:28.502 ServerApp] Kernel started: 853b4adb-e460-4b75-bb15-8caa833701fa
+[I 2026-06-05 05:05:28.940 ServerApp] Connecting to kernel 853b4adb-e460-4b75-bb15-8caa833701fa.
+[I 2026-06-05 05:05:35.797 ServerApp] Kernel restarted: 853b4adb-e460-4b75-bb15-8caa833701fa
+[I 2026-06-05 05:05:35.805 ServerApp] Starting buffering for 853b4adb-e460-4b75-bb15-8caa833701fa:03c83196-7675-465f-812c-71a31a385482
+[I 2026-06-05 05:05:35.875 ServerApp] Connecting to kernel 853b4adb-e460-4b75-bb15-8caa833701fa.
+[I 2026-06-05 05:05:35.876 ServerApp] Restoring connection for 853b4adb-e460-4b75-bb15-8caa833701fa:03c83196-7675-465f-812c-71a31a385482
+[I 2026-06-05 05:05:51.990 ServerApp] Saving file at /workspace/scratch/scratch_002.ipynb
+[I 2026-06-05 05:05:51.991 ServerApp] Saving scratch_002.ipynb
+[I 2026-06-05 05:05:59.212 ServerApp] Saving file at /workspace/scratch/scratch_002.ipynb
+[I 2026-06-05 05:05:59.214 ServerApp] Saving scratch_002.ipynb
+[I 2026-06-05 05:06:15.179 ServerApp] Saving file at /workspace/scratch/scratch_002.ipynb
+[I 2026-06-05 05:06:15.180 ServerApp] Saving scratch_002.ipynb
+[I 2026-06-05 05:06:25.056 ServerApp] Starting buffering for c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57:637e2db7-80bb-4f60-b31a-7a8a64a2e8a5
+[I 2026-06-05 05:06:28.139 ServerApp] Kernel shutdown: c1884d73-0c1d-4bbb-9daf-2d39b8d5bc57
+[I 2026-06-05 05:06:35.083 ServerApp] Kernel shutdown: 3fc26922-ffa4-4381-98c7-7a73b33e80fd
+[I 2026-06-05 05:06:43.251 ServerApp] Kernel shutdown: a51a271d-98ed-4561-a52c-b5be836a98e4
+[I 2026-06-05 05:06:59.521 ServerApp] EOF on FD 66; stopping reading
+[I 2026-06-05 05:06:59.621 ServerApp] Terminal 4 closed
+[I 2026-06-05 05:07:02.032 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-05 05:07:02.091 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-05 05:07:02.093 ServerApp] Saving critical.ipynb
+[I 2026-06-05 05:07:03.456 ServerApp] Saving critical.md
+[I 2026-06-05 05:07:04.973 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-05 05:07:04.975 ServerApp] Saving critical.ipynb
+[I 2026-06-05 05:07:05.088 ServerApp] Saving critical.md
+[W 2026-06-05 05:08:20.520 ServerApp] delete /workspace/book/old_references.bib
+[W 2026-06-05 05:08:20.525 ServerApp] delete /workspace/book/old_references_2.bib

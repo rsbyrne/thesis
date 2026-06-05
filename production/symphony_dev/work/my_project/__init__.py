@@ -2,9 +2,6 @@
 
 
 
-import symphony
-
-
 def get_params(project, /):
     for item in (
             'foo', 'bah', 'qux', 'zap', 'vim', 'lop', 'dab', 'wam',
