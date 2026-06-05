@@ -95,6 +95,7 @@ book/content/chapter_03/scraps.md
 book/content/chapter_04/conclusion.md
 book/content/chapter_04/conduction.md
 book/content/chapter_04/critical.md
+book/content/chapter_04/critical_working.md
 book/content/chapter_04/introduction.md
 book/content/chapter_04/local.py
 book/content/chapter_05/conclusion.md
@@ -130,7 +131,6 @@ book/junk/heating.md
 book/junk/simple.md
 book/macros.yaml
 book/myst.yml
-book/old_references.bib
 book/references.bib
 book/scratch.ipynb
 book/templates/thesis-latex
@@ -227,7 +227,9 @@ livestation/everest/builts/enactor.py
 livestation/everest/builts/examples/pimachine.py
 livestation/everest/builts/partial.py
 livestation/everest/builts/vector.py
+livestation/everest/caching.py
 livestation/everest/campaign.py
+livestation/everest/clitools.py
 livestation/everest/disk.py
 livestation/everest/exceptions.py
 livestation/everest/fetch.py
@@ -239,6 +241,8 @@ livestation/everest/mpi.py
 livestation/everest/pyklet.py
 livestation/everest/reader.py
 livestation/everest/scope.py
+livestation/everest/symphony.py
+livestation/everest/symphony_native.py
 livestation/everest/tests/paracheck0.py
 livestation/everest/tests/paracheck1.py
 livestation/everest/tests/paracheck2.py
@@ -1101,16 +1105,13 @@ production/simple_critical/simple_critical_f_superfine.py
 production/simple_critical/simple_critical_undone.py
 production/slowloris.py
 production/symphony_dev/dev_000.ipynb
-production/symphony_dev/symphony.py
 production/symphony_dev/test.bah
 production/symphony_dev/test.foo
 production/symphony_dev/testdir2/foo
 production/symphony_dev/testdir3/foo
 production/symphony_dev/work/.state
-production/symphony_dev/work/my_project/.pieces/7646d69e94b5bca6e189d3ff6c4bc238/.state
-production/symphony_dev/work/my_project/.pieces/7646d69e94b5bca6e189d3ff6c4bc238/params.pkl
-production/symphony_dev/work/my_project/.pieces/7ec642d04fcc7c562aa50ac7f4dadabd/.state
-production/symphony_dev/work/my_project/.pieces/7ec642d04fcc7c562aa50ac7f4dadabd/params.pkl
+production/symphony_dev/work/my_project/.pieces/7e2d177d67f4c5101367a68356b9fe90/.state
+production/symphony_dev/work/my_project/.pieces/7e2d177d67f4c5101367a68356b9fe90/params.pkl
 production/symphony_dev/work/my_project/.state
 production/symphony_dev/work/my_project/__init__.py
 production/test.py

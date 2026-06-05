@@ -377,6 +377,8 @@ $$ {\mathrm{Ra}_\mathrm{cr}}_{\min} = \frac{27\pi^4}{4} \approx 657.5 $$
 
 $$ {\lambda^{*}}_\mathrm{cr} = 2 \sqrt{2} \approx 2.828 $$
 
+This was derived analytically (using an early form of instability analysis) by Lord Rayleigh himself in 1916 [@Rayleigh1916-il] and verified by the practical experiments of that era.
+
 At first glance it might seem that we have not truly answered the question of what defines the critical Rayleigh number for a convecting system as a whole, but rather only a contingent answer depending on wavelengths of perturbation. Consider, though, the significance of driving the Rayleigh number below the minimum critical value. This is equivalent to stating that no perturbations at all - not even the least stable ones - are able to grow quicker than the diffusive timescale. At the minimum critical value itself, it follows that only perturbations of $\sqrt{2}$ scale will grow; this value nonetheless serves adequately as the $\mathrm{Ra}_\mathrm{cr}$ of the entire fluid, since a perturbation of such a wavelength can always be discovered in any real system - if geometry permits.
 
 Having determined the conditions under which the conductive planform becomes unstable, it remains to establish the new stability criterion that system now seeks. Assuming that the fastest-growing perturbation will ultimately come to dominate all others, what we need is an expression for the velocity field in terms of $\lambda$ that we can solve for the critical wavelength $\lambda_\mathrm{cr}$ [@Rayleigh1916-il].
@@ -423,7 +425,7 @@ While heat may be transported by convection in the interior of the system, heat 
 
 $$ \mathrm{Nu} \propto \mathrm{Ra}^{\beta}, \quad \beta \to \frac{1}{3} $$
 
-Where $\mathrm{Nu}$ is the Nusselt number. The coefficient of proportionality is theoretically $\approx 0.1941$ [@Olson1987-do], though it has been argued that its value will tend to be dominated by uncertainty in practice [@Lenardic2003-wd]; reported values have ranged between $0.25-0.27$ [@Olson1987-do; @Jarvis1989-qj].
+Where $\mathrm{Nu}$ is the Nusselt number. That the relationship might take this form (and the hypothesis of $\beta=1/3$ was first proposed by Malkus in 1954 [Malkus1954-ii]. The coefficient of proportionality is theoretically $\approx 0.1941$ [@Olson1987-do], though it has been argued that its value will tend to be dominated by uncertainty in practice [@Lenardic2003-wd]; reported values have ranged between $0.25-0.27$ [@Olson1987-do; @Jarvis1989-qj].
 
 An equivalent scaling [@Jarvis1982-ua] has instead:
 
