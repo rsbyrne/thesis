@@ -32,21 +32,62 @@ When thermal expansivity rises above a certain threshold, parcels of relatively 
 
 +++
 
-Fluid dynamicists have been engaged with the phenomenon of criticality for over a hundred years. Lord Rayleigh analysed the problem in his seminal monograph on plain-layer, basally-heated convection all the way back in 1916 [@Rayleigh1916-il], establishing (before it even bore his name) the critical *Rayleigh* number for that scenario:
+The question of criticality is in a sense the father of convection theory, with many of the key developments in the field stemming from inquiries specifically dedicated to the conditions for the onset of convection.
+
++++
+
+#### Early investigations
+
++++
+
+Lord Rayleigh himself broached the problem of criticality in his seminal monograph of 1916 [@Rayleigh1916-il]. Inspired by Benard's practical experiments in 1900-1901 (using shallow, basally-heated trays of sperm whale oil), Rayleigh analysed the onset of convection in a plane-layer, basally-heated fluid and established what is now known as the critical *Rayleigh* number for that scenario: $\mathrm{Ra}_\mathrm{cr} = \frac{27\pi}{4} \approx 657.5$. Rayleigh also deduced what we would now call the 'critical dimensionless wavenumber' $a$ for that scenario, which relates to the aspect ratio of the convection cell that forms at the critical point: when stated in the terms of Jeffreys [@Jeffreys1926-vv], Rayleigh puts this value at precisely $\pi / \sqrt{2} \approx 2.221$.
+
+Rayleigh's basic insight was that the limiting condition of stability must occur when all the time-dependent components of the evolution function are zero.
+
+Rayleigh had to simplify the Navier-Stokes equations dramatically in order to force the limiting condition analytically - in particular by assuming free-slip boundaries. A decade later, Harold Jeffreys [@Jeffreys1926-vv] explicitly picked up where Rayleigh left off and established a method based on finite differences to calculate $\mathrm{Ra}_\mathrm{cr}$ for the rigid-bounded case. Due to an arithmetic error, the actual value implied by this method, $\mathrm{Ra}_\mathrm{cr} \approx 1709.5$ (at $a \approx 3.117$), was not correctly reported until 1928 [@Jeffreys1928-ql]. Pellew and Southwell later refined this estimate to $1707.8$ using the superior 'exchange of stabilities' method [@Pellew1940-qf], which Jeffreys had been sceptical of [@Jeffreys1928-ql]; they also went further by considering the mixed case of one free and one rigid wall, obtaining $\mathrm{Ra}_\mathrm{cr} \approx 1100.7$.
+
+Key to the analysis by Pellew and Southwell was the identification of a plane of symmetry through the equations which they dubbed the 'characteristic number' of convection. This is what we know as the *Rayleigh* number today - a nomenclature introduced in the English-language literature apparently by Sutton [@Sutton1950-yb], who also presented it in its familiar modern form:
 
 $$
-\mathrm{Ra}_\mathrm{cr} = \frac{27\pi}{4} \approx 657.5
+\mathrm{Ra} = -\frac{\beta g\alpha h^4}{\kappa\nu}
 $$
 
-The result was borne out by the experimental apparatus of that time using shallow trays of sperm whale oil.
+Sutton was a critic of Rayleigh's method and pointed out that the experimental apparatus of the time could not possibly emulate the conditions that underpinned his analysis (for example, the existence prior to convection of a conductive geotherm). In this sense, Sutton was an early advocate of the data-driven approach we are embarked upon here, except that the data available in that era was necessarily too contingent on laboratory paraphernalia to actually capture the deeper principles that Rayleigh, Jeffreys, and the others had uncovered.
 
-Rayleigh had to simplify the Navier-Stokes equations dramatically in order to obtain this result analytically - in particular by assuming free-slip boundaries. A decade later, Harold Jeffreys [@Jeffreys1926-vv] explicitly picked up where Rayleigh left off and established a method based on finite differences to calculate $\mathrm{Ra}_\mathrm{cr}$ for the rigid-bounded case. Due to an arithmetic error, the actual value of $\approx 1708$ was not reported until 1928 [@Jeffreys1928-ql], which Pellew and Southwell later refined to $1707.76$ using their superior 'exchange of stabilities' method [@Pellew1940-qf].
+Remarkably, all these early authors considered the full three-dimensional case, rather than the considerably simpler two-dimensional case - perhaps because it is paradoxically easier to model in a laboratory with physical apparatus (a practical two-dimensional model would require extremely slippery materials for the suppressed $z$ walls. Also interesting to note in this time is the first reference to a connection between the criticality problem and the Earth's deep processes, which is to be found in Jeffreys [@Jeffreys1926-vv].
+
++++
+
+![A figure from Pellew and Southwell](pellew_fig.png)
+
++++
+
+#### Modern theory
+
++++
+
+After the war, new mathematical techniques and the advent of the computer inaugurated the modern era of convection studies. As before, the behaviour of fluids around the critical point was a core concern.
+
+Chandrasekhar synthesised virtually everything that was then known about convection in his monumental 'Hydrodynamic and Hydromagnetic stability' [@Chandrasekhar1961-ez]. This substantial tome, which is often the bedrock citation in modern papers on the topic, tabulated the critical *Rayleigh* numbers ($\mathrm{Ra}_c$) and wavenumbers ($a_c$) for the three combinations of kinematic boundary conditions, with greater precision than had previously been possible:
+
+$$ \begin{align*}
+\text{Both rigid:} \quad \mathrm{Ra}_c &\approx 1707.762 \;&,\quad a_c &\approx 3.117 \\
+\text{Both free:} \quad \mathrm{Ra}_c &\approx 657.511 \;&,\quad a_c &\approx 2.221 \\
+\text{One rigid, one free:} \quad \mathrm{Ra}_c &\approx 1100.65 \;&,\quad a_c &\approx 2.682
+\end{align*} $$
+
+Chandrasekhar reproduced these quantities by formulating the problem in terms of eigenvectors and eigenvalues (rather than using the 'proper' or 'characteristic' numbers of earlier authors) and solving for them using a then-novel method: the Galerkin method. His approach is the direct ancestor of the finite element method we will shortly employ for our own numerical experiments.
+
+Chandrasekhar also contributed an important observation regarding the question of whether there is a 'correct' or 'ideal' planform for convectinve onset: while earlier authors had been preoccupied with the different shapes these cells could take, Chandrasekhar demonstrated that only the **size** of the cells matters; the shape is in fact degenerate (i.e. unconstrained). The implications of this easily-overlooked fact are profound.
 
 +++
 
 ## NOTES
 
-+++
+```{code-cell} ipython3
+import math
+math.sqrt(math.pi**2 / 2)
+```
 
 [@Rayleigh1916-il]
 

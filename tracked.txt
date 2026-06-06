@@ -95,6 +95,7 @@ book/content/chapter_03/scraps.md
 book/content/chapter_04/conclusion.md
 book/content/chapter_04/conduction.md
 book/content/chapter_04/critical.md
+book/content/chapter_04/critical_notes.md
 book/content/chapter_04/critical_working.md
 book/content/chapter_04/introduction.md
 book/content/chapter_04/local.py

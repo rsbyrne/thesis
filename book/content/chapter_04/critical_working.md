@@ -18,6 +18,8 @@ slideshow:
   slide_type: ''
 tags: [remove-cell]
 ---
+import itertools
+
 from local import *
 
 from scipy.optimize import curve_fit
@@ -38,10 +40,6 @@ NOTE TO SUPERVISOR: I'm writing up this section now. I have used my Everest/Plan
 
 +++
 
-
-
-+++
-
 ## Varying curvature
 
 ```{code-cell} ipython3
@@ -56,54 +54,20 @@ print(sum(map(len, datas)))
 ```
 
 ```{code-cell} ipython3
+# Hs = np.linspace(0, 2, 11)
+# aspects = np.linspace(1, 2, 11)
+# fs = np.linspace(0.3, 0.5, 11)
 
-```
+# newdims = np.array(tuple(itertools.product(Hs, aspects, fs))).round(3)
+# olddims = np.array(tuple(map(np.array, isomixed.index))).round(3)
 
-```{code-cell} ipython3
-np.unique(isomixed.reset_index()['aspect'])
-```
+# A, B = newdims, olddims
+# void_type = np.dtype((np.void, A.dtype.itemsize * A.shape[1]))
+# A_view = A.view(void_type).ravel()
+# B_view = B.view(void_type).ravel()
+# mask = ~np.isin(A_view, B_view)
 
-```{code-cell} ipython3
-Hs = np.linspace(0, 2, 11)
-aspects = np.linspace(1, 2, 11)
-fs = np.linspace(0.3, 0.5, 11)
-
-newdims = np.array(tuple(itertools.product(Hs, aspects, fs))).round(3)
-olddims = np.array(tuple(map(np.array, isomixed.index))).round(3)
-```
-
-```{code-cell} ipython3
-A, B = newdims, olddims
-void_type = np.dtype((np.void, A.dtype.itemsize * A.shape[1]))
-A_view = A.view(void_type).ravel()
-B_view = B.view(void_type).ravel()
-mask = ~np.isin(A_view, B_view)
-
-result = A[mask]
-```
-
-```{code-cell} ipython3
-result.shape
-```
-
-```{code-cell} ipython3
-result
-```
-
-```{code-cell} ipython3
-11**3
-```
-
-```{code-cell} ipython3
-np.unique(np.concat((newdims, olddims)), axis=0)
-```
-
-```{code-cell} ipython3
-import itertools
-```
-
-```{code-cell} ipython3
-arrmixed
+# result = A[mask]
 ```
 
 ```{code-cell} ipython3
@@ -303,6 +267,14 @@ ax4.annotate(
 
 display(canvas)
 display(params)
+```
+
+```{code-cell} ipython3
+crit_func(1.414)
+```
+
+```{code-cell} ipython3
+slc.min()
 ```
 
 ## Varying both curvature and aspect ratio
