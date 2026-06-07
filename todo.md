@@ -5,3 +5,6 @@
 - Add a section on temperature-dependent and strain rate-dependent rheologies to the General section of the Foundations chapter.
 - Discuss the 'bias towards big models' in the numerical methods chapter (which we now reference in the general section of the Foundations chapter).
 - Cite Paul Byrne on the subject of the siloisation of mantle convection theory
+- Incorporate Roberts (1967) somewhere on the topic of the stability of cold downwellings compared to the instability of hot upwellings. Also note that this paper fails to anticipate that higher Ra widens convection cells (instead, it argued that they should all be the same).
+- Make use of Malkus (1954) on the topic of supercritical convection.
+- Make use of Segel on preferred convective planforms

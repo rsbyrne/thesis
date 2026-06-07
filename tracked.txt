@@ -99,6 +99,7 @@ book/content/chapter_04/critical_notes.md
 book/content/chapter_04/critical_working.md
 book/content/chapter_04/introduction.md
 book/content/chapter_04/local.py
+book/content/chapter_04/pellew_fig.png
 book/content/chapter_05/conclusion.md
 book/content/chapter_05/introduction.md
 book/content/chapter_06/conclusion.md
