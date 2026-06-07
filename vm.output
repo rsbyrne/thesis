@@ -77623,3 +77623,77 @@ Precompiling project...
 [I 2026-06-07 03:02:07.811 ServerApp] Uploading file to /workspace/book/Paperpile - References - Jun 7.bib
 [I 2026-06-07 03:02:08.048 ServerApp] Saving file at /workspace/book/Paperpile - References - Jun 7.bib
 [W 2026-06-07 03:02:11.000 ServerApp] delete /workspace/book/references.bib
+[I 2026-06-07 03:02:47.208 ServerApp] Kernel restarted: 0dea9224-ce45-4afa-a6be-dc3f9fb33d94
+[I 2026-06-07 03:02:47.215 ServerApp] Starting buffering for 0dea9224-ce45-4afa-a6be-dc3f9fb33d94:ebe55553-6fe8-4d26-b076-8c6364c07756
+[I 2026-06-07 03:02:47.308 ServerApp] Connecting to kernel 0dea9224-ce45-4afa-a6be-dc3f9fb33d94.
+[I 2026-06-07 03:02:47.308 ServerApp] Restoring connection for 0dea9224-ce45-4afa-a6be-dc3f9fb33d94:ebe55553-6fe8-4d26-b076-8c6364c07756
+[I 2026-06-07 03:03:43.919 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-07 03:03:43.980 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:03:43.983 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:03:44.001 ServerApp] Saving critical.md
+[I 2026-06-07 03:03:51.969 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-07 03:03:52.026 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:03:52.028 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:03:52.043 ServerApp] Saving critical.md
+[I 2026-06-07 03:03:52.846 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:03:52.848 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:03:52.867 ServerApp] Saving critical.md
+[I 2026-06-07 03:05:52.145 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-07 03:05:52.209 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:05:52.212 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:05:52.230 ServerApp] Saving critical.md
+[I 2026-06-07 03:07:52.344 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-07 03:07:52.409 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:07:52.411 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:07:52.872 ServerApp] Saving critical.md
+[I 2026-06-07 03:09:52.957 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-07 03:09:53.021 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:09:53.023 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:09:53.038 ServerApp] Saving critical.md
+[I 2026-06-07 03:10:42.242 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-07 03:10:42.258 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:10:42.260 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:10:42.274 ServerApp] Saving critical.md
+[I 2026-06-07 03:10:52.156 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-07 03:18:43.011 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:18:43.013 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:18:43.194 ServerApp] Saving critical.md
+[I 2026-06-07 03:20:43.309 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:20:43.311 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:20:43.468 ServerApp] Saving critical.md
+[I 2026-06-07 03:22:43.582 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:22:43.585 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:22:43.600 ServerApp] Saving critical.md
+[I 2026-06-07 03:24:43.707 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:24:43.708 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:24:43.721 ServerApp] Saving critical.md
+[I 2026-06-07 03:26:43.828 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:26:43.830 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:26:43.857 ServerApp] Saving critical.md
+[I 2026-06-07 03:28:43.980 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:28:43.982 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:28:44.000 ServerApp] Saving critical.md
+[I 2026-06-07 03:30:44.113 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:30:44.115 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:30:44.130 ServerApp] Saving critical.md
+[I 2026-06-07 03:32:44.228 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:32:44.230 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:32:44.291 ServerApp] Saving critical.md
+[I 2026-06-07 03:34:44.410 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:34:44.412 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:34:44.464 ServerApp] Saving critical.md
+[I 2026-06-07 03:35:12.475 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:35:12.476 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:35:12.850 ServerApp] Saving critical.md
+[I 2026-06-07 03:37:12.911 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:37:12.913 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:37:12.928 ServerApp] Saving critical.md
+[I 2026-06-07 03:39:13.043 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:39:13.045 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:39:13.061 ServerApp] Saving critical.md
+[I 2026-06-07 03:41:13.173 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:41:13.175 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:41:13.194 ServerApp] Saving critical.md
+[I 2026-06-07 03:42:46.797 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-07 03:42:46.799 ServerApp] Saving critical.ipynb
+[I 2026-06-07 03:42:46.813 ServerApp] Saving critical.md

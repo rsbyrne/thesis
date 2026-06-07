@@ -17,7 +17,7 @@ from referencing import search
 ```
 
 ```{code-cell} ipython3
-search('jeffreys')
+search('white planform')
 ```
 
 ## Criticality
@@ -107,7 +107,19 @@ One of the principle themes of this era was the increasing use of computers to s
 
 The advent of computing did not diminish the need for or interest in practical experimentation, which also proceeded apace in this era thanks to new methods and materials. Kulacki and Goldstein [@Kulacki1972-xm] used electrolytic fluids under oscillating currents to induce an internal heating force, then characterised the resultant flow pattern with the aid of an interferometer - an experimental setup that was not conceivable in Benard and Rayleigh's time. Their meticulously quantified findings verified the analytical results of previous authors like Sparrow and Roberts, converging on identical values for the critical Rayleigh number and other key quantities. Kulacki and Goldstein also validated the larger intuition behind $\mathrm{Ra}_\mathrm{cr}$ by physically agitating a near-critical fluid with a glass rod: they observed that, even with strong manual perturbation, it was impossible to establish convection by such means. This had long been suspected but does not appear to have actually been rigorously tested before this time.
 
-With the growing acceptance of plate tectonics from the 1960s onwards, and the identification of mantle convection as a plausible causal mechanism, the relevance of convective onset theory to geophysics 
++++
+
+#### Geophysics investigations
+
++++
+
+With the growing acceptance of plate tectonics from the 1960s onwards, and the identification of mantle convection as a plausible causal mechanism, the relevance of convective onset theory to geophysics finally became apparent, and a new wave of investigations into high- and variable-viscosity fluids began.
+
+The question of temperature-dependent viscosity was broached by Enok Palm [@Palm1960-cc] as early as 1960. Palm was trying to elucidate the longstanding mystery (first recognised by Lord Rayleigh [@Rayleigh1916-il]) of why convective cells predictably take certain shapes even when there is no comparative advantage for heat transport. While Chandrasekhar [@Chandrasekhar1961-ez] would soon demonstrate that the planform in most cases is mathematically degenerate, Palm instead developed upon earlier speculation that the cells were nudged into their customary shapes by differences in fluid properties - specifically, different viscosity responses to changes in temperature. Palm's use of a simplified temperature dependency function led him to conclude that variable viscosity is destabilising (i.e. reduces $\mathrm{Ra}_\mathrm{cr}$) on the whole, explaining its potential role in tipping the scales between different planforms.
+
+Palm's method was resourceful but unrealistic, with Segel and Stuart [@Segel1962-xx] later showing that variable viscosity could only explain planform differences at extreme values, and that in most cases the planform that was actually established after convective onset was determined as much by initial conditions as by fluid properties. All authors in that era nevertheless agreed that temperature-dependent viscosity tends to prefer (3D) hexagonal cells in which fluid upwells in narrow channels while downwelling on broad fronts - an important finding that anticipated the intuitions of modern geodynamics.
+
+The subject of variable viscosity was not substantially approached again until geophysicists Stengel, Oliver, and Booker picked up the thread in 1982 [@Stengel1982-fw].
 
 ```{code-cell} ipython3
 2 * math.sqrt(2)
@@ -175,6 +187,22 @@ Convection in horizontal layers with internal heat generation.
 Theory
 Roberts, P H
 
+
+Palm1960-cc
+On the tendency towards hexagonal cells in steady convection
+Palm, Enok
+
+
+Segel1962-xx
+On the question of the preferred mode in cellular thermal
+convection
+Segel, L A and Stuart, J T
+
+
+White1988-hy
+The planforms and onset of convection with a
+temperature-dependent viscosity
+White, David B
 
 
 Nield1968-dh
