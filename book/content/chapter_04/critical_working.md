@@ -12,6 +12,15 @@ kernelspec:
 ---
 
 ```{code-cell} ipython3
+from aliases import *
+from referencing import search
+```
+
+```{code-cell} ipython3
+search('baldwin')
+```
+
+```{code-cell} ipython3
 ---
 editable: true
 slideshow:
