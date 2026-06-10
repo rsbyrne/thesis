@@ -5,6 +5,7 @@
 
 
 import os as _os
+import sys as _sys
 import pickle as _pickle
 import functools as _functools
 import hashlib as _hashlib
@@ -12,7 +13,7 @@ import inspect as _inspect
 
 
 
-def cache(salt='', cachedir='.'):
+def cache(cachedir='.', salt=''):
 
     def decorator(func, /):
 
@@ -25,8 +26,10 @@ def cache(salt='', cachedir='.'):
             bound = sig.bind(*args, **kwargs)
             bound.apply_defaults()
             tupargs = tuple(bound.arguments.items())
+            modname = func.__module__
+            if modname == '__main__': modname = _sys.argv[0]
             sigdig = _hashlib.sha3_256(
-                _pickle.dumps((func.__module__, func.__name__, tupargs))
+                _pickle.dumps((modname, func.__name__, tupargs,))
                 ).hexdigest()
             path = _os.path.join(cachedir, sigdig + '.pkl')
             if cache_refresh:

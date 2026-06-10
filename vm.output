@@ -78553,3 +78553,1307 @@ Precompiling project...
 [I 2026-06-09 09:30:06.013 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
 [I 2026-06-09 09:30:06.015 ServerApp] Saving critical.ipynb
 [I 2026-06-09 09:30:06.030 ServerApp] Saving critical.md
+[I 2026-06-09 23:36:02.478 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-09 23:36:02.546 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:36:02.548 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:36:02.612 ServerApp] Saving critical.md
+[I 2026-06-09 23:36:02.633 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-09 23:38:03.461 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-09 23:38:03.526 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:38:03.528 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:38:03.539 ServerApp] Saving critical.md
+[I 2026-06-09 23:42:03.635 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-09 23:42:03.706 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:42:03.708 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:42:03.751 ServerApp] Saving critical.md
+[I 2026-06-09 23:44:03.831 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-09 23:44:03.897 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:44:03.899 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:44:03.912 ServerApp] Saving critical.md
+[I 2026-06-09 23:46:04.001 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-09 23:46:04.071 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:46:04.073 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:46:04.208 ServerApp] Saving critical.md
+[I 2026-06-09 23:48:04.337 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-09 23:48:04.353 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:48:04.355 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:48:04.480 ServerApp] Saving critical.md
+[I 2026-06-09 23:50:03.491 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-09 23:50:03.571 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-09 23:50:03.573 ServerApp] Saving critical_working.ipynb
+[I 2026-06-09 23:50:03.607 ServerApp] Saving critical_working.md
+[I 2026-06-09 23:50:04.644 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:50:04.646 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:50:04.672 ServerApp] Saving critical.md
+[I 2026-06-09 23:51:16.925 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-09 23:51:16.987 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:51:16.988 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:51:17.020 ServerApp] Saving critical.md
+[I 2026-06-09 23:51:17.134 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:51:17.135 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:51:17.150 ServerApp] Saving critical.md
+[I 2026-06-09 23:51:17.358 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:51:17.360 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:51:17.499 ServerApp] Saving critical.md
+[I 2026-06-09 23:52:03.410 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-09 23:52:03.428 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:52:03.430 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:52:03.468 ServerApp] Saving critical.md
+[I 2026-06-09 23:52:03.621 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:52:03.623 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:52:03.657 ServerApp] Saving critical.md
+[I 2026-06-09 23:52:03.746 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-09 23:52:03.748 ServerApp] Saving critical_working.ipynb
+[I 2026-06-09 23:52:03.776 ServerApp] Saving critical_working.md
+[I 2026-06-09 23:52:03.795 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:52:03.797 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:52:03.814 ServerApp] Saving critical.md
+[I 2026-06-09 23:53:52.347 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-09 23:53:52.411 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:53:52.412 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:53:52.633 ServerApp] Saving critical.md
+[I 2026-06-09 23:55:53.456 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-09 23:55:53.529 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:55:53.531 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:55:53.823 ServerApp] Saving critical.md
+[I 2026-06-09 23:56:03.849 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-09 23:56:03.942 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-09 23:56:03.944 ServerApp] Saving critical_working.ipynb
+[I 2026-06-09 23:56:04.196 ServerApp] Saving critical_working.md
+[I 2026-06-09 23:56:34.995 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-09 23:56:35.072 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:56:35.074 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:56:35.086 ServerApp] Saving critical.md
+[I 2026-06-09 23:58:35.198 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-09 23:58:35.267 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:58:35.269 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:58:35.286 ServerApp] Saving critical.md
+[I 2026-06-09 23:58:58.365 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-09 23:58:58.425 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:58:58.427 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:58:58.438 ServerApp] Saving critical.md
+[I 2026-06-09 23:58:58.577 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-09 23:58:58.578 ServerApp] Saving critical.ipynb
+[I 2026-06-09 23:58:58.595 ServerApp] Saving critical.md
+[I 2026-06-10 00:00:04.263 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:00:04.342 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 00:00:04.344 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 00:00:05.214 ServerApp] Saving critical_working.md
+[I 2026-06-10 00:00:49.133 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:00:49.202 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:00:49.204 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:00:49.216 ServerApp] Saving critical.md
+[I 2026-06-10 00:00:49.427 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:00:49.429 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:00:49.442 ServerApp] Saving critical.md
+[I 2026-06-10 00:00:53.356 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:00:53.358 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:00:53.370 ServerApp] Saving critical.md
+[I 2026-06-10 00:02:53.423 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:02:53.491 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:02:53.493 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:02:53.529 ServerApp] Saving critical.md
+[I 2026-06-10 00:04:53.623 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:04:53.694 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:04:53.696 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:04:53.836 ServerApp] Saving critical.md
+[I 2026-06-10 00:06:53.920 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:06:53.990 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:06:53.993 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:06:54.005 ServerApp] Saving critical.md
+[I 2026-06-10 00:07:59.885 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:07:59.958 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:07:59.959 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:07:59.969 ServerApp] Saving critical.md
+[I 2026-06-10 00:08:28.152 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:08:28.216 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:08:28.217 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:08:28.228 ServerApp] Saving critical.md
+[I 2026-06-10 00:08:28.447 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:08:28.449 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:08:28.476 ServerApp] Saving critical.md
+[I 2026-06-10 00:08:28.702 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:08:28.703 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:08:28.719 ServerApp] Saving critical.md
+[I 2026-06-10 00:10:28.312 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:10:28.332 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:10:28.334 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:10:28.353 ServerApp] Saving critical.md
+[I 2026-06-10 00:11:06.801 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:11:06.817 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:11:06.819 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:11:06.861 ServerApp] Saving critical.md
+[I 2026-06-10 00:11:07.077 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:11:07.079 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:11:07.093 ServerApp] Saving critical.md
+[I 2026-06-10 00:14:20.970 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:14:20.985 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:14:20.987 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:14:21.365 ServerApp] Saving critical.md
+[I 2026-06-10 00:14:22.833 ServerApp] Kernel restarted: 2db9e0db-a3c9-40bf-812e-9c6823628d88
+[I 2026-06-10 00:14:22.840 ServerApp] Starting buffering for 2db9e0db-a3c9-40bf-812e-9c6823628d88:cd48d35a-8809-4b7c-8177-1d1d09571166
+[I 2026-06-10 00:14:22.899 ServerApp] Connecting to kernel 2db9e0db-a3c9-40bf-812e-9c6823628d88.
+[I 2026-06-10 00:14:22.899 ServerApp] Restoring connection for 2db9e0db-a3c9-40bf-812e-9c6823628d88:cd48d35a-8809-4b7c-8177-1d1d09571166
+[W 2026-06-10 00:17:41.337 ServerApp] Replacing stale connection: 348fdfbc-b2ae-428e-a7d1-93db948a173f:4d98de75-b5ec-4d3f-accd-973b6d278248
+[W 2026-06-10 00:17:41.338 ServerApp] Replacing stale connection: 853b4adb-e460-4b75-bb15-8caa833701fa:03c83196-7675-465f-812c-71a31a385482
+[I 2026-06-10 00:17:41.340 ServerApp] Connecting to kernel 348fdfbc-b2ae-428e-a7d1-93db948a173f.
+[I 2026-06-10 00:17:41.342 ServerApp] Connecting to kernel 853b4adb-e460-4b75-bb15-8caa833701fa.
+[W 2026-06-10 00:17:41.347 ServerApp] 
+[W 2026-06-10 00:17:41.347 ServerApp] 
+[W 2026-06-10 00:17:41.349 ServerApp] 
+[W 2026-06-10 00:17:41.349 ServerApp] 
+[W 2026-06-10 00:17:41.351 ServerApp] 
+[W 2026-06-10 00:17:41.352 ServerApp] 
+[W 2026-06-10 00:17:41.353 ServerApp] 
+[W 2026-06-10 00:17:41.353 ServerApp] 
+[W 2026-06-10 00:17:41.353 ServerApp] 
+[W 2026-06-10 00:17:41.354 ServerApp] 
+[W 2026-06-10 00:17:41.355 ServerApp] 
+[W 2026-06-10 00:17:41.356 ServerApp] 
+[W 2026-06-10 00:17:41.356 ServerApp] 
+[W 2026-06-10 00:17:41.357 ServerApp] 
+[W 2026-06-10 00:17:41.357 ServerApp] 
+[W 2026-06-10 00:17:41.358 ServerApp] 
+[W 2026-06-10 00:17:41.359 ServerApp] 
+[W 2026-06-10 00:17:41.359 ServerApp] 
+[W 2026-06-10 00:17:41.359 ServerApp] 
+[W 2026-06-10 00:17:41.360 ServerApp] 
+[W 2026-06-10 00:17:41.361 ServerApp] 
+[W 2026-06-10 00:17:41.361 ServerApp] 
+[W 2026-06-10 00:17:41.362 ServerApp] 
+[W 2026-06-10 00:17:41.362 ServerApp] 
+[W 2026-06-10 00:17:41.363 ServerApp] 
+[W 2026-06-10 00:17:41.363 ServerApp] 
+[W 2026-06-10 00:17:41.370 ServerApp] 
+[W 2026-06-10 00:17:41.370 ServerApp] 
+[W 2026-06-10 00:17:41.371 ServerApp] 
+[W 2026-06-10 00:17:41.371 ServerApp] 
+[W 2026-06-10 00:17:41.795 ServerApp] 
+[W 2026-06-10 00:17:41.795 ServerApp] 
+[W 2026-06-10 00:17:41.861 ServerApp] 
+[W 2026-06-10 00:17:41.861 ServerApp] 
+[W 2026-06-10 00:17:41.960 ServerApp] Replacing stale connection: 2db9e0db-a3c9-40bf-812e-9c6823628d88:cd48d35a-8809-4b7c-8177-1d1d09571166
+[I 2026-06-10 00:17:41.961 ServerApp] Connecting to kernel 2db9e0db-a3c9-40bf-812e-9c6823628d88.
+[W 2026-06-10 00:17:41.964 ServerApp] 
+[W 2026-06-10 00:17:41.964 ServerApp] 
+[W 2026-06-10 00:17:41.965 ServerApp] 
+[W 2026-06-10 00:17:41.966 ServerApp] 
+[I 2026-06-10 00:17:42.972 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:17:42.990 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:17:42.992 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:17:43.150 ServerApp] Saving critical.md
+[W 2026-06-10 00:17:44.995 ServerApp] 
+[W 2026-06-10 00:17:44.996 ServerApp] 
+[W 2026-06-10 00:17:44.996 ServerApp] 
+[W 2026-06-10 00:17:44.997 ServerApp] 
+[W 2026-06-10 00:17:44.997 ServerApp] 
+[W 2026-06-10 00:17:44.998 ServerApp] 
+[W 2026-06-10 00:17:44.998 ServerApp] 
+[W 2026-06-10 00:17:44.999 ServerApp] 
+[W 2026-06-10 00:17:44.999 ServerApp] 
+[W 2026-06-10 00:17:45.000 ServerApp] 
+[W 2026-06-10 00:17:45.000 ServerApp] 
+[W 2026-06-10 00:17:45.001 ServerApp] 
+[W 2026-06-10 00:17:45.001 ServerApp] 
+[W 2026-06-10 00:17:45.080 ServerApp] 
+[W 2026-06-10 00:17:45.080 ServerApp] 
+[W 2026-06-10 00:17:45.081 ServerApp] 
+[W 2026-06-10 00:17:45.081 ServerApp] 
+[W 2026-06-10 00:17:45.097 ServerApp] 
+[W 2026-06-10 00:17:45.097 ServerApp] 
+[W 2026-06-10 00:17:45.160 ServerApp] 
+[W 2026-06-10 00:17:45.160 ServerApp] 
+[I 2026-06-10 00:17:50.111 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:17:50.131 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:17:50.133 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:17:50.160 ServerApp] Saving critical.md
+[W 2026-06-10 00:17:53.525 ServerApp] Replacing stale connection: e757c301-4553-430d-a7b8-4ed10e8d51be:396a03ba-8ae9-4af1-b986-a0adb2e4ac6f
+[I 2026-06-10 00:17:53.526 ServerApp] Connecting to kernel e757c301-4553-430d-a7b8-4ed10e8d51be.
+[W 2026-06-10 00:17:53.535 ServerApp] 
+[W 2026-06-10 00:17:53.535 ServerApp] 
+[W 2026-06-10 00:17:53.536 ServerApp] 
+[W 2026-06-10 00:17:53.537 ServerApp] 
+[W 2026-06-10 00:17:53.538 ServerApp] 
+[W 2026-06-10 00:17:53.539 ServerApp] 
+[W 2026-06-10 00:17:53.541 ServerApp] 
+[W 2026-06-10 00:17:53.541 ServerApp] 
+[W 2026-06-10 00:17:53.541 ServerApp] 
+[W 2026-06-10 00:17:53.542 ServerApp] 
+[W 2026-06-10 00:17:53.543 ServerApp] 
+[W 2026-06-10 00:17:53.543 ServerApp] 
+[W 2026-06-10 00:17:53.544 ServerApp] 
+[W 2026-06-10 00:17:53.551 ServerApp] 
+[W 2026-06-10 00:17:53.552 ServerApp] 
+[W 2026-06-10 00:18:53.070 TerminalsExtensionApp] WebSocket ping timeout after 119971 ms.
+[W 2026-06-10 00:18:53.218 TerminalsExtensionApp] WebSocket ping timeout after 119965 ms.
+[W 2026-06-10 00:18:53.257 TerminalsExtensionApp] WebSocket ping timeout after 119972 ms.
+[W 2026-06-10 00:18:53.282 TerminalsExtensionApp] WebSocket ping timeout after 119966 ms.
+[I 2026-06-10 00:20:21.441 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:20:21.479 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:20:21.481 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:20:21.494 ServerApp] Saving critical.md
+[I 2026-06-10 00:34:21.619 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:34:21.697 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:34:21.699 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:34:21.710 ServerApp] Saving critical.md
+[I 2026-06-10 00:36:21.808 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:36:21.828 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:36:21.829 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:36:22.086 ServerApp] Saving critical.md
+[I 2026-06-10 00:37:15.164 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:37:15.224 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:37:15.226 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:37:15.517 ServerApp] Saving critical.md
+[I 2026-06-10 00:39:15.652 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:39:15.726 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:39:15.728 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:39:15.743 ServerApp] Saving critical.md
+[I 2026-06-10 00:41:15.832 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:41:15.852 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:41:15.853 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:41:15.869 ServerApp] Saving critical.md
+[I 2026-06-10 00:43:15.992 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:43:16.060 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:43:16.062 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:43:16.081 ServerApp] Saving critical.md
+[I 2026-06-10 00:45:16.124 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:45:16.194 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:45:16.195 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:45:16.206 ServerApp] Saving critical.md
+[I 2026-06-10 00:47:16.314 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:47:16.330 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:47:16.331 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:47:16.385 ServerApp] Saving critical.md
+[I 2026-06-10 00:49:16.478 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:49:16.491 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:49:16.493 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:49:16.493 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:49:16.514 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:49:16.515 ServerApp] Saving critical.md
+[I 2026-06-10 00:50:05.463 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:50:05.549 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 00:50:05.551 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 00:50:05.577 ServerApp] Saving critical_working.md
+[I 2026-06-10 00:51:16.675 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:51:16.746 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:51:16.748 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:51:16.759 ServerApp] Saving critical.md
+[I 2026-06-10 00:53:16.842 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:53:16.914 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:53:16.916 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:53:16.937 ServerApp] Saving critical.md
+[I 2026-06-10 00:55:17.083 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:55:17.148 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:55:17.149 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:55:17.164 ServerApp] Saving critical.md
+[I 2026-06-10 00:57:17.270 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:57:17.339 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:57:17.341 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:57:17.697 ServerApp] Saving critical.md
+[I 2026-06-10 00:59:17.794 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:59:17.858 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:59:17.860 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:59:17.897 ServerApp] Saving critical.md
+[I 2026-06-10 00:59:59.454 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 00:59:59.526 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 00:59:59.528 ServerApp] Saving critical.ipynb
+[I 2026-06-10 00:59:59.566 ServerApp] Saving critical.md
+[I 2026-06-10 01:00:00.550 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:00:00.552 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:00:00.568 ServerApp] Saving critical.md
+[I 2026-06-10 01:00:00.729 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:00:00.731 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:00:00.745 ServerApp] Saving critical.md
+[I 2026-06-10 01:00:06.353 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:00:06.356 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:00:06.367 ServerApp] Saving critical.md
+[I 2026-06-10 01:00:06.493 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:00:06.494 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:00:06.511 ServerApp] Saving critical.md
+[I 2026-06-10 01:01:21.998 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 01:01:22.061 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:01:22.063 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:01:22.088 ServerApp] Saving critical.md
+[I 2026-06-10 01:03:22.186 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 01:03:22.323 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:03:22.325 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:03:22.340 ServerApp] Saving critical.md
+[I 2026-06-10 01:05:22.389 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 01:05:22.409 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:05:22.410 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:05:22.437 ServerApp] Saving critical.md
+[I 2026-06-10 01:05:30.961 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 01:19:22.651 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:19:22.653 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:19:22.668 ServerApp] Saving critical.md
+[I 2026-06-10 01:21:22.743 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:21:22.744 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:21:22.760 ServerApp] Saving critical.md
+[I 2026-06-10 01:22:54.762 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:22:54.764 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:22:55.112 ServerApp] Saving critical.md
+[I 2026-06-10 01:23:05.104 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:23:05.105 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:23:05.117 ServerApp] Saving critical.md
+[I 2026-06-10 01:23:05.292 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:23:05.293 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:23:05.308 ServerApp] Saving critical.md
+[I 2026-06-10 01:25:05.186 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:25:05.188 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:25:05.484 ServerApp] Saving critical.md
+[I 2026-06-10 01:26:22.074 ServerApp] Uploading file to /workspace/book/content/chapter_04/chandra_fig.png
+[I 2026-06-10 01:27:05.650 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:27:05.652 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:27:05.663 ServerApp] Saving critical.md
+[I 2026-06-10 01:28:48.413 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:28:48.415 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:28:48.541 ServerApp] Saving critical.md
+[I 2026-06-10 01:30:24.220 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:30:24.222 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:30:24.235 ServerApp] Saving critical.md
+[I 2026-06-10 01:30:24.460 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:30:24.461 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:30:24.481 ServerApp] Saving critical.md
+[I 2026-06-10 01:32:24.355 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:32:24.357 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:32:24.511 ServerApp] Saving critical.md
+[I 2026-06-10 01:34:24.623 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:34:24.625 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:34:24.650 ServerApp] Saving critical.md
+[I 2026-06-10 01:41:02.552 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 01:41:02.554 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 01:41:02.924 ServerApp] Saving critical_working.md
+[I 2026-06-10 01:42:26.545 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:42:26.547 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:42:26.559 ServerApp] Saving critical.md
+[I 2026-06-10 01:43:03.045 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 01:43:03.047 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 01:43:03.070 ServerApp] Saving critical_working.md
+[I 2026-06-10 01:44:26.683 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:44:26.685 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:44:26.696 ServerApp] Saving critical.md
+[I 2026-06-10 01:46:26.822 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:46:26.823 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:46:26.912 ServerApp] Saving critical.md
+[I 2026-06-10 01:48:27.023 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:48:27.025 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:48:27.064 ServerApp] Saving critical.md
+[I 2026-06-10 01:50:27.250 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 01:50:27.252 ServerApp] Saving critical.ipynb
+[I 2026-06-10 01:50:27.265 ServerApp] Saving critical.md
+[W 2026-06-10 02:03:10.692 ServerApp] delete /workspace/book/references.bib
+[I 2026-06-10 02:03:14.105 ServerApp] Uploading file to /workspace/book/Paperpile - References - Jun 10.bib
+[I 2026-06-10 02:03:28.397 ServerApp] Kernel restarted: 348fdfbc-b2ae-428e-a7d1-93db948a173f
+[I 2026-06-10 02:03:28.451 ServerApp] Starting buffering for 348fdfbc-b2ae-428e-a7d1-93db948a173f:4d98de75-b5ec-4d3f-accd-973b6d278248
+[I 2026-06-10 02:03:28.546 ServerApp] Connecting to kernel 348fdfbc-b2ae-428e-a7d1-93db948a173f.
+[I 2026-06-10 02:03:28.546 ServerApp] Restoring connection for 348fdfbc-b2ae-428e-a7d1-93db948a173f:4d98de75-b5ec-4d3f-accd-973b6d278248
+[I 2026-06-10 02:03:52.934 ServerApp] Uploading file to /workspace/book/Paperpile - References - Jun 10 (1).bib
+[I 2026-06-10 02:03:53.329 ServerApp] Saving file at /workspace/book/Paperpile - References - Jun 10 (1).bib
+[W 2026-06-10 02:03:55.906 ServerApp] delete /workspace/book/references.bib
+[I 2026-06-10 02:04:11.766 ServerApp] Kernel restarted: 348fdfbc-b2ae-428e-a7d1-93db948a173f
+[I 2026-06-10 02:04:11.776 ServerApp] Starting buffering for 348fdfbc-b2ae-428e-a7d1-93db948a173f:4d98de75-b5ec-4d3f-accd-973b6d278248
+[I 2026-06-10 02:04:11.831 ServerApp] Connecting to kernel 348fdfbc-b2ae-428e-a7d1-93db948a173f.
+[I 2026-06-10 02:04:11.831 ServerApp] Restoring connection for 348fdfbc-b2ae-428e-a7d1-93db948a173f:4d98de75-b5ec-4d3f-accd-973b6d278248
+[I 2026-06-10 02:05:02.489 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 02:05:02.569 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 02:05:02.570 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 02:05:02.593 ServerApp] Saving critical_working.md
+[I 2026-06-10 02:11:05.464 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 02:11:05.557 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 02:11:05.558 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 02:11:05.581 ServerApp] Saving critical_working.md
+[I 2026-06-10 02:13:05.631 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 02:13:05.709 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 02:13:05.713 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 02:13:05.745 ServerApp] Saving critical_working.md
+[I 2026-06-10 02:13:05.769 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 02:15:06.463 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 02:15:06.556 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 02:15:06.558 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 02:15:07.121 ServerApp] Saving critical_working.md
+[I 2026-06-10 02:23:02.473 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 02:23:02.539 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 02:23:02.540 ServerApp] Saving critical.ipynb
+[I 2026-06-10 02:23:02.581 ServerApp] Saving critical.md
+[I 2026-06-10 02:25:03.455 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 02:25:03.471 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 02:25:03.472 ServerApp] Saving critical.ipynb
+[I 2026-06-10 02:25:03.482 ServerApp] Saving critical.md
+[I 2026-06-10 02:31:34.508 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 02:31:34.530 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 02:31:34.531 ServerApp] Saving critical.ipynb
+[I 2026-06-10 02:31:34.546 ServerApp] Saving critical.md
+[I 2026-06-10 02:33:35.455 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 02:33:35.523 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 02:33:35.525 ServerApp] Saving critical.ipynb
+[I 2026-06-10 02:33:35.536 ServerApp] Saving critical.md
+[I 2026-06-10 02:37:35.608 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 02:37:35.668 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 02:37:35.669 ServerApp] Saving critical.ipynb
+[I 2026-06-10 02:37:35.730 ServerApp] Saving critical.md
+[I 2026-06-10 02:39:35.867 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 02:39:35.935 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 02:39:35.937 ServerApp] Saving critical.ipynb
+[I 2026-06-10 02:39:35.955 ServerApp] Saving critical.md
+[I 2026-06-10 02:41:47.917 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 02:41:47.935 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 02:41:47.937 ServerApp] Saving critical.ipynb
+[I 2026-06-10 02:41:47.993 ServerApp] Saving critical.md
+[I 2026-06-10 02:45:59.764 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 02:45:59.765 ServerApp] Saving critical.ipynb
+[I 2026-06-10 02:46:00.335 ServerApp] Saving critical.md
+[I 2026-06-10 02:46:57.647 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 02:46:57.649 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 02:46:57.671 ServerApp] Saving critical_working.md
+[I 2026-06-10 02:48:57.808 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 02:48:57.810 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 02:48:57.863 ServerApp] Saving critical_working.md
+[I 2026-06-10 02:50:58.027 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 02:50:58.029 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 02:50:58.053 ServerApp] Saving critical_working.md
+[I 2026-06-10 03:28:02.599 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 03:28:02.601 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 03:28:02.645 ServerApp] Saving critical_working.md
+[I 2026-06-10 03:30:02.815 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 03:30:02.817 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 03:30:02.847 ServerApp] Saving critical_working.md
+[I 2026-06-10 03:34:03.025 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 03:34:03.027 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 03:34:03.109 ServerApp] Saving critical_working.md
+[I 2026-06-10 03:38:03.342 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 03:38:03.344 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 03:38:03.385 ServerApp] Saving critical_working.md
+[I 2026-06-10 03:40:03.549 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 03:40:03.551 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 03:40:03.743 ServerApp] Saving critical_working.md
+[I 2026-06-10 03:44:03.934 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 03:44:03.935 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 03:44:03.961 ServerApp] Saving critical_working.md
+[I 2026-06-10 03:46:04.180 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 03:46:04.182 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 03:46:04.277 ServerApp] Saving critical_working.md
+[I 2026-06-10 03:47:49.287 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 03:47:49.289 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 03:47:49.315 ServerApp] Saving critical_working.md
+[I 2026-06-10 03:49:49.525 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 03:49:49.527 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 03:49:49.569 ServerApp] Saving critical_working.md
+[I 2026-06-10 03:50:50.484 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 03:50:50.486 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 03:50:50.513 ServerApp] Saving critical_working.md
+[I 2026-06-10 03:52:50.836 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 03:52:50.838 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 03:52:50.872 ServerApp] Saving critical_working.md
+[I 2026-06-10 03:54:26.743 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 03:54:43.192 ServerApp] Kernel started: 2f19b0ee-e874-44b2-a8cb-fb7b25e76ca5
+[I 2026-06-10 03:54:43.652 ServerApp] Connecting to kernel 2f19b0ee-e874-44b2-a8cb-fb7b25e76ca5.
+[I 2026-06-10 03:55:09.224 ServerApp] Starting buffering for 2f19b0ee-e874-44b2-a8cb-fb7b25e76ca5:97ad8992-a9af-48e0-a2a6-10c37ebe6ced
+[I 2026-06-10 03:55:13.790 ServerApp] Kernel shutdown: 2f19b0ee-e874-44b2-a8cb-fb7b25e76ca5
+[I 2026-06-10 03:56:50.933 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 03:56:51.043 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 03:56:51.045 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 03:56:51.074 ServerApp] Saving critical_working.md
+[I 2026-06-10 03:57:17.727 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 03:57:17.830 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 03:57:17.831 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 03:57:17.861 ServerApp] Saving critical_working.md
+[I 2026-06-10 03:59:17.911 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 03:59:18.018 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 03:59:18.020 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 03:59:18.161 ServerApp] Saving critical_working.md
+[I 2026-06-10 04:01:02.880 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 04:01:18.305 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 04:01:18.307 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 04:01:18.379 ServerApp] Saving critical_working.md
+[I 2026-06-10 04:03:18.533 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 04:03:18.534 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 04:03:18.566 ServerApp] Saving critical_working.md
+[I 2026-06-10 04:03:35.901 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 04:03:35.903 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 04:03:35.930 ServerApp] Saving critical_working.md
+[I 2026-06-10 04:04:08.182 ServerApp] Creating new file in /workspace/book/content/chapter_04
+[I 2026-06-10 04:04:47.785 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 04:04:47.786 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 04:04:47.810 ServerApp] Saving critical_working.md
+[I 2026-06-10 04:04:54.167 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-10 04:05:05.470 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 04:05:05.472 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 04:05:05.507 ServerApp] Saving critical_working.md
+[I 2026-06-10 04:05:10.564 ServerApp] Kernel restarted: 348fdfbc-b2ae-428e-a7d1-93db948a173f
+[I 2026-06-10 04:05:10.573 ServerApp] Starting buffering for 348fdfbc-b2ae-428e-a7d1-93db948a173f:4d98de75-b5ec-4d3f-accd-973b6d278248
+[I 2026-06-10 04:05:10.640 ServerApp] Connecting to kernel 348fdfbc-b2ae-428e-a7d1-93db948a173f.
+[I 2026-06-10 04:05:10.640 ServerApp] Restoring connection for 348fdfbc-b2ae-428e-a7d1-93db948a173f:4d98de75-b5ec-4d3f-accd-973b6d278248
+[W 2026-06-10 04:06:50.891 ServerApp] delete /workspace/book/content/chapter_04/da253e8c918141364cbee5cc9ca39f86bbbeffc5d0aa04f52fb97ef953f3b0ad.pkl
+[I 2026-06-10 04:07:04.778 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 04:07:04.780 ServerApp] Saving critical.ipynb
+[I 2026-06-10 04:07:04.817 ServerApp] Saving critical.md
+[I 2026-06-10 04:07:29.075 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-10 04:08:00.658 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 04:08:03.211 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 04:08:15.361 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[W 2026-06-10 04:08:18.575 ServerApp] delete /workspace/book/content/chapter_04/da253e8c918141364cbee5cc9ca39f86bbbeffc5d0aa04f52fb97ef953f3b0ad.pkl
+[I 2026-06-10 04:08:50.691 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 04:08:50.693 ServerApp] Saving critical.ipynb
+[I 2026-06-10 04:08:50.723 ServerApp] Saving critical.md
+[I 2026-06-10 04:09:58.526 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-10 04:10:24.105 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-10 04:10:50.844 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 04:10:50.847 ServerApp] Saving critical.ipynb
+[I 2026-06-10 04:10:50.860 ServerApp] Saving critical.md
+[I 2026-06-10 04:10:59.501 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-10 04:11:24.983 ServerApp] Reading SOURCE from workspace/book/content/chapter_04/conduction.md
+[I 2026-06-10 04:11:25.366 ServerApp] Kernel started: 76f2a200-74fd-4ed1-9afa-37b78de4675a
+[W 2026-06-10 04:11:25.570 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.39ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:25.601 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.80ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-10 04:11:25.679 ServerApp] Connecting to kernel 76f2a200-74fd-4ed1-9afa-37b78de4675a.
+[W 2026-06-10 04:11:25.694 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.96ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:25.743 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.80ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:25.743 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:25.802 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.82ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:25.815 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.54ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:25.859 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.18ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:25.860 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.66ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.019 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.18ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.020 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.40ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.031 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.56ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.032 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.073 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.79ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.074 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.079 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.52ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.080 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.307 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.04ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.326 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.79ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.326 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.11ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.326 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.334 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.341 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.54ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.386 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.77ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.405 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.73ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.406 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.99ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.406 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.413 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.62ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.413 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.92ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.610 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.06ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.625 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.71ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.626 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.62ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.627 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.93ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.630 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.59ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.635 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.709 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.97ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.733 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.71ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.734 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.735 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.45ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.740 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.741 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.741 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.778 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.72ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.794 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.796 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.15ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.797 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.52ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.800 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.800 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.801 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:26.806 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.52ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.224 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.12ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.225 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.52ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.239 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.68ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.240 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.97ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.245 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.56ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.246 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.54ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.246 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.85ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.247 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.328 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.02ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.329 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.342 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.68ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.343 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.99ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.347 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.348 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.348 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.45ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.352 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.352 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.45ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.406 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.12ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.406 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.34ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.420 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.66ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.421 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.95ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.426 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.54ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.427 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.427 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.434 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.435 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.486 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.79ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.502 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.61ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.503 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.503 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.529 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.80ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.529 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.15ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.530 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.52ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.531 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.57ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.531 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.86ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.585 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.86ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.585 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.600 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.64ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.601 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.52ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.606 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.607 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.607 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.615 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.616 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.664 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.89ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.665 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.60ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.693 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.77ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.694 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.76ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.695 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.10ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.695 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.699 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.700 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.57ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 04:11:27.707 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.55ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-10 04:12:22.136 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 04:12:22.138 ServerApp] Saving critical.ipynb
+[I 2026-06-10 04:12:22.150 ServerApp] Saving critical.md
+[I 2026-06-10 04:12:26.905 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 04:12:26.907 ServerApp] Saving critical.ipynb
+[I 2026-06-10 04:12:26.928 ServerApp] Saving critical.md
+[I 2026-06-10 04:29:08.360 ServerApp] Copying 'workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py' to '/workspace/book/content/chapter_04'
+[I 2026-06-10 04:29:08.386 ServerApp] Saving chandrasekhar_1961_spherical_axisymmetric_reproduction-Copy1.py in format py:light
+[W 2026-06-10 04:29:08.386 ServerApp] Stripping metadata from workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction-Copy1.py as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-10 04:29:32.312 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 04:42:14.142 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 04:42:14.401 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 04:48:14.283 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 04:50:14.450 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 04:52:00.713 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 04:52:27.628 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 04:52:27.630 ServerApp] Saving critical.ipynb
+[I 2026-06-10 04:52:27.643 ServerApp] Saving critical.md
+[I 2026-06-10 04:54:27.742 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 04:54:27.744 ServerApp] Saving critical.ipynb
+[I 2026-06-10 04:54:27.758 ServerApp] Saving critical.md
+[I 2026-06-10 04:54:40.835 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 04:54:40.837 ServerApp] Saving critical.ipynb
+[I 2026-06-10 04:54:40.888 ServerApp] Saving critical.md
+[I 2026-06-10 04:55:34.298 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 04:55:43.457 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 04:56:41.063 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 04:56:41.064 ServerApp] Saving critical.ipynb
+[I 2026-06-10 04:56:41.128 ServerApp] Saving critical.md
+[I 2026-06-10 04:57:34.553 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 05:03:36.550 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 05:04:12.832 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 05:04:15.964 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 05:04:24.993 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 05:04:39.337 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:04:39.339 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:04:39.368 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:04:43.558 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 05:04:43.560 ServerApp] Saving critical.ipynb
+[I 2026-06-10 05:04:43.594 ServerApp] Saving critical.md
+[I 2026-06-10 05:05:25.419 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 05:05:37.084 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 05:06:06.113 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 05:06:06.115 ServerApp] Saving critical.ipynb
+[I 2026-06-10 05:06:06.140 ServerApp] Saving critical.md
+[I 2026-06-10 05:06:06.254 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 05:06:06.256 ServerApp] Saving critical.ipynb
+[I 2026-06-10 05:06:06.279 ServerApp] Saving critical.md
+[I 2026-06-10 05:08:06.279 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 05:08:06.281 ServerApp] Saving critical.ipynb
+[I 2026-06-10 05:08:06.293 ServerApp] Saving critical.md
+[I 2026-06-10 05:17:04.019 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 05:17:15.655 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 05:18:01.954 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 05:18:42.584 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:18:42.586 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:18:42.626 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:20:42.775 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:20:42.777 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:20:42.807 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:23:33.116 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:23:33.118 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:23:33.143 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:25:33.317 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:25:33.319 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:25:33.349 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:27:33.509 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:27:33.511 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:27:33.536 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:40:44.052 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:40:44.053 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:40:44.161 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:40:55.560 ServerApp] Kernel restarted: 348fdfbc-b2ae-428e-a7d1-93db948a173f
+[I 2026-06-10 05:40:55.570 ServerApp] Starting buffering for 348fdfbc-b2ae-428e-a7d1-93db948a173f:4d98de75-b5ec-4d3f-accd-973b6d278248
+[I 2026-06-10 05:40:55.634 ServerApp] Connecting to kernel 348fdfbc-b2ae-428e-a7d1-93db948a173f.
+[I 2026-06-10 05:40:55.634 ServerApp] Restoring connection for 348fdfbc-b2ae-428e-a7d1-93db948a173f:4d98de75-b5ec-4d3f-accd-973b6d278248
+[I 2026-06-10 05:41:32.289 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 05:41:38.473 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:41:38.475 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:41:38.643 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:41:43.956 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 05:41:47.368 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 05:41:59.021 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 05:42:02.619 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 05:43:38.813 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:43:38.815 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:43:39.502 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:43:47.314 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:43:47.315 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:43:47.340 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:43:49.586 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:43:49.588 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:43:49.743 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:44:01.296 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 05:45:47.587 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:45:47.589 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:45:47.635 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:50:22.800 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:50:22.802 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:50:22.831 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:52:23.012 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:52:23.014 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:52:23.040 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:53:09.024 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:53:09.027 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:53:09.103 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:53:14.540 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:53:14.542 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:53:14.624 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:53:17.069 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 05:57:09.284 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:57:09.286 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:57:09.313 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:58:38.269 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 05:58:38.271 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 05:58:38.302 ServerApp] Saving critical_working.md
+[I 2026-06-10 05:58:45.746 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:00:03.544 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 06:00:03.546 ServerApp] Saving critical.ipynb
+[I 2026-06-10 06:00:03.588 ServerApp] Saving critical.md
+[I 2026-06-10 06:00:38.484 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 06:00:38.486 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 06:00:38.519 ServerApp] Saving critical_working.md
+[I 2026-06-10 06:02:03.702 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 06:02:03.704 ServerApp] Saving critical.ipynb
+[I 2026-06-10 06:02:03.750 ServerApp] Saving critical.md
+[I 2026-06-10 06:03:48.396 ServerApp] Saving file at /workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-10 06:03:48.397 ServerApp] Saving general.ipynb
+[W 2026-06-10 06:03:48.397 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-10 06:03:48.405 ServerApp] Saving general.md
+[I 2026-06-10 06:03:50.681 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 06:03:50.683 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 06:03:50.894 ServerApp] Saving critical_working.md
+[I 2026-06-10 06:05:05.398 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:05:05.461 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:05:27.329 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:05:27.385 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-10 06:05:27.679 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-10 06:05:51.032 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:05:51.154 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 06:05:51.156 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 06:05:51.184 ServerApp] Saving critical_working.md
+[I 2026-06-10 06:06:05.413 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:06:05.472 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:06:31.452 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:06:31.623 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:07:00.818 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:07:01.086 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:07:58.125 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:08:03.797 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:08:03.868 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 06:08:03.869 ServerApp] Saving critical.ipynb
+[I 2026-06-10 06:08:04.068 ServerApp] Saving critical.md
+[I 2026-06-10 06:08:13.791 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:08:15.964 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:08:16.112 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:08:16.264 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:08:21.625 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:08:25.730 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:08:25.897 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:08:26.891 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:08:27.068 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:08:27.297 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:09:03.524 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:09:10.682 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:09:13.146 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:09:15.226 ServerApp] Saving file at /workspace/resources/everest/caching.py
+[I 2026-06-10 06:09:21.296 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:09:21.361 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:09:28.287 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:09:28.387 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:09:37.809 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:09:37.912 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:09:43.913 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-10 06:09:46.098 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:09:46.154 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:09:47.970 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-10 06:10:04.119 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:10:04.133 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 06:10:04.134 ServerApp] Saving critical.ipynb
+[I 2026-06-10 06:10:04.147 ServerApp] Saving critical.md
+[I 2026-06-10 06:11:28.489 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:11:28.571 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:11:42.904 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:11:42.962 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:11:59.544 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:11:59.608 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:12:36.687 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:12:36.749 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:12:37.895 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:12:38.069 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:12:39.983 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:13:49.667 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:13:49.722 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:13:53.426 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:14:25.659 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:14:25.699 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:14:31.422 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:14:31.490 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:14:31.658 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:15:21.374 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:15:21.437 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:15:26.753 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:15:28.753 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:15:28.809 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:15:29.017 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:16:04.283 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:16:04.367 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 06:16:04.369 ServerApp] Saving critical.ipynb
+[I 2026-06-10 06:16:04.380 ServerApp] Saving critical.md
+[I 2026-06-10 06:17:51.365 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:17:51.467 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 06:17:51.468 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 06:17:51.512 ServerApp] Saving critical_working.md
+[I 2026-06-10 06:19:26.849 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:19:26.917 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:19:36.622 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:19:36.684 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:19:45.680 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:19:45.743 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:19:48.338 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:19:48.394 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:19:55.587 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:20:04.490 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:20:04.554 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 06:20:04.555 ServerApp] Saving critical.ipynb
+[I 2026-06-10 06:20:04.576 ServerApp] Saving critical.md
+[I 2026-06-10 06:20:14.422 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:20:14.482 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:20:19.023 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:20:19.077 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:20:20.650 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:21:02.405 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:21:02.464 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:21:54.038 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:21:54.096 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:22:04.630 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:22:04.699 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 06:22:04.701 ServerApp] Saving critical.ipynb
+[I 2026-06-10 06:22:04.713 ServerApp] Saving critical.md
+[I 2026-06-10 06:22:08.416 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:23:27.263 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:23:27.333 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 06:23:27.335 ServerApp] Saving critical.ipynb
+[I 2026-06-10 06:23:27.346 ServerApp] Saving critical.md
+[I 2026-06-10 06:35:30.513 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:35:30.595 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 06:35:30.597 ServerApp] Saving critical.ipynb
+[I 2026-06-10 06:35:30.613 ServerApp] Saving critical.md
+[I 2026-06-10 06:36:06.456 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:36:06.516 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:36:28.933 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:36:29.000 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:36:30.553 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[W 2026-06-10 06:36:55.086 ServerApp] delete /workspace/cache/726b52070438e6954849961f08b66dc7710c72e1173a30d0dda4c1a7c5e4edde.pkl
+[W 2026-06-10 06:36:55.087 ServerApp] delete /workspace/cache/8c5b7dfde3083cbc6748646fdf13e68579afdab161b7a964bc97040bf44f7051.pkl
+[W 2026-06-10 06:36:55.087 ServerApp] delete /workspace/cache/07bb2e4ae5ab4705e8e1ecd91aba205a24bafb53ecaf394f8c47eac86efab5b5.pkl
+[W 2026-06-10 06:36:55.088 ServerApp] delete /workspace/cache/11a3fe35768a343707c5de496556e027ee10fc4b7bd4b8bdf13982ea9ebfe558.pkl
+[W 2026-06-10 06:36:55.088 ServerApp] delete /workspace/cache/48d451556523b70666d3e3882f9a29aceaff1fc3dd8f25820a83e04695088cce.pkl
+[I 2026-06-10 06:39:25.786 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:39:25.853 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:39:31.496 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:39:31.516 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 06:39:31.518 ServerApp] Saving critical.ipynb
+[I 2026-06-10 06:39:31.532 ServerApp] Saving critical.md
+[I 2026-06-10 06:41:32.491 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:41:32.559 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 06:41:32.561 ServerApp] Saving critical.ipynb
+[I 2026-06-10 06:41:32.587 ServerApp] Saving critical.md
+[I 2026-06-10 06:46:01.146 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:46:01.210 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:46:12.035 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:46:12.093 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:47:35.502 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:47:35.617 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 06:47:35.619 ServerApp] Saving critical.ipynb
+[I 2026-06-10 06:47:35.634 ServerApp] Saving critical.md
+[I 2026-06-10 06:51:12.082 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 06:52:18.889 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:52:23.360 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 06:53:36.581 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 06:53:36.583 ServerApp] Saving critical.ipynb
+[I 2026-06-10 06:53:36.600 ServerApp] Saving critical.md
+[I 2026-06-10 06:55:14.221 ServerApp] Saving file at /workspace/book/content/chapter_01/main.md
+[I 2026-06-10 06:57:14.422 ServerApp] Saving file at /workspace/book/content/chapter_01/main.md
+[I 2026-06-10 06:59:14.622 ServerApp] Saving file at /workspace/book/content/chapter_01/main.md
+[I 2026-06-10 07:01:14.790 ServerApp] Saving file at /workspace/book/content/chapter_01/main.md
+[I 2026-06-10 07:03:04.806 ServerApp] Saving file at /workspace/book/content/chapter_01/main.md
+[I 2026-06-10 07:03:05.007 ServerApp] Saving file at /workspace/book/content/chapter_01/main.md
+[I 2026-06-10 07:03:21.058 ServerApp] Saving file at /workspace/book/content/chapter_01/main.md
+[I 2026-06-10 07:03:31.857 ServerApp] Saving file at /workspace/book/content/chapter_01/main.md
+[I 2026-06-10 07:03:36.826 ServerApp] Saving file at /workspace/book/content/chapter_01/main.md
+[I 2026-06-10 07:03:53.079 ServerApp] Saving file at /workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-10 07:03:53.080 ServerApp] Saving general.ipynb
+[W 2026-06-10 07:03:53.081 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-10 07:03:53.090 ServerApp] Saving general.md
+[I 2026-06-10 07:04:03.097 ServerApp] Saving file at /workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-10 07:04:03.099 ServerApp] Saving general.ipynb
+[W 2026-06-10 07:04:03.099 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-10 07:04:03.106 ServerApp] Saving general.md
+[I 2026-06-10 07:04:03.254 ServerApp] Saving file at /workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-10 07:04:03.255 ServerApp] Saving general.ipynb
+[W 2026-06-10 07:04:03.256 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-10 07:04:03.266 ServerApp] Saving general.md
+[I 2026-06-10 07:04:03.479 ServerApp] Saving file at /workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-10 07:04:03.481 ServerApp] Saving general.ipynb
+[W 2026-06-10 07:04:03.481 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-10 07:04:03.489 ServerApp] Saving general.md
+[I 2026-06-10 07:05:05.239 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:05:25.843 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:05:28.589 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:06:32.588 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:06:49.922 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[W 2026-06-10 07:07:26.981 ServerApp] delete /workspace/book/content/chapter_04/linear_stability_annulus_basal.png
+[W 2026-06-10 07:07:26.982 ServerApp] delete /workspace/book/content/chapter_04/linear_stability_annulus.png
+[W 2026-06-10 07:07:26.982 ServerApp] delete /workspace/book/content/chapter_04/linear_stability_annulus.py
+[W 2026-06-10 07:07:26.982 ServerApp] delete /workspace/book/content/chapter_04/linear_stability_annulus_internal.png
+[I 2026-06-10 07:07:36.724 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 07:07:36.726 ServerApp] Saving critical.ipynb
+[I 2026-06-10 07:07:36.737 ServerApp] Saving critical.md
+[I 2026-06-10 07:08:10.771 ServerApp] Uploading file to /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:08:39.423 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:09:30.319 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:09:36.804 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:11:01.555 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:11:10.441 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 07:11:10.443 ServerApp] Saving critical.ipynb
+[I 2026-06-10 07:11:10.464 ServerApp] Saving critical.md
+[I 2026-06-10 07:13:43.209 ServerApp] Saving file at /workspace/todo.md
+[I 2026-06-10 07:13:47.779 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[W 2026-06-10 07:17:53.032 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.88ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-10 07:17:53.075 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-10 07:18:05.309 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.22ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-10 07:18:05.362 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.84ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-10 07:23:11.008 ServerApp] Copying 'workspace/book/content/chapter_04/linear_stability_annulus.py' to '/workspace/book/content/chapter_04'
+[I 2026-06-10 07:23:11.029 ServerApp] Saving linear_stability_annulus-Copy1.py in format py:light
+[W 2026-06-10 07:23:11.029 ServerApp] Stripping metadata from workspace/book/content/chapter_04/linear_stability_annulus-Copy1.py as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-10 07:23:18.078 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:23:44.129 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:24:30.712 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[W 2026-06-10 07:24:46.360 ServerApp] delete /workspace/cache/8c5b7dfde3083cbc6748646fdf13e68579afdab161b7a964bc97040bf44f7051.pkl
+[W 2026-06-10 07:24:46.361 ServerApp] delete /workspace/cache/11a3fe35768a343707c5de496556e027ee10fc4b7bd4b8bdf13982ea9ebfe558.pkl
+[I 2026-06-10 07:25:08.745 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:25:08.817 ServerApp] Saving file at /workspace/book/content/chapter_02/general.ipynb
+[I 2026-06-10 07:25:08.819 ServerApp] Saving general.ipynb
+[W 2026-06-10 07:25:08.819 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-10 07:25:08.831 ServerApp] Saving general.md
+[I 2026-06-10 07:25:10.854 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 07:25:10.855 ServerApp] Saving critical.ipynb
+[I 2026-06-10 07:25:10.867 ServerApp] Saving critical.md
+[I 2026-06-10 07:25:22.868 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:25:22.931 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:25:42.501 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:25:42.558 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-10 07:25:48.021 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:25:48.080 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-10 07:26:00.395 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:26:00.467 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-10 07:26:29.466 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:26:57.057 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 07:26:57.058 ServerApp] Saving critical.ipynb
+[I 2026-06-10 07:26:57.069 ServerApp] Saving critical.md
+[I 2026-06-10 07:27:01.941 ServerApp] Kernel restarted: 2db9e0db-a3c9-40bf-812e-9c6823628d88
+[I 2026-06-10 07:27:01.949 ServerApp] Starting buffering for 2db9e0db-a3c9-40bf-812e-9c6823628d88:cd48d35a-8809-4b7c-8177-1d1d09571166
+[I 2026-06-10 07:27:02.045 ServerApp] Connecting to kernel 2db9e0db-a3c9-40bf-812e-9c6823628d88.
+[I 2026-06-10 07:27:02.045 ServerApp] Restoring connection for 2db9e0db-a3c9-40bf-812e-9c6823628d88:cd48d35a-8809-4b7c-8177-1d1d09571166
+[I 2026-06-10 07:28:00.621 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-10 07:28:05.426 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-10 07:28:57.185 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 07:28:57.187 ServerApp] Saving critical.ipynb
+[I 2026-06-10 07:28:57.209 ServerApp] Saving critical.md
+[I 2026-06-10 07:29:00.198 ServerApp] Kernel restarted: 2db9e0db-a3c9-40bf-812e-9c6823628d88
+[I 2026-06-10 07:29:00.205 ServerApp] Starting buffering for 2db9e0db-a3c9-40bf-812e-9c6823628d88:cd48d35a-8809-4b7c-8177-1d1d09571166
+[I 2026-06-10 07:29:00.274 ServerApp] Connecting to kernel 2db9e0db-a3c9-40bf-812e-9c6823628d88.
+[I 2026-06-10 07:29:00.274 ServerApp] Restoring connection for 2db9e0db-a3c9-40bf-812e-9c6823628d88:cd48d35a-8809-4b7c-8177-1d1d09571166
+[I 2026-06-10 07:29:02.913 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 07:29:02.914 ServerApp] Saving critical.ipynb
+[I 2026-06-10 07:29:02.952 ServerApp] Saving critical.md
+[I 2026-06-10 07:29:04.945 ServerApp] Starting buffering for 853b4adb-e460-4b75-bb15-8caa833701fa:03c83196-7675-465f-812c-71a31a385482
+[I 2026-06-10 07:29:04.946 ServerApp] Starting buffering for 76f2a200-74fd-4ed1-9afa-37b78de4675a:df59ff2e-634b-4c96-baf7-32189a0136fb
+[I 2026-06-10 07:29:04.946 ServerApp] Starting buffering for e757c301-4553-430d-a7b8-4ed10e8d51be:396a03ba-8ae9-4af1-b986-a0adb2e4ac6f
+[I 2026-06-10 07:29:04.947 ServerApp] Starting buffering for 348fdfbc-b2ae-428e-a7d1-93db948a173f:4d98de75-b5ec-4d3f-accd-973b6d278248
+[I 2026-06-10 07:29:04.965 ServerApp] Starting buffering for 2db9e0db-a3c9-40bf-812e-9c6823628d88:cd48d35a-8809-4b7c-8177-1d1d09571166
+[I 2026-06-10 07:29:07.418 ServerApp] Connecting to kernel 853b4adb-e460-4b75-bb15-8caa833701fa.
+[I 2026-06-10 07:29:07.488 ServerApp] Connecting to kernel e757c301-4553-430d-a7b8-4ed10e8d51be.
+[I 2026-06-10 07:29:07.552 ServerApp] Connecting to kernel 348fdfbc-b2ae-428e-a7d1-93db948a173f.
+[I 2026-06-10 07:29:07.603 ServerApp] Starting buffering for 853b4adb-e460-4b75-bb15-8caa833701fa:5cfd0405-05af-4779-91b1-7df4980d06e4
+[I 2026-06-10 07:29:07.619 ServerApp] Connecting to kernel 2db9e0db-a3c9-40bf-812e-9c6823628d88.
+[I 2026-06-10 07:29:07.632 ServerApp] Starting buffering for e757c301-4553-430d-a7b8-4ed10e8d51be:e85eea42-495b-454d-ad4e-c353584a3f08
+[I 2026-06-10 07:29:07.696 ServerApp] Starting buffering for 348fdfbc-b2ae-428e-a7d1-93db948a173f:bd7eff08-37ae-4789-8168-b3a02facfcab
+[I 2026-06-10 07:29:07.699 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:07.703 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:07.704 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:07.705 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:07.718 ServerApp] Starting buffering for 2db9e0db-a3c9-40bf-812e-9c6823628d88:68f2932b-ca54-49b1-ae7d-4d31b5ca9e13
+[I 2026-06-10 07:29:07.718 ServerApp] Connecting to kernel 76f2a200-74fd-4ed1-9afa-37b78de4675a.
+[W 2026-06-10 07:29:07.750 ServerApp] 404 GET /api/contents/workspace/book/content/chapter_04/linear_stability_annulus.png?content=0&hash=0&1781076547649 (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.05ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical.ipynb
+[W 2026-06-10 07:29:07.750 ServerApp] 404 GET /api/contents/workspace/book/content/chapter_04/linear_stability_annulus.png?content=0&hash=0&1781076547649 (172.17.0.1): No such file or directory: workspace/book/content/chapter_04/linear_stability_annulus.png
+[I 2026-06-10 07:29:07.755 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:07.756 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:07.779 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:07.780 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:07.781 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:07.804 ServerApp] Starting buffering for 76f2a200-74fd-4ed1-9afa-37b78de4675a:2dc13c9d-a2a1-4ef4-98ff-4b912bea8513
+[I 2026-06-10 07:29:07.809 LabApp] `sys_prefix` level settings are read-only, using `user` level for migration to `lockedExtensions`
+[I 2026-06-10 07:29:07.813 LabApp] Build is up to date
+[I 2026-06-10 07:29:07.818 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:07.819 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:07.821 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:07.822 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:07.859 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:07.863 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:07.864 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:07.865 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:08.183 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:29:08.187 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[W 2026-06-10 07:29:08.218 ServerApp] Notebook workspace/book/content/chapter_02/general.ipynb is not trusted
+[I 2026-06-10 07:29:08.221 ServerApp] Reading SOURCE from workspace/book/content/chapter_04/critical_working.md
+[I 2026-06-10 07:29:08.222 ServerApp] Reading SOURCE from workspace/book/content/chapter_02/general.md
+[I 2026-06-10 07:29:08.262 ServerApp] Reading SOURCE from workspace/book/content/chapter_04/critical.md
+[I 2026-06-10 07:29:08.351 ServerApp] Reading SOURCE from workspace/book/content/chapter_04/conduction.md
+[I 2026-06-10 07:29:09.077 ServerApp] Connecting to kernel 853b4adb-e460-4b75-bb15-8caa833701fa.
+[I 2026-06-10 07:29:09.100 ServerApp] Connecting to kernel e757c301-4553-430d-a7b8-4ed10e8d51be.
+[I 2026-06-10 07:29:09.119 ServerApp] Connecting to kernel 2db9e0db-a3c9-40bf-812e-9c6823628d88.
+[I 2026-06-10 07:29:09.147 ServerApp] Connecting to kernel 348fdfbc-b2ae-428e-a7d1-93db948a173f.
+[I 2026-06-10 07:29:09.172 ServerApp] Connecting to kernel 76f2a200-74fd-4ed1-9afa-37b78de4675a.
+[W 2026-06-10 07:29:09.814 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.20ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:09.845 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.10ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.006 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.24ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.069 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.18ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.069 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.43ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.190 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.98ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.191 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.234 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.75ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.241 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.61ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.358 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.89ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.446 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.97ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.447 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.60ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.448 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.92ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.632 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.12ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.632 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.39ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.692 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.93ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.693 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.25ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.841 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.04ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.842 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.59ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.995 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.11ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:10.995 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.41ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.192 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.33ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.193 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.62ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.193 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.96ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.194 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.66ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.195 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.98ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.195 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.31ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.306 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.09ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.306 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.35ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.527 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.21ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.528 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.59ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.612 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.02ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.613 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.75ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.613 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.19ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.614 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.617 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.54ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.618 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.673 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.24ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.674 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.59ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.745 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.91ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.751 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.55ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.864 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.02ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.864 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.25ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.960 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.02ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:11.967 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.54ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.228 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.84ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.229 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.17ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.229 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.235 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.236 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.241 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.56ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.242 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.242 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.94ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.318 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.13ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.318 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.42ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.319 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.81ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.320 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.55ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.325 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.67ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.326 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.61ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.327 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.68ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.327 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.01ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.328 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.364 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.71ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.365 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.72ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.366 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.03ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.366 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.36ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.372 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.56ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.373 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.57ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.373 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.90ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.374 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.54ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.377 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.463 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.18ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.464 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.464 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.62ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.465 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.01ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.472 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.65ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.473 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.67ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.473 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.03ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.474 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.475 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.55ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.520 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.26ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.521 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.94ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.522 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.24ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.522 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.53ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.525 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.73ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.526 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.59ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.527 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.53ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.528 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.54ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[W 2026-06-10 07:29:12.532 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.52ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04
+[I 2026-06-10 07:30:02.018 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:30:58.950 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:31:08.584 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 07:31:08.586 ServerApp] Saving critical.ipynb
+[I 2026-06-10 07:31:08.600 ServerApp] Saving critical.md
+[I 2026-06-10 07:31:15.037 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:35:08.665 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:35:08.729 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 07:35:08.731 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:35:08.732 ServerApp] Saving critical.ipynb
+[I 2026-06-10 07:35:08.744 ServerApp] Saving critical.md
+[I 2026-06-10 07:39:59.940 ServerApp] Kernel restarted: 348fdfbc-b2ae-428e-a7d1-93db948a173f
+[I 2026-06-10 07:39:59.963 ServerApp] Starting buffering for 348fdfbc-b2ae-428e-a7d1-93db948a173f:142b3fbf-c8d0-43b6-8b7c-09bc547f6033
+[I 2026-06-10 07:40:00.044 ServerApp] Connecting to kernel 348fdfbc-b2ae-428e-a7d1-93db948a173f.
+[I 2026-06-10 07:40:00.044 ServerApp] Restoring connection for 348fdfbc-b2ae-428e-a7d1-93db948a173f:142b3fbf-c8d0-43b6-8b7c-09bc547f6033
+[I 2026-06-10 07:41:09.509 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:41:09.582 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 07:41:09.584 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 07:41:09.605 ServerApp] Saving critical_working.md
+[I 2026-06-10 07:43:09.652 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:43:09.734 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 07:43:09.736 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 07:43:09.842 ServerApp] Saving critical_working.md
+[W 2026-06-10 07:45:00.432 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.22ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-10 07:45:00.486 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.21ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-10 07:45:01.133 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.43ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-10 07:45:01.173 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.00ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-10 07:45:59.574 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23nu_ra_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-10 07:45:59.612 ServerApp] 404 GET /files/workspace/book/content/chapter_02/%23beta_k_nu_scaling?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.30ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_02/general.ipynb
+[W 2026-06-10 07:52:53.619 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.20ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 07:52:53.621 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.85ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 07:52:53.671 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 07:52:53.672 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.01ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 07:52:53.833 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.14ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 07:52:53.845 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.32ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 07:52:53.919 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.52ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 07:52:53.920 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.01ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 07:52:53.963 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.43ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 07:52:54.366 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondh?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.65ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 07:52:54.368 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondhmixed?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.02ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 07:52:54.373 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondf?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.13ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 07:52:54.374 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondffit?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.93ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 07:52:54.531 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_internal_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.64ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 07:52:54.532 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23isocondinternal?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 2.14ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 07:52:54.611 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.50ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 07:52:54.612 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23cylindrical_mixed_geotherm_analysis?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.81ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[W 2026-06-10 07:52:54.613 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23h_crit_vs_f_chart?_xsrf=[secret] (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 0.81ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-10 07:53:57.085 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:53:57.246 ServerApp] Saving file at /workspace/book/content/chapter_04/conduction.ipynb
+[I 2026-06-10 07:53:57.248 ServerApp] Saving conduction.ipynb
+[I 2026-06-10 07:53:57.300 ServerApp] Saving conduction.md
+[W 2026-06-10 07:53:57.300 ServerApp] Stripping metadata from workspace/book/content/chapter_04/conduction.md as 'Include Metadata' is off (toggle 'Include Metadata' in the Jupytext Menu or Commands if desired)
+[I 2026-06-10 07:57:29.031 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:57:29.092 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:58:02.512 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:58:02.587 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 07:58:02.589 ServerApp] Saving critical.ipynb
+[I 2026-06-10 07:58:02.602 ServerApp] Saving critical.md
+[I 2026-06-10 07:59:18.165 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:59:18.233 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:59:35.671 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:59:35.741 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 07:59:43.286 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 07:59:43.346 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 08:02:03.569 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-10 08:02:03.571 ServerApp] Saving critical.ipynb
+[I 2026-06-10 08:02:03.636 ServerApp] Saving critical.md
+[I 2026-06-10 08:31:46.351 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-10 08:44:37.954 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 08:44:37.957 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 08:44:38.196 ServerApp] Saving critical_working.md
+[I 2026-06-10 08:44:48.276 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 08:45:38.145 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[W 2026-06-10 08:45:46.386 ServerApp] delete /workspace/book/content/chapter_04/__main__.png
+[I 2026-06-10 08:45:55.500 ServerApp] Saving file at /workspace/book/content/chapter_04/local.py
+[I 2026-06-10 08:46:22.058 ServerApp] Opening workspace/book/content/chapter_04/local.py to check if it is a paired notebook
+[I 2026-06-10 08:46:38.333 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 08:46:38.335 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 08:46:38.359 ServerApp] Saving critical_working.md
+[I 2026-06-10 08:48:38.502 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 08:48:38.504 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 08:48:38.525 ServerApp] Saving critical_working.md
+[I 2026-06-10 08:50:38.658 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 08:50:38.659 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 08:50:38.693 ServerApp] Saving critical_working.md
+[I 2026-06-10 08:50:58.790 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 08:51:38.949 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 08:52:38.834 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 08:52:38.836 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 08:52:38.859 ServerApp] Saving critical_working.md
+[I 2026-06-10 08:56:39.586 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 08:56:39.588 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 08:56:39.619 ServerApp] Saving critical_working.md
+[I 2026-06-10 08:58:40.494 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 08:58:40.587 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 08:58:40.589 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 08:58:40.619 ServerApp] Saving critical_working.md
+[I 2026-06-10 08:58:59.059 ServerApp] Uploading file to /workspace/storage/simple_critical_2026_1__-_-_.data
+[I 2026-06-10 09:00:39.536 ServerApp] Copying 'workspace/storage/simple_critical.data' to '/workspace/storage'
+[I 2026-06-10 09:00:40.692 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 09:00:40.785 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 09:00:40.787 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 09:00:41.029 ServerApp] Saving critical_working.md
+[I 2026-06-10 09:02:28.313 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 09:02:28.523 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 09:02:28.525 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 09:02:28.655 ServerApp] Saving critical_working.md
+[I 2026-06-10 09:04:18.054 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 09:04:18.164 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 09:04:18.166 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 09:04:18.206 ServerApp] Saving critical_working.md
+[I 2026-06-10 09:06:18.373 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 09:06:18.464 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 09:06:18.466 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 09:06:18.516 ServerApp] Saving critical_working.md
+[I 2026-06-10 09:08:19.504 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 09:08:19.789 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 09:08:19.791 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 09:08:20.348 ServerApp] Saving critical_working.md
+[I 2026-06-10 09:12:20.512 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 09:12:20.607 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 09:12:20.608 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 09:12:20.865 ServerApp] Saving critical_working.md
+[I 2026-06-10 09:14:21.118 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 09:14:21.208 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 09:14:21.210 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 09:14:21.344 ServerApp] Saving critical_working.md
+[I 2026-06-10 09:16:21.509 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 09:16:21.604 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 09:16:21.606 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 09:16:22.169 ServerApp] Saving critical_working.md
+[I 2026-06-10 09:17:50.587 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-10 09:17:50.680 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-10 09:17:50.681 ServerApp] Saving critical_working.ipynb
+[I 2026-06-10 09:17:51.340 ServerApp] Saving critical_working.md

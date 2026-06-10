@@ -49,6 +49,8 @@ Remarkably, all these early authors considered the full three-dimensional case, 
 
 ![A figure from Pellew and Southwell](pellew_fig.png)
 
+*Figure from Pellew and Southwell showing the critical stability (related to $\mathrm{Ra}_\mathrm{cr}$ against the wavenumber $a$ (effectively the number of peaks, or equivalently troughs, in the planform).*
+
 +++
 
 #### Post-war investigations
@@ -90,7 +92,7 @@ The 1960s saw a wave of investigations that pushed beyond the assumptions of the
 
 *Benchmark results from Sparrow [@Sparrow1964-rv]. In all cases considered, the lower boundary was rigid. For the internal heating scenarios, both walls were held rigid and fixed in temperature.*
 
-The analysis of Sparrow *et al* covers what we would now call the 'mixed-heating' scenario; for the purely internally-heated scenario (i.e. with an insulated lower boundary), we can turn to Roberts [Roberts1967-aq] who found that, for all heat production rates, $\mathrm{Ra}_\mathrm{cr} \approx 2772.28$ and $a_c \approx 2.629$. Roberts also identified that this scenario produces a strong vertical asymmetry, which is not observed in other (planar) cases
+The analysis of Sparrow *et al* covers what we would now call the 'mixed-heating' scenario; for the purely internally-heated scenario (i.e. with an insulated lower boundary), we can turn to Roberts [Roberts1967-aq] who found that, for all heat production rates, $\mathrm{Ra}_\mathrm{cr} \approx 2772.28$ and $a_c \approx 2.629$. Roberts also identified that this scenario produces a strong vertical asymmetry, which is not observed in other (planar) cases.
 
 Another early assumption challenged in this period was the assumption of infinite lateral extent. Davis [@Davis1967-vs] identified that in such a scenario the wavenumber (the spatial frequency of convection cells) could no longer be allowed to vary freely, but would necessarily be constrained to the spatial harmonics of the chamber's dimensions. Using the Galerkin method, Davis showed that the lateral constraints on the domain were in fact of first-order significance in determining the shape, and therefore the efficiency, of the cells, and consequently the overall stability of the fluid.
 
@@ -130,7 +132,7 @@ As mantle studies have progressed, each additional dimension of complexity has h
 
 +++
 
-#### Curvature and free-slip bases
+#### The effects of curvature
 
 +++
 
@@ -138,11 +140,138 @@ The study of convective onset has, from the very beginning, concentrated on thre
 
 Remarkably, given the boom in planetary studies, the question of curvature remains under-explored. Though many models today are curved (e.g. [@Rolf2018-pl], [@Liu2019-mo], [@Weller2020-vf]), the effect of curvature *per se* is not often centred, let alone its specific effect on convective onset.
 
-The problem of convection in a self-gravitating sphere was first broached by Merriell Bland, who carried out the first formal solutions in spherical polar coordinates before passing on her work to Jeffreys [@Jeffreys1951-vm]. Chandrasekhar picked up the thread one year later [@Chandrasekhar1952-gr] and introduced spherical harmonics, identifying that the $l=1$ (i.e. a single global cell) is always the first mode to be excited at the point of onset, and providing the first reported $\mathrm{Ra}_\mathrm{cr}$ values for this scenario ($3091.4$ for a free outer surface and $8047.1$ for a rigid surface). Backus [@Backus1955-kr] improved on Chandrasekhar's calculations by introducing Bessel functions, not only refining the $\mathrm{Ra}_\mathrm{cr}$ estimates to $3091.4$ and $8047.1$ respectively, but also demonstrating that the behaviours of even the most elementary scenarios were inescapably transcendental.  Importantly, all these early papers adopted the practice of effectively flattening the equations into two dimensions by forcing them to be axisymmetrical, which remains common today (e.g. [@Guerrero2018-oj]).
+The problem of convection in a self-gravitating sphere was first broached by Merriell Bland, who carried out the first formal solutions in spherical polar coordinates before passing on her work to Jeffreys [@Jeffreys1951-vm]. This paper introduced the convention of effectively flattening the problem into two dimensions by enforcing axisymmetry, which remains common today (e.g. [@Guerrero2018-oj]), and produced the first estimates for the critical *Rayleigh* number for whole-sphere scenario, albeit in terms of a now-deprecated $\lambda$ notation; when converted into modern terms by the scaling factor $9 / (4\pi)$, Bland and Jeffreys report $\mathrm{Ra}_\mathrm{cr}=2214 \pm 2$ for a free (outer) surface and $\mathrm{Ra}_\mathrm{cr} = 6245 \pm 2$ for a rigid surface.
 
-Because this early work preceded the general acceptance of mantle convection, the core was included in the analysis and the fluid was thus necessarily internally-heated only - which would today put these in the category of 'molten Earth' models. However, Jeffreys [@Jeffreys1952-pt] pointed out that the same analysis could also apply to spherical shells (i.e. the mantle alone), albeit - hypothetically - restricted to higher degree modes due to the interposition of the core. In a crucial 1953 paper, Chandrasekhar [@Chandrasekhar1953-jn] developed the spherical shell scenario and identified the first-order consequences of the planetary core ratio ($f$) for determining which planforms are favoured at the point of convective onset. For a system of $f=0.5$ (similar to the Earth under whole-mantle convection), Chandrasekhar's analysis suggested that harmonics three and four were the most favoured, with harmonic five following after: a highly suggestive finding, given that the topographic harmonics of the Earth's surface are also in that band. This paper also appears to be the first to provide a (kinematically) free surface for the lower boundary, breaking with a long-standing convention (inspired by the limitations of physical laboratories) of always keeping the lower boundary rigid. Though presented by Chandrasekhar as a fairly obvious intervention, it seems a rather startling leap of intuition for a period when mantle convection itself was not yet canonical.
+Chandrasekhar [@Chandrasekhar1952-gr] extended Bland's method using spherical harmonics, identifying that the $l=1$ (i.e. a single global cell) is always the first mode to be excited at the point of onset. Chandrasekhar improved significantly on Bland's numbers, though again, in a now non-standard form and notation ($C_l$, equivalent to Bland's $\lambda$; in modern terms, Chandrasekhar found $\mathrm{Ra}_\mathrm{cr}\approx2214.1$ for a free outer surface and $\mathrm{Ra}_\mathrm{cr}=5763.3$ for a rigid surface. A few years later, Backus [@Backus1955-kr] obtained an exact solution using Bessel functions, not only refining the $\mathrm{Ra}_\mathrm{cr}$ estimates to $2213.9037$ and $5758.2594$ (after modernisation), but also demonstrating that the behaviours of even the most elementary scenarios were inescapably transcendental.
 
-Chandrasekhar included both the full-sphere and spherical shell cases in his 1961 textbook [@Chandrasekhar1961-ez]. Walzer [@Walzer1971-pg] picked up the spherical shell scenario and developed it beyond the axisymmetry to consider true spherical convection - albeit abstractly - using group theory and Platonic solids. In the same era - not coincidentally the Apollo age - the possibility of convection in the Moon drew some interest to the full sphere problem, with Runcorn [@Runcorn1962-bg] arguing for convection in the Moon based on its outer shape, and Roberts [@Roberts1965-qm] countering with a high-level marginal stability (that is, conditions-of-onset) analysis. The Moon continued to drive full-sphere studies into the early computer age, with Baldwin [@Baldwin1967-xs] pursuing the first harmonic beyond marginal stability and Hsui and colleagues [@Hsui1972-up] experimenting with a finite elements approach.
+An important theme of these very early papers is the role of geometry at the critical point, as the curvature of the domain heightens the stability contrasts between different perturbation modes, while the enforced periodicity of the solutions restricts hybrid or fractional modes. The idea of 'mode' in general features much more strongly in the spherical literature for these reasons. Though Bland and Jeffreys [@Jeffreys1951-vm] used $n$ to denote the global mode, Chandrasekhar [@Chandrasekhar1952-gr] used $l$, which was more conventional outside of the field. Backus [@Backus1955-kr] recognised that both angular ('horizontal') and radial ('vertical') modes could be important, and repurposed $n$ to describe the radial modes. Using his Bessel method, he obtained $\mathrm{Ra}_\mathrm{cr}$ not just for the (presumptively most unstable) $\langle l=1, n=1 \rangle$ mode, but for many combinations of $l$ and $n$, all the way up to $\langle l=5, n=2 \rangle$ ($\mathrm{Ra}_\mathrm{cr}\approx110,520$ for a free boundary). Jeffreys [@Jeffreys1952-pt] recognised that the onset of convection at the critical point depended entirely on the availability of the appropriate mode, and that depriving the system of access to even infinitesimal fluctuations within a given mode could dramatically alter the overall stability of the fluid.
+
+Some years later, in the Apollo age, the possibility of convection in the Moon drew some interest to the full sphere problem, with Runcorn [@Runcorn1962-bg] arguing for convection in the Moon based on its outer shape, and Roberts [@Roberts1965-qm] countering with a high-level marginal stability (that is, conditions-of-onset) analysis. The Moon continued to drive full-sphere studies into the early computer age, with Baldwin [@Baldwin1967-xs] pursuing the first harmonic beyond marginal stability and Hsui and colleagues [@Hsui1972-up] experimenting with a finite-elements approach. However, as (ongoing) mantle convection became more accepted and empirical evidence of the stark radial stratification of the planets became evident, full-sphere studies waned in favour of the spherical shell.
+
++++
+
+| Author | Year | Method | Free Surface $\mathrm{Ra}_\mathrm{cr}$ | Rigid Surface $\mathrm{Ra}_\mathrm{cr}$ |
+| :--- | :--- | :--- | :--- | :--- |
+| Jeffreys & Bland | 1950 | Variational (Early) | $2214 \pm 2$ | $6245 \pm 2$ |
+| Chandrasekhar | 1952 | Variational (Refined) | $2214.1$ | $5763.3$ |
+| Backus | 1955 | Exact (Bessel Functions) | $2213.9037$ | $5758.2594$ |
+
+*Collected criticality data from early spherical studies.*
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+The contributions of Bland, Jeffreys, Chandrasekhar, and Backus all preceded the general acceptance of mantle convection. A consequence is that, in all cases, the core was included in the analysis, and the fluid was thus necessarily internally-heated only - which would today put these in the category of 'molten Earth' models. However, Jeffreys [@Jeffreys1952-pt] pointed out that the same analysis could also apply to spherical shells (i.e. the mantle alone), albeit - hypothetically - restricted to higher degree modes due to the interposition of the core. In a crucial 1953 paper, Chandrasekhar and Elbert [@Chandrasekhar1953-jn] developed the spherical shell scenario and identified the first-order consequences of the planetary core ratio (notated $\eta$, today $f$) for determining which planforms are favoured at the point of convective onset. For a system of $f=0.5$ (similar to the Earth under whole-mantle convection), Chandrasekhar's analysis suggested that $l=3$ and $l=4$ were the most favoured, with $l=5$ following after: a highly suggestive finding, given that the topographic harmonics of the Earth's surface are also in that band. Chandrasekhar found in general that higher $f$ values correlated with higher preferred angular modes and thus higher $\mathrm{Ra}_\mathrm{cr}$, trending to infinity at the Cartesian endmember.
+
+The move to a spherical shell geometry necessarily reintroduces a lower boundary, which must be constrained both kinematically and thermally. Chandrasekhar [@Chandrasekhar1953-jn] appears to have been the first to provide a (kinematically) free surface for the lower boundary, breaking with a long-standing convention (inspired by the limitations of physical laboratories) of always keeping the lower boundary rigid. Though presented by Chandrasekhar as a fairly obvious intervention, it seems a rather startling leap of intuition for a period when mantle convection itself was not yet canonical. For the equally important thermal condition, Chandrasekhar - and seemingly all authors of this period - chose to provide an insulating boundary: the idea of a basal heat flux either did not occur to them, or was deemed too problematic to consider at that time.
+
+Chandrasekhar included both the full-sphere and spherical shell cases in his 1961 textbook [@Chandrasekhar1961-ez], including tabulations by Ebert using an exact method far superior to the earlier variational approach.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+!python3 chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+![Chandrasekhar 1961 spherical axisymmetric reproduction](chandrasekhar_1961_spherical_axisymmetric_reproduction.png)
+
+*Results of Chandrasekhar (1961) for the $\mathrm{Ra}_\mathrm{cr}$ for varying perturbation mode $l$ and curvature (core ratio) $f$, with the 'most critical' modes highlighted for each $f$. Reproduced using an Chebyshev method in modern scientific Python.*
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+!python3 linear_stability_annulus.py basal
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
+
+![linear_stability_annulus](linear_stability_annulus_basal.png)
+
+*Results of a linear stability analysis, analogous to that performed before for Chandrasekhar's spherical shell harmonics, but for the annulus. Basally-heated thermal regime.*
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+!python3 linear_stability_annulus.py internal
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
+
+![linear_stability_annulus](linear_stability_annulus_internal.png)
+
+*Results of a linear stability analysis, analogous to that performed before for Chandrasekhar's spherical shell harmonics, but for the annulus. Internally-heated thermal regime.*
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+### SCRAPS
+
++++
+
+| $l$ \ $f$ | **0.0** | **0.2** | **0.4** | **0.5** | **0.6** | **0.8** |
+|---|---|---|---|---|---|---|
+| **1** | 1.576e+04 | 7.595e+03 | 2.153e+04 | 5.466e+04 | 1.875e+05 | 1.077e+07 |
+| **2** | 1.473e+04 | 1.385e+04 | 1.761e+04 | 3.163e+04 | 8.519e+04 | 3.813e+06 |
+| **3** | 1.906e+04 | 1.894e+04 | 2.086e+04 | 2.985e+04 | 6.370e+04 | 2.082e+06 |
+| **4** | 2.647e+04 | 2.646e+04 | 2.760e+04 | 3.424e+04 | 6.021e+04 | 1.400e+06 |
+| **5** | 3.702e+04 | 3.702e+04 | 3.769e+04 | 4.279e+04 | 6.464e+04 | 1.069e+06 |
+| **6** | 5.112e+04 | 5.112e+04 | 5.150e+04 | 5.538e+04 | 7.455e+04 | 8.917e+05 |
+| **7** | 6.934e+04 | 6.934e+04 | 6.954e+04 | 7.242e+04 | 8.945e+04 | 7.935e+05 |
+| **8** | 9.231e+04 | 9.231e+04 | 9.241e+04 | 9.446e+04 | 1.096e+05 | 7.419e+05 |
+| **9** | 1.207e+05 | 1.207e+05 | 1.208e+05 | 1.222e+05 | 1.354e+05 | 7.205e+05 |
+| **10** | 1.553e+05 | 1.553e+05 | 1.553e+05 | 1.563e+05 | 1.677e+05 | 7.211e+05 |
+| **11** | 1.969e+05 | 1.969e+05 | 1.969e+05 | 1.975e+05 | 2.071e+05 | 7.389e+05 |
+| **12** | 2.462e+05 | 2.462e+05 | 2.462e+05 | 2.466e+05 | 2.546e+05 | 7.714e+05 |
+| **13** | 3.042e+05 | 3.042e+05 | 3.042e+05 | 3.044e+05 | 3.110e+05 | 8.171e+05 |
+| **14** | 3.718e+05 | 3.718e+05 | 3.718e+05 | 3.719e+05 | 3.771e+05 | 8.756e+05 |
+| **15** | 4.499e+05 | 4.499e+05 | 4.499e+05 | 4.500e+05 | 4.541e+05 | 9.468e+05 |
+
++++
+
+| $l$ | $f = 0.2$ | $f = 0.4$ | $f = 0.5$ | $f = 0.6$ | $f = 0.8$ |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| 1 | $2.966 \times 10^3$ | $1.533 \times 10^4$ | $3.848 \times 10^4$ | $1.242 \times 10^5$ | $6.162 \times 10^6$ |
+| 2 | $2.740 \times 10^3$ | $7.456 \times 10^3$ | $1.681 \times 10^4$ | $4.986 \times 10^4$ | $2.161 \times 10^6$ |
+| 3 | $4.147 \times 10^3$ | $6.969 \times 10^3$ | $1.291 \times 10^4$ | $3.296 \times 10^4$ | $1.165 \times 10^6$ |
+| 4 | $6.762 \times 10^3$ | $8.594 \times 10^3$ | $1.317 \times 10^4$ | $2.820 \times 10^4$ | $7.699 \times 10^5$ |
+| 5 | $1.064 \times 10^4$ | $1.181 \times 10^4$ | $1.558 \times 10^4$ | $2.821 \times 10^4$ | $5.780 \times 10^5$ |
+| 6 |  | $1.669 \times 10^4$ | $1.982 \times 10^4$ | $3.108 \times 10^4$ | $4.734 \times 10^5$ |
+| 7 |  | $2.350 \times 10^4$ | $2.602 \times 10^4$ | $3.633 \times 10^4$ | $4.139 \times 10^5$ |
+| 8 |  |  | $3.443 \times 10^4$ | $4.390 \times 10^4$ | $3.804 \times 10^5$ |
+| 9 |  |  | $4.541 \times 10^4$ | $5.404 \times 10^4$ | $3.638 \times 10^5$ |
+| 10 |  |  | $5.927 \times 10^4$ | $6.702 \times 10^4$ | $3.590 \times 10^5$ |
+| 11 |  |  | $7.642 \times 10^4$ | $8.322 \times 10^4$ | $3.633 \times 10^5$ |
+| 12 |  |  | $9.719 \times 10^4$ | $1.031 \times 10^5$ | $3.752 \times 10^5$ |
+| 13 |  |  | $1.221 \times 10^5$ | $1.271 \times 10^5$ | $3.938 \times 10^5$ |
+| 14 |  |  | $1.515 \times 10^5$ | $1.556 \times 10^5$ | $4.188 \times 10^5$ |
+| 15 |  |  | $1.858 \times 10^5$ | $1.891 \times 10^5$ | $4.499 \times 10^5$ |
+
++++
+
+*Miss Donna Elbert - acknowledged but uncredited in Chandrasekhar, 1953 - solved the spherical harmonic eigenvalue for internally-heated, fully free-surface spherical shells to obtain $\mathrm{Ra}_\mathrm{cr}$ for many combinations of angular mode $l$ and planetary curvature $r$ - a vast undertaking in the pre-computer age. Elbert was apparently promised the coauthorship of a subsequent paper detailing her efforts but this never materialised. Adapted from the original adjusted for modern conventions.*
+
++++
+
+![A figure from Chandrasekhar (1953)](chandra_fig.png)
+
+*Figure from Chandrasekhar (1953) showing the preferred angular mode ($l$) against the planetary curvature ($\eta$, today $f$).*
+
++++
+
+The assumption of axisymmetry dominates the literature on spherical convection. Walzer [@Walzer1971-pg] was one of the few to attempt to develop the spherical shell scenario beyond axisymmetry to consider true spherical convection, which he did - rather abstractly - using group theory and Platonic solids.
+
++++
 
 The first dedicated numerical study on convection in curved domains was carried out by Hsui *et al.* in 1972 [@Hsui1972-up]. Their model tentatively identified thresholds for various $n$-cell planforms and gave some analys
 

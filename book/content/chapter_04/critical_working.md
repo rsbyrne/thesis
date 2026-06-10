@@ -17,7 +17,7 @@ from referencing import search
 ```
 
 ```{code-cell} ipython3
-search('baldwin')
+search('richter')
 ```
 
 ```{code-cell} ipython3
@@ -25,17 +25,19 @@ search('baldwin')
 editable: true
 slideshow:
   slide_type: ''
-tags: [remove-cell]
 ---
+from aliases import *
+
 import itertools
 
-from local import *
+from criticality import *
 
 from scipy.optimize import curve_fit
 from sklearn.metrics import r2_score
 
 from everest.window import Canvas, DataChannel as Channel, plot
 from everest import window
+from everest.caching import cache
 from everest.window.colourmaps import cmap
 
 from analysis import cylindrical
@@ -58,7 +60,12 @@ slideshow:
   slide_type: ''
 tags: [remove-cell]
 ---
-isomixed, isointernal, arrmixed, arrinternal = datas = make_frames(cache_refresh=False)
+# import pickle
+# new_data = pickle.loads((storagepath / "simple_critical_2026_1__-_-_.data").read_bytes())
+# old_data = pickle.loads((storagepath / 'simple_critical.data').read_bytes())
+# (storagepath / 'simple_critical.data').write_bytes(pickle.dumps(old_data))
+
+isomixed, isointernal, arrmixed, arrinternal = datas = make_frames(cache_refresh=True)
 print(sum(map(len, datas)))
 ```
 
@@ -282,10 +289,6 @@ display(params)
 crit_func(1.414)
 ```
 
-```{code-cell} ipython3
-slc.min()
-```
-
 ## Varying both curvature and aspect ratio
 
 ```{code-cell} ipython3
@@ -353,5 +356,57 @@ ax.scatter(
     )
 for x, y, z in zip(chanx.data, chany.data, slc.index):
     ax.annotate(x, y, round(z, 2))
+canvas
+```
+
+
+
+```{code-cell} ipython3
+arrmixed
+```
+
+```{code-cell} ipython3
+(11 * 11 * 10 * 21)**0.5
+```
+
+```{code-cell} ipython3
+5 * 5 * 5 * 10
+```
+
+```{code-cell} ipython3
+np.log10(np.unique(arrmixed.reset_index()['etaDelta']))
+```
+
+```{code-cell} ipython3
+np.arange(0.3, 1., 0.05)[1::2]
+```
+
+```{code-cell} ipython3
+arrmixed
+```
+
+```{code-cell} ipython3
+np.arange(0.3, 1., 0.05)[1::2]
+```
+
+```{code-cell} ipython3
+np.unique(arrmixed.loc[0].reset_index()['etaDelta'])
+```
+
+```{code-cell} ipython3
+arrmixed.reset_index()[['aspect', 'H', 'etaDelta']].plot()
+```
+
+```{code-cell} ipython3
+canvas = Canvas(size=(12, 12))
+ax1 = canvas.make_ax()
+ax1.scatter(
+    Channel(arrmixed.reset_index()['f']),
+    Channel(np.log10(arrmixed.reset_index()['etaDelta'])),
+    # Channel(arrmixed.reset_index()['H']),
+    20,
+    Channel(arrmixed),
+    )
+
 canvas
 ```

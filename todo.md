@@ -15,3 +15,4 @@
 - Use Alonso (1999) on effects of rotation
 - Improved citations in the first chapter
 - Cite Vening Meinesz on surface topography harmonics
+- Tell a better story about the origins of the consenus on mantle convection and plate tectonics using Richter 1978 as a base.

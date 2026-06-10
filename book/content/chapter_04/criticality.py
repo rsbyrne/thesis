@@ -2,7 +2,7 @@ from aliases import * # important this goes first to configure PATH
 
 from everest.caching import cache
 
-@cache('critical_analysis_data', cachedir)
+@cache(cachedir)
 def make_frames():
     with (Path(storagedir) / 'simple_critical.data').open(mode='rb') as file:
         data = pickle.load(file)

@@ -173,7 +173,9 @@ canvas
 
 +++
 
-Tectonics is known to us through its sensible processes of orogeny, seismicity, and volcanism. The energy available to carry out these permutations ultimately derives from the depletion of the thermal gradient of the Earth’s hot interior with space, mitigated to an uncertain degree by internal heat production via radiogenics, core despinning, and other means.
+Paradigmatically, plate tectonics is considered to be "the surface expression of convection in the Earth" [@Richter1978-ui].
+
+Tectonics is known to us through its sensible processes of orogeny, seismicity, and volcanism. The energy available to carry out these permutations must ultimately derive from the depletion of the thermal gradient of the Earth’s hot interior with space, mitigated to an uncertain degree by internal heat production via radiogenics, core despinning, and other means.
 
 Estimates of global heat flow vary from around $42$ terawatts [@Dye2012-cx] to upwards of $47$ terawatts [@Davies2010-gz]. Of this power, a mere $1\%$ - less than half a terawatt - is thought to be necessary to account for all the geological activity witnessed on Earth [@Turcotte2014-by]. For comparison, the power consumption of human civilisation is more than $20$ terawatts, and the power received by Earth from the sun is a colossal $170,000$ terawatts. If our Earth is a heat engine, it is a weak one. (TODO - add IEA citations)
 
