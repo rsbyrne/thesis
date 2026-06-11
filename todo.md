@@ -18,3 +18,6 @@
 - Tell a better story about the origins of the consenus on mantle convection and plate tectonics using Richter 1978 as a base.
 - Make use of Herring (1963) on the topic of important ideas like the cube root beta scaling and the Malkus theory that convection optimises for heat transport.
 - Use Howard 1966 on topic of boundary layer stability criterion (Howard's conjecture)
+- Mine the citations of Vangelov and Jarvis for papers on the topic of spherical shell convection (and lots of other things!)
+- Track down McKenzie et al 1974 on the topic of early progress towards numerical simulations of mantle convection.
+- Fix Glatzmaierand in Jarvis 1995 citation.

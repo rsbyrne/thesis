@@ -158,66 +158,90 @@ if __name__ == "__main__":
                 
     print("Computations complete. Rendering plot...")
 
-    # --- Setup the Dashboard Layout ---
-    fig = plt.figure(figsize=(14, 8), layout='constrained')
-    gs = fig.add_gridspec(2, 2, width_ratios=[2.5, 1])
-    # gs = gridspec.GridSpec(2, 3, width_ratios=[1, 1, 0.8], wspace=0.3, hspace=0.4)
-    
-    ax = fig.add_subplot(gs[:, 0], projection='3d')  # Left column, spans both rows
-    ax_xy = fig.add_subplot(gs[0, 1])                # Top right
-    ax_xz = fig.add_subplot(gs[1, 1])                # Bottom right
-    
-    # --- 1. Main 3D Surface Plot ---
-    surf = ax.plot_surface(F, L_grid, Z, cmap=cm.viridis, 
-                           linewidth=0.5, edgecolors='k', alpha=0.9,
-                           rstride=2, cstride=5)
-    
-    ax.set_xlabel(r'Core Fraction ($f$)', fontsize=12, labelpad=10)
-    ax.set_ylabel(r'Harmonic Order ($m$)', fontsize=12, labelpad=10)
-    ax.set_zlabel(r'$\log_{10}(Ra_{cr})$', fontsize=12, labelpad=10)
-    ax.set_title(
-        ('Critical Rayleigh Number for Convection Onset\nin the Annulus'
-            + f"(heating: {regime})"),
-        fontsize=14, pad=15
-        )
-    
-    ax.set_xticks(np.arange(0.1, 1.0, 0.1))
-    ax.set_yticks(np.arange(1, max(m_vals)+1, 2))
-    
-    # cbar = fig.colorbar(surf, ax=ax, shrink=0.5, aspect=12, pad=0.1)
-    # cbar.set_label(r'$\log_{10}(Ra_{cr})$', rotation=270, labelpad=15)
-    
-    # --- 2. Minimum Critical Rayleigh Curve (Raw Data) ---
+    # =========================================================================
+    # 1. Track the Minimum Path (Most Unstable Mode)
+    # =========================================================================
+    # axis=0 looks across the row values (Harmonic Order 'm') for each column ('f')
     min_Z = np.min(Z, axis=0)
     min_m_indices = np.argmin(Z, axis=0)
     min_m = m_vals[min_m_indices]
-    
-    # Plot directly on 3D surface with a small Z-offset to prevent clipping
-    ax.plot(f_vals, min_m, min_Z + 0.05, color='red', linewidth=4, zorder=10, label=r'Most Unstable Mode')
-    ax.legend(loc='upper left', fontsize=10)
-    ax.view_init(elev=25, azim=-135)
-    
-    # --- 3. The 2D Projections ---
-    # Top Right: x-y plane (Core Fraction vs Harmonic Order)
-    # Using a step-like visual here often looks better for discrete integers!
-    ax_xy.plot(f_vals, min_m, color='red', linewidth=3, marker='o', markersize=4)
-    ax_xy.set_title('Shift in Dominant Harmonic', fontsize=12)
-    ax_xy.set_xlabel(r'Core Fraction ($f$)', fontsize=10)
-    ax_xy.set_ylabel(r'Most Unstable $m$', fontsize=10)
-    ax_xy.set_xticks(np.arange(0.1, 1.0, 0.2))
-    ax_xy.set_yticks(np.arange(1, 16, 2))
-    ax_xy.grid(True, linestyle='--', alpha=0.6)
-    
-    # Bottom Right: x-z plane (Core Fraction vs Ra_cr)
-    ax_xz.plot(f_vals, min_Z, color='red', linewidth=3, marker='o', markersize=4)
-    ax_xz.set_title('Minimum Stability Threshold', fontsize=12)
-    ax_xz.set_xlabel(r'Core Fraction ($f$)', fontsize=10)
-    ax_xz.set_ylabel(r'$\min(\log_{10} Ra_{cr})$', fontsize=10)
-    ax_xz.set_xticks(np.arange(0.1, 1.0, 0.2))
-    ax_xz.grid(True, linestyle='--', alpha=0.6)
-    
-    # plt.tight_layout(pad=3.0)
-    ax.set_box_aspect(None, zoom=0.95)
-    plt.savefig(
-        f"linear_stability_annulus_{regime}.png"
-        )
+
+    # =========================================================================
+    # 2. Plotting the Entire Suite (Using the clean, compact 121/222/224 layout)
+    # =========================================================================
+    fig = plt.figure(figsize=(15, 7.5))
+
+    fig.suptitle(
+        f"Critical Rayleigh Number for Convection Onset in the Annulus (heating: {regime})",
+        fontsize=14,
+        fontweight='bold',
+        y=0.96
+    )
+
+    # --- Left: Main 3D Surface Plot ---
+    ax1 = fig.add_subplot(121, projection="3d")
+    surf = ax1.plot_surface(
+        F,
+        L_grid,
+        Z,
+        cmap=cm.viridis,
+        edgecolor="black",
+        linewidth=0.1,
+        alpha=0.85,
+    )
+
+    # Highlighted minimum trajectory
+    ax1.plot(
+        f_vals,
+        min_m,
+        min_Z + 0.02,  # Tiny offset stops the line from dipping below the mesh
+        color="red",
+        linewidth=4,
+        label="Most Unstable Mode",
+        zorder=10,
+    )
+
+    ax1.set_xlabel("Core Fraction ($f$)", fontsize=10)
+    ax1.set_ylabel("Harmonic Order ($m$)", fontsize=10)
+    ax1.set_zlabel(r"$\log_{10}(Ra_{cr})$", fontsize=10)
+    ax1.set_xticks(np.arange(0.1, 1.0, 0.1))
+    ax1.set_yticks(np.arange(1, max(m_vals) + 1, 2))
+    ax1.view_init(elev=25, azim=-135)
+    ax1.legend(loc="upper left")
+
+    # --- Top Right: Shift in Dominant Harmonic ---
+    ax2 = fig.add_subplot(222)
+    ax2.plot(
+        f_vals,
+        min_m,
+        color="red",
+        marker="o",
+        markersize=2,
+        linewidth=2,
+    )
+    ax2.set_title("Shift in Dominant Harmonic", fontsize=11)
+    ax2.set_xlabel("Core Fraction ($f$)")
+    ax2.set_ylabel("Most Unstable $m$")
+    ax2.set_xticks(np.arange(0.1, 1.0, 0.2))
+    ax2.set_yticks(np.arange(1, max(min_m) + 2, 2))
+    ax2.grid(True, linestyle="--", alpha=0.5)
+
+    # --- Bottom Right: Minimum Stability Threshold ---
+    ax3 = fig.add_subplot(224)
+    ax3.plot(
+        f_vals,
+        min_Z,
+        color="red",
+        marker="o",
+        markersize=2,
+        linewidth=2,
+    )
+    ax3.set_title("Minimum Stability Threshold", fontsize=11)
+    ax3.set_xlabel("Core Fraction ($f$)")
+    ax3.set_ylabel(r"$\min(\log_{10} Ra_{cr})$")
+    ax3.set_xticks(np.arange(0.1, 1.0, 0.2))
+    ax3.grid(True, linestyle="--", alpha=0.5)
+
+    # Tight layout nicely locks this standard positioning together
+    plt.tight_layout()
+    plt.savefig(f"linear_stability_annulus_{regime}.png", dpi=200)

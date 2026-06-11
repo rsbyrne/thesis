@@ -47,7 +47,7 @@ Remarkably, all these early authors considered the full three-dimensional case, 
 
 +++
 
-![A figure from Pellew and Southwell](pellew_fig.png)
+![A figure from Pellew and Southwell](/home/morpheus/workspace/storage/pellew_fig.png)
 
 *Figure from Pellew and Southwell showing the critical stability (related to $\mathrm{Ra}_\mathrm{cr}$ against the wavenumber $a$ (effectively the number of peaks, or equivalently troughs, in the planform).*
 
@@ -132,6 +132,12 @@ As mantle studies have progressed, each additional dimension of complexity has h
 
 +++
 
+![A figure from Chandrasekhar (1953)](/home/morpheus/workspace/storage/chandra_fig.png)
+
+*Figure from Chandrasekhar (1953) showing the preferred angular mode ($l$) against the planetary curvature ($\eta$, today $f$).*
+
++++
+
 #### The effects of curvature
 
 +++
@@ -198,94 +204,21 @@ It might be supposed that the annular model is a descendant of the spherical axi
 
 Gurnis and Zhong pioneered the use of the annulus for geophysical problems in their 1991 paper [@Gurnis1991-ub]: a follow up to the famous Gurnis paper of 1988 [@Gurnis1988-ks]. Their interest in these papers was not mantle convection *per se*, but the dynamics of subducting plates. Gurnis, professionally a seismologist, had earlier debuted the first coupled tectonic-convective model - but this plane-layer model relied on unnatural boundary conditions in order to supply the return flow. Gurnis recognised that an annular model, with its inherently periodic boundaries, elegantly and naturally resolved this problem, while being no more subject to charges of unrealism than the plane layer model it improved. In the follow-up paper of 1991, Gurnis and Zhong bent Gurnis' plane-layer model into an annulus with a curvature (core ratio) $f=0.5$, comparable to the Earth. This work successfully reproduced the plane-layer results, but the deeper implications and behaviours of the annular geometry itself were not explored.
 
-The first detailed treatment of mantle convection in the annular domain was carried out in 1993 by Gary Jarvis, who went on to author or co-author almost all the foundational literature on this geometry. In his first paper on the subject [@Jarvis1993-cb], Jarvis considered an isoviscous, basally-heated fluid in a free-slip, curved domain. Jarvis recognised that the annulus permitted a much closer comparison with planar systems than the conventional axisymmetric approach, providing that the geometry was parameterised in the appropriate way. For this purpose, Jarvis introduced the $f$ notation, where $f=r_i / r_o$ (the ratio of inner and outer radii), which we have adopted also. The focus of Jarvis in this first paper was to determine how the $\mathrm{Nu}-\mathrm{Ra}$ scaling changed as a function of $f$, and he was oddly incurious as to the most foundational question one could ask of any convecting system, which is the nature of the point of convective onset. Historically
+The first detailed treatment of mantle convection in the annular domain was carried out in 1993 by Gary Jarvis, who went on to author or co-author almost all the foundational literature on this geometry. In his first paper on the subject [@Jarvis1993-cb], Jarvis considered an isoviscous, basally-heated fluid in a free-slip, curved domain. Jarvis recognised that the annulus permitted a much closer comparison with planar systems than the conventional axisymmetric approach, providing that the geometry was parameterised in the appropriate way. For this purpose, Jarvis introduced the $f$ notation, where $f=r_i / r_o$ (the ratio of inner and outer radii), which we have adopted also.
 
+The focus of Jarvis in this first paper was to determine how the $\mathrm{Nu}-\mathrm{Ra}$ scaling changed as a function of $f$ at supercritical *Rayleigh* numbers. In his follow-up paper [@Jarvis1994-np], using the same (isoviscous, basally-heated, free-surace) model, Jarvis targeted low-*Rayleigh* numbers and attempted to identify $\mathrm{Ra}_\mathrm{cr}$ as a function of curvature $f$, aspect ratio $A$, and the 'angular extent of the roll' $D$ (related to $l$ in spherical problems, and more conventionally $m$ in two-dimensional polar problems, as $m=\pi/D$). Jarvis ran his low-resolution numerical model for four values of $f$ and a dozen , producing a coarse but highly suggestive set of curves, which was sufficient to deduce two general principles:
 
+1. Increasing curvature of the cylinder (i.e. decreased $f$) generally *increases* $\mathrm{Ra}_\mathrm{cr}$ (i.e. makes the fluid *more* stable) - but the effect is modest (only $10%$ or so even for a significant curvature of $f=0.3$).
+2. The critical aspect ratio is the same regardless of curvature.
 
+Jarvis argued from his data and by analogy with plane-layer theory that the dependency of $\mathrm{Ra}_\mathrm{cr}$ on $f$ and $A$ should ideally be of the form:
 
-Citing an earlier conference presentation  His 1993 paper , Jarvis articulated and advocated for a cylindrical geometry that could be a compromise between the sophisticated but artificial
+$$
+\mathrm{Ra}_\mathrm{cr} = \frac{\pi^2 + m^2/r_m^2}{m^2/r_m^2}
+$$
 
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
-tags: [remove-cell]
----
-!python3 linear_stability_annulus.py basal
-```
+Where $m$ ($l$ per Jarvis) is the angular wavenumber ($r_m\pi/A$) and $r_m$ ($F$ per Jarvis) is the radius at the mid-depth ($(1+f)(2(1-f))$).
 
-+++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
+After these two papers, neither Jarvis nor anyone else revisited the fundamentals of convection in the annulus in any sustained way. Jarvis went on to work with Vangelov [@Vangelov1994-kn] on spherical models, noting as an aside that the cylindrical case appeared to function well as an approximation of the more traditional axisymmetric approach; the annulus case was also mentioned in a subsequent paper with Glatzmaier on spherical models generally [@Jarvis1995-gq]. Van Keken [@Van_Keken2001-un] was perhaps the last to make a useful contribution to our understanding of the annulus, though not to the convective onset problem as such: his proposed scaling laws ('shrinking' the core in proportion to its excess relative size compared to a true spherical geometry) proved popular with many workers [@Hernlund2008-rr].
 
-![linear_stability_annulus](linear_stability_annulus_basal.png)
-
-*Results of a linear stability analysis, analogous to that performed before for Chandrasekhar's spherical shell harmonics, but for the annulus. Basally-heated thermal regime.*
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
-!python3 linear_stability_annulus.py internal
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
-
-![linear_stability_annulus](linear_stability_annulus_internal.png)
-
-*Results of a linear stability analysis, analogous to that performed before for Chandrasekhar's spherical shell harmonics, but for the annulus. Internally-heated thermal regime.*
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-### SCRAPS
-
-+++
-
-| $l$ \ $f$ | **0.0** | **0.2** | **0.4** | **0.5** | **0.6** | **0.8** |
-|---|---|---|---|---|---|---|
-| **1** | 1.576e+04 | 7.595e+03 | 2.153e+04 | 5.466e+04 | 1.875e+05 | 1.077e+07 |
-| **2** | 1.473e+04 | 1.385e+04 | 1.761e+04 | 3.163e+04 | 8.519e+04 | 3.813e+06 |
-| **3** | 1.906e+04 | 1.894e+04 | 2.086e+04 | 2.985e+04 | 6.370e+04 | 2.082e+06 |
-| **4** | 2.647e+04 | 2.646e+04 | 2.760e+04 | 3.424e+04 | 6.021e+04 | 1.400e+06 |
-| **5** | 3.702e+04 | 3.702e+04 | 3.769e+04 | 4.279e+04 | 6.464e+04 | 1.069e+06 |
-| **6** | 5.112e+04 | 5.112e+04 | 5.150e+04 | 5.538e+04 | 7.455e+04 | 8.917e+05 |
-| **7** | 6.934e+04 | 6.934e+04 | 6.954e+04 | 7.242e+04 | 8.945e+04 | 7.935e+05 |
-| **8** | 9.231e+04 | 9.231e+04 | 9.241e+04 | 9.446e+04 | 1.096e+05 | 7.419e+05 |
-| **9** | 1.207e+05 | 1.207e+05 | 1.208e+05 | 1.222e+05 | 1.354e+05 | 7.205e+05 |
-| **10** | 1.553e+05 | 1.553e+05 | 1.553e+05 | 1.563e+05 | 1.677e+05 | 7.211e+05 |
-| **11** | 1.969e+05 | 1.969e+05 | 1.969e+05 | 1.975e+05 | 2.071e+05 | 7.389e+05 |
-| **12** | 2.462e+05 | 2.462e+05 | 2.462e+05 | 2.466e+05 | 2.546e+05 | 7.714e+05 |
-| **13** | 3.042e+05 | 3.042e+05 | 3.042e+05 | 3.044e+05 | 3.110e+05 | 8.171e+05 |
-| **14** | 3.718e+05 | 3.718e+05 | 3.718e+05 | 3.719e+05 | 3.771e+05 | 8.756e+05 |
-| **15** | 4.499e+05 | 4.499e+05 | 4.499e+05 | 4.500e+05 | 4.541e+05 | 9.468e+05 |
-
-+++
-
-| $l$ | $f = 0.2$ | $f = 0.4$ | $f = 0.5$ | $f = 0.6$ | $f = 0.8$ |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| 1 | $2.966 \times 10^3$ | $1.533 \times 10^4$ | $3.848 \times 10^4$ | $1.242 \times 10^5$ | $6.162 \times 10^6$ |
-| 2 | $2.740 \times 10^3$ | $7.456 \times 10^3$ | $1.681 \times 10^4$ | $4.986 \times 10^4$ | $2.161 \times 10^6$ |
-| 3 | $4.147 \times 10^3$ | $6.969 \times 10^3$ | $1.291 \times 10^4$ | $3.296 \times 10^4$ | $1.165 \times 10^6$ |
-| 4 | $6.762 \times 10^3$ | $8.594 \times 10^3$ | $1.317 \times 10^4$ | $2.820 \times 10^4$ | $7.699 \times 10^5$ |
-| 5 | $1.064 \times 10^4$ | $1.181 \times 10^4$ | $1.558 \times 10^4$ | $2.821 \times 10^4$ | $5.780 \times 10^5$ |
-| 6 |  | $1.669 \times 10^4$ | $1.982 \times 10^4$ | $3.108 \times 10^4$ | $4.734 \times 10^5$ |
-| 7 |  | $2.350 \times 10^4$ | $2.602 \times 10^4$ | $3.633 \times 10^4$ | $4.139 \times 10^5$ |
-| 8 |  |  | $3.443 \times 10^4$ | $4.390 \times 10^4$ | $3.804 \times 10^5$ |
-| 9 |  |  | $4.541 \times 10^4$ | $5.404 \times 10^4$ | $3.638 \times 10^5$ |
-| 10 |  |  | $5.927 \times 10^4$ | $6.702 \times 10^4$ | $3.590 \times 10^5$ |
-| 11 |  |  | $7.642 \times 10^4$ | $8.322 \times 10^4$ | $3.633 \times 10^5$ |
-| 12 |  |  | $9.719 \times 10^4$ | $1.031 \times 10^5$ | $3.752 \times 10^5$ |
-| 13 |  |  | $1.221 \times 10^5$ | $1.271 \times 10^5$ | $3.938 \times 10^5$ |
-| 14 |  |  | $1.515 \times 10^5$ | $1.556 \times 10^5$ | $4.188 \times 10^5$ |
-| 15 |  |  | $1.858 \times 10^5$ | $1.891 \times 10^5$ | $4.499 \times 10^5$ |
-
-+++
-
-*Miss Donna Elbert - acknowledged but uncredited in Chandrasekhar, 1953 - solved the spherical harmonic eigenvalue for internally-heated, fully free-surface spherical shells to obtain $\mathrm{Ra}_\mathrm{cr}$ for many combinations of angular mode $l$ and planetary curvature $r$ - a vast undertaking in the pre-computer age. Elbert was apparently promised the coauthorship of a subsequent paper detailing her efforts but this never materialised. Adapted from the original adjusted for modern conventions.*
-
-+++
-
-![A figure from Chandrasekhar (1953)](chandra_fig.png)
-
-*Figure from Chandrasekhar (1953) showing the preferred angular mode ($l$) against the planetary curvature ($\eta$, today $f$).*
+In subsequent years, the annulus - particularly the 'spherical annulus' variant of Hernlund and Tackley [@Hernlund2008-rr] - has gone on to wide use in mantle convection studies (e.g. [@Guerrero2018-oj] [@Arnould2018-ci] [@Bocher2018-ro] [@Langemeyer2018-xr] [@Kameyama2021-ha] [@Nakagawa2012-bb]). Throughout, the open question of the conditions for convective onset appear to have been presumed settled. This has remained true even as more complicated rheologies and conditions have been added which clearly invalidate the original assumptions - which were themselves never reproduced.
