@@ -4,12 +4,42 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.19.0
+    jupytext_version: 1.19.3
 kernelspec:
   name: python3
   display_name: Python 3 (ipykernel)
   language: python
 ---
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+import os
+from glob import glob
+import pickle
+import math
+
+import numpy as np
+import pandas as pd
+from pandas import IndexSlice as idx
+from sklearn.metrics import r2_score
+from sklearn.linear_model import LinearRegression
+import scipy as sp
+
+import aliases # important this goes first to configure PATH
+
+from everest.window import image, imop
+from everest.window import Canvas, DataChannel as Channel
+from everest.window.colourmaps import cmap
+
+# from analysis import analysis, cylindrical
+
+aliases.limit_memory(8.0)
+```
 
 ### Establishing a cylindrical coordinate system
 

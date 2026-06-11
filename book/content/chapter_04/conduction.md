@@ -1584,77 +1584,63 @@ s^*(h) &= \frac{r(h)}{r_m} \\
 \end{align*} $$
 
 ```{code-cell} ipython3
-from pysr import PySRRegressor
+# from pysr import PySRRegressor
 
-flat_data = []
+# flat_data = []
 
-for (H_val, f_val), temp_list in frm['geotherm'].items():
-    for h_val, T_val in zip(hs, temp_list):
-        flat_data.append([H_val, f_val, h_val, T_val])
+# for (H_val, f_val), temp_list in frm['geotherm'].items():
+#     for h_val, T_val in zip(hs, temp_list):
+#         flat_data.append([H_val, f_val, h_val, T_val])
 
-df_flat = pd.DataFrame(flat_data, columns=['H', 'f', 'h', 'T'])
-df_flat = df_flat[df_flat['h'] < 1.]
+# df_flat = pd.DataFrame(flat_data, columns=['H', 'f', 'h', 'T'])
+# df_flat = df_flat[df_flat['h'] < 1.]
 
-df_flat['r'] = cylindrical.radius(df_flat['h'], df_flat['f'])
+# df_flat['r'] = cylindrical.radius(df_flat['h'], df_flat['f'])
 
-X_vars = 'H', 'f', 'r'
+# X_vars = 'H', 'f', 'r'
 
-X = df_flat[list(X_vars)].values
-y = df_flat['T'].values
+# X = df_flat[list(X_vars)].values
+# y = df_flat['T'].values
 
-model = PySRRegressor(
-    niterations=200,
-    maxsize=30,
-    parsimony=1e-6,
-    binary_operators=["+", "-", "*", "/"],
-    unary_operators=["log"],
-    nested_constraints={
-        "log": {"log": 0},
-        "/": {"/": 0},
-        },
-    model_selection="accuracy",
-    verbosity=1,
-    progress=False,
-    output_directory=os.path.join(aliases.cachedir, 'pysr'),
-    )
+# model = PySRRegressor(
+#     niterations=200,
+#     maxsize=30,
+#     parsimony=1e-6,
+#     binary_operators=["+", "-", "*", "/"],
+#     unary_operators=["log"],
+#     nested_constraints={
+#         "log": {"log": 0},
+#         "/": {"/": 0},
+#         },
+#     model_selection="accuracy",
+#     verbosity=1,
+#     progress=False,
+#     output_directory=os.path.join(aliases.cachedir, 'pysr'),
+#     )
 
-print("Evolving known geotherm equations...")
-model.fit(X, y, variable_names=X_vars)
+# print("Evolving known geotherm equations...")
+# model.fit(X, y, variable_names=X_vars)
 
-symp_rep.simplify()
-```
+# symp_rep.simplify()
 
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
-import numpy as np
-from sklearn.metrics import r2_score, mean_squared_error
 
-# 1. Ask PySR to calculate the predictions using its chosen "best" equation
-# (Make sure X is the same matrix you fed into it during training)
-y_predicted = model.predict(X)
+# import numpy as np
+# from sklearn.metrics import r2_score, mean_squared_error
 
-# 2. Calculate the metrics
-r2 = r2_score(y, y_predicted)
-rmse = np.sqrt(mean_squared_error(y, y_predicted))
-max_error = np.max(np.abs(y - y_predicted))
+# # 1. Ask PySR to calculate the predictions using its chosen "best" equation
+# # (Make sure X is the same matrix you fed into it during training)
+# y_predicted = model.predict(X)
 
-# 3. Print the results
-print(f"R-squared: {r2:.6f}")
-print(f"RMSE:      {rmse:.6e}")
-print(f"Max Error: {max_error:.6e}")
-```
+# # 2. Calculate the metrics
+# r2 = r2_score(y, y_predicted)
+# rmse = np.sqrt(mean_squared_error(y, y_predicted))
+# max_error = np.max(np.abs(y - y_predicted))
 
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
-tags: [remove-cell]
----
-symp_rep = model.sympy()
-repr(symp_rep)
+# # 3. Print the results
+# print(f"R-squared: {r2:.6f}")
+# print(f"RMSE:      {rmse:.6e}")
+# print(f"Max Error: {max_error:.6e}")
+
+# symp_rep = model.sympy()
+# repr(symp_rep)
 ```

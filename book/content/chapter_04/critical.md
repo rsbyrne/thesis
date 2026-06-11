@@ -208,13 +208,13 @@ The first detailed treatment of mantle convection in the annular domain was carr
 
 The focus of Jarvis in this first paper was to determine how the $\mathrm{Nu}-\mathrm{Ra}$ scaling changed as a function of $f$ at supercritical *Rayleigh* numbers. In his follow-up paper [@Jarvis1994-np], using the same (isoviscous, basally-heated, free-surace) model, Jarvis targeted low-*Rayleigh* numbers and attempted to identify $\mathrm{Ra}_\mathrm{cr}$ as a function of curvature $f$, aspect ratio $A$, and the 'angular extent of the roll' $D$ (related to $l$ in spherical problems, and more conventionally $m$ in two-dimensional polar problems, as $m=\pi/D$). Jarvis ran his low-resolution numerical model for four values of $f$ and a dozen , producing a coarse but highly suggestive set of curves, which was sufficient to deduce two general principles:
 
-1. Increasing curvature of the cylinder (i.e. decreased $f$) generally *increases* $\mathrm{Ra}_\mathrm{cr}$ (i.e. makes the fluid *more* stable) - but the effect is modest (only $10%$ or so even for a significant curvature of $f=0.3$).
+1. Increasing curvature of the cylinder (i.e. decreased $f$) generally *increases* $\mathrm{Ra}_\mathrm{cr}$ (i.e. makes the fluid *more* stable) - but the effect is modest (only $10\%$ or so even for a significant curvature of $f=0.3$).
 2. The critical aspect ratio is the same regardless of curvature.
 
 Jarvis argued from his data and by analogy with plane-layer theory that the dependency of $\mathrm{Ra}_\mathrm{cr}$ on $f$ and $A$ should ideally be of the form:
 
 $$
-\mathrm{Ra}_\mathrm{cr} = \frac{\pi^2 + m^2/r_m^2}{m^2/r_m^2}
+\mathrm{Ra}_\mathrm{cr} = \frac{{\left(\pi^2 + m^2/r_m^2\right)}^3}{m^2/r_m^2}
 $$
 
 Where $m$ ($l$ per Jarvis) is the angular wavenumber ($r_m\pi/A$) and $r_m$ ($F$ per Jarvis) is the radius at the mid-depth ($(1+f)(2(1-f))$).
