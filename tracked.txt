@@ -77,6 +77,7 @@ analysis/viscoplastic/myimg.png
 analysis/viscoplastic/viscoplastic_000.ipynb
 analysis/viscoplastic/ymupnggvmbnoobqk.mp4
 analysis/visualisation.py
+attach.sh
 book/build.sh
 book/content/backmatter/conclusion.md
 book/content/chapter_01/main.md
@@ -1124,11 +1125,6 @@ publishing/citations.py
 publishing/paragraphs.py
 publishing/references_old.bib
 push.sh
-referencing/__init__.py
-referencing/references.py
-referencing/search.py
-referencing/search.sh
-referencing/searchengine.py
 resources/_old_window/README.md
 resources/_old_window/__init__.py
 resources/_old_window/_fig.py
@@ -2872,6 +2868,10 @@ utilities/__init__.py
 utilities/cache.py
 utilities/general.py
 utilities/misc.py
+utilities/references.py
+utilities/search.py
+utilities/search.sh
+utilities/searchengine.py
 vm.id
 vm.output
 working/book_scraps.md
