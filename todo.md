@@ -17,3 +17,4 @@
 - Cite Vening Meinesz on surface topography harmonics
 - Tell a better story about the origins of the consenus on mantle convection and plate tectonics using Richter 1978 as a base.
 - Make use of Herring (1963) on the topic of important ideas like the cube root beta scaling and the Malkus theory that convection optimises for heat transport.
+- Use Howard 1966 on topic of boundary layer stability criterion (Howard's conjecture)

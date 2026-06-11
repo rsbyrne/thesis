@@ -182,9 +182,28 @@ tags: [remove-cell]
 
 *Results of Chandrasekhar (1961) for the $\mathrm{Ra}_\mathrm{cr}$ for varying perturbation mode $l$ and curvature (core ratio) $f$, with the 'most critical' modes highlighted for each $f$. Reproduced using an Chebyshev method in modern scientific Python.*
 
-```{code-cell} ipython3
++++
 
-```
+#### Moving to the annulus
+
++++
+
+If the mantle convection theory is valid, then spherical shell convection is without doubt its most 'realistic' analogue. Yet as we have seen, the mathematics of the spherical shell is extremely forbidding. The work of subsequent authors could not substantially alter Chandrasekhar's finding [@Chandrasekhar1961-ez] that even the simplest fluids in this geometry are substantially beyond analysis.
+
+There are only a few roads forward from this point. We can make the assumption of plane-layer convection, which is more amenable to analysis, but fundamentally unrealistic [@Blankenbach1989-li]. Alternatively, we can use direct numerical experimentation to prope the more realistic spherical shell geometry, accepting that this will come at a prohibitive computational cost, necessarily limiting the scope and depth of any survey.
+
+The third road available to us is a compromise approach: to adopt a simplified curved geometry in two dimensions and study it both analytically (as far as we can) and experimentally (when analysis is exhausted). The most appropriate geometry for this purpose is a cylindrical geometry - that is, an annulus.
+
+It might be supposed that the annular model is a descendant of the spherical axisymmetric models of Chandrasekhar's era. As it transpired, the idea to adopt this geometry emerged not as a simplification of a more realistic geometry, but as a complication of a more simplistic geometry - albeit one so simplistic (and thus so tractable) that it had evaded the critique of irrealism up to that point: the plane-layer model.
+
+Gurnis and Zhong pioneered the use of the annulus for geophysical problems in their 1991 paper [@Gurnis1991-ub]: a follow up to the famous Gurnis paper of 1988 [@Gurnis1988-ks]. Their interest in these papers was not mantle convection *per se*, but the dynamics of subducting plates. Gurnis, professionally a seismologist, had earlier debuted the first coupled tectonic-convective model - but this plane-layer model relied on unnatural boundary conditions in order to supply the return flow. Gurnis recognised that an annular model, with its inherently periodic boundaries, elegantly and naturally resolved this problem, while being no more subject to charges of unrealism than the plane layer model it improved. In the follow-up paper of 1991, Gurnis and Zhong bent Gurnis' plane-layer model into an annulus with a curvature (core ratio) $f=0.5$, comparable to the Earth. This work successfully reproduced the plane-layer results, but the deeper implications and behaviours of the annular geometry itself were not explored.
+
+The first detailed treatment of mantle convection in the annular domain was carried out in 1993 by Gary Jarvis, who went on to author or co-author almost all the foundational literature on this geometry. In his first paper on the subject [@Jarvis1993-cb], Jarvis considered an isoviscous, basally-heated fluid in a free-slip, curved domain. Jarvis recognised that the annulus permitted a much closer comparison with planar systems than the conventional axisymmetric approach, providing that the geometry was parameterised in the appropriate way. For this purpose, Jarvis introduced the $f$ notation, where $f=r_i / r_o$ (the ratio of inner and outer radii), which we have adopted also. The focus of Jarvis in this first paper was to determine how the $\mathrm{Nu}-\mathrm{Ra}$ scaling changed as a function of $f$, and he was oddly incurious as to the most foundational question one could ask of any convecting system, which is the nature of the point of convective onset. Historically
+
+
+
+
+Citing an earlier conference presentation  His 1993 paper , Jarvis articulated and advocated for a cylindrical geometry that could be a compromise between the sophisticated but artificial
 
 ```{code-cell} ipython3
 ---
