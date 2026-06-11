@@ -59,7 +59,7 @@ Remarkably, all these early authors considered the full three-dimensional case, 
 
 After the war, new mathematical techniques and the advent of the computer inaugurated the modern era of convection studies. As before, the behaviour of fluids around the critical point was a core concern.
 
-Chandrasekhar synthesised virtually everything that was then known about convection in his monumental 'Hydrodynamic and Hydromagnetic stability' [@Chandrasekhar1961-ez]. This substantial tome, which is often the bedrock citation in modern papers on the topic, tabulated the critical *Rayleigh* numbers ($\mathrm{Ra}_c$) and wavenumbers ($a_c$) for the three combinations of kinematic boundary conditions, with greater precision than had previously been possible:
+Chandrasekhar synthesised virtually everything that was then known about convection in his monumental 'Hydrodynamic and Hydromagnetic stability' [@Chandrasekhar1961-ez]. This substantial tome, which is often the bedrock citation in modern papers on the topic, tabulated the critical *Rayleigh* numbers ($\mathrm{Ra}_\mathrm{cr}$) and wavenumbers ($a_\mathrm{cr}$) for the three combinations of kinematic boundary conditions, with greater precision than had previously been possible:
 
 | Scenario   | Critical *Rayleigh* number | Critical wavenumber |
 | :- | :- | :- |
@@ -92,7 +92,7 @@ The 1960s saw a wave of investigations that pushed beyond the assumptions of the
 
 *Benchmark results from Sparrow [@Sparrow1964-rv]. In all cases considered, the lower boundary was rigid. For the internal heating scenarios, both walls were held rigid and fixed in temperature.*
 
-The analysis of Sparrow *et al* covers what we would now call the 'mixed-heating' scenario; for the purely internally-heated scenario (i.e. with an insulated lower boundary), we can turn to Roberts [Roberts1967-aq] who found that, for all heat production rates, $\mathrm{Ra}_\mathrm{cr} \approx 2772.28$ and $a_c \approx 2.629$. Roberts also identified that this scenario produces a strong vertical asymmetry, which is not observed in other (planar) cases.
+The analysis of Sparrow *et al* covers what we would now call the 'mixed-heating' scenario; for the purely internally-heated scenario (i.e. with an insulated lower boundary), we can turn to Roberts [@Roberts1967-aq] who found that, for all heat production rates, $\mathrm{Ra}_\mathrm{cr} \approx 2772.28$ and $a_c \approx 2.629$. Roberts also identified that this scenario produces a strong vertical asymmetry, which is not observed in other (planar) cases.
 
 Another early assumption challenged in this period was the assumption of infinite lateral extent. Davis [@Davis1967-vs] identified that in such a scenario the wavenumber (the spatial frequency of convection cells) could no longer be allowed to vary freely, but would necessarily be constrained to the spatial harmonics of the chamber's dimensions. Using the Galerkin method, Davis showed that the lateral constraints on the domain were in fact of first-order significance in determining the shape, and therefore the efficiency, of the cells, and consequently the overall stability of the fluid.
 
@@ -164,7 +164,7 @@ The contributions of Bland, Jeffreys, Chandrasekhar, and Backus all preceded the
 
 The move to a spherical shell geometry necessarily reintroduces a lower boundary, which must be constrained both kinematically and thermally. Chandrasekhar [@Chandrasekhar1953-jn] appears to have been the first to provide a (kinematically) free surface for the lower boundary, breaking with a long-standing convention (inspired by the limitations of physical laboratories) of always keeping the lower boundary rigid. Though presented by Chandrasekhar as a fairly obvious intervention, it seems a rather startling leap of intuition for a period when mantle convection itself was not yet canonical. For the equally important thermal condition, Chandrasekhar - and seemingly all authors of this period - chose to provide an insulating boundary: the idea of a basal heat flux either did not occur to them, or was deemed too problematic to consider at that time.
 
-Chandrasekhar included both the full-sphere and spherical shell cases in his 1961 textbook [@Chandrasekhar1961-ez], including tabulations by Ebert using an exact method far superior to the earlier variational approach.
+Chandrasekhar included both the full-sphere and spherical shell cases in his 1961 textbook [@Chandrasekhar1961-ez], including tabulations by Elbert using a more precise method. In this book, Chandrasekhar endorsed the longstanding theory of Malkus [@Malkus1954-ii] that convection optimises for heat transport; Durney [@Durney1968-rt] tested this hypothesis for basally-heated spherical shells by exploring the stability of the critical planform beyond the critical point, and found that - for low *Rayleigh* numbers - the planform at onset is indeed the one preferred at finite amplitudes. However, when Young [@Young1974-eb] pushed deeper into the finite-amplitude regime for the same cases, he found that this assumption quickly disintegrated and that planforms quite different from those enabling convective onset were preferred at higher *Rayleigh* numbers. Busse [@Busse1975-sf] developed a method to characterise the actual geometry (not just the modality) of the planforms selected at the critical point and found that they were not necessarily degenerate in cases of even harmonic mode ($l$), and moreover, that they tended towards three-dimensional patterns when permitted. Finally, Zebib and colleagues [@Zebib1980-qt] used modern numerical methods to show that the kinds of non-axisymmetric patterns identified by Busse can actually be the most unstable.
 
 ```{code-cell} ipython3
 ---
@@ -266,20 +266,3 @@ slideshow:
 ![A figure from Chandrasekhar (1953)](chandra_fig.png)
 
 *Figure from Chandrasekhar (1953) showing the preferred angular mode ($l$) against the planetary curvature ($\eta$, today $f$).*
-
-+++
-
-The assumption of axisymmetry dominates the literature on spherical convection. Walzer [@Walzer1971-pg] was one of the few to attempt to develop the spherical shell scenario beyond axisymmetry to consider true spherical convection, which he did - rather abstractly - using group theory and Platonic solids.
-
-+++
-
-The first dedicated numerical study on convection in curved domains was carried out by Hsui *et al.* in 1972 [@Hsui1972-up]. Their model tentatively identified thresholds for various $n$-cell planforms and gave some analys
-
-The first dedicated studies on convection in curved domains were carried out by geophysicists in the 1970s.   which [@Young1974-eb] developed 
-
-Predictably, the first dedicated study on convection in curved domains is owed to a geophysicist, Busse, in 1975 [@Busse1975-sf]
-
-
-Spherical domains were first broached by Zebib and colleagues [@Zebib1980-qt] in the early geophysical period, who applied the linear stability techniques pioneered by Turcotte, Schubert, and Oxburgh to a spherical axisymmetric domain experiencing *Rayleigh* numbers close to the (presumed) critical point.
-
-Almost all the work done specifically on this question was carried out by Vangelov, Jarvis, and Glatzmaierand in a concentrated period during the mid-90s ([@Jarvis1994-np], [@Vangelov1994-kn], [@Jarvis1995-gq]).

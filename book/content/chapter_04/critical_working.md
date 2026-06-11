@@ -17,7 +17,11 @@ from referencing import search
 ```
 
 ```{code-cell} ipython3
-search('richter')
+len(range(22000, 23000, 100))
+```
+
+```{code-cell} ipython3
+search('zebib')
 ```
 
 ```{code-cell} ipython3
@@ -358,8 +362,6 @@ for x, y, z in zip(chanx.data, chany.data, slc.index):
     ax.annotate(x, y, round(z, 2))
 canvas
 ```
-
-
 
 ```{code-cell} ipython3
 arrmixed

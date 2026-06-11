@@ -1,3 +1,15 @@
+# ---
+# jupyter:
+#   jupytext:
+#     cell_metadata_filter: -all
+#     notebook_metadata_filter: kernelspec,jupytext,myst
+#     text_representation:
+#       extension: .py
+#       format_name: light
+#       format_version: '1.5'
+#       jupytext_version: 1.19.0
+# ---
+
 # from aliases import *
 # from everest.caching import cache
 
@@ -21,97 +33,117 @@ def cheb(N):
     return D, x
 
 def compute_annulus_ra_cr(f, m, N=50, regime="basal"):
-    f_eff = 1e-5 if f == 0 else f
+    """
+    Computes the critical Rayleigh number for an isoviscous 2D annulus.
+    Uses a Dual-Grid Filter (N and N+2) to explicitly eliminate spurious 
+    Chebyshev collocation modes.
+    """
+    def solve_for_grid(grid_N):
+        f_eff = 1e-5 if f == 0 else f
+        ro = 1 / (1 - f_eff)
+        ri = f_eff / (1 - f_eff)
 
-    ro = 1 / (1 - f_eff)
-    ri = f_eff / (1 - f_eff)
+        D_x, x = cheb(grid_N)
+        r = 0.5 * x + 0.5 * (ro + ri)
+        Dr = 2.0 * D_x
+        Dr2 = Dr @ Dr
 
-    D_x, x = cheb(N)
-    
-    r = 0.5 * x + 0.5 * (ro + ri)
-    Dr = 2.0 * D_x
-    Dr2 = Dr @ Dr
+        diag_r_inv = np.diag(1 / r)
+        diag_r2_inv = np.diag(1 / r**2)
 
-    diag_r_inv = np.diag(1 / r)
-    diag_r2_inv = np.diag(1 / r**2)
+        L = Dr2 + diag_r_inv @ Dr - (m**2) * diag_r2_inv
 
-    L = Dr2 + diag_r_inv @ Dr - (m**2) * diag_r2_inv
+        if regime == "internal":
+            dT_dr = (ri**2 - r**2) / (2.0 * r)
+        elif regime == "basal":
+            dT_dr = -1.0 / (r * np.log(ro / ri))
+        else:
+            raise ValueError(f"Regime '{regime}' not recognised!")
+        
+        diag_dT_dr = np.diag(dT_dr)
 
-    if regime == "internal":
-        dT_dr = (ri**2 - r**2) / (2.0 * r)
-    elif regime == "basal":
-        dT_dr = -1.0 / (r * np.log(ro / ri))
-    diag_dT_dr = np.diag(dT_dr)
+        M_size = grid_N + 1
+        I = np.eye(M_size)
+        Z = np.zeros((M_size, M_size))
 
-    M = N + 1
-    I = np.eye(M)
-    Z = np.zeros((M, M))
+        A = np.block([
+            [L, -I, Z],
+            [Z, L, Z],
+            [-m * diag_r_inv @ diag_dT_dr, Z, L]
+        ])
 
-    A = np.block([
-        [L, -I, Z],
-        [Z, L, Z],
-        [-m * diag_r_inv @ diag_dT_dr, Z, L]
-    ])
+        B = np.block([
+            [Z, Z, Z],
+            [Z, Z, m * diag_r_inv],
+            [Z, Z, Z]
+        ])
 
-    B = np.block([
-        [Z, Z, Z],
-        [Z, Z, m * diag_r_inv],
-        [Z, Z, Z]
-    ])
+        # Boundaries
+        A[0, :] = 0;   A[0, 0] = 1;   B[0, :] = 0
+        A[grid_N, :] = 0;   A[grid_N, grid_N] = 1;   B[grid_N, :] = 0
 
-    A[0, :] = 0;   A[0, 0] = 1;   B[0, :] = 0
-    A[N, :] = 0;   A[N, N] = 1;   B[N, :] = 0
+        A[M_size, :] = 0;   B[M_size, :] = 0
+        row_top = np.zeros(3 * M_size)
+        row_top[M_size] = 1
+        row_top[0:M_size] = -(2.0 / ro) * Dr[0, :]
+        A[M_size, :] = row_top / np.max(np.abs(row_top))
+        
+        A[M_size+grid_N, :] = 0; B[M_size+grid_N, :] = 0
+        row_bot = np.zeros(3 * M_size)
+        row_bot[M_size+grid_N] = 1
+        row_bot[0:M_size] = -(2.0 / ri) * Dr[-1, :]
+        A[M_size+grid_N, :] = row_bot / np.max(np.abs(row_bot))
 
-    A[M, :] = 0;   B[M, :] = 0
-    row_top = np.zeros(3*M)
-    row_top[M] = 1
-    row_top[0:M] = -(2.0 / ro) * Dr[0, :]
-    A[M, :] = row_top / np.max(np.abs(row_top))
-    
-    A[M+N, :] = 0; B[M+N, :] = 0
-    row_bot = np.zeros(3*M)
-    row_bot[M+N] = 1
-    row_bot[0:M] = -(2.0 / ri) * Dr[-1, :]
-    A[M+N, :] = row_bot / np.max(np.abs(row_bot))
+        A[2*M_size, :] = 0; A[2*M_size, 2*M_size] = 1; B[2*M_size, :] = 0
 
-    A[2*M, :] = 0; A[2*M, 2*M] = 1; B[2*M, :] = 0
+        A[2*M_size+grid_N, :] = 0; B[2*M_size+grid_N, :] = 0
+        if regime == "internal":
+            row_bot_theta = np.zeros(3 * M_size)
+            row_bot_theta[2*M_size:3*M_size] = Dr[-1, :]
+            A[2*M_size+grid_N, :] = row_bot_theta / np.max(np.abs(row_bot_theta))
+        elif regime == "basal":
+            A[2*M_size+grid_N, 2*M_size+grid_N] = 1
+        
+        # Formulate Compact Operator M = A^-1 B
+        try:
+            Op = la.solve(A, B)
+            vals = la.eigvals(Op)
+        except la.LinAlgError:
+            return np.array([])
 
-    A[2*M+N, :] = 0; B[2*M+N, :] = 0
-    if regime == "internal":
-        row_bot_theta = np.zeros(3*M)
-        row_bot_theta[2*M:3*M] = Dr[-1, :]
-        A[2*M+N, :] = row_bot_theta / np.max(np.abs(row_bot_theta))
-    elif regime == "basal":
-        A[2*M+N, :] = 0; A[2*M+N, 2*M+N] = 1; B[2*M+N, :] = 0
+        is_real = np.abs(np.imag(vals)) < 1e-8
+        real_vals = np.real(vals)[is_real]
+        
+        # Physical mu must be positive. 
+        # Setting floor to 1e-10 caps max searchable Ra at 10^10.
+        valid_mu = real_vals[real_vals > 1e-10]
+        return 1.0 / valid_mu
 
-    row_norms = np.max(np.abs(A), axis=1)
-    row_norms[row_norms == 0] = 1.0 
-    A = A / row_norms[:, np.newaxis]
-    B = B / row_norms[:, np.newaxis]
+    # Solve at two different resolutions
+    Ra_1 = solve_for_grid(N)
+    Ra_2 = solve_for_grid(N + 2)
 
-    # --- THE FIX ---
-    invA_B = la.solve(A, B)
-    vals = la.eigvals(invA_B)
-    
-    mu_vals = np.real(vals)
-    valid_mu = mu_vals[(mu_vals > 1e-10) & np.isfinite(mu_vals) & (np.abs(np.imag(vals)) < 1e-8)]
-    
-    if len(valid_mu) == 0:
+    if len(Ra_1) == 0 or len(Ra_2) == 0:
+        return np.nan
+
+    # Cross-reference: keep only roots in Ra_1 that match a root in Ra_2 within 0.1% tolerance
+    physical_Ra = []
+    for r1 in Ra_1:
+        # If the eigenvalue is physical, it will be stationary between the two grids
+        if np.any(np.abs(Ra_2 - r1) / r1 < 1e-3):
+            physical_Ra.append(r1)
+
+    if len(physical_Ra) == 0:
         return np.nan
         
-    Ra_vals = 1.0 / valid_mu
-    valid_Ra = Ra_vals[Ra_vals > 100]
+    # Bump the physical floor to Ra > 100 just to be absolutely safe
+    physical_Ra = np.array(physical_Ra)
+    valid_physical = physical_Ra[physical_Ra > 100]
     
-    if len(valid_Ra) == 0:
+    if len(valid_physical) == 0:
         return np.nan
-        
-    return np.min(valid_Ra)
 
-# Run the test for f=0.3 and the problematic lower modes
-print("Testing the fixed eigenvalue solver at f=0.3...")
-for m in [1, 2, 3, 4, 5]:
-    ra_val = compute_annulus_ra_cr(f=0.3, m=m, regime="basal")
-    print(f"Mode m={m}: Ra_cr = {ra_val:.2f}")
+    return np.min(valid_physical)
 
 # @cache(cachedir)
 def compute_critical_rayleigh_many(f_vals, m_vals, regime):
