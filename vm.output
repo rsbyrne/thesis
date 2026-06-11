@@ -80244,3 +80244,45 @@ Precompiling project...
 [I 2026-06-11 01:08:02.719 ServerApp] Saving critical.md
 [I 2026-06-11 01:11:51.751 ServerApp] Uploading file to /workspace/book/Paperpile - References - Jun 11.bib
 [W 2026-06-11 01:11:54.556 ServerApp] delete /workspace/book/references.bib
+[I 2026-06-11 01:12:41.661 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-11 01:14:51.749 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-11 01:15:10.324 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-11 01:15:10.324 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-11 01:15:44.156 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-11 01:15:44.213 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-11 01:15:52.270 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-11 01:15:52.329 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-11 01:15:57.878 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-11 01:16:18.492 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-11 01:16:18.559 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-11 01:17:11.405 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-11 01:17:11.464 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-11 01:17:11.465 ServerApp] Saving critical.ipynb
+[I 2026-06-11 01:17:11.476 ServerApp] Saving critical.md
+[I 2026-06-11 01:17:17.477 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-11 01:17:17.478 ServerApp] Saving critical.ipynb
+[I 2026-06-11 01:17:17.494 ServerApp] Saving critical.md
+[W 2026-06-11 01:17:49.530 ServerApp] 404 GET /home/morpheus/workspace/chandrasekhar_1961_spherical_axisymmetric_reproduction.png (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.82ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical.ipynb
+[W 2026-06-11 01:18:00.552 ServerApp] 404 GET /home/morpheus/workspace/storage/chandrasekhar_1961_spherical_axisymmetric_reproduction.png (2611cd05e5ae4b579cb509b38a8889a2@172.17.0.1) 1.19ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-11 01:18:27.771 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-11 01:18:38.803 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-11 01:18:38.804 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[W 2026-06-11 01:18:48.729 ServerApp] delete /workspace/storage/linear_stability_annulus_basal.png
+[W 2026-06-11 01:18:48.729 ServerApp] delete /workspace/storage/chandrasekhar_1961_spherical_axisymmetric_reproduction.png
+[I 2026-06-11 01:18:55.774 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-11 01:18:55.837 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-11 01:18:55.839 ServerApp] Saving critical.ipynb
+[I 2026-06-11 01:18:55.849 ServerApp] Saving critical.md
+[I 2026-06-11 01:19:18.705 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-11 01:19:18.774 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-11 01:19:29.023 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-11 01:19:29.087 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-11 01:19:32.873 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-11 01:19:33.118 ServerApp] Saving file at /workspace/book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
+[I 2026-06-11 01:20:12.690 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-11 01:20:12.706 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-11 01:20:12.707 ServerApp] Saving critical.ipynb
+[I 2026-06-11 01:20:12.721 ServerApp] Saving critical.md
+[I 2026-06-11 01:20:17.122 ServerApp] Saving file at /workspace/book/content/chapter_04/critical.ipynb
+[I 2026-06-11 01:20:17.123 ServerApp] Saving critical.ipynb
+[I 2026-06-11 01:20:17.139 ServerApp] Saving critical.md

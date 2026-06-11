@@ -103,9 +103,9 @@ book/content/chapter_04/critical_working.md
 book/content/chapter_04/criticality.py
 book/content/chapter_04/introduction.md
 book/content/chapter_04/linear_stability_annulus-Copy1.py
+book/content/chapter_04/linear_stability_annulus-Copy2.py
 book/content/chapter_04/linear_stability_annulus.py
 book/content/chapter_04/linear_stability_annulus_basal.png
-book/content/chapter_04/linear_stability_annulus_internal.png
 book/content/chapter_04/pellew_fig.png
 book/content/chapter_05/conclusion.md
 book/content/chapter_05/introduction.md

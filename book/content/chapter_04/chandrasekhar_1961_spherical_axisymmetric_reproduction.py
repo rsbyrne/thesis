@@ -161,4 +161,6 @@ if __name__ == "__main__":
     
     # plt.tight_layout(pad=3.0)
     ax.set_box_aspect(None, zoom=0.95)
-    plt.savefig(f"chandrasekhar_1961_spherical_axisymmetric_reproduction.png")
+    plt.savefig(
+        f"chandrasekhar_1961_spherical_axisymmetric_reproduction.png"
+        )

@@ -218,4 +218,6 @@ if __name__ == "__main__":
     
     # plt.tight_layout(pad=3.0)
     ax.set_box_aspect(None, zoom=0.95)
-    plt.savefig(f"linear_stability_annulus_{regime}.png")
+    plt.savefig(
+        f"linear_stability_annulus_{regime}.png"
+        )
