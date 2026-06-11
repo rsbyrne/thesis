@@ -1,5 +1,5 @@
-# from aliases import *
-# from everest.caching import cache
+from aliases import *
+from everest.caching import cache
 
 import sys as _sys
 import numpy as np
@@ -59,37 +59,37 @@ def compute_annulus_ra_cr(f, m, N=50, regime="basal"):
         [Z, Z, Z]
     ])
 
+    # --- BOUNDARY CONDITIONS ---
+
+    # 1. Streamfunction psi = 0 at outer (0) and inner (N) boundaries
     A[0, :] = 0;   A[0, 0] = 1;   B[0, :] = 0
     A[N, :] = 0;   A[N, N] = 1;   B[N, :] = 0
 
-    A[M, :] = 0;   B[M, :] = 0
-    row_top = np.zeros(3*M)
-    row_top[M] = 1
-    row_top[0:M] = -(2.0 / ro) * Dr[0, :]
-    A[M, :] = row_top / np.max(np.abs(row_top))
-    
-    A[M+N, :] = 0; B[M+N, :] = 0
-    row_bot = np.zeros(3*M)
-    row_bot[M+N] = 1
-    row_bot[0:M] = -(2.0 / ri) * Dr[-1, :]
-    A[M+N, :] = row_bot / np.max(np.abs(row_bot))
+    # 2. FREE-SLIP: Vorticity omega = 0 at outer (M) and inner (M+N) boundaries
+    A[M, :] = 0;   A[M, M] = 1;   B[M, :] = 0
+    A[M+N, :] = 0; A[M+N, M+N] = 1; B[M+N, :] = 0
 
+    # 3. Temperature theta = 0 at outer boundary (2*M)
     A[2*M, :] = 0; A[2*M, 2*M] = 1; B[2*M, :] = 0
 
+    # 4. Temperature condition at inner boundary (2*M+N)
     A[2*M+N, :] = 0; B[2*M+N, :] = 0
     if regime == "internal":
+        # Insulating inner boundary: d_theta/dr = 0
         row_bot_theta = np.zeros(3*M)
         row_bot_theta[2*M:3*M] = Dr[-1, :]
         A[2*M+N, :] = row_bot_theta / np.max(np.abs(row_bot_theta))
     elif regime == "basal":
-        A[2*M+N, :] = 0; A[2*M+N, 2*M+N] = 1; B[2*M+N, :] = 0
+        # Conducting inner boundary: theta = 0
+        A[2*M+N, 2*M+N] = 1
 
+    # Row normalization for numerical stability
     row_norms = np.max(np.abs(A), axis=1)
     row_norms[row_norms == 0] = 1.0 
     A = A / row_norms[:, np.newaxis]
     B = B / row_norms[:, np.newaxis]
 
-    # --- THE FIX ---
+    # Solver
     invA_B = la.solve(A, B)
     vals = la.eigvals(invA_B)
     
@@ -107,13 +107,13 @@ def compute_annulus_ra_cr(f, m, N=50, regime="basal"):
         
     return np.min(valid_Ra)
 
-# Run the test for f=0.3 and the problematic lower modes
-print("Testing the fixed eigenvalue solver at f=0.3...")
-for m in [1, 2, 3, 4, 5]:
-    ra_val = compute_annulus_ra_cr(f=0.3, m=m, regime="basal")
-    print(f"Mode m={m}: Ra_cr = {ra_val:.2f}")
+# # Run the test for f=0.3 and the problematic lower modes
+# print("Testing the fixed eigenvalue solver at f=0.3...")
+# for m in [1, 2, 3, 4, 5]:
+#     ra_val = compute_annulus_ra_cr(f=0.3, m=m, regime="basal")
+#     print(f"Mode m={m}: Ra_cr = {ra_val:.2f}")
 
-# @cache(cachedir)
+@cache(cachedir)
 def compute_critical_rayleigh_many(f_vals, m_vals, regime):
     F, L_grid = np.meshgrid(f_vals, m_vals)
     Z = np.zeros_like(F)

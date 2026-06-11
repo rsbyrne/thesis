@@ -183,7 +183,7 @@ tags: [remove-cell]
 *Results of Chandrasekhar (1961) for the $\mathrm{Ra}_\mathrm{cr}$ for varying perturbation mode $l$ and curvature (core ratio) $f$, with the 'most critical' modes highlighted for each $f$. Reproduced using an Chebyshev method in modern scientific Python.*
 
 ```{code-cell} ipython3
-!pwd
+
 ```
 
 ```{code-cell} ipython3

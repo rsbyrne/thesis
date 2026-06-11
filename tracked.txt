@@ -92,8 +92,6 @@ book/content/chapter_03/conclusion.md
 book/content/chapter_03/everest.md
 book/content/chapter_03/introduction.md
 book/content/chapter_03/scraps.md
-book/content/chapter_04/chandra_fig.png
-book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.png
 book/content/chapter_04/chandrasekhar_1961_spherical_axisymmetric_reproduction.py
 book/content/chapter_04/conclusion.md
 book/content/chapter_04/conduction.md
@@ -105,8 +103,6 @@ book/content/chapter_04/introduction.md
 book/content/chapter_04/linear_stability_annulus-Copy1.py
 book/content/chapter_04/linear_stability_annulus-Copy2.py
 book/content/chapter_04/linear_stability_annulus.py
-book/content/chapter_04/linear_stability_annulus_basal.png
-book/content/chapter_04/pellew_fig.png
 book/content/chapter_05/conclusion.md
 book/content/chapter_05/introduction.md
 book/content/chapter_06/conclusion.md
@@ -2784,6 +2780,7 @@ scraps/publish.sh
 scraps/researchengineers.md
 scraps/scraps.md
 storage/annucond.png
+storage/chandra_fig.png
 storage/cond_f0-1.png
 storage/cond_f0-2.png
 storage/cond_f0-3.png
@@ -2837,6 +2834,7 @@ storage/old/simple_critical_all.data
 storage/old/simple_critical_enhance.data
 storage/old/simple_critical_undone.data
 storage/old/simple_critical_undone_old.data
+storage/pellew_fig.png
 storage/simple_critical-Copy1.data
 storage/simple_critical.data
 storage/simple_critical_17.data
