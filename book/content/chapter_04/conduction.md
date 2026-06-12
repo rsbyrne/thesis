@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.19.0
+    jupytext_version: 1.19.3
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -104,7 +104,7 @@ $$
 \frac{dT}{dh} = 1
 $$
 
-Bluntly, this is not even worth graphing.
+Bluntly, this is not even worth graphing. Picture a straight line. There you have it.
 
 +++
 
@@ -123,9 +123,13 @@ condgeotherms, condavts, condhs = \
 ```
 
 ```{code-cell} ipython3
-:label: isocondh
-:tags: [remove-cell]
-
+---
+label: isocondh
+tags: [remove-cell]
+editable: true
+slideshow:
+  slide_type: ''
+---
 canvas1 = Canvas(shape = (1, 2), size = (6, 4))
 
 ax1 = canvas1.make_ax((0, 0))
@@ -205,6 +209,8 @@ fig = imop.hstack(canvas1, canvas2)
 fig
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 When we insulate the lower boundary (setting its derivative to zero) and supply heat from the interior instead, we get an 'internally heated' geotherm. The marginally more exotic lower boundary in this case might seem to make things more complicated, but actually it simplifies matters: since every layer must transact all of the heat produced by lower layers, and since those lower layers cumulatively produce heat in direct proportion to how many of them there are (i.e. in proportion to the present mantle depth $h$), the temperature gradient scales with length squared {numref}`isocondh_fig`:
 
 $$ \begin{align*}
@@ -216,7 +222,7 @@ Where $H$ is the per-mass heating rate and $h$ is the dimensionless height from 
 
 A consequence of pure internal heating is that the gradient at the upper boundary (for $h$ in $(0, 1)$) is always $H$, since $H$ is the only heat source and the outer boundary is the only heat sink. We will touch on this again when we discuss the equivalent cylindrical case.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ```{figure} #isocondh
 :name: isocondh_fig
@@ -1511,7 +1517,7 @@ $$
 
 Our purpose in this section was to derive closed-form expressions of the geothermal and thermal flux gradients for conductive heat transport at equilibrium. The general case (the 'supremum', in a sense) countenances a mixed heating regime in a curved domain, with three free parameters: the rate of internal heat production per area ($H$ in the range $0-10$), the degree of curvature ($f$ in the range $0-1$), and the nature of the lower boundary layer (effectively a boolean variable or 'switch' which toggles between a fixed gradient of zero or a fixed value of $1$). All other cases explored in this section are effectively endmembers of this general case: non-heating $H=0$ versus heating $H>0$ and non-curved ($f=1$) versus curved ($f<1$) for each of the two choices of boundary condition; discarding the farcical case of neither basal nor volumetric heating, that gives us six cases in total. Each expression derived empirically, then reduced into a symbolic form. All align with the literature, albeit in several cases in somewhat novel forms as inspired by the logic we have outlined and/or a close inspection of the empirical data. The results are intended to serve simultaneously as a convenient reference, a benchmarking exercise for our physics code, and as a theoretical backstop for the work that is to come.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 **Conductive equilibrium temperature profiles ($0 \le h \le 1$)**:
 
@@ -1584,6 +1590,12 @@ s^*(h) &= \frac{r(h)}{r_m} \\
 \end{align*} $$
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
 # from pysr import PySRRegressor
 
 # flat_data = []

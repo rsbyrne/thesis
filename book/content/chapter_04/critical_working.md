@@ -4,21 +4,12 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.19.0
+    jupytext_version: 1.19.3
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
-
-```{code-cell} ipython3
-from aliases import *
-from referencing import search
-```
-
-```{code-cell} ipython3
-search('van keken')
-```
 
 ```{code-cell} ipython3
 ---
@@ -74,14 +65,8 @@ slideshow:
   slide_type: ''
 tags: [remove-cell]
 ---
-!python3 linear_stability_annulus.py basal
+
 ```
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
-
-![linear_stability_annulus](linear_stability_annulus_basal.png)
-
-*Results of a linear stability analysis, analogous to that performed before for Chandrasekhar's spherical shell harmonics, but for the annulus. Basally-heated thermal regime.*
 
 ```{code-cell} ipython3
 ---
@@ -89,16 +74,10 @@ editable: true
 slideshow:
   slide_type: ''
 ---
-!python3 linear_stability_annulus.py internal
+
 ```
 
-+++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
-
-![linear_stability_annulus](linear_stability_annulus_internal.png)
-
-*Results of a linear stability analysis, analogous to that performed before for Chandrasekhar's spherical shell harmonics, but for the annulus. Internally-heated thermal regime.*
-
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ## Varying curvature
 

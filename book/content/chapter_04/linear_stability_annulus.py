@@ -114,24 +114,26 @@ def compute_annulus_ra_cr(f, m, N=50, regime="basal"):
 #     print(f"Mode m={m}: Ra_cr = {ra_val:.2f}")
 
 @cache(cachedir)
-def compute_critical_rayleigh_many(f_vals, m_vals, regime):
-    F, L_grid = np.meshgrid(f_vals, m_vals)
+def compute_critical_rayleigh_many(f_vals, m_vals, regime, verbose=False):
+    F, m_grid = np.meshgrid(f_vals, m_vals)
     Z = np.zeros_like(F)
     
     total_points = len(f_vals) * len(m_vals)
-    print(f"Solving {total_points} generalized eigenvalue problems...")
+    if verbose:
+        print(f"Solving {total_points} generalized eigenvalue problems...")
     
     count = 0
     for i in range(len(m_vals)):
         for j in range(len(f_vals)):
-            Ra = compute_annulus_ra_cr(F[i, j], L_grid[i, j], regime=regime)
+            Ra = compute_annulus_ra_cr(F[i, j], m_grid[i, j], regime=regime)
             Z[i, j] = np.log10(Ra)
             
             count += 1
-            if count % 50 == 0:
-                print(f"Progress: {count}/{total_points} calculations completed.")
+            if verbose:
+                if count % 50 == 0:
+                    print(f"Progress: {count}/{total_points} calculations completed.")
 
-    return F, L_grid, Z
+    return F, m_grid, Z
 
 # Lord Rayleigh 1916 benchmark for Cartesian purely basally heated:
 # theoretically at Ra 657.5, wavenumber 2.12
@@ -144,26 +146,18 @@ internal_ra_vals = np.array([(m, compute_annulus_ra_cr(f=0.9999, m=m, regime="in
 assert np.round(np.min(internal_ra_vals[:, 1]), 1) == 867.8, internal_ra_vals
 
 
-# --- Generate the 3D Plot and 2D Projections ---
-if __name__ == "__main__":
+def get_minimum_path(log10_Ra, /):
+    min_vals = np.min(log10_Ra, axis=0)
+    min_indices = np.argmin(log10_Ra, axis=0)
+    return min_vals, min_indices
 
-    print("Initializing grid parameters...")
-    
-    # Grid for the surface
-    f_vals = np.linspace(0.1, 0.9, 41) 
-    m_vals = np.arange(1, 24)
-    regime = _sys.argv[1]
-    
-    F, L_grid, Z = compute_critical_rayleigh_many(f_vals, m_vals, regime=regime)
-                
-    print("Computations complete. Rendering plot...")
 
-    # =========================================================================
+def plot_3D(f_vals, m_vals, regime, F, m_grid, Z, save=False, title=None):
+        # =========================================================================
     # 1. Track the Minimum Path (Most Unstable Mode)
     # =========================================================================
     # axis=0 looks across the row values (Harmonic Order 'm') for each column ('f')
-    min_Z = np.min(Z, axis=0)
-    min_m_indices = np.argmin(Z, axis=0)
+    min_m, min_m_indices = get_minimum_path(Z)
     min_m = m_vals[min_m_indices]
 
     # =========================================================================
@@ -171,8 +165,11 @@ if __name__ == "__main__":
     # =========================================================================
     fig = plt.figure(figsize=(15, 7.5))
 
+    if title is None:
+        title = f"Critical Rayleigh Number for Convection Onset in the Annulus (heating: {regime})"
+
     fig.suptitle(
-        f"Critical Rayleigh Number for Convection Onset in the Annulus (heating: {regime})",
+        title,
         fontsize=14,
         fontweight='bold',
         y=0.96
@@ -182,7 +179,7 @@ if __name__ == "__main__":
     ax1 = fig.add_subplot(121, projection="3d")
     surf = ax1.plot_surface(
         F,
-        L_grid,
+        m_grid,
         Z,
         cmap=cm.viridis,
         edgecolor="black",
@@ -244,4 +241,27 @@ if __name__ == "__main__":
 
     # Tight layout nicely locks this standard positioning together
     plt.tight_layout()
-    plt.savefig(f"linear_stability_annulus_{regime}.png", dpi=200)
+
+    if save:
+        plt.savefig(f"linear_stability_annulus_{regime}.png", dpi=200)
+    else:
+        plt.show()
+
+
+# --- Generate the 3D Plot and 2D Projections ---
+if __name__ == "__main__":
+
+    print("Initializing grid parameters...")
+    
+    # Grid for the surface
+    f_vals = np.linspace(0.1, 0.9, 41) 
+    m_vals = np.arange(1, 24)
+    regime = _sys.argv[1]
+    
+    F, m_grid, Z = compute_critical_rayleigh_many(
+        f_vals, m_vals, regime=regime, verbose=True,
+        )
+                
+    print("Computations complete. Rendering plot...")
+
+    plot_3D(f_vals, m_vals, regime, F, m_grid, Z, save=True)
