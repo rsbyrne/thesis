@@ -157,7 +157,7 @@ def plot_3D(f_vals, m_vals, regime, F, m_grid, Z, save=False, title=None):
     # 1. Track the Minimum Path (Most Unstable Mode)
     # =========================================================================
     # axis=0 looks across the row values (Harmonic Order 'm') for each column ('f')
-    min_m, min_m_indices = get_minimum_path(Z)
+    min_Z, min_m_indices = get_minimum_path(Z)
     min_m = m_vals[min_m_indices]
 
     # =========================================================================
