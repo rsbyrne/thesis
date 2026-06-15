@@ -33,6 +33,16 @@ def disc(h, f):
 #     f = safe_f(f)
 #     return (radius(h, f)**2 - r_inner(f)**2) / (2 * r_mid(f))
 
+def aspect_ratio(f, m):
+    if 0.99999 < f <= 1.: return wavenumber_to_aspect(m)
+    return 2 * np.pi * r_mid(f) / m
+
+def aspect_curvature_to_wavenumber(A, f):
+    return r_mid(f) * np.pi / A
+
+def wavenumber_to_aspect(m):
+    return 2 * np.pi / m
+
 sym_h, sym_f = sympy.symbols('h f', real=True)
 sym_r_i = sym_f / (1 - sym_f)
 sym_r_o = 1 / (1 - sym_f)

@@ -16,8 +16,10 @@
 import os
 planetengineDir = os.path.abspath(os.path.dirname(__file__))
 
-from everest import \
-    Reader, Writer, Fetch, Scope, set_global_anchor, load, mpi, disk
+from everest import (
+    Reader, Writer, Fetch, Scope, set_global_anchor, load, mpi, disk,
+    campaign,
+    )
 
 from . import systems
 from . import observers

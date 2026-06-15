@@ -4,7 +4,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.19.0
+    jupytext_version: 1.19.3
 kernelspec:
   name: python3
   display_name: Python 3 (ipykernel)
@@ -349,7 +349,7 @@ Because the *Rayleigh* number so expressed is equivalent to the coefficient of t
 
 ### Linear stability analysis and the critical *Rayleigh* number
 
-Remarkably, the value of the critical wavelength $\mathrm{Ra}_{\mathrm{cr}}$ is independent of the thermal properties of the system and, for the sorts of plane box geometries often under discussion, should theoretically be exactly $2\sqrt{2}$ - or just $\sqrt{2}$ in the half cell [@Chandrasekhar1961-ez]. This can be obtained empirically, but in simple cases such as that of planar basally-heated isoviscous flow, an expression for $\mathrm{Ra}_\mathrm{cr}$ due to arbitrary perturbations can be derived from the assumptions already held using linear stability analysis.
+Remarkably, the value of the critical wavelength $\mathrm{Ra}_{\mathrm{cr}}$ is independent of the thermal properties of the system and, for the sorts of plane box geometries often under discussion, should theoretically be exactly $2\sqrt{2}$ - or just $\sqrt{2}$ in the half cell [@Chandrasekhar1961-ez]. This can be obtained empirically, but in simple cases such as that of planar basally-heated isoviscous flow, an expression for $\mathrm{Ra}_\mathrm{cr}$ due to arbitrary perturbations can be derived from the assumptions already held using linear stability analysis [@Howard1966-xk].
 
 First consider the state of a purely conducting system at thermal equilibrium:
 

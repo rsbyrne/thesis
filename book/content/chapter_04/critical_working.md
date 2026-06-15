@@ -20,6 +20,7 @@ slideshow:
 from aliases import *
 
 import itertools
+import pickle
 
 from criticality import *
 
@@ -37,65 +38,24 @@ limit_memory(8.0)
 ```
 
 ```{code-cell} ipython3
-cylindrical.r_mid(0.5)
-```
-
-```{code-cell} ipython3
-def aspect_curvature_to_wavenumber(A, f):
-    return cylindrical.r_mid(f) * np.pi / A
-
-def wavenumber_to_aspect(m):
-    return 2 * np.pi / m
-```
-
-```{code-cell} ipython3
-convert_to_wavenumber(np.sqrt(2), 0.99999)
-```
-
-## Criticality as a function of geometry and heat
-
-+++
-
-NOTE TO SUPERVISOR: I'm writing up this section now. I have used my Everest/PlanetEngine software to generate over a hundred thousand models in complex converging series to identify to five or six decimal places exactly what the critical Rayleigh number is for varying geometry and heating scenarios. I expect this will be about five thousand words. I don't believe this work has been done before (certainly not in this way).
-
-```{code-cell} ipython3
 ---
 editable: true
 slideshow:
   slide_type: ''
 tags: [remove-cell]
 ---
-
-```
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
-
+# incorporate_new_data("simple_critical_2026_2__-_-_.data")
+isomixed, isointernal, arrmixed, arrinternal = datas = make_frames()
+print(sum(map(len, datas)))
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
+## Criticality as a function of geometry and heat
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 ## Varying curvature
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
-tags: [remove-cell]
----
-# import pickle
-# new_data = pickle.loads((storagepath / "simple_critical_2026_1__-_-_.data").read_bytes())
-# old_data = pickle.loads((storagepath / 'simple_critical.data').read_bytes())
-# (storagepath / 'simple_critical.data').write_bytes(pickle.dumps(old_data))
-
-isomixed, isointernal, arrmixed, arrinternal = datas = make_frames(cache_refresh=True)
-print(sum(map(len, datas)))
-```
 
 ```{code-cell} ipython3
 # Hs = np.linspace(0, 2, 11)
@@ -192,19 +152,6 @@ ax3.scatter(
 
 display(canvas)
 display(params)
-```
-
-```{code-cell} ipython3
-theoretical = 779.3
-print((slc.min() - theoretical) / theoretical * 100)
-```
-
-```{code-cell} ipython3
-!pwd
-```
-
-```{code-cell} ipython3
-isomixed.loc[0, 1.41:1.42]
 ```
 
 ## Varying aspect ratio
@@ -327,6 +274,11 @@ display(params)
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -483,18 +435,6 @@ canvas
 ```
 
 ```{code-cell} ipython3
-isomixed
-```
-
-```{code-cell} ipython3
-isomixed.loc[0].groupby('f').min()
-```
-
-```{code-cell} ipython3
-isomixed.loc[0].groupby('f').min().plot()
-```
-
-```{code-cell} ipython3
 slc = isomixed[0.]
 display(slc)
 
@@ -532,42 +472,6 @@ canvas
 ```
 
 ```{code-cell} ipython3
-arrmixed
-```
-
-```{code-cell} ipython3
-(11 * 11 * 10 * 21)**0.5
-```
-
-```{code-cell} ipython3
-5 * 5 * 5 * 10
-```
-
-```{code-cell} ipython3
-np.log10(np.unique(arrmixed.reset_index()['etaDelta']))
-```
-
-```{code-cell} ipython3
-np.arange(0.3, 1., 0.05)[1::2]
-```
-
-```{code-cell} ipython3
-arrmixed
-```
-
-```{code-cell} ipython3
-np.arange(0.3, 1., 0.05)[1::2]
-```
-
-```{code-cell} ipython3
-np.unique(arrmixed.loc[0].reset_index()['etaDelta'])
-```
-
-```{code-cell} ipython3
-arrmixed.reset_index()[['aspect', 'H', 'etaDelta']].plot()
-```
-
-```{code-cell} ipython3
 canvas = Canvas(size=(12, 12))
 ax1 = canvas.make_ax()
 ax1.scatter(
@@ -579,4 +483,177 @@ ax1.scatter(
     )
 
 canvas
+```
+
+```{code-cell} ipython3
+# An AI-written reference implementation
+
+
+
+import numpy as np
+import scipy.linalg as la
+import matplotlib.pyplot as plt
+from matplotlib import cm
+
+def chebyshev_differentiation_matrix(N):
+    """
+    Generates the Chebyshev differentiation matrix D and the grid x.
+    This allows us to take highly accurate spectral derivatives.
+    """
+    if N == 0:
+        return 0, 1
+    # Chebyshev nodes (clustered at boundaries -1 and 1)
+    x = np.cos(np.pi * np.arange(N + 1) / N)
+    
+    # Off-diagonal matrix entries
+    c = np.hstack([2, np.ones(N - 1), 2]) * (-1)**np.arange(N + 1)
+    X = np.tile(x, (N + 1, 1))
+    dX = X - X.T
+    
+    # Differentiation matrix construction
+    D = (c[:, None] / c[None, :]) / (dX + np.eye(N + 1))
+    
+    # Diagonal entries (negative sum of the rest of the row)
+    D = D - np.diag(np.sum(D, axis=1))
+    return D, x
+
+def calculate_critical_rayleigh(f, m, N=50, regime="basal"):
+    """
+    Calculates the critical Rayleigh number for a given core fraction (f)
+    and angular harmonic wavenumber (m).
+    """
+    # Prevent divide-by-zero for a full sphere limit
+    f_eff = 1e-5 if f == 0 else f
+
+    # Non-dimensional radii (domain height = 1)
+    ro = 1 / (1 - f_eff)
+    ri = f_eff / (1 - f_eff)
+
+    # 1. Setup the Spatial Grid and Operators
+    D_x, x = chebyshev_differentiation_matrix(N)
+    
+    # Map Chebyshev domain [-1, 1] to Annulus domain [ri, ro]
+    r = 0.5 * x + 0.5 * (ro + ri)
+    D_r = 2.0 * D_x          # First derivative operator
+    D_r2 = D_r @ D_r         # Second derivative operator
+
+    diag_r_inv = np.diag(1 / r)
+    diag_r2_inv = np.diag(1 / r**2)
+
+    # The Laplacian operator in cylindrical coordinates for harmonic m:
+    # L = d^2/dr^2 + (1/r)*d/dr - m^2/r^2
+    Laplacian = D_r2 + diag_r_inv @ D_r - (m**2) * diag_r2_inv
+
+    # Base-state conductive temperature gradient
+    if regime == "internal":
+        dT_dr = (ri**2 - r**2) / (2.0 * r)
+    elif regime == "basal":
+        dT_dr = -1.0 / (r * np.log(ro / ri))
+    diag_dT_dr = np.diag(dT_dr)
+
+    # 2. Construct the Block Matrices for the Generalized Eigenvalue Problem
+    # State vector is stacked as: [psi, omega, theta]
+    M = N + 1
+    I = np.eye(M)
+    Z = np.zeros((M, M))
+
+    # LHS Matrix (A)
+    # Row block 1: L*psi - omega = 0  --> defines vorticity
+    # Row block 2: L*omega = 0        --> momentum (buoyancy handled on RHS)
+    # Row block 3: L*theta - m/r * dT_dr * psi = 0 --> energy equation
+    LHS_matrix = np.block([
+        [Laplacian, -I, Z],
+        [Z, Laplacian, Z],
+        [-m * diag_r_inv @ diag_dT_dr, Z, Laplacian]
+    ])
+
+    # RHS Matrix (B)
+    # Contains the buoyancy term coupling temperature to momentum.
+    # Note: Ra is factored out as the eigenvalue lambda. 
+    # Therefore, A * x = (1/Ra) * B * x  --> solving for eigenvalues of A^-1 * B
+    RHS_matrix = np.block([
+        [Z, Z, Z],
+        [Z, Z, m * diag_r_inv],
+        [Z, Z, Z]
+    ])
+
+    # 3. Apply Boundary Conditions
+    # Outer boundary index = 0, Inner boundary index = N
+    
+    # Kinematic: Streamfunction (psi) = 0 at both boundaries (impermeable walls)
+    LHS_matrix[0, :] = 0;   LHS_matrix[0, 0] = 1;   RHS_matrix[0, :] = 0
+    LHS_matrix[N, :] = 0;   LHS_matrix[N, N] = 1;   RHS_matrix[N, :] = 0
+
+    # Stress: Free-slip requires vorticity (omega) = 0 at both boundaries
+    LHS_matrix[M, :] = 0;   LHS_matrix[M, M] = 1;   RHS_matrix[M, :] = 0
+    LHS_matrix[M+N, :] = 0; LHS_matrix[M+N, M+N] = 1; RHS_matrix[M+N, :] = 0
+
+    # Thermal: Temperature (theta) = 0 at outer boundary
+    LHS_matrix[2*M, :] = 0; LHS_matrix[2*M, 2*M] = 1; RHS_matrix[2*M, :] = 0
+
+    # Thermal: Inner boundary condition depends on heating regime
+    LHS_matrix[2*M+N, :] = 0; RHS_matrix[2*M+N, :] = 0
+    if regime == "internal":
+        # Insulating inner boundary: d_theta/dr = 0
+        row_bot_theta = np.zeros(3*M)
+        row_bot_theta[2*M:3*M] = D_r[-1, :]
+        LHS_matrix[2*M+N, :] = row_bot_theta / np.max(np.abs(row_bot_theta))
+    elif regime == "basal":
+        # Conducting inner boundary: theta = 0
+        LHS_matrix[2*M+N, 2*M+N] = 1
+
+    # Row normalization for numerical stability in the solver
+    row_norms = np.max(np.abs(LHS_matrix), axis=1)
+    row_norms[row_norms == 0] = 1.0 
+    LHS_matrix = LHS_matrix / row_norms[:, np.newaxis]
+    RHS_matrix = RHS_matrix / row_norms[:, np.newaxis]
+
+    # 4. Solve the Eigenvalue Problem
+    # We solve for eigenvalues (mu) of (LHS^-1 * RHS)
+    # Because A x = (1/Ra) B x, our eigenvalue mu = 1/Ra
+    invA_B = la.solve(LHS_matrix, RHS_matrix)
+    eigenvalues = la.eigvals(invA_B)
+    
+    # Filter for valid, purely real, positive eigenvalues 
+    mu_vals = np.real(eigenvalues)
+    valid_mu = mu_vals[(mu_vals > 1e-10) & np.isfinite(mu_vals) & (np.abs(np.imag(eigenvalues)) < 1e-8)]
+    
+    if len(valid_mu) == 0:
+        return np.nan
+        
+    Ra_vals = 1.0 / valid_mu
+    valid_Ra = Ra_vals[Ra_vals > 100] # Ignore spurious computational noise
+    
+    if len(valid_Ra) == 0:
+        return np.nan
+        
+    return np.min(valid_Ra)
+
+def benchmark_tests():
+    """Validates the math against classic Cartesian limit literature."""
+    print("Running Cartesian limit benchmarks...")
+    # Lord Rayleigh 1916 (Purely Basal): Expected Ra ~ 657.5
+    ra_basal = [calculate_critical_rayleigh(f=0.9999, m=m, regime="basal") for m in range(22000, 22500, 100)]
+    print(f"Basal limit min Ra: {np.min(ra_basal):.1f} (Expected: 657.5)")
+    
+    # Roberts 1967 (Purely Internal): Expected Ra ~ 867.8
+    ra_internal = [calculate_critical_rayleigh(f=0.9999, m=m, regime="internal") for m in range(17300, 17800, 100)]
+    print(f"Internal limit min Ra: {np.min(ra_internal):.1f} (Expected: 867.8)")
+
+if __name__ == "__main__":
+    benchmark_tests()
+    
+    print("\nExecuting main grid sweep for basal heating...")
+    f_vals = np.linspace(0.1, 0.9, 21) # Reduced resolution for quick testing
+    m_vals = np.arange(1, 20)
+    
+    Z = np.zeros((len(m_vals), len(f_vals)))
+    
+    for i, m in enumerate(m_vals):
+        for j, f in enumerate(f_vals):
+            Ra = calculate_critical_rayleigh(f, m, regime="basal")
+            Z[i, j] = np.log10(Ra) if not np.isnan(Ra) else np.nan
+            
+    print("Sweep complete. Data ready for plotting.")
+    # (Plotting code remains functionally identical to your original script)
 ```

@@ -1,6 +1,16 @@
+import pickle
+
 from aliases import * # important this goes first to configure PATH
 
 from everest.caching import cache
+
+def incorporate_new_data(filename):
+    new_data = pickle.loads((storagepath / filename).read_bytes())
+    old_data = pickle.loads((storagepath / 'simple_critical.data').read_bytes())
+    updated_data = {**old_data, **new_data}
+    (storagepath / 'simple_critical.data').write_bytes(pickle.dumps(updated_data))
+    make_frames(cache_refresh=True)
+    return len(update_data) - len(old_data)
 
 @cache(cachedir)
 def make_frames():
