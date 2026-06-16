@@ -146,19 +146,20 @@ internal_ra_vals = np.array([(m, compute_annulus_ra_cr(f=0.9999, m=m, regime="in
 assert np.round(np.min(internal_ra_vals[:, 1]), 1) == 867.8, internal_ra_vals
 
 
-def get_minimum_path(log10_Ra, /):
-    min_vals = np.min(log10_Ra, axis=0)
-    min_indices = np.argmin(log10_Ra, axis=0)
-    return min_vals, min_indices
+def get_minimum_path(val_grid, /):
+    arr = np.nan_to_num(val_grid, nan=1e20)
+    min_vals = np.min(arr, axis=0)
+    min_indices = np.argmin(arr, axis=0)
+    mask = min_vals < 1e20
+    return min_vals[mask], min_indices[mask]
 
 
-def plot_3D(f_vals, m_vals, regime, F, m_grid, Z, save=False, title=None):
+def plot_3D(f_vals, m_vals, regime, f_grid, m_grid, val_grid, save=False, title=None):
         # =========================================================================
     # 1. Track the Minimum Path (Most Unstable Mode)
     # =========================================================================
     # axis=0 looks across the row values (Harmonic Order 'm') for each column ('f')
-    min_Z, min_m_indices = get_minimum_path(Z)
-    min_m = m_vals[min_m_indices]
+    min_vals, min_indices = get_minimum_path(val_grid)
 
     # =========================================================================
     # 2. Plotting the Entire Suite (Using the clean, compact 121/222/224 layout)
@@ -178,9 +179,9 @@ def plot_3D(f_vals, m_vals, regime, F, m_grid, Z, save=False, title=None):
     # --- Left: Main 3D Surface Plot ---
     ax1 = fig.add_subplot(121, projection="3d")
     surf = ax1.plot_surface(
-        F,
+        f_grid,
         m_grid,
-        Z,
+        val_grid,
         cmap=cm.viridis,
         edgecolor="black",
         linewidth=0.1,
@@ -189,9 +190,9 @@ def plot_3D(f_vals, m_vals, regime, F, m_grid, Z, save=False, title=None):
 
     # Highlighted minimum trajectory
     ax1.plot(
-        f_vals,
-        min_m,
-        min_Z + 0.02,  # Tiny offset stops the line from dipping below the mesh
+        f_vals[min_indices],
+        m_vals[min_indices],
+        min_vals + 0.02,  # Tiny offset stops the line from dipping below the mesh
         color="red",
         linewidth=4,
         label="Most Unstable Mode",
@@ -202,15 +203,16 @@ def plot_3D(f_vals, m_vals, regime, F, m_grid, Z, save=False, title=None):
     ax1.set_ylabel("Harmonic Order ($m$)", fontsize=10)
     ax1.set_zlabel(r"$\log_{10}(Ra_{cr})$", fontsize=10)
     ax1.set_xticks(np.arange(0.1, 1.0, 0.1))
-    ax1.set_yticks(np.arange(1, max(m_vals) + 1, 2))
+    ax1.set_yticks(np.arange(1, 23, 2))
+    ax1.set_zticks(np.arange(3, 6.5, 0.5))
     ax1.view_init(elev=25, azim=-135)
     ax1.legend(loc="upper left")
 
     # --- Top Right: Shift in Dominant Harmonic ---
     ax2 = fig.add_subplot(222)
     ax2.plot(
-        f_vals,
-        min_m,
+        f_vals[min_indices],
+        m_vals[min_indices],
         color="red",
         marker="o",
         markersize=2,
@@ -220,14 +222,14 @@ def plot_3D(f_vals, m_vals, regime, F, m_grid, Z, save=False, title=None):
     ax2.set_xlabel("Core Fraction ($f$)")
     ax2.set_ylabel("Most Unstable $m$")
     ax2.set_xticks(np.arange(0.1, 1.0, 0.2))
-    ax2.set_yticks(np.arange(1, max(min_m) + 2, 2))
+    ax2.set_yticks(np.arange(1, max(m_vals[min_indices]) + 2, 2))
     ax2.grid(True, linestyle="--", alpha=0.5)
 
     # --- Bottom Right: Minimum Stability Threshold ---
     ax3 = fig.add_subplot(224)
     ax3.plot(
-        f_vals,
-        min_Z,
+        f_vals[min_indices],
+        min_vals,
         color="red",
         marker="o",
         markersize=2,

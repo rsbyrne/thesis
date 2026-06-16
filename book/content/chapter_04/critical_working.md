@@ -17,22 +17,7 @@ editable: true
 slideshow:
   slide_type: ''
 ---
-from aliases import *
-
-import itertools
-import pickle
-
 from criticality import *
-
-from scipy.optimize import curve_fit
-from sklearn.metrics import r2_score
-
-from everest.window import Canvas, DataChannel as Channel, plot
-from everest import window
-from everest.caching import cache
-from everest.window.colourmaps import cmap
-
-from analysis import cylindrical
 
 limit_memory(8.0)
 ```
@@ -47,6 +32,100 @@ tags: [remove-cell]
 # incorporate_new_data("simple_critical_2026_2__-_-_.data")
 isomixed, isointernal, arrmixed, arrinternal = datas = make_frames()
 print(sum(map(len, datas)))
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+frm = isomixed.loc[0].reset_index()
+frm['m'] = cylindrical.aspect_curvature_to_wavenumber(frm['aspect'], frm['f'])
+frm = frm.drop('aspect', axis=1)
+# frm = frm.drop('f', axis=1)
+frm = frm.set_index(['f', 'm'])
+frm['log10Ra'] = np.log10(frm['alpha'])
+log10_Ra_empirical = frm['log10Ra']
+log10_Ra_empirical = log10_Ra_empirical.sort_index()
+log10_Ra_empirical = log10_Ra_empirical.loc[:, :24]
+params = np.array(tuple(map(np.array, log10_Ra_empirical.index)))
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
+points = params.copy()
+points[:, 0], x_undo = unitise(points[:, 0], True)
+points[:, 1], y_undo = unitise(points[:, 1], True)
+interp = sp.interpolate.RBFInterpolator(points, log10_Ra_empirical)
+
+grid_inside_hull = make_concave_swarm(points, grid_spacing=0.005)
+interpolated = interp(grid_inside_hull)
+grid_inside_hull[:, 0] = x_undo(grid_inside_hull[:, 0])
+grid_inside_hull[:, 1] = y_undo(grid_inside_hull[:, 1])
+
+f_vals, m_vals = grid_inside_hull.T
+
+interpolated_series = pd.DataFrame(
+    np.stack((f_vals, m_vals, interpolated)).T,
+    columns=('f', 'm', 'log10_alpha'),
+    ).set_index(['f', 'm'])['log10_alpha']
+
+canvas1 = Canvas(shape=(1, 1), size=(8, 6))
+ax1 = canvas1.make_ax((0, 0))
+f_chan = Channel(f_vals, lims=(0.3, 1.), capped=(True, True), label=r"$f$")
+m_chan = Channel(m_vals, lims=(1, 24), capped=(True, True), label=r"$m$")
+c_range = (round(interpolated.min(), 2), round(interpolated.max(), 2))
+ax1.scatter(
+    Channel(f_vals, lims=(0.3, 1.), capped=(True, True), label=r"$f$"),
+    Channel(m_vals, lims=(1, 24), capped=(True, True), label=r"$m$"),
+    c=Channel(interpolated, label=r"$\log_{10}\alpha$"),
+    cmap='viridis',
+    norm=matplotlib.colors.Normalize(vmin=c_range[0], vmax=c_range[1]),
+    )
+ax1.scatter(
+    *params.T,
+    s=10,
+    marker=".",
+    alpha=0.3,
+    color='violet',
+    )
+
+minvals = np.stack(interpolated_series.groupby(level='f').idxmin().values)
+minvals = minvals[minvals[:, 0] < 0.91]
+ax1.line(
+    *minvals.T,
+    color="red",
+    )
+
+# ax2 = canvas1.make_ax(place=(0, 0))
+# ax2.line(
+#     Channel(minvals.T[0], lims=(0.3, 1.), capped=(True, True)),
+#     Channel(
+#         interpolated_series[list(map(tuple, minvals))],
+#         lims=c_range, capped=(True, True),
+#         ),
+#     color="blue",
+#     )
+# ax2.props.grid.visible = False
+# ax2.props.edges.x.visible = False
+# ax2.props.edges.y.swap()
+
+cbar = canvas1.fig.colorbar(
+    ax1.collections[0].colorbar,
+    ax=ax1.ax,
+    )
+cbar.set_ticks(np.linspace(0, 1, 11))
+cbar.set_ticklabels(tuple(
+    map(lambda val: "$" + str(val) + "$", np.linspace(*c_range, 11))
+    ))
+cbar.set_label(r"$\log_{10}\alpha$")
+
+canvas1
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -656,4 +735,163 @@ if __name__ == "__main__":
             
     print("Sweep complete. Data ready for plotting.")
     # (Plotting code remains functionally identical to your original script)
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+isomixed, isointernal, arrmixed, arrinternal = datas = make_frames()
+```
+
+```{code-cell} ipython3
+canvas = Canvas(shape=(1, 2), size=(12, 6))
+
+norm_ra = lambda val: (val - 2) / 6
+
+frm = isomixed.loc[0].reset_index()
+frm['m'] = cylindrical.aspect_curvature_to_wavenumber(frm['aspect'], frm['f'])
+frm = frm.drop('aspect', axis=1)
+# frm = frm.drop('f', axis=1)
+frm = frm.set_index(['f', 'm'])
+frm['log10Ra'] = np.log10(frm['alpha'])
+log10_Ra_empirical = frm['log10Ra']
+log10_Ra_empirical = log10_Ra_empirical.sort_index()
+params = np.array(tuple(map(np.array, log10_Ra_empirical.index)))
+
+ax1 = canvas.make_ax((0, 0))
+ax1.scatter(
+    Channel(params[:, 0], lims=(0.1, 0.9), capped=(True, True)),
+    Channel(params[:, 1], lims=(1, 24), capped=(True, True)),
+    c=norm_ra(log10_Ra_empirical - 2),
+    )
+
+f_vals = np.linspace(0.1, 0.9, 401)
+m_vals = np.arange(1, 24)
+f_grid, m_grid, log10_Ra_true_grid = compute_critical_rayleigh_many(f_vals, m_vals, regime='basal')
+
+ax2 = canvas.make_ax((0, 1))
+ax2.scatter(
+    Channel(f_grid.flatten(), lims=(0.1, 0.9), capped=(True, True)),
+    Channel(m_grid.flatten(), lims=(1, 24), capped=(True, True)),
+    c=norm_ra(log10_Ra_true_grid.flatten()),
+    )
+
+canvas
+```
+
+```{code-cell} ipython3
+canvas = Canvas(shape=(1, 2), size=(12, 6))
+
+norm_ra = lambda val: (val - 2) / 6
+
+frm = isomixed.loc[0].reset_index()
+frm['m'] = cylindrical.aspect_curvature_to_wavenumber(frm['aspect'], frm['f'])
+frm = frm.drop('aspect', axis=1)
+# frm = frm.drop('f', axis=1)
+frm = frm.set_index(['f', 'm'])
+frm['log10Ra'] = np.log10(frm['alpha'])
+log10_Ra_empirical = frm['log10Ra']
+log10_Ra_empirical = log10_Ra_empirical.sort_index()
+params = np.array(tuple(map(np.array, log10_Ra_empirical.index)))
+interp = sp.interpolate.LinearNDInterpolator(params, log10_Ra_empirical)
+f_grid, m_grid = np.meshgrid(np.linspace(0.1, 0.9, 301), np.linspace(1, 24, 301))
+params = np.stack((f_grid.flatten(), m_grid.flatten())).T
+vals = interp(params)
+
+ax1 = canvas.make_ax((0, 0))
+ax1.scatter(
+    Channel(params[:, 0], lims=(0.1, 0.9), capped=(True, True)),
+    Channel(params[:, 1], lims=(1, 24), capped=(True, True)),
+    c=norm_ra(vals),
+    )
+
+f_vals = np.linspace(0.1, 0.9, 401) 
+m_vals = np.arange(1, 24)
+f_grid, m_grid, log10_Ra_true_grid = compute_critical_rayleigh_many(f_vals, m_vals, regime='basal')
+params = np.stack((f_grid.flatten(), m_grid.flatten())).T
+
+interp = sp.interpolate.LinearNDInterpolator(params, log10_Ra_true_grid.flatten())
+f_grid, m_grid = np.meshgrid(np.linspace(0.1, 0.9, 301), np.linspace(1, 24, 301))
+params = np.stack((f_grid.flatten(), m_grid.flatten())).T
+vals = interp(params)
+
+ax2 = canvas.make_ax((0, 1))
+ax2.scatter(
+    Channel(f_grid.flatten(), lims=(0.1, 0.9), capped=(True, True)),
+    Channel(m_grid.flatten(), lims=(1, 24), capped=(True, True)),
+    c=norm_ra(vals),
+    )
+
+canvas
+```
+
+```{code-cell} ipython3
+frm = isomixed.loc[0].reset_index()
+frm['m'] = cylindrical.aspect_curvature_to_wavenumber(frm['aspect'], frm['f'])
+frm = frm.drop('aspect', axis=1)
+# frm = frm.drop('f', axis=1)
+frm = frm.set_index(['f', 'm'])
+frm['log10Ra'] = np.log10(frm['alpha'])
+log10_Ra_empirical = frm['log10Ra']
+log10_Ra_empirical = log10_Ra_empirical.sort_index()
+log10_Ra_empirical = log10_Ra_empirical.loc[:, :10]
+params = np.array(tuple(map(np.array, log10_Ra_empirical.index)))
+```
+
+```{code-cell} ipython3
+data = params.copy()
+
+
+        
+data = params.copy()
+
+data[:, 0], x_unorm = unitise(data[:, 0], True)
+data[:, 1], y_unorm = unitise(data[:, 1], True)
+
+data = refine_points(data, iterations=5, length_scale=0.1, cull_length=0.1)
+
+data[:, 0] = x_unorm(data[:, 0])
+data[:, 1] = y_unorm(data[:, 1])
+
+from matplotlib import pyplot as plt
+# plt.scatter(*params.T)
+plt.scatter(*data.T, 10)
+```
+
+```{code-cell} ipython3
+data = params
+assert data.shape == (767, 2)
+area_threshold = 0.0005
+kdtree = sp.spatial.KDTree(data)
+while True:
+    triang = sp.spatial.Delaunay(data)
+    # legit = vor.vertices[kdtree.query(vor.vertices)[0]<0.05]
+    # # centroids = np.mean(legit, axis=0)
+    newpoints = []
+    print('.')
+    for simp in triang.simplices:
+        points = data[simp]
+        # Shoelace method for area:
+        area = 0.5 * np.abs(np.linalg.det(np.hstack([points, np.ones((3, 1))])))
+        if area < area_threshold:
+            continue
+        newpoints.append(np.mean(points, axis=0))
+    if not newpoints:
+        break
+    newdata = np.array(newpoints)
+    newdata = newdata[kdtree.query(newdata)[0] < 0.05]
+    if not len(newdata):
+        break
+    data = np.vstack((
+        data,
+        newdata,
+        ))
+
+from matplotlib import pyplot as plt
+# plt.scatter(*params.T, 10)
+plt.scatter(*data.T, 2)
 ```

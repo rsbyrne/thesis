@@ -21,6 +21,7 @@ sudo pip install -U --no-cache-dir --break-system-packages \
   mystmd \
   pyyaml \
   jupyterlab_myst \
+  shapely
   
 
 sudo jupyter server extension enable jupytext
