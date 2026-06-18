@@ -1656,3 +1656,7 @@ tags: [remove-cell]
 # symp_rep = model.sympy()
 # repr(symp_rep)
 ```
+
+```{code-cell} ipython3
+
+```

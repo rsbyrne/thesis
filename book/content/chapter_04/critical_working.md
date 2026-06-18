@@ -25,7 +25,7 @@ limit_memory(8.0)
 
 ```{code-cell} ipython3
 f_vals = np.linspace(0.1, 0.9, 101) 
-m_vals = np.arange(2, 24)
+m_vals = np.arange(1, 24)
 
 f_grid, m_grid, log10_Ra_true = compute_critical_rayleigh_many(
     f_vals, m_vals, cache_refresh=True
@@ -977,3 +977,180 @@ from matplotlib import pyplot as plt
 # plt.scatter(*params.T, 10)
 plt.scatter(*data.T, 2)
 ```
+
+$$
+-\text{diag}\left(\frac{\mathrm{Buoy}}{r \ln(f)}\right)
+$$
+
++++
+
+$$ \begin{align*}
+D_1 &= \frac{\partial^2}{\partial r^2} - \frac{1}{r}\frac{\partial}{\partial r} - \frac{1}{r^2}\frac{\partial^2}{\partial s^2} \
+D_2 &= \frac{2}{r}\frac{\partial^2}{\partial r \partial s} - \frac{2}{r^2}\frac{\partial}{\partial s}
+\end{align*} $$
+
++++
+
+$$ \begin{align*}
+D_1^\dagger &= \frac{\partial^2}{\partial r^2} + \frac{3}{r}\frac{\partial}{\partial r} - \frac{1}{r^2}\frac{\partial^2}{\partial s^2} \\
+D_2^\dagger &= \frac{2}{r}\frac{\partial^2}{\partial r \partial s} + \frac{2}{r^2}\frac{\partial}{\partial s}
+\end{align*} $$
+
++++
+
+#### Exact form
+
++++
+
+The classic method applies an infinitesimal perturbation and searches for the parameters at which the growth rate is infinitesimally non-zero. Instead of describing the fluid's state in terms of a discrete spatial mesh, we describe the fluid using three continuous functions of space:
+
+- The streamfunction $\psi$
+- The vorticity $\omega$
+- The perturbation $\theta$
+
+The temperature field is described by $T_0(r)$: the conductive geotherm for the given curvature $f$. Since we are considering a purely basally-heated domain for now, this can be expressed in terms familiar from our previous section on conduction (albeit in terms of $r$ directly instead of $h$):
+
+$$ \begin{align*}
+T_0(r) &= \log_f r^*(r) \\
+T_0'(r) &= \frac{1} {r \ln{f} }
+\end{align*}$$
+
+Where $f = r_i / r_o$ and ${r^*}(r) = r / r_o$.
+
+This is a constant in our equations. We might expect the temperature field to be a state variable varying in both dimensions of space and one of time. However, this is a marginal stability analysis. The perturbation is infinitesimal, and the solution we will eventually obtain is never permuted in time: the analysis we are about to conduct is valid for the single moment in time before convective onset, and is totally invalidated once any advection whatsoever occurs.
+
+There are two idealised spatial axes: the radial dimension (out from the centre) and the angular dimension (around the disc) - more classically called the 'azimuthal' dimension in the context of the spherical studies that this method is based on. Because the azimuthal dimension is periodic (i.e. it wraps around), the only variation permitted in this direction is itself periodic. Thus the azimuthal dimension is naturally discretised as $m$, the 'wavenumber' - that is, the number of peaks (or equivalently, troughs) that 'fit' around the disc. This gives us an effective buoyancy term simply as:
+
+$$
+\mathrm{Buoy} = \frac{m}{r}
+$$
+
+We construct a linear operator governing radial diffusion and azimuthal variance. This is effectively the Laplace operator:
+
+$$
+L = \frac{d^2}{dr^2} + \frac{1}{r}\frac{d}{dr} - \mathrm{Buoy}^2
+$$
+
+We use $L$ to impose relations between our state functions:
+
+$$ \begin{align*}
+\omega &= L \psi \\
+L \omega &= \mathrm{Ra} \; \mathrm{Buoy} \; \theta \\
+L \theta &= \mathrm{Buoy} \frac{dT_0}{dr} \psi
+\end{align*} $$
+
+This system of differential equations exactly and completely describe the problem. Unfortunately, they are unsolvable. To wring any insights out of them, we must discretise them and probe them finitely.
+
++++
+
+#### Discrete form
+
++++
+
+$$(A - \mathrm{Ra}B)\mathbf{x} = \frac{\partial \mathbf{x}}{\partial t}$$
+
++++ {"jupyter": {"source_hidden": true}}
+
+To discretise the system, we first create a discretised variable of state:
+
+$$
+\mathbf{x} = \begin{bmatrix}
+\psi \\
+\omega \\
+\theta
+\end{bmatrix}
+$$
+
+This vector contains the values of each of our state functions evaluated at certain radial coordinates (the angular dimension, it will be recalled, is invariant). The choice of evaluation coordinates is arbitrary, but to minimise numerical noise, we can use a Chebyshev differentiation matrix in which the evaluation points are concentrated at the boundaries, where we expect the gradients will be most steep. This prevents Runge's phenomenon, in which the solution oscillates around the boundaries.
+
+The Chebyshev method gives us a vector of $N$ discrete values for each state function (clustered as described) as well as an $N \times N$ 'differentiation matrix' $D$ - the matrix equivalent of the standard $d/dy$ operator. The result of $D \mathbf{x}$ is a vector (of the same shape as $\mathbf{x}$) whose values are the rates of change with respect to radius of each of the state values at each of the evaluated points.
+
+We can now take our three continuous differential equations and discretise them into a matrix equation:
+
+$$
+\frac{\partial \mathbf{x}}{\partial t} = M \mathbf{x} = 0 \\
+$$
+
+Where:
+
+$$
+M = \left( A - \mathrm{Ra} \;B \right)
+$$
+
+The $\mathrm{Ra}$ coefficient is the 'eigenvalue' of our eigenanalysis: the thing that we are ultimately solving for. The $\mathbf{x}$ vector, of course, contains the state data, while $M$ contains all the physics: $A$ encodes the forces that oppose convection, while $B$ (augmented by the convective vigour scalar $\mathrm{Ra}$) encodes the forces that support convection. The result is a vector of (temporal) rates of change for each state variable (we could imagine using this vector to iterate the state through time, though that would be physically meaningless given that our assumptions are only valid at marginal stability). Organised this way, the matrix equation reads as a more or less direct statement of the problem: what is the value of $\mathrm{Ra}$ such that the balance of forces $\left( A - \mathrm{Ra} \;B \right)$ sets the rate of change $\partial / \partial t$ of the state vector $\mathbf{x}$ to zero? The smallest positive real value that satisfies this constraint is the $\mathrm{Ra}_\mathrm{cr}$ we are looking for.
+
+The $A$ and $B$ matrices dominate the equation. Each is a huge 'block matrix', made up of a $3 \times 3$ grid (for our three state functions), each containing an $N \times N$ submatrix (for our $N$ discrete evaluation points).
+
+- $A$ encodes the $L$ operators, the identity matrices that couple the equations, and the initial (conductive) temperature gradient.
+- $B$ encodes the buoyancy coupling term $m/r$, which gets multiplied by $\mathrm{Ra}$ (recalling that $\mathrm{Ra}$ is effectively the ratio of the driving buoyancy forces to the resisting and dissipative forces).
+
+When written out in full, the matrix equation looks something like this:
+
+$$
+\left(
+    \begin{bmatrix}
+        L & -I & Z \\
+        Z & L & Z \\
+        D_{\mathrm{base}} & Z & L 
+        \end{bmatrix} -
+    \mathrm{Ra} \begin{bmatrix}
+        Z & Z & Z \\
+        Z & Z & D_{\mathrm{buoy}} \\
+        Z & Z & Z
+        \end{bmatrix}
+    \right)
+\begin{bmatrix}
+    \psi \\
+    \omega \\
+    \theta
+    \end{bmatrix}
+= 0
+$$
+
+Where:
+
+- $L$ is the discretised Laplacian matrix (the matrix equivalent of $L = \frac{d^2}{dr^2} + \frac{1}{r}\frac{d}{dr} - \mathrm{Buoy}^2$)
+- $I$ is the identity matrix (a diagonal matrix of $1$s)
+- $Z$ is the zero matrix
+- $D_{\mathrm{base}}$ is the diagonal matrix containing the conductive (base) temperature gradient for each discrete radial point, times the azimuthally-dependent perturbation (buoyancy) term: $- \mathrm{Buoy} \frac{dT_0}{dr}$
+- $D_{\mathrm{buoy}}$ is a simple diagonal matrix of the buoyancy term $\mathrm{Buoy}$
+
+Note how most of the matrix is empty (value zero) - i.e. it is a 'sparse' matrix. This may strike one as odd, but it is the price of constructing the problem in matrix terms - and thereby making it amenable to extremely fast and powerful algorithms. When the matrices above are multiplied out, left to right, it will be found that the original system of differential equations is returned in full. In a sense, the matrix representation ultimately does little more than reconstrue the underlying maths in terms of primitive (albeit largely redundant) operations. In the numerical sciences, framing is everything.
+
+Finally, we must impose some boundary conditions. We can do this by setting the boundary values of the $A$ and $B$ matrices directly:
+
+- Setting $\psi = 0$ at the boundaries prevents fluids from attempting to leave the domain.
+- Setting $\omega = 0$ at the boundaries imposes our free-slip condition.
+- Setting $\theta = 0$ at the boundaries ensures that the applied perturbation does not inappropriately alter the thermal boundary conditions of the system.
+
+For the purposes of a matrix-based solver, these boundary conditions can be easily implemented by directly setting the values in the matrix. For example, to enforce $\psi=0$ at the inner boundary, the corresponding row in matrix $A$ is replaced with zeros except for a single $1$ on the diagonal, while the matching row in $B$ is zeroed out completely. This ensures that the value will comply with the condition regardless of the internal state of the system.
+
++++
+
+#### The Generalised Eignvalue Problem
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+Having set up our discrete system, we then proceed to solve the Generalised Eigenvalue Problem. An eigenvalue is the coefficient of an eigenvector - crudely put, a 'direction' in state space which preserves all internal relations (like stretching a rectangle along its diagonal). The question we are asking is simply "At what value of $\mathrm{Ra}$ do the driving forces in $B$ exactly balance the resisting forces in $A$ such that the applied (infinitesimal) perturbation neither grows nor shrinks?"
+
+Recalling:
+
+$$
+\frac{\partial \mathbf{x}}{\partial t} = M \mathbf{x} = \mathbf{0} \\
+$$
+
+For a matrix $M$ to act on a vector $\mathbf{x}$ such that the value goes to zero (or synonymously, the zero vector of shape $\mathbf{x}$), $M$ must be what is called a 'singular' matrix: i.e. it is non-invertible (there is no $M^{-1}$ that would allow us to write $M^{-1} M = I$). This requirement arises as the matrix equivalent of the rule that $0$ (in ordinary arithmetic) has no reciprocal: if we multiply a value $x$ by a scalar $a$, we can always 'undo' that operation by multiplying by the 'inverse', $1/a$, **unless** $a$ is exactly zero. Unlike a scalar, a matrix has many ways to 'be zero', and crucially, it is only able to 'act as zero' for certain vectors. These vectors are called the *eigenvectors* of $M$ and they collectively make up what is called its *null space* or *kernel*. Crucially, all the eigenvectors in a given null space are scalar multiples of each other - that is, they all 'point in the same direction'.
+
+In broad terms, a GEVP solver works by requiring that the determinant of $M$ be zero. For our matrix setup - where $M = \left( A - \mathrm{Ra} \;B \right)$ - there is only one 'knob' that the solver can access to force this to be so: $\mathrm{Ra}$. In the parlance of eigenanalysis, the values of $\mathrm{Ra}$ that satisfy the condition $\det(M) = \det(A - \mathrm{Ra}B) = 0$ are called the *eigenvalues* of $M$: they are the values that make $M$ singular and thus endow it with its own special null space, full of eigenvectors. The smallest, positive, real-valued eigenvalue of $M$ is our $\mathrm{Ra}_\mathrm{cr}$, and the eigenvector that goes with it (a set of values for the vector $\mathbf{x}$) gives the exact geometry of the associated (infinitesimal) perturbation.
+
+When $A$ is invertible, $B$ is highly singular, and the variable to be solved for is guaranteed to be non-zero, a problem in GEVP form can be converted into a conventional eigenvalue problem with just a little rearranging:
+
+$$
+\mu \mathbf{x} = A^{-1}B\mathbf{x}, \quad \mu = \frac{1}{\mathrm{Ra}}
+$$
+
+This is often quicker and easier to solve than the GEVP.
+
+In Chandrasekhar's day, solving problems of this kind required extensive, laborious hand calculation, typically also necessitating various approximations and simplifications for the sake of tractability. Today, the GEVP comes included in any modern scientific computing package - for example, SciPy's linear algebra module. Once the problem is correctly posed, we simply turn it over to a generic solver. When the solver is correctly configured, the results should be exact up to a more or less arbitrary desired precision.
+
+We will not go into detail on how the numerical solver is implemented - those interested may refer to our appendix and to the SciPy documentation if necessary. One of the perks of articulating our problem in terms of the GEVP is that the method is so standardised by this point that it is hardly necessary to justify it.
