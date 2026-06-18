@@ -24,6 +24,11 @@ limit_memory(8.0)
 ```
 
 ```{code-cell} ipython3
+f_vals = np.linspace(0.1, 0.9, 101)
+f_vals
+```
+
+```{code-cell} ipython3
 f_vals = np.linspace(0.1, 0.9, 101) 
 m_vals = np.arange(1, 24)
 

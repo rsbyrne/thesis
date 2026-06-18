@@ -6934,3 +6934,214 @@
 [I 2026-06-18 07:04:16.199 ServerApp] Restoring connection for 9fc1c4a4-8a93-40fe-89e0-034d736039ac:482638e7-8cf3-44bd-a12a-557954e22d16
 [I 2026-06-18 07:05:23.262 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
 [I 2026-06-18 07:05:24.344 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-18 07:05:29.881 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-18 07:05:29.882 ServerApp] Saving critical_working.ipynb
+[I 2026-06-18 07:05:29.992 ServerApp] Saving critical_working.md
+[I 2026-06-18 07:06:26.718 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-06-18 07:11:04.334 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-18 07:11:04.350 ServerApp] Saving critical_working.ipynb
+[I 2026-06-18 07:11:06.389 ServerApp] Saving critical_working.md
+[I 2026-06-18 07:13:06.611 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-18 07:13:06.641 ServerApp] Saving critical_working.ipynb
+[I 2026-06-18 07:13:08.126 ServerApp] Saving critical_working.md
+[I 2026-06-18 07:15:00.607 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-18 07:15:18.370 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-18 07:15:20.601 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-18 07:16:46.730 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-18 07:16:51.531 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-18 07:16:51.898 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-18 07:16:58.784 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-18 07:17:40.451 ServerApp] Kernel shutdown: fc6eaa72-180d-4067-a3a9-847f8e32dd79
+[I 2026-06-18 07:17:47.497 ServerApp] Kernel shutdown: 8f573b26-987d-40fb-a432-34b2df765221
+[I 2026-06-18 07:18:07.305 ServerApp] Opening workspace/book/content/chapter_02/marginal.md to check if it is a paired notebook
+[E 2026-06-18 07:18:07.306 ServerApp] Uncaught exception PATCH /api/contents/workspace/book/content/chapter_02/marginal.md?1781767087223 (172.17.0.1)
+    HTTPServerRequest(protocol='http', host='localhost:8890', method='PATCH', uri='/api/contents/workspace/book/content/chapter_02/marginal.md?1781767087223', version='HTTP/1.1', remote_ip='172.17.0.1')
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupytext/async_contentsmanager.py", line 492, in rename_file
+        await self.super.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1063, in rename_file
+        if os.path.exists(new_os_path) and not samefile(old_os_path, new_os_path):
+                                               ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "<frozen genericpath>", line 136, in samefile
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_02/marginal.md'
+[W 2026-06-18 07:18:07.308 ServerApp] wrote error: 'Unhandled error'
+    Traceback (most recent call last):
+      File "/usr/local/lib/python3.13/dist-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/auth/decorator.py", line 73, in inner
+        return await out
+               ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/handlers.py", line 206, in patch
+        model = await ensure_async(cm.update(model, path))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
+        result = await obj
+                 ^^^^^^^^^
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 919, in update
+        await self.rename(path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/manager.py", line 906, in rename
+        await self.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupytext/async_contentsmanager.py", line 492, in rename_file
+        await self.super.rename_file(old_path, new_path)
+      File "/usr/local/lib/python3.13/dist-packages/jupyter_server/services/contents/filemanager.py", line 1063, in rename_file
+        if os.path.exists(new_os_path) and not samefile(old_os_path, new_os_path):
+                                               ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "<frozen genericpath>", line 136, in samefile
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/morpheus/workspace/book/content/chapter_02/marginal.md'
+[E 2026-06-18 07:18:07.309 ServerApp] {
+      "Host": "localhost:8890",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+    }
+[E 2026-06-18 07:18:07.309 ServerApp] 500 PATCH /api/contents/workspace/book/content/chapter_02/marginal.md?1781767087223 (2240ff398c944968923aa4c38819e670@172.17.0.1) 43.75ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[I 2026-06-18 07:19:16.261 ServerApp] Reading SOURCE from workspace/book/content/chapter_04/marginal.md
+[W 2026-06-18 07:19:16.962 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 3.19ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/marginal.ipynb
+[W 2026-06-18 07:19:17.159 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.26ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/marginal.ipynb
+[I 2026-06-18 07:19:17.215 ServerApp] Kernel started: 6161c12d-20a5-48d0-b5af-cca8cbe375e9
+[W 2026-06-18 07:19:18.162 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/marginal.ipynb
+[W 2026-06-18 07:19:18.378 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.22ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/marginal.ipynb
+[I 2026-06-18 07:19:18.513 ServerApp] Connecting to kernel 6161c12d-20a5-48d0-b5af-cca8cbe375e9.
+[W 2026-06-18 07:19:18.548 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.26ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/marginal.ipynb
+[W 2026-06-18 07:19:18.734 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.14ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/marginal.ipynb
+[W 2026-06-18 07:19:20.295 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.29ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/marginal.ipynb
+[W 2026-06-18 07:19:20.552 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.12ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/marginal.ipynb
+[W 2026-06-18 07:19:22.103 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.12ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/marginal.ipynb
+[W 2026-06-18 07:19:22.964 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.20ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/marginal.ipynb
+[W 2026-06-18 07:19:41.098 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 10.84ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:41.102 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:41.103 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_modes_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.06ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:41.104 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_Ra_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.59ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:41.105 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_critical_f_per_mode_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 0.76ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:41.228 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.26ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:41.241 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.45ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:41.243 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_critical_f_per_mode_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.10ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:41.244 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_Ra_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.64ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:41.244 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_modes_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 2.19ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:41.444 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.38ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:41.656 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_critical_f_per_mode_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.56ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:41.657 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_modes_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 2.12ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:41.658 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_Ra_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 2.70ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:41.658 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 3.20ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:41.920 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.20ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:42.060 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.60ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:42.426 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_Ra_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 11.65ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:42.427 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.87ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:42.427 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_modes_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 0.58ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:42.467 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_critical_f_per_mode_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.16ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:42.785 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.28ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:43.358 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.32ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:43.394 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_modes_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.37ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:43.395 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_Ra_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.90ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:43.396 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_critical_f_per_mode_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 0.69ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:44.899 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.24ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:44.938 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.25ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:44.939 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_Ra_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.78ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:44.947 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_modes_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 0.90ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:44.947 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_critical_f_per_mode_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.36ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:45.319 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.32ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:45.519 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.45ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:45.520 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_Ra_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 0.91ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:45.521 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_modes_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.43ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:45.530 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_critical_f_per_mode_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 0.75ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:46.627 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.24ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:46.662 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.35ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:46.663 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_Ra_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.85ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:46.664 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_modes_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 0.66ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:46.671 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_critical_f_per_mode_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 0.67ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:47.291 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.27ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:47.374 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_modes_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.52ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:47.375 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_Ra_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 2.00ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:47.375 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 2.54ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:19:47.382 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_critical_f_per_mode_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 0.72ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[I 2026-06-18 07:20:16.243 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_I.ipynb
+[I 2026-06-18 07:20:16.245 ServerApp] Saving critical_I.ipynb
+[I 2026-06-18 07:20:16.323 ServerApp] Saving critical_I.md
+[W 2026-06-18 07:20:25.531 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.40ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:20:25.857 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.33ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:20:25.858 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_critical_f_per_mode_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 0.87ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:20:25.859 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_Ra_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.28ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:20:25.859 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_modes_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.67ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:20:26.021 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.29ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:20:26.311 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_modes_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.57ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:20:26.312 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_Ra_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.88ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:20:26.312 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 2.32ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:20:26.313 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_critical_f_per_mode_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 0.63ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:20:26.433 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.03ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[I 2026-06-18 07:20:45.275 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_I.ipynb
+[I 2026-06-18 07:20:45.277 ServerApp] Saving critical_I.ipynb
+[I 2026-06-18 07:20:46.675 ServerApp] Saving critical_I.md
+[W 2026-06-18 07:20:46.909 ServerApp] /home/morpheus/workspace/book/content/chapter_04/.~critical_I.ipynb doesn't exist
+[I 2026-06-18 07:21:08.489 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-18 07:21:08.491 ServerApp] Saving critical_working.ipynb
+[I 2026-06-18 07:21:09.411 ServerApp] Saving critical_working.md
+[W 2026-06-18 07:21:56.457 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.26ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:21:56.732 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.17ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:21:56.732 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_modes_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.41ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:21:56.733 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_Ra_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 0.55ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:21:56.734 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_critical_f_per_mode_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 0.51ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[I 2026-06-18 07:22:10.230 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_working.ipynb
+[I 2026-06-18 07:22:10.232 ServerApp] Saving critical_working.ipynb
+[I 2026-06-18 07:22:10.973 ServerApp] Saving critical_working.md
+[I 2026-06-18 07:22:12.483 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_I.ipynb
+[I 2026-06-18 07:22:12.485 ServerApp] Saving critical_I.ipynb
+[I 2026-06-18 07:22:12.663 ServerApp] Saving critical_I.md
+[I 2026-06-18 07:23:07.755 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_I.ipynb
+[I 2026-06-18 07:23:07.756 ServerApp] Saving critical_I.ipynb
+[I 2026-06-18 07:23:08.487 ServerApp] Saving critical_I.md
+[I 2026-06-18 07:23:09.980 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_I.ipynb
+[I 2026-06-18 07:23:09.982 ServerApp] Saving critical_I.ipynb
+[I 2026-06-18 07:23:10.429 ServerApp] Saving critical_I.md
+[I 2026-06-18 07:23:39.625 ServerApp] Kernel restarted: fdbe6170-6a59-4c22-a1e7-5ad87662e83f
+[I 2026-06-18 07:23:39.632 ServerApp] Starting buffering for fdbe6170-6a59-4c22-a1e7-5ad87662e83f:55d7253d-5803-4e92-97a5-866cd4c5f7bc
+[I 2026-06-18 07:23:39.729 ServerApp] Connecting to kernel fdbe6170-6a59-4c22-a1e7-5ad87662e83f.
+[I 2026-06-18 07:23:39.729 ServerApp] Restoring connection for fdbe6170-6a59-4c22-a1e7-5ad87662e83f:55d7253d-5803-4e92-97a5-866cd4c5f7bc
+[W 2026-06-18 07:24:14.563 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.14ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:24:14.601 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal_jarvis?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 0.77ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:24:14.853 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_Ra_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.56ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:24:14.854 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_basal?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.88ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:24:14.855 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_min_modes_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 0.78ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[W 2026-06-18 07:24:14.855 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_annulus_critical_f_per_mode_comparison?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.24ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_I.ipynb
+[I 2026-06-18 07:24:35.421 ServerApp] Saving file at /workspace/book/content/chapter_04/linear_stability_annulus.py
+[I 2026-06-18 07:24:43.943 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_I.ipynb
+[I 2026-06-18 07:24:43.944 ServerApp] Saving critical_I.ipynb
+[I 2026-06-18 07:24:43.959 ServerApp] Saving critical_I.md
+[I 2026-06-18 07:24:47.652 ServerApp] Kernel restarted: fdbe6170-6a59-4c22-a1e7-5ad87662e83f
+[I 2026-06-18 07:24:47.658 ServerApp] Starting buffering for fdbe6170-6a59-4c22-a1e7-5ad87662e83f:55d7253d-5803-4e92-97a5-866cd4c5f7bc
+[I 2026-06-18 07:24:47.744 ServerApp] Connecting to kernel fdbe6170-6a59-4c22-a1e7-5ad87662e83f.
+[I 2026-06-18 07:24:47.744 ServerApp] Restoring connection for fdbe6170-6a59-4c22-a1e7-5ad87662e83f:55d7253d-5803-4e92-97a5-866cd4c5f7bc
+[I 2026-06-18 07:26:44.146 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_I.ipynb
+[I 2026-06-18 07:26:44.148 ServerApp] Saving critical_I.ipynb
+[I 2026-06-18 07:26:44.572 ServerApp] Saving critical_I.md
+[W 2026-06-18 07:26:44.591 ServerApp] /home/morpheus/workspace/book/content/chapter_04/.~critical_I.md doesn't exist
+[W 2026-06-18 07:35:39.216 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_iso_basal_0?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.54ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-06-18 07:35:39.354 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_iso_basal_0?_xsrf=[secret] (2240ff398c944968923aa4c38819e670@172.17.0.1) 1.35ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[I 2026-06-18 07:35:53.962 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_II.ipynb
+[I 2026-06-18 07:35:53.964 ServerApp] Saving critical_II.ipynb
+[I 2026-06-18 07:35:54.363 ServerApp] Saving critical_II.md
+[I 2026-06-18 07:35:57.602 ServerApp] Kernel started: d845f1e9-5ad5-4085-a494-9cdb8bf4150e
+[I 2026-06-18 07:35:59.466 ServerApp] Connecting to kernel d845f1e9-5ad5-4085-a494-9cdb8bf4150e.
+[I 2026-06-18 07:37:54.526 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_II.ipynb
+[I 2026-06-18 07:37:54.531 ServerApp] Saving critical_II.ipynb
+[I 2026-06-18 07:37:55.579 ServerApp] Saving critical_II.md
+[W 2026-06-18 07:37:55.595 ServerApp] /home/morpheus/workspace/book/content/chapter_04/.~critical_II.ipynb doesn't exist
+[I 2026-06-18 07:39:55.662 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_II.ipynb
+[I 2026-06-18 07:39:55.664 ServerApp] Saving critical_II.ipynb
+[I 2026-06-18 07:39:56.169 ServerApp] Saving critical_II.md
