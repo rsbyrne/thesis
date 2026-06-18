@@ -33,11 +33,14 @@ def disc(h, f):
 #     f = safe_f(f)
 #     return (radius(h, f)**2 - r_inner(f)**2) / (2 * r_mid(f))
 
+def n_wedge(f, A):
+    return 2 * np.pi * r_mid(f) / A
+
 def aspect_ratio(f, m):
     if 0.99999 < f <= 1.: return wavenumber_to_aspect(m)
     return 2 * np.pi * r_mid(f) / m
 
-def aspect_curvature_to_wavenumber(A, f):
+def aspect_curvature_to_wavenumber(A, f):  # Presuming half-cell
     return r_mid(f) * np.pi / A
 
 def wavenumber_to_aspect(m):

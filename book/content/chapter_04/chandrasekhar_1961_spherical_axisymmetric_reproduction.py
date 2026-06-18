@@ -1,12 +1,14 @@
 from aliases import *
 from everest.caching import cache
 
-import numpy as np
-import scipy.linalg as la
+
 from scipy.interpolate import make_interp_spline
 import matplotlib.pyplot as plt
 from matplotlib import cm
 import matplotlib.gridspec as gridspec
+
+import numpy as np
+import scipy.linalg as la
 
 def cheb(N):
     """Computes the Chebyshev differentiation matrix D and grid x."""
@@ -101,7 +103,7 @@ if __name__ == "__main__":
     f_vals = np.linspace(0.1, 0.9, 41) 
     l_vals = np.arange(1, 24)
     
-    F, L_grid, Z = compute_critical_rayleigh_many(f_vals, l_vals)
+    F, L_grid, Z = compute_critical_rayleigh_many(f_vals, l_vals, cache_refresh=False)
                 
     print("Computations complete. Rendering plot...")
 

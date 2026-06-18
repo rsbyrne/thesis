@@ -8,6 +8,9 @@ import matplotlib.pyplot as plt
 from matplotlib import cm
 import matplotlib.gridspec as gridspec
 
+import numpy as np
+import scipy.linalg as la
+
 def cheb(N):
     """Computes the Chebyshev differentiation matrix D and grid x."""
     if N == 0:
@@ -20,101 +23,155 @@ def cheb(N):
     D = D - np.diag(np.sum(D, axis=1))
     return D, x
 
-def compute_annulus_ra_cr(f, m, N=50, regime="basal"):
-    f_eff = 1e-5 if f == 0 else f
+def compute_critical_rayleigh_annulus(f, m, N=50, return_eigenvector=False):
+    """
+    Computes the critical Rayleigh number for the onset of convection 
+    in a 2D cylindrical annulus with free-slip, isothermal boundaries 
+    using the rigorous un-split 4th-order biharmonic operator.
+    """
+    if f <= 0 or f >= 1:
+        raise ValueError("Radius ratio f must be strictly between 0 and 1.")
+    if m <= 0:
+        raise ValueError("Azimuthal wavenumber m must be greater than 0 for convection.")
 
-    ro = 1 / (1 - f_eff)
-    ri = f_eff / (1 - f_eff)
+    # 1. Define the Gap-Normalized Geometry (d = 1)
+    R1 = f / (1 - f)
+    R2 = 1 / (1 - f)
 
+    # 2. Chebyshev Grid & Radial Mapping
     D_x, x = cheb(N)
     
-    r = 0.5 * x + 0.5 * (ro + ri)
+    # Map Chebyshev domain [-1, 1] to radial domain [R1, R2]
+    r = 0.5 * x + 0.5 * (R2 + R1) 
+    
     Dr = 2.0 * D_x
     Dr2 = Dr @ Dr
 
-    diag_r_inv = np.diag(1 / r)
-    diag_r2_inv = np.diag(1 / r**2)
+    # 3. Form the Cylindrical Operators
+    diag_r_inv = np.diag(1.0 / r)
+    diag_r2_inv = np.diag(1.0 / r**2)
+    
+    # 2nd-order Laplacian
+    L_cyl = Dr2 + diag_r_inv @ Dr - (m**2) * diag_r2_inv
+    
+    # Discrete 4th-order biharmonic operator
+    L_cyl2 = L_cyl @ L_cyl
 
-    L = Dr2 + diag_r_inv @ Dr - (m**2) * diag_r2_inv
+    # 4. Construct the 2x2 Block Matrices A and B
+    M_size = N + 1
+    I = np.eye(M_size)
+    Z = np.zeros((M_size, M_size))
 
-    if regime == "internal":
-        dT_dr = (ri**2 - r**2) / (2.0 * r)
-    elif regime == "basal":
-        dT_dr = -1.0 / (r * np.log(ro / ri))
-    diag_dT_dr = np.diag(dT_dr)
-
-    M = N + 1
-    I = np.eye(M)
-    Z = np.zeros((M, M))
+    diag_m_over_r = np.diag(m / r)
+    diag_energy_rhs = np.diag(m / (r**2 * np.log(f)))
 
     A = np.block([
-        [L, -I, Z],
-        [Z, L, Z],
-        [-m * diag_r_inv @ diag_dT_dr, Z, L]
+        [L_cyl2, -diag_m_over_r],
+        [Z,      L_cyl]
     ])
 
     B = np.block([
-        [Z, Z, Z],
-        [Z, Z, m * diag_r_inv],
-        [Z, Z, Z]
+        [Z,               Z],
+        [diag_energy_rhs, Z]
     ])
 
-    # --- BOUNDARY CONDITIONS ---
-
-    # 1. Streamfunction psi = 0 at outer (0) and inner (N) boundaries
-    A[0, :] = 0;   A[0, 0] = 1;   B[0, :] = 0
-    A[N, :] = 0;   A[N, N] = 1;   B[N, :] = 0
-
-    # 2. FREE-SLIP: Vorticity omega = 0 at outer (M) and inner (M+N) boundaries
-    A[M, :] = 0;   A[M, M] = 1;   B[M, :] = 0
-    A[M+N, :] = 0; A[M+N, M+N] = 1; B[M+N, :] = 0
-
-    # 3. Temperature theta = 0 at outer boundary (2*M)
-    A[2*M, :] = 0; A[2*M, 2*M] = 1; B[2*M, :] = 0
-
-    # 4. Temperature condition at inner boundary (2*M+N)
-    A[2*M+N, :] = 0; B[2*M+N, :] = 0
-    if regime == "internal":
-        # Insulating inner boundary: d_theta/dr = 0
-        row_bot_theta = np.zeros(3*M)
-        row_bot_theta[2*M:3*M] = Dr[-1, :]
-        A[2*M+N, :] = row_bot_theta / np.max(np.abs(row_bot_theta))
-    elif regime == "basal":
-        # Conducting inner boundary: theta = 0
-        A[2*M+N, 2*M+N] = 1
-
-    # Row normalization for numerical stability
-    row_norms = np.max(np.abs(A), axis=1)
-    row_norms[row_norms == 0] = 1.0 
-    A = A / row_norms[:, np.newaxis]
-    B = B / row_norms[:, np.newaxis]
-
-    # Solver
-    invA_B = la.solve(A, B)
-    vals = la.eigvals(invA_B)
+    # 5. Apply Boundary Conditions (Row Replacement)
     
-    mu_vals = np.real(vals)
-    valid_mu = mu_vals[(mu_vals > 1e-10) & np.isfinite(mu_vals) & (np.abs(np.imag(vals)) < 1e-8)]
+    # --- Psi Boundaries (Block 1) ---
+    # Impermeable at outer wall (r = R2, index 0)
+    A[0, :] = 0; A[0, 0] = 1; B[0, :] = 0
     
-    if len(valid_mu) == 0:
-        return np.nan
-        
-    Ra_vals = 1.0 / valid_mu
-    valid_Ra = Ra_vals[Ra_vals > 100]
+    # Free-slip at outer wall (r = R2) -> -Psi'' + (1/r)Psi' = 0
+    A[1, :] = 0
+    A[1, 0:M_size] = -Dr2[0, :] + (1.0 / R2) * Dr[0, :]
+    B[1, :] = 0
     
+    # Free-slip at inner wall (r = R1, index N) -> -Psi'' + (1/r)Psi' = 0
+    A[N-1, :] = 0
+    A[N-1, 0:M_size] = -Dr2[N, :] + (1.0 / R1) * Dr[N, :]
+    B[N-1, :] = 0
+
+    # Impermeable at inner wall (r = R1, index N)
+    A[N, :] = 0; A[N, N] = 1; B[N, :] = 0
+
+    # --- Theta Boundaries (Block 2) ---
+    # Isothermal at outer wall (r = R2)
+    A[M_size, :] = 0; A[M_size, M_size] = 1; B[M_size, :] = 0
+    
+    # Isothermal at inner wall (r = R1)
+    A[M_size+N, :] = 0; A[M_size+N, M_size+N] = 1; B[M_size+N, :] = 0
+
+    # 6. Solve the Generalized Eigenvalue Problem
+    vals, vecs = la.eig(A, B)
+
+    # 7. Extract the Critical Rayleigh Number
+    # Because the mathematical proof guarantees Ra cannot cross zero,
+    # we safely restore the positive physical filter.
+    Ra_vals = np.real(vals)
+    valid_mask = (Ra_vals > 0) & np.isfinite(Ra_vals) & (np.abs(np.imag(vals)) < 1e-6)
+    valid_Ra = Ra_vals[valid_mask]
+    valid_vecs = vecs[:, valid_mask]
+
     if len(valid_Ra) == 0:
-        return np.nan
-        
-    return np.min(valid_Ra)
+        if return_eigenvector:
+            return np.inf, r, np.zeros_like(r)
+        return np.inf
 
-# # Run the test for f=0.3 and the problematic lower modes
-# print("Testing the fixed eigenvalue solver at f=0.3...")
-# for m in [1, 2, 3, 4, 5]:
-#     ra_val = compute_annulus_ra_cr(f=0.3, m=m, regime="basal")
-#     print(f"Mode m={m}: Ra_cr = {ra_val:.2f}")
+    idx_min = np.argmin(valid_Ra)
+    Ra_cr = valid_Ra[idx_min]
+
+    if return_eigenvector:
+        eigenvector = valid_vecs[:, idx_min]
+        Psi = np.real(eigenvector[0:M_size])
+        
+        if np.max(np.abs(Psi)) > 0:
+            Psi = Psi / np.max(np.abs(Psi))
+            
+        return Ra_cr, r, Psi
+
+    return Ra_cr
+
+
+def run_diagnostics(m=1, N=50):
+    """Generates the table and streamfunction plots using the clean solver."""
+    print(f"Tracking Ra_cr for m={m} across the anomaly zone (Operator Split):")
+    print("-" * 35)
+    print(f"{'f_val':<10} | {'Ra_cr':<15}")
+    print("-" * 35)
+    
+    f_values = np.arange(0.40, 0.29, -0.01)
+    plot_data = {}
+    
+    for f_val in f_values:
+        Ra_cr, r, Psi = compute_critical_rayleigh_split(f_val, m, N, return_eigenvector=True)
+        print(f"{f_val:<10.2f} | {Ra_cr:<15.1f}")
+        
+        if np.isclose(f_val, 0.35) or np.isclose(f_val, 0.31) or np.isclose(f_val, 0.30):
+            plot_data[f_val] = (r, Psi, Ra_cr)
+
+    print("-" * 35)
+
+    # Plotting
+    plt.figure(figsize=(10, 6))
+    for f_val, (r, Psi, Ra_cr) in plot_data.items():
+        r_normalized = (r - r[-1]) / (r[0] - r[-1])
+        if Psi[N//2] < 0:
+            Psi = -Psi
+        plt.plot(r_normalized, Psi, label=f"f = {f_val:.2f} (Ra = {Ra_cr:.1f})")
+
+    plt.axhline(0, color='black', linewidth=0.8, linestyle='--')
+    plt.title(f"Streamfunction ({r'$\Psi$'}) Profiles for m={m} (Clean Solution)")
+    plt.xlabel("Normalized Gap Distance (0 = Inner Wall, 1 = Outer Wall)")
+    plt.ylabel("Normalized Streamfunction Amplitude")
+    plt.legend()
+    plt.grid(True, alpha=0.3)
+    plt.show()
+
+# Test the limit: as f approaches 1, this should approach 657.5
+# print(compute_critical_rayleigh_f(0.99, 3))
 
 @cache(cachedir)
-def compute_critical_rayleigh_many(f_vals, m_vals, regime, verbose=False):
+def compute_critical_rayleigh_many(f_vals, m_vals, verbose=False):
     F, m_grid = np.meshgrid(f_vals, m_vals)
     Z = np.zeros_like(F)
     
@@ -125,7 +182,7 @@ def compute_critical_rayleigh_many(f_vals, m_vals, regime, verbose=False):
     count = 0
     for i in range(len(m_vals)):
         for j in range(len(f_vals)):
-            Ra = compute_annulus_ra_cr(F[i, j], m_grid[i, j], regime=regime)
+            Ra = compute_critical_rayleigh_annulus(F[i, j], m_grid[i, j])
             Z[i, j] = np.log10(Ra)
             
             count += 1
@@ -137,13 +194,13 @@ def compute_critical_rayleigh_many(f_vals, m_vals, regime, verbose=False):
 
 # Lord Rayleigh 1916 benchmark for Cartesian purely basally heated:
 # theoretically at Ra 657.5, wavenumber 2.12
-internal_ra_vals = np.array([(m, compute_annulus_ra_cr(f=0.9999, m=m, regime="basal")) for m in range(22000, 23000, 100)])
+internal_ra_vals = np.array([(m, compute_critical_rayleigh_annulus(f=0.9999, m=m)) for m in range(22000, 23000, 100)])
 assert np.round(np.min(internal_ra_vals[:, 1]), 1) == 657.5, internal_ra_vals
 
-# Roberts 1967 benchmark for Cartesian purely internally heated:
-# theoretically at Ra 867.8, wavenumber 1.755
-internal_ra_vals = np.array([(m, compute_annulus_ra_cr(f=0.9999, m=m, regime="internal")) for m in range(17000, 18000, 100)])
-assert np.round(np.min(internal_ra_vals[:, 1]), 1) == 867.8, internal_ra_vals
+# # Roberts 1967 benchmark for Cartesian purely internally heated:
+# # theoretically at Ra 867.8, wavenumber 1.755
+# internal_ra_vals = np.array([(m, compute_critical_rayleigh_annulus(f=0.9999, m=m, regime="internal")) for m in range(17000, 18000, 100)])
+# assert np.round(np.min(internal_ra_vals[:, 1]), 1) == 867.8, internal_ra_vals
 
 
 def get_minimum_path(val_grid, /):
@@ -153,9 +210,14 @@ def get_minimum_path(val_grid, /):
     mask = min_vals < 1e20
     return min_vals[mask], min_indices[mask]
 
+# def get_minimum_path(val_grid, /):
+#     min_vals = np.min(val_grid, axis=0)
+#     min_indices = np.argmin(val_grid, axis=0)
+#     return min_vals, min_indices
 
-def plot_3D(f_vals, m_vals, regime, f_grid, m_grid, val_grid, save=False, title=None):
-        # =========================================================================
+
+def plot_3D(f_vals, m_vals, f_grid, m_grid, val_grid, save=False, title=None, regime='basal'):
+    # =========================================================================
     # 1. Track the Minimum Path (Most Unstable Mode)
     # =========================================================================
     # axis=0 looks across the row values (Harmonic Order 'm') for each column ('f')
@@ -190,7 +252,7 @@ def plot_3D(f_vals, m_vals, regime, f_grid, m_grid, val_grid, save=False, title=
 
     # Highlighted minimum trajectory
     ax1.plot(
-        f_vals[min_indices],
+        f_vals,
         m_vals[min_indices],
         min_vals + 0.02,  # Tiny offset stops the line from dipping below the mesh
         color="red",
@@ -211,7 +273,7 @@ def plot_3D(f_vals, m_vals, regime, f_grid, m_grid, val_grid, save=False, title=
     # --- Top Right: Shift in Dominant Harmonic ---
     ax2 = fig.add_subplot(222)
     ax2.plot(
-        f_vals[min_indices],
+        f_vals,
         m_vals[min_indices],
         color="red",
         marker="o",
@@ -228,7 +290,7 @@ def plot_3D(f_vals, m_vals, regime, f_grid, m_grid, val_grid, save=False, title=
     # --- Bottom Right: Minimum Stability Threshold ---
     ax3 = fig.add_subplot(224)
     ax3.plot(
-        f_vals[min_indices],
+        f_vals,
         min_vals,
         color="red",
         marker="o",

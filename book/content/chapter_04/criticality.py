@@ -133,3 +133,13 @@ def make_concave_swarm(points, grid_spacing=0.01):
     else:
         grid_inside_hull = np.empty((0, 2))
     return grid_inside_hull
+
+def jarvis_theory(f, m):
+    r_m = cylindrical.r_mid(f)
+    r_m_sq = r_m**2
+    m_sq = m**2
+    return np.log10(
+        (np.pi**2 + m_sq / r_m_sq)**3
+        /
+        (m_sq / r_m_sq)
+        )

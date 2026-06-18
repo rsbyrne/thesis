@@ -18,8 +18,90 @@ slideshow:
   slide_type: ''
 ---
 from criticality import *
+from linear_stability_annulus import *
 
 limit_memory(8.0)
+```
+
+```{code-cell} ipython3
+f_vals = np.linspace(0.1, 0.9, 101) 
+m_vals = np.arange(2, 24)
+
+f_grid, m_grid, log10_Ra_true = compute_critical_rayleigh_many(
+    f_vals, m_vals, cache_refresh=True
+    )
+
+plot_3D(f_vals, m_vals, f_grid, m_grid, log10_Ra_true)
+```
+
+```{code-cell} ipython3
+def generate_debug_table_and_plots(m=1, N=50):
+    """
+    Generates a table of Ra_cr values across the anomaly zone
+    and plots the streamfunction for key values of f.
+    """
+    # 1. Generate the Table
+    print(f"Tracking Ra_cr for m={m} across the anomaly zone:")
+    print("-" * 35)
+    print(f"{'f_val':<10} | {'Ra_cr':<15}")
+    print("-" * 35)
+    
+    f_values = np.arange(0.40, 0.29, -0.01)
+    
+    # Store data for plotting
+    plot_data = {}
+    
+    for f_val in f_values:
+        Ra_cr, r, Psi = compute_critical_rayleigh_annulus(f_val, m, N, return_eigenvector=True)
+        print(f"{f_val:<10.2f} | {Ra_cr:<15.1f}")
+        
+        # Save specific f_values to plot the transition
+        if np.isclose(f_val, 0.35) or np.isclose(f_val, 0.31) or np.isclose(f_val, 0.30):
+            plot_data[f_val] = (r, Psi, Ra_cr)
+
+    print("-" * 35)
+
+    # 2. Generate the Streamfunction Plots
+    plt.figure(figsize=(10, 6))
+    
+    for f_val, (r, Psi, Ra_cr) in plot_data.items():
+        # Normalize r to a [0, 1] gap coordinate for easy visual comparison
+        # 0 is the inner boundary, 1 is the outer boundary
+        r_normalized = (r - r[-1]) / (r[0] - r[-1])
+        
+        # Ensure the primary lobe of the convection cell is positive
+        if Psi[N//2] < 0:
+            Psi = -Psi
+            
+        plt.plot(r_normalized, Psi, label=f"f = {f_val:.2f} (Ra = {Ra_cr:.1f})")
+
+    plt.axhline(0, color='black', linewidth=0.8, linestyle='--')
+    plt.title(f"Streamfunction ({r'$\Psi$'}) Profiles for m={m} across Gap")
+    plt.xlabel("Normalized Gap Distance (0 = Inner Wall, 1 = Outer Wall)")
+    plt.ylabel("Normalized Streamfunction Amplitude")
+    plt.legend()
+    plt.grid(True, alpha=0.3)
+    plt.show()
+
+# Run the diagnostic toolkit
+generate_debug_table_and_plots(m=1, N=300)
+```
+
+```{code-cell} ipython3
+for f_val in np.arange(0.4, 0.3, -0.01):
+    print(round(f_val, 2), round(compute_critical_rayleigh_annulus(f_val, 1), 1))
+```
+
+```{code-cell} ipython3
+m_vals = np.linspace(1e2, 1e3, 100)
+plt.plot(
+    m_vals,
+    np.array(tuple(compute_critical_rayleigh_annulus(0.99, m) for m in m_vals))
+    )
+```
+
+```{code-cell} ipython3
+np.array(tuple(compute_critical_rayleigh_annulus(0.99, m) for m in m_vals)).min()
 ```
 
 ```{code-cell} ipython3

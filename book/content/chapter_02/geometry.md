@@ -51,21 +51,7 @@ When we suggest a 'curved geometry', we could be talking about several things. I
 
 In this short section, we will put mantle convection questions aside for a moment and instead work up a versatile and expressive set of geometric tools for making sense of annular domains. Though we have taken pains to align this work with prior art where possible (for example, our choice of the symbol $f$ to represent curvature, which is from Jarvis [@Jarvis1993-cb]), we should stress that the tools presented here were developed independently by ourselves (mostly early in our candidature), and represent our own, slightly different approach to parameterising the cylindrical domain, which we have found to be more useful for the practical business of building and analysing cylindrical models. Ultimately, there are only so many ways to skin a cat (or slice a grapefruit, for a more apt metaphor), and divergent coordinate systems can always be wrangled into correspondence as required.
 
-```{figure} #simplesinu
-:name: simplesinu_fig
-
-Illustration of the relationship between a wedge of an annulus and the full disc. We can tile the wedge across the whole disk by first mirroring it, then copying it. If we wish to avoid stretching or squeezing the original state to make it fit, we must ensure that $\Theta$ (angular extent of the wedge in radians) is a positive integer ratio of $\pi$. In this case, $\Theta$ goes from $\pi/3$ (left) to $2\pi/6$ (centre) to $2\pi$ (right: the full annulus).
-```
-
-```{code-cell} ipython3
-:label: simplesinu
-:tags: [remove-cell]
-
-imop.hstack(*map(
-    image.fromfile,
-    reversed(glob(os.path.join(aliases.storagedir, 'simple_sinu_*.png')))
-    ))
-```
++++
 
 #### Radial coordinates
 
@@ -135,13 +121,29 @@ This leaves us with four different terms to describe radial position: $h$, the d
 
 #### Angular coordinates
 
+```{code-cell} ipython3
+:label: simplesinu
+:tags: [remove-cell]
+
+imop.hstack(*map(
+    image.fromfile,
+    reversed(glob(os.path.join(aliases.storagedir, 'simple_sinu_*.png')))
+    ))
+```
+
+```{figure} #simplesinu
+:name: simplesinu_fig
+
+Illustration of the relationship between a wedge of an annulus and the full disc. We can tile the wedge across the whole disk by first mirroring it, then copying it. If we wish to avoid stretching or squeezing the original state to make it fit, we must ensure that $\Theta$ (angular extent of the wedge in radians) is a positive integer ratio of $\pi$. In this case, $\Theta$ goes from $\pi/3$ (left) to $2\pi/6$ (centre) to $2\pi$ (right: the full annulus).
+```
+
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 We have our radial coordinate system: now we need a system for our angular position too. The obvious way to do this is by simply providing an angle $\theta$ in radians anticlockwise from an arbitrary origin - i.e. $0 \le \theta < 2\pi$. In practice, we will often want to work with only a small wedge of the planet at any given time. This is equivalent to choosing a maximum value, $\Theta$:
 
 $$ 0 \le \theta < \Theta \le 2\pi $$
 
-If the simulation is to be interpreted as (implicitly) a piece of a global, radially symmetrical planform, values of $\Theta$ must fall within $\pi / l$, where $l$ is any positive integer. This allows the domain to be mirrored and multiplied to cover the full disc without distortion ([](#simplesinu_fig)).
+If the simulation is to be interpreted as (implicitly) a piece of a global, radially symmetrical planform, values of $\Theta$ must fall within $\pi / m$, where $m$ is any positive integer. This allows the domain to be mirrored and multiplied to cover the full disc without distortion {numref}`simplesinu_fig)`. (We will discuss this in more detail when we come to the matter of aspect ratio.)
 
 In the same way that we built an artificial scale $r$ for the purpose of normalising the radial thickness, we can also build a scale $l$ for the width. This also gives us a chance to reverse the convention from anticlockwise (right-to-left) to clockwise (left-to-right), which is more familiar for Cartesian domains.
 
@@ -151,7 +153,9 @@ $$
 
 Defined this way, the coordinate pair $(l, h)$ reproduces in the annulus the $(x, y)$ coordinate system of a Cartesian unit square. This gives us a universal coordinate system for all cylindrical domains, regardless of curvature: allowing, for example, the 'splaying' of a Cartesian box model into an annular wedge, or the 'squaring up' of a wedge into a box.
 
-When dealing with a Cartesian box geometry, one characteristic measure is the aspect ratio $A$, where for instance $A=1$ would denote a square box and $A=3$ a wide rectangle. If we wish to carry this measure into the cylindrical domain we need to choose a particular ring - a curve of constant depth - to be the characteristic angular length scale. The two most obvious candidates would be the outer and inner boundaries. However, it proves most convenient to take a different approach and instead draw an arc through the mid-depth, halfway (radially) between the outer and inner boundaries. The aspect ratio can then be defined as the length of this arc divided by the radial length. The mid-radius can be calculated from $f$:
+When dealing with a Cartesian box geometry, one characteristic measure is the aspect ratio $A$, where for instance $A=1$ would denote a square box and $A=3$ a wide rectangle. If we wish to carry this measure into the cylindrical domain we need to choose a particular ring - a curve of constant depth - to be the characteristic angular length scale. The two most obvious candidates would be the outer and inner boundaries. However, it proves most convenient to take a different approach and instead draw an arc through the mid-depth, halfway (radially) between the outer and inner boundaries. The aspect ratio can then be defined as the length of this arc divided by the radial length.
+
+The mid-radius can be calculated from $f$:
 
 $$
 r_m \equiv \frac{r_{i} + r_{o}}{2} = \frac{1 + f}{2 \left( 1 - f \right)}
@@ -171,9 +175,21 @@ $$
 
 Such a scheme leaves us with two competing claims for a 'natural' denominator of the angular coordinate - $\Theta$ and $r_m$. While authors have sometimes preferred to keep $\Theta$ and $r_m$ constant and allow $A$ to vary [@Jarvis1994-np], we have for the most part chosen to fix $A$ and $r_m$ with $\Theta$ as the free parameter, as in [@Jarvis1993-cb]. One of the virtues of this choice is that it preserves the $(l, h)$ coordinate system over varying $A$. This simplifies comparisons with plane-layer simulations, though potentially at the cost of producing planforms which could be unstable if scaled to the full annulus.
 
-In the Cartesian case, when the height of the box is set to unit, the aspect ratio is not only equivalent to the box width: it is also equivalent to the box *area*. The virtue of defining cylindrical $A$ using the mid-depth is that this property is preserved even for extreme values of $f$. Parameterising a model in terms of area is particularly advantageous when dealing with system forcings, like internal heat, which scale with area.
+In the Cartesian case, when the height of the box is set to unit, the aspect ratio is not only equivalent to the box width: it is also equivalent to the box *area*. The virtue of defining cylindrical $A$ using the mid-depth is that this property is preserved, even for extreme values of $f$. Parameterising a model in terms of area is particularly advantageous when dealing with system forcings, like internal heat, which scale with area.
 
-While it is trivial to divide the domain in an angular sense (i.e. splitting the wedge into more wedges), dividing it in a radial sense requires a little more consideration.
+The number of wedges of a given aspect ratio $A$ we can fit within the full annulus is determined solely by the curvature parameter $f$: the higher $f$ is, the more wedges we can fit, going to infinitely many as $f \to 1$. This follows because the aspect ratio is fixed on $r_m$, which is a pure function of $f$, and $r_m$ determines how much 'room' there is around the globe at that depth. For any given $r_m$, the full amount of available space is $2\pi r_m$. The amount of space on that circumference consumed by a given wedge is simply $A$. Thus the 'wedge count' $n_\mathrm{wedge}$ for a given $f$ and $A$ is simply:
+
+$$
+N_\mathrm{wedge}(f, A) = \frac{2\pi r_m(f)}{A}
+$$
+
+The aspect ratio is crucial to studies of convection, because convection cells care a great deal about geometry. If we could, we would run everything in the full annulus, but this can be prohibitively expensive for large parameter surveys. Instead, we can adopt the mirroring and tiling method discussed earlier ([](#simplesinu_fig)). When doing so, we must be careful to distinguish between the aspect ratio of the domain and the aspect ratio of the system we are trying to evoke within that domain.
+
+For example any periodic feature (i.e. anything that occurs a finite number of times in an angular sense), there is a wavenumber $m$, which simply counts the number of occurrences of that feature in the full periodic domain (i.e. the full annulus in our case). It might be assumed that the smallest $m$ we can capture with a given finite wedge is equal to the number of such wedges that can fit around the full annulus: i.e. $m_\mathrm{min}=N_\mathrm{wedge}$. However, if we are to ensure symmetry, we must mirror the wedge before tiling it - so in fact, we need to make room for twice as many wedges as we thought: $m_\mathrm{min, \; symmetrical}=N_\mathrm{wedge} / 2$. In general, only even values of $N_\mathrm{wedge}$ tile validly to the full annulus. A consequence of this is that we cannot capture any feature that has an odd-numbered global wavenumber.
+
+The mirroring and tiling practice is requisite for any pattern we may wish to capture in the annulus. However, if the feature we seek to capture is inherently symmetrical - like a convection cell - we can 'cheat' a little and capture only half of it per wedge. For example, a feature of degree one ($m=1$) at $=0.5$ can be captured with a single wedge of aspect ratio $3\pi/2$, representing half of the feature directly: the other half is then represented implicitly (by mirroring). Crucially, although the aspect ratio of the domain is $3\pi/2$, the aspect ratio of the *feature* is double that: $3\pi$. This is what we meant when we said we must be careful when we talk about aspect ratio.
+
+Throughout our work, we will always use $A$ (without sub- or super-scripts) to refer to the actual, literal aspect ratio (measured through the mid-depth) of a finite spatial domain, and never as the aspect ratio of a feature. We encourage others to adopt this convention in the interest of clarity: the history of convection studies in curved domains is rife with inconsistent notation.
 
 +++
 
@@ -217,6 +233,7 @@ s^*(h) &= 2 \cdot \frac{1}{1+f} \cdot \frac{1}{r_o} \cdot r(h)
 \end{align*} $$
 
 The length $s$ is, among other things, the factor by which an average measurement of some variable taken across a layer can be converted into a total value for that layer. It is vital to account for varying $s$ whenever comparing between different layers in a given system, or between equivalent layers in systems of differing $f$.
+
 
 +++
 
