@@ -42,7 +42,6 @@ project:
         - file: content/chapter_04/introduction.md
         - file: content/chapter_04/background.md
         - file: content/chapter_04/conduction.md
-        - file: content/chapter_04/marginal.md
         - file: content/chapter_04/critical_I.md
         - file: content/chapter_04/critical_II.md
         - file: content/chapter_04/conclusion.md

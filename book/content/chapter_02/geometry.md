@@ -143,7 +143,7 @@ We have our radial coordinate system: now we need a system for our angular posit
 
 $$ 0 \le \theta < \Theta \le 2\pi $$
 
-If the simulation is to be interpreted as (implicitly) a piece of a global, radially symmetrical planform, values of $\Theta$ must fall within $\pi / m$, where $m$ is any positive integer. This allows the domain to be mirrored and multiplied to cover the full disc without distortion {numref}`simplesinu_fig)`. (We will discuss this in more detail when we come to the matter of aspect ratio.)
+If the simulation is to be interpreted as (implicitly) a piece of a global, radially symmetrical planform, values of $\Theta$ must fall within $\pi / m$, where $m$ is any positive integer. This allows the domain to be mirrored and multiplied to cover the full disc without distortion {numref}`simplesinu_fig`. (We will discuss this in more detail when we come to the matter of aspect ratio.)
 
 In the same way that we built an artificial scale $r$ for the purpose of normalising the radial thickness, we can also build a scale $l$ for the width. This also gives us a chance to reverse the convention from anticlockwise (right-to-left) to clockwise (left-to-right), which is more familiar for Cartesian domains.
 
@@ -233,7 +233,6 @@ s^*(h) &= 2 \cdot \frac{1}{1+f} \cdot \frac{1}{r_o} \cdot r(h)
 \end{align*} $$
 
 The length $s$ is, among other things, the factor by which an average measurement of some variable taken across a layer can be converted into a total value for that layer. It is vital to account for varying $s$ whenever comparing between different layers in a given system, or between equivalent layers in systems of differing $f$.
-
 
 +++
 
