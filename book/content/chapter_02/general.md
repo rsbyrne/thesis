@@ -30,10 +30,14 @@ from analysis import analysis
 ```
 
 ```{code-cell} ipython3
-:label: nu_ra_scaling
-:tags: [remove-cell]
-
-canvas = Canvas(size=(2.5, 2.5))
+---
+label: nu_ra_scaling
+tags: [remove-cell]
+editable: true
+slideshow:
+  slide_type: ''
+---
+canvas = Canvas(size=(3, 3))
 ax = canvas.make_ax()
 
 crit_func = lambda A: math.pi**4 * (1 + A**2)**3 / A**4
@@ -44,7 +48,7 @@ xchan = Channel(
     )
 ychan = Channel(
     tuple(map(crit_func, xchan.data)),
-    label=r'$\mathrm{Ra}_{\mathrm{notional}}$',
+    label=r'$\mathrm{Ra}$',
     log=True,
     )
 
@@ -79,6 +83,7 @@ ax.annotate(
         (r"\mathrm{Ra}_\mathrm{cr} &\approx&"+str(round(10**ymin, 1))),
         r"\end{eqnarray*}",
         )),
+    arrowprops = dict(arrowstyle = "->"),
     points=(0, 60),
     )
 
@@ -89,9 +94,13 @@ canvas
 ```
 
 ```{code-cell} ipython3
-:label: beta_k_nu_scaling
-:tags: [remove-cell]
-
+---
+label: beta_k_nu_scaling
+tags: [remove-cell]
+editable: true
+slideshow:
+  slide_type: ''
+---
 canvas = Canvas(size=(3.2, 3.2))
 ax = canvas.ax(density=1.2)
 
@@ -169,6 +178,8 @@ ax.props.title.visible = True
 canvas
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 ## General mantle convection theory
 
 +++
@@ -187,7 +198,7 @@ Fluids are notoriously complex, but the framing of the problem in this particula
 
 In this section, we will endeavour to present a complete, but not unduly detailed, map of how the basic intuitions of fluid physics can be developed into high-level formal constructs like the Rayleigh number, the Nusselt number, and Rayleigh-Benard convection, building up the practical toolkit of analytical devices which the rest of this thesis will depend on.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### The Nusselt number
 
@@ -205,7 +216,7 @@ There is a practice in some quarters of adding a constant $1$ to $\mathrm{Nu}$, 
 
 Though harder to measure in practice than in theory, it is implicit that Earth’s Nusselt number must be much greater than one; it is sometimes cited in the order of $10$ [@Tackley1996-vw], which is characteristic of laminar (sub-turbulent) flow [@White1984-fn].
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### The Prandtl, Grashof, Reynolds, and Rayleigh numbers
 
@@ -345,7 +356,7 @@ Where $b$ is the vertical length scale (the distance from top to **b**ottom).
 
 Because the *Rayleigh* number so expressed is equivalent to the coefficient of the buoyancy term, it should now be clear why it is often simply dubbed ‘convective vigour’, as that is its primary effect. By parameterising the system in this way, the behaviour of seemingly distinct scenarios can be seen to be related through their common *Rayleigh* number; what’s more, a dimensionless treatment of the problem can be readily converted to a dimensionalised one by expanding the terms of $\mathrm{Ra}$ with their empirical or inferred values.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### Linear stability analysis and the critical *Rayleigh* number
 
@@ -419,7 +430,7 @@ A value which is borne out in laboratory testing [@Whitehead2011-gs].
 The global minimum of the curve of aspect ratio to 'notional' *Rayleigh* number gives the 'critical' *Rayleigh* number below which convection yields to conduction.
 ```
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### Boundary layer theory and the $\mathrm{Ra}-\mathrm{Nu}$ scaling
 
@@ -505,7 +516,7 @@ $$ \mathrm{Nu} \propto \mathrm{Ra}^\beta, \quad \beta \approx \frac{1}{3} $$
 
 That a scaling law of this form would obtain for two dimensionless flow constants such as these is not surprising; empirically, just such a relationship is in fact very widely attested [@Turcotte1969-ol; @McKenzie1974-wb; @Solomatov1995-is]. Authors have differed, however, on the proper value of $\beta$. Though the canonicity of the analytically-derived value of one third is beyond dispute, it is clear from the divergent results of numerous studies that, in any real scenario, many more variables than we have accounted for must enter the equation. Time-dependence, long-lived thermal heterogeneities, aspect ratio, internal heating, and countless other factors all have a part to play. Obtaining robust scaling laws that account for all these factors is the vexing business of this thesis.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### Chaos and attraction: approximate solutions to insoluble equations
 

@@ -43,8 +43,8 @@ def aspect_ratio(f, m):
 def aspect_curvature_to_wavenumber(A, f):  # Presuming half-cell
     return r_mid(f) * np.pi / A
 
-def wavenumber_to_aspect(m):
-    return 2 * np.pi / m
+# def wavenumber_to_aspect(m):
+#     return 2 * np.pi / m
 
 sym_h, sym_f = sympy.symbols('h f', real=True)
 sym_r_i = sym_f / (1 - sym_f)

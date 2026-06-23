@@ -242,7 +242,7 @@ The length $s$ is, among other things, the factor by which an average measuremen
 
 Adopting the right coordinate system at the right time can take an apparently meaningless soup of algebra (or an almost intractable algorithm) and make matters clear, simple, and obvious. In our work, we have taken to keeping a 'cheat sheet' of such transforms close at hand and aggressively shaking down every mathematical expression for the hidden symmetries that may be lurking within. We advise any students following after to do the same.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 A selection of key definitions:
 

@@ -24,7 +24,7 @@ def incorporate_new_data(filename):
     updated_data = {**old_data, **new_data}
     (storagepath / 'simple_critical.data').write_bytes(pickle.dumps(updated_data))
     make_frames(cache_refresh=True)
-    return len(update_data) - len(old_data)
+    return len(updated_data) - len(old_data)
 
 @cache(cachedir)
 def make_frames():
@@ -134,12 +134,22 @@ def make_concave_swarm(points, grid_spacing=0.01):
         grid_inside_hull = np.empty((0, 2))
     return grid_inside_hull
 
-def jarvis_theory(f, m):
+def jarvis_theory(f, l):
     r_m = cylindrical.r_mid(f)
     r_m_sq = r_m**2
-    m_sq = m**2
+    l_sq = l**2
     return np.log10(
-        (np.pi**2 + m_sq / r_m_sq)**3
+        (np.pi**2 + l_sq / r_m_sq)**3
         /
-        (m_sq / r_m_sq)
+        (l_sq / r_m_sq)
+        )
+
+def rayleigh_dimensionlesswavenumber_original(a):
+    return (a**2 + np.pi**2)**3 / a**2
+
+def rayleigh_aspect_wavenumber_original(A, m):
+    return (
+        (np.pi**4 * (m**2 + A**2)**3)
+        /
+        (m**2 * A**4)
         )

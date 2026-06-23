@@ -24,14 +24,14 @@ limit_memory(8.0)
 ```
 
 ```{code-cell} ipython3
-f_vals = np.linspace(0.1, 0.9, 101) 
-m_vals = np.arange(1, 24)
+# f_vals = np.linspace(0.1, 0.9, 101) 
+# m_vals = np.arange(1, 24)
 
-f_grid, m_grid, log10_Ra_true = compute_critical_rayleigh_many(
-    f_vals, m_vals, cache_refresh=True
-    )
+# f_grid, m_grid, log10_Ra_true = compute_critical_rayleigh_many(
+#     f_vals, m_vals, cache_refresh=True
+#     )
 
-plot_3D(f_vals, m_vals, f_grid, m_grid, log10_Ra_true)
+# plot_3D(f_vals, m_vals, f_grid, m_grid, log10_Ra_true)
 ```
 
 ```{code-cell} ipython3
@@ -85,23 +85,6 @@ def generate_debug_table_and_plots(m=1, N=50):
 
 # Run the diagnostic toolkit
 generate_debug_table_and_plots(m=1, N=300)
-```
-
-```{code-cell} ipython3
-for f_val in np.arange(0.4, 0.3, -0.01):
-    print(round(f_val, 2), round(compute_critical_rayleigh_annulus(f_val, 1), 1))
-```
-
-```{code-cell} ipython3
-m_vals = np.linspace(1e2, 1e3, 100)
-plt.plot(
-    m_vals,
-    np.array(tuple(compute_critical_rayleigh_annulus(0.99, m) for m in m_vals))
-    )
-```
-
-```{code-cell} ipython3
-np.array(tuple(compute_critical_rayleigh_annulus(0.99, m) for m in m_vals)).min()
 ```
 
 ```{code-cell} ipython3

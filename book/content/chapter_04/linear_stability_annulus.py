@@ -4,7 +4,7 @@ from everest.caching import cache
 import numpy as np
 import scipy.linalg as la
 
-def compute_critical_rayleigh_annulus(f, m, N=50):
+def compute_critical_rayleigh_annulus(f, l, N=50):
     """
     Solves the marginal stability problem for an infinite-Prandtl, Boussinesq fluid
     in a 2D cylindrical annulus, heated from below.
@@ -38,7 +38,7 @@ def compute_critical_rayleigh_annulus(f, m, N=50):
     T0_prime = 1.0 / (r * np.log(f))
     
     # Buoyancy coupling term
-    Buoy = m / r
+    Buoy = l / r
     
     # -------------------------------------------------------------------------
     # 2. Chebyshev Differentiation Matrices
@@ -148,7 +148,7 @@ def compute_critical_rayleigh_annulus(f, m, N=50):
 
         return Ra_cr, winning_eigenvector
 
-    raise RuntimeError(f"Warning: No valid physical modes found for f={f}, m={m}")
+    raise RuntimeError(f"Warning: No valid physical modes found for f={f}, l={l}")
 
 
 # Example usage:
@@ -195,18 +195,18 @@ def compute_critical_rayleigh_annulus(f, m, N=50):
 # print(compute_critical_rayleigh_f(0.99, 3))
 
 @cache(cachedir)
-def compute_critical_rayleigh_many(f_vals, m_vals, verbose=True):
-    f_grid, m_grid = np.meshgrid(f_vals, m_vals)
+def compute_critical_rayleigh_many(f_vals, l_vals, verbose=True):
+    f_grid, l_grid = np.meshgrid(f_vals, l_vals)
     val_grid = np.zeros_like(f_grid)
     
-    total_points = len(f_vals) * len(m_vals)
+    total_points = len(f_vals) * len(l_vals)
     if verbose:
         print(f"Solving {total_points} generalized eigenvalue problems...")
     
     count = 0
-    for i in range(len(m_vals)):
+    for i in range(len(l_vals)):
         for j in range(len(f_vals)):
-            Ra, eigvec = compute_critical_rayleigh_annulus(f_grid[i, j], m_grid[i, j])
+            Ra, eigvec = compute_critical_rayleigh_annulus(f_grid[i, j], l_grid[i, j])
             val_grid[i, j] = np.log10(Ra)
             
             count += 1
@@ -214,7 +214,7 @@ def compute_critical_rayleigh_many(f_vals, m_vals, verbose=True):
                 if count % 50 == 0:
                     print(f"Progress: {count}/{total_points} calculations completed.")
 
-    return f_grid, m_grid, val_grid
+    return f_grid, l_grid, val_grid
 
 # Lord Rayleigh 1916 benchmark for Cartesian purely basally heated:
 # theoretically at Ra 657.5, wavenumber 2.12
@@ -234,18 +234,25 @@ def get_minimum_path(val_grid, /):
     mask = min_vals < 1e20
     return min_vals[mask], min_indices[mask]
 
+def get_discrete_minimum_path(l_vals, val_grid, /):
+    return get_minimum_path(val_grid[np.argwhere(l_vals == np.floor(l_vals)).flatten()])
+
 
 import matplotlib.pyplot as plt
 from matplotlib import cm
 import matplotlib.gridspec as gridspec
 
 
-def plot_3D(f_vals, m_vals, f_grid, m_grid, val_grid, save=False, title=None, regime='basal'):
+def plot_3D(f_vals, l_vals, f_grid, l_grid, val_grid, save=False, title=None, regime='basal'):
     # =========================================================================
     # 1. Track the Minimum Path (Most Unstable Mode)
     # =========================================================================
     # axis=0 looks across the row values (Harmonic Order 'm') for each column ('f')
+
     min_vals, min_indices = get_minimum_path(val_grid)
+
+    discrete_min_vals, discrete_min_indices = get_discrete_minimum_path(l_vals, val_grid)
+    discrete_l_vals = l_vals[np.argwhere(l_vals == np.floor(l_vals)).flatten()]
 
     # =========================================================================
     # 2. Plotting the Entire Suite (Using the clean, compact 121/222/224 layout)
@@ -266,7 +273,7 @@ def plot_3D(f_vals, m_vals, f_grid, m_grid, val_grid, save=False, title=None, re
     ax1 = fig.add_subplot(121, projection="3d")
     surf = ax1.plot_surface(
         f_grid,
-        m_grid,
+        l_grid,
         val_grid,
         cmap=cm.viridis,
         edgecolor="black",
@@ -277,8 +284,17 @@ def plot_3D(f_vals, m_vals, f_grid, m_grid, val_grid, save=False, title=None, re
     # Highlighted minimum trajectory
     ax1.plot(
         f_vals,
-        m_vals[min_indices],
+        l_vals[min_indices],
         min_vals + 0.02,  # Tiny offset stops the line from dipping below the mesh
+        color="blue",
+        linewidth=4,
+        label="Most Unstable Mode",
+        zorder=10,
+    )
+    ax1.plot(
+        f_vals,
+        discrete_l_vals[discrete_min_indices],
+        discrete_min_vals + 0.03,  # Tiny offset stops the line from dipping below the mesh
         color="red",
         linewidth=4,
         label="Most Unstable Mode",
@@ -286,7 +302,7 @@ def plot_3D(f_vals, m_vals, f_grid, m_grid, val_grid, save=False, title=None, re
     )
 
     ax1.set_xlabel("Core Fraction ($f$)", fontsize=10)
-    ax1.set_ylabel("Harmonic Order ($m$)", fontsize=10)
+    ax1.set_ylabel("Harmonic Order ($l$)", fontsize=10)
     ax1.set_zlabel(r"$\log_{10}(Ra_{cr})$", fontsize=10)
     ax1.set_xticks(np.arange(0.1, 1.0, 0.1))
     ax1.set_yticks(np.arange(1, 23, 2))
@@ -298,7 +314,15 @@ def plot_3D(f_vals, m_vals, f_grid, m_grid, val_grid, save=False, title=None, re
     ax2 = fig.add_subplot(222)
     ax2.plot(
         f_vals,
-        m_vals[min_indices],
+        l_vals[min_indices],
+        color="blue",
+        marker="o",
+        markersize=2,
+        linewidth=2,
+    )
+    ax2.plot(
+        f_vals,
+        discrete_l_vals[discrete_min_indices],
         color="red",
         marker="o",
         markersize=2,
@@ -306,9 +330,9 @@ def plot_3D(f_vals, m_vals, f_grid, m_grid, val_grid, save=False, title=None, re
     )
     ax2.set_title("Shift in Dominant Harmonic", fontsize=11)
     ax2.set_xlabel("Core Fraction ($f$)")
-    ax2.set_ylabel("Most Unstable $m$")
+    ax2.set_ylabel("Most Unstable $l$")
     ax2.set_xticks(np.arange(0.1, 1.0, 0.2))
-    ax2.set_yticks(np.arange(1, max(m_vals[min_indices]) + 2, 2))
+    ax2.set_yticks(np.arange(1, max(discrete_l_vals[discrete_min_indices]) + 2, 2))
     ax2.grid(True, linestyle="--", alpha=0.5)
 
     # --- Bottom Right: Minimum Stability Threshold ---
@@ -316,6 +340,14 @@ def plot_3D(f_vals, m_vals, f_grid, m_grid, val_grid, save=False, title=None, re
     ax3.plot(
         f_vals,
         min_vals,
+        color="blue",
+        marker="o",
+        markersize=2,
+        linewidth=2,
+    )
+    ax3.plot(
+        f_vals,
+        discrete_min_vals,
         color="red",
         marker="o",
         markersize=2,
@@ -323,7 +355,7 @@ def plot_3D(f_vals, m_vals, f_grid, m_grid, val_grid, save=False, title=None, re
     )
     ax3.set_title("Minimum Stability Threshold", fontsize=11)
     ax3.set_xlabel("Core Fraction ($f$)")
-    ax3.set_ylabel(r"$\min(\log_{10} Ra_{cr})$")
+    ax3.set_ylabel(r"$\min(\log_{10} \mathrm{Ra}_\mathrm{cr})$")
     ax3.set_xticks(np.arange(0.1, 1.0, 0.2))
     ax3.grid(True, linestyle="--", alpha=0.5)
 

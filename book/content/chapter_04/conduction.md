@@ -438,7 +438,6 @@ editable: true
 label: isocondf
 slideshow:
   slide_type: ''
-tags: [remove-cell]
 ---
 impaths = sorted(
     os.path.relpath(path)
@@ -1156,7 +1155,6 @@ hs = np.linspace(0, 1, 65)
 editable: true
 slideshow:
   slide_type: ''
-tags: [remove-cell]
 label: cylindrical_mixed_geotherm
 ---
 canvas = Canvas(size=(8, 4), shape = (1, 2))
