@@ -2834,12 +2834,13 @@ storage/old/simple_critical_enhance.data
 storage/old/simple_critical_undone.data
 storage/old/simple_critical_undone_old.data
 storage/pellew_fig.png
-storage/simple_critical-Copy1.data
-storage/simple_critical-Copy2.data
 storage/simple_critical.data
 storage/simple_critical_17.data
 storage/simple_critical_2026_1__-_-_.data
 storage/simple_critical_2026_2__-_-_.data
+storage/simple_critical_2026_3__-_-_-_-_.data
+storage/simple_critical_2026_4__-_.data
+storage/simple_critical_2026_4__.data
 storage/simple_sinu_0.png
 storage/simple_sinu_1.png
 storage/simple_sinu_2.png

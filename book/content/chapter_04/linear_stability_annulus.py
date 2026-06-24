@@ -196,8 +196,14 @@ def compute_critical_rayleigh_annulus(f, l, N=50):
 
 @cache(cachedir)
 def compute_critical_rayleigh_many(f_vals, l_vals, verbose=True):
+    f_grid, l_grid, val_grid, _ = compute_critical_rayleigh_many_full(f_vals, l_vals, verbose=verbose)
+    return f_grid, l_grid, val_grid
+
+@cache(cachedir)
+def compute_critical_rayleigh_many_full(f_vals, l_vals, N=50, verbose=True):
     f_grid, l_grid = np.meshgrid(f_vals, l_vals)
     val_grid = np.zeros_like(f_grid)
+    eig_grid = np.empty((*val_grid.shape, N))
     
     total_points = len(f_vals) * len(l_vals)
     if verbose:
@@ -206,15 +212,27 @@ def compute_critical_rayleigh_many(f_vals, l_vals, verbose=True):
     count = 0
     for i in range(len(l_vals)):
         for j in range(len(f_vals)):
-            Ra, eigvec = compute_critical_rayleigh_annulus(f_grid[i, j], l_grid[i, j])
+            Ra, eigvec = compute_critical_rayleigh_annulus(f_grid[i, j], l_grid[i, j], N=N)
             val_grid[i, j] = np.log10(Ra)
+            eig_grid[i, j] = eigvec
             
             count += 1
             if verbose:
                 if count % 50 == 0:
                     print(f"Progress: {count}/{total_points} calculations completed.")
 
-    return f_grid, l_grid, val_grid
+    return f_grid, l_grid, val_grid, eig_grid
+
+@cache(cachedir)
+def compute_critical_rayleigh_many_full_nongrid(f_vals, l_vals, N=50, verbose=True):
+    length = min(map(len, (f_vals, l_vals)))
+    ras, vecs = np.empty((length,)), np.empty((length, N*3))
+    for i, (f_val, l_val) in enumerate(zip(f_vals, l_vals)):
+        Ra, eigvec = compute_critical_rayleigh_annulus(f_val, l_val)
+        ras[i] = Ra
+        vecs[i] = eigvec
+    return ras, vecs
+    
 
 # Lord Rayleigh 1916 benchmark for Cartesian purely basally heated:
 # theoretically at Ra 657.5, wavenumber 2.12
