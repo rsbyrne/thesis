@@ -14,6 +14,7 @@ analysis/arrhenius/arrRa7list.pkl
 analysis/arrhenius/arrhenius_000.ipynb
 analysis/arrhenius/data.py
 analysis/common.py
+analysis/conductive.py
 analysis/cospar/7fa86cea8f0748ef538d36f165788f0a04567bbdf3ffa2e4a4d98cf7525a5a78.pkl
 analysis/cospar/README.md
 analysis/cospar/cospar.py

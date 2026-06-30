@@ -536,6 +536,8 @@ The *beta* scaling was proposed as an asymptotic endmember for a particular, max
 - For spherical geometry, Deschamps and colleagues fitted a scaling law using curvature-dependant parameters: $\mathrm{Nu} = c(f) \, \mathrm{Ra}^{\beta(f)}$ (where $f$ is the inner radius divided by the outer radius) [@Deschamps2010-wj].
 - For an annular geometry, Jarvis proposed a scaling law that preserved the $1/3$ *beta* exponent by aggressively scaling the constant of proportionality as a function of $f$ [@Jarvis1993-cb].
 
+Finding convincing *beta* laws for increasingly complex scenarios makes up a sizeable fraction of the core business of this thesis, as it does for the mantle convection community at large.
+
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### Chaos and attraction: approximate solutions to insoluble equations

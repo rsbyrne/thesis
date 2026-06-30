@@ -49,6 +49,7 @@ project:
     - title: Linear Convection
       children:
         - file: content/chapter_05/introduction.md
+        - file: content/chapter_05/isoviscous.md
         - file: content/chapter_05/conclusion.md
 
     - title: Nonlinear Convection
