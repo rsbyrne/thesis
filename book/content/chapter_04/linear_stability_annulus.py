@@ -4,7 +4,7 @@ from everest.caching import cache
 import numpy as np
 import scipy.linalg as la
 
-def compute_critical_rayleigh_annulus(f, l, N=50):
+def compute_critical_rayleigh_annulus(f, l, N=50, invert=True):
     """
     Solves the marginal stability problem for an infinite-Prandtl, Boussinesq fluid
     in a 2D cylindrical annulus, heated from below.
@@ -110,17 +110,18 @@ def compute_critical_rayleigh_annulus(f, l, N=50):
     # -------------------------------------------------------------------------
     # 5. Solving the Generalised Eigenvalue Problem
     # -------------------------------------------------------------------------
-    
-    # Convert to standard eigenvalue problem: (A^-1 * B) * x = mu * x
-    try:
-        A_inv = la.inv(A)
-    except la.LinAlgError:
-        raise ValueError("Matrix A is singular. Check boundary conditions and scaling.")
-        
-    M_standard = A_inv @ B
-    
-    # Solve for eigenvalues (mu)
-    eigenvalues, eigenvectors = la.eig(M_standard)
+
+    if invert:
+        # Convert to standard eigenvalue problem: (A^-1 * B) * x = mu * x
+        try:
+            A_inv = la.inv(A)
+        except la.LinAlgError:
+            raise ValueError("Matrix A is singular. Check boundary conditions and scaling.")
+        M_standard = A_inv @ B
+        # Solve for eigenvalues (mu)
+        eigenvalues, eigenvectors = la.eig(M_standard)
+    else:
+        eigenvalues, eigenvectors = la.eig(B, A)
     
     # -------------------------------------------------------------------------
     # 6. Filtering the Spectrum
@@ -201,9 +202,10 @@ def compute_critical_rayleigh_many(f_vals, l_vals, verbose=True):
 
 @cache(cachedir)
 def compute_critical_rayleigh_many_full(f_vals, l_vals, N=50, verbose=True):
+    invert = True
     f_grid, l_grid = np.meshgrid(f_vals, l_vals)
     val_grid = np.zeros_like(f_grid)
-    eig_grid = np.empty((*val_grid.shape, N))
+    eig_grid = np.empty((*val_grid.shape, 3*N))
     
     total_points = len(f_vals) * len(l_vals)
     if verbose:
@@ -212,7 +214,7 @@ def compute_critical_rayleigh_many_full(f_vals, l_vals, N=50, verbose=True):
     count = 0
     for i in range(len(l_vals)):
         for j in range(len(f_vals)):
-            Ra, eigvec = compute_critical_rayleigh_annulus(f_grid[i, j], l_grid[i, j], N=N)
+            Ra, eigvec = compute_critical_rayleigh_annulus(f_grid[i, j], l_grid[i, j], N=N, invert=invert)
             val_grid[i, j] = np.log10(Ra)
             eig_grid[i, j] = eigvec
             
@@ -225,12 +227,20 @@ def compute_critical_rayleigh_many_full(f_vals, l_vals, N=50, verbose=True):
 
 @cache(cachedir)
 def compute_critical_rayleigh_many_full_nongrid(f_vals, l_vals, N=50, verbose=True):
+    invert = True
     length = min(map(len, (f_vals, l_vals)))
     ras, vecs = np.empty((length,)), np.empty((length, N*3))
+    if verbose:
+        print(f"Solving {length} generalized eigenvalue problems...")
+    count = 0
     for i, (f_val, l_val) in enumerate(zip(f_vals, l_vals)):
-        Ra, eigvec = compute_critical_rayleigh_annulus(f_val, l_val)
+        Ra, eigvec = compute_critical_rayleigh_annulus(f_val, l_val, N=N, invert=invert)
         ras[i] = Ra
         vecs[i] = eigvec
+        count += 1
+        if verbose:
+            if count % 50 == 0:
+                print(f"Progress: {count}/{length} calculations completed.")
     return ras, vecs
     
 
@@ -253,7 +263,9 @@ def get_minimum_path(val_grid, /):
     return min_vals[mask], min_indices[mask]
 
 def get_discrete_minimum_path(l_vals, val_grid, /):
-    return get_minimum_path(val_grid[np.argwhere(l_vals == np.floor(l_vals)).flatten()])
+    rounded_l_vals = np.round(l_vals, 10)
+    discrete_l_indices = np.argwhere(rounded_l_vals == np.floor(rounded_l_vals)).flatten()
+    return get_minimum_path(val_grid[discrete_l_indices])
 
 
 import matplotlib.pyplot as plt
@@ -270,7 +282,9 @@ def plot_3D(f_vals, l_vals, f_grid, l_grid, val_grid, save=False, title=None, re
     min_vals, min_indices = get_minimum_path(val_grid)
 
     discrete_min_vals, discrete_min_indices = get_discrete_minimum_path(l_vals, val_grid)
-    discrete_l_vals = l_vals[np.argwhere(l_vals == np.floor(l_vals)).flatten()]
+    rounded_l_vals = np.round(l_vals, 10)
+    discrete_l_indices = np.argwhere(rounded_l_vals == np.floor(rounded_l_vals)).flatten()
+    discrete_l_vals = l_vals[discrete_l_indices]
 
     # =========================================================================
     # 2. Plotting the Entire Suite (Using the clean, compact 121/222/224 layout)

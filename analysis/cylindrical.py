@@ -29,6 +29,13 @@ def disc(h, f):
     f = safe_f(f)
     return (r_star(h, f)**2 - f**2) / (1 - f**2)
 
+def h_vol(v, f):
+    inner = r_inner(f)
+    return np.sqrt(2 * r_mid(f) * v + inner**2) + inner
+
+def f_eff(h, f):
+    return r_inner(f) / radius(h, f)
+
 # def sub_area(h, f):
 #     f = safe_f(f)
 #     return (radius(h, f)**2 - r_inner(f)**2) / (2 * r_mid(f))
@@ -36,9 +43,9 @@ def disc(h, f):
 def n_wedge(f, A):
     return 2 * np.pi * r_mid(f) / A
 
-def aspect_ratio(f, m):
-    if 0.99999 < f <= 1.: return wavenumber_to_aspect(m)
-    return 2 * np.pi * r_mid(f) / m
+def aspect_ratio(f, l):
+    # if 0.99999 < f <= 1.: return wavenumber_to_aspect(m)
+    return 2 * np.pi * r_mid(f) / l
 
 def aspect_curvature_to_wavenumber(A, f):  # Presuming half-cell
     return r_mid(f) * np.pi / A

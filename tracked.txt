@@ -2795,6 +2795,9 @@ storage/condh.pkl
 storage/condhf.pkl
 storage/condhfinsulating.pkl
 storage/condhfmixed.pkl
+storage/critical_initial_post_sinu.png
+storage/critical_initial_pre_sinu.png
+storage/critical_initial_theta.png
 storage/livestation
 storage/old/alphacrit_aspect_f.pkl
 storage/old/alphacrit_aspect_fine.pkl

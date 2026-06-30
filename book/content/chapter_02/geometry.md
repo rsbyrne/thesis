@@ -87,7 +87,7 @@ $$
 r(h) = r_i + h = \frac{f}{1 - f} + h
 $$
 
-In short: honouring this constraint allows us to produce a workable radial coordinate system simply by setting a desired value of $f$.
+Honouring this constraint allows us to produce a workable radial coordinate system simply by setting a desired value of $f$.
 
 Many useful simplifications and physically meaningful representations of equations involve manipulations around $f$. In various expansions which we will encounter, the $f$ parameter often turns up in ratios of logarithms; in these cases, it will tidy up the notation considerably to consider a logarithm of base $f$:
 
@@ -206,6 +206,12 @@ $$
 
 As we have already established that the total area will always equal the aspect ratio $A$, the true area under any depth can then be given simply as $\mathrm{Disc} \cdot A$.
 
+Now that we have a way to determine the proportion of the domain under a given depth, it may be helpful to have an easy way to address the inverse question: what is the height $h$ at which a given proportion $v$ of the domain lies below? If we set $\mathrm{Disc}(h) = v$ and solve for $h$, we can define $h_\mathrm{vol}$ as:
+
+$$
+h_\mathrm{vol}(v) = \sqrt{2r_m v + {r_i}^2} - r_i
+$$
+
 Laying the datum for the aspect ratio through the mid-depth also has the benefit of providing a good reference scale for the angular length, which allows us to set aside $\theta$ and $\Theta$ altogether and deal with both radial and angular distances in like units. Let $s$ be the angular length at any given depth. We already know that $s_m = A$ by definition, but we can just as easily calculate $s$ for any value of $r$:
 
 $$
@@ -233,6 +239,12 @@ s^*(h) &= 2 \cdot \frac{1}{1+f} \cdot \frac{1}{r_o} \cdot r(h)
 \end{align*} $$
 
 The length $s$ is, among other things, the factor by which an average measurement of some variable taken across a layer can be converted into a total value for that layer. It is vital to account for varying $s$ whenever comparing between different layers in a given system, or between equivalent layers in systems of differing $f$.
+
+At times, it may be necessary to consider the 'effective curvature' of a sublayer. This can be given simply as:
+
+$$
+f_\mathrm{eff}(h) = \frac{r_i}{r(h)}
+$$
 
 +++
 

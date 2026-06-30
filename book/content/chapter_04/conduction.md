@@ -1515,6 +1515,21 @@ $$
 
 Our purpose in this section was to derive closed-form expressions of the geothermal and thermal flux gradients for conductive heat transport at equilibrium. The general case (the 'supremum', in a sense) countenances a mixed heating regime in a curved domain, with three free parameters: the rate of internal heat production per area ($H$ in the range $0-10$), the degree of curvature ($f$ in the range $0-1$), and the nature of the lower boundary layer (effectively a boolean variable or 'switch' which toggles between a fixed gradient of zero or a fixed value of $1$). All other cases explored in this section are effectively endmembers of this general case: non-heating $H=0$ versus heating $H>0$ and non-curved ($f=1$) versus curved ($f<1$) for each of the two choices of boundary condition; discarding the farcical case of neither basal nor volumetric heating, that gives us six cases in total. Each expression derived empirically, then reduced into a symbolic form. All align with the literature, albeit in several cases in somewhat novel forms as inspired by the logic we have outlined and/or a close inspection of the empirical data. The results are intended to serve simultaneously as a convenient reference, a benchmarking exercise for our physics code, and as a theoretical backstop for the work that is to come.
 
++++
+
+**Common expressions**:
+
+$$ \begin{align*}
+r_i &= \frac{f}{1 - f} \\
+r_o &= \frac{1}{1 - f} \\
+r_m &= \frac{r_{i} + r_{o}}{2} \\
+r(h) &= r_i + h \\
+{r^*}(h) &= \frac{r(h)}{r_o} \\
+s^*(h) &= \frac{r(h)}{r_m} \\
+\mathrm{Disc}(h) &= \frac{r(h)^2 - {r_i}^2}{2r_m} \\
+W(z) &= \text{Lambert W function satisfying } z = W(z)e^{W(z)}
+\end{align*} $$
+
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 **Conductive equilibrium temperature profiles ($0 \le h \le 1$)**:
@@ -1562,7 +1577,7 @@ T''(h) &= H_\mathrm{coeff} \; {T_\mathrm{basal}}''(h) - \frac{H}{2} \\
 T'(h) &= H_\mathrm{coeff} \; {T_\mathrm{basal}}'(h) - \frac{H}{2}r(h) \\
 T(h) &= H_\mathrm{coeff} \; T_\mathrm{basal}(h) - \frac{H}{4} \left( r(h)^2 - {r_o}^2 \right) \\
 T_\mathrm{av} &= H_\mathrm{coeff} \; T_\mathrm{av, basal} + \frac{H}{4} r_m \\
-&\mathrm{where} \quad H_\mathrm{coeff} = \frac{H}{2} {r_i}^2 \ln f
+&\text{where} \quad H_\mathrm{coeff} = \frac{H}{2} {r_i}^2 \ln f
 \end{align*} $$
 
 Mixed heating in the annulus ($0 < f < 1$, $H \ge 0$):
@@ -1572,19 +1587,50 @@ T''(h) &= H_\mathrm{coeff} \; {T_\mathrm{basal}}''(h) - \frac{H}{2} \\
 T'(h) &= H_\mathrm{coeff} \; {T_\mathrm{basal}}'(h) - \frac{H}{2}r(h) \\
 T(h) &= H_\mathrm{coeff} \; T_\mathrm{basal}(h) - \frac{H}{4} \left( r(h)^2 - {r_o}^2 \right) \\
 T_\mathrm{av} &= H_\mathrm{coeff} \; T_\mathrm{av, basal} + \frac{H}{4} r_m \\
-&\mathrm{where} \quad H_\mathrm{coeff} = 1 - \frac{H}{2}r_m
+&\text{where} \quad H_\mathrm{coeff} = 1 - \frac{H}{2}r_m
 \end{align*} $$
 
-Where:
++++
+
+**Inverse temperature profiles ($0 \le h \le 1$)**:
+
+Basal heating in the Cartesian ($f \rightarrow 1$, $H=0$):
 
 $$ \begin{align*}
-r_i &= \frac{f}{1 - f} \\
-r_o &= \frac{1}{1 - f} \\
-r_m &= \frac{r_{i} + r_{o}}{2} \\
-r(h) &= r_i + h \\
-{r^*}(h) &= \frac{r(h)}{r_o} \\
-s^*(h) &= \frac{r(h)}{r_m} \\
-\mathrm{Disc}(h) &= \frac{r(h)^2 - {r_i}^2}{2r_m} \\
+h(T) &= 1 - T
+\end{align*} $$
+
+Internal heating in the Cartesian ($f \rightarrow 1$, $H \gt 0$, insulating base):
+
+$$ \begin{align*}
+h(T) &= \sqrt{1 - \frac{2T}{H}}
+\end{align*} $$
+
+Mixed heating in the Cartesian ($f \rightarrow 1$, $H \ge 0$):
+
+$$ \begin{align*}
+h(T) &= \frac{H - 2 + \sqrt{(H+2)^2 - 8HT}}{2H}
+\end{align*} $$
+
+Basal heating in the annulus ($0 < f < 1$, $H=0$):
+
+$$ \begin{align*}
+h(T) &= \frac{f^T - f}{1 - f}
+\end{align*} $$
+
+Internal heating in the annulus ($0 < f < 1$, $H \gt 0$, insulating base):
+
+$$ \begin{align*}
+h(T) &= \frac{x(T) - f}{1 - f} \\
+&\text{where} \quad x(T) = \sqrt{ -f^2 W\left( -f^{-2} \exp\left( -f^{-2} + \frac{4T}{H {r_i}^2} \right) \right) }
+\end{align*} $$
+
+Mixed heating in the annulus ($0 < f < 1$, $H \ge 0$):
+
+$$ \begin{align*}
+h(T) &= \frac{x(T) - f}{1 - f} \\
+&\text{where} \quad x(T) = \sqrt{ \frac{A}{2B} W\left( \frac{2B}{A} \exp\left( \frac{2(T-C)}{A} \right) \right) } \\
+&\text{where} \quad A = \frac{1 - \frac{H}{2}r_m}{\ln f}, \; B = -\frac{H {r_o}^2}{4}, \; C = \frac{H {r_o}^2}{4}
 \end{align*} $$
 
 ```{code-cell} ipython3

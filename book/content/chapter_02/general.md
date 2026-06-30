@@ -12,8 +12,11 @@ kernelspec:
 ---
 
 ```{code-cell} ipython3
-:tags: [remove-cell]
-
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 import os
 import math
 import pickle
@@ -514,7 +517,24 @@ Or more generally:
 
 $$ \mathrm{Nu} \propto \mathrm{Ra}^\beta, \quad \beta \approx \frac{1}{3} $$
 
-That a scaling law of this form would obtain for two dimensionless flow constants such as these is not surprising; empirically, just such a relationship is in fact very widely attested [@Turcotte1969-ol; @McKenzie1974-wb; @Solomatov1995-is]. Authors have differed, however, on the proper value of $\beta$. Though the canonicity of the analytically-derived value of one third is beyond dispute, it is clear from the divergent results of numerous studies that, in any real scenario, many more variables than we have accounted for must enter the equation. Time-dependence, long-lived thermal heterogeneities, aspect ratio, internal heating, and countless other factors all have a part to play. Obtaining robust scaling laws that account for all these factors is the vexing business of this thesis.
+The classical argument for this scaling is due to Malkus [@Malkus1954-ii], who recognised that - at a sufficiently high $\mathrm{Ra}$ value - the outer boundary layer becomes infinitely thin, and therefore must lose all sense of proportionality with the length scale $b$. The *beta* exponent provides a means to scrub the relation of its dependence on $b$:
+
+$$\begin{align*}
+\mathrm{Nu} &\propto \mathrm{Ra}^\beta \\
+\therefore \frac{q b}{k \Delta T} &\propto \left( \frac{\rho_0 g \alpha \Delta T b^3}{\mu \kappa} \right)^\beta \\
+q &\propto \frac{k \Delta T}{b} \left( \frac{\rho_0 g \alpha \Delta T b^3}{\mu \kappa} \right)^\beta \\
+&\propto b^{-1} \cdot (b^3)^\beta \\
+&\propto b^{3\beta - 1} \\
+\end{align*}$$
+
+The value of $1/3$ emerges as the *only* value that eliminates depth-dependency and reifies the postulate.
+
+The *beta* scaling was proposed as an asymptotic endmember for a particular, maximally simple case of planar, basally-heated, laterally unbounded steady state. Nevertheless, it has provided the template for most high-level analyses of convection, with many authors attempting to adapt the law (based on both empirical and theoretical arguments) to cover much more varied scenarios:
+
+- For temperature-dependent viscosity, Deschamps and colleagues attempted to incorporate the Frank-Kamenetskii parameter $\theta$, yielding a scaling with respect to the 'internal' *Rayleigh* number of the form $\mathrm{Nu} \propto \theta^{-a} \mathrm{Ra}_i^{1/3}$, with $a$ empirically fitted to around $4/3$ [@Deschamps2021-hl].
+- For an internally-heated domain, Moore scaled off a modified 'internal heating' *Rayleigh* number, giving a good fit for $\mathrm{Nu} \propto \mathrm{Ra}_H^{1/4}$ [@Moore2008-je].
+- For spherical geometry, Deschamps and colleagues fitted a scaling law using curvature-dependant parameters: $\mathrm{Nu} = c(f) \, \mathrm{Ra}^{\beta(f)}$ (where $f$ is the inner radius divided by the outer radius) [@Deschamps2010-wj].
+- For an annular geometry, Jarvis proposed a scaling law that preserved the $1/3$ *beta* exponent by aggressively scaling the constant of proportionality as a function of $f$ [@Jarvis1993-cb].
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 

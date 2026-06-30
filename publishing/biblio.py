@@ -2,7 +2,7 @@ import os
 import shutil
 
 import aliases
-from referencing import references
+from utilities import references
 
 if __name__ == '__main__':
 
