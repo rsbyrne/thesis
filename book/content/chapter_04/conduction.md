@@ -235,8 +235,12 @@ Summary of the scaling behaviours of isoviscous conduction for varying internal 
 #### Mixed heating
 
 ```{code-cell} ipython3
-:tags: [remove-cell]
-
+---
+tags: [remove-cell]
+editable: true
+slideshow:
+  slide_type: ''
+---
 with open(
         os.path.join(aliases.storagedir, 'condhfmixed.pkl'),
         mode = 'rb'
@@ -264,9 +268,13 @@ condavts = [conddata['avts'][i] for i in selinds]
 ```
 
 ```{code-cell} ipython3
-:label: isocondhmixed
-:tags: [remove-cell]
-
+---
+label: isocondhmixed
+tags: [remove-cell]
+editable: true
+slideshow:
+  slide_type: ''
+---
 canvas1 = Canvas(shape = (1, 2), size = (6, 4))
 
 ax1 = canvas1.make_ax((0, 0))
@@ -377,6 +385,8 @@ fig
 # canvas2
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 If we permit the system to have both a lower boundary of temperature $1$ and a volumetric heating factor of $H$, we enter the mixed-heating regime. With two different heat sources, and (potentially) two different heat sinks, matters are more complicated - but not much more.
 
 The numerical data exposes the trend immediately ({numref}`isocondhmixed_fig`). It is clear that the conductive geotherm forms a parabola whose second derivative is exactly equal to $-H$; the rest follows by integration, with the constants provided by logic and observation:
@@ -412,7 +422,7 @@ $$ \begin{align*}
 
 I.e. the surface flux in the mixed case is simply the sum of the two heat drivers considered separately, just as we would expect from first principles.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ```{figure} #isocondhmixed
 :name: isocondhmixed_fig
@@ -420,15 +430,15 @@ I.e. the surface flux in the mixed case is simply the sum of the two heat driver
 Summary of the scaling behaviours of the conductive solution for mixed heating. The inner boundary is set to dimensionless temperature $T=1$, the outer to $T=0$. On the right, average temperature and the slope of $\delta T / \delta h$ are given as functions of $H$. Gradient clearly varies as a function of dimensionless height $h$ above the mantle base according to a slope given by $-H$. The conductive geotherm for mixed heating is therefore, in fact, a parabola.
 ```
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ### Conduction in cylindrical domains
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 The Cartesian cases revealed themselves more or less directly upon observation. The cylindrical cases are not so trivial, but the 'method of inspection' still gets us where we need to go.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 #### Basal heating
 
@@ -438,6 +448,7 @@ editable: true
 label: isocondf
 slideshow:
   slide_type: ''
+tags: [remove-cell]
 ---
 impaths = sorted(
     os.path.relpath(path)
@@ -600,9 +611,13 @@ fig
 ```
 
 ```{code-cell} ipython3
-:label: isocondffit
-:tags: [remove-cell]
-
+---
+label: isocondffit
+tags: [remove-cell]
+editable: true
+slideshow:
+  slide_type: ''
+---
 canvas = Canvas(size = (3, 3))
 ax = canvas.make_ax()
 allT, allr = [], []
@@ -734,7 +749,7 @@ T_\mathrm{av, cond} &= \lim_{f \to 1} \frac{1}{2} \left(-\frac{1}{\ln f} - \frac
 
 Which is reassuring.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 #### Internal heating
 
@@ -1156,6 +1171,7 @@ editable: true
 slideshow:
   slide_type: ''
 label: cylindrical_mixed_geotherm
+tags: [remove-cell]
 ---
 canvas = Canvas(size=(8, 4), shape = (1, 2))
 
@@ -1330,7 +1346,7 @@ As before, we would like to obtain an exact closed-form solution for the conduct
 
 The first step, as previously, is to convert the empirical temperature profile into a geothermal gradient by taking a differential, then convert that gradient into the (axisymmetric) heat flux $\phi$ by multiplying by the negative of the non-dimensionalised height-dependent angular length $s^{*}$.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ```{figure} #cylindrical_mixed_geotherm
 :name: cylindrical_mixed_geotherm_fig
@@ -1338,7 +1354,7 @@ The first step, as previously, is to convert the empirical temperature profile i
 The equilibrium conductive geotherms for cylindrical mixed heating for varying $H$ (colour) and $f$ (opacity, where $1$ is solid and $0$ is invisible), obtained numerically. Curves that are convex towards the origin indicate the 'monocooling' subregime, where both volumetric and basal heating contribute to surface heat flux; curves that are concave towards the origin indicate the unrealistic 'duocooling' subregime, where heat leaves the system through both upper and lower boundaries and peak temperatures are found in the mid-mantle.
 ```
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 The numerical results for the cylindrical mixed-heating case {numref}`cylindrical_mixed_geotherm_fig` show the sorts of trends we are now familiar with from both the Cartesian mixed-heating and the cylindrical basally- and internally-heated cases. The two subregimes are evident, as is the effect of curvature.
 
@@ -1352,7 +1368,7 @@ $$
 
 Logically, the fit parameters $C_1$ (slope) and $C_2$ (intercept) must be pure functions of $f$ and $H$ {numref}`cylindrical_mixed_geotherm_analysis_fig`. If we can figure out the content of these functions, we have a statement for the geothermal flux by substitution. The $C_2$ term is height-independent, so we know it must describe the boundary flux. The $C_1$ term, by contrast, is dependent on the square of height, i.e. it is an areal term. Evidently this must be associated with the volumetric heat flux.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 ```{figure} #cylindrical_mixed_geotherm_analysis
 :name: cylindrical_mixed_geotherm_analysis_fig
@@ -1360,7 +1376,7 @@ Logically, the fit parameters $C_1$ (slope) and $C_2$ (intercept) must be pure f
 The results of a linear regression of $\phi_q$ against $r^2$ for each combination of $f$ and $H$ (except for $f=1$). $C_1$ is the slope of the fit and $C_2$ is the intercept. The goodness of fit, as expected, is extremely high ($>>0.99$ in all cases).
 ```
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 In the monocooling subregime, the flux through any layer at equilibrium must be the flux through the base (a constant term) plus the flux entering into the system from all the layers below the current depth. Intuitively and numerically, we know that the latter forcing comes to $H \cdot \mathrm{Disc}(h)$. If we crack open this expression to expose $r(h)^2$, we end up with a variable term and a constant term:
 
@@ -1419,9 +1435,13 @@ That $T_\mathrm{mixed}(h)$ takes this particular form is both intuitive and a li
 The maths links up with intuition when we recognise that the equilibrium solution imposes a certain symmetry all the way through the domain from top to bottom; pick any two depths, and the space between them is a conductive equilibrium profile in isolation, with an upper and lower boundary of its own. Thus we find the basal and internal endmembers lurking 'inside' the general (mixed-heating) case both physically, mathematically, and literally.
 
 ```{code-cell} ipython3
-:label: h_crit_vs_f_chart
-:tags: [remove-cell]
-
+---
+label: h_crit_vs_f_chart
+tags: [remove-cell]
+editable: true
+slideshow:
+  slide_type: ''
+---
 canvas = Canvas()
 ax = canvas.make_ax()
 xs = np.linspace(0.00001, 0.9999, 1000)
@@ -1433,13 +1453,15 @@ ax.line(
 canvas
 ```
 
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
 ```{figure} #h_crit_vs_f_chart
 :name: h_crit_vs_f_chart_fig
 
 $H_\mathrm{crit}$ plotted against $f$. At $f=0$, a solid cylinder is implied, while at $f=1$, we have an infinitely thin shell.
 ```
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 As discussed earlier, moving along the $H$ scale from low to high values takes us from a 'monocooling' regime (where the lower boundary heats and the upper boundary cools) to a (usually unrealistic) 'duocooling' regime where both boundaries cool. Separating these two regimes is a value $H_\mathrm{crit}$ at which the equilibrium temperature just shy of the lower boundary is naturally brought to $1$ and the flux consequently drops to zero, dynamically insulating the system.
 
@@ -1499,7 +1521,7 @@ $$
 
 A model parameterised this way will reliably be monocooling as long as $H^*$ is kept within $(0, 1)$; equivalently, a dataset parameterised in $H$ can be cleaved along the $H^*=1$ plane to allow each subregime to be analysed independently.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 We are still yet to obtain $T_\mathrm{av}$ for this final, general case. We might imagine this would require a lengthy a complicated integral, but actually, the symmetries between the mixed, internal, and basal cases allow us to assemble $T_\mathrm{av}$ from what we already have.
 
@@ -1515,7 +1537,7 @@ $$
 
 Our purpose in this section was to derive closed-form expressions of the geothermal and thermal flux gradients for conductive heat transport at equilibrium. The general case (the 'supremum', in a sense) countenances a mixed heating regime in a curved domain, with three free parameters: the rate of internal heat production per area ($H$ in the range $0-10$), the degree of curvature ($f$ in the range $0-1$), and the nature of the lower boundary layer (effectively a boolean variable or 'switch' which toggles between a fixed gradient of zero or a fixed value of $1$). All other cases explored in this section are effectively endmembers of this general case: non-heating $H=0$ versus heating $H>0$ and non-curved ($f=1$) versus curved ($f<1$) for each of the two choices of boundary condition; discarding the farcical case of neither basal nor volumetric heating, that gives us six cases in total. Each expression derived empirically, then reduced into a symbolic form. All align with the literature, albeit in several cases in somewhat novel forms as inspired by the logic we have outlined and/or a close inspection of the empirical data. The results are intended to serve simultaneously as a convenient reference, a benchmarking exercise for our physics code, and as a theoretical backstop for the work that is to come.
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 **Common expressions**:
 
@@ -1590,7 +1612,7 @@ T_\mathrm{av} &= H_\mathrm{coeff} \; T_\mathrm{av, basal} + \frac{H}{4} r_m \\
 &\text{where} \quad H_\mathrm{coeff} = 1 - \frac{H}{2}r_m
 \end{align*} $$
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 **Inverse temperature profiles ($0 \le h \le 1$)**:
 
@@ -1699,8 +1721,4 @@ tags: [remove-cell]
 
 # symp_rep = model.sympy()
 # repr(symp_rep)
-```
-
-```{code-cell} ipython3
-
 ```

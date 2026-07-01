@@ -16,6 +16,7 @@ kernelspec:
 editable: true
 slideshow:
   slide_type: ''
+tags: [remove-cell]
 ---
 import os
 import math
@@ -752,9 +753,11 @@ Where ${\Delta T}_{\mathrm{TBL},b}$ is the temperature jump across the inner bou
 
 The Earth, it hardly needs to be stated, is round. All the analysis presented so far has ignored this fact - and for good reason. The addition of curvature complicates matters considerably.
 
-There are two main ways in which curvature changes the game. The first is that different layers now have different lengths. The second is that conduction and gravitation are no longer in alignment: planetary curvature allow heat to take 'shortcuts' across gravitational potential surfaces which may not be available to advecting parcels.
+There are two main ways in which curvature changes the game. The first is that different layers now have different lengths. The second is that conduction and gravitation are no longer in alignment: planetary curvature allow heat to take 'shortcuts' ('azimuthal connectivity') across gravitational potential surfaces which may not be available to advecting parcels. A third way the annulus differs from the Cartesian box - not technically, but often practically - is that it is naturally periodic, unlike the somewhat unnatural periodicity that can be achieved in Cartesian.
 
 In particular, curved geometries break the symmetry between upper and lower boundaries. This invalidates many of the assumptions that made the planar case amenable to analysis. The additional space at the top of the model now allows more room for downwellings relative to basal upwellings, tending to promote instability [@Jarvis1991-ir]; on the other hand, the curved geotherm and the increased surface for radiating heat would tend to permit a comparatively thicker upper boundary layer. The effect of these countervailing forcings on the fundamental scalings of $\mathrm{Nu}$, $\mathrm{Ra}$, $\mathrm{Ra}_{\mathrm{cr}}$, and the all-important relation $\mathrm{Nu} \propto R^{\beta}$ is not obvious.
+
+The cylindrical annulus geometry appears to have originated with Gurnis and Zhong [@Gurnis1991-ub], who adopted it to enhance the physical realism of the famous 1988 coupled plate-mantle models of Gurnis [@Gurnis1988-ks], Hager, and Bradford [@Gurnis1988-wx]. That work was picked up by Travis and Olson [@Travis1994-fu] and independently, and more intensively, by Jarvis [@Jarvis1993-cb] [@Jarvis1994-np] [@Jarvis1995-sf]. Van Keken made some important theoretical contributions in 2001 [@Van_Keken2001-un]. Since the release of Hernlund and Tackley [@Hernlund2008-rr], the cylindrical annulus has been treated as something of a poor man's spherical annulus [@Guerrero2018-oj] [@Fleury2024-sr], widely used (e.g. [@Alonso1999-zr], [@Nakagawa2005-pl] [@Sahoo2020-zc]), but not closely studied in its own right. The most recent theoretical work on the annulus appears to be that of Kramer, who revisited the maths in some detail, though only *vis a vis* Stokes flow [@Kramer2021-nr].
 
 To begin to unpack the complexities of convection in the annulus, we can start with the assumption that - as in the planar case - the convective steady state will eventually result in a broad intracellular region of uniform temperature $T_{\mathrm{cell}}$. Assuming a unit temperature drop $\Delta T = 1$, we can write:
 
@@ -818,24 +821,12 @@ $$
 
 Using this scaling, Jarvis was able to obtain a *beta* exponent of $0.321 \pm 0.001$ across four values of $f$ from $(1.0 - 0.1)$ [@Jarvis1993-cb].
 
-+++
+Moving towards more complex scenarios leads to exponentially more complex mathematics. Much is not fundamentally well-constrained or understood, due to a tendency in the literature to evaluate models on their purported 'realism' rather than on their own merits.
 
-#### Radiogenic heat in a cylindrical planet
+Incorporating a volumetric heat source was problematic enough in the Cartesian case; in the cylindrical case, matters are even worse. Not only do we have to account for the asymmetrical upper and lower boundaries: we also have to account for the fact that there is physically more room in the upper part of a curved domain than in the lower part. Assuming a uniform distribution of heat-producing elements and a core ratio of 50% (close to that of Earth), close to 60% of the disc lies above the mid-depth; closer to two thirds for a true sphere.
 
-+++
-
-Incorporating a volumetric heat source was problematic enough in the Cartesian case; in the cylindrical case, matters are even worse. Not only do we have to account for the asymmetrical upper and lower boundaries: we also have to account for the fact that there is physically more room in the upper part of a curved domain than in the lower part: assuming a uniform distribution of heat-producing elements and a core ratio of 50% (close to that of Earth), close to 60% of the disc lies above the mid-depth; closer to two thirds for a true sphere.
+Travis and Olson [@Travis1994-fu] appear to have been the first to tackle this case for the cylindrical annulus, albeit without the benefit of the isoviscous analysis of Jarvis [@Jarvis1993-cb] which was submitted after, but published before, their own paper. The Travis paper reported familiar results in the annulus as had been previously observed in the Cartesian for the internally-heated endmember, and did not go into substantial detail on the impact of the geometry except in broad terms of being 'more natural'. 
 
 In general, the behaviour of internally-heated fluids in annular domains is not well understood. Qualitatively, we can comfortably say that curvature should suppress convective vigour - which, given that internal heating itself suppress convection, suggests that such systems should be expected to be fairly quiescent.
 
-+++
-
-### Review
-
-+++
-
-While much of the theory just presented is canonical and attested beyond dispute, it is clear that there remain substantial gaps: dubious derivations inspired by small-run numerical studies and peppered with unquantified or arbitrary constants, as well as certain scenarios and combinations of scenarios that are yet to be rigorously described in the literature.
-
-It may seem odd or even incredible that such basic questions would remain unanswered (or unconvincingly answered) given the many decades of sustained inquiry and the availability in more recent times of increasingly cheap and powerful computers. It is as if generations of scientists have relegated the details to 'future work' and then forgotten to get around to it. Indeed, we speculate that this is exactly what has happened, and that - far from suggesting any defects in the conduct of individual workers - the driver is in fact an unfortunate sociological force emerging from the way scientific publishing works: a bias towards fewer, bigger, more detailed models - which are easier to run and easier to justify - over more, smaller, less detailed models - which are harder to justify and almost impossible to run without specialised tooling. In a subsequent chapter, we will conduct an analysis of this problem and propose a methodology and associated software explicitly designed to overcome it.
-
-For now, let us continue laying down the foundations of our new model.
+Regarding more sophisticated rheologies and combinations of scenarios, many such models have been run in the annulus, but again, revealing little about the effect of the geometry as such. The field is very much open.

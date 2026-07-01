@@ -26,7 +26,7 @@ project:
       children:
         - file: content/chapter_02/introduction.md
         - file: content/chapter_02/general.md
-        - file: content/chapter_02/geometry.md
+        - file: content/chapter_02/cylindrical.md
         - file: content/chapter_02/numerical.md
         - file: content/chapter_02/ms98.md
         - file: content/chapter_02/conclusion.md
@@ -55,6 +55,7 @@ project:
     - title: Nonlinear Convection
       children:
         - file: content/chapter_06/introduction.md
+        - file: content/chapter_06/cartesian_I.md
         - file: content/chapter_06/conclusion.md
 
     - title: Towards a General Theory of Planets
