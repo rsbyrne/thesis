@@ -39,6 +39,14 @@ class FromFile(Image):
     def get_pilimg(self):
         return _PILImage.open(self.filepath, **self.pilkwargs)
 
+class FromPIL(Image):
+    __slots__ = ('pilarg',)
+    def __init__(self, pilarg):
+        self.pilarg = pilarg
+        super().__init__()
+    def get_pilimg(self):
+        return self.pilarg
+
 class Blank(Image):
     def get_pilimg(self):
         return _PILImage.new(*self.pilargs, **self.pilkwargs)
