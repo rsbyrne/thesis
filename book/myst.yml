@@ -58,7 +58,7 @@ project:
         - file: content/chapter_06/cartesian_I.md
         - file: content/chapter_06/conclusion.md
 
-    - title: Towards a General Theory of Planets
+    - title: General discussion
       children:
         - file: content/chapter_07/introduction.md
         - file: content/chapter_07/conclusion.md

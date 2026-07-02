@@ -1,1 +1,3 @@
-# Towards a General Theory of Planets
+# General discussion
+
+*Note to supervisors: For natural reasons I'm minded to right this last, because it should respond very directly to the rest of the content. I have about 20,000 words for this kicking around, based on notes from three conference presentations I've given on the topic of advanced modelling for planetary sciences and the general theory around what can and can't happen within the symmetries of a planet, all based on what I've learned from this thesis (about metastability, hysteresis, hyperstatefulness, and that kind of thing). It will be short but punchy ideally, and very in vogue now that Weller, Lenardic, O'Neill, and all those guys are starting to think in this sort of direction.*

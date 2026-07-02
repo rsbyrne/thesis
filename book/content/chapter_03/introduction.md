@@ -4,7 +4,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.19.0
+    jupytext_version: 1.19.3
 kernelspec:
   name: python3
   display_name: Python 3 (ipykernel)
@@ -14,6 +14,10 @@ kernelspec:
 +++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": ["remove-cell"]}
 
 # Tools and Methods
+
++++
+
+*Note to supervisors: this whole section needs to be updated. I spent a lot of the summer working on a new version of this chapter, but it ended up much too long (about 65,000 words! It's a complicated topic!); some of this will be useful for the new version, but in general I think most of this section should be very technical and direct, focussing on the exact problems that Everest and PlanetEngine solves and going through the architecture in a lot of detail. I'd also like to include a little demonstration (using the Lorenz model, which is in a sense the original numerical model of convection - I've had an Everest version of this kicking around for years and I think it will make a nice conclusion to the chapter, showing exactly how Everest works and why it's so useful). It won't be hard to write this chapter properly now that I have the right strategy, and especially now that I'm refamiliaraised with the codebase (it's very old code now - there's a whole new version of Everest that's totally different! But that's way out of scope for the thesis; we can publish those as papers down the track). I estimate there's three or four days of work in this, if I draw on some of the material I worked up over the holidays and some of what's already here.*
 
 +++
 

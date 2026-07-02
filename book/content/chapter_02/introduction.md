@@ -1,5 +1,7 @@
 # Foundations
 
+*Note to supervisors: This chapter has come together in lots of pieces spread out over almost a decade now, so it's very lumpy. Probably parts of it could be cut off and redistributed as background sections for the research chapters.*
+
 This research program is predicated on the notion that the solid Earth can be understood as a viscous convecting fluid.
 
 Labouring under this paradigm, the modern geodynamicist is the fortunate inheritor of two hundred years of advanced fluid dynamic theory and experimental data. Much of this legacy is owed to the pre-computing era, when painstakingly hand-derived equations and complicated practical experiments hewed out the foundations of the field. The last half century has built upon those foundations with sophisticated computer-driven numerical modelling work and vast new datasets from Earth and beyond - resources that would have astonished the forefathers of the field.
