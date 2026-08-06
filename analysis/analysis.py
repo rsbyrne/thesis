@@ -1,5 +1,7 @@
 import os
 import math
+import inspect
+import functools
 
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
@@ -141,3 +143,45 @@ def derivative(y, x, n = 1):
     if n:
         return derivative(*out, n)
     return out
+
+
+
+
+
+def process_bounds_annotation(bnds):
+    if bnds is inspect._empty:
+        bnds = (None, None)
+    lbnd, ubnd = bnds
+    if lbnd is None:
+        lbnd = -float('inf')
+    if ubnd is None:
+        ubnd = float('inf')
+    exc = ValueError((lbnd, ubnd))
+    if not all(isinstance(bnd, (int, float)) for bnd in (lbnd, ubnd)):
+        raise exc
+    if not ubnd > lbnd:
+        raise exc
+    return (lbnd, ubnd)
+
+
+def custom_curve_fit(model, var_vals, natural_vals, **kwargs):
+
+    defaults = tuple(par.default for par in tuple(inspect.signature(model).parameters.values())[1:])
+    bounds = tuple(zip(*tuple(
+        process_bounds_annotation(par.annotation)
+        for par in tuple(inspect.signature(model).parameters.values())[1:]
+        )))
+    
+    (*params,), error = sp.optimize.curve_fit(
+        model, var_vals, natural_vals, defaults, bounds=bounds,
+        **kwargs,
+        )
+    
+    params = dict(zip(tuple(inspect.signature(model).parameters)[1:], map(float, params)))
+    synthetic_vals = model(var_vals, **params)
+    linscore = r2_score(synthetic_vals, natural_vals)
+
+    bndmod = functools.partial(model, **params)
+    bndmod.params = params
+
+    return bndmod, linscore

@@ -56,6 +56,8 @@ project:
       children:
         - file: content/chapter_06/introduction.md
         - file: content/chapter_06/cartesian_I.md
+        - file: content/chapter_06/cartesian_II.md
+        - file: content/chapter_06/varying_geometry.md
         - file: content/chapter_06/conclusion.md
 
     - title: General discussion

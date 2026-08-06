@@ -2837,6 +2837,8 @@ storage/cospar_figs/image44.png
 storage/cospar_figs/image45.png
 storage/cospar_figs/image46.png
 storage/cospar_figs/image47.png
+storage/cospar_figs/image48.png
+storage/cospar_figs/image49.png
 storage/cospar_figs/image5.png
 storage/cospar_figs/image6.png
 storage/cospar_figs/image7.png

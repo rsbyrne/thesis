@@ -144,6 +144,10 @@ def jarvis_theory(f, l):
         (l_sq / r_m_sq)
         )
 
+def jarvis_theory_aspect(f, A):
+    l = cylindrical.aspect_curvature_to_wavenumber(A, f)
+    return jarvis_theory(f, l)
+
 def rayleigh_dimensionlesswavenumber_original(a):
     return (a**2 + np.pi**2)**3 / a**2
 
