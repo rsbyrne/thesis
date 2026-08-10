@@ -183,5 +183,6 @@ def custom_curve_fit(model, var_vals, natural_vals, **kwargs):
 
     bndmod = functools.partial(model, **params)
     bndmod.params = params
+    bndmod.linscore = linscore
 
-    return bndmod, linscore
+    return bndmod
