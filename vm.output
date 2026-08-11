@@ -5719,3 +5719,85 @@
 [I 2026-08-11 08:40:21.887 ServerApp] Starting buffering for 91973e85-92d5-4692-b6de-1a3e6bf79611:aa3c2910-fee2-4067-aa09-c45dd7fd323d
 [I 2026-08-11 08:40:21.904 ServerApp] Connecting to kernel 91973e85-92d5-4692-b6de-1a3e6bf79611.
 [I 2026-08-11 08:40:21.905 ServerApp] Restoring connection for 91973e85-92d5-4692-b6de-1a3e6bf79611:aa3c2910-fee2-4067-aa09-c45dd7fd323d
+[I 2026-08-11 08:41:38.162 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-08-11 08:41:38.462 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_II.ipynb
+[I 2026-08-11 08:41:38.464 ServerApp] Saving critical_II.ipynb
+[I 2026-08-11 08:41:38.817 ServerApp] Saving critical_II.md
+[I 2026-08-11 08:41:44.466 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-08-11 08:43:35.575 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-08-11 08:43:35.876 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_II.ipynb
+[I 2026-08-11 08:43:35.878 ServerApp] Saving critical_II.ipynb
+[I 2026-08-11 08:43:36.231 ServerApp] Saving critical_II.md
+[I 2026-08-11 08:44:13.577 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-08-11 08:44:13.874 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_II.ipynb
+[I 2026-08-11 08:44:13.876 ServerApp] Saving critical_II.ipynb
+[I 2026-08-11 08:44:14.141 ServerApp] Saving critical_II.md
+[I 2026-08-11 08:44:14.889 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-08-11 08:45:38.638 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-08-11 08:45:38.884 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_II.ipynb
+[I 2026-08-11 08:45:38.885 ServerApp] Saving critical_II.ipynb
+[I 2026-08-11 08:45:39.437 ServerApp] Saving critical_II.md
+[I 2026-08-11 08:45:51.752 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-08-11 08:45:52.052 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_II.ipynb
+[I 2026-08-11 08:45:52.054 ServerApp] Saving critical_II.ipynb
+[I 2026-08-11 08:45:52.203 ServerApp] Saving critical_II.md
+[W 2026-08-11 08:46:00.848 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_lattice_diagram?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 2.25ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:00.848 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23critical_initial_condition_example?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 2.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:00.887 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_infinimum_main_chart?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.82ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:00.922 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_iso_basal_0?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.89ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:00.922 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_model_f_msa_error?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 1.16ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:00.923 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_empirical_model_f_varying_aspect_analysis?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.56ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:00.923 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_model_f_msa_comparison?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.85ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:00.926 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_empirical_model_f_aspect_all_analysis?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:00.927 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_empirical_model_f_3D?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:00.929 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_M_H_main_chart?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.44ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:00.955 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_empirical_model_H_3D?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.72ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:01.064 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23critical_initial_condition_example?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 1.32ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:01.065 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_lattice_diagram?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 1.52ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:01.089 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_infinimum_main_chart?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.68ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:01.121 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_model_f_msa_error?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.92ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:01.121 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_empirical_model_f_varying_aspect_analysis?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 1.18ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:01.122 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_iso_basal_0?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 1.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:01.122 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_model_f_msa_comparison?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.48ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:01.134 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_empirical_model_f_aspect_all_analysis?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.61ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:01.135 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_M_H_main_chart?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.43ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:01.135 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_empirical_model_f_3D?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.46ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:01.161 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_empirical_model_H_3D?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.68ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:03.108 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_lattice_diagram?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 1.35ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:03.109 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23critical_initial_condition_example?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 1.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:03.149 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_infinimum_main_chart?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.83ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:03.153 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_iso_basal_0?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.49ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:03.154 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_model_f_msa_error?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.45ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:03.155 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_empirical_model_f_aspect_all_analysis?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.63ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:03.155 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_model_f_msa_comparison?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.94ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:03.156 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_empirical_model_f_varying_aspect_analysis?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 1.25ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:03.161 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_empirical_model_f_3D?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.47ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:03.161 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_M_H_main_chart?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.42ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:03.210 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_empirical_model_H_3D?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.92ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:05.894 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_lattice_diagram?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 1.35ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:05.894 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23critical_initial_condition_example?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 1.58ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:05.934 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_infinimum_main_chart?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.82ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:05.939 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23linear_stability_model_f_msa_comparison?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.66ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:05.940 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_iso_basal_0?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.95ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:05.941 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_model_f_msa_error?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.65ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:05.941 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_empirical_model_f_varying_aspect_analysis?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.94ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:05.941 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_empirical_model_f_aspect_all_analysis?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 1.24ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:05.947 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_empirical_model_f_3D?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.60ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:05.948 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_M_H_main_chart?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.89ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[W 2026-08-11 08:46:06.003 ServerApp] 404 GET /files/workspace/book/content/chapter_04/%23criticality_empirical_model_H_3D?_xsrf=[secret] (db3e2f005e3b466db4f6e93e88b9d8c9@172.17.0.1) 0.98ms referer=http://localhost:8890/lab/workspaces/research/tree/workspace/book/content/chapter_04/critical_II.ipynb
+[I 2026-08-11 08:46:08.727 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-08-11 08:46:09.011 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_II.ipynb
+[I 2026-08-11 08:46:09.012 ServerApp] Saving critical_II.ipynb
+[I 2026-08-11 08:46:09.886 ServerApp] Saving critical_II.md
+[I 2026-08-11 08:47:15.107 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-08-11 08:47:15.341 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_II.ipynb
+[I 2026-08-11 08:47:15.345 ServerApp] Saving critical_II.ipynb
+[I 2026-08-11 08:47:16.261 ServerApp] Saving critical_II.md
+[I 2026-08-11 08:48:46.597 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-08-11 08:48:46.895 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_II.ipynb
+[I 2026-08-11 08:48:46.897 ServerApp] Saving critical_II.ipynb
+[I 2026-08-11 08:48:47.275 ServerApp] Saving critical_II.md
+[I 2026-08-11 08:49:21.710 ServerApp] Loaded Jupytext configuration file at workspace/book/content/jupytext.toml
+[I 2026-08-11 08:49:21.964 ServerApp] Saving file at /workspace/book/content/chapter_04/critical_II.ipynb
+[I 2026-08-11 08:49:21.966 ServerApp] Saving critical_II.ipynb
+[I 2026-08-11 08:49:22.028 ServerApp] Saving critical_II.md
