@@ -6,7 +6,7 @@ temp/
 book/_build/
 book/_old_template
 book/exports
-book/content/*
+book/content/*/*
 !book/content/**/*.md
 !book/content/**/*.py
 /data/

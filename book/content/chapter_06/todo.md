@@ -1,0 +1,1 @@
+- Chart Nu to yield fraction
