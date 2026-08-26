@@ -293,20 +293,20 @@ $$
 Now, each of these three parameters has a particular endmember in the limit of which the resultant model behaviour tends to be much simpler:
 
 - If $f$ goes to $1$, the model becomes Cartesian, with the consequence - among other things - that the conductive geotherm becomes linear.
-- If $H$ goes to $0$, the model ceases to be mixed-heated and becomes basally-heated only, with the consequence - among other things - that the maximum temperature in the domain is always $1$ and is always experience solely at the lower boundary.
-- If $\eta_\Delta$ goes to $0$, the temperature-dependent component of viscosity disappears and the model becomes isoviscous at $\eta=1$, with the consequence - among other things - that the two boundaries can support symmetrical flow. (This param also has a special endmember at which the domain becomes insulating, but the value of this endmember is dynamic in this parameterisation.)
+- If $H$ goes to $0$, the model ceases to be mixed-heated and becomes basally-heated only, with the consequence - among other things - that the maximum temperature in the domain is always $1$ and is always experience solely at the lower boundary. (This param also has a special endmember at which the domain becomes insulating, but the value of that endmember is dynamic in this parameterisation.)
+- If $\eta_\Delta$ goes to $1$, the temperature-dependent component of viscosity disappears and the model becomes isoviscous at $\eta=2$, with the consequence - among other things - that the two boundaries can support symmetrical flow.
 
 In a sense, it is as if each of our three params has two states: 'active' and 'inactive'. A param is active when it is away from its special fixed endmember, and is otherwise inactive. Two states each across three switches yields eight conditions: effectively eight 'paramodels', each with its own peculiar dynamics to explore. The eight paramodels make up a structure called, in abstact algebra, a 'lattice', with progressively more complex models subsuming more simple ones. The lattice can be represented as a graph ({numref}`criticality_lattice_diagram_fig`).
 
-The $A$ node is the 'supremum'. For this apex paramodel, none of the params are constrained to be in their endmember state: each is free to range across the entirety of its natural domain. This is effectively the orignal model, viewed as the general case of all its particular endmembers.
+The $M_\mathrm{sup}$ node is the 'supremum'. For this apex paramodel, none of the params are constrained to be in their endmember state: each is free to range across the entirety of its natural domain. This is effectively the orignal model, viewed as the general case of all its particular endmembers.
 
-Below the $A$ node and subsumed by it are paramodels $B$, $C$, and $D$. In each of these, exactly one param is locked in its endmember state, while the others continue to range freely: for example, this layer contains a paramodel in this layer that captures variable viscosity and basal heating in the annulus.
+Below the $M_\mathrm{sup}$ node and subsumed by it are paramodels $M_\mathrm{f;H}$, $M_\mathrm{f;\eta_\Delta}$, and $M_\mathrm{H;\eta_\Delta}$. In each of these, exactly one param is locked in its endmember state, while the others continue to range freely: for example, this layer contains a paramodel in this layer that captures variable viscosity and basal heating in the annulus.
 
-Below these three nodes are a further three nodes $E$, $F$, and $G$ representing those paramodels in which two variables are locked in their endmember state and only one ranges freely. This layer contains, for example, a model of variable viscosity with basal heating in a Cartesian domain. Each model in this layer is subsumed by two of the models in the layer above: so the variably-viscous, basally-heated Cartesian model is an endmember of both the variably-viscous, mixed-heated Cartesian model and the variably-viscous, basally-heated annular model.
+Below these three nodes are a further three nodes $M_f$, $M_H$, and $M_{\eta_\Delta}$ representing those paramodels in which two variables are locked in their endmember state and only one ranges freely. This layer contains, for example, a model of variable viscosity with basal heating in a Cartesian domain. Each model in this layer is subsumed by two of the models in the layer above: so the variably-viscous, basally-heated Cartesian model is an endmember of both the variably-viscous, mixed-heated Cartesian model and the variably-viscous, basally-heated annular model.
 
-At the very bottom of the lattice is the so-called 'infinimum', $H$, for which all three params are locked in their simpler state. This is the ultimate endmember: the most degenerate model. It is, in effect, a simpler variant of each of the three models making up the layer above.
+At the very bottom of the lattice is the so-called 'infinimum', $M_\mathrm{inf}$, for which all three params are locked in their simpler state. This is the ultimate endmember: the most degenerate model. It is, in effect, a simpler variant of each of the three models making up the layer above.
 
-It may seem excessive to dissect our model to such a degree: it is, however, necessary if we are to produce a robust, meaningful, useful artifact at the end. It would be easy to simply take the supremum paramodel $M_A$ and fit a single, all-encompassing surface to it. However, while there is much we do not and cannot know about the system we are studying, one of the things we know for sure is that every higher model must converge on its lower models in the limit that its params are rendered inactive. If we do not account for this explicitly, we will certainly end up with a fitted surface that spuriously acts on dimensions that we know to be irrelevant for a particular endmember: we will be sacrificing the fit of our lower models in pursuit of a more convenient fit for our higher models; and this, needlessly.
+It may seem excessive to dissect our model to such a degree: it is, however, necessary if we are to produce a robust, meaningful, useful artifact at the end. It would be easy to simply take the supremum paramodel $M_\mathrm{sup}$ and fit a single, all-encompassing surface to it. However, while there is much we do not and cannot know about the system we are studying, one of the things we know for sure is that every higher model must converge on its lower models in the limit that its params are rendered inactive. If we do not account for this explicitly, we will certainly end up with a fitted surface that spuriously acts on dimensions that we know to be irrelevant for a particular endmember: we will be sacrificing the fit of our lower models in pursuit of a more convenient fit for our higher models; and this, needlessly.
 
 Just as we carefully constructed our various empirical conductive geotherms to ensure convergence on their simpler endmembers, so must we carefully fit the liminal models of our higher paramodels to their subsumed, lower cousins. In practice, this means fitting the endmember cases first and providing each successful fit as a constraint on the fits of higher cases. We will know we have succeeded if the empirical model for our supremum case exactly collapses into the forms of the empirical models of the lower cases as each relevant param is deactivated. Not only will this procedure guarantee a smoother and more stable fit (one that does not 'lift at the corners', as statistical models often do): better still, the form of the final analysis will have a better chance of hinting at something meaningful about the actual underlying physics of the system.
 
@@ -2251,11 +2251,108 @@ w_k &= 15.796 \\
 w_c &= 3.0212
 \end{align*}$$
 
-Given the paucity of our data, the wide range of values being fitted, and the profusion of parameters, it is likely we are substantially overfitting the data in this case. This node of our lattice model, and those dependent on it, should be marked as dubious until significantly more data can be obtained for varying $\eta_\Delta$.
+Given the paucity of our data, the wide range of values being fitted, and the profusion of parameters, it is likely we are substantially overfitting the data in this case. This node of our lattice model, and those dependent on it, should be marked as dubious until significantly more data can be obtained.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 #### $M_{f;H}$: isoviscous rheology with mixed heating in the annulus
+
++++
+
+In our lattice model, we have now covered the infinimum node and the first tier of non-trivial node. Now we enter the second tier, which is the first to contain nodes that have multiple dependencies.
+
+The $M_{f;H}$ node includes all those cases in which both the curvature $f$ and the internal heating parameter $H$ may vary from the infinimum. We previously obtained excellent models for each of these parameters in isolation. Just as those models were required to collapse into the infinimum mode at the extreme values of $f$ and $H$, so must $M_{f;H}$ collapse into $M_f$ and $M_H$ as $H$ and $f$ degenerate respectively. These are punishing constraints to navigate: however, they also offer clues as to the proper form of the relation governing $M_{f;H}$.
+
+At the heart of every node in our lattice model is the liminal model, which for this survey (where the resolution $N$ is held constant), is simply a mapping of $A$ to $\alpha_\mathrm{cr}$. The first step is to set the liminal models for $M_f$ and $M_H$ side by side and to consider what sort of function could converge on one or the other for endmember values of $f$ and $H$.
+
+$$ \begin{align*}
+L_f &:= A \mapsto \left( \frac{{(A-p)}^q}{A^r} + s \right) \log{\left( \frac{1}{f} \right)}^{mA + k} + L_\mathrm{inf}(A) \\
+L_H &:= A \mapsto \left( 1 + P_a(H) e^{-5 (A - 1)} + P_b(H) {(A - 1)}^2 + P_c(H) {(A - 1)} \right) \cdot L_\mathrm{inf}(A) 
+\end{align*} $$
+
+Where:
+
+$$
+L_\mathrm{inf} &:= A \mapsto \left( 1 + c \ e^\frac{1}{A} \right) \cdot {\left( \frac{\pi}{A} \right)}^4 {\left( 1 + A^2 \right)}^3
+$$
+
+Put very simply, $L_f$ takes the form of a perturbation of $L_\mathrm{inf}$ while $L_H$ takes the form of a scaling of $L_\mathrm{inf}$:
+
+$$ \begin{align*}
+L_f &:= A \mapsto \mathrm{Pert}_f(A) + L_\mathrm{inf}(A) \\
+L_H &:= A \mapsto \mathrm{Scal}_H(A) \cdot L_\mathrm{inf}(A) 
+\end{align*} $$
+
+Where $\mathrm{Pert}_f$ goes to zero as $f$ goes to $1$ and $\mathrm{Scal}_H(A)$ goes to one as $H$ goes to $0$.
+
+This immediately suggests two obvious ways in which the two functions could be combined:
+
+$$
+A \mapsto \mathrm{Scal}_H(A) \cdot \left( \mathrm{Pert}_f(A) + L_\mathrm{inf}(A) \right)
+$$
+
+Or:
+
+$$
+A \mapsto \mathrm{Pert}_f(A) + \left( \mathrm{Scal}_H(A) \cdot L_\mathrm{inf}(A) \right)
+$$
+
+This assumes that $f$ and $H$ affect the underlying behaviour independently of each other. If this is not the case, we will need to introduce a coupled forcing, $\mathrm{Coup}_{f, H}$. This forcing would be required to vanish to an identity (either $1$ or $0$, depending on where and how it is applied) if *either* $f$ or $H$ achieves its special value. We should certainly expect the forcings to be coupled, given that we know that the conductive geotherm depends complexly on both $f$ and $H$:
+
+$$
+T(h) &= H_\mathrm{coeff} \; T_\mathrm{basal}(h) - \frac{H}{4} \left( r(h)^2 - {r_o}^2 \right)
+$$
+
+$$
+T_\mathrm{basal}(h) &= \log_f r^*(h)
+$$
+
+$$
+H_\mathrm{coeff} = 1 - \frac{H}{2}r_m
+$$
+
+An added complication we must consider is the dependency of the critical heating rate $H_\mathrm{crit}$ on the domain curvature:
+
+$$
+H_\mathrm{crit}(f) = \frac{2}{r_m + {r_i}^2 \ln f}
+$$
+
+When we designed $M_H$, we explicitly excluded super-critical scenarios from the analysis. Since $M_{f;H}$ depends on $M_H$, we must adopt the same policy, but a simple cutoff won't be sufficient: the coupled behaviour of $H_\mathrm{crit}$ must be accounted for. The best way to do this is by nondimensionalising $H$ as $H_\mathrm{crit}$ such that subcritical values of $H$ are always implied when $H_\mathrm{crit}$ lies between zero and one:
+
+$$
+H^*(H, f) \equiv \frac{H}{H_\mathrm{crit}(f)}
+$$
+
+We applied this nondimensionalisation as a prefiltering step, casting $H$ to $H^* \lt 1$ and back to ensure that only subcritical scenarios are included for the present analysis. This left us with over $4,586$ cases to fit to, including all the data from models $M_f$ and $M_H$ in addition to the thousands of cases that lie in the joint space.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+public = COMMON.model_eta = types.SimpleNamespace()
+
+def H_crit(f):
+    return 2 / (cylindrical.r_mid(f) + cylindrical.r_inner(f)**2 * np.log(f))
+
+def H_star(H, f):
+    return H / H_crit(f)
+
+df = isomixed.reset_index()
+df['H_star'] = H_star(df['H'], df['f'])
+df = df.drop('H', axis=1)
+df = df.set_index(['aspect', 'f', 'H_star'])
+series = df['alpha'].sort_index()
+series = series.loc[1:2, :, :0.999]
+df = series.reset_index()
+df['H'] = df['H_star'] * H_crit(df['f'])
+series = df.set_index(['aspect', 'f', 'H'])['alpha']
+series = series.sort_index()
+
+series
+```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
