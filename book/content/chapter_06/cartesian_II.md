@@ -275,13 +275,13 @@ image.fromfile(aliases.storagepath / "cospar_figs" / "image41.png")
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-```{figure} #cospar_image19
-:name: cospar_image19_fig
+```{figure} #cospar_image41
+:name: cospar_image41_fig
 
 A selection of the *Nusselt* timeseries for the two cases, compared. In all cases, the oscillations eventually synchronise at the same dominant frequency. However, the two cases pull apart emphatically at lower yield strengths, with episodicity manifesting and persevering at values that ought to belong to another mode!
 ```
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 If we expand each case into individual timeseries and set them against the single-roll cases over the entirety of their respective runtimes ({numref}`cospar_image19_fig`), a few interesting things come to light. For one, there are clearly many cases where the episodicity is established in both scenarios at the same yield strength, and crucially, the profiles and frequencies of the failure events (in $\mathrm{Nu}$ terms) are the same. This suggests that these models have converged on the same solution despite their different starting points. In other cases - like at $\tau_\mathrm{ref} = 10^5.3$ - we can clearly see where the single-roll cases achieve full mobility while the full-cell cases seemingly spontaneously develop clockword episodicity after a long quiescent period. An important clue lies in the baselines established in these liminal cases. The profile of a failure event, as we found from our pilot study, is asymmetrical: the failure commences at the stagnant plateau, peaks at a height that is a function of yield strength, and drops to the mobile plateau before the stagnant lid gradually 'regrows' ahead of the next failure. In the cases where both single-roll and full-cell models develop episodicity, the baselines of the failure cycle are aligned: both are progressing from the same stagnant profile to the same mobile profile from one side of the failure spike to the other. Yet in the cases where only the full-cell models develop episodicity, the baseline is markedly lower than the mobile plateau exhibited by the matching single-roll model. The state that the failure curve is 'attempting' to reach, as it were, is different. This 'false baseline' is the same baseline that is temporarily exhibited by the asymptotically mobile cases (e.g. $\tau_\mathrm{ref} = 10^5.1$ before they 'stumble' into the higher-$\mathrm{Nu}$ configuration.
 
@@ -308,8 +308,8 @@ image.fromfile(aliases.storagepath / "cospar_figs" / "image19.png")
 If we change the initial sinusoidal frequency to $2$, we bias the system towards full-cell convection instead of half-cell convection. It is clear that the yield strength determines the failure frequency regardless of planform. The effect on the episodic regime is emphatic: crucially, the location of the lower mode boundary appears to have shifted dramatically.
 ```
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Searching for clues, we applied the same Fourier analysis on the full-cell series (sinusoidal frequency of two) as we did on the single-roll series. The results are striking. The same 'shark fin' structure observed for the classic configurations appears for the full-cell ones, overyling it almost exactly from the stagnant boundary through to the cusp of full mobility. However, the full-cell cases go beyond that cusp, extending to yet higher frequencies at yet lower yield strength values. The surface appears to be a very natural and proper extension of the original trend, with no apparent discontinuities or transition zones. It is as if the biasing of the initial planform simply permitted the model to express a fuller slice of a latent, much more expansive episodic mode.
+Searching for clues, we applied the same Fourier analysis on the full-cell series (sinusoidal frequency of two) as we did on the single-roll series. The results are striking ({numref}`cospar_image19_fig`). The same 'shark fin' structure observed for the classic configurations appears for the full-cell ones, overyling it almost exactly from the stagnant boundary through to the cusp of full mobility. However, the full-cell cases go beyond that cusp, extending to yet higher frequencies at yet lower yield strength values. The surface appears to be a very natural and proper extension of the original trend, with no apparent discontinuities or transition zones. It is as if the biasing of the initial planform simply permitted the model to express a fuller slice of a latent, much more expansive episodic mode.
 
 Our 'unintended experiment' culminates here with a clean and robust demonstration of a latent truth: the 'tectonic mode diagram' for the viscoplastic rheology is fundamentally state-dependent. It is a fact that must surely prompt a reimagination of the very notion of a tectonic mode.

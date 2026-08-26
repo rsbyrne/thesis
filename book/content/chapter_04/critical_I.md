@@ -987,6 +987,7 @@ editable: true
 slideshow:
   slide_type: ''
 label: marginal_stability_optimal_perturbation
+tags: [remove-cell]
 ---
 # marginal_stability_optimal_perturbation
 
