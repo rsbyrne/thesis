@@ -34,7 +34,7 @@ from matplotlib import pyplot as plt
 from everest.window import Canvas, DataChannel as Channel, plot
 from everest import window
 from everest.caching import cache
-from everest.window.colourmaps import cmap
+from everest.window.colourmaps import cmap as get_cmap
 
 from analysis import analysis, cylindrical
 from criticality import *
@@ -884,39 +884,6 @@ for val in (1, 1.414, 2):
     
     cartesian_val = 10**COMMON.model_inf.log10_alphas[np.argwhere(np.round(COMMON.model_inf.aspects, 3) == val).flatten()[0]]
 
-    # def model(x, /, a:(None, None)=78):
-    #     return a / (cylindrical.r_mid(x)**2) + cartesian_val
-    # def model(f, /, a:(None, None)=78, b:(0, 10)=0, c:(0, 10)=2):
-    #     rmid = cylindrical.r_mid(f)
-    #     return a * rmid**b / rmid**c + cartesian_val
-    # def model(f, /, a:(None, None)=7):
-    #     rmid = cylindrical.r_mid(f)
-    #     corr = 0.1 * np.log(f)**2 + 1
-    #     return a / (rmid**2) * corr + cartesian_val
-    # def model(x, /, a:(None, None)=45):
-    #     return a * (1 / cylindrical.r_mid(x))**2 + cartesian_val
-    # def model(f, /, a:(None, None)=46, b:(None, None)=0.02):
-    #     num = a * np.log(f)**2 + 1
-    #     denom = b * cylindrical.r_mid(f)**2
-    #     return num / denom + cartesian_val
-    # def model(f, /, a:(None, None)=46, b:(None, None)=0.02):
-    #     return a * (b * np.log(f)**2 + 1) / cylindrical.r_mid(f)**2 + cartesian_val
-    # def model(
-    #         f, /,
-    #         a: (None, None) = 1,
-    #         b: (1, 10) = 1,
-    #         ):
-    #     return a * (-np.log(f)) ** (2*b)
-    # def param_norm(param, /):
-    #     return np.exp(param / (1 - param)) * param
-    # def model(x, /, a:(0.01, 0.9)=0.1, b:(0.01, 0.9)=0.1):
-    #     a = param_norm(a)
-    #     b = param_norm(b)
-    #     return a * (np.log(1/x))**b + cartesian_val
-    # model = analysis.custom_curve_fit(model, slc.index.values, slc.values, maxfev=10000)
-    # for key, param in tuple(model.params.items()):
-    #     model.params[key] = param_norm(param)
-
     def model(x, /, a:(0., 100)=1, b:(0, 100)=1):
         return a * (np.log(1/x))**b + cartesian_val
     model = analysis.custom_curve_fit(model, slc.index.values, slc.values, maxfev=10000)
@@ -1220,34 +1187,53 @@ label: criticality_empirical_model_f_3D
 ---
 # criticality_empirical_model_f_3D
 
-slc = isomixed.loc[0].loc[1:2]
-all_f = slc.reset_index()['f']
-all_A = slc.reset_index()['aspect']
+series = isomixed.loc[0].loc[1:2]
+all_f = series.reset_index()['f']
+all_A = series.reset_index()['aspect']
 all_jarvis_pred = 10**jarvis_theory_aspect(all_f, all_A)
-all_true = slc.to_numpy()
+all_true = series.to_numpy()
 
 jarvis_linscore = r2_score(all_true * 0.98, all_jarvis_pred)
 # print(jarvis_linscore)
 assert jarvis_linscore < 0.9
 
+# def model_f_A(
+#         indvars, /,
+#         p: (-10000, 10000) = -0.75,
+#         q: (-20, 20) = 1,
+#         r: (-20, 20) = 6,
+#         s: (-1000, 1000) = 68,
+#         m: (-20, 20) = -0.2,
+#         k: (-20, 20) = 2,
+#         ):
+#     f, A = indvars
+#     a = (A - p)**q / A**r + s
+#     b = m * A + k
+#     alpha_cart = COMMON.model_inf.model(A)
+#     return a * (np.log(1/f))**b + alpha_cart
+
 def model_f_A(
         indvars, /,
-        p: (-10000, 10000) = -0.75,
-        q: (-20, 20) = 1,
-        r: (-20, 20) = 6,
-        s: (-1000, 1000) = 68,
-        m: (-20, 20) = -0.2,
-        k: (-20, 20) = 2,
+        s: (0, 1000) = 25.0,
+        g: (0, 1e6) = 150.0,
+        lam: (0, 20) = 2.0,
+        k: (0.001, 20) = 1.46,
+        c_base: (0, 1000) = 10.38,   
+        c_scale: (0, 1000) = 38.31,  
+        c_center: (0, 20) = 1.68,    
+        d: (0.001, 20) = 2.64,       
         ):
     f, A = indvars
-    a = (A - p)**q / A**r + s
-    b = m * A + k
+    a = s + g * np.exp(-lam * A)
+    c_amp = c_base + c_scale * (A - c_center)**2   
     alpha_cart = COMMON.model_inf.model(A)
-    return a * (np.log(1/f))**b + alpha_cart
+    return a * (np.log(1/f))**k + c_amp * (np.log(1/f))**d + alpha_cart
+
 model_f_A = public.model_f_A = analysis.custom_curve_fit(
     model_f_A, np.vstack((all_f, all_A)), all_true, maxfev=10000
     )
-# print(model_f_A.params, model_f_A.linscore)
+model = public.model = lambda f, A, *args, **kwargs: model_f_A((f, A), *args, **kwargs)
+print(model_f_A.params, model_f_A.linscore)
 
 
 
@@ -1303,37 +1289,102 @@ plt.show()
 A surface plot of $\alpha_{cr}$ as a function of $A$ and $f$, as empirically determined by our numerical experiments (red dots) and as predicted by our curve-fitting model. The theoretically ideal Cartesian endmember is indicated with magenta dots.
 ```
 
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+label: criticality_empirical_model_f_performance
+---
+# criticality_empirical_model_f_performance
+
+all_pred = np.log10(model(
+    series.index.get_level_values('f'),
+    series.index.get_level_values('aspect'),
+    ) / series)
+all_pred_floor = (np.floor(all_pred * 100) / 100).min()
+all_pred_ceil = (np.ceil(all_pred * 100) / 100).max()
+all_pred_dist = max((np.abs(all_pred_floor), np.abs(all_pred_ceil)))
+
+# print(model_f_H_A.linscore)
+# print(model_f_H_A.params)
+
+c_label = r"$\log_{10}{\left(\mathrm{Synthetic} / \mathrm{Empirical}\right)}$"
+cmap = "turbo"
+
+canvas = Canvas(size=(6, 4))
+ax1 = canvas.make_ax()
+ax1.scatter(
+    aspect_channel := Channel(
+        series.index.get_level_values('aspect'),
+        label="$A$",
+        ),
+    H_channel := Channel(
+        series.index.get_level_values('f'),
+        label="$f$", lims=(0, 1), capped=(True, True),
+        ),
+    c=Channel(
+        (all_pred - all_pred_dist) / (2 * all_pred_dist),
+        label=c_label,
+        ),
+    cmap=cmap,
+    )
+
+cbar = canvas.fig.colorbar(
+    ax1.collections[0].colorbar,
+    ax=ax1.ax,
+    cmap=cmap,
+    )
+cbarticks = np.round(np.linspace(-all_pred_dist, all_pred_dist, 11), 5)
+cbar.set_ticks((cbarticks - cbarticks[0]) / (cbarticks[-1] - cbarticks[0]))
+cbar.set_ticklabels(tuple(
+    map(lambda val: "$" + str(val) + "$", cbarticks)
+    ))
+cbar.set_label(c_label)
+
+canvas
+```
+
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-If we compose together our 'master' function with the functions that describe the two emprical parameters ($a$ and $b$), we get an 'omnibus' function that exposes six parameters altogether:
+```{figure} #criticality_empirical_model_f_performance
+:name: criticality_empirical_model_f_performance_fig
 
-$$ \begin{align*}
-\alpha_\mathrm{cr} &= a\ \log{\left(1/f\right)}^b + \alpha_{\mathrm{cr}\,\mathrm{cart}}(A) \\
-&= \left( \frac{{(A-p)}^q}{A^r} + s \right) \log{\left( \frac{1}{f} \right)}^{mA + k} + \alpha_{\mathrm{cr}\,\mathrm{cart}}(A)
-\end{align*} $$
+An analysis of the performance of our curve-fitted model relative to the empirical data.
+```
 
-We took this omnibus equation and attempted to fit it to the full dataset in a single pass ({numref}`criticality_empirical_model_f_3D_fig`). We obtained a fit that was dramatically better than we expected: the $R^2$ value is over $99.978\%$. This a substantial improvement over the Jarvis approximation, which is less than $90\%$ accurate over the same inputs (even accounting for the $\sim1.01$ systematic error in our 'empirical' dataset). While the Jarvis model deteriorates systematically as a function of increasing curvature, our new model has clean residuals that do not clearly suggest any uncaptured physics. Our new approximation also outperforms the original in its limit behaviours: though the Jarvis model, like ours, converges on the Cartesian case at $f\to1$, ours has the additional merit of going to infinity at the 'wire core' limit $f\to0$, a behaviour missing from the original.
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-Thus far, we have included $\alpha_{\mathrm{cr}\,\mathrm{cart}}$ in our equations somewhat off-handedly, simply presupposing that this number is available for any given aspect ratio $A$. In our case, this actually happens to be true, because (as can be seen in {numref}`criticality_empirical_model_f_3D_fig`), every exploratory slice of this parameter space includes a Cartesian endmember. We trained our estimators directly to this empirical data for the sake of accuracy. However, we cannot leave our omnibus model in this state: we must complete the work of formalising it within the framework of our overarching 'lattice model'. In particular, we must carefully integrate the new maths with the maths of the 'nodes' to which it connects, which in this case means connecting our new $M_f$ model to the 'infinimum' node $M_\mathrm{inf}$, which represents the Cartesian endmember.
+If we compose together our 'master' function with the functions that describe the two emprical parameters ($a$ and $b$), we get an 'omnibus' function that exposes six parameters altogether. We fitted this to the data and obtained an $R^2$ of better than $99.99\%$:
 
-Here is the final model, expressed in the formal terms of our overarching lattice model, together with the parameters of best fit to five significant figures:
-
-$$ 
-M_f := \quad f \mapsto A \mapsto \left( \frac{{(A-p)}^q}{A^r} + s \right) \log{\left( \frac{1}{f} \right)}^{mA + k} + M_\mathrm{inf}()(A) \\
+$$
+M_f := \quad f \mapsto A \mapsto \left( s + g e^{-\lambda A} \right) \log{\left( \frac{1}{f} \right)}^{k} + \left( c_\mathrm{base} + c_\mathrm{scale}(A - c_\mathrm{center})^2 \right) \log{\left( \frac{1}{f} \right)}^{d} + M_\mathrm{inf}()(A)
 $$
 
-$$ \begin{align*}
-p &= -3023.0 \\
-q &= 0.41826 \\
-r &= 6.0206 \\
-s &= 36.371 \\
-m &= -0.26657 \\
-k &= 2.1747
-\end{align*} $$
+$$\begin{align*}
+s &= 26.222 \\
+g &= 140630 \\
+\lambda &= 9.5276 \\
+k &= 1.4689 \\
+c_\mathrm{base} &= 10.041 \\
+c_\mathrm{scale} &= 37.422 \\
+c_\mathrm{center} &= 1.6781 \\
+d &= 2.6553
+\end{align*}$$
 
-If we have constructed the model correctly, $M_f$ should collapse to $M_\mathrm{inf}$ at $f\to1$. We can immediately see that this is so because $\log{1/f}$ goes to zero at that limit, nullifying the entire first term.
+The surface produced by this synthetic model ({numref}`criticality_empirical_model_f_3D_fig`) hugs the data extremely tightly, and an analysis of the residuals ({numref}`criticality_empirical_model_f_performance_fig`) shows that the remaining error is fairly evenly distributed, with no obvious structure. The model obeys the required constraints:
 
-We have not yet considered what (if any) meaning these parameters might have, and what might be the significance of their particular values at best-fit. There is unfortunately not much to be said on those counts until we have some theoretical, physical argument for the validity of the relation itself. Simply achieving a good fit - even one that apparently 'consumes' all the available physical information, as ours does - does not *per se* argue that the model has a real physical underpinning. (In our case, we know for a fact that at least some of the information is 'non-physical' because we explicitly modelled the error in the infinimum by comparison to hard theory.)
+- It goes to infinity as $A$ goes to zero (because the $f$ terms are finite).
+- It converges on the infinimum as $f$ goes to one ($\log{1/f}$).
+- It is non-negative in the domain $A \ge 0$.
+
+
+$M_f$ should collapse to $M_\mathrm{inf}$ at $f\to1$. We can immediately see that this is so because $\log{1/f}$ goes to zero at that limit, nullifying the entire first term.
+
+Our obtained fit is a substantial improvement over the Jarvis approximation, which is less than $90\%$ accurate over the same inputs (even accounting for the $\sim1.01$ systematic error in our 'empirical' dataset). While the Jarvis model deteriorates systematically as a function of increasing curvature, our new model has clean residuals that do not clearly suggest any uncaptured physics. Our new approximation also outperforms the original in its limit behaviours: though the Jarvis model, like ours, converges on the Cartesian case at $f\to1$, ours has the additional merit of going to infinity at the 'wire core' limit $f\to0$, a behaviour missing from the original.
+
+We have not yet considered what (if any) meaning our empirical parameters might have, and what might be the significance of their particular values at best-fit. There is unfortunately not much to be said on those counts until we have some theoretical, physical argument for the validity of the relation itself. Simply achieving a good fit - even one that apparently 'consumes' all the available physical information, as ours does - does not *per se* argue that the model has a real physical underpinning. In our case, we know for a fact that at least some of the information is 'non-physical' because we explicitly modelled the error in the infinimum by comparison to hard theory.
 
 Similarly, we must resist the temptation to assign 'magic values' to any of these parameters or attempt to compact them together at this stage. Of course, we would prefer the form of the equation to be simpler and to involve fewer empirical parameters if at all possible; and indeed, it is highly likely that some (though certainly not all) of the empirical 'degrees of freedom' here could be made redundant by an alternative construction of the relation. Nevertheless, we think it prudent to leave the model in its present form for now, especially given that there are many more nodes in the lattice to explore, which may themselves shed light on these matters.
 
@@ -1379,7 +1430,7 @@ for H_val in H_vals:
     ax1.line(
         xchan,
         ychan,
-        c = cmap(H_val, H_vals, style = 'inferno'),
+        c = get_cmap(H_val, H_vals, style = 'inferno'),
         # color=H_val,
         # c=Channel(tuple(H_val for _ in data.values), label=r"$H$"),
         # cmap='inferno',
@@ -1499,13 +1550,13 @@ for model in models:
     ax1.line(
         xchan,
         ychan_natural,
-        c = cmap(model.H_val, H_vals, style = 'inferno'),
+        c = get_cmap(model.H_val, H_vals, style = 'inferno'),
         alpha=0.5,
         )
     ax1.line(
         xchan,
         ychan_synthetic,
-        c = cmap(model.H_val, H_vals, style = 'inferno'),
+        c = get_cmap(model.H_val, H_vals, style = 'inferno'),
         linestyle='--',
         )
     ax1.scatter(
@@ -1588,37 +1639,6 @@ all_H = slc.reset_index()['H']
 all_A = slc.reset_index()['aspect']
 all_true = slc.to_numpy()
 
-# def model_H_A(
-#         indvars, /,
-#         a_1: (None, None) = 0.0,
-#         a_2: (None, None) = 0.0,
-#         a_3: (None, None) = 0.0,
-#         b_1: (None, None) = 0.0,
-#         b_2: (None, None) = 0.0,
-#         b_3: (None, None) = 0.0,
-#         c_1: (None, None) = 0.0,
-#         c_2: (None, None) = 0.0,
-#         c_3: (None, None) = 0.0,
-#         d_1: (None, None) = 0.0,
-#         d_2: (None, None) = 0.0,
-#         d_3: (None, None) = 0.0,
-#         ):
-#     H, A = indvars
-#     a = a_1 * H**2 + a_2 * H + a_3
-#     b = b_1 * H**2 + b_2 * H + b_3
-#     c = c_1 * H**2 + c_2 * H + c_3
-#     d = d_1 * H**2 + d_2 * H + d_3
-#     k = 5.0
-#     exp_term = np.exp(-k * (A - 1.0))
-#     quad_term = (A - 1.0)**2
-#     lin_term = (A - 1.0)
-#     coeff = 1.0 + a * exp_term + b * quad_term + c * lin_term + d
-#     baseline = COMMON.model_inf.model(A)
-#     return coeff * baseline
-# model_H_A = public.model_H_A = analysis.custom_curve_fit(
-#     model_H_A, np.vstack((all_H, all_A)), all_true, maxfev=10000
-#     )
-
 def model_H_A(
         indvars, /,
         a_1: (None, None) = 0.0,
@@ -1643,6 +1663,7 @@ def model_H_A(
 model_H_A = public.model_H_A = analysis.custom_curve_fit(
     model_H_A, np.vstack((all_H, all_A)), all_true, maxfev=10000
     )
+model = public.model = lambda H, A, *args, **kwargs: model_H_A((H, A), *args, **kwargs)
 
 # print(f"{model_H_A.linscore:.7g}")
 
@@ -1706,6 +1727,71 @@ plt.show()
 The omnibus model for $M_H$: the red dots are the underlying numerical values, the magenta dots highlight the limit case ($H=0$), and the curved surface represents the synethetic values predicted by our model. The fit is once again satisfyingly exact, though this predominantly due to the goodness of fit of the lower model, which the mixed-heating scenario only perturbs slightly.
 ```
 
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+label: criticality_empirical_model_H_performance
+---
+# criticality_empirical_model_H_performance
+
+all_pred = np.log10(model(
+    series.index.get_level_values('H'),
+    series.index.get_level_values('aspect'),
+    ) / series)
+all_pred_floor = (np.floor(all_pred * 100) / 100).min()
+all_pred_ceil = (np.ceil(all_pred * 100) / 100).max()
+all_pred_dist = max((np.abs(all_pred_floor), np.abs(all_pred_ceil)))
+
+# print(model_f_H_A.linscore)
+# print(model_f_H_A.params)
+
+c_label = r"$\log_{10}{\left(\mathrm{Synthetic} / \mathrm{Empirical}\right)}$"
+cmap = "turbo"
+
+canvas = Canvas(size=(6, 4))
+ax1 = canvas.make_ax()
+ax1.scatter(
+    aspect_channel := Channel(
+        series.index.get_level_values('aspect'),
+        label="$A$",
+        ),
+    H_channel := Channel(
+        series.index.get_level_values('H'),
+        label="$H$",
+        ),
+    c=Channel(
+        (all_pred - all_pred_dist) / (2 * all_pred_dist),
+        label=c_label,
+        ),
+    cmap=cmap,
+    )
+
+cbar = canvas.fig.colorbar(
+    ax1.collections[0].colorbar,
+    ax=ax1.ax,
+    cmap=cmap,
+    )
+cbarticks = np.round(np.linspace(-all_pred_dist, all_pred_dist, 11), 5)
+cbar.set_ticks((cbarticks - cbarticks[0]) / (cbarticks[-1] - cbarticks[0]))
+cbar.set_ticklabels(tuple(
+    map(lambda val: "$" + str(val) + "$", cbarticks)
+    ))
+cbar.set_label(c_label)
+
+canvas
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+```{figure} #criticality_empirical_model_H_performance
+:name: criticality_empirical_model_H_performance_fig
+
+An analysis of the performance of our curve-fitted model relative to the empirical data. Though the fit is very good everywhere, there is clearly structure in the residuum that suggests that something is missing.
+```
+
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 We hypothesised that the curves seen in {numref}`criticality_M_H_main_chart_fig` represented the weighted sum of three terms: an exponential term, a quadratic term, and a linear term. For each $H$ value, we fitted the $A$-series data and obtained excellent fits, with the exception of the very low-$H$ cases which - being nearly linear - tend to frustrate the solver. When the values of the four parameters in the model are set against $H$, it is apparent that each is a simple quadratic function, suggesting that a surface could be fitted to the whole dataset using no more than twelve parameters (three for each previously fitted parameter). We can cut that down to nine parameters simply by recognising certain redundancies, and down to six by recognising that the convergence considerations require that the quadratic coefficients must be exactly $0$ at $H=0$. With those changes, we have an 'omnibus model' for the $M_H$ case:
@@ -1728,9 +1814,9 @@ This is visualised in {numref}`criticality_empirical_model_H_3D_fig`.
 
 It will be noted that the values on most of these parameters are very small: that is as expected, given our original observation that the impact of $H$ on the critical point is modest, whatever else it is. As in the $M_f$ case, there are almost certainly symmetries, redundancies, and dependencies lurking within the maths here that would allow us to simplify the expression and either reparameterise or cut some of the constants. Again, these will likely become more obvious in retrospect, and we will not trouble ourselves with this labour just yet.
 
-Thanks to the final 'tweaks' we just made, the curve converges exactly on the lower node ($M_\mathrm{inf}$) as $H$ goes to zero, which is a hard requirement of our methodology. The fit on the model is a bit over $99.98\%$: comparable to the fit of $M_f$ and less than the fit of $M_inf$. This is exactly the accuracy we were aiming for. If a higher model in the lattice were to fit the data better than a lower model (especially in the limit), it would suggest that the 'private properties' of the higher model were being inappropriately co-opted by the algorithm to 'fill the gaps' in the lower model. For example, if one omits the final changes just mentioned (cutting the number of parameters from twelve to six), one obtains a fit of something like $99.99999\%$. This would of course have been absurd. Avoiding this pitfall is one of the benefits of the 'lattice modelling' approach.
+Thanks to the final 'tweaks' we just made, the curve converges exactly on the lower node ($M_\mathrm{inf}$) as $H$ goes to zero, which is a hard requirement of our methodology. The fit on the model is a bit over $99.98\%$: comparable to the fit of $M_f$ and less than the fit of $M_\mathrm{inf}$. This is exactly the accuracy we were aiming for. If a higher model in the lattice were to fit the data better than a lower model (especially in the limit), it would suggest that the 'private properties' of the higher model were being inappropriately co-opted by the algorithm to 'fill the gaps' in the lower model. For example, if one omits the final changes just mentioned (cutting the number of parameters from twelve to six), one obtains a fit of something like $99.99999\%$. This would of course have been absurd. Avoiding this pitfall is one of the benefits of the 'lattice modelling' approach.
 
-With an accuracy of $99.98\%$, we are quite comfortable endorsing this model for use by anyone who needs to calculate a value for the critical point of a mixed-heated Cartesian system.
+If we look more closely at the performance of our synthetic model compared to our numerical data ({numref}`criticality_empirical_model_H_performance_fig`), we see that - despite the goodness of fit achieved - there remains some room for improvement. Our model underestimates the numerical reality at low values of $H$ and overestimates it at moderate values. In general, there is an undulating quality to the goodness of fit in both dimensions, which is likely a consequence of our use of polynomials. On that basis alone, we must be cautious of invoking any underlying physical basis for the our best-fit model. Nevertheless, with an accuracy of $99.98\%$, we are quite comfortable endorsing this model for use by anyone who needs to calculate a value for the critical point of a mixed-heated Cartesian system.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
@@ -1769,7 +1855,7 @@ for eta_val in eta_vals:
             eta_visc(T_vals, eta_delta=eta_val),
             label=r"$\eta$", log=True,
             ),
-        c = cmap(log_eta_val, log_eta_vals, style = 'plasma'),
+        c = get_cmap(log_eta_val, log_eta_vals, style = 'plasma'),
         )
 ax1.props.legend.set_handles_labels(
     (row[0] for row in ax1.collections),
@@ -1920,7 +2006,7 @@ for eta_val in eta_vals:
     ax1.line(
         xchan,
         ychan,
-        c = cmap(log_eta_val, log_eta_vals, style = 'plasma'),
+        c = get_cmap(log_eta_val, log_eta_vals, style = 'plasma'),
         # color=H_val,
         # c=Channel(tuple(H_val for _ in data.values), label=r"$H$"),
         # cmap='inferno',
@@ -1952,7 +2038,7 @@ for eta_val in eta_vals[:7]:
     ax2.line(
         xchan,
         ychan,
-        c = cmap(log_eta_val, log_eta_vals, style = 'plasma'),
+        c = get_cmap(log_eta_val, log_eta_vals, style = 'plasma'),
         # color=H_val,
         # c=Channel(tuple(H_val for _ in data.values), label=r"$H$"),
         # cmap='inferno',
@@ -2257,7 +2343,7 @@ Given the paucity of our data, the wide range of values being fitted, and the pr
 
 #### $M_{f;H}$: isoviscous rheology with mixed heating in the annulus
 
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 In our lattice model, we have now covered the infinimum node and the first tier of non-trivial node. Now we enter the second tier, which is the first to contain nodes that have multiple dependencies.
 
@@ -2300,14 +2386,8 @@ $$
 This assumes that $f$ and $H$ affect the underlying behaviour independently of each other. If this is not the case, we will need to introduce a coupled forcing, $\mathrm{Coup}_{f, H}$. This forcing would be required to vanish to an identity (either $1$ or $0$, depending on where and how it is applied) if *either* $f$ or $H$ achieves its special value. We should certainly expect the forcings to be coupled, given that we know that the conductive geotherm depends complexly on both $f$ and $H$:
 
 $$
-T(h) &= H_\mathrm{coeff} \; T_\mathrm{basal}(h) - \frac{H}{4} \left( r(h)^2 - {r_o}^2 \right)
-$$
-
-$$
-T_\mathrm{basal}(h) &= \log_f r^*(h)
-$$
-
-$$
+T(h) = H_\mathrm{coeff} \; T_\mathrm{basal}(h) - \frac{H}{4} \left( r(h)^2 - {r_o}^2 \right) \\
+T_\mathrm{basal}(h) = \log_f r^*(h) \\
 H_\mathrm{coeff} = 1 - \frac{H}{2}r_m
 $$
 
@@ -2331,8 +2411,11 @@ editable: true
 slideshow:
   slide_type: ''
 tags: [remove-cell]
+label: criticality_empirical_model_f_H_main
 ---
-public = COMMON.model_eta = types.SimpleNamespace()
+# criticality_empirical_model_f_H_main
+
+public = COMMON.model_f_H = types.SimpleNamespace()
 
 def H_crit(f):
     return 2 / (cylindrical.r_mid(f) + cylindrical.r_inner(f)**2 * np.log(f))
@@ -2351,7 +2434,257 @@ df['H'] = df['H_star'] * H_crit(df['f'])
 series = df.set_index(['aspect', 'f', 'H'])['alpha']
 series = series.sort_index()
 
-series
+inf_ratio = np.log(series / COMMON.model_f.model(
+    series.index.get_level_values('f'), series.index.get_level_values('aspect'),
+    ))
+inf_ratio_floor = (np.floor(inf_ratio * 100) / 100).min()
+inf_ratio_ceil = (np.ceil(inf_ratio * 100) / 100).max()
+inf_ratio_dist = max((np.abs(all_pred_floor), np.abs(all_pred_ceil)))
+
+inf_ratio_label = r"$\log{\left(M_{f;H} / M_f\right)}$"
+
+H_scal = 12
+H_base = 6
+
+canvas = Canvas(size=(9, 6))
+ax1 = canvas.make_ax()
+ax1.scatter(
+    aspect_channel := Channel(
+        series.index.get_level_values('aspect'),
+        label="$A$",
+        ),
+    f_channel := Channel(
+        series.index.get_level_values('f'),
+        label="$f$", lims=(0, 1), capped=(True, True),
+        ),
+    s=Channel(
+        series.index.get_level_values('H') * 1.5 * H_scal + H_base + 40,
+        label="$H$"
+        ),
+    c=Channel(
+        (inf_ratio - inf_ratio_dist) / (2 * inf_ratio_dist),
+        label=inf_ratio_label,
+        ),
+    cmap="RdBu",
+    )
+
+ax1.scatter(
+    aspect_channel,
+    f_channel,
+    s=Channel(
+        series.index.get_level_values('H') * H_scal + H_base,
+        label="$H$"
+        ),
+    c=Channel(
+        (series.values - 600) / 300,
+        label=r"$\alpha_\mathrm{cr}$",
+        ),
+    cmap="viridis",
+    )
+
+cbar = canvas.fig.colorbar(
+    ax1.collections[0].colorbar,
+    ax=ax1.ax,
+    cmap='RdBu',
+    )
+cbarticks = np.round(np.linspace(-inf_ratio_dist, inf_ratio_dist, 11), 5)
+cbar.set_ticks((cbarticks - cbarticks[0]) / (cbarticks[-1] - cbarticks[0]))
+cbar.set_ticklabels(tuple(
+    map(lambda val: "$" + str(val) + "$", cbarticks)
+    ))
+cbar.set_label(inf_ratio_label)
+
+cbar = canvas.fig.colorbar(
+    ax1.collections[1].colorbar,
+    ax=ax1.ax,
+    cmap='viridis',
+    )
+cbarticks = np.arange(600, 900, 20)
+cbar.set_ticks((cbarticks - cbarticks[0]) / (cbarticks[-1] - cbarticks[0]))
+cbar.set_ticklabels(tuple(
+    map(lambda val: "$" + str(val) + "$", cbarticks)
+    ))
+cbar.set_label(r"$\alpha_\mathrm{cr}$")
+
+legend = ax1.ax.legend(
+    *ax1.collections[1].legend_elements(
+        prop="sizes", num=(num := 6), color="gray",
+        func=lambda s: (s - H_base) / H_scal,
+        ),
+    title="$H$", loc="lower center",
+    ncols=num,
+    )
+
+canvas
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+```{figure} #criticality_empirical_model_f_H_main
+:name: criticality_empirical_model_f_H_main_fig
+
+The complete data for $M_{f;H}$. In general, the bowed behaviour of $\alpha$ with respect to $A$ is preserved in all cases. The combination of non-endmember $f$ and $H$ values does not appear to have a first-order impact on the relation. The red fringe illustrates how far from the baseline of $M_f$ the values of $M_{f;H}$ are.
+```
+
++++
+
+In {numref}`criticality_empirical_model_f_H_main_fig`, we see all $4,586$ cases plotted on one chart. It is evident that the effect of covarying $f$ and $H$ is small. Since we already observed that the effect of $f$ in isolation is much stronger than the effect of $H$ in isolation, we can hypothesise that that the joint effect of $f$ and $H$ together will overwhelmingly track the behaviour of $f$ in isolation. We can test this hypothesis by analysing the data normalised by the $\alpha_\mathrm{cr}$ values of $M_f$ ({numref}`criticality_empirical_model_f_H_main_fig` - red fringes). We see that the hypothesis is largely correct: only in cases of extreme $H$, extreme (low) $f$, and extreme (low) $A$ do we find any substantial deviation of $M_{f;H}$ from $M_f$. This suggests that we are best advised to approach the search for $M_{f;H}$ as a minor correction on $M_f$: specifically, a correction which goes to zero rapidly as $H$ and $f$ depart from their extremas.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+label: criticality_empirical_model_f_H_curvefit
+---
+# criticality_empirical_model_f_H_curvefit
+
+base = COMMON.model_inf.model
+pert = lambda f, A: COMMON.model_f.model(f, A) - base(A)
+scal = lambda H, A: COMMON.model_H.model(H, A) / base(A)
+
+# def model_f_H_A(
+#         indvars, /,
+#         c_1: (-1e5, 1e5) = 1.0,
+#         c_2: (-1e5, 1e5) = 1.0,
+#         c_3: (-1e5, 1e5) = 1.0,
+#         c_4: (-1e5, 1e5) = 1.0,
+#         c_5: (-1e5, 1e5) = 0.0,
+#         ):
+#     f, H, A = indvars
+    
+#     base_term = base(A)
+#     scal_factor = scal(H, A)
+    
+#     pert_term = c_1**H * pert(f, A)
+    
+#     # Upgraded coefficient (c_2 + c_5 * A) allows the correction to scale and flip sign across A
+#     cross_term = (c_2 + c_5 * A) * H**c_3 * (1 - f)**c_4 * base_term
+    
+#     return scal_factor * (pert_term + base_term) + cross_term
+
+def model_f_H_A(
+        indvars, /,
+        c_1: (0.001, 1e5) = 0.77,
+        c_2: (-1e5, 1e5) = -0.037,
+        c_3: (0.001, 1e5) = 1.01,
+        c_4: (0.001, 1e5) = 0.90,
+        c_5: (-1e5, 1e5) = 0.015,
+        c_6: (-1e5, 1e5) = 0.030,
+        c_7: (-1e5, 1e5) = -0.012,
+        c_8: (-1e5, 1e5) = -1.45,
+        c_9: (0.001, 20) = 4.6,
+        c_10: (-1e5, 1e5) = 0.0,
+        c_11: (-1e5, 1e5) = 0.0,
+        ):
+    f, H, A = indvars
+    base_term = base(A)
+    scal_factor = scal(H, A)
+    pert_term = c_1**H * pert(f, A)  
+    cross_amp = c_2 + \
+                (c_5 + c_10 * H) * A + \
+                (c_6 + c_11 * H) * (1 - f) + \
+                c_7 * A * (1 - f) + \
+                c_8 * (1 - f) * np.exp(-c_9 * A)
+    cross_term = cross_amp * H**c_3 * (1 - f)**c_4 * base_term
+    return scal_factor * (pert_term + base_term) + cross_term
+
+model_f_H_A = public.model_f_H_A = analysis.custom_curve_fit(
+    model_f_H_A,
+    np.vstack(tuple(series.reset_index()[key] for key in ('f', 'H', 'aspect'))),
+    series.values,
+    maxfev=30000,
+    )
+
+model = public.model = lambda f, H, A, *args, **kwargs: model_f_H_A((f, H, A), *args, **kwargs)
+
+all_pred = np.log10(model(
+    series.index.get_level_values('f'),
+    series.index.get_level_values('H'),
+    series.index.get_level_values('aspect'),
+    ) / series)
+all_pred_floor = (np.floor(all_pred * 100) / 100).min()
+all_pred_ceil = (np.ceil(all_pred * 100) / 100).max()
+all_pred_dist = max((np.abs(all_pred_floor), np.abs(all_pred_ceil)))
+
+print(model_f_H_A.linscore)
+print(model_f_H_A.params)
+
+c_label = r"$\log_{10}{\left(\mathrm{Synthetic} / \mathrm{Empirical}\right)}$"
+cmap = "turbo"
+
+canvas = Canvas(size=(9, 6))
+ax1 = canvas.make_ax()
+ax1.scatter(
+    aspect_channel := Channel(
+        series.index.get_level_values('aspect'),
+        label="$A$",
+        ),
+    f_channel := Channel(
+        series.index.get_level_values('f'),
+        label="$f$", lims=(0, 1), capped=(True, True),
+        ),
+    s=Channel(
+        series.index.get_level_values('H') * H_scal + H_base,
+        label="$H$"
+        ),
+    c=Channel(
+        (all_pred - all_pred_dist) / (2 * all_pred_dist),
+        label=c_label,
+        ),
+    cmap=cmap,
+    )
+
+cbar = canvas.fig.colorbar(
+    ax1.collections[0].colorbar,
+    ax=ax1.ax,
+    cmap=cmap,
+    )
+cbarticks = np.round(np.linspace(-all_pred_dist, all_pred_dist, 11), 5)
+cbar.set_ticks((cbarticks - cbarticks[0]) / (cbarticks[-1] - cbarticks[0]))
+cbar.set_ticklabels(tuple(
+    map(lambda val: "$" + str(val) + "$", cbarticks)
+    ))
+cbar.set_label(c_label)
+
+legend = ax1.ax.legend(
+    *ax1.collections[0].legend_elements(
+        prop="sizes", num=(num := 6), color="gray",
+        func=lambda s: (s - H_base) / H_scal,
+        ),
+    title="$H$", loc="lower center",
+    ncols=num,
+    )
+
+canvas
+```
+
+To fit a curve to these data, we started with the assumption that the relation was of the $\mathrm{Scal} \cdot \left( \mathrm{Pert} + \mathrm{Base} \right)$ type. We introduced a coupling factor as a coefficient of $\mathrm{Pert}$ and obtained a good initial fit. Studying the residuals revealed a latent structure. This prompted us to introduce a 'correction' term. After equipping the correction with bilinear and exponential parts, we were able to obtain the following fit to an $R^2$ value of greater than $99.99\%$, which is at the limit of what logic tells us our data can support without overfitting:
+
+$$
+M_{f,H} := \quad f, H \mapsto A \mapsto \stackrel{\star\star}{M_H} \left( c_1^H \stackrel{\star\star}{M_f} + \stackrel{\star\star}{M_\mathrm{inf}} \right) + \stackrel{\star}{C} H^{c_3} (1 - f)^{c_4} \stackrel{\star\star}{M_\mathrm{inf}}
+$$
+
+Where $\stackrel{\star}{\mathrm{func}}$ is a shorthand for $\mathrm{func_x}(x)$ and:
+
+$$
+C := (f, H, A) \mapsto c_2 + (c_5 + c_{10}H)A + (c_6 + c_{11}H)(1 - f) + c_7 A (1 - f) + c_8 (1 - f) e^{-c_9 A}
+$$
+
+```{code-cell} ipython3
+# def model_f_H_A(
+#         indvars, /,
+#         c_1: (-1e5, 1e5) = 1,
+#         c_2: (-1e5, 1e5) = 1,
+#         ):
+#     f, H, A = indvars
+#     base_term = base(A)
+#     scal_adj = scal(H, A)**(c_1 * f + c_2)
+#     pert_adj = pert(f, A)
+#     cross_term = 0
+#     cross_factor = 1
+#     return cross_factor * scal_adj * (pert_adj + base_term) + cross_term
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
