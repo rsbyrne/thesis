@@ -22,6 +22,7 @@ from aliases import *
 
 import itertools
 import types
+import warnings
 
 from criticality import *
 
@@ -356,8 +357,18 @@ slideshow:
 tags: [remove-cell]
 ---
 # incorporate_new_data("simple_critical_2026_4__.data")
-isomixed, isointernal, arrmixed, arrinternal = datas = make_frames()
+isomixed, isointernal, arrmixed, arrinternal = datas = make_frames(
+    # cache_refresh=True
+    )
+
 print(sum(map(len, datas)))
+
+# full_arrmixed = isomixed.copy()
+# full_arrmixed = full_arrmixed.reset_index()
+# full_arrmixed['etaDelta'] = 0
+# full_arrmixed = full_arrmixed.set_index(arrmixed.index.names)['alpha']
+# full_arrmixed = pd.concat((full_arrmixed, arrmixed / 2))
+# full_arrmixed = full_arrmixed.sort_index()
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -520,6 +531,8 @@ tags: [remove-cell]
 ---
 # criticality_iso_basal_0
 
+warnings.filterwarnings("error")
+
 public = COMMON.model_f = types.SimpleNamespace()
 
 frm = isomixed.loc[0].reset_index()
@@ -536,7 +549,7 @@ params = np.array(tuple(map(np.array, log10_Ra_empirical.index)))
 points = params.copy()
 points[:, 0], x_undo = unitise(points[:, 0], True)
 points[:, 1], y_undo = unitise(points[:, 1], True)
-interp = sp.interpolate.RBFInterpolator(points, 10**log10_Ra_empirical)
+interp = sp.interpolate.RBFInterpolator(points, 10**log10_Ra_empirical, smoothing=1e-6)
 public.interp = interp
 
 grid_inside_hull = make_concave_swarm(points, grid_spacing=0.0025)
@@ -621,7 +634,7 @@ cbar = canvas1.fig.colorbar(
     )
 cbar.set_ticks(np.linspace(0, 1, 11))
 cbar.set_ticklabels(tuple(
-    map(lambda val: "$" + str(val) + "$", np.linspace(*c_range, 11))
+    map(lambda val: "$" + str(round(val, 9)) + "$", np.linspace(*c_range, 11))
     ))
 cbar.set_label(r"$\log_{10}\alpha$")
 
@@ -1303,8 +1316,9 @@ all_pred = np.log10(model(
     series.index.get_level_values('f'),
     series.index.get_level_values('aspect'),
     ) / series)
-all_pred_floor = (np.floor(all_pred * 100) / 100).min()
-all_pred_ceil = (np.ceil(all_pred * 100) / 100).max()
+precision = 100
+all_pred_floor = (np.floor(all_pred * precision) / precision).min()
+all_pred_ceil = (np.ceil(all_pred * precision) / precision).max()
 all_pred_dist = max((np.abs(all_pred_floor), np.abs(all_pred_ceil)))
 
 # print(model_f_H_A.linscore)
@@ -1325,7 +1339,7 @@ ax1.scatter(
         label="$f$", lims=(0, 1), capped=(True, True),
         ),
     c=Channel(
-        (all_pred - all_pred_dist) / (2 * all_pred_dist),
+        (all_pred + all_pred_dist) / (2*all_pred_dist),
         label=c_label,
         ),
     cmap=cmap,
@@ -1362,16 +1376,7 @@ $$
 M_f := \quad f \mapsto A \mapsto \left( s + g e^{-\lambda A} \right) \log{\left( \frac{1}{f} \right)}^{k} + \left( c_\mathrm{base} + c_\mathrm{scale}(A - c_\mathrm{center})^2 \right) \log{\left( \frac{1}{f} \right)}^{d} + M_\mathrm{inf}()(A)
 $$
 
-$$\begin{align*}
-s &= 26.222 \\
-g &= 140630 \\
-\lambda &= 9.5276 \\
-k &= 1.4689 \\
-c_\mathrm{base} &= 10.041 \\
-c_\mathrm{scale} &= 37.422 \\
-c_\mathrm{center} &= 1.6781 \\
-d &= 2.6553
-\end{align*}$$
+$$\begin{align*} s &= 25.916 \\ g &= 148730 \\ \lambda &= 9.5880 \\ k &= 1.4578 \\ c_\mathrm{base} &= 10.356 \\ c_\mathrm{scale} &= 37.516 \\ c_\mathrm{center} &= 1.6785 \\ d &= 2.6493 \end{align*}$$
 
 The surface produced by this synthetic model ({numref}`criticality_empirical_model_f_3D_fig`) hugs the data extremely tightly, and an analysis of the residuals ({numref}`criticality_empirical_model_f_performance_fig`) shows that the remaining error is fairly evenly distributed, with no obvious structure. The model obeys the required constraints:
 
@@ -1664,6 +1669,7 @@ model_H_A = public.model_H_A = analysis.custom_curve_fit(
     model_H_A, np.vstack((all_H, all_A)), all_true, maxfev=10000
     )
 model = public.model = lambda H, A, *args, **kwargs: model_H_A((H, A), *args, **kwargs)
+print(model_H_A.params, model_H_A.linscore)
 
 # print(f"{model_H_A.linscore:.7g}")
 
@@ -1741,8 +1747,9 @@ all_pred = np.log10(model(
     series.index.get_level_values('H'),
     series.index.get_level_values('aspect'),
     ) / series)
-all_pred_floor = (np.floor(all_pred * 100) / 100).min()
-all_pred_ceil = (np.ceil(all_pred * 100) / 100).max()
+precision = 100
+all_pred_floor = (np.floor(all_pred * precision) / precision).min()
+all_pred_ceil = (np.ceil(all_pred * precision) / precision).max()
 all_pred_dist = max((np.abs(all_pred_floor), np.abs(all_pred_ceil)))
 
 # print(model_f_H_A.linscore)
@@ -1763,7 +1770,7 @@ ax1.scatter(
         label="$H$",
         ),
     c=Channel(
-        (all_pred - all_pred_dist) / (2 * all_pred_dist),
+        (all_pred + all_pred_dist) / (2*all_pred_dist),
         label=c_label,
         ),
     cmap=cmap,
@@ -1800,15 +1807,7 @@ $$
 M_H := \quad H \mapsto A \mapsto \left( 1 + P_a(H) e^{-5 (A - 1)} + P_b(H) {(A - 1)}^2 + P_c(H) {(A - 1)} \right) \cdot M_\mathrm{inf}()(A)
 $$
 
-$$ \begin{align*}
-P_q(x) &:= q_1 x^2 + q_2 x \\
-a_1 &= -0.0022356 \\
-a_2 &= 0.0041771 \\
-b_1 &= 0.0035007 \\
-b_2 &= -0.0080253 \\
-c_1 &= -0.005155 \\
-c_2 &= 0.012574
-\end{align*} $$
+$$\begin{align*} P_q(x) &:= q_1 x^2 + q_2 x \\ a_1 &= -0.0022717 \\ a_2 &= 0.0042605 \\ b_1 &= 0.0035555 \\ b_2 &= -0.0081520 \\ c_1 &= -0.0052280 \\ c_2 &= 0.012743 \end{align*}$$
 
 This is visualised in {numref}`criticality_empirical_model_H_3D_fig`.
 
@@ -1834,9 +1833,10 @@ tags: [remove-cell]
 
 public = COMMON.model_eta = types.SimpleNamespace()
 
-series = public.series = arrmixed.sort_index().loc[0].loc[:, :, 0.999] / 2
+series = public.series = arrmixed.loc[0].loc[1:2].loc[:, :, 0.999] / 2
+# nonzero_series = public.nonzero_series = series.loc[:, 1e-7:]
 
-eta_vals = np.array(sorted(set(series.index.get_level_values('etaDelta'))))
+eta_vals = np.array(sorted(set(nonzero_series.index.get_level_values('etaDelta'))))
 log_eta_vals = np.log10(eta_vals)
 c_range = (min(log_eta_vals), max(log_eta_vals))
 
@@ -2200,8 +2200,6 @@ label: criticality_empirical_model_eta_3D
 tags: [remove-cell]
 ---
 # criticality_empirical_model_eta_3D
-
-import warnings
 # warnings.filterwarnings("error")
 warnings.filterwarnings("ignore")
 
@@ -2248,6 +2246,7 @@ def model_eta_aspect(
 model_eta_aspect = public.model_eta_aspect = analysis.custom_curve_fit(
     model_eta_aspect, np.vstack((all_eta, all_A)), all_true, maxfev=30000
     )
+print(model_eta_aspect.params, model_eta_aspect.linscore)
 
 # print(f"{model_H_A.linscore:.7g}")
 
@@ -2323,19 +2322,7 @@ W(\eta_\Delta) &= w_{\text{min}} + \frac{w_{\text{max}} - w_{\text{min}}}{1 + e^
 
 With these $\eta_\Delta$-dependent substitutions in place for $u$, $v$, and $w$, the whole $M_{\eta_Delta}$ dataset can be fitted to an $R^2$ value of greater than $0.99999$ using the following values for the empirical constants (to five significant figures):
 
-$$ \begin{align*}
-u_{\mathrm{min}} &= 0.10250 \\
-u_{\mathrm{max}} &= 11.178 \\
-u_k &= 1.5865 \\
-u_c &= 3.0709 \\
-v_{\mathrm{min}} &= 4.6087 \\
-v_a &= 0.0026409 \\
-v_b &= 0.64090 \\
-w_{\mathrm{min}} &= 2.3724 \\
-w_{\mathrm{max}} &= 2.1203 \\
-w_k &= 15.796 \\
-w_c &= 3.0212
-\end{align*}$$
+$$\begin{align*} u_{\mathrm{min}} &= 0.10251 \\ u_{\mathrm{max}} &= 11.180 \\ u_k &= 1.5865 \\ u_c &= 3.0710 \\ v_{\mathrm{min}} &= 4.6086 \\ v_a &= 0.0026386 \\ v_b &= 0.64097 \\ w_{\mathrm{min}} &= 2.3724 \\ w_{\mathrm{max}} &= 2.1203 \\ w_k &= 15.748 \\ w_c &= 3.0213 \end{align*}$$
 
 Given the paucity of our data, the wide range of values being fitted, and the profusion of parameters, it is likely we are substantially overfitting the data in this case. This node of our lattice model, and those dependent on it, should be marked as dubious until significantly more data can be obtained.
 
@@ -2383,7 +2370,7 @@ $$
 A \mapsto \mathrm{Pert}_f(A) + \left( \mathrm{Scal}_H(A) \cdot L_\mathrm{inf}(A) \right)
 $$
 
-This assumes that $f$ and $H$ affect the underlying behaviour independently of each other. If this is not the case, we will need to introduce a coupled forcing, $\mathrm{Coup}_{f, H}$. This forcing would be required to vanish to an identity (either $1$ or $0$, depending on where and how it is applied) if *either* $f$ or $H$ achieves its special value. We should certainly expect the forcings to be coupled, given that we know that the conductive geotherm depends complexly on both $f$ and $H$:
+This assumes that $f$ and $H$ affect the underlying behaviour independently of each other. If this is not the case, we will need to introduce a coupled forcing of some kind. This forcing would be required to vanish to an identity (either $1$ or $0$, depending on where and how it is applied) if *either* $f$ or $H$ achieves its special value. We should certainly expect the forcings to be coupled, given that we know that the conductive geotherm depends complexly on both $f$ and $H$:
 
 $$
 T(h) = H_\mathrm{coeff} \; T_\mathrm{basal}(h) - \frac{H}{4} \left( r(h)^2 - {r_o}^2 \right) \\
@@ -2437,9 +2424,10 @@ series = series.sort_index()
 inf_ratio = np.log(series / COMMON.model_f.model(
     series.index.get_level_values('f'), series.index.get_level_values('aspect'),
     ))
-inf_ratio_floor = (np.floor(inf_ratio * 100) / 100).min()
-inf_ratio_ceil = (np.ceil(inf_ratio * 100) / 100).max()
-inf_ratio_dist = max((np.abs(all_pred_floor), np.abs(all_pred_ceil)))
+precision = 100
+inf_ratio_floor = (np.floor(inf_ratio * precision) / precision).min()
+inf_ratio_ceil = (np.ceil(inf_ratio * precision) / precision).max()
+inf_ratio_dist = max((np.abs(inf_ratio_floor), np.abs(inf_ratio_ceil)))
 
 inf_ratio_label = r"$\log{\left(M_{f;H} / M_f\right)}$"
 
@@ -2458,14 +2446,15 @@ ax1.scatter(
         label="$f$", lims=(0, 1), capped=(True, True),
         ),
     s=Channel(
-        series.index.get_level_values('H') * 1.5 * H_scal + H_base + 40,
+        series.index.get_level_values('H') * 1.5 * H_scal + H_base + 100,
         label="$H$"
         ),
     c=Channel(
-        (inf_ratio - inf_ratio_dist) / (2 * inf_ratio_dist),
+        (inf_ratio + inf_ratio_dist) / (2*inf_ratio_dist),
         label=inf_ratio_label,
         ),
     cmap="RdBu",
+    alpha=0.5,
     )
 
 ax1.scatter(
@@ -2480,6 +2469,7 @@ ax1.scatter(
         label=r"$\alpha_\mathrm{cr}$",
         ),
     cmap="viridis",
+    alpha=0.5,
     )
 
 cbar = canvas.fig.colorbar(
@@ -2604,8 +2594,9 @@ all_pred = np.log10(model(
     series.index.get_level_values('H'),
     series.index.get_level_values('aspect'),
     ) / series)
-all_pred_floor = (np.floor(all_pred * 100) / 100).min()
-all_pred_ceil = (np.ceil(all_pred * 100) / 100).max()
+precision = 1e5
+all_pred_floor = (np.floor(all_pred * precision) / precision).min()
+all_pred_ceil = (np.ceil(all_pred * precision) / precision).max()
 all_pred_dist = max((np.abs(all_pred_floor), np.abs(all_pred_ceil)))
 
 print(model_f_H_A.linscore)
@@ -2630,10 +2621,11 @@ ax1.scatter(
         label="$H$"
         ),
     c=Channel(
-        (all_pred - all_pred_dist) / (2 * all_pred_dist),
+        (all_pred + all_pred_dist) / (2*all_pred_dist),
         label=c_label,
         ),
-    cmap=cmap,
+    vmin=0, vmax=1, cmap=cmap,
+    alpha=0.5,
     )
 
 cbar = canvas.fig.colorbar(
@@ -2660,10 +2652,20 @@ legend = ax1.ax.legend(
 canvas
 ```
 
-To fit a curve to these data, we started with the assumption that the relation was of the $\mathrm{Scal} \cdot \left( \mathrm{Pert} + \mathrm{Base} \right)$ type. We introduced a coupling factor as a coefficient of $\mathrm{Pert}$ and obtained a good initial fit. Studying the residuals revealed a latent structure. This prompted us to introduce a 'correction' term. After equipping the correction with bilinear and exponential parts, we were able to obtain the following fit to an $R^2$ value of greater than $99.99\%$, which is at the limit of what logic tells us our data can support without overfitting:
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+```{figure} #criticality_empirical_model_f_H_curvefit
+:name: criticality_empirical_model_f_H_curvefit_fig
+
+The goodness of fit of the synthetic data model for $M_{f;H}$.
+```
+
++++
+
+To fit a curve to these data, we started with the assumption that the relation was of the $\mathrm{Scal} \cdot \left( \mathrm{Pert} + \mathrm{Base} \right)$ type. After inspecting the residuals, we suspected the involvement of a coupling factor of the form $c^H$: introducing this degree of freedom gave us an excellent initial fit. Observing some unevenness in the residual field, we were motivated to include an additive 'correction term' as well, which we equipped with bilinear and exponential parts: with the correction factor added, we obtained an $R^2$ value of greater than $99.99\%$, which is at the limit of what logic tells us our data can support without overfitting. Expressed in terms of the lower nodes $M_f$, $M_H$, and $M_\mathrm{inf}$, our proposed synthetic data model of $M_{f;H}$ is as follows:
 
 $$
-M_{f,H} := \quad f, H \mapsto A \mapsto \stackrel{\star\star}{M_H} \left( c_1^H \stackrel{\star\star}{M_f} + \stackrel{\star\star}{M_\mathrm{inf}} \right) + \stackrel{\star}{C} H^{c_3} (1 - f)^{c_4} \stackrel{\star\star}{M_\mathrm{inf}}
+M_{f;H} := \quad f, H \mapsto A \mapsto \frac{\stackrel{\star\star}{M_H}}{\stackrel{\star\star}{M_\mathrm{inf}}} \left( c_1^H \stackrel{\star\star}{M_f} + \left( 1 - c_1^H \right) \stackrel{\star\star}{M_\mathrm{inf}} \right) + \stackrel{\star}{C} H^{c_3} (1 - f)^{c_4} \stackrel{\star\star}{M_\mathrm{inf}}
 $$
 
 Where $\stackrel{\star}{\mathrm{func}}$ is a shorthand for $\mathrm{func_x}(x)$ and:
@@ -2672,29 +2674,149 @@ $$
 C := (f, H, A) \mapsto c_2 + (c_5 + c_{10}H)A + (c_6 + c_{11}H)(1 - f) + c_7 A (1 - f) + c_8 (1 - f) e^{-c_9 A}
 $$
 
+And the constants are:
+
+$$\begin{align*} c_1 &= 0.66662 \\ c_2 &= -0.068777 \\ c_3 &= 0.92385 \\ c_4 &= 1.1805 \\ c_5 &= 0.023262 \\ c_6 &= 0.10654 \\ c_7 &= -0.030276 \\ c_8 &= -442.29 \\ c_9 &= 10.970 \\ c_{10} &= 0.0033460 \\ c_{11} &= -0.014216 \end{align*}$$
+
+The fact that the form of the relation was constructed from first principles (excepting the content of the correction term) gives us some confidence that the relation is at least somewhat meaningful - as meaningful, in any case, as its constituent functions. Eleven constants is quite a lot, especially in addition to the constants of the lower nodes $M_H$, $M_f$, and $M_\mathrm{inf}$. However, almost all of these constants appear exclusively in the 'correction' term. If we take a value for $c_1$ around $0.621$, it is possible to omit the correction term entirely and still obtain a fit of $R^2\gt99\%$ - and a fairly even one at that. This is a manifestation of the already observed fact that the impact of $H$ on the point of convective onset is minimal in all but the most exotic cases.
+
+We commend both the full and the simplified forms of $M_{f;H}$ as useful for identifying the point of convective onset for a variable-geometry, mixed-heated system.
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+#### The higher nodes: $M_{f;\eta_\Delta}$, $M_{H;\eta_\Delta}$, and the supremum
+
++++
+
+So far, we have visted five of the eight nodes in our lattice model. The remaining three all depend $M_{\eta_\Delta}$ in some way. We have little hope of devising a sound and valid model for these remaining nodes as long as we lack confidence in $M_{\eta_\Delta}$. As discussed in that section, the data necessary to improve our understanding of the influence of $\eta_\Delta$ is not yet available; we would want to produce at least a thousand more data points, requiring at least $30,000$ model runs, which would take a little over two weeks with our present resources.
+
+
 ```{code-cell} ipython3
-# def model_f_H_A(
-#         indvars, /,
-#         c_1: (-1e5, 1e5) = 1,
-#         c_2: (-1e5, 1e5) = 1,
-#         ):
-#     f, H, A = indvars
-#     base_term = base(A)
-#     scal_adj = scal(H, A)**(c_1 * f + c_2)
-#     pert_adj = pert(f, A)
-#     cross_term = 0
-#     cross_factor = 1
-#     return cross_factor * scal_adj * (pert_adj + base_term) + cross_term
+# criticality_empirical_model_f_eta_main
+
+public = COMMON.model_f_eta = types.SimpleNamespace()
+
+raw_series = arrmixed.loc[0].sort_index() / 2
+series = np.log10(raw_series)
+precision = 1000
+series_floor = (np.floor(series * precision) / precision).min()
+series_ceil = (np.ceil(series * precision) / precision).max()
+series_scal = series_ceil - series_floor
+
+inf_ratio = np.log(raw_series / COMMON.model_f.model(
+    series.index.get_level_values('f'), series.index.get_level_values('aspect'),
+    ))
+precision = 1000
+inf_ratio_floor = (np.floor(inf_ratio * precision) / precision).min()
+inf_ratio_ceil = (np.ceil(inf_ratio * precision) / precision).max()
+inf_ratio_dist = max((np.abs(inf_ratio_floor), np.abs(inf_ratio_ceil)))
+
+inf_ratio_label = r"$\log{\left(M_{f;{\eta_\Delta}} / M_f \right)}$"
+
+eta_vals = tuple(
+    val for val in sorted(set(series.index.get_level_values('etaDelta')))
+    # if not np.log10(val) % 1
+    )
+
+canvas = Canvas(size=(8, 12), shape=(len(eta_vals) // 2, 2))
+
+alpha_label = r"$\log_{10}\alpha_{\mathrm{cr},\mathrm{adj}}$"
+
+for i, eta_val in enumerate(eta_vals):
+    subseries = series.loc[:, eta_val]
+    if i >= len(eta_vals) // 2:
+        place = (i - len(eta_vals) // 2, 1)
+    else:
+        place = (i, 0)
+    # if place[0] == 5:
+    #     subseries = subseries * 200000
+    # print(subseries.mean())
+    ax = canvas.make_ax(place)
+
+    aspect_channel = Channel(
+        subseries.index.get_level_values('aspect'),
+        label="$A$",
+        )
+    f_channel = Channel(
+        subseries.index.get_level_values('f'),
+        label="$f$", lims=(0, 1), capped=(True, True),
+        )
+
+    ax.scatter(
+        aspect_channel,
+        f_channel,
+        s=100,
+        c=Channel(
+            (inf_ratio.loc[:, eta_val] + inf_ratio_dist) / (2 * inf_ratio_dist),
+            label=inf_ratio_label,
+            ),
+        vmin=0, vmax=1, cmap="RdBu",
+        )
+
+
+    ax.scatter(
+        aspect_channel,
+        f_channel,
+        s=20,
+        c=Channel(
+            (subseries.values - series_floor) / series_scal,
+            label=alpha_label,
+            ),
+        vmin=0, vmax=1, cmap="viridis",
+        )
+    if not place[0] == len(eta_vals) // 2 - 1:
+        ax.props.edges.x.label.visible = False
+        ax.props.edges.x.ticks.major.labels = ()
+    if place[1] == 1:
+        ax.props.edges.y.label.visible = False
+        ax.props.edges.y.ticks.major.labels = ()
+    ax.ax.text(
+        0.95, 0.05,             # (x, y) relative to axis: 0.95 is near right, 0.05 is near bottom
+        r"$\eta_\Delta = 10^{" + str(round(np.log10(eta_val), 3)) + "}$",
+        transform=ax.ax.transAxes, # Uses (0,0) as bottom-left and (1,1) as top-right of the subplot
+        ha="right",             # Right-align text so it grows inward from the border
+        va="bottom",            # Bottom-align text
+        fontsize=10,
+        color="black",
+        # bbox=dict(boxstyle="round,pad=0.3", fc="black", ec="none", alpha=0.6) # Optional background box for readability
+        )
+
+cax = canvas.fig.add_axes([0.8, 0.55, 0.02, 0.3])  # left bottom width height
+cbar = canvas.fig.colorbar(
+    cm.ScalarMappable(cmap="RdBu"),
+    cax=cax,
+    )
+cbarticks = np.round(np.linspace(-inf_ratio_dist, inf_ratio_dist, 11), 5)
+cbar.set_ticks((cbarticks - cbarticks[0]) / (cbarticks[-1] - cbarticks[0]))
+cbar.set_ticklabels(tuple(
+    map(lambda val: "$" + str(val) + "$", cbarticks)
+    ))
+cbar.set_label(inf_ratio_label)
+
+cax = canvas.fig.add_axes([0.8, 0.2, 0.02, 0.3])  # left bottom width height
+cbar = canvas.fig.colorbar(
+    cm.ScalarMappable(cmap="viridis"),
+    cax=cax,
+    )
+cbarticks = np.round(np.linspace(series_floor, series_ceil, 20), 2)
+cbar.set_ticks((cbarticks - cbarticks[0]) / (cbarticks[-1] - cbarticks[0]))
+cbar.set_ticklabels(tuple(
+    map(lambda val: "$" + str(val) + "$", cbarticks)
+    ))
+cbar.set_label(alpha_label)
+
+canvas.update()
+
+canvas.fig.subplots_adjust(
+    left=0.1,     # Left boundary of subplots
+    right=0.75,   # Right boundary (leaves space on the right)
+    bottom=0.15,  # Bottom boundary
+    top=0.9,      # Top boundary
+    wspace=0.1,   # Width spacing between columns (fraction of average axis width)
+    hspace=0.1,   # Height spacing between rows
+    )
+
+canvas.fig
 ```
 
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-#### $M_{f;\eta_\Delta}$: variable-viscosity rheology with basal heating in the annulus
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-#### $M_{H;\eta_\Delta}$: variable-viscosity rheology with mixed heating in the Cartesian domain
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-#### The supremum case: variable viscosity and mixed heating in the annulus
+$10^{-5.0}$

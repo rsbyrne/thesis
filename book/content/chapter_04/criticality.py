@@ -53,6 +53,13 @@ def make_frames():
                 ['alpha']
                 .sort_index()
                 )
+    for i, series in enumerate(outs):
+        frm = series.reset_index()
+        for col in frm:
+            frm[col] = frm[col].round(12)
+        series = frm.set_index(series.index.names)['alpha']
+        series = series[~series.index.duplicated(keep='first')]
+        outs[i] = series
     return tuple(outs)
 
 def unitise(xs, return_ununitiser=False, return_unitiser=False):
