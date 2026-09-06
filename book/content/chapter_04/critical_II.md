@@ -1834,9 +1834,9 @@ tags: [remove-cell]
 public = COMMON.model_eta = types.SimpleNamespace()
 
 series = public.series = arrmixed.loc[0].loc[1:2].loc[:, :, 0.999] / 2
-# nonzero_series = public.nonzero_series = series.loc[:, 1e-7:]
+# nonzero_series = public.nonzero_series = seriZes.loc[:, 1e-7:]
 
-eta_vals = np.array(sorted(set(nonzero_series.index.get_level_values('etaDelta'))))
+eta_vals = np.array(sorted(set(series.index.get_level_values('etaDelta'))))
 log_eta_vals = np.log10(eta_vals)
 c_range = (min(log_eta_vals), max(log_eta_vals))
 
@@ -2020,13 +2020,14 @@ for eta_val in eta_vals:
         norm=matplotlib.colors.Normalize(vmin=c_range[0], vmax=c_range[1]),
         )
 
-for eta_val in eta_vals[:7]:
+for eta_val in eta_vals:
     log_eta_val = np.log10(eta_val)
     # if not H_val: continue
     data = series.loc[:, eta_val].dropna()
     # data = (series.loc[H_val] / series.loc[0]).dropna()
     # data = series.loc[H_val]
-    if len(data) < 3: continue
+    if len(data) < 3:
+        continue
     xchan = Channel(data.index.get_level_values('aspect'), label="$A$")
     ychan = Channel(
         data.values,
@@ -2102,26 +2103,36 @@ label: criticality_M_eta_analysis_chart
 ---
 # criticality_M_eta_analysis_chart
 
-viz_height = 8
+warnings.filterwarnings("ignore")
 
-canvas1 = Canvas(size=(4, viz_height), shape=(6, 1))
+viz_height = 12
+# focus_eta_vals = (0.01, 0.1, 1, 10, 100, 1000, 10000)
+focus_eta_vals = np.array(sorted(set(series.index.get_level_values('etaDelta'))))
 
-def candidate_model(
+canvas1 = Canvas(size=(4, viz_height), shape=(len(focus_eta_vals), 1))
+
+def log_candidate_model(
         aspect, /,
         u: (0, 1e6) = 1.,
         v: (0, 1e6) = 1.,
-        w: (1, 1e6) = 3.,
+        w: (0, 1e6) = 1.,
         ):
     correction = 1 + COMMON.model_inf.model.params['c'] * np.exp(1/aspect)
-    return u * correction * (np.pi / aspect)**4 * (1 + v * aspect**2)**w
+    return np.log(u * correction * (np.pi / aspect)**4 * (1 + v * aspect**2)**(3*w))
 
 fine_aspects = np.linspace(1, 2, 1001)
-focus_eta_vals = (0.01, 0.1, 1, 10, 100, 1000)
 
 axs = []
+models = {}
 for i, etadelta_val in enumerate(focus_eta_vals):
     subseries = series.loc[:, etadelta_val]
-    model = analysis.custom_curve_fit(candidate_model, subseries.index.values, subseries.values, maxfev=30000)
+    log_model = analysis.custom_curve_fit(
+        log_candidate_model, subseries.index.values, np.log(subseries.values), maxfev=30000,
+        sigma=np.log(subseries.values), absolute_sigma=False,
+        )
+    model = lambda *args, **kwargs: np.exp(log_model(*args, **kwargs))
+    model.params = log_model.params
+    models[etadelta_val] = model
     ax = canvas1.make_ax((i, 0))
     ax.scatter(
         Channel(subseries.index, label="$A$"),
@@ -2132,26 +2143,28 @@ for i, etadelta_val in enumerate(focus_eta_vals):
         color="tab:orange",
         linestyle='--',
         )
-    ax.annotate(
-        np.median(subseries.index.values),
-        np.median(subseries.values),
-        label = r"$\eta_\Delta=" + str(etadelta_val) + "$" + "\n" + "$R^2 = " + str(round(model.linscore, 5)) + "$",
-        points = (0, 20),
-        # arrowprops = dict(arrowstyle = "->"),
+    ax.ax.text(
+        0.95, 0.05,             # (x, y) relative to axis: 0.95 is near right, 0.05 is near bottom
+        r"$\eta_\Delta=" + str(etadelta_val) + "$",
+        transform=ax.ax.transAxes, # Uses (0,0) as bottom-left and (1,1) as top-right of the subplot
+        ha="right",             # Right-align text so it grows inward from the border
+        va="bottom",            # Bottom-align text
+        fontsize=10,
+        color="black",
+        # bbox=dict(boxstyle="round,pad=0.3", fc="black", ec="none", alpha=0.6) # Optional background box for readability
         )
+    # ax.annotate(
+    #     np.median(subseries.index.values),
+    #     np.median(subseries.values),
+    #     label = r"$\eta_\Delta=" + str(etadelta_val) + "$" + "\n" + "$R^2 = " + str(round(model.linscore, 5)) + "$",
+    #     points = (0, 20),
+    #     # arrowprops = dict(arrowstyle = "->"),
+    #     )
     axs.append(ax)
 
 for ax in axs[:-1]:
     ax.props.edges.x.label.visible = False
     ax.props.edges.x.ticks.major.labels = ()
-
-models = {}
-for etadelta_val in focus_eta_vals:
-    subseries = series.loc[:, etadelta_val]
-    if len(subseries) < 5: continue
-    models[etadelta_val] = analysis.custom_curve_fit(
-        candidate_model, subseries.index.values, subseries.values, maxfev=30000
-        )
 
 canvas2 = Canvas(size=(4, viz_height), shape=(3, 1))
 for i, key in enumerate(('u', 'v', 'w')):
@@ -2170,6 +2183,49 @@ for i, key in enumerate(('u', 'v', 'w')):
         )
 
 imop.hstack(canvas1, canvas2)
+
+# chosen_aspect_vals = tuple(sorted(set(series.index.get_level_values('aspect'))))
+
+# viz_height = round(2 * len(chosen_aspect_vals))
+
+# canvas1 = Canvas(size=(12, viz_height), shape=(len(chosen_aspect_vals), 2))
+# for i, aspect_val in enumerate(chosen_aspect_vals):
+#     ax1 = canvas1.make_ax((i, 0))
+#     subseries = series.loc[aspect_val]
+#     etadelta_chan = Channel(
+#         subseries.index.values,
+#         label=r"$\eta_\Delta$",
+#         log=True,
+#         )
+#     ax1.scatter(
+#         etadelta_chan,
+#         Channel(
+#             subseries.values,
+#             label=r"$\alpha_{\mathrm{cr};\mathrm{adj}}$",
+#             log=True,
+#             ),
+#         )
+#     ax2 = canvas1.make_ax((i, 1))
+#     ax2.scatter(
+#         etadelta_chan,
+#         Channel(
+#             np.log10(subseries.values) - np.log10(COMMON.model_inf.model(aspect_val)),
+#             label=r"$\Delta$",
+#             ),
+#         )
+#     for ax in (ax1, ax2):
+#         ax.ax.text(
+#             0.95, 0.05,             # (x, y) relative to axis: 0.95 is near right, 0.05 is near bottom
+#             r"$A \approx " + str(round(aspect_val, 4)) + "$",
+#             transform=ax.ax.transAxes, # Uses (0,0) as bottom-left and (1,1) as top-right of the subplot
+#             ha="right",             # Right-align text so it grows inward from the border
+#             va="bottom",            # Bottom-align text
+#             fontsize=10,
+#             color="black",
+#             # bbox=dict(boxstyle="round,pad=0.3", fc="black", ec="none", alpha=0.6) # Optional background box for readability
+#             )
+
+# canvas1
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -2182,14 +2238,37 @@ The results of curvefitting several representative cases of the $M_{\eta_\Delta}
 
 +++
 
-Observing that the trend with respect to $A$ - the 'liminal model' - for each case of $\eta_\Delta$ appears to share the broad properties of the base case - the 'infinimum model' - we selected as a candidate model a version of the infinimum's liminal model with three tunable parameters, $u$, $v$, and $w$:
-
 $$ \begin{align*}
-A &\mapsto u \cdot \left( 1 + c \ e^\frac{1}{A} \right) \cdot {\left( \frac{\pi}{A} \right)}^4 {\left( 1 + v A^2 \right)}^w \\
+A &\mapsto u \cdot \left( 1 + c \ e^\frac{1}{A} \right) \cdot {\left( \frac{\pi}{A} \right)}^4 {\left( 1 + v A^2 \right)}^{3w} \\
 c &= 0.0028693
 \end{align*} $$
 
-We attempted to fit this candidate model to the $M_{\eta_\Delta}$ data one case at a time ({numref}`criticality_M_eta_analysis_chart_fig`). The results were promising, with the fitted parameters exhibiting a structured dependence on $\eta_\Delta$. However, the shape of the curves of $u$, $v$, and $w$ with respect to $\eta_\Delta$ are somewhat suspicious. It is unclear, for example, why $u$ would increase gracefully only to flatline beyond a certain value. It is possible that we simply do not have enough, good-quality data for these higher values of $\eta_\Delta$; it is also possible that the 'regime change' around $\eta_\Delta = 1$ is frustrating our method of analysis.
++++
+
+Observing that the trend with respect to $A$ - the 'liminal model' - for each case of $\eta_\Delta$ appears to share the broad properties of the base case - the 'infinimum model' - a reasonable candidate model would be a version of the infinimum's liminal model equipped with several tunable parameters.
+
+The infinimum model, to recap, looks like this:
+
+$$ \begin{align*}
+M_\mathrm{inf} := \quad \bullet \mapsto  A &\mapsto \left( 1 + c \ e^\frac{1}{A} \right) \cdot {\left( \frac{\pi}{A} \right)}^4 {\left( 1 + A^2 \right)}^3 \\
+\quad \\
+c &= 0.0028693
+\end{align*} $$
+
+We can make this 'trainable' by equipping the liminal part (from $A \mapsto \dots $) with three tunable parameters, $u$, $v$, and $w$:
+
+$$ \begin{align*}
+A &\mapsto u \cdot \left( 1 + c \ e^\frac{1}{A} \right) \cdot {\left( \frac{\pi}{A} \right)}^4 {\left( 1 + v A^2 \right)}^{3w} \\
+c &= 0.0028693
+\end{align*} $$
+
+If this model is to behave properly in the limit, several constraints must be observed by the three constants:
+
+- $u$, $v$, and $w$ must all go to $1$ as $\eta_\Delta$ goes to $1$ (otherwise the infinimum is not reproduced)
+- $u$ must be non-negative (otherwise we permit zero or negative $\alpha$)
+- The product of $v$ and $A^2$ must be greater than negative one (otherwise we permit zero or negative $\alpha$)
+
+When we attempt to fit this candidate model to the $M_{\eta_\Delta}$ data to a few selected cases of $M_{\eta_\Delta}$ ({numref}`criticality_M_eta_analysis_chart_fig`), we see that the empirical parameters exhibit a strongly structured dependence on $\eta_\Delta$. However, the shape of the curves of $u$, $v$, and $w$ with respect to $\eta_\Delta$ are somewhat suspicious. It is unclear, for example, why $u$ would increase gracefully only to flatline beyond a certain value. It is possible that we simply do not have enough, good-quality data for these higher values of $\eta_\Delta$; it is also possible that the 'regime change' around $\eta_\Delta = 1$ is frustrating our method of analysis.
 
 ```{code-cell} ipython3
 ---
@@ -2208,83 +2287,74 @@ all_eta = slc.reset_index()['etaDelta']
 all_A = slc.reset_index()['aspect']
 all_true = slc.to_numpy()
 
-def model_eta_aspect(
-
+def log_model_eta_aspect(
         indvars, /,
-
-        # Parameters for U (Logistic function)
-        u_min: (0.0, 2.0) = 0.5,    # Lower plateau
-        u_max: (3.0, 20.0) = 5.2,   # Upper plateau
-        u_k:   (0.1, 20.0) = 2.0,   # Steepness of transition
-        u_c:   (-1.0, 4.0) = 1.5,   # Midpoint of transition (in log10 space)
-
-        # Parameters for V (Baseline + Power Law)
-        v_min: (0.0, 5.0) = 1.0,    # Flat baseline for low eta
-        v_a:   (0.0, 1.0) = 0.06,   # Power law multiplier
-        v_b:   (0.0, 2.0) = 0.6,    # Power law exponent
-
-        # Parameters for W (Reverse Logistic function)
-        w_min: (1.0, 5.0) = 2.0,    # Lower plateau
-        w_max: (2.0, 5.0) = 3.0,    # Upper plateau
-        w_k:   (0.1, 20.0) = 2.0,   # Steepness of transition
-        w_c:   (-1.0, 4.0) = 1.5,   # Midpoint of transition (in log10 space)
-
+        u_pos: (-5.0, 5.0) = 0.4,
+        u_neg: (-5.0, 5.0) = 0.1,
+        v_pos: (-5.0, 5.0) = 0.2,
+        v_neg: (-5.0, 5.0) = -0.1,
+        w_pos: (-5.0, 5.0) = -0.05,
+        w_neg: (-5.0, 5.0) = 0.03,
+        t_pos: (-5.0, 5.0) = 0.0,
+        t_neg: (-5.0, 5.0) = 0.0,
+        k:     (0.001, 10.0) = 4.7,
         ):
-    
     eta, aspect = indvars
-
-    log_eta = np.log10(np.maximum(eta, 1e-10))
-
-    U = u_min + (u_max - u_min) / (1 + np.exp(-u_k * (log_eta - u_c)))
-    V = v_min + v_a * (eta ** v_b)
-    W = w_min + (w_max - w_min) / (1 + np.exp(w_k * (log_eta - w_c)))
-
+    log_eta = np.log(np.maximum(eta, 1e-10))
+    s = np.sqrt(log_eta**2 + k**2) - k
+    x_pos = (log_eta + s) / 2
+    x_neg = (log_eta - s) / 2
+    U = np.exp(u_pos * x_pos + u_neg * x_neg)
+    V = np.exp(v_pos * x_pos + v_neg * x_neg)
+    W = 1 + w_pos * x_pos + w_neg * x_neg
+    T = t_pos * x_pos + t_neg * x_neg
     correction = 1 + COMMON.model_inf.model.params['c'] * np.exp(1/aspect)
-    
-    return U * correction * (np.pi / aspect)**4 * (1 + V * aspect**2)**W
+    out = U * (aspect ** T) * correction * (np.pi / aspect)**4 * (1 + V * aspect**2)**(3*W)
+    return np.log(out)
 
-model_eta_aspect = public.model_eta_aspect = analysis.custom_curve_fit(
-    model_eta_aspect, np.vstack((all_eta, all_A)), all_true, maxfev=30000
+log_model_eta_aspect = public.log_model_eta_aspect = analysis.custom_curve_fit(
+    log_model_eta_aspect, np.vstack((all_eta, all_A)),
+    np.log(all_true), #all_true,
+    maxfev=30000,
+    sigma=np.log(all_true), absolute_sigma=False,
     )
-print(model_eta_aspect.params, model_eta_aspect.linscore)
+print(log_model_eta_aspect.params, log_model_eta_aspect.linscore)
+model_eta_aspect = lambda *args, **kwargs: np.exp(log_model_eta_aspect(*args, **kwargs))
+model = public.model = lambda etaDelta, A, *args, **kwargs: model_eta_aspect((etaDelta, A), *args, **kwargs)
 
-# print(f"{model_H_A.linscore:.7g}")
-
-# strns = []
-# for key, val in model_H_A.params.items():
-#     strn = f"{key} &= {val :.5g}"
-#     strns.append(strn)
-# strn = (r' \\' + '\n').join(strns)
-# print(strn)
-
-
-eta_vals = np.linspace(-5, 5, 200)
+eta_vals = 10**np.linspace(-5, 5, 200)
 A_vals = np.linspace(1.0, 2.0, 200)
 
 eta, A = np.meshgrid(eta_vals, A_vals)
 
-Alpha = model_eta_aspect((10**eta, A))
+Alpha = model_eta_aspect((eta, A))
 
 fig = plt.figure(figsize=(10, 7))
 ax = fig.add_subplot(111, projection='3d')
 
+log_alpha = True
+
 surf = ax.plot_surface(
-    eta, A,
-    np.log10(Alpha), # np.log10(Alpha),
+    np.log10(eta),
+    A,
+    np.log10(Alpha) if log_alpha else Alpha,
+    # Alpha,
     cmap='viridis', edgecolor='none', alpha=0.5,
     )
 ax.scatter(
     np.log10(all_eta),
     all_A,
-    # np.log10(all_true),
-    np.log10(all_true),
+    np.log10(all_true) if log_alpha else all_true,
+    # all_true,
     color='red',
     s=1.,
     )
+magenta_vals = COMMON.model_inf.model(A_vals)
 ax.scatter(
-    np.full(len(A_vals), 0),
+    np.log10(np.full(len(A_vals), 1)),
     A_vals,
-    np.log10(COMMON.model_inf.model(A_vals)),
+    np.log10(magenta_vals) if log_alpha else magenta_vals,
+    # COMMON.model_inf.model(A_vals),
     color='magenta',
     s=1.,
     )
@@ -2310,21 +2380,62 @@ plt.show()
 Our numerical modelling data for $M_{\eta_\Delta}$ (red dots), highlighting the infinimum case (magenta line), compared to the surface predicted by our curvefitted model. The fit is excellent, but the noticeable 'kink' toward the upper end, and the structural deviation at the lower end, suggests that we should not overinterpret the physics here.
 ```
 
-+++
+```{code-cell} ipython3
+s_func_raw = lambda eta, u_pos, u_neg, v_pos, v_neg, w_pos, w_neg, t_pos, t_neg, k: np.sqrt(np.log(eta)**2 + k**2) - k
+s_func = lambda eta: s_func_raw(eta, **log_model_eta_aspect.params)
+x_pos_func_raw = lambda eta, u_pos, u_neg, v_pos, v_neg, w_pos, w_neg, t_pos, t_neg, k: (np.log(eta) + s_func(eta)) / 2
+x_pos_func = lambda eta: x_pos_func_raw(eta, **log_model_eta_aspect.params)
+x_neg_func_raw = lambda eta, u_pos, u_neg, v_pos, v_neg, w_pos, w_neg, t_pos, t_neg, k: (np.log(eta) - s_func(eta)) / 2
+x_neg_func = lambda eta: x_neg_func_raw(eta, **log_model_eta_aspect.params)
+U_func_raw = lambda eta, u_pos, u_neg, v_pos, v_neg, w_pos, w_neg, t_pos, t_neg, k: np.exp(u_pos * x_pos_func(eta) + u_neg * x_neg_func(eta))
+U_func = lambda eta: U_func_raw(eta, **log_model_eta_aspect.params)
+V_func_raw = lambda eta, u_pos, u_neg, v_pos, v_neg, w_pos, w_neg, t_pos, t_neg, k: np.exp(v_pos * x_pos_func(eta) + v_neg * x_neg_func(eta))
+V_func = lambda eta: V_func_raw(eta, **log_model_eta_aspect.params)
+W_func_raw = lambda eta, u_pos, u_neg, v_pos, v_neg, w_pos, w_neg, t_pos, t_neg, k: 1 + w_pos * x_pos_func(eta) + w_neg * x_neg_func(eta)
+W_func = lambda eta: W_func_raw(eta, **log_model_eta_aspect.params)
+T_func_raw = lambda eta, u_pos, u_neg, v_pos, v_neg, w_pos, w_neg, t_pos, t_neg, k: t_pos * x_pos_func(eta) + t_neg * x_neg_func(eta)
+T_func = lambda eta: T_func_raw(eta, **log_model_eta_aspect.params)
+
+canvas = Canvas(shape=(4, 1), size=(6, 9))
+eta_vals = 10**np.linspace(-5, 5, 1001)
+eta_chan = Channel(eta_vals, label=r"$\eta_\Delta$", log=True)
+for i, (label, func) in enumerate(dict(
+        U=U_func,
+        V=V_func,
+        W=W_func,
+        T=T_func,
+        ).items()):
+    ax = canvas.make_ax((i, 0))
+    ax.line(
+        eta_chan,
+        Channel(func(eta_vals), label=r"$" + label + r"$")
+        )
+canvas
+```
 
 If we take our results at face value, we can derive candidate functions for each empirical parameter with respect to $\eta_\Delta$:
 
-$$ \begin{align*}
-U(\eta_\Delta) &= u_{\text{min}} + \frac{u_{\text{max}} - u_{\text{min}}}{1 + e^{-u_k (\log_{10}\eta_\Delta - u_c)}} \\
-V(\eta_\Delta) &= v_{\text{min}} + v_a {\eta_\Delta}^{v_b} \\
-W(\eta_\Delta) &= w_{\text{min}} + \frac{w_{\text{max}} - w_{\text{min}}}{1 + e^{w_k (\log_{10}\eta_\Delta - w_c)}}
-\end{align*} $$
+$$\begin{align*} U(\eta_\Delta) &= \exp{\left( u_{\mathrm{pos}} x_+ + u_{\mathrm{neg}} x_- \right)} \\ V(\eta_\Delta) &= \exp{\left( v_{\mathrm{pos}} x_+ + v_{\mathrm{neg}} x_- \right)} \\ W(\eta_\Delta) &= 1 + w_{\mathrm{pos}} x_+ + w_{\mathrm{neg}} x_- \\ T(\eta_\Delta) &= t_{\mathrm{pos}} x_+ + t_{\mathrm{neg}} x_- \end{align*}$$
 
-With these $\eta_\Delta$-dependent substitutions in place for $u$, $v$, and $w$, the whole $M_{\eta_Delta}$ dataset can be fitted to an $R^2$ value of greater than $0.99999$ using the following values for the empirical constants (to five significant figures):
+So we can now write:
 
-$$\begin{align*} u_{\mathrm{min}} &= 0.10251 \\ u_{\mathrm{max}} &= 11.180 \\ u_k &= 1.5865 \\ u_c &= 3.0710 \\ v_{\mathrm{min}} &= 4.6086 \\ v_a &= 0.0026386 \\ v_b &= 0.64097 \\ w_{\mathrm{min}} &= 2.3724 \\ w_{\mathrm{max}} &= 2.1203 \\ w_k &= 15.748 \\ w_c &= 3.0213 \end{align*}$$
+$$
+M_{\eta_\Delta} := \quad \eta_\Delta \mapsto A \mapsto \overset{\star}{U} \cdot A^{\overset{\star}{T}} \cdot \left( 1 + c \ e^\frac{1}{A} \right) \cdot {\left( \frac{\pi}{A} \right)}^4 {\left( 1 + \overset{\star}{V}(\eta_\Delta) A^2 \right)}^{\overset{\star}{W}}
+$$
 
-Given the paucity of our data, the wide range of values being fitted, and the profusion of parameters, it is likely we are substantially overfitting the data in this case. This node of our lattice model, and those dependent on it, should be marked as dubious until significantly more data can be obtained.
+Where the overset star indicates calling the function with the relevant parameters (a useful space-saving convention).
+
+With these $\eta_\Delta$-dependent substitutions in place for $u$, $v$, and $w$, the whole $M_{\eta_\Delta}$ dataset can be fitted with an $R^2$ value of over $99.8\%$ using the following values for the empirical constants (to five significant figures):
+
+$$\begin{align*}  u_{\mathrm{pos}} &= 1.0962 \\  u_{\mathrm{neg}} &= -0.14707 \\  v_{\mathrm{pos}} &= 0.053261 \\  v_{\mathrm{neg}} &= -0.087759 \\  w_{\mathrm{pos}} &= -0.20997 \\  w_{\mathrm{neg}} &= 0.078721 \\ t_{\mathrm{pos}} &= 0.84192 \\ t_{\mathrm{neg}} &= -0.24569 \\ k &= 5.8204  \end{align*}$$
+
+The $c$ parameter, for its part, simply carries over from the infinimum model:
+
+$$
+c = 0.0028693
+$$
+
+The fit we have obtained here is surprisingly good, considering the relative paucity of data for this specific node. Nevertheless, we would want to acquire a good deal more data before investing much confidence in our formulation here. This node of our lattice model should be marked with an asterisk for now.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
@@ -2665,10 +2776,10 @@ The goodness of fit of the synthetic data model for $M_{f;H}$.
 To fit a curve to these data, we started with the assumption that the relation was of the $\mathrm{Scal} \cdot \left( \mathrm{Pert} + \mathrm{Base} \right)$ type. After inspecting the residuals, we suspected the involvement of a coupling factor of the form $c^H$: introducing this degree of freedom gave us an excellent initial fit. Observing some unevenness in the residual field, we were motivated to include an additive 'correction term' as well, which we equipped with bilinear and exponential parts: with the correction factor added, we obtained an $R^2$ value of greater than $99.99\%$, which is at the limit of what logic tells us our data can support without overfitting. Expressed in terms of the lower nodes $M_f$, $M_H$, and $M_\mathrm{inf}$, our proposed synthetic data model of $M_{f;H}$ is as follows:
 
 $$
-M_{f;H} := \quad f, H \mapsto A \mapsto \frac{\stackrel{\star\star}{M_H}}{\stackrel{\star\star}{M_\mathrm{inf}}} \left( c_1^H \stackrel{\star\star}{M_f} + \left( 1 - c_1^H \right) \stackrel{\star\star}{M_\mathrm{inf}} \right) + \stackrel{\star}{C} H^{c_3} (1 - f)^{c_4} \stackrel{\star\star}{M_\mathrm{inf}}
+M_{f;H} := \quad f, H \mapsto A \mapsto \frac{\overset{\star\star}{M_H}}{\overset{\star\star}{M_\mathrm{inf}}} \left( c_1^H \overset{\star\star}{M_f} + \left( 1 - c_1^H \right) \overset{\star\star}{M_\mathrm{inf}} \right) + \overset{\star}{C} H^{c_3} (1 - f)^{c_4} \overset{\star\star}{M_\mathrm{inf}}
 $$
 
-Where $\stackrel{\star}{\mathrm{func}}$ is a shorthand for $\mathrm{func_x}(x)$ and:
+Where $\overset{\star}{\mathrm{func}}$ is a shorthand for $\mathrm{func_x}(x)$ and:
 
 $$
 C := (f, H, A) \mapsto c_2 + (c_5 + c_{10}H)A + (c_6 + c_{11}H)(1 - f) + c_7 A (1 - f) + c_8 (1 - f) e^{-c_9 A}
@@ -2690,8 +2801,16 @@ We commend both the full and the simplified forms of $M_{f;H}$ as useful for ide
 
 So far, we have visted five of the eight nodes in our lattice model. The remaining three all depend $M_{\eta_\Delta}$ in some way. We have little hope of devising a sound and valid model for these remaining nodes as long as we lack confidence in $M_{\eta_\Delta}$. As discussed in that section, the data necessary to improve our understanding of the influence of $\eta_\Delta$ is not yet available; we would want to produce at least a thousand more data points, requiring at least $30,000$ model runs, which would take a little over two weeks with our present resources.
 
+In the meantime, we can at least reach for a qualitative understanding of the behaviour of these nodes.
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+label: criticality_empirical_model_f_eta_main
+---
 # criticality_empirical_model_f_eta_main
 
 public = COMMON.model_f_eta = types.SimpleNamespace()
@@ -2703,15 +2822,15 @@ series_floor = (np.floor(series * precision) / precision).min()
 series_ceil = (np.ceil(series * precision) / precision).max()
 series_scal = series_ceil - series_floor
 
-inf_ratio = np.log(raw_series / COMMON.model_f.model(
-    series.index.get_level_values('f'), series.index.get_level_values('aspect'),
+inf_ratio = np.log(raw_series / COMMON.model_eta.model(
+    series.index.get_level_values('etaDelta'), series.index.get_level_values('aspect'),
     ))
 precision = 1000
 inf_ratio_floor = (np.floor(inf_ratio * precision) / precision).min()
 inf_ratio_ceil = (np.ceil(inf_ratio * precision) / precision).max()
 inf_ratio_dist = max((np.abs(inf_ratio_floor), np.abs(inf_ratio_ceil)))
 
-inf_ratio_label = r"$\log{\left(M_{f;{\eta_\Delta}} / M_f \right)}$"
+inf_ratio_label = r"$\log{\left(M_{f;{\eta_\Delta}} / M_{\eta_\Delta} \right)}$"
 
 eta_vals = tuple(
     val for val in sorted(set(series.index.get_level_values('etaDelta')))
@@ -2812,11 +2931,21 @@ canvas.fig.subplots_adjust(
     right=0.75,   # Right boundary (leaves space on the right)
     bottom=0.15,  # Bottom boundary
     top=0.9,      # Top boundary
-    wspace=0.1,   # Width spacing between columns (fraction of average axis width)
+    wspace=0.05,   # Width spacing between columns (fraction of average axis width)
     hspace=0.1,   # Height spacing between rows
     )
 
 canvas.fig
 ```
 
-$10^{-5.0}$
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+```{figure} #criticality_empirical_model_f_eta_main
+:name: criticality_empirical_model_f_eta_main_fig
+
+The complete numerical dataset for $\alpha_{\mathrm{cr};\mathrm{adj}}$; the point cores are the (log of) the absolute $\alpha$ values while the rims give the (log of) the ratio with respect to a lower node, $M_{\eta_\Delta}$ (which, of the two choices - the other being $M_f$ - is the one across which there is more significant variation).
+```
+
++++
+
+In {numref}`criticality_empirical_model_f_eta_main_fig`, we can view the entirety of the $\alpha$ data for the $M_{f;\eta_\Delta}$ node all at once. It's a busy chart, to be sure, but it does reveal some very clear trends.
