@@ -361,7 +361,7 @@ isomixed, isointernal, arrmixed, arrinternal = datas = make_frames(
     # cache_refresh=True
     )
 
-print(sum(map(len, datas)))
+# print(sum(map(len, datas)))
 
 # full_arrmixed = isomixed.copy()
 # full_arrmixed = full_arrmixed.reset_index()
@@ -1246,7 +1246,7 @@ model_f_A = public.model_f_A = analysis.custom_curve_fit(
     model_f_A, np.vstack((all_f, all_A)), all_true, maxfev=10000
     )
 model = public.model = lambda f, A, *args, **kwargs: model_f_A((f, A), *args, **kwargs)
-print(model_f_A.params, model_f_A.linscore)
+# print(model_f_A.params, model_f_A.linscore)
 
 
 
@@ -1669,7 +1669,7 @@ model_H_A = public.model_H_A = analysis.custom_curve_fit(
     model_H_A, np.vstack((all_H, all_A)), all_true, maxfev=10000
     )
 model = public.model = lambda H, A, *args, **kwargs: model_H_A((H, A), *args, **kwargs)
-print(model_H_A.params, model_H_A.linscore)
+# print(model_H_A.params, model_H_A.linscore)
 
 # print(f"{model_H_A.linscore:.7g}")
 
@@ -2107,18 +2107,19 @@ warnings.filterwarnings("ignore")
 
 viz_height = 12
 # focus_eta_vals = (0.01, 0.1, 1, 10, 100, 1000, 10000)
-focus_eta_vals = np.array(sorted(set(series.index.get_level_values('etaDelta'))))
+focus_eta_vals = np.array(sorted(set(series.index.get_level_values('etaDelta'))))[::2]
 
-canvas1 = Canvas(size=(4, viz_height), shape=(len(focus_eta_vals), 1))
+canvas1 = Canvas(size=(3, viz_height), shape=(len(focus_eta_vals), 1))
 
 def log_candidate_model(
         aspect, /,
-        u: (0, 1e6) = 1.,
-        v: (0, 1e6) = 1.,
-        w: (0, 1e6) = 1.,
+        t: (-1e6, 1e6) = 1.,
+        u: (-1e6, 1e6) = 1.,
+        v: (-1e6, 1e6) = 1.,
+        w: (-1e6, 1e6) = 1.,
         ):
     correction = 1 + COMMON.model_inf.model.params['c'] * np.exp(1/aspect)
-    return np.log(u * correction * (np.pi / aspect)**4 * (1 + v * aspect**2)**(3*w))
+    return np.log(u * aspect**t * correction * (np.pi / aspect)**4 * (1 + v * aspect**2)**(3*w))
 
 fine_aspects = np.linspace(1, 2, 1001)
 
@@ -2166,66 +2167,60 @@ for ax in axs[:-1]:
     ax.props.edges.x.label.visible = False
     ax.props.edges.x.ticks.major.labels = ()
 
-canvas2 = Canvas(size=(4, viz_height), shape=(3, 1))
-for i, key in enumerate(('u', 'v', 'w')):
+canvas2 = Canvas(size=(3, viz_height), shape=(4, 1))
+x_chan = Channel(
+    tuple(models),
+    label=r"$\eta_\Delta$",
+    log=True,
+    )
+for i, key in enumerate(('t', 'u', 'v', 'w')):
     ax = canvas2.make_ax((i, 0))
     ax.scatter(
-        Channel(
-            tuple(models),
-            label=r"$\eta_\Delta$",
-            log=True,
-            ),
+        x_chan,
         Channel(
             tuple(model.params[key] for model in models.values()),
             label=f"${key}$",
-            # log=True,
+            log=True if key=="u" else False,
             ),
         )
+    if i < 3:
+        ax.props.edges.x.label.visible = False
+        ax.props.edges.x.ticks.major.labels = ()
 
-imop.hstack(canvas1, canvas2)
+chosen_aspect_vals = tuple(sorted(set(series.index.get_level_values('aspect'))))[::2]
 
-# chosen_aspect_vals = tuple(sorted(set(series.index.get_level_values('aspect'))))
+canvas3 = Canvas(size=(3, viz_height), shape=(len(chosen_aspect_vals), 1))
+for i, aspect_val in enumerate(chosen_aspect_vals):
+    ax1 = canvas3.make_ax((i, 0))
+    subseries = series.loc[aspect_val]
+    etadelta_chan = Channel(
+        subseries.index.values,
+        label=r"$\eta_\Delta$",
+        log=True, lims=(1e-5, 1e5),
+        )
+    ax1.scatter(
+        etadelta_chan,
+        Channel(
+            subseries.values,
+            label=r"$\alpha_{\mathrm{cr};\mathrm{adj}}$",
+            log=True, lims=(100, 1e5),
+            ),
+        )
+    ax1.ax.text(
+        0.95, 0.05,             # (x, y) relative to axis: 0.95 is near right, 0.05 is near bottom
+        r"$A \approx " + str(round(aspect_val, 4)) + "$",
+        transform=ax1.ax.transAxes, # Uses (0,0) as bottom-left and (1,1) as top-right of the subplot
+        ha="right",             # Right-align text so it grows inward from the border
+        va="bottom",            # Bottom-align text
+        fontsize=10,
+        color="black",
+        # bbox=dict(boxstyle="round,pad=0.3", fc="black", ec="none", alpha=0.6) # Optional background box for readability
+        )
+    if i < len(chosen_aspect_vals) - 1:
+        ax1.props.edges.x.label.visible = False
+        ax1.props.edges.x.ticks.major.labels = ()
 
-# viz_height = round(2 * len(chosen_aspect_vals))
-
-# canvas1 = Canvas(size=(12, viz_height), shape=(len(chosen_aspect_vals), 2))
-# for i, aspect_val in enumerate(chosen_aspect_vals):
-#     ax1 = canvas1.make_ax((i, 0))
-#     subseries = series.loc[aspect_val]
-#     etadelta_chan = Channel(
-#         subseries.index.values,
-#         label=r"$\eta_\Delta$",
-#         log=True,
-#         )
-#     ax1.scatter(
-#         etadelta_chan,
-#         Channel(
-#             subseries.values,
-#             label=r"$\alpha_{\mathrm{cr};\mathrm{adj}}$",
-#             log=True,
-#             ),
-#         )
-#     ax2 = canvas1.make_ax((i, 1))
-#     ax2.scatter(
-#         etadelta_chan,
-#         Channel(
-#             np.log10(subseries.values) - np.log10(COMMON.model_inf.model(aspect_val)),
-#             label=r"$\Delta$",
-#             ),
-#         )
-#     for ax in (ax1, ax2):
-#         ax.ax.text(
-#             0.95, 0.05,             # (x, y) relative to axis: 0.95 is near right, 0.05 is near bottom
-#             r"$A \approx " + str(round(aspect_val, 4)) + "$",
-#             transform=ax.ax.transAxes, # Uses (0,0) as bottom-left and (1,1) as top-right of the subplot
-#             ha="right",             # Right-align text so it grows inward from the border
-#             va="bottom",            # Bottom-align text
-#             fontsize=10,
-#             color="black",
-#             # bbox=dict(boxstyle="round,pad=0.3", fc="black", ec="none", alpha=0.6) # Optional background box for readability
-#             )
-
-# canvas1
+imop.hstack(canvas3, canvas1, canvas2)
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
@@ -2233,7 +2228,7 @@ imop.hstack(canvas1, canvas2)
 ```{figure} #criticality_M_eta_analysis_chart
 :name: criticality_M_eta_analysis_chart_fig
 
-The results of curvefitting several representative cases of the $M_{\eta_\Delta}$ series using a modified form of the infinimum's liminal model with three tunable parameters - $u$, $v$, and $w$. Extremely fine fits were obtained in all cases. On a log-log plot, the trends in the fitted values exhibit a discontinuous linear structure.
+The results of curvefitting several representative cases of the $M_{\eta_\Delta}$ series using a modified form of the infinimum's liminal model with three tunable parameters - $u$, $v$, and $w$. Extremely fine fits were obtained in all cases, however, the parameter values needed to obtain these fits have an unclear dependency on $\eta_\Delta$, especially at high values were the data is sparse.
 ```
 
 +++
@@ -2255,20 +2250,20 @@ M_\mathrm{inf} := \quad \bullet \mapsto  A &\mapsto \left( 1 + c \ e^\frac{1}{A}
 c &= 0.0028693
 \end{align*} $$
 
-We can make this 'trainable' by equipping the liminal part (from $A \mapsto \dots $) with three tunable parameters, $u$, $v$, and $w$:
+We can make this 'trainable' by equipping the liminal part (from $A \mapsto \dots $) with four tunable parameters, $t$, $u$, $v$, and $w$:
 
 $$ \begin{align*}
-A &\mapsto u \cdot \left( 1 + c \ e^\frac{1}{A} \right) \cdot {\left( \frac{\pi}{A} \right)}^4 {\left( 1 + v A^2 \right)}^{3w} \\
+A &\mapsto u \cdot A^t \cdot \left( 1 + c \ e^\frac{1}{A} \right) \cdot {\left( \frac{\pi}{A} \right)}^4 {\left( 1 + v A^2 \right)}^{3w} \\
 c &= 0.0028693
 \end{align*} $$
 
 If this model is to behave properly in the limit, several constraints must be observed by the three constants:
 
-- $u$, $v$, and $w$ must all go to $1$ as $\eta_\Delta$ goes to $1$ (otherwise the infinimum is not reproduced)
+- $u$, $v$, and $w$ must all go to $1$ and $t$ must go to zero as $\eta_\Delta$ goes to $1$ (otherwise the infinimum is not reproduced)
 - $u$ must be non-negative (otherwise we permit zero or negative $\alpha$)
 - The product of $v$ and $A^2$ must be greater than negative one (otherwise we permit zero or negative $\alpha$)
 
-When we attempt to fit this candidate model to the $M_{\eta_\Delta}$ data to a few selected cases of $M_{\eta_\Delta}$ ({numref}`criticality_M_eta_analysis_chart_fig`), we see that the empirical parameters exhibit a strongly structured dependence on $\eta_\Delta$. However, the shape of the curves of $u$, $v$, and $w$ with respect to $\eta_\Delta$ are somewhat suspicious. It is unclear, for example, why $u$ would increase gracefully only to flatline beyond a certain value. It is possible that we simply do not have enough, good-quality data for these higher values of $\eta_\Delta$; it is also possible that the 'regime change' around $\eta_\Delta = 1$ is frustrating our method of analysis.
+When we attempt to fit this candidate model to the $M_{\eta_\Delta}$ data to a few selected cases of $M_{\eta_\Delta}$ ({numref}`criticality_M_eta_analysis_chart_fig`), we see that the empirical parameters exhibit a strongly structured dependence on $\eta_\Delta$. However, the shape of the curves of $t$, $u$, $v$, and $w$ with respect to $\eta_\Delta$ are somewhat suspicious. It is unclear, for example, why $u$ would increase gracefully only to flatline beyond a certain value. It is possible that we simply do not have enough, good-quality data for these higher values of $\eta_\Delta$; it is also possible that the 'regime change' around $\eta_\Delta = 1$ is frustrating our method of analysis.
 
 ```{code-cell} ipython3
 ---
@@ -2279,6 +2274,7 @@ label: criticality_empirical_model_eta_3D
 tags: [remove-cell]
 ---
 # criticality_empirical_model_eta_3D
+
 # warnings.filterwarnings("error")
 warnings.filterwarnings("ignore")
 
@@ -2289,15 +2285,15 @@ all_true = slc.to_numpy()
 
 def log_model_eta_aspect(
         indvars, /,
+        t_pos: (-5.0, 5.0) = 0.0,
+        t_neg: (-5.0, 5.0) = 0.0,
         u_pos: (-5.0, 5.0) = 0.4,
         u_neg: (-5.0, 5.0) = 0.1,
         v_pos: (-5.0, 5.0) = 0.2,
         v_neg: (-5.0, 5.0) = -0.1,
         w_pos: (-5.0, 5.0) = -0.05,
         w_neg: (-5.0, 5.0) = 0.03,
-        t_pos: (-5.0, 5.0) = 0.0,
-        t_neg: (-5.0, 5.0) = 0.0,
-        k:     (0.001, 10.0) = 4.7,
+        k: (0.001, 10.0) = 4.7,
         ):
     eta, aspect = indvars
     log_eta = np.log(np.maximum(eta, 1e-10))
@@ -2318,7 +2314,7 @@ log_model_eta_aspect = public.log_model_eta_aspect = analysis.custom_curve_fit(
     maxfev=30000,
     sigma=np.log(all_true), absolute_sigma=False,
     )
-print(log_model_eta_aspect.params, log_model_eta_aspect.linscore)
+# print(log_model_eta_aspect.params, log_model_eta_aspect.linscore)
 model_eta_aspect = lambda *args, **kwargs: np.exp(log_model_eta_aspect(*args, **kwargs))
 model = public.model = lambda etaDelta, A, *args, **kwargs: model_eta_aspect((etaDelta, A), *args, **kwargs)
 
@@ -2381,6 +2377,15 @@ Our numerical modelling data for $M_{\eta_\Delta}$ (red dots), highlighting the 
 ```
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+label: criticality_empirical_model_eta_paramfuncs
+tags: [remove-cell]
+---
+# criticality_empirical_model_eta_paramfuncs
+
 s_func_raw = lambda eta, u_pos, u_neg, v_pos, v_neg, w_pos, w_neg, t_pos, t_neg, k: np.sqrt(np.log(eta)**2 + k**2) - k
 s_func = lambda eta: s_func_raw(eta, **log_model_eta_aspect.params)
 x_pos_func_raw = lambda eta, u_pos, u_neg, v_pos, v_neg, w_pos, w_neg, t_pos, t_neg, k: (np.log(eta) + s_func(eta)) / 2
@@ -2396,38 +2401,64 @@ W_func = lambda eta: W_func_raw(eta, **log_model_eta_aspect.params)
 T_func_raw = lambda eta, u_pos, u_neg, v_pos, v_neg, w_pos, w_neg, t_pos, t_neg, k: t_pos * x_pos_func(eta) + t_neg * x_neg_func(eta)
 T_func = lambda eta: T_func_raw(eta, **log_model_eta_aspect.params)
 
-canvas = Canvas(shape=(4, 1), size=(6, 9))
+canvas = Canvas(shape=(4, 1), size=(4, 6))
 eta_vals = 10**np.linspace(-5, 5, 1001)
 eta_chan = Channel(eta_vals, label=r"$\eta_\Delta$", log=True)
-for i, (label, func) in enumerate(dict(
-        U=U_func,
-        V=V_func,
-        W=W_func,
-        T=T_func,
-        ).items()):
+funcs = dict(
+    T=T_func,
+    U=U_func,
+    V=V_func,
+    W=W_func,
+    )
+for i, (label, func) in enumerate(funcs.items()):
     ax = canvas.make_ax((i, 0))
     ax.line(
         eta_chan,
-        Channel(func(eta_vals), label=r"$" + label + r"$")
+        Channel(
+            func(eta_vals), label=r"$" + label + r"$",
+            log=True if label == "U" else False
+            )
         )
+    if i < len(funcs) - 1:
+        ax.props.edges.x.label.visible = False
+        ax.props.edges.x.ticks.major.labels = ()
 canvas
 ```
 
-If we take our results at face value, we can derive candidate functions for each empirical parameter with respect to $\eta_\Delta$:
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
-$$\begin{align*} U(\eta_\Delta) &= \exp{\left( u_{\mathrm{pos}} x_+ + u_{\mathrm{neg}} x_- \right)} \\ V(\eta_\Delta) &= \exp{\left( v_{\mathrm{pos}} x_+ + v_{\mathrm{neg}} x_- \right)} \\ W(\eta_\Delta) &= 1 + w_{\mathrm{pos}} x_+ + w_{\mathrm{neg}} x_- \\ T(\eta_\Delta) &= t_{\mathrm{pos}} x_+ + t_{\mathrm{neg}} x_- \end{align*}$$
+```{figure} #criticality_empirical_model_eta_paramfuncs
+:name: criticality_empirical_model_eta_paramfuncs_fig
 
-So we can now write:
+The behaviour of the empirical parameter functions derived for the $M_{\eta_\Delta}$ synthetic data model. At $\eta_\Delta = 1$, each curve collapses into a value that eliminates the influence of that particular empirical parameter: e.g. $W$ (an exponent) goes to $1$, effectively removing itself from the equation.
+```
+
++++
+
+One thing the analysis in {numref}`criticality_M_eta_analysis_chart_fig` does make clear is the stark change in system behaviour around $\eta_\Delta = 1$ (the isoviscous endmember), below which viscosity is inversely dependent on temperature. Viewed in log space for each slice of $A$, the trends on either side of this hinge are almost linear, being nearly flat on the $\lt 1$ side and about forty five degrees on the $\gt 1$ side. To capture such a dynamic in a single model (i.e. without using an unphysical piecewise function), we must express each parameter function in hyperbolic terms and equip it with degrees of freedom that allow its two asymptotes to be trained independently. This is what we attempted:
 
 $$
 M_{\eta_\Delta} := \quad \eta_\Delta \mapsto A \mapsto \overset{\star}{U} \cdot A^{\overset{\star}{T}} \cdot \left( 1 + c \ e^\frac{1}{A} \right) \cdot {\left( \frac{\pi}{A} \right)}^4 {\left( 1 + \overset{\star}{V}(\eta_\Delta) A^2 \right)}^{\overset{\star}{W}}
 $$
 
+Where:
+
+$$\begin{align*}
+T(\eta_\Delta) &= t_{\mathrm{pos}} x_+ + t_{\mathrm{neg}} x_- \\
+U(\eta_\Delta) &= \exp{\left( u_{\mathrm{pos}} x_+ + u_{\mathrm{neg}} x_- \right)} \\
+V(\eta_\Delta) &= \exp{\left( v_{\mathrm{pos}} x_+ + v_{\mathrm{neg}} x_- \right)} \\
+W(\eta_\Delta) &= 1 + w_{\mathrm{pos}} x_+ + w_{\mathrm{neg}} x_-
+\end{align*}$$
+
+Where:
+
+$$\begin{align*} x &= \ln\eta_\Delta \\ s &= \sqrt{x^2 + k^2} - k \\ x_+ &= \frac{x + s}{2} \\ x_- &= \frac{x - s}{2} \end{align*}$$
+
 Where the overset star indicates calling the function with the relevant parameters (a useful space-saving convention).
 
-With these $\eta_\Delta$-dependent substitutions in place for $u$, $v$, and $w$, the whole $M_{\eta_\Delta}$ dataset can be fitted with an $R^2$ value of over $99.8\%$ using the following values for the empirical constants (to five significant figures):
+With these $\eta_\Delta$-dependent substitutions in place for $t$, $u$, $v$, and $w$, the whole $M_{\eta_\Delta}$ dataset can be fitted with an $R^2$ value of almost $99.9\%$ using the following values for the empirical constants (to five significant figures):
 
-$$\begin{align*}  u_{\mathrm{pos}} &= 1.0962 \\  u_{\mathrm{neg}} &= -0.14707 \\  v_{\mathrm{pos}} &= 0.053261 \\  v_{\mathrm{neg}} &= -0.087759 \\  w_{\mathrm{pos}} &= -0.20997 \\  w_{\mathrm{neg}} &= 0.078721 \\ t_{\mathrm{pos}} &= 0.84192 \\ t_{\mathrm{neg}} &= -0.24569 \\ k &= 5.8204  \end{align*}$$
+$$\begin{align*} t_{\mathrm{pos}} &= 0.84192 \\ t_{\mathrm{neg}} &= -0.24569 \\ u_{\mathrm{pos}} &= 1.0962 \\  u_{\mathrm{neg}} &= -0.14707 \\  v_{\mathrm{pos}} &= 0.053261 \\  v_{\mathrm{neg}} &= -0.087759 \\  w_{\mathrm{pos}} &= -0.20997 \\  w_{\mathrm{neg}} &= 0.078721 \\ k &= 5.8204  \end{align*}$$
 
 The $c$ parameter, for its part, simply carries over from the infinimum model:
 
@@ -2435,7 +2466,7 @@ $$
 c = 0.0028693
 $$
 
-The fit we have obtained here is surprisingly good, considering the relative paucity of data for this specific node. Nevertheless, we would want to acquire a good deal more data before investing much confidence in our formulation here. This node of our lattice model should be marked with an asterisk for now.
+The fit we have obtained here is surprisingly good, considering the relative paucity of data for this specific node. The fit is most suspect at the higher end of $\eta_\Delta$, where data is currently very sparse. We would want to acquire a good deal more data before investing much confidence in our formulation here. This node of our lattice model should be marked with an asterisk for now.
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
 
@@ -2524,12 +2555,12 @@ def H_star(H, f):
 df = isomixed.reset_index()
 df['H_star'] = H_star(df['H'], df['f'])
 df = df.drop('H', axis=1)
-df = df.set_index(['aspect', 'f', 'H_star'])
+df = df.set_index(['H_star', 'aspect', 'f'])
 series = df['alpha'].sort_index()
-series = series.loc[1:2, :, :0.999]
+series = series.loc[:0.999, 1:2]
 df = series.reset_index()
 df['H'] = df['H_star'] * H_crit(df['f'])
-series = df.set_index(['aspect', 'f', 'H'])['alpha']
+series = df.set_index(['H', 'aspect', 'f'])['alpha']
 series = series.sort_index()
 
 inf_ratio = np.log(series / COMMON.model_f.model(
@@ -2564,7 +2595,7 @@ ax1.scatter(
         (inf_ratio + inf_ratio_dist) / (2*inf_ratio_dist),
         label=inf_ratio_label,
         ),
-    cmap="RdBu",
+    cmap="RdBu_r",
     alpha=0.5,
     )
 
@@ -2586,7 +2617,7 @@ ax1.scatter(
 cbar = canvas.fig.colorbar(
     ax1.collections[0].colorbar,
     ax=ax1.ax,
-    cmap='RdBu',
+    cmap='RdBu_r',
     )
 cbarticks = np.round(np.linspace(-inf_ratio_dist, inf_ratio_dist, 11), 5)
 cbar.set_ticks((cbarticks - cbarticks[0]) / (cbarticks[-1] - cbarticks[0]))
@@ -2624,7 +2655,7 @@ canvas
 ```{figure} #criticality_empirical_model_f_H_main
 :name: criticality_empirical_model_f_H_main_fig
 
-The complete data for $M_{f;H}$. In general, the bowed behaviour of $\alpha$ with respect to $A$ is preserved in all cases. The combination of non-endmember $f$ and $H$ values does not appear to have a first-order impact on the relation. The red fringe illustrates how far from the baseline of $M_f$ the values of $M_{f;H}$ are.
+The complete data for $M_{f;H}$. In general, the bowed behaviour of $\alpha$ with respect to $A$ is preserved in all cases. The combination of non-endmember $f$ and $H$ values does not appear to have a first-order impact on the relation. The fringe illustrates how far from the baseline of $M_f$ the values of $M_{f;H}$ are.
 ```
 
 +++
@@ -2710,8 +2741,8 @@ all_pred_floor = (np.floor(all_pred * precision) / precision).min()
 all_pred_ceil = (np.ceil(all_pred * precision) / precision).max()
 all_pred_dist = max((np.abs(all_pred_floor), np.abs(all_pred_ceil)))
 
-print(model_f_H_A.linscore)
-print(model_f_H_A.params)
+# print(model_f_H_A.linscore)
+# print(model_f_H_A.params)
 
 c_label = r"$\log_{10}{\left(\mathrm{Synthetic} / \mathrm{Empirical}\right)}$"
 cmap = "turbo"
@@ -2869,7 +2900,7 @@ for i, eta_val in enumerate(eta_vals):
             (inf_ratio.loc[:, eta_val] + inf_ratio_dist) / (2 * inf_ratio_dist),
             label=inf_ratio_label,
             ),
-        vmin=0, vmax=1, cmap="RdBu",
+        vmin=0, vmax=1, cmap="RdBu_r",
         )
 
 
@@ -2902,7 +2933,7 @@ for i, eta_val in enumerate(eta_vals):
 
 cax = canvas.fig.add_axes([0.8, 0.55, 0.02, 0.3])  # left bottom width height
 cbar = canvas.fig.colorbar(
-    cm.ScalarMappable(cmap="RdBu"),
+    cm.ScalarMappable(cmap="RdBu_r"),
     cax=cax,
     )
 cbarticks = np.round(np.linspace(-inf_ratio_dist, inf_ratio_dist, 11), 5)
@@ -2943,9 +2974,448 @@ canvas.fig
 ```{figure} #criticality_empirical_model_f_eta_main
 :name: criticality_empirical_model_f_eta_main_fig
 
-The complete numerical dataset for $\alpha_{\mathrm{cr};\mathrm{adj}}$; the point cores are the (log of) the absolute $\alpha$ values while the rims give the (log of) the ratio with respect to a lower node, $M_{\eta_\Delta}$ (which, of the two choices - the other being $M_f$ - is the one across which there is more significant variation).
+The complete numerical dataset for $M_{f;\eta_\Delta}$; the point cores are the (log of) the absolute $\alpha_{\mathrm{cr};\mathrm{adj}}$ values while the rims give the (log of) the ratio with respect to a lower node, $M_{\eta_\Delta}$ (which, of the two choices - the other being $M_f$ - is the one across which there is more significant variation).
 ```
 
 +++
 
-In {numref}`criticality_empirical_model_f_eta_main_fig`, we can view the entirety of the $\alpha$ data for the $M_{f;\eta_\Delta}$ node all at once. It's a busy chart, to be sure, but it does reveal some very clear trends.
+In {numref}`criticality_empirical_model_f_eta_main_fig`, we can view the entirety of the $\alpha$ data for the $M_{f;\eta_\Delta}$ node all at once. It is a busy chart, to be sure, but it does reveal some very clear trends.
+
+The first thing to check for is the convergence behaviour at $f\to1$, where $M_{f;\eta_\Delta}$ should equal $M_{\eta_\Delta}$ (visually, this is represented by a white, and therefore effectively invisible, rim). The convergence is correct until we reach high values of $\eta_\Delta$: at these values, the data for the limit case is sparse, and the synthetic data model for $M_{\eta_\Delta}$ is presently poor, as we have already conceded.
+
+Beyond the limit case, we see that in general, $M_{\eta_\Delta}$ generally underestimates $M_{f;\eta_\Delta}$ with increasing curvature (i.e. decreasing $f$), as indicated by the reddening of the rims in the chart. The underestimation seems to be qualitatively more severe at lower aspect ratios than at higher aspect ratios. In general, the clear structure of the residuals suggests that a good fit waits to be made here, once more data is available.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+label: criticality_empirical_model_H_eta_main
+---
+# criticality_empirical_model_H_eta_main
+
+public = COMMON.model_H_eta = types.SimpleNamespace()
+
+def H_crit(f):
+    return 2 / (cylindrical.r_mid(f) + cylindrical.r_inner(f)**2 * np.log(f))
+
+def H_star(H, f):
+    return H / H_crit(f)
+
+df = arrmixed.reset_index()
+df['H_star'] = H_star(df['H'], df['f'])
+df = df.drop('H', axis=1)
+df = df.set_index(['H_star', 'aspect', 'etaDelta', 'f'])
+series = df['alpha'].sort_index()
+series = series.loc[:0.999, 1:2]
+df = series.reset_index()
+df['H'] = df['H_star'] * H_crit(df['f'])
+series = df.set_index(['H', 'aspect', 'etaDelta', 'f'])['alpha']
+series = series.sort_index()
+
+raw_series = series.loc[:, :, :, 0.999].sort_index() / 2
+series = np.log10(raw_series)
+precision = 1000
+series_floor = (np.floor(series * precision) / precision).min()
+series_ceil = (np.ceil(series * precision) / precision).max()
+series_scal = series_ceil - series_floor
+
+inf_ratio = np.log(raw_series / COMMON.model_eta.model(
+    series.index.get_level_values('etaDelta'), series.index.get_level_values('aspect'),
+    ))
+precision = 1000
+inf_ratio_floor = (np.floor(inf_ratio * precision) / precision).min()
+inf_ratio_ceil = (np.ceil(inf_ratio * precision) / precision).max()
+inf_ratio_dist = max((np.abs(inf_ratio_floor), np.abs(inf_ratio_ceil)))
+
+inf_ratio_label = r"$\log{\left(M_{H;{\eta_\Delta}} / M_{\eta_\Delta} \right)}$"
+
+# eta_vals = tuple(
+#     val for val in sorted(set(series.index.get_level_values('etaDelta')))
+#     # if not np.log10(val) % 1
+#     )
+eta_vals = tuple(10**int(val) for val in np.arange(-5, 5))
+
+canvas = Canvas(size=(8, 12), shape=(len(eta_vals) // 2, 2))
+
+alpha_label = r"$\log_{10}\alpha_{\mathrm{cr},\mathrm{adj}}$"
+
+for i, eta_val in enumerate(eta_vals):
+    subseries = series.loc[:, :, eta_val]
+    if i >= len(eta_vals) // 2:
+        place = (i - len(eta_vals) // 2, 1)
+    else:
+        place = (i, 0)
+    # if place[0] == 5:
+    #     subseries = subseries * 200000
+    # print(subseries.mean())
+    ax = canvas.make_ax(place)
+
+    aspect_channel = Channel(
+        subseries.index.get_level_values('aspect'),
+        label="$A$",
+        )
+    H_channel = Channel(
+        subseries.index.get_level_values('H'),
+        label="$H$", #lims=(0, 1), capped=(True, True),
+        )
+
+    ax.scatter(
+        aspect_channel,
+        H_channel,
+        s=100,
+        c=Channel(
+            (inf_ratio.loc[:, :, eta_val] + inf_ratio_dist) / (2 * inf_ratio_dist),
+            label=inf_ratio_label,
+            ),
+        vmin=0, vmax=1, cmap="RdBu_r",
+        )
+
+
+    ax.scatter(
+        aspect_channel,
+        H_channel,
+        s=20,
+        c=Channel(
+            (subseries.values - series_floor) / series_scal,
+            label=alpha_label,
+            ),
+        vmin=0, vmax=1, cmap="viridis",
+        )
+    if not place[0] == len(eta_vals) // 2 - 1:
+        ax.props.edges.x.label.visible = False
+        ax.props.edges.x.ticks.major.labels = ()
+    if place[1] == 1:
+        ax.props.edges.y.label.visible = False
+        ax.props.edges.y.ticks.major.labels = ()
+    ax.ax.text(
+        0.95, 0.5,
+        r"$\eta_\Delta = 10^{" + str(round(np.log10(eta_val), 3)) + "}$",
+        transform=ax.ax.transAxes,
+        ha="right",
+        va="bottom",
+        fontsize=10,
+        color="black",
+        # bbox=dict(boxstyle="round,pad=0.3", fc="black", ec="none", alpha=0.6),
+        )
+
+cax = canvas.fig.add_axes([0.8, 0.55, 0.02, 0.3])  # left bottom width height
+cbar = canvas.fig.colorbar(
+    cm.ScalarMappable(cmap="RdBu_r"),
+    cax=cax,
+    )
+cbarticks = np.round(np.linspace(-inf_ratio_dist, inf_ratio_dist, 11), 5)
+cbar.set_ticks((cbarticks - cbarticks[0]) / (cbarticks[-1] - cbarticks[0]))
+cbar.set_ticklabels(tuple(
+    map(lambda val: "$" + str(val) + "$", cbarticks)
+    ))
+cbar.set_label(inf_ratio_label)
+
+cax = canvas.fig.add_axes([0.8, 0.2, 0.02, 0.3])  # left bottom width height
+cbar = canvas.fig.colorbar(
+    cm.ScalarMappable(cmap="viridis"),
+    cax=cax,
+    )
+cbarticks = np.round(np.linspace(series_floor, series_ceil, 20), 2)
+cbar.set_ticks((cbarticks - cbarticks[0]) / (cbarticks[-1] - cbarticks[0]))
+cbar.set_ticklabels(tuple(
+    map(lambda val: "$" + str(val) + "$", cbarticks)
+    ))
+cbar.set_label(alpha_label)
+
+canvas.update()
+
+canvas.fig.subplots_adjust(
+    left=0.1,  # Left boundary of subplots
+    right=0.75,  # Right boundary (leaves space on the right)
+    bottom=0.15,  # Bottom boundary
+    top=0.9,  # Top boundary
+    wspace=0.05,  # Width spacing between columns (fraction of average axis width)
+    hspace=0.1,  # Height spacing between rows
+    )
+
+canvas.fig
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+```{figure} #criticality_empirical_model_H_eta_main
+:name: criticality_empirical_model_H_eta_main_fig
+
+The complete numerical dataset for $M_{H;\eta_\Delta}$; the point cores are the (log of) the absolute $\alpha_{\mathrm{cr};\mathrm{adj}}$ values while the rims give the (log of) the ratio with respect to a lower node, $M_{\eta_\Delta}$.
+```
+
++++
+
+We can repeat very much the same analysis with $M_{H;\eta_\Delta}$ ({numref}`criticality_empirical_model_H_eta_main_fig`), except that for this node, the data is even sparser. We have enough data to see that the convergence behaviour is correct: at $H=0$, the log residual is zero. Away from $H=0$ and towards higher values of $\eta_\Delta$, the goodness of fit of the underlying $M_{\eta_\Delta}$ node deteriorates, as we would expect: however, it seems to deteriorate in a manner that is mostly 'flat' with respect to $A$, suggesting once again that a good fit could potentially be made here with adequate data.
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+public = COMMON.model_H_eta = types.SimpleNamespace()
+
+full_arrmixed = isomixed.copy()
+full_arrmixed = full_arrmixed.reset_index()
+full_arrmixed['etaDelta'] = 1
+full_arrmixed = full_arrmixed.set_index(arrmixed.index.names)['alpha']
+full_arrmixed = pd.concat((full_arrmixed, arrmixed / 2))
+full_arrmixed = full_arrmixed.sort_index().loc[:, 1:2]
+
+def H_crit(f):
+    return 2 / (cylindrical.r_mid(f) + cylindrical.r_inner(f)**2 * np.log(f))
+
+def H_star(H, f):
+    return H / H_crit(f)
+
+df = full_arrmixed.reset_index()
+df['H_star'] = H_star(df['H'], df['f'])
+df = df.drop('H', axis=1)
+df = df.set_index(['H_star', 'aspect', 'etaDelta', 'f'])
+series = df['alpha'].sort_index()
+series = series.loc[:0.999, 1:2]
+df = series.reset_index()
+df['H'] = df['H_star'] * H_crit(df['f'])
+series = df.set_index(['H', 'aspect', 'etaDelta', 'f'])['alpha']
+series = series.sort_index()
+
+df = series.reset_index()
+df['logEtaDelta'] = np.log10(df['etaDelta'])
+df = df.drop('etaDelta', axis=1)
+df['logAlpha'] = np.log10(df['alpha'])
+df = df.drop('alpha', axis=1)
+
+series = df.set_index(['H', 'aspect', 'logEtaDelta', 'f'])['logAlpha']
+
+params = np.array(tuple(map(np.array, series.index)))
+
+# def all_unitise(points):
+#     points = points.copy()
+#     x_undo_funcs = []
+#     for i in range(points.shape[-1]):
+#         points[:, i], x_undo = unitise(points[:, i], True)
+#         x_undo_funcs.append(x_undo)
+#     return points, tuple(x_undo_funcs)
+# points, undos = all_unitise(params)
+# points[:, 1], y_undo = unitise(points[:, 1], True)
+interp = sp.interpolate.RBFInterpolator(params, series.values, smoothing=1e-6)
+public.interp = interp
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [remove-cell]
+---
+outer_count = 11
+inner_count = 15
+
+chosen_H_vals = np.linspace(0, 1, outer_count)
+chosen_A_vals = np.linspace(1, 2, inner_count)
+chosen_logeta_vals = np.linspace(-5, 5, outer_count)
+chosen_f_vals = np.linspace(0.5, 1, inner_count)
+
+eval_points = np.column_stack(tuple(arr.ravel() for arr in np.meshgrid(
+    chosen_H_vals,
+    chosen_A_vals,
+    chosen_logeta_vals,
+    chosen_f_vals,
+    indexing='ij'
+    )))
+
+raw_predicted_values = interp(eval_points)
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+label: criticality_empirical_model_sup_big_chart
+---
+# criticality_empirical_model_sup_big_chart
+
+# mask = np.all(np.stack((
+#     eval_points[:, 0] == 0,
+#     eval_points[:, 3] == 1,
+#     ), axis=-1), axis=-1)
+# masked_eval_points = eval_points[mask]
+# masked_raw_interp = interp(masked_eval_points)
+# masked_interp = 10**masked_raw_interp
+# masked_ref_vals = COMMON.model_eta.model(10**masked_eval_points[:, 2], masked_eval_points[:, 1])
+
+absolute_Z_4d = (10**raw_predicted_values).reshape((outer_count, inner_count, outer_count, inner_count))
+
+ref_vals = COMMON.model_eta.model(10**eval_points[:, 2], eval_points[:, 1])
+
+inf_ratio = np.log(10**raw_predicted_values / ref_vals)
+precision = 1000
+inf_ratio_floor = (np.floor(inf_ratio * precision) / precision).min()
+inf_ratio_ceil = (np.ceil(inf_ratio * precision) / precision).max()
+inf_ratio_dist = max((np.abs(inf_ratio_floor), np.abs(inf_ratio_ceil)))
+c_vals = (inf_ratio + inf_ratio_dist) / (2 * inf_ratio_dist)
+inf_ratio_label = r"$\log{\left(M_\mathrm{sup} / M_{\eta_\Delta} \right)}$"
+
+c_vals_Z_4d = c_vals.reshape((outer_count, inner_count, outer_count, inner_count))
+
+fig, axes = plt.subplots(
+    nrows=outer_count,
+    ncols=outer_count,
+    figsize=(12, 12),
+    )
+
+fig.subplots_adjust(wspace=0.05, hspace=0.05)
+
+extent = [
+    chosen_A_vals.min(), chosen_A_vals.max(),
+    chosen_f_vals.min(), chosen_f_vals.max(),
+    ]
+
+# vmin, vmax = 0.0, 1.0
+
+A_grid, f_grid = np.meshgrid(chosen_A_vals, chosen_f_vals)
+
+for i in range(outer_count):
+    for j in range(outer_count):
+        ax = axes[i, j]
+
+        error_raster = c_vals_Z_4d[j, :, i, :].T
+        im = ax.imshow(
+            error_raster,
+            extent=extent,
+            origin='lower',
+            aspect='auto',
+            cmap='RdBu_r',
+            vmin=0.0, 
+            vmax=1.0,
+            )
+        
+        absolute_raster = absolute_Z_4d[j, :, i, :].T
+        contours = ax.contour(
+            A_grid, 
+            f_grid, 
+            absolute_raster, 
+            levels=6, 
+            cmap='viridis',
+            linewidths=1.2,
+            alpha=0.9
+            )
+        
+        ax.set_xticks([])
+        ax.set_yticks([])
+        
+        if i == 0:
+            ax.set_title(f"${chosen_H_vals[j]:.2f}$", fontsize=10)
+        if j == 0:
+            ax.set_ylabel(f"${chosen_logeta_vals[i]:.2f}$", fontsize=10)
+
+fig.supxlabel('$H$', fontsize=14, y=0.91)
+fig.supylabel(r'$\log_{10} \eta_\Delta$', fontsize=14, x=0.08)
+
+cax = fig.add_axes([0.92, 0.15, 0.02, 0.7])
+cbar = fig.colorbar(
+    cm.ScalarMappable(cmap="RdBu_r"),
+    cax=cax,
+    )
+cbarticks = np.round(np.linspace(-inf_ratio_dist, inf_ratio_dist, 11), 5)
+cbar.set_ticks((cbarticks - cbarticks[0]) / (cbarticks[-1] - cbarticks[0]))
+cbar.set_ticklabels(tuple(
+    map(lambda val: "$" + str(val) + "$", cbarticks)
+    ))
+cbar.set_label(inf_ratio_label)
+
+plt.show()
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+```{figure} #criticality_empirical_model_sup_big_chart
+:name: criticality_empirical_model_sup_big_chart_fig
+
+The complete numerical dataset for $M_\mathrm{sup}$ expressed in log terms relative to $M_{\eta_\Delta}$. The dataset has five dimensions: for independent, one dependent. Here, we map the dependent variable - $\alpha_\mathrm{cr}$ - to the colour channel in two complementary sense: one in absolute, local terms (coloured contours), the other in relative global terms as a ratio of $M_{\eta_\Delta}$. We consume a further two dimensions ($x=H$ and $y=\eta_\Delta$) for the 'outer grid' and two ($x=A$ and $y=f$) for the 'inner grid'. The displayed data is interpolated from the empirical data so that it can be plotted evenly: the actual sampling was not sufficiently Cartesian to populate an entire chart in this manner.
+```
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+label: criticality_empirical_model_sup_single_chart
+---
+# criticality_empirical_model_sup_single_chart
+
+from matplotlib import cm
+from matplotlib.colors import Normalize
+
+mid_i = outer_count - 1
+mid_j = 0
+
+example_raster = c_vals_Z_4d[mid_j, :, mid_i, :].T
+example_absolute_raster = absolute_Z_4d[mid_j, :, mid_i, :].T
+
+fig2, ax2 = plt.subplots(figsize=(5, 5))
+
+im2 = ax2.imshow(
+    example_raster,
+    extent=extent, 
+    origin='lower', 
+    aspect='auto', 
+    cmap='RdBu_r',
+    vmin=0.0, 
+    vmax=1.0,
+    )
+
+A_grid, f_grid = np.meshgrid(chosen_A_vals, chosen_f_vals)
+contours = ax2.contour(
+    A_grid, 
+    f_grid, 
+    example_absolute_raster, 
+    levels=6, 
+    cmap='viridis',
+    linewidths=1.2,
+    alpha=0.9,
+    )
+
+ax2.clabel(contours, inline=True, fontsize=9, fmt="%.2f")
+
+ax2.set_xlabel('$A$')
+ax2.set_ylabel('$f$')
+
+ax2.set_title(f'${r"\log_{10} \eta_\Delta"} = {chosen_logeta_vals[mid_i]:.2f}, H = {chosen_H_vals[mid_j]:.2f}$')
+
+cax1 = fig2.add_axes([0.92, 0.15, 0.03, 0.7])
+cbar1 = fig2.colorbar(
+    cm.ScalarMappable(cmap="RdBu_r"),
+    cax=cax1,
+    )
+cbarticks = np.round(np.linspace(-inf_ratio_dist, inf_ratio_dist, 11), 5)
+cbar1.set_ticks((cbarticks - cbarticks[0]) / (cbarticks[-1] - cbarticks[0]))
+cbar1.set_ticklabels(tuple(
+    map(lambda val: "$" + str(val) + "$", cbarticks)
+    ))
+cbar1.set_label(inf_ratio_label)
+
+plt.show()
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+```{figure} #criticality_empirical_model_sup_single_chart
+:name: criticality_empirical_model_sup_single_chart_fig
+
+A single subplot from {numref}`criticality_empirical_model_sup_big_chart_fig`, with the 'inner axes' shown, which are omitted in the larger chart. Red values indicate cases where the real values are higher than predicted based on $\eta_\Delta$ alone, while blue values represent those that are lower than predicted. The contours give the absolute values of $\alpha_\mathrm{cr}$. For the slice shown ($H=0$), we would expect the Cartesian endmembers to be fully described by $M_{\eta_\Delta}$. The fact that they are not suggests that our model is a bad fit at high $\eta_\Delta$, which is unsurprising given the sparsity of the dataset in that part of parameter space.
+```
+
++++ {"editable": true, "slideshow": {"slide_type": ""}}
+
+Finally, we come to $M_\mathrm{sup}$: the 'supremum node'. In principle, the data for this node encompasses all other available data, and its liminal model reproduces all other liminal models. In practice, the under-resolution of the dataset with respect to $\eta_\Delta$ means that we do not quite have the means at this point to capture the full swathe of behaviours originally countenanced.
+
+It is difficult to effectively visualise a five-dimensional dataset, but we have attempted to do so using a 'small multiples' approach ({numref}`criticality_empirical_model_sup_big_chart`), where each subplot is a slice in $\eta_\Delta$ and $H$ yielding information about $\alpha_\mathrm{cr}$ across $f$ and $A$ ({numref}`criticality_empirical_model_sup_small_chart`). The first obvious piece of information revealed in this visualisation is the inadequacy of $M_{\eta_\Delta}$ at high values of $\eta_\Delta$: even in cases where $M_\mathrm{sup}$ should be expected to converge on this endmember (i.e. when $f \to 1$ and $H=0$), the error is not zero. This, again, is a product of the sparsity of data coverage at that limit.
+
+A more interesting signal that we can glean from this 'synoptic plot' is that communicated by the contours, which are coloured in local terms and give a sense of the structure of $\alpha_\mathrm{cr}$'s dependency on $f$ and $A$ and how that changes as a function of $\eta_\Delta$ and $H$. As we go to higher values of $\eta_\Delta$ and $H$, the curve exhibits a strong 'twisting' motion. This is suggestive of a totally different and more expressive parameterisation of $f$ and $A$. We lack the data to explore this possibility, but it is an intriguing one.
