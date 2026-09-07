@@ -4,7 +4,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.19.3
+    jupytext_version: 1.19.5
 kernelspec:
   name: python3
   display_name: Python 3 (ipykernel)
@@ -31,11 +31,7 @@ aliases.limit_memory(8.0)
 
 # Isoviscous rheology
 
-+++
-
-*Note to supervisors: The work here is pieced together from stuff that I presented at AGU and in a couple of other reports I did early on. I have much, much more data on all of this - hundreds of thousands of models - and a whole heap of analysis and visualisation, which mostly picks up the same ideas as we see here but with important nuances. In the end, we more or less demolish Jarvis' scalings (which he was never very confident in anyway) and provide totally new ones with much more evidence. We also explore more varied aspect ratios (similar to the critical section), varied initial conditions, and internal heating. Not all of it needs to be in the thesis, of course, but it's there.*
-
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 An isoviscous rheology is one where the rate of momentum diffusion is uniform across the entire domain. This is the simplest possible rheology, and, as we have discussed, the first to be closely studied. In previous chapters, we have discussed at length how the early experimental and analytical work of Benard and Lord Rayleigh [@Rayleigh1916-il] gradually led to the establishment of modern mantle convection theory and furnished it with standard analytical and empirical tools including the *Nusselt* number $\mathrm{Nu}$ (the ratio of surface heat flux to purely conductive heat flux) and the *Rayleigh* number $\mathrm{Ra}$ (a dimensionless measure of convective vigour roughly defined as the ratio of propulsive forces to dissipative forces).
 

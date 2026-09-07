@@ -16,7 +16,6 @@ kernelspec:
 editable: true
 slideshow:
   slide_type: ''
-tags: [remove-cell]
 ---
 from aliases import *
 

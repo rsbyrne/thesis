@@ -3237,6 +3237,7 @@ raw_predicted_values = interp(eval_points)
 editable: true
 slideshow:
   slide_type: ''
+tags: [remove-cell]
 label: criticality_empirical_model_sup_big_chart
 ---
 # criticality_empirical_model_sup_big_chart
@@ -3346,6 +3347,7 @@ The complete numerical dataset for $M_\mathrm{sup}$ expressed in log terms relat
 editable: true
 slideshow:
   slide_type: ''
+tags: [remove-cell]
 label: criticality_empirical_model_sup_single_chart
 ---
 # criticality_empirical_model_sup_single_chart
@@ -3416,6 +3418,6 @@ A single subplot from {numref}`criticality_empirical_model_sup_big_chart_fig`, w
 
 Finally, we come to $M_\mathrm{sup}$: the 'supremum node'. In principle, the data for this node encompasses all other available data, and its liminal model reproduces all other liminal models. In practice, the under-resolution of the dataset with respect to $\eta_\Delta$ means that we do not quite have the means at this point to capture the full swathe of behaviours originally countenanced.
 
-It is difficult to effectively visualise a five-dimensional dataset, but we have attempted to do so using a 'small multiples' approach ({numref}`criticality_empirical_model_sup_big_chart`), where each subplot is a slice in $\eta_\Delta$ and $H$ yielding information about $\alpha_\mathrm{cr}$ across $f$ and $A$ ({numref}`criticality_empirical_model_sup_small_chart`). The first obvious piece of information revealed in this visualisation is the inadequacy of $M_{\eta_\Delta}$ at high values of $\eta_\Delta$: even in cases where $M_\mathrm{sup}$ should be expected to converge on this endmember (i.e. when $f \to 1$ and $H=0$), the error is not zero. This, again, is a product of the sparsity of data coverage at that limit.
+It is difficult to effectively visualise a five-dimensional dataset, but we have attempted to do so using a 'small multiples' approach ({numref}`criticality_empirical_model_sup_big_chart_fig`), where each subplot is a slice in $\eta_\Delta$ and $H$ yielding information about $\alpha_\mathrm{cr}$ across $f$ and $A$ ({numref}`criticality_empirical_model_sup_single_chart_fig`). The first obvious piece of information revealed in this visualisation is the inadequacy of $M_{\eta_\Delta}$ at high values of $\eta_\Delta$: even in cases where $M_\mathrm{sup}$ should be expected to converge on this endmember (i.e. when $f \to 1$ and $H=0$), the error is not zero. This, again, is a product of the sparsity of data coverage at that limit.
 
 A more interesting signal that we can glean from this 'synoptic plot' is that communicated by the contours, which are coloured in local terms and give a sense of the structure of $\alpha_\mathrm{cr}$'s dependency on $f$ and $A$ and how that changes as a function of $\eta_\Delta$ and $H$. As we go to higher values of $\eta_\Delta$ and $H$, the curve exhibits a strong 'twisting' motion. This is suggestive of a totally different and more expressive parameterisation of $f$ and $A$. We lack the data to explore this possibility, but it is an intriguing one.

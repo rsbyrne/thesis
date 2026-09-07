@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.19.3
+    jupytext_version: 1.19.5
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -44,11 +44,7 @@ aliases.limit_memory(8.0)
 
 ## Conduction
 
-+++
-
-*Note to supervisors: This section is almost complete. There is just one bit at the end where I test some modern symbolic regression tools to see if we can reliably pull out the canonical laws from the raw data - basically benchmarking some of the techniques we're going to rely on later on.*
-
-+++
++++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 The minimal endmember of convection is conduction: a state of affairs where heat moves while matter does not. Every convecting system 'contains' a conducting system as a potential of its parameter space, and a system's behaviour when in a state of pure conduction can serve as a strong guide for its behaviour under true convection. In particular, knowing the notional conductive temperature at every position in the system allows us to assess the real (convective) temperature in terms of an anomaly above or below that value; that is to say, the conductive temperature provides a robust and meaningful 'natural scale' for the temperature anywhere in the domain. Because a system's behaviour at equilibrium under conduction is fully time-independent, it can in theory be calculated directly from the fixed model parameters before the model is even run: i.e. it is work that only needs to be done once, which is why we're doing it now.
 
